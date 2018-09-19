@@ -1,267 +1,209 @@
 modal-con {
-	width: 100%;
-	height: 100vh;
-
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	-webkit-user-select: none;
-	/* Chrome all / Safari all */
-	-moz-user-select: none;
-	/* Firefox all */
-	-ms-user-select: none;
-	/* IE 10+ */
-	user-select: none;
-	/* Likely future */
+     width: 100%;
+     height: 100vh;
+     position: fixed;
+     top: 0px;
+     left: 0px;
+     -webkit-user-select: none;
+    /* Chrome all / Safari all */
+     -moz-user-select: none;
+    /* Firefox all */
+     -ms-user-select: none;
+    /* IE 10+ */
+     user-select: none;
+    /* Likely future */
 }
-
-modal-con > modal {
-	width: 350px;
-	height: 200px;
-  max-width: 85% !important;
-	background: #fff;
-	line-height: normal;
-	position: fixed;
-	margin: auto;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	border-radius: 5px;
-  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .1), 0 5px 15px 0 rgba(0, 0, 0, .1) !important;
-  pointer-events: auto !important;
+ modal-con > modal {
+     width: 350px;
+     height: 200px;
+     max-width: 85% !important;
+     background: #fff;
+     line-height: normal;
+     position: fixed;
+     margin: auto;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     border-radius: 5px;
+     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .1), 0 5px 15px 0 rgba(0, 0, 0, .1) !important;
+     pointer-events: auto !important;
 }
-
-modal-con > modal > header,
-modal-con > modal > main{
-  width: 90%;
-  margin: 0px auto;
+ modal-con > modal > header, modal-con > modal > main{
+     width: 90%;
+     margin: 0px auto;
 }
-
-modal-con > modal > header{
-  height: 40px;
+ modal-con > modal > header{
+     height: 40px;
 }
-
-modal-con > modal > header{
-  margin-top: 10px;
-  line-height: 40px;
+ modal-con > modal > header{
+     margin-top: 10px;
+     line-height: 40px;
 }
-
-modal-con > modal > header{
-  font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif
+ modal-con > modal > header{
+     font-size: 16px;
+     font-family: Arial, Helvetica, sans-serif 
 }
-
-modal-con > modal > header a{
-  float: right; 
-  cursor: pointer;
+ modal-con > modal > header a{
+     float: right;
+     cursor: pointer;
 }
-modal-con > modal > header i{
-  vertical-align: middle;
+ modal-con > modal > header i{
+     vertical-align: middle;
 }
-modal-con > modal > header i:after{
-  content: 'close';
+ modal-con > modal > header i:after{
+     content: 'close';
 }
-
-modal-con > modal > main{
-  height: calc(100% - 60px);
+ modal-con > modal > main{
+     height: calc(100% - 60px);
 }
-
-modal-con > modal > main input{
-  width: calc(50% - 20px);
-  height: 20px;
-  padding: 8px;
-  background: #f2f8f8;
-  border: none;
-  border-radius: 2px;
-  margin: 4px auto
+ modal-con > modal > main input{
+     width: calc(50% - 20px);
+     height: 20px;
+     padding: 8px;
+     background: #f2f8f8;
+     border: none;
+     border-radius: 2px;
+     margin: 4px auto 
 }
-
-modal-con > modal > main textarea{
-  width: calc(100% - 20px);
-  padding: 8px;
-  background: #f2f8f8;
-  border: none;
-  border-radius: 2px;
-  margin: 4px auto;
-  resize: none
+ modal-con > modal > main textarea{
+     width: calc(100% - 20px);
+     padding: 8px;
+     background: #f2f8f8;
+     border: none;
+     border-radius: 2px;
+     margin: 4px auto;
+     resize: none 
 }
-
-modal-con[no-overlay]{
-  background: transparent;
-  pointer-events: none;
+ modal-con[no-overlay]{
+     background: transparent;
+     pointer-events: none;
 }
-
-
-modal-con > modal[loader]{
-  width: 250px;
-  height: 95px;
+ modal-con > modal[loader]{
+     width: 250px;
+     height: 95px;
 }
-
-modal-con > modal[loader] > header{
-  height: auto;
-  line-height: 30px
+ modal-con > modal[loader] > header{
+     height: auto;
+     line-height: 30px 
 }
-
-modal-con > modal[loader] > header  > label{
-  font-size: 16px
+ modal-con > modal[loader] > header > label{
+     font-size: 16px 
 }
-
-modal-con > modal[loader] > main  > div{
-  display: inline-block;
-  height: 45px;
-  line-height: 45px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+ modal-con > modal[loader] > main > div{
+     display: inline-block;
+     height: 45px;
+     line-height: 45px;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
 }
-
-modal-con > modal[loader] > main  > div:nth-child(1){
-  width: 40px;
-  text-align: center;
+ modal-con > modal[loader] > main > div:nth-child(1){
+     width: 40px;
+     text-align: center;
 }
-
-modal-con > modal[loader] > main  > div:nth-child(2){
-  width: calc(100% - 45px);
-  text-indent: 10px;
-  font-family: "Comic Sans MS", cursive, sans-serif
+ modal-con > modal[loader] > main > div:nth-child(2){
+     width: calc(100% - 45px);
+     text-indent: 10px;
+     font-family: "Trebuchet MS", Helvetica, sans-serif 
 }
-
 /*##############################################################################*/
 /*Dark theme*/
-
-modal-con[dark]{
-  background: rgba(0, 0, 0, 0.6)
+ modal-con[dark]{
+     background: rgba(0, 0, 0, 0.6) 
 }
-
-modal-con[dark] > modal{
-   background: #212121;
-  color: #c1bfbf
+ modal-con[dark] > modal{
+     background: #212121;
+     color: #c1bfbf 
 }
-
-
 /*###################################################################################################*/
-
 /*#########################################################################################################################*/
-
 /*Material Design Loader*/
-
-svg[md-loader] {
-  animation: rotate 2s linear infinite;
-   width: 35px;
-  vertical-align: middle;
+ svg[md-loader] {
+     animation: rotate 2s linear infinite;
+     width: 35px;
+     vertical-align: middle;
 }
-
-svg[md-loader] circle {
-  fill: none;
-  stroke: #0091ea;
-  stroke-dasharray: 2, 155;
-  stroke-dashoffset: 0;
-  animation: dash 1.35s cubic-bezier(0.4,0,0.2,1) infinite;
+ svg[md-loader] circle {
+     fill: none;
+     stroke: #0091ea;
+     stroke-dasharray: 2, 155;
+     stroke-dashoffset: 0;
+     animation: dash 1.35s cubic-bezier(0.4,0,0.2,1) infinite;
 }
-
-@keyframes dash {
-  0% {
-    stroke-dasharray: 2, 155;
-    stroke-dashoffset: 0;
-  }
-  50% {
-    stroke-dasharray: 122, 20;
-    stroke-dashoffset: -20;
-  }
-  100% {
-    stroke-dasharray: 2, 155;
-    stroke-dashoffset: -155;
-  }
+ @keyframes dash {
+     0% {
+         stroke-dasharray: 2, 155;
+         stroke-dashoffset: 0;
+    }
+     50% {
+         stroke-dasharray: 122, 20;
+         stroke-dashoffset: -20;
+    }
+     100% {
+         stroke-dasharray: 2, 155;
+         stroke-dashoffset: -155;
+    }
 }
-
-@keyframes rotate {
-  100% {
-    transform: rotate(360deg);
-  }
+ @keyframes rotate {
+     100% {
+         transform: rotate(360deg);
+    }
 }
-
-
 /*###############################################################################################################################################################################################################################################*/
 /*modal position*/
-
-
-
-
-modal-con[top] > modal{
-	top: 3em !important;
-	bottom: auto !important; 
+ modal-con[top] > modal{
+     top: 3em !important;
+     bottom: auto !important;
 }
-
-modal-con[bottom] > modal{
-  top: auto !important;
-  bottom: 3em !important;
+ modal-con[bottom] > modal{
+     top: auto !important;
+     bottom: 3em !important;
 }
-
-modal-con[left] > modal{
-  right: auto !important;
-  left: 3em !important
+ modal-con[left] > modal{
+     right: auto !important;
+     left: 3em !important 
 }
-
-modal-con[right] > modal{
-  right: 3em !important;
-  left: auto !important
+ modal-con[right] > modal{
+     right: 3em !important;
+     left: auto !important 
 }
-
-
-@media screen and (max-width: 500px){
-  modal-con[left] > modal,
-  modal-con[right] > modal{
-     margin: 0px auto;
-     right: 0px !important;
-     left: 0px !important
-   }
+ @media screen and (max-width: 500px){
+     modal-con[left] > modal, modal-con[right] > modal{
+         margin: 0px auto;
+         right: 0px !important;
+         left: 0px !important 
+    }
 }
-
-
-
 /*##################################################################################*/
 /*Dark theme modal*/
-
-
-
-modal-con[dark]{
-  background: rgba(0, 0, 0, 0.6)
+ modal-con[dark]{
+     background: rgba(0, 0, 0, 0.6) 
 }
-
-modal-con[dark] > modal{
-   background: #212121;
+ modal-con[dark] > modal{
+     background: #212121;
 }
-modal-con[dark] > modal, 
-modal-con[dark] > modal > header{
-  color: #c1bfbf
+ modal-con[dark] > modal, modal-con[dark] > modal > header{
+     color: #c1bfbf 
 }
-
-modal-con[dark] > modal input{
-  color: #c1bfbf
+ modal-con[dark] > modal input{
+     color: #c1bfbf 
 }
-
-modal-con[dark] > modal input::placeholder { 
-    color: #c1bfbf;
-    opacity: 1; 
+ modal-con[dark] > modal input::placeholder {
+     color: #c1bfbf;
+     opacity: 1;
 }
-
-modal-con[dark] > modal input:-ms-input-placeholder { 
-    color: #c1bfbf;
+ modal-con[dark] > modal input:-ms-input-placeholder {
+     color: #c1bfbf;
 }
-
-modal-con[dark] > modal input::-ms-input-placeholder {
-    color: #c1bfbf;
+ modal-con[dark] > modal input::-ms-input-placeholder {
+     color: #c1bfbf;
 }
-
 /*##################################################################################*/
-
 /*Light theme modal*/
-
-modal-con[light]{
-  background: rgba(255,255,255, 0.6)
+ modal-con[light]{
+     background: rgba(255,255,255, 0.6) 
 }
-
-modal-con[light] > modal{
-  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, .1), 0 5px 30px 0 rgba(0, 0, 0, .1)
+ modal-con[light] > modal{
+     box-shadow: 0 5px 30px 0 rgba(0, 0, 0, .1), 0 5px 30px 0 rgba(0, 0, 0, .1) 
 }
