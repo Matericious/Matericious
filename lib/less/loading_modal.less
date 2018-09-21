@@ -1,182 +1,198 @@
 /*Modal size*/
-  @modal-width: 350px;
-  @modal-height: 200px;
-  @modal-maxWidth: 85% !important;
-  /*Modal fonts*/
-  @modal-header-font: Arial, Helvetica, sans-serif;
-  @modal-body-font: "Trebuchet MS", Helvetica, sans-serif;
-  @modal-position: 3em;
-  /*Material loader color*/
-  @material-loader-color: #0091ea;
-  /*Light modal colors*/
-  @light-modal-background: #fff;
-  @light-modal-color: #000;
-  @light-modal-overlay: rgba(0, 0, 0, 0.6);
-  /*Dark modal colors*/
-  @dark-modal-background: #212121;
-  @dark-modal-color: #c1bfbf;
-  @dark-modal-overlay: rgba(0, 0, 0, 0.6);
+@modal-width: 350px;
+@modal-height: 200px;
+@modal-maxWidth: 85% !important;
+/*Modal fonts*/
+@modal-header-font: Arial, Helvetica, sans-serif;
+@modal-body-font: "Trebuchet MS", Helvetica, sans-serif;
+@modal-position: 3em;
+/*Material loader color*/
+@material-loader-color: #0091ea;
+/*Light modal colors*/
+@light-modal-background: #fff;
+@light-modal-color: #000;
+@light-modal-overlay: rgba(0, 0, 0, 0.6);
+/*Dark modal colors*/
+@dark-modal-background: #212121;
+@dark-modal-color: #c1bfbf;
+@dark-modal-overlay: rgba(0, 0, 0, 0.6);
 
 svg[md-loader] {
-	animation: rotate 2s linear infinite;
-	width: 35px;
-	vertical-align: middle;
-	circle {
-		fill: none;
-		stroke: @material-loader-color;
-		stroke-dasharray: 2, 155;
-		stroke-dashoffset: 0;
-		animation: dash 1.35s cubic-bezier(0.4,0,0.2,1) infinite;
-	}
+  animation: rotate 2s linear infinite;
+  width: 35px;
+  vertical-align: middle;
+  .keyframes(rotate; {
+    100% {transform: rotate(360deg);}
+  });
+  circle {
+    fill: none;
+    stroke: @material-loader-color;
+    stroke-dasharray: 2, 155;
+    stroke-dashoffset: 0;
+    animation: dash 1.35s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
 }
 
 @keyframes dash {
-     0% {
-         stroke-dasharray: 2, 155;
-         stroke-dashoffset: 0;
-    }
-     50% {
-         stroke-dasharray: 122, 20;
-         stroke-dashoffset: -20;
-    }
-     100% {
-         stroke-dasharray: 2, 155;
-         stroke-dashoffset: -155;
-    }
+  0% {
+    stroke-dasharray: 2, 155;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 122, 20;
+    stroke-dashoffset: -20;
+  }
+  100% {
+    stroke-dasharray: 2, 155;
+    stroke-dashoffset: -155;
+  }
 }
- @keyframes rotate {
-     100% {
-         transform: rotate(360deg);
-    }
+
+.keyframes(@name, @arguments) {
+  @-moz-keyframes @name {
+    @arguments();
+  }
+  @-webkit-keyframes @name {
+    @arguments();
+  }
+  @keyframes @name {
+    @arguments();
+  }
+}
+
+.animation(@arguments) {
+  -webkit-animation: @arguments;
+  -moz-animation: @arguments;
+  animation: @arguments;
 }
 
 modal-con {
-	width: 100%;
-	height: 100vh;
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	>modal {
-		width: @modal-width;
-		height: @modal-height;
-		max-width: @modal-maxWidth;
-		color: @light-modal-color;
-		background: @light-modal-background;
-		line-height: normal;
-		position: fixed;
-		margin: auto;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		border-radius: 5px;
-		box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .1), 0 5px 15px 0 rgba(0, 0, 0, .1) !important;
-		pointer-events: auto !important;
-		>header {
-			width: 90%;
-			margin: 0px auto;
-			height: 40px;
-			margin-top: 10px;
-			line-height: 40px;
-			font-size: 16px;
-			font-family: @modal-header-font;
-		}
-		>main {
-			width: 90%;
-			margin: 0px auto;
-			height: calc(100% - 60px);
-		}
-	}
-	>modal[loader] {
-		width: 250px;
-		height: 95px;
-		>header {
-			height: auto;
-			line-height: 30px;
-			>label {
-				font-size: 16px;
-			}
-		}
-		>main {
-			>div {
-				display: inline-block;
-				height: 45px;
-				line-height: 45px;
-				white-space: nowrap;
-				overflow: hidden;
-				text-overflow: ellipsis;
-				&:nth-child(1) {
-					width: 40px;
-					text-align: center;
-				}
-				&:nth-child(2) {
-					width: calc(100% - 45px);
-					text-indent: 10px;
-					font-family: @modal-body-font;
-				}
-			}
-		}
-	}
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  > modal {
+    width: @modal-width;
+    height: @modal-height;
+    max-width: @modal-maxWidth;
+    color: @light-modal-color;
+    background: @light-modal-background;
+    line-height: normal;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.1) !important;
+    pointer-events: auto !important;
+    > header {
+      width: 90%;
+      margin: 0px auto;
+      height: 40px;
+      margin-top: 10px;
+      line-height: 40px;
+      font-size: 16px;
+      font-family: @modal-header-font;
+    }
+    > main {
+      width: 90%;
+      margin: 0px auto;
+      height: calc(100% - 60px);
+    }
+  }
+  > modal[loader] {
+    width: 250px;
+    height: 95px;
+    > header {
+      height: auto;
+      line-height: 30px;
+      > label {
+        font-size: 16px;
+      }
+    }
+    > main {
+      > div {
+        display: inline-block;
+        height: 45px;
+        line-height: 45px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &:nth-child(1) {
+          width: 40px;
+          text-align: center;
+        }
+        &:nth-child(2) {
+          width: calc(100% - 45px);
+          text-indent: 10px;
+          font-family: @modal-body-font;
+        }
+      }
+    }
+  }
 }
 modal-con[no-overlay] {
-	background: transparent;
-	pointer-events: none;
+  background: transparent;
+  pointer-events: none;
 }
 modal-con[dark] {
-	background: @dark-modal-overlay;
-	>modal {
-		background: @dark-modal-background;
-		color: @dark-modal-overlay;
-	}
+  background: @dark-modal-overlay;
+  > modal {
+    background: @dark-modal-background;
+    color: @dark-modal-overlay;
+  }
 }
 
 modal-con[top] {
-	>modal {
-		top: @modal-position;
-		bottom: auto !important;
-	}
+  > modal {
+    top: @modal-position;
+    bottom: auto !important;
+  }
 }
 modal-con[bottom] {
-	>modal {
-		top: auto !important;
-		bottom: @modal-position;
-	}
+  > modal {
+    top: auto !important;
+    bottom: @modal-position;
+  }
 }
 modal-con[left] {
-	>modal {
-		right: auto !important;
-		left: @modal-position;
-	}
+  > modal {
+    right: auto !important;
+    left: @modal-position;
+  }
 }
 modal-con[right] {
-	>modal {
-		right: @modal-position;
-		left: auto !important;
-	}
+  > modal {
+    right: @modal-position;
+    left: auto !important;
+  }
 }
 modal-con[light] {
-	background: @light-modal-overlay;
-	>modal {
-		box-shadow: 0 5px 30px 0 rgba(0, 0, 0, .1), 0 5px 30px 0 rgba(0, 0, 0, .1);
-	}
+  background: @light-modal-overlay;
+  > modal {
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1), 0 5px 30px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 @media screen and (max-width: 500px) {
-	modal-con[left] {
-		>modal {
-			margin: 0px auto;
-			right: 0px !important;
-			left: 0px !important;
-		}
-	}
-	modal-con[right] {
-		>modal {
-			margin: 0px auto;
-			right: 0px !important;
-			left: 0px !important;
-		}
-	}
+  modal-con[left] {
+    > modal {
+      margin: 0px auto;
+      right: 0px !important;
+      left: 0px !important;
+    }
+  }
+  modal-con[right] {
+    > modal {
+      margin: 0px auto;
+      right: 0px !important;
+      left: 0px !important;
+    }
+  }
 }
