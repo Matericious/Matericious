@@ -169,14 +169,14 @@ modal-con[left] > modal {
   right: auto !important;
   left: 3em;
 }
-modal-con[right] > modal {
+modal-con > modal[right] {
   right: 3em;
   left: auto !important;
 }
-modal-con[light] {
+modal-con {
   background: rgba(0, 0, 0, 0.6);
 }
-modal-con[light] > modal {
+modal-con > modal[light] {
   box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1), 0 5px 30px 0 rgba(0, 0, 0, 0.1);
 }
 @media screen and (max-width: 500px) {
