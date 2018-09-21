@@ -18,7 +18,7 @@
 @dark-modal-overlay: rgba(0, 0, 0, 0.6);
 
 svg[md-loader] {
-  animation: rotate 2s linear infinite;
+  .animation(rotate 2s linear infinite);
   width: 35px;
   vertical-align: middle;
   .keyframes(rotate; {
@@ -29,22 +29,21 @@ svg[md-loader] {
     stroke: @material-loader-color;
     stroke-dasharray: 2, 155;
     stroke-dashoffset: 0;
-    animation: dash 1.35s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  }
-}
-
-@keyframes dash {
-  0% {
-    stroke-dasharray: 2, 155;
-    stroke-dashoffset: 0;
-  }
-  50% {
-    stroke-dasharray: 122, 20;
-    stroke-dashoffset: -20;
-  }
-  100% {
-    stroke-dasharray: 2, 155;
-    stroke-dashoffset: -155;
+    .animation(dash 1.35s cubic-bezier(0.4, 0, 0.2, 1) infinite);
+    .keyframes(dash; {
+       0% {
+         stroke-dasharray: 2, 155;
+         stroke-dashoffset: 0;
+       }
+       50% {
+         stroke-dasharray: 122, 20;
+         stroke-dashoffset: -20;
+       }
+       100% {
+         stroke-dasharray: 2, 155;
+         stroke-dashoffset: -155;
+       }
+   });
   }
 }
 
