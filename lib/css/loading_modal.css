@@ -155,7 +155,7 @@ modal-con[dark] {
 }
 modal-con[dark] > modal {
   background: #212121;
-  color: rgba(0, 0, 0, 0.6);
+  color: #c1bfbf;
 }
 modal-con[top] > modal {
   top: 3em;
