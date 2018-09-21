@@ -1,0 +1,70 @@
+/*Modal size*/
+@full-modal-width: calc(100% - 100px);
+@full-modal-height: calc(100% - 100px);
+@full-modal-maxWidth: 100% !important;
+/*Modal fonts*/
+@modal-header-font: Arial, Helvetica, sans-serif;
+@modal-body-font: "Trebuchet MS", Helvetica, sans-serif;
+@modal-position: 3em;
+/*Material loader color*/
+@material-loader-color: #0091ea;
+/*Light modal colors*/
+@light-modal-background: #fff;
+@light-modal-color: #000;
+@light-modal-overlay: rgba(0, 0, 0, 0.6);
+/*Dark modal colors*/
+@dark-modal-background: #212121;
+@dark-modal-color: #c1bfbf;
+@dark-modal-overlay: rgba(0, 0, 0, 0.8);
+
+modal-con {
+  width: 100%;
+  height: 100vh;
+  background: @dark-modal-overlay;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+  > modal[full] {
+    width: @full-modal-width;
+    height: @full-modal-height;
+    max-width: @full-modal-maxWidth;
+    background: @light-modal-background;
+    color: @light-modal-color;
+    line-height: normal;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.1) !important;
+    pointer-events: auto !important;
+    > a {
+      color: #fff;
+      position: absolute;
+      top: -30px;
+      right: -30px;
+    }
+  }
+}
+
+@media screen and (max-width: 700px), screen and (max-height: 300px) {
+  modal-con {
+    > modal[full] {
+      width: calc(100% - 20px);
+      height: calc(100% - 20px);
+      > a {
+        cursor: pointer;
+        color: #222;
+        top: 10px;
+        right: 10px;
+      }
+    }
+  }
+}
