@@ -4,18 +4,37 @@
 /*Light modal colors*/
 /*Dark modal colors*/
 svg[md-loader] {
+  -webkit-animation: rotate 2s linear infinite;
+  -moz-animation: rotate 2s linear infinite;
   animation: rotate 2s linear infinite;
   width: 35px;
   vertical-align: middle;
+}
+@-moz-keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 svg[md-loader] circle {
   fill: none;
   stroke: #0091ea;
   stroke-dasharray: 2, 155;
   stroke-dashoffset: 0;
+  -webkit-animation: dash 1.35s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  -moz-animation: dash 1.35s cubic-bezier(0.4, 0, 0.2, 1) infinite;
   animation: dash 1.35s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
-@keyframes dash {
+@-moz-keyframes dash {
   0% {
     stroke-dasharray: 2, 155;
     stroke-dashoffset: 0;
@@ -29,9 +48,32 @@ svg[md-loader] circle {
     stroke-dashoffset: -155;
   }
 }
-@keyframes rotate {
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 2, 155;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 122, 20;
+    stroke-dashoffset: -20;
+  }
   100% {
-    transform: rotate(360deg);
+    stroke-dasharray: 2, 155;
+    stroke-dashoffset: -155;
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 2, 155;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 122, 20;
+    stroke-dashoffset: -20;
+  }
+  100% {
+    stroke-dasharray: 2, 155;
+    stroke-dashoffset: -155;
   }
 }
 modal-con {
