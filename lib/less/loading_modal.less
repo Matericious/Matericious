@@ -167,15 +167,15 @@ modal-con[left] {
     left: @modal-position;
   }
 }
-modal-con[right] {
-  > modal {
+modal-con {
+  > modal[right] {
     right: @modal-position;
     left: auto !important;
   }
 }
-modal-con[light] {
+modal-con {
   background: @light-modal-overlay;
-  > modal {
+  > modal[light] {
     box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1), 0 5px 30px 0 rgba(0, 0, 0, 0.1);
   }
 }
