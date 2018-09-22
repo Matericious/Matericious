@@ -11,7 +11,7 @@
 /*Light modal colors*/
 @light-modal-background: #fff;
 @light-modal-color: #000;
-@light-modal-overlay: rgba(0, 0, 0, 0.6);
+@light-modal-overlay: rgba(255, 255, 255, 0.3);
 /*Dark modal colors*/
 @dark-modal-background: #212121;
 @dark-modal-color: #c1bfbf;
@@ -65,6 +65,10 @@ svg[md-loader] {
   animation: @arguments;
 }
 
+modal-con[overlay] {
+  background: @light-modal-overlay;
+}
+
 modal-con {
   width: 100%;
   height: 100vh;
@@ -75,6 +79,7 @@ modal-con {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  pointer-events: none;
   > modal {
     width: @modal-width;
     height: @modal-height;
@@ -137,15 +142,24 @@ modal-con {
     }
   }
 }
-modal-con[no-overlay] {
-  background: transparent;
-  pointer-events: none;
-}
+
 modal-con[dark] {
-  background: @dark-modal-overlay;
   > modal {
     background: @dark-modal-background;
     color: @dark-modal-color;
+  }
+}
+[overlay] {
+  pointer-events: auto;
+}
+[overlay][dark] {
+  background: @dark-modal-overlay;
+}
+
+[overlay][light] {
+  background: @light-modal-overlay;
+  > modal {
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1), 0 5px 30px 0 rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -161,8 +175,8 @@ modal-con[bottom] {
     bottom: @modal-position;
   }
 }
-modal-con[left] {
-  > modal {
+modal-con {
+  > modal[left] {
     right: auto !important;
     left: @modal-position;
   }
@@ -173,25 +187,12 @@ modal-con {
     left: auto !important;
   }
 }
-modal-con {
-  background: @light-modal-overlay;
-  > modal[light] {
-    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1), 0 5px 30px 0 rgba(0, 0, 0, 0.1);
-  }
-}
-@media screen and (max-width: 500px) {
-  modal-con[left] {
-    > modal {
-      margin: 0px auto;
-      right: 0px !important;
-      left: 0px !important;
-    }
-  }
-  modal-con[right] {
-    > modal {
-      margin: 0px auto;
-      right: 0px !important;
-      left: 0px !important;
-    }
+
+@media screen and (max-width: 400px){
+  modal-con > modal[left], 
+  modal-con > modal[right]{
+     margin: 0px auto;
+     right: 0px !important;
+     left: 0px !important
   }
 }
