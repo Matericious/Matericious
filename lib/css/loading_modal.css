@@ -76,6 +76,9 @@ svg[md-loader] circle {
     stroke-dashoffset: -155;
   }
 }
+modal-con[overlay] {
+  background: rgba(255, 255, 255, 0.3);
+}
 modal-con {
   width: 100%;
   height: 100vh;
@@ -86,6 +89,7 @@ modal-con {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  pointer-events: none;
 }
 modal-con > modal {
   width: 350px;
@@ -146,16 +150,21 @@ modal-con > modal[loader] > main > div:nth-child(2) {
   text-indent: 10px;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
-modal-con[no-overlay] {
-  background: transparent;
-  pointer-events: none;
-}
-modal-con[dark] {
-  background: rgba(0, 0, 0, 0.6);
-}
 modal-con[dark] > modal {
   background: #212121;
   color: #c1bfbf;
+}
+[overlay] {
+  pointer-events: auto;
+}
+[overlay][dark] {
+  background: rgba(0, 0, 0, 0.6);
+}
+[overlay][light] {
+  background: rgba(255, 255, 255, 0.3);
+}
+[overlay][light] > modal {
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1), 0 5px 30px 0 rgba(0, 0, 0, 0.1);
 }
 modal-con[top] > modal {
   top: 3em;
@@ -165,7 +174,7 @@ modal-con[bottom] > modal {
   top: auto !important;
   bottom: 3em;
 }
-modal-con[left] > modal {
+modal-con > modal[left] {
   right: auto !important;
   left: 3em;
 }
@@ -173,19 +182,9 @@ modal-con > modal[right] {
   right: 3em;
   left: auto !important;
 }
-modal-con {
-  background: rgba(0, 0, 0, 0.6);
-}
-modal-con > modal[light] {
-  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1), 0 5px 30px 0 rgba(0, 0, 0, 0.1);
-}
-@media screen and (max-width: 500px) {
-  modal-con[left] > modal {
-    margin: 0px auto;
-    right: 0px !important;
-    left: 0px !important;
-  }
-  modal-con[right] > modal {
+@media screen and (max-width: 400px) {
+  modal-con > modal[left],
+  modal-con > modal[right] {
     margin: 0px auto;
     right: 0px !important;
     left: 0px !important;
