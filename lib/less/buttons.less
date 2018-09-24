@@ -54,7 +54,8 @@ button[mui] {
       position: relative;
       left: -5px;
     }
-    &[ani] {
+    &[ani], 
+    &[move]{
       left: 0px;
       right: 0px;
     }
@@ -83,6 +84,16 @@ button[mui] {
             from{ transform: rotate(0deg); }
             to{ transform: rotate(360deg); }
          });
+      }
+      
+      &[move="left"] {
+        .animation(ani-left 1s 1);
+      }
+      &[move="right"] {
+        .animation(ani-right 1s 1);
+      }
+      &[move="rotate"] {
+        .animation(ani-rotate 1s 1);
       }
     }
   }
