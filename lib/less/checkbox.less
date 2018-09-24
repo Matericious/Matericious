@@ -1,0 +1,159 @@
+*:hover,
+*:focus {
+  outline: none;
+}
+*{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@color-white: #fff;
+@color-black: #000;
+
+@color-basic: #cbcbcb;
+@color-earth: #34c559;
+@color-night: #161616;
+@color-ocean: #2e72ee;
+@color-red: #e93030;
+@color-snow: #ffffff;
+@color-yellow: #e7e828;
+
+@checkbox-size: 14px;
+
+label[mui] {
+  position: relative;
+  display: inline-block;
+  color: @color-black;
+  line-height: 18px;
+  cursor: pointer;
+  font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
+  font-size: 14px;
+  padding-right: 15px;
+  > input {
+    width: 48px;
+    height: 48px;
+    margin: 0px;
+    border-radius: 50%;
+    opacity: 0;
+    display: block;
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    z-index: -1;
+    transform: scale(1);
+    transition: opacity 0.5s, transform 0.5s;
+    appearance: none;
+   -moz-appearance: none;
+   -webkit-appearance: none;
+    &:checked {
+      background: #2196f3;
+      & + span::after{
+        border-color: #fff;
+      }
+      & + span::before {
+        border-color: #2196f3;
+        background: #2196f3;
+      }
+      &:disabled{
+        & + span::before{
+          border-color: transparent;
+          background: rgba(0, 0, 0, 0.26);
+        }
+      }
+    }
+    &:disabled {
+      opacity: 0;
+      & + span {
+        color: rgba(0, 0, 0, 0.38);
+        cursor: initial;
+        &::before{
+          border-color: rgba(0, 0, 0, 0.26);
+        }
+      }
+    }
+    &:active{
+      & + span::before{
+        border-color: #2196f3;
+      }
+    }
+  }
+  > span {
+    &::before {
+      content: "";
+      width: @checkbox-size;
+      height: @checkbox-size;
+      display: inline-block;
+      border-radius: 2px;
+      margin-right: 15px;
+      border: solid 2px rgba(0, 0, 0, 0.42);
+      vertical-align: middle;
+      transition: border-color 0.5s, background 0.5s;
+    }
+    &::after{
+      content: "";
+      width: 5px;
+      height: 10px;
+      display: inline-block;
+      margin-top: 1px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      border: solid 2px transparent;
+      border-left: none;
+      border-top: none;
+      transform: translate(5.5px, 1px) rotate(45deg);
+      -ms-transform: translate(5.5px, 1px) rotate(45deg);
+    }
+  }
+  &:active {
+    > input {
+      opacity: 1;
+      transform: scale(0);
+      transition: opacity 0s, transform 0s;
+    }
+  }
+}
+
+/**/
+
+label[mui="earth"]{
+  .colorChangeFunc(@color-earth);
+}
+
+label[mui="night"]{
+  .colorChangeFunc(@color-night);
+}
+
+label[mui="ocean"]{
+  .colorChangeFunc(@color-ocean);
+}
+
+label[mui="red"]{
+  .colorChangeFunc(@color-red);
+}
+
+
+label[mui="yellow"]{
+  .colorChangeFunc(@color-yellow);
+}
+
+/*this function allows color change*/
+
+.colorChangeFunc(@color){
+    > input{
+    &:checked {
+      background: @color;
+      & + span::before{
+        border-color: @color;
+        background: @color;
+      }
+    }
+    &:active{
+      & + span::before{
+        border-color: @color;
+      }
+    }
+  }
+}
