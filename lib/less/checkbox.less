@@ -1,3 +1,5 @@
+@import "_colors.less";
+
 *:hover,
 *:focus {
   outline: none;
@@ -9,16 +11,6 @@
   user-select: none;
 }
 
-@color-white: #fff;
-@color-black: #000;
-
-@color-basic: #cbcbcb;
-@color-earth: #34c559;
-@color-night: #161616;
-@color-ocean: #2e72ee;
-@color-red: #e93030;
-@color-snow: #ffffff;
-@color-yellow: #e7e828;
 
 @checkbox-size: 14px;
 
@@ -48,13 +40,13 @@ label[mui] {
    -moz-appearance: none;
    -webkit-appearance: none;
     &:checked {
-      background: #2196f3;
+      background: @color-blue;
       & + span::after{
         border-color: #fff;
       }
       & + span::before {
-        border-color: #2196f3;
-        background: #2196f3;
+        border-color: @color-blue;
+        background: @color-blue;
       }
       &:disabled{
         & + span::before{
@@ -75,7 +67,7 @@ label[mui] {
     }
     &:active{
       & + span::before{
-        border-color: #2196f3;
+        border-color: @color-blue;
       }
     }
   }

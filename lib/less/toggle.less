@@ -1,3 +1,5 @@
+@import "_colors.less";
+
 *:hover,
 *:focus {
   outline: none;
@@ -8,17 +10,6 @@
   -ms-user-select: none;
   user-select: none;
 }
-
-@color-white: #fff;
-@color-black: #000;
-
-@color-basic: #cbcbcb;
-@color-earth: #34c559;
-@color-night: #161616;
-@color-ocean: #2e72ee;
-@color-red: #e93030;
-@color-snow: #ffffff;
-@color-yellow: #e7e828;
 
 label[mui] {
   width: auto;
@@ -54,8 +45,8 @@ label[mui] {
           height: 17px;
           margin-left: 0.1em;
           border-radius: 50%;
-          background: #fff;
-          border: solid 2px #fff;
+          background: @color-white;
+          border: solid 2px @color-white;
           box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14),
             0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
           top: -1px;
