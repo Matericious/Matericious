@@ -1,3 +1,5 @@
+@import "colors.less";
+
 *:hover,
 *:focus {
   outline: none;
@@ -9,23 +11,12 @@
   user-select: none;
 }
 
-@color-white: #fff;
-@color-black: #000;
-
-@color-basic: #cbcbcb;
-@color-earth: #34c559;
-@color-night: #161616;
-@color-ocean: #2e72ee;
-@color-red: #e93030;
-@color-snow: #ffffff;
-@color-yellow: #e7e828;
-
 @checkbox-size: 14px;
 
 label[mui] {
   position: relative;
   display: inline-block;
-  color: @color-black;
+  color: @black;
   line-height: 18px;
   cursor: pointer;
   font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
@@ -48,13 +39,13 @@ label[mui] {
    -moz-appearance: none;
    -webkit-appearance: none;
     &:checked {
-      background: #2196f3;
+      background: @blue;
       & + span::after{
-        border-color: #fff;
+        border-color: @white;
       }
       & + span::before {
-        border-color: #2196f3;
-        background: #2196f3;
+        border-color: @blue;
+        background: @blue;
       }
       &:disabled{
         & + span::before{
@@ -75,7 +66,7 @@ label[mui] {
     }
     &:active{
       & + span::before{
-        border-color: #2196f3;
+        border-color: @blue;
       }
     }
   }
@@ -119,24 +110,24 @@ label[mui] {
 /**/
 
 label[mui="earth"]{
-  .colorChangeFunc(@color-earth);
+  .colorChangeFunc(@earth);
 }
 
 label[mui="night"]{
-  .colorChangeFunc(@color-night);
+  .colorChangeFunc(@night);
 }
 
 label[mui="ocean"]{
-  .colorChangeFunc(@color-ocean);
+  .colorChangeFunc(@ocean);
 }
 
 label[mui="red"]{
-  .colorChangeFunc(@color-red);
+  .colorChangeFunc(@red);
 }
 
 
 label[mui="yellow"]{
-  .colorChangeFunc(@color-yellow);
+  .colorChangeFunc(@yellow);
 }
 
 /*this function allows color change*/
