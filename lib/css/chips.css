@@ -13,6 +13,9 @@ label[mui-chips] {
   color: #2f2f2f;
   cursor: pointer;
 }
+label[mui-chips][br] {
+  border: 1px solid #222;
+}
 label[mui-chips][rd] {
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
@@ -26,12 +29,22 @@ label[mui-chips="night"] {
   background: #161616;
   color: rgba(255, 255, 255, 0.8);
 }
+label[mui-chips="night"][br] {
+  background: transparent;
+  color: #161616;
+  border-color: #161616;
+}
 label[mui-chips="night"] > i {
   color: #fff;
 }
 label[mui-chips="earth"] {
   background: #34c559;
   color: rgba(255, 255, 255, 0.8);
+}
+label[mui-chips="earth"][br] {
+  background: transparent;
+  color: #34c559;
+  border-color: #34c559;
 }
 label[mui-chips="earth"] > i {
   color: #fff;
@@ -40,12 +53,22 @@ label[mui-chips="ocean"] {
   background: #2e72ee;
   color: rgba(255, 255, 255, 0.8);
 }
+label[mui-chips="ocean"][br] {
+  background: transparent;
+  color: #2e72ee;
+  border-color: #2e72ee;
+}
 label[mui-chips="ocean"] > i {
   color: #fff;
 }
 label[mui-chips="red"] {
   background: #e93030;
   color: rgba(255, 255, 255, 0.8);
+}
+label[mui-chips="red"][br] {
+  background: transparent;
+  color: #e93030;
+  border-color: #e93030;
 }
 label[mui-chips="red"] > i {
   color: #fff;
@@ -54,12 +77,22 @@ label[mui-chips="snow"] {
   background: #ffffff;
   color: rgba(30, 30, 30, 0.8);
 }
+label[mui-chips="snow"][br] {
+  background: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}
 label[mui-chips="snow"] > i {
   color: #1e1e1e;
 }
 label[mui-chips="yellow"] {
   background: #e7e828;
   color: rgba(30, 30, 30, 0.8);
+}
+label[mui-chips="yellow"][br] {
+  background: transparent;
+  color: #e7e828;
+  border-color: #e7e828;
 }
 label[mui-chips="yellow"] > i {
   color: #1e1e1e;
