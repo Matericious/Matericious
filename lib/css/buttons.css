@@ -1,3 +1,6 @@
+/*Material loader color*/
+/* Dark colors */
+/* Light colors */
 *:hover,
 *:focus {
   outline: none;
@@ -144,35 +147,6 @@ button[mui]:active {
   transition: all 150ms linear;
   opacity: 0.7;
 }
-button[mui][rd] {
-  width: 50px;
-  height: 50px;
-  padding: 0px;
-  margin: 0;
-  text-align: center;
-  border-radius: 50%;
-  overflow: auto;
-}
-button[mui][rd] > i {
-  font-size: 20px;
-  left: 0;
-  right: 0;
-}
-button[mui][rd]:before {
-  content: '';
-  width: 30px;
-  height: 30px;
-  background: rgba(33, 150, 243, 0.8);
-  border-radius: 50%;
-  margin: -6px -5.5px;
-  display: inline-block;
-  position: absolute;
-  transform: scale(0);
-  transition: all 0.5s linear 0s;
-}
-button[mui][rd]:active:before {
-  transform: scale(2);
-}
 button[mui="earth"] {
   color: #fff;
   background: #34c559;
@@ -191,7 +165,7 @@ button[mui="red"] {
 }
 button[mui="snow"] {
   color: #222;
-  background: #ffffff;
+  background: #fff;
 }
 button[mui="yellow"] {
   color: #fff;
