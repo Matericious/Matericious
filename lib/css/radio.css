@@ -1,0 +1,93 @@
+*:hover,
+*:focus {
+  outline: none;
+}
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+label {
+  margin: 15px 8px;
+}
+label[mui] {
+  width: auto;
+  min-width: 50px;
+  position: relative;
+  display: inline-block;
+  color: #000;
+  font-size: 16px !important;
+  line-height: 24px;
+  cursor: pointer;
+  font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
+  font-size: 14px;
+  padding-right: 15px;
+  clear: left;
+}
+label[mui] > input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+label[mui] > input[type="radio"]:checked ~ span {
+  background: #2e72ee;
+}
+label[mui] > input[type="radio"]:checked ~ span:after {
+  display: block;
+}
+label[mui] > span {
+  width: 25px;
+  height: 25px;
+  background: #eee;
+  border-radius: 50%;
+  margin: 10px;
+  text-indent: 30px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+label[mui] > span:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  display: none;
+  top: 9px;
+  left: 9px;
+  border-radius: 50%;
+  background: #fff;
+}
+label[mui]:hover > input ~ span {
+  background: rgba(46, 114, 238, 0.6);
+}
+label[mui="earth"] > input:checked ~ span {
+  background: #34c559;
+}
+label[mui="earth"]:hover > input ~ span {
+  background: rgba(52, 197, 89, 0.6);
+}
+label[mui="night"] > input:checked ~ span {
+  background: #161616;
+}
+label[mui="night"]:hover > input ~ span {
+  background: rgba(22, 22, 22, 0.6);
+}
+label[mui="ocean"] > input:checked ~ span {
+  background: #2e72ee;
+}
+label[mui="ocean"]:hover > input ~ span {
+  background: rgba(46, 114, 238, 0.6);
+}
+label[mui="red"] > input:checked ~ span {
+  background: #e93030;
+}
+label[mui="red"]:hover > input ~ span {
+  background: rgba(233, 48, 48, 0.6);
+}
+label[mui="yellow"] > input:checked ~ span {
+  background: #e7e828;
+}
+label[mui="yellow"]:hover > input ~ span {
+  background: rgba(231, 232, 40, 0.6);
+}
