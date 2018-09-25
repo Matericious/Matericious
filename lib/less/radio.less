@@ -1,0 +1,121 @@
+*:hover,
+*:focus {
+  outline: none;
+}
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@color-white: #fff;
+@color-black: #000;
+
+@color-basic: #cbcbcb;
+@color-earth: #34c559;
+@color-night: #161616;
+@color-ocean: #2e72ee;
+@color-red: #e93030;
+@color-snow: #ffffff;
+@color-yellow: #e7e828;
+
+label{
+    margin: 15px 8px;
+}
+
+label[mui] {
+  width: auto;
+  min-width: 50px;
+  position: relative;
+  display: inline-block;
+  color: @color-black;
+  font-size: 16px !important;
+  line-height: 24px;
+  cursor: pointer;
+  font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui,
+    -apple-system;
+  font-size: 14px;
+  padding-right: 15px;
+  clear: left;
+  > input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    &:checked {
+      & ~ span {
+        background: @color-ocean;
+        &:after {
+          display: block;
+        }
+      }
+    }
+  }
+  > span {
+    width: 25px;
+    height: 25px;
+    background: #eee;
+    border-radius: 50%;
+    margin: 10px;
+    text-indent: 30px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    &:after {
+      content: "";
+      width: 8px;
+      height: 8px;
+      position: absolute;
+      display: none;
+      top: 9px;
+      left: 9px;
+      border-radius: 50%;
+      background: #fff;
+    }
+  }
+  &:hover {
+    > input {
+      & ~ span {
+        background: rgba(@color-ocean, 0.6);
+      }
+    }
+  }
+}
+
+label[mui="earth"] {
+  .changeRadioColor(@color-earth);
+}
+
+label[mui="night"] {
+  .changeRadioColor(@color-night);
+}
+
+label[mui="ocean"] {
+  .changeRadioColor(@color-ocean);
+}
+
+label[mui="red"] {
+  .changeRadioColor(@color-red);
+}
+
+label[mui="yellow"] {
+  .changeRadioColor(@color-yellow);
+}
+
+.changeRadioColor(@color) {
+  > input {
+    &:checked {
+      & ~ span {
+        background: @color;
+      }
+    }
+  }
+  &:hover {
+    > input {
+      & ~ span {
+        background: rgba(@color, 0.6);
+      }
+    }
+  }
+}
