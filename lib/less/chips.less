@@ -1,0 +1,55 @@
+@import "_colors.less";
+
+
+label[mui-chips] {
+  background: #ececec;
+  padding: 8px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-left: 5px;
+  color: #2f2f2f;
+  cursor: pointer;
+  &[rd]{
+      box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  }
+  > i {
+    vertical-align: middle;
+    font-size: 18px;
+    margin-top: -2px;
+    color: #2f2f2f;
+  }
+}
+
+label[mui-chips="night"] {
+  .changeChipColor(@color-night, #fff);
+}
+
+label[mui-chips="earth"] {
+  .changeChipColor(@color-earth, #fff);
+}
+
+label[mui-chips="ocean"] {
+  .changeChipColor(@color-ocean, #fff);
+}
+
+label[mui-chips="red"] {
+  .changeChipColor(@color-red, #fff);
+}
+
+label[mui-chips="snow"] {
+  .changeChipColor(@color-snow, #1e1e1e);
+}
+
+label[mui-chips="yellow"] {
+  .changeChipColor(@color-yellow, #1e1e1e);
+}
+
+.changeChipColor(@background, @color) {
+  background: @background;
+  color: rgba(@color, 0.8);
+  > i {
+    color: @color;
+  }
+}
