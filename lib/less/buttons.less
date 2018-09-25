@@ -48,7 +48,7 @@ button[mui] {
       position: relative;
       left: -5px;
     }
-    &[ani],
+    &[ani], 
     &[move]{
       left: 0px;
       right: 0px;
@@ -79,7 +79,7 @@ button[mui] {
             to{ transform: rotate(360deg); }
          });
       }
-
+      
       &[move="left"] {
         .animation(ani-left 1s 1);
       }
@@ -94,6 +94,38 @@ button[mui] {
   &:active {
     transition: all 150ms linear;
     opacity: 0.7;
+  }
+}
+
+button[mui][rd]{
+  width: 50px;
+  height: 50px;
+  padding: 0px;
+  margin: 0;
+  text-align: center;
+  border-radius: 50%;
+  > i{
+    font-size: 20px;
+    left: 0;
+    right: 0;
+  }
+  
+  &:before{
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: rgba(#2196f3, .8);
+    border-radius: 50%;
+    margin: -6px -5.5px;
+    display: inline-block;
+    position: absolute;
+    transform: scale(0);
+    transition: all .5s linear 0s;
+  }
+  &:hover{
+    &:before{
+    /*  transform: scale(3);*/
+    }
   }
 }
 
@@ -115,7 +147,7 @@ button[mui="red"] {
   }
 button[mui="snow"] {
     color: #222;
-    background: @color-white;
+    background: @color-snow;
   }
 button[mui="yellow"] {
     .changeButtonColor(#fff, @color-yellow)
