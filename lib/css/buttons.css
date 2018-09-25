@@ -144,27 +144,56 @@ button[mui]:active {
   transition: all 150ms linear;
   opacity: 0.7;
 }
-[mui][earth] {
+button[mui][rd] {
+  width: 50px;
+  height: 50px;
+  padding: 0px;
+  margin: 0;
+  text-align: center;
+  border-radius: 50%;
+  overflow: auto;
+}
+button[mui][rd] > i {
+  font-size: 20px;
+  left: 0;
+  right: 0;
+}
+button[mui][rd]:before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  background: rgba(33, 150, 243, 0.8);
+  border-radius: 50%;
+  margin: -6px -5.5px;
+  display: inline-block;
+  position: absolute;
+  transform: scale(0);
+  transition: all 0.5s linear 0s;
+}
+button[mui][rd]:active:before {
+  transform: scale(2);
+}
+button[mui="earth"] {
   color: #fff;
   background: #34c559;
 }
-[mui][night] {
+button[mui="night"] {
   color: #fff;
   background: #161616;
 }
-[mui][ocean] {
+button[mui="ocean"] {
   color: #fff;
   background: #2e72ee;
 }
-[mui][red] {
+button[mui="red"] {
   color: #fff;
   background: #e93030;
 }
-[mui][snow] {
+button[mui="snow"] {
   color: #222;
   background: #ffffff;
 }
-[mui][yellow] {
-  color: #222;
+button[mui="yellow"] {
+  color: #fff;
   background: #e7e828;
 }
