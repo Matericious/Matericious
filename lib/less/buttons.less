@@ -1,15 +1,9 @@
+@import "colors.less";
+
 *:hover,
 *:focus {
   outline: none;
 }
-
-@color-basic: #cbcbcb;
-@color-earth: #34c559;
-@color-night: #161616;
-@color-ocean: #2e72ee;
-@color-red: #e93030;
-@color-snow: #ffffff;
-@color-yellow: #e7e828;
 
 .keyframes(@name, @arguments) {
   @-moz-keyframes @name {
@@ -36,7 +30,7 @@ button[mui] {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  background: @color-basic;
+  background: @basic;
   border: 0px;
   border-radius: 6px;
   font-size: 12px;
@@ -54,7 +48,7 @@ button[mui] {
       position: relative;
       left: -5px;
     }
-    &[ani], 
+    &[ani],
     &[move]{
       left: 0px;
       right: 0px;
@@ -85,7 +79,7 @@ button[mui] {
             to{ transform: rotate(360deg); }
          });
       }
-      
+
       &[move="left"] {
         .animation(ani-left 1s 1);
       }
@@ -105,27 +99,27 @@ button[mui] {
 
 [mui] {
   &[earth] {
-    color: #fff;
-    background: @color-earth;
+    color: @white;
+    background: @earth;
   }
   &[night] {
-    color: #fff;
-    background: @color-night;
+    color: @white;
+    background: @night;
   }
   &[ocean] {
-    color: #fff;
-    background: @color-ocean;
+    color: @white;
+    background: @ocean;
   }
   &[red] {
-    color: #fff;
-    background: @color-red;
+    color: @white;
+    background: @red;
   }
   &[snow] {
     color: #222;
-    background: @color-snow;
+    background: @snow;
   }
   &[yellow] {
     color: #222;
-    background: @color-yellow;
+    background: @yellow;
   }
 }
