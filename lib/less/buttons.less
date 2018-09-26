@@ -48,7 +48,7 @@ button[mui] {
       position: relative;
       left: -5px;
     }
-    &[ani], 
+    &[ani],
     &[move]{
       left: 0px;
       right: 0px;
@@ -79,7 +79,7 @@ button[mui] {
             to{ transform: rotate(360deg); }
          });
       }
-      
+
       &[move="left"] {
         .animation(ani-left 1s 1);
       }
@@ -109,7 +109,7 @@ button[mui][rd]{
     left: 0;
     right: 0;
   }
-  
+
   &:before{
     content: '';
     width: 30px;
@@ -128,26 +128,23 @@ button[mui][rd]{
     }
   }
 }
-button[mui="earth"] {
-    .changeButtonColor(#fff, @color-earth);
-  }
-button[mui="night"] {
-    .changeButtonColor(#fff, @color-night);
-  }
-button[mui="ocean"] {
-    .changeButtonColor(#fff, @color-ocean);
-  }
-button[mui="red"] {
-    .changeButtonColor(#fff, @color-red);
-  }
-button[mui="snow"] {
-    .changeButtonColor(#222, @color-snow);
-  }
-button[mui="yellow"] {
-    .changeButtonColor(#222, @color-yellow);
-  }
 
-.changeButtonColor(@color, @background){
-  color: @color;
-  background: @background;
+@color_vars: "earth", "night", "ocean", "red", "snow", "yellow";
+.build-colors();
+
+.build-colors(@i: length(@color_vars)) when (@i > 0) {
+  .build-colors(@i - 1);
+  @color: extract(@color_vars, @i);
+  button[mui=@{color}] {
+    .theme(@color);
+  }
+}
+
+.theme(@color) when (@color = "snow") {
+  color: @color-dark-grey;
+  background: ~'@{color-@{color}}';
+}
+.theme(@color) when not (@color = "snow") {
+  color: @color-white;
+  background: ~'@{color-@{color}}';
 }
