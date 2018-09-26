@@ -1,3 +1,6 @@
+/*Material loader color*/
+/* Dark colors */
+/* Light colors */
 *:hover,
 *:focus {
   outline: none;
@@ -189,8 +192,8 @@ button[mui="red"] {
   background: #e93030;
 }
 button[mui="snow"] {
-  color: #222;
-  background: #ffffff;
+  color: #212121;
+  background: #fff;
 }
 button[mui="yellow"] {
   color: #fff;
