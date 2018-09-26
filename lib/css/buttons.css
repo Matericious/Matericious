@@ -1,13 +1,13 @@
-/*Material loader color*/
-/* Dark colors */
-/* Light colors */
 *:hover,
 *:focus {
   outline: none;
 }
+/*Material loader color*/
+/* Dark colors */
+/* Light colors */
 button[mui] {
   margin-top: 5px;
-  padding: 10px 15px;
+  padding: 12px 20px;
   overflow: hidden;
   text-align: center;
   text-decoration: none;
@@ -19,7 +19,7 @@ button[mui] {
   font-weight: 500;
   line-height: 1.3;
   transition: all 150ms linear;
-  box-shadow: 2px 5px 10px #e4e4e4;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
 }
 button[mui] > i {
   font-size: 15px;
@@ -146,8 +146,38 @@ button[mui]:hover > i[move="rotate"] {
 button[mui]:active {
   transition: all 150ms linear;
   opacity: 0.7;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
-button[mui][rd] {
+button[mui][outline] {
+  background: transparent;
+  border: 2px solid #cbcbcb;
+  color: #222;
+}
+a[mui] {
+  margin-top: 5px;
+  padding: 10px 15px;
+  text-decoration: none;
+  background: transparent;
+  box-shadow: none;
+  color: #222;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.3;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+button[mui][ts] {
+  background: transparent;
+  text-align: center;
+  box-shadow: none;
+}
+button[mui][ts] > i {
+  font-size: 20px;
+}
+button[mui][ts]:hover {
+  box-shadow: none;
+}
+button[mui][rd],
+[ts] {
   width: 50px;
   height: 50px;
   padding: 0px;
@@ -155,13 +185,15 @@ button[mui][rd] {
   text-align: center;
   border-radius: 50%;
 }
-button[mui][rd] > i {
+button[mui][rd] > i,
+[ts] > i {
   font-size: 20px;
   left: 0;
   right: 0;
 }
-button[mui][rd]:before {
-  content: '';
+button[mui][rd]:before,
+[ts]:before {
+  content: "";
   width: 30px;
   height: 30px;
   background: rgba(33, 150, 243, 0.8);
@@ -172,30 +204,87 @@ button[mui][rd]:before {
   transform: scale(0);
   transition: all 0.5s linear 0s;
 }
-button[mui][rd]:hover:before {
+button[mui][rd]:hover:before,
+[ts]:hover:before {
   /*  transform: scale(3);*/
 }
 button[mui="earth"] {
   color: #fff;
   background: #34c559;
 }
+button[mui="earth"][outline] {
+  background: transparent;
+  color: #34c559;
+  border-color: #34c559;
+}
 button[mui="night"] {
   color: #fff;
   background: #161616;
+}
+button[mui="night"][outline] {
+  background: transparent;
+  color: #161616;
+  border-color: #161616;
 }
 button[mui="ocean"] {
   color: #fff;
   background: #2e72ee;
 }
+button[mui="ocean"][outline] {
+  background: transparent;
+  color: #2e72ee;
+  border-color: #2e72ee;
+}
 button[mui="red"] {
   color: #fff;
   background: #e93030;
 }
+button[mui="red"][outline] {
+  background: transparent;
+  color: #e93030;
+  border-color: #e93030;
+}
 button[mui="snow"] {
+  color: #fff;
   color: #212121;
   background: #fff;
 }
+button[mui="snow"][outline] {
+  background: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+button[mui="snow"][outline] {
+  color: #212121;
+}
 button[mui="yellow"] {
   color: #fff;
+  color: #212121;
   background: #e7e828;
+}
+button[mui="yellow"][outline] {
+  background: transparent;
+  color: #e7e828;
+  border-color: #e7e828;
+}
+button[mui="yellow"][outline] {
+  color: #212121;
+}
+button[mui="purple"] {
+  color: #fff;
+  background: #6924f0;
+}
+button[mui="purple"][outline] {
+  background: transparent;
+  color: #6924f0;
+  border-color: #6924f0;
+}
+button[mui="pink"] {
+  color: #fff;
+  background: #ff87cb;
+}
+button[mui="pink"][outline] {
+  background: transparent;
+  color: #ff87cb;
+  border-color: #ff87cb;
 }
