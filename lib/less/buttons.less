@@ -137,10 +137,18 @@ button[mui][rd]{
   .theme(@color) {
     color: @color-white;
     background: ~"@{color-@{color}}";
+    &[outline]{
+      background: transparent;
+      color: ~"@{color-@{color}}";
+      border-color: ~"@{color-@{color}}";
+    }
   }
   .theme(@color) when (@color = "snow"), (@color = "yellow") {
     color: @color-dark-grey;
     background: ~"@{color-@{color}}";
+    &[outline]{
+      color: @color-dark-grey;
+    }
   }
   .theme(@color);
 }
