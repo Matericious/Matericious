@@ -1,0 +1,19 @@
+.build-color-class(@tag, @attribute, @array) {
+  .build-colors(@i: length(@array)) when (@i > 0) {
+    .build-colors(@i - 1);
+    @color: extract(@color_vars, @i);
+    @{tag}[@{attribute}=@{color}] {
+      .theme(@color);
+    }
+  }
+  .build-colors();
+}
+
+.theme(@color) when (@color = "snow") {
+  color: @color-dark-grey;
+  background: ~'@{color-@{color}}';
+}
+.theme(@color) when not (@color = "snow") {
+  color: @color-white;
+  background: ~'@{color-@{color}}';
+}
