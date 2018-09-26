@@ -132,3 +132,15 @@ button[mui][rd]{
 
 @color_vars: "earth", "night", "ocean", "red", "snow", "yellow";
 .build-color-class(button, mui, @color_vars);
+
+.colorClass(@color) {
+  .theme(@color) when (@color = "snow") {
+    color: @color-dark-grey;
+    background: ~'@{color-@{color}}';
+  }
+  .theme(@color) when not (@color = "snow") {
+    color: @color-white;
+    background: ~'@{color-@{color}}';
+  }
+  .theme(@color);
+}
