@@ -151,7 +151,11 @@ button[mui]:active {
 button[mui][outline] {
   background: transparent;
   border: 2px solid #cbcbcb;
-  color: #222;
+  color: #212121;
+}
+button[mui][outline]:hover {
+  background: #cbcbcb;
+  color: #212121;
 }
 a[mui] {
   margin-top: 5px;
@@ -217,6 +221,10 @@ button[mui="earth"][outline] {
   color: #34c559;
   border-color: #34c559;
 }
+button[mui="earth"][outline]:hover {
+  background: #34c559;
+  color: #fff;
+}
 button[mui="night"] {
   color: #fff;
   background: #161616;
@@ -225,6 +233,10 @@ button[mui="night"][outline] {
   background: transparent;
   color: #161616;
   border-color: #161616;
+}
+button[mui="night"][outline]:hover {
+  background: #161616;
+  color: #fff;
 }
 button[mui="ocean"] {
   color: #fff;
@@ -235,6 +247,10 @@ button[mui="ocean"][outline] {
   color: #2e72ee;
   border-color: #2e72ee;
 }
+button[mui="ocean"][outline]:hover {
+  background: #2e72ee;
+  color: #fff;
+}
 button[mui="red"] {
   color: #fff;
   background: #e93030;
@@ -243,6 +259,10 @@ button[mui="red"][outline] {
   background: transparent;
   color: #e93030;
   border-color: #e93030;
+}
+button[mui="red"][outline]:hover {
+  background: #e93030;
+  color: #fff;
 }
 button[mui="snow"] {
   color: #fff;
@@ -254,7 +274,15 @@ button[mui="snow"][outline] {
   color: #fff;
   border-color: #fff;
 }
+button[mui="snow"][outline]:hover {
+  background: #fff;
+  color: #fff;
+}
 button[mui="snow"][outline] {
+  color: #212121;
+}
+button[mui="snow"][outline]:hover {
+  background: #fff;
   color: #212121;
 }
 button[mui="yellow"] {
@@ -267,7 +295,15 @@ button[mui="yellow"][outline] {
   color: #e7e828;
   border-color: #e7e828;
 }
+button[mui="yellow"][outline]:hover {
+  background: #e7e828;
+  color: #fff;
+}
 button[mui="yellow"][outline] {
+  color: #212121;
+}
+button[mui="yellow"][outline]:hover {
+  background: #e7e828;
   color: #212121;
 }
 button[mui="purple"] {
@@ -279,6 +315,10 @@ button[mui="purple"][outline] {
   color: #6924f0;
   border-color: #6924f0;
 }
+button[mui="purple"][outline]:hover {
+  background: #6924f0;
+  color: #fff;
+}
 button[mui="pink"] {
   color: #fff;
   background: #ff87cb;
@@ -287,4 +327,8 @@ button[mui="pink"][outline] {
   background: transparent;
   color: #ff87cb;
   border-color: #ff87cb;
+}
+button[mui="pink"][outline]:hover {
+  background: #ff87cb;
+  color: #fff;
 }
