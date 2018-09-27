@@ -159,8 +159,6 @@ button[mui][rd],
   }
 }
 
-$color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
-
 @mixin colorClass($color) {
   background: color($color);
   &[outline]{
@@ -185,4 +183,5 @@ $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink
   }
 }
 
+$color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
 @include build-color-class(button, mui, $color_vars);
