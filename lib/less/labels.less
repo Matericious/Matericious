@@ -1,5 +1,5 @@
-
 @import "_colors.less";
+@import "_mixins.less";
 
 label[mui-label]{
   padding: 6px;
@@ -16,35 +16,14 @@ label[mui-label]{
   font-family: Tahoma, Geneva, sans-serif;
 }
 
-label[mui-label="earth"]{
-  .changeLabelBackground(@color-earth);
-}
+@color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
 
-label[mui-label="night"]{
-  .changeLabelBackground(@color-night);
-}
+.build-color-class(label, mui-label, @color_vars);
 
-label[mui-label="ocean"]{
-  .changeLabelBackground(@color-ocean);
-}
-
-label[mui-label="red"]{
-  .changeLabelBackground(@color-red);
-}
-
-label[mui-label="yellow"]{
-  .changeLabelBackground(@color-yellow);
-}
-
-label[mui-label="purple"]{
-  .changeLabelBackground(@color-purple);
-}
-
-label[mui-label="pink"]{
-  .changeLabelBackground(@color-pink);
-}
-
-.changeLabelBackground(@color){
-  color: @color;
-  background: rgba(@color, .2);
+.colorClass(@color, @tag){
+  .theme(@color){
+    color: ~"@{color-@{color}}";
+    background: rgba(~"@{color-@{color}}", .2);
+  }
+  .theme(@color);
 }
