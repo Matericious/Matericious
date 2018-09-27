@@ -1,0 +1,10 @@
+@mixin build-color-class($tag, $attribute, $array) {
+  @each $color in $array {
+    #{$tag}[#{$attribute}=#{$color}] {
+      @include colorClass($color);
+    }
+  }
+}
+@function color($name) {
+  @return map-get($colors, $name);
+}
