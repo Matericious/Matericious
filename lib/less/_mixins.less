@@ -2,8 +2,8 @@
   .build-colors(@i: length(@array)) when (@i > 0) {
     .build-colors(@i - 1);
     @color: extract(@color_vars, @i);
-    @{tag}[@{attribute}=@{color}] {
-      .colorClass(@color);
+    @{tag}[@{attribute}="@{color}"] {
+      .colorClass(@color, @tag);
     }
   }
   .build-colors();
