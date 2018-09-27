@@ -1,13 +1,9 @@
-*:hover,
-*:focus {
-  outline: none;
-}
 label[mui-label] {
   padding: 6px;
   padding-left: 8px;
   padding-right: 8px;
   color: #222;
-  background: rgba(216, 216, 216, 0.6);
+  background: rgba(203, 203, 203, 0.6);
   border-radius: 14px;
   font-size: 12px;
   text-transform: uppercase;
@@ -16,31 +12,38 @@ label[mui-label] {
   cursor: pointer;
   font-family: Tahoma, Geneva, sans-serif;
 }
-label[mui-label="earth"] {
+
+label[mui-label=earth] {
   color: #34c559;
   background: rgba(52, 197, 89, 0.2);
 }
-label[mui-label="night"] {
-  color: #161616;
-  background: rgba(22, 22, 22, 0.2);
+
+label[mui-label=night] {
+  color: #424242;
+  background: rgba(66, 66, 66, 0.2);
 }
-label[mui-label="ocean"] {
+
+label[mui-label=ocean] {
   color: #2e72ee;
   background: rgba(46, 114, 238, 0.2);
 }
-label[mui-label="red"] {
+
+label[mui-label=red] {
   color: #e93030;
   background: rgba(233, 48, 48, 0.2);
 }
-label[mui-label="yellow"] {
+
+label[mui-label=yellow] {
   color: #e7e828;
   background: rgba(231, 232, 40, 0.2);
 }
-label[mui-label="purple"] {
+
+label[mui-label=purple] {
   color: #6924f0;
   background: rgba(105, 36, 240, 0.2);
 }
-label[mui-label="pink"] {
+
+label[mui-label=pink] {
   color: #ff87cb;
   background: rgba(255, 135, 203, 0.2);
 }
