@@ -1,20 +1,19 @@
-/*Material loader color*/
-/* Dark colors */
-/* Light colors */
 *:hover,
 *:focus {
   outline: none;
 }
+
 * {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
+
 label[mui] {
   position: relative;
   display: inline-block;
-  color: #000;
+  color: #424242;
   line-height: 18px;
   cursor: pointer;
   font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
@@ -96,55 +95,80 @@ label[mui]:active > input {
   transform: scale(0);
   transition: opacity 0s, transform 0s;
 }
-/**/
-label[mui="earth"] > input:checked {
+
+label[mui=earth] > input:checked {
   background: #34c559;
 }
-label[mui="earth"] > input:checked + span::before {
+label[mui=earth] > input:checked + span::before {
   border-color: #34c559;
   background: #34c559;
 }
-label[mui="earth"] > input:active + span::before {
+label[mui=earth] > input:active + span::before {
   border-color: #34c559;
 }
-label[mui="night"] > input:checked {
-  background: #161616;
+
+label[mui=night] > input:checked {
+  background: #424242;
 }
-label[mui="night"] > input:checked + span::before {
-  border-color: #161616;
-  background: #161616;
+label[mui=night] > input:checked + span::before {
+  border-color: #424242;
+  background: #424242;
 }
-label[mui="night"] > input:active + span::before {
-  border-color: #161616;
+label[mui=night] > input:active + span::before {
+  border-color: #424242;
 }
-label[mui="ocean"] > input:checked {
+
+label[mui=ocean] > input:checked {
   background: #2e72ee;
 }
-label[mui="ocean"] > input:checked + span::before {
+label[mui=ocean] > input:checked + span::before {
   border-color: #2e72ee;
   background: #2e72ee;
 }
-label[mui="ocean"] > input:active + span::before {
+label[mui=ocean] > input:active + span::before {
   border-color: #2e72ee;
 }
-label[mui="red"] > input:checked {
+
+label[mui=red] > input:checked {
   background: #e93030;
 }
-label[mui="red"] > input:checked + span::before {
+label[mui=red] > input:checked + span::before {
   border-color: #e93030;
   background: #e93030;
 }
-label[mui="red"] > input:active + span::before {
+label[mui=red] > input:active + span::before {
   border-color: #e93030;
 }
-label[mui="yellow"] > input:checked {
+
+label[mui=yellow] > input:checked {
   background: #e7e828;
 }
-label[mui="yellow"] > input:checked + span::before {
+label[mui=yellow] > input:checked + span::before {
   border-color: #e7e828;
   background: #e7e828;
 }
-label[mui="yellow"] > input:active + span::before {
+label[mui=yellow] > input:active + span::before {
   border-color: #e7e828;
 }
-/*this function allows color change*/
+
+label[mui=purple] > input:checked {
+  background: #6924f0;
+}
+label[mui=purple] > input:checked + span::before {
+  border-color: #6924f0;
+  background: #6924f0;
+}
+label[mui=purple] > input:active + span::before {
+  border-color: #6924f0;
+}
+
+label[mui=pink] > input:checked {
+  background: #ff87cb;
+}
+label[mui=pink] > input:checked + span::before {
+  border-color: #ff87cb;
+  background: #ff87cb;
+}
+label[mui=pink] > input:active + span::before {
+  border-color: #ff87cb;
+}
