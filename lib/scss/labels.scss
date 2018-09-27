@@ -22,4 +22,4 @@ label[mui-label]{
 }
 
 $color_vars: "earth", "night", "ocean", "red", "yellow", "purple", "pink";
-@include build-color-class(label, mui, $color_vars);
+@include build-color-class(label, mui-label, $color_vars);
