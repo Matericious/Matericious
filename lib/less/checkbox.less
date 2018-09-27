@@ -1,20 +1,7 @@
 @import "_colors.less";
+@import "_mixins.less";
 
-*:hover,
-*:focus {
-  outline: none;
-}
-*{
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-
-@checkbox-size: 14px;
-
-label[mui] {
+label[mui-checkbox] {
   position: relative;
   display: inline-block;
   color: @color-black;
@@ -40,13 +27,13 @@ label[mui] {
    -moz-appearance: none;
    -webkit-appearance: none;
     &:checked {
-      background: @color-blue;
+      background: #2196f3;
       & + span::after{
         border-color: #fff;
       }
       & + span::before {
-        border-color: @color-blue;
-        background: @color-blue;
+        border-color: #2196f3;
+        background: #2196f3;
       }
       &:disabled{
         & + span::before{
@@ -67,15 +54,15 @@ label[mui] {
     }
     &:active{
       & + span::before{
-        border-color: @color-blue;
+        border-color: #2196f3;
       }
     }
   }
   > span {
     &::before {
       content: "";
-      width: @checkbox-size;
-      height: @checkbox-size;
+      width: 14px;
+      height: 14px;
       display: inline-block;
       border-radius: 2px;
       margin-right: 15px;
@@ -108,31 +95,18 @@ label[mui] {
   }
 }
 
-/**/
+@color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
 
-label[mui="earth"]{
-  .colorChangeFunc(@color-earth);
-}
+.build-color-class(label, mui-checkbox, @color_vars);
 
-label[mui="night"]{
-  .colorChangeFunc(@color-night);
-}
-
-label[mui="ocean"]{
-  .colorChangeFunc(@color-ocean);
-}
-
-label[mui="red"]{
-  .colorChangeFunc(@color-red);
-}
-
-
-label[mui="yellow"]{
-  .colorChangeFunc(@color-yellow);
+.colorClass(@color, @tag){
+  .theme(@color){
+    .colorChangeFunc(~"@{color-@{color}}");
+  }
+  .theme(@color);
 }
 
 /*this function allows color change*/
-
 .colorChangeFunc(@color){
     > input{
     &:checked {

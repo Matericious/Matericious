@@ -5,25 +5,6 @@
 *:focus {
   outline: none;
 }
-
-.keyframes(@name, @arguments) {
-  @-moz-keyframes @name {
-    @arguments();
-  }
-  @-webkit-keyframes @name {
-    @arguments();
-  }
-  @keyframes @name {
-    @arguments();
-  }
-}
-
-.animation(@arguments) {
-  -webkit-animation: @arguments;
-  -moz-animation: @arguments;
-  animation: @arguments;
-}
-
 button[mui] {
   margin-top: 5px;
   padding: 12px 20px;
@@ -102,6 +83,7 @@ button[mui] {
     background: transparent;
     border: 2px solid @color-basic;
     color: @color-dark-grey;
+    transition: background 0.5s;
     .linkHover(@color-basic, @color-dark-grey);
   }
 }
@@ -164,29 +146,48 @@ button[mui][rd],
   }
 }
 
-
-@color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
+@color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple",
+  "pink";
 
 .build-color-class(button, mui, @color_vars);
+.build-color-class(a, mui, @color_vars);
 
-.colorClass(@color) {
-  .theme(@color) {
-    color: @color-white;
-    background: ~"@{color-@{color}}";
-    &[outline]{
-      background: transparent;
-      color: ~"@{color-@{color}}";
-      border-color: ~"@{color-@{color}}";
-      .linkHover(~"@{color-@{color}}", @color-white);
+.colorClass(@color, @tag) {
+  .customTheme(@tag) when (@tag = button) {
+    .theme(@color) {
+      color: @color-white;
+      background: ~"@{color-@{color}}";
+      &[outline] {
+        background: transparent;
+        color: ~"@{color-@{color}}";
+        border-color: ~"@{color-@{color}}";
+        .linkHover(~"@{color-@{color}}", @color-white);
+      }
     }
-  }
-  .theme(@color) when (@color = "snow"), (@color = "yellow") {
-    color: @color-dark-grey;
-    background: ~"@{color-@{color}}";
-    &[outline]{
+    .theme(@color) when (@color = "snow"), (@color = "yellow") {
       color: @color-dark-grey;
-      .linkHover(~"@{color-@{color}}", @color-dark-grey);
+      background: ~"@{color-@{color}}";
+      &[outline] {
+        color: @color-dark-grey;
+        .linkHover(~"@{color-@{color}}", @color-dark-grey);
+      }
     }
+    .theme(@color);
   }
-  .theme(@color);
+  
+  .customTheme(@tag) when (@tag = a){
+    color: ~"@{color-@{color}}";
+  }
+    .customTheme(@tag);
+}
+
+.changeLinkColor(@color) {
+  color: @color;
+}
+
+.linkHover(@background, @color) {
+  &:hover {
+    background: @background;
+    color: @color;
+  }
 }
