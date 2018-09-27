@@ -1,25 +1,25 @@
-/*Material loader color*/
-/* Dark colors */
-/* Light colors */
 *:hover,
 *:focus {
   outline: none;
 }
+
 * {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
+
 label {
   margin: 15px 8px;
 }
+
 label[mui] {
   width: auto;
   min-width: 50px;
   position: relative;
   display: inline-block;
-  color: #000;
+  color: #424242;
   font-size: 16px !important;
   line-height: 24px;
   cursor: pointer;
@@ -28,15 +28,15 @@ label[mui] {
   padding-right: 15px;
   clear: left;
 }
-label[mui] > input[type="radio"] {
+label[mui] > input[type=radio] {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
-label[mui] > input[type="radio"]:checked ~ span {
+label[mui] > input[type=radio]:checked ~ span {
   background: #2e72ee;
 }
-label[mui] > input[type="radio"]:checked ~ span:after {
+label[mui] > input[type=radio]:checked ~ span:after {
   display: block;
 }
 label[mui] > span {
@@ -62,35 +62,54 @@ label[mui] > span:after {
   background: #fff;
 }
 label[mui]:hover > input ~ span {
-  background: rgba(46, 114, 238, 0.6);
+  background: rgba(66, 66, 66, 0.6);
 }
-label[mui="earth"] > input:checked ~ span {
+
+button[mui=earth] > input:checked ~ span {
   background: #34c559;
 }
-label[mui="earth"]:hover > input ~ span {
+button[mui=earth]:hover > input ~ span {
   background: rgba(52, 197, 89, 0.6);
 }
-label[mui="night"] > input:checked ~ span {
-  background: #161616;
+
+button[mui=night] > input:checked ~ span {
+  background: #424242;
 }
-label[mui="night"]:hover > input ~ span {
-  background: rgba(22, 22, 22, 0.6);
+button[mui=night]:hover > input ~ span {
+  background: rgba(66, 66, 66, 0.6);
 }
-label[mui="ocean"] > input:checked ~ span {
+
+button[mui=ocean] > input:checked ~ span {
   background: #2e72ee;
 }
-label[mui="ocean"]:hover > input ~ span {
+button[mui=ocean]:hover > input ~ span {
   background: rgba(46, 114, 238, 0.6);
 }
-label[mui="red"] > input:checked ~ span {
+
+button[mui=red] > input:checked ~ span {
   background: #e93030;
 }
-label[mui="red"]:hover > input ~ span {
+button[mui=red]:hover > input ~ span {
   background: rgba(233, 48, 48, 0.6);
 }
-label[mui="yellow"] > input:checked ~ span {
+
+button[mui=yellow] > input:checked ~ span {
   background: #e7e828;
 }
-label[mui="yellow"]:hover > input ~ span {
+button[mui=yellow]:hover > input ~ span {
   background: rgba(231, 232, 40, 0.6);
+}
+
+button[mui=purple] > input:checked ~ span {
+  background: #6924f0;
+}
+button[mui=purple]:hover > input ~ span {
+  background: rgba(105, 36, 240, 0.6);
+}
+
+button[mui=pink] > input:checked ~ span {
+  background: #ff87cb;
+}
+button[mui=pink]:hover > input ~ span {
+  background: rgba(255, 135, 203, 0.6);
 }
