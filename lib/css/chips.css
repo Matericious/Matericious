@@ -1,7 +1,3 @@
-*:hover,
-*:focus {
-  outline: none;
-}
 label[mui-chips] {
   background: #ececec;
   padding: 8px;
@@ -25,75 +21,107 @@ label[mui-chips] > i {
   margin-top: -2px;
   color: #2f2f2f;
 }
-label[mui-chips="night"] {
-  background: #161616;
-  color: rgba(255, 255, 255, 0.8);
-}
-label[mui-chips="night"][br] {
-  background: transparent;
-  color: #161616;
-  border-color: #161616;
-}
-label[mui-chips="night"] > i {
-  color: #fff;
-}
-label[mui-chips="earth"] {
+
+label[mui-chip=earth] {
   background: #34c559;
   color: rgba(255, 255, 255, 0.8);
 }
-label[mui-chips="earth"][br] {
+label[mui-chip=earth][br] {
   background: transparent;
   color: #34c559;
   border-color: #34c559;
 }
-label[mui-chips="earth"] > i {
+label[mui-chip=earth] > i {
   color: #fff;
 }
-label[mui-chips="ocean"] {
+
+label[mui-chip=night] {
+  background: #424242;
+  color: rgba(255, 255, 255, 0.8);
+}
+label[mui-chip=night][br] {
+  background: transparent;
+  color: #424242;
+  border-color: #424242;
+}
+label[mui-chip=night] > i {
+  color: #fff;
+}
+
+label[mui-chip=ocean] {
   background: #2e72ee;
   color: rgba(255, 255, 255, 0.8);
 }
-label[mui-chips="ocean"][br] {
+label[mui-chip=ocean][br] {
   background: transparent;
   color: #2e72ee;
   border-color: #2e72ee;
 }
-label[mui-chips="ocean"] > i {
+label[mui-chip=ocean] > i {
   color: #fff;
 }
-label[mui-chips="red"] {
+
+label[mui-chip=red] {
   background: #e93030;
   color: rgba(255, 255, 255, 0.8);
 }
-label[mui-chips="red"][br] {
+label[mui-chip=red][br] {
   background: transparent;
   color: #e93030;
   border-color: #e93030;
 }
-label[mui-chips="red"] > i {
+label[mui-chip=red] > i {
   color: #fff;
 }
-label[mui-chips="snow"] {
-  background: #ffffff;
-  color: rgba(30, 30, 30, 0.8);
+
+label[mui-chip=snow] {
+  background: #fff;
+  color: rgba(66, 66, 66, 0.8);
 }
-label[mui-chips="snow"][br] {
+label[mui-chip=snow][br] {
   background: transparent;
-  color: #ffffff;
-  border-color: #ffffff;
+  color: #fff;
+  border-color: #fff;
 }
-label[mui-chips="snow"] > i {
-  color: #1e1e1e;
+label[mui-chip=snow] > i {
+  color: #424242;
 }
-label[mui-chips="yellow"] {
+
+label[mui-chip=yellow] {
   background: #e7e828;
-  color: rgba(30, 30, 30, 0.8);
+  color: rgba(66, 66, 66, 0.8);
 }
-label[mui-chips="yellow"][br] {
+label[mui-chip=yellow][br] {
   background: transparent;
   color: #e7e828;
   border-color: #e7e828;
 }
-label[mui-chips="yellow"] > i {
-  color: #1e1e1e;
+label[mui-chip=yellow] > i {
+  color: #424242;
+}
+
+label[mui-chip=purple] {
+  background: #6924f0;
+  color: rgba(255, 255, 255, 0.8);
+}
+label[mui-chip=purple][br] {
+  background: transparent;
+  color: #6924f0;
+  border-color: #6924f0;
+}
+label[mui-chip=purple] > i {
+  color: #fff;
+}
+
+label[mui-chip=pink] {
+  background: #ff87cb;
+  color: rgba(255, 255, 255, 0.8);
+}
+label[mui-chip=pink][br] {
+  background: transparent;
+  color: #ff87cb;
+  border-color: #ff87cb;
+}
+label[mui-chip=pink] > i {
+  color: #fff;
 }
