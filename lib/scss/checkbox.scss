@@ -108,7 +108,7 @@ label[mui-checkbox] {
   }
 }
 
-@mixin colorClass($name) {
+@mixin colorClass($name, $tag) {
     > input {
     &:checked {
       background: color($name);

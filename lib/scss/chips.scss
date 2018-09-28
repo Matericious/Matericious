@@ -25,7 +25,7 @@ label[mui-chips] {
   }
 }
 
-@mixin colorClass($name) {
+@mixin colorClass($name, $tag) {
   background: color($name);
   &[br]{
     background: transparent;
