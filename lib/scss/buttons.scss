@@ -85,6 +85,7 @@ button[mui] {
     background: transparent;
     border: color('basic') 1px solid;
     color: #222;
+    @include hoverColor(color('basic'), color('dark'));
   }
 }
 
@@ -141,29 +142,37 @@ button[mui][rd],
   }
 }
 
-@mixin colorClass($color) {
-  background: color($color);
-  &[outline]{
-    background: transparent;
-    border: color($color) 1px solid;
-  }
-  @if $color == "snow" {
-    color: color('dark');
-    &[outline]{
-      color: color('dark');
-    }
-  } @else if $color == "yellow" {
-    color: color('dark');
-    &[outline]{
-      color: color('dark');
-    }
+@mixin colorClass($name, $tag) {
+  @if $tag == "a" {
+    color: color($name);
   } @else {
-    color: color('light');
+    background: color($name);
     &[outline]{
-      color: color($color);
+      background: transparent;
+      border: color($name) 1px solid;
+    }
+    @if $name == "snow" {
+      color: color('dark');
+      &[outline]{
+        color: color('dark');
+      }
+      @include hoverColor(color($name), color('dark'));
+    } @else if $name == "yellow" {
+      color: color('dark');
+      &[outline]{
+        color: color('dark');
+        @include hoverColor(color($name), color('dark'));
+      }
+    } @else {
+      color: color('light');
+      &[outline]{
+        color: color($name);
+        @include hoverColor(color($name), color('light'));
+      }
     }
   }
 }
 
 $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
 @include build-color-class(button, mui, $color_vars);
+@include build-color-class(a, mui, $color_vars);
