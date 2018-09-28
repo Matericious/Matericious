@@ -6,24 +6,6 @@
   outline: none;
 }
 
-@mixin keyframes($name) {
-  @-moz-keyframes #{$name} {
-    @content;
-  }
-  @-webkit-keyframes #{$name} {
-    @content;
-  }
-  @keyframes #{$name} {
-    @content;
-  }
-}
-
- @mixin animation($arguments) {
-  -webkit-animation: $arguments;
-  -moz-animation: $arguments;
-  animation: $arguments;
-}
-
 button[mui] {
   margin-top: 5px;
   padding: 12px 20px;

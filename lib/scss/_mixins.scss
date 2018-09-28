@@ -6,6 +6,24 @@
   }
 }
 
+@mixin keyframes($name) {
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+ @mixin animation($arguments) {
+  -webkit-animation: $arguments;
+  -moz-animation: $arguments;
+  animation: $arguments;
+}
+
 @function color($name, $rgb: null) {
   @if variable-exists(rgb) and $rgb != null {
     @return rgba(map-get($colors, $name), $rgb);
