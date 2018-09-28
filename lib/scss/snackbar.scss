@@ -1,0 +1,124 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+$snackbar-width: 350px;
+$snackbar-height: 60px;
+$snackbar-maxWidth: 95%;
+$snackbar-radius: 5px;
+$modal-position: 1em;
+
+*:hover,
+*:focus {
+  outline: none;
+}
+
+snackbar {
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  > div {
+    width: $snackbar-width;
+    height: $snackbar-height;
+    max-width: $snackbar-maxWidth;
+    background: color('dark');
+    color: color('basic');
+    border-radius: $snackbar-radius;
+    position: fixed;
+    pointer-events: auto;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    > text {
+      width: calc(100% - 90px);
+      height: 60px;
+      float: left;
+      color: #fff;
+      line-height: 60px;
+      text-indent: 15px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    > button {
+      display: inline-block;
+      float: right;
+      margin: 14px;
+      height: 30px;
+      margin-top: 16px;
+      border: none;
+      background: transparent;
+      color: color('basic');
+      border-radius: 5px;
+      text-transform: uppercase;
+      display: inline-block;
+      &:nth-child(2) {
+        width: 40px;
+        height: 40px;
+        margin-top: 10px;
+        background: color('dark', 0.1);
+        border-radius: 50%;
+        transition: all 0.5s linear 0s;
+        > i{
+          vertical-align: middle;
+          font-size: 20px;
+        }
+      }
+      &:nth-child(3) {
+        font-size: 14px;
+        position: relative;
+        left: 20px !important;
+      }
+    }
+  }
+}
+
+snackbar[action] > div{
+  > text {
+    width: calc(100% - 160px);
+  }
+}
+
+snackbar[top] {
+  > div {
+    top: $modal-position;
+  }
+}
+
+snackbar[bottom] {
+  > div {
+    bottom: $modal-position;
+  }
+}
+
+snackbar {
+  > div[left] {
+    left: $modal-position;
+  }
+}
+
+snackbar {
+  > div[right] {
+    right: $modal-position;
+  }
+}
+
+snackbar{
+  > div[center]{
+    margin: 0px auto;
+    left: 0px;
+    right: 0px;
+  }
+}
+
+snackbar[light] {
+  background: color('dark', 0.6);
+  > div {
+    background: color('light');
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1), 0 5px 30px 0 rgba(0, 0, 0, 0.1);
+    > text{
+      color: color('dark');
+    }
+    > button{
+      color: color('dark');
+    }
+  }
+}
