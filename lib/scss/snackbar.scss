@@ -20,6 +20,7 @@ snackbar {
     width: $snackbar-width;
     height: $snackbar-height;
     max-width: $snackbar-maxWidth;
+    font-family: $font;
     background: color('dark');
     color: color('basic');
     border-radius: $snackbar-radius;
