@@ -14,7 +14,7 @@
 
 $checkbox-size: 14px;
 
-label[mui] {
+label[mui-checkbox] {
   position: relative;
   display: inline-block;
   color: color('dark');
@@ -126,4 +126,4 @@ label[mui] {
 }
 
 $color_vars: "earth", "night", "ocean", "red", "yellow", "purple", "pink";
-@include build-color-class(label, mui, $color_vars);
+@include build-color-class(label, mui-checkbox, $color_vars);
