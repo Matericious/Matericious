@@ -39,7 +39,7 @@ button[mui]:hover {
   transition: all 150ms linear;
   opacity: 0.9;
 }
-button[mui]:hover > i[ani=left] {
+button[mui]:hover > i[ani="left"] {
   -webkit-animation: ani-left 1s infinite;
   -moz-animation: ani-left 1s infinite;
   animation: ani-left 1s infinite;
@@ -68,7 +68,7 @@ button[mui]:hover > i[ani=left] {
     left: -5px;
   }
 }
-button[mui]:hover > i[ani=right] {
+button[mui]:hover > i[ani="right"] {
   -webkit-animation: ani-right 1s infinite;
   -moz-animation: ani-right 1s infinite;
   animation: ani-right 1s infinite;
@@ -97,7 +97,7 @@ button[mui]:hover > i[ani=right] {
     left: 5px;
   }
 }
-button[mui]:hover > i[ani=rotate] {
+button[mui]:hover > i[ani="rotate"] {
   -webkit-animation: ani-rotate 1s infinite;
   -moz-animation: ani-rotate 1s infinite;
   animation: ani-rotate 1s infinite;
@@ -126,17 +126,17 @@ button[mui]:hover > i[ani=rotate] {
     transform: rotate(360deg);
   }
 }
-button[mui]:hover > i[move=left] {
+button[mui]:hover > i[move="left"] {
   -webkit-animation: ani-left 1s 1;
   -moz-animation: ani-left 1s 1;
   animation: ani-left 1s 1;
 }
-button[mui]:hover > i[move=right] {
+button[mui]:hover > i[move="right"] {
   -webkit-animation: ani-right 1s 1;
   -moz-animation: ani-right 1s 1;
   animation: ani-right 1s 1;
 }
-button[mui]:hover > i[move=rotate] {
+button[mui]:hover > i[move="rotate"] {
   -webkit-animation: ani-rotate 1s 1;
   -moz-animation: ani-rotate 1s 1;
   animation: ani-rotate 1s 1;
@@ -146,14 +146,39 @@ button[mui]:active {
   opacity: 0.7;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
-button[mui][outline] {
+button[mui].outline {
   background: transparent;
   border: #cbcbcb 1px solid;
   color: #222;
 }
-button[mui][outline]:hover {
+button[mui].outline:hover {
   background: #cbcbcb;
   color: #424242;
+}
+button[mui].round, button[mui].transparent {
+  width: 50px;
+  height: 50px;
+  padding: 0px;
+  margin: 0;
+  text-align: center;
+  border-radius: 50%;
+}
+button[mui].round > i, button[mui].transparent > i {
+  font-size: 20px;
+  left: 0;
+  right: 0;
+}
+button[mui].round:before, button[mui].transparent:before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  background: rgba(33, 150, 243, 0.8);
+  border-radius: 50%;
+  margin: -6px -5.5px;
+  display: inline-block;
+  position: absolute;
+  transform: scale(0);
+  transition: all 0.5s linear 0s;
 }
 
 a[mui] {
@@ -181,47 +206,21 @@ button[mui][ts]:hover {
   box-shadow: none;
 }
 
-button[mui][rd],
-[ts] {
-  width: 50px;
-  height: 50px;
-  padding: 0px;
-  margin: 0;
-  text-align: center;
-  border-radius: 50%;
-}
-button[mui][rd] > i,
-[ts] > i {
-  font-size: 20px;
-  left: 0;
-  right: 0;
-}
-button[mui][rd]:before,
-[ts]:before {
-  content: "";
-  width: 30px;
-  height: 30px;
-  background: rgba(33, 150, 243, 0.8);
-  border-radius: 50%;
-  margin: -6px -5.5px;
-  display: inline-block;
-  position: absolute;
-  transform: scale(0);
-  transition: all 0.5s linear 0s;
-}
-
 button[mui=earth] {
   background: #34c559;
   color: #fff;
 }
-button[mui=earth][outline] {
+button[mui=earth].gradient {
+  background: linear-gradient(90deg, #21f379 0%, #3be76c 49%, #00ba66 95%);
+}
+button[mui=earth].outline {
   background: transparent;
   border: #34c559 1px solid;
 }
-button[mui=earth][outline] {
+button[mui=earth].outline {
   color: #34c559;
 }
-button[mui=earth][outline]:hover {
+button[mui=earth].outline:hover {
   background: #34c559;
   color: #fff;
 }
@@ -230,14 +229,14 @@ button[mui=night] {
   background: #424242;
   color: #fff;
 }
-button[mui=night][outline] {
+button[mui=night].outline {
   background: transparent;
   border: #424242 1px solid;
 }
-button[mui=night][outline] {
+button[mui=night].outline {
   color: #424242;
 }
-button[mui=night][outline]:hover {
+button[mui=night].outline:hover {
   background: #424242;
   color: #fff;
 }
@@ -246,14 +245,17 @@ button[mui=ocean] {
   background: #2e72ee;
   color: #fff;
 }
-button[mui=ocean][outline] {
+button[mui=ocean].gradient {
+  background: linear-gradient(90deg, #2196f3 0%, #03c5d6 61%, #00d4ff 84%);
+}
+button[mui=ocean].outline {
   background: transparent;
   border: #2e72ee 1px solid;
 }
-button[mui=ocean][outline] {
+button[mui=ocean].outline {
   color: #2e72ee;
 }
-button[mui=ocean][outline]:hover {
+button[mui=ocean].outline:hover {
   background: #2e72ee;
   color: #fff;
 }
@@ -262,14 +264,17 @@ button[mui=red] {
   background: #e93030;
   color: #fff;
 }
-button[mui=red][outline] {
+button[mui=red].gradient {
+  background: linear-gradient(90deg, #e9e130 0%, #f0247a 0%, #ff2a00 46%, #e93030 95%);
+}
+button[mui=red].outline {
   background: transparent;
   border: #e93030 1px solid;
 }
-button[mui=red][outline] {
+button[mui=red].outline {
   color: #e93030;
 }
-button[mui=red][outline]:hover {
+button[mui=red].outline:hover {
   background: #e93030;
   color: #fff;
 }
@@ -278,7 +283,7 @@ button[mui=snow] {
   background: #fff;
   color: #424242;
 }
-button[mui=snow][outline] {
+button[mui=snow].outline {
   background: transparent;
   border: #fff 1px solid;
 }
@@ -291,18 +296,21 @@ button[mui=snow]:hover {
 }
 
 button[mui=yellow] {
-  background: #ffc107;
+  background: #e7e828;
   color: #424242;
 }
-button[mui=yellow][outline] {
+button[mui=yellow].gradient {
+  background: linear-gradient(90deg, #e7e828 0%, #feff1a 0%, #ff8000 46%, #ecf110 95%);
+}
+button[mui=yellow].outline {
   background: transparent;
-  border: #ffc107 1px solid;
+  border: #e7e828 1px solid;
 }
-button[mui=yellow][outline] {
+button[mui=yellow].outline {
   color: #424242;
 }
-button[mui=yellow][outline]:hover {
-  background: #ffc107;
+button[mui=yellow].outline:hover {
+  background: #e7e828;
   color: #424242;
 }
 
@@ -310,31 +318,37 @@ button[mui=purple] {
   background: #6924f0;
   color: #fff;
 }
-button[mui=purple][outline] {
+button[mui=purple].gradient {
+  background: linear-gradient(90deg, #e9e130 0%, #6924f0 0%, #b40f91 44%, #e82890 95%);
+}
+button[mui=purple].outline {
   background: transparent;
   border: #6924f0 1px solid;
 }
-button[mui=purple][outline] {
+button[mui=purple].outline {
   color: #6924f0;
 }
-button[mui=purple][outline]:hover {
+button[mui=purple].outline:hover {
   background: #6924f0;
   color: #fff;
 }
 
 button[mui=pink] {
-  background: #e91e63;
+  background: #ff87cb;
   color: #fff;
 }
-button[mui=pink][outline] {
+button[mui=pink].gradient {
+  background: linear-gradient(90deg, #e9e130 0%, #ff87cb 0%, #e977e1 46%, #e523e7 95%);
+}
+button[mui=pink].outline {
   background: transparent;
-  border: #e91e63 1px solid;
+  border: #ff87cb 1px solid;
 }
-button[mui=pink][outline] {
-  color: #e91e63;
+button[mui=pink].outline {
+  color: #ff87cb;
 }
-button[mui=pink][outline]:hover {
-  background: #e91e63;
+button[mui=pink].outline:hover {
+  background: #ff87cb;
   color: #fff;
 }
 
@@ -359,7 +373,7 @@ a[mui=snow] {
 }
 
 a[mui=yellow] {
-  color: #ffc107;
+  color: #e7e828;
 }
 
 a[mui=purple] {
@@ -367,5 +381,5 @@ a[mui=purple] {
 }
 
 a[mui=pink] {
-  color: #e91e63;
+  color: #ff87cb;
 }
