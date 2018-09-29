@@ -88,6 +88,10 @@ modal-con {
         position: relative;
         top: -25px;
       }
+      > .md-input{
+        max-width: 305px;
+        margin-top: -10px;
+      }
     }
     > action {
       width: 100%;
@@ -118,3 +122,5 @@ modal-con {
     }
   }
 }
+
+@import "input.scss";
