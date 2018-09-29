@@ -12,6 +12,7 @@ snackbar > div {
   width: 350px;
   height: 60px;
   max-width: 95%;
+  font-family: "Roboto", san-serif;
   background: #424242;
   color: #cbcbcb;
   border-radius: 5px;
