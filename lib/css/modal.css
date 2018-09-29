@@ -1,0 +1,97 @@
+/*Modal size*/
+/*Modal fonts*/
+/*Material loader color*/
+/*Light modal colors*/
+/*Dark modal colors*/
+modal-con[overlay] {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+modal-con {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+modal-con > modal {
+  width: 350px;
+  height: 150px;
+  max-width: 80% !important;
+  background: #fff;
+  line-height: normal;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 10%;
+  left: 0;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  pointer-events: auto !important;
+}
+modal-con > modal > div:nth-child(1) {
+  width: 88%;
+  height: 45px;
+  /*background: red;*/
+  line-height: 35px;
+  margin: 12px auto 0px auto;
+  font-size: 16px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
+}
+modal-con > modal > div:nth-child(2) {
+  width: 88%;
+  height: auto;
+  font-size: 15px;
+  margin: 0px auto;
+  font-family: "Rubik", sans-serif;
+}
+modal-con > modal > div:nth-child(2) > input {
+  width: 100%;
+  font-size: 17px;
+  border: none;
+  border-bottom: 1.5px solid #8e8887;
+  padding-bottom: 2px;
+  margin-top: 6px;
+  padding: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background: transparent;
+}
+modal-con > modal > div:nth-child(2) > p {
+  font-size: 12px;
+  color: #f42929;
+  margin-left: 6px;
+  position: relative;
+  top: -25px;
+}
+modal-con > modal > div:nth-child(3) {
+  width: 100%;
+  height: 48px;
+  margin: 0px auto;
+  line-height: 48px;
+  text-align: right;
+  /*background: red;*/
+  position: absolute;
+  bottom: 0;
+}
+modal-con > modal > div:nth-child(3) > button {
+  background: transparent;
+  border: none;
+  padding: 4px;
+  font-weight: bold;
+  outline: none;
+  font-family: "Ubuntu", sans-serif;
+  text-size: 15px;
+  color: rgba(0, 0, 0, 0.7);
+  margin-right: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
