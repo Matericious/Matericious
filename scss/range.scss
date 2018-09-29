@@ -1,6 +1,7 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
+
 *:hover,
 *:focus {
   outline: none;
@@ -12,7 +13,10 @@
   user-select: none;
 }
 
-input[mdi-range]{
+
+
+
+input[mui-range]{
   -webkit-appearance: none;
   width: 200px;
   height: 8px;
@@ -49,11 +53,12 @@ input[mdi-range]{
 }
 
 @mixin colorClass($name, $tag){
-  &::-webkit-slider-thumb{
-    background: color($name);
+  &[mui-range]{
+      &::-webkit-slider-thumb{
+          background: color($name);
+      }
   }
 }
 
 $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
-
 @include build-color-class(input, mdi-range, $color_vars);
