@@ -1,12 +1,17 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
+*:hover,
+*:focus {
+  outline: none;
+}
+
 label[mui-label]{
   padding: 6px;
   padding-left: 8px;
   padding-right: 8px;
   color: #222;
-  background: color('basic', .6);
+  background: colors('basic');
   border-radius: 14px;
   font-size: 12px;
   text-transform: uppercase;
@@ -16,10 +21,11 @@ label[mui-label]{
   font-family: Tahoma, Geneva, sans-serif;
 }
 
-@mixin colorClass($name, $tag) {
-  color: color($name);
-  background: color($name, .2);
+$color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
+
+@mixin colorClass($color, $tag){
+    color: #fff;
+    background: color($color);
 }
 
-$color_vars: "earth", "night", "ocean", "red", "yellow", "purple", "pink";
 @include build-color-class(label, mui-label, $color_vars);
