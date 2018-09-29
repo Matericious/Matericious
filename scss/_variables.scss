@@ -10,7 +10,14 @@ $colors: (
   'snow': #fff,
   'yellow': #e7e828,
   'purple': #6924f0,
-  'pink': #ff87cb
+  'pink': #ff87cb,
+  /*gradient colors*/
+  'ocean-gradient': linear-gradient(90deg, rgba(33,150,243,1) 0%, rgba(3,197,214,1) 61%, rgba(0,212,255,1) 84%),
+  'earth-gradient': linear-gradient(90deg, rgba(33,243,121,1) 0%, rgba(59,231,108,1) 49%, rgba(0,186,102,1) 95%),
+  'red-gradient': linear-gradient(90deg, rgba(233,225,48,1) 0%, rgba(240,36,122,1) 0%, rgba(255,42,0,1) 46%, rgba(233,48,48,1) 95%),
+  'yellow-gradient': linear-gradient(90deg, rgba(231,232,40,1) 0%, rgba(254,255,26,1) 0%, rgba(255,128,0,1) 46%, rgba(236,241,16,1) 95%),
+  'purple-gradient': linear-gradient(90deg, rgba(233,225,48,1) 0%, rgba(105,36,240,1) 0%, rgba(180,15,145,1) 44%, rgba(232,40,144,1) 95%),
+  'pink-gradient': linear-gradient(90deg, rgba(233,225,48,1) 0%, rgba(255,135,203,1) 0%, rgba(233,119,225,1) 46%, rgba(229,35,231,1) 95%),
 );
 
 $font: 'Roboto', san-serif;
