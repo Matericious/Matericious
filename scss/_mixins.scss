@@ -1,7 +1,9 @@
-@mixin build-color-class($tag, $attribute, $array) {
+@mixin build-color-class($tag, $class, $array) {
   @each $color in $array {
-    #{$tag}[#{$attribute}=#{$color}] {
-      @include colorClass($color, $tag);
+    #{$tag}{
+      &.#{$color}{
+        @include colorClass($color, $tag);
+      }
     }
   }
 }
