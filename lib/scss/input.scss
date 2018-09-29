@@ -1,5 +1,6 @@
 @import "_variables.scss";
 
+
 .md-input {
   width: 500px;
   overflow-x: hidden;
@@ -36,7 +37,7 @@
   }
   > label {
     color: #c6c6c6;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: normal;
     position: relative;
     pointer-events: none;
@@ -58,5 +59,11 @@
       transition: 300ms ease all;
       left: 0%;
     }
+  }
+  > p{
+    margin-top: -14px;
+    margin-left: 5px;
+    font-size: 13px;
+    color: colors('red');
   }
 }
