@@ -48,7 +48,7 @@ modal-con {
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 5px 10px 0 rgba(0, 0, 0, 0.3);
     pointer-events: auto !important;
     
-    > div:nth-child(1) {
+    > header {
       width: 88%;
       height: 45px;
       /*background: red;*/
@@ -59,7 +59,7 @@ modal-con {
       font-weight: bold;
       color: rgba(0, 0, 0, 0.7);
     }
-    > div:nth-child(2) {
+    > main {
       width: 88%;
       height: auto;
       font-size: 15px;
@@ -85,7 +85,7 @@ modal-con {
         top: -25px;
       }
     }
-    > div:nth-child(3) {
+    > action {
       width: 100%;
       height: 48px;
       margin: 0px auto;
@@ -107,6 +107,10 @@ modal-con {
         text-transform: uppercase;
         cursor: pointer;
       }
+    }
+    &.action{
+      width: 300px;
+      height: 120px;
     }
   }
 }
