@@ -1,6 +1,7 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
+
 *:hover,
 *:focus {
   outline: none;
@@ -81,12 +82,38 @@ button[mui] {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14),
       0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
   }
-  &[outline] {
+  &.outline {
     background: transparent;
     border: color('basic') 1px solid;
     color: #222;
     @include hoverColor(color('basic'), color('dark'));
   }
+  &.round, 
+  &.transparent{
+  width: 50px;
+  height: 50px;
+  padding: 0px;
+  margin: 0;
+  text-align: center;
+  border-radius: 50%;
+  > i {
+    font-size: 20px;
+    left: 0;
+    right: 0;
+  }
+  &:before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: rgba(#2196f3, 0.8);
+    border-radius: 50%;
+    margin: -6px -5.5px;
+    display: inline-block;
+    position: absolute;
+    transform: scale(0);
+    transition: all 0.5s linear 0s;
+  }
+}
 }
 
 a[mui] {
@@ -114,40 +141,15 @@ button[mui][ts] {
   }
 }
 
-button[mui][rd],
-[ts] {
-  width: 50px;
-  height: 50px;
-  padding: 0px;
-  margin: 0;
-  text-align: center;
-  border-radius: 50%;
-  > i {
-    font-size: 20px;
-    left: 0;
-    right: 0;
-  }
-
-  &:before {
-    content: "";
-    width: 30px;
-    height: 30px;
-    background: rgba(#2196f3, 0.8);
-    border-radius: 50%;
-    margin: -6px -5.5px;
-    display: inline-block;
-    position: absolute;
-    transform: scale(0);
-    transition: all 0.5s linear 0s;
-  }
-}
-
 @mixin colorClass($name, $tag) {
   @if $tag == "a" {
     color: color($name);
   } @else {
     background: color($name);
-    &[outline]{
+    &.gradient{
+      background: color($name+"-gradient");
+    }
+    &.outline{
       background: transparent;
       border: color($name) 1px solid;
     }
@@ -159,13 +161,13 @@ button[mui][rd],
       @include hoverColor(color($name), color('dark'));
     } @else if $name == "yellow" {
       color: color('dark');
-      &[outline]{
+      &.outline{
         color: color('dark');
         @include hoverColor(color($name), color('dark'));
       }
     } @else {
       color: color('light');
-      &[outline]{
+      &.outline{
         color: color($name);
         @include hoverColor(color($name), color('light'));
       }
