@@ -2,11 +2,6 @@
   outline: none;
 }
 
-/*Modal size*/
-/*Modal fonts*/
-/*Material loader color*/
-/*Light modal colors*/
-/*Dark modal colors*/
 modal-con[overlay] {
   background: rgba(0, 0, 0, 0.7);
 }
