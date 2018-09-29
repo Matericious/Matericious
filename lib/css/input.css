@@ -35,7 +35,7 @@
 }
 .md-input > label {
   color: #c6c6c6;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: normal;
   position: relative;
   pointer-events: none;
@@ -57,4 +57,10 @@
   background: #2196f3;
   transition: 300ms ease all;
   left: 0%;
+}
+.md-input > p {
+  margin-top: -14px;
+  margin-left: 5px;
+  font-size: 13px;
+  color: #e93030;
 }
