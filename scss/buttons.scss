@@ -2,12 +2,13 @@
 @import "_variables.scss";
 
 
+
 *:hover,
 *:focus {
   outline: none;
 }
 
-button[mui-button] {
+[mui-button] {
   margin-top: 5px;
   padding: 12px 20px;
   overflow: hidden;
@@ -177,5 +178,5 @@ button[mui-button][ts] {
 }
 
 $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
-@include build-color-class(button, mui-button, $color_vars);
+@include build-color-class([mui-button], mui-button, $color_vars);
 @include build-color-class(a, mui-link, $color_vars);
