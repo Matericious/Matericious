@@ -3,7 +3,7 @@
   outline: none;
 }
 
-button[mui] {
+button[mui-button] {
   margin-top: 5px;
   padding: 12px 20px;
   overflow: hidden;
@@ -20,26 +20,26 @@ button[mui] {
   transition: all 150ms linear;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
 }
-button[mui] > i {
+button[mui-button] > i {
   font-size: 15px;
   vertical-align: middle;
   margin-top: -2px;
   transition: all 0.5s linear 0s;
   position: relative;
 }
-button[mui] > i:nth-child(1) {
+button[mui-button] > i:nth-child(1) {
   position: relative;
   left: -5px;
 }
-button[mui] > i[ani], button[mui] > i[move] {
+button[mui-button] > i[ani], button[mui-button] > i[move] {
   left: 0px;
   right: 0px;
 }
-button[mui]:hover {
+button[mui-button]:hover {
   transition: all 150ms linear;
   opacity: 0.9;
 }
-button[mui]:hover > i[ani="left"] {
+button[mui-button]:hover > i[ani="left"] {
   -webkit-animation: ani-left 1s infinite;
   -moz-animation: ani-left 1s infinite;
   animation: ani-left 1s infinite;
@@ -68,7 +68,7 @@ button[mui]:hover > i[ani="left"] {
     left: -5px;
   }
 }
-button[mui]:hover > i[ani="right"] {
+button[mui-button]:hover > i[ani="right"] {
   -webkit-animation: ani-right 1s infinite;
   -moz-animation: ani-right 1s infinite;
   animation: ani-right 1s infinite;
@@ -97,7 +97,7 @@ button[mui]:hover > i[ani="right"] {
     left: 5px;
   }
 }
-button[mui]:hover > i[ani="rotate"] {
+button[mui-button]:hover > i[ani="rotate"] {
   -webkit-animation: ani-rotate 1s infinite;
   -moz-animation: ani-rotate 1s infinite;
   animation: ani-rotate 1s infinite;
@@ -126,36 +126,36 @@ button[mui]:hover > i[ani="rotate"] {
     transform: rotate(360deg);
   }
 }
-button[mui]:hover > i[move="left"] {
+button[mui-button]:hover > i[move="left"] {
   -webkit-animation: ani-left 1s 1;
   -moz-animation: ani-left 1s 1;
   animation: ani-left 1s 1;
 }
-button[mui]:hover > i[move="right"] {
+button[mui-button]:hover > i[move="right"] {
   -webkit-animation: ani-right 1s 1;
   -moz-animation: ani-right 1s 1;
   animation: ani-right 1s 1;
 }
-button[mui]:hover > i[move="rotate"] {
+button[mui-button]:hover > i[move="rotate"] {
   -webkit-animation: ani-rotate 1s 1;
   -moz-animation: ani-rotate 1s 1;
   animation: ani-rotate 1s 1;
 }
-button[mui]:active {
+button[mui-button]:active {
   transition: all 150ms linear;
   opacity: 0.7;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
-button[mui].outline {
+button[mui-button].outline {
   background: transparent;
   border: #cbcbcb 1px solid;
   color: #222;
 }
-button[mui].outline:hover {
+button[mui-button].outline:hover {
   background: #cbcbcb;
   color: #424242;
 }
-button[mui].round, button[mui].transparent {
+button[mui-button].round, button[mui-button].transparent {
   width: 50px;
   height: 50px;
   padding: 0px;
@@ -163,12 +163,12 @@ button[mui].round, button[mui].transparent {
   text-align: center;
   border-radius: 50%;
 }
-button[mui].round > i, button[mui].transparent > i {
+button[mui-button].round > i, button[mui-button].transparent > i {
   font-size: 20px;
   left: 0;
   right: 0;
 }
-button[mui].round:before, button[mui].transparent:before {
+button[mui-button].round:before, button[mui-button].transparent:before {
   content: "";
   width: 30px;
   height: 30px;
@@ -181,7 +181,7 @@ button[mui].round:before, button[mui].transparent:before {
   transition: all 0.5s linear 0s;
 }
 
-a[mui] {
+a[mui-link] {
   margin-top: 5px;
   padding: 10px 15px;
   text-decoration: none;
@@ -194,192 +194,192 @@ a[mui] {
   font-family: Tahoma, Geneva, sans-serif;
 }
 
-button[mui][ts] {
+button[mui-button][ts] {
   background: transparent;
   text-align: center;
   box-shadow: none;
 }
-button[mui][ts] > i {
+button[mui-button][ts] > i {
   font-size: 20px;
 }
-button[mui][ts]:hover {
+button[mui-button][ts]:hover {
   box-shadow: none;
 }
 
-button[mui=earth] {
+button.earth {
   background: #34c559;
   color: #fff;
 }
-button[mui=earth].gradient {
+button.earth.gradient {
   background: linear-gradient(90deg, #21f379 0%, #3be76c 49%, #00ba66 95%);
 }
-button[mui=earth].outline {
+button.earth.outline {
   background: transparent;
   border: #34c559 1px solid;
 }
-button[mui=earth].outline {
+button.earth.outline {
   color: #34c559;
 }
-button[mui=earth].outline:hover {
+button.earth.outline:hover {
   background: #34c559;
   color: #fff;
 }
 
-button[mui=night] {
+button.night {
   background: #424242;
   color: #fff;
 }
-button[mui=night].outline {
+button.night.outline {
   background: transparent;
   border: #424242 1px solid;
 }
-button[mui=night].outline {
+button.night.outline {
   color: #424242;
 }
-button[mui=night].outline:hover {
+button.night.outline:hover {
   background: #424242;
   color: #fff;
 }
 
-button[mui=ocean] {
+button.ocean {
   background: #2e72ee;
   color: #fff;
 }
-button[mui=ocean].gradient {
+button.ocean.gradient {
   background: linear-gradient(90deg, #2196f3 0%, #03c5d6 61%, #00d4ff 84%);
 }
-button[mui=ocean].outline {
+button.ocean.outline {
   background: transparent;
   border: #2e72ee 1px solid;
 }
-button[mui=ocean].outline {
+button.ocean.outline {
   color: #2e72ee;
 }
-button[mui=ocean].outline:hover {
+button.ocean.outline:hover {
   background: #2e72ee;
   color: #fff;
 }
 
-button[mui=red] {
+button.red {
   background: #e93030;
   color: #fff;
 }
-button[mui=red].gradient {
+button.red.gradient {
   background: linear-gradient(90deg, #e9e130 0%, #f0247a 0%, #ff2a00 46%, #e93030 95%);
 }
-button[mui=red].outline {
+button.red.outline {
   background: transparent;
   border: #e93030 1px solid;
 }
-button[mui=red].outline {
+button.red.outline {
   color: #e93030;
 }
-button[mui=red].outline:hover {
+button.red.outline:hover {
   background: #e93030;
   color: #fff;
 }
 
-button[mui=snow] {
+button.snow {
   background: #fff;
   color: #424242;
 }
-button[mui=snow].outline {
+button.snow.outline {
   background: transparent;
   border: #fff 1px solid;
 }
-button[mui=snow][outline] {
+button.snow[outline] {
   color: #424242;
 }
-button[mui=snow]:hover {
+button.snow:hover {
   background: #fff;
   color: #424242;
 }
 
-button[mui=yellow] {
+button.yellow {
   background: #e7e828;
   color: #424242;
 }
-button[mui=yellow].gradient {
+button.yellow.gradient {
   background: linear-gradient(90deg, #e7e828 0%, #feff1a 0%, #ff8000 46%, #ecf110 95%);
 }
-button[mui=yellow].outline {
+button.yellow.outline {
   background: transparent;
   border: #e7e828 1px solid;
 }
-button[mui=yellow].outline {
+button.yellow.outline {
   color: #424242;
 }
-button[mui=yellow].outline:hover {
+button.yellow.outline:hover {
   background: #e7e828;
   color: #424242;
 }
 
-button[mui=purple] {
+button.purple {
   background: #6924f0;
   color: #fff;
 }
-button[mui=purple].gradient {
+button.purple.gradient {
   background: linear-gradient(90deg, #e9e130 0%, #6924f0 0%, #b40f91 44%, #e82890 95%);
 }
-button[mui=purple].outline {
+button.purple.outline {
   background: transparent;
   border: #6924f0 1px solid;
 }
-button[mui=purple].outline {
+button.purple.outline {
   color: #6924f0;
 }
-button[mui=purple].outline:hover {
+button.purple.outline:hover {
   background: #6924f0;
   color: #fff;
 }
 
-button[mui=pink] {
+button.pink {
   background: #ff87cb;
   color: #fff;
 }
-button[mui=pink].gradient {
+button.pink.gradient {
   background: linear-gradient(90deg, #e9e130 0%, #ff87cb 0%, #e977e1 46%, #e523e7 95%);
 }
-button[mui=pink].outline {
+button.pink.outline {
   background: transparent;
   border: #ff87cb 1px solid;
 }
-button[mui=pink].outline {
+button.pink.outline {
   color: #ff87cb;
 }
-button[mui=pink].outline:hover {
+button.pink.outline:hover {
   background: #ff87cb;
   color: #fff;
 }
 
-a[mui=earth] {
+a.earth {
   color: #34c559;
 }
 
-a[mui=night] {
+a.night {
   color: #424242;
 }
 
-a[mui=ocean] {
+a.ocean {
   color: #2e72ee;
 }
 
-a[mui=red] {
+a.red {
   color: #e93030;
 }
 
-a[mui=snow] {
+a.snow {
   color: #fff;
 }
 
-a[mui=yellow] {
+a.yellow {
   color: #e7e828;
 }
 
-a[mui=purple] {
+a.purple {
   color: #6924f0;
 }
 
-a[mui=pink] {
+a.pink {
   color: #ff87cb;
 }
