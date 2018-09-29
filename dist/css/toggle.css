@@ -10,7 +10,7 @@
   user-select: none;
 }
 
-label[mui] {
+label[mui-switch] {
   width: auto;
   min-width: 50px;
   position: relative;
@@ -23,16 +23,16 @@ label[mui] {
   padding-right: 15px;
   clear: both;
 }
-label[mui] > input:empty {
+label[mui-switch] > input:empty {
   margin-left: -1000px;
 }
-label[mui] > input:empty ~ span {
+label[mui-switch] > input:empty ~ span {
   width: auto;
   position: relative;
   float: left;
   cursor: pointer;
 }
-label[mui] > input:empty ~ span:before {
+label[mui-switch] > input:empty ~ span:before {
   width: 30px;
   height: 13px;
   border-radius: 12px;
@@ -40,7 +40,7 @@ label[mui] > input:empty ~ span:before {
   top: 3px;
   left: 0px;
 }
-label[mui] > input:empty ~ span:after {
+label[mui-switch] > input:empty ~ span:after {
   width: 17px;
   height: 17px;
   margin-left: 0.1em;
@@ -51,83 +51,83 @@ label[mui] > input:empty ~ span:after {
   top: -1px;
   left: -9px;
 }
-label[mui] > input:empty ~ span:before, label[mui] > input:empty ~ span:after {
+label[mui-switch] > input:empty ~ span:before, label[mui-switch] > input:empty ~ span:after {
   content: "";
   position: absolute;
   display: block;
   -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-label[mui] > input:checked ~ span:before {
+label[mui-switch] > input:checked ~ span:before {
   background: rgba(46, 114, 238, 0.8);
 }
-label[mui] > input:checked ~ span:after {
+label[mui-switch] > input:checked ~ span:after {
   left: 15px;
   background: #2e72ee;
   border-color: #2e72ee;
 }
-label[mui] > span {
+label[mui-switch] > span {
   text-indent: 45px;
 }
 
-label[mui=earth] > input:checked ~ span:before {
+label.earth > input:checked ~ span:before {
   background: rgba(52, 197, 89, 0.5);
 }
-label[mui=earth] > input:checked ~ span:after {
+label.earth > input:checked ~ span:after {
   left: 15px;
   background: #34c559;
   border-color: #34c559;
 }
 
-label[mui=night] > input:checked ~ span:before {
+label.night > input:checked ~ span:before {
   background: rgba(66, 66, 66, 0.5);
 }
-label[mui=night] > input:checked ~ span:after {
+label.night > input:checked ~ span:after {
   left: 15px;
   background: #424242;
   border-color: #424242;
 }
 
-label[mui=ocean] > input:checked ~ span:before {
+label.ocean > input:checked ~ span:before {
   background: rgba(46, 114, 238, 0.5);
 }
-label[mui=ocean] > input:checked ~ span:after {
+label.ocean > input:checked ~ span:after {
   left: 15px;
   background: #2e72ee;
   border-color: #2e72ee;
 }
 
-label[mui=red] > input:checked ~ span:before {
+label.red > input:checked ~ span:before {
   background: rgba(233, 48, 48, 0.5);
 }
-label[mui=red] > input:checked ~ span:after {
+label.red > input:checked ~ span:after {
   left: 15px;
   background: #e93030;
   border-color: #e93030;
 }
 
-label[mui=yellow] > input:checked ~ span:before {
+label.yellow > input:checked ~ span:before {
   background: rgba(231, 232, 40, 0.5);
 }
-label[mui=yellow] > input:checked ~ span:after {
+label.yellow > input:checked ~ span:after {
   left: 15px;
   background: #e7e828;
   border-color: #e7e828;
 }
 
-label[mui=purple] > input:checked ~ span:before {
+label.purple > input:checked ~ span:before {
   background: rgba(105, 36, 240, 0.5);
 }
-label[mui=purple] > input:checked ~ span:after {
+label.purple > input:checked ~ span:after {
   left: 15px;
   background: #6924f0;
   border-color: #6924f0;
 }
 
-label[mui=pink] > input:checked ~ span:before {
+label.pink > input:checked ~ span:before {
   background: rgba(255, 135, 203, 0.5);
 }
-label[mui=pink] > input:checked ~ span:after {
+label.pink > input:checked ~ span:after {
   left: 15px;
   background: #ff87cb;
   border-color: #ff87cb;
