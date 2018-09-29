@@ -7,7 +7,7 @@
   outline: none;
 }
 
-button[mui] {
+button[mui-button] {
   margin-top: 5px;
   padding: 12px 20px;
   overflow: hidden;
@@ -116,7 +116,7 @@ button[mui] {
 }
 }
 
-a[mui] {
+a[mui-link] {
   margin-top: 5px;
   padding: 10px 15px;
   text-decoration: none;
@@ -129,7 +129,7 @@ a[mui] {
   font-family: Tahoma, Geneva, sans-serif;
 }
 
-button[mui][ts] {
+button[mui-button][ts] {
   background: transparent;
   text-align: center;
   box-shadow: none;
@@ -144,7 +144,8 @@ button[mui][ts] {
 @mixin colorClass($name, $tag) {
   @if $tag == "a" {
     color: color($name);
-  } @else {
+  } 
+  @else {
     background: color($name);
     &.gradient{
       background: color($name+"-gradient");
@@ -176,5 +177,5 @@ button[mui][ts] {
 }
 
 $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
-@include build-color-class(button, mui, $color_vars);
-@include build-color-class(a, mui, $color_vars);
+@include build-color-class(button, mui-button, $color_vars);
+@include build-color-class(a, mui-link, $color_vars);
