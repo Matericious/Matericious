@@ -327,7 +327,7 @@ button[mui-button][ts]:hover {
   color: #424242;
 }
 [mui-button].yellow.gradient {
-  background: linear-gradient(90deg, #e7e828 0%, #feff1a 0%, #ff8000 46%, #ecf110 95%);
+  background: linear-gradient(90deg, #ffeb00 0%, #f4ed15 45%, #e0ff00 65%, #b9ff00 100%);
 }
 [mui-button].yellow.outline {
   background: transparent;
