@@ -1,8 +1,18 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
-label[mui-chips] {
-  background: #ececec;
+
+@mixin closeBtnColor($color, $rgba){
+    color: color($color, $rgba);
+    &:hover{
+      color: color($color, 1);
+    }
+}
+a{
+  text-decoration: none;
+}
+[mui-chips] {
+  background: color('light-grey', .6);
   padding: 8px;
   border-radius: 30px;
   font-size: 15px;
@@ -11,26 +21,63 @@ label[mui-chips] {
   margin-left: 5px;
   color: #2f2f2f;
   cursor: pointer;
-  &[br]{
-    border: 1px solid #222;
+  text-decoration: none;
+  &:hover{
+    background: color('light-grey', 1);
   }
-  &[rd]{
-      box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  &.raised{
+     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  }
+  &.outline{
+    background: transparent;
+    border: 1px solid color('light-grey');
+    &:hover{
+      background: color('light-grey');
+      color: color('dark');
+    }
   }
   > i {
     vertical-align: middle;
     font-size: 18px;
     margin-top: -2px;
     color: #2f2f2f;
+    &:nth-child(1){
+      font-size: 25px;
+      margin-left: -4px;
+    }
+  }
+  > .close{
+    font-size: 25px;
+    position: relative;
+    left: 8px;
+    transition: color .2s ease-in-out;
+    @include closeBtnColor('dark', .4);
+  }
+  > img{
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-top: -3px;
+    margin-left: -7px;
+    border-radius: 50%;
   }
 }
 
 @mixin colorClass($name, $tag) {
   background: color($name);
-  &[br]{
+  &.outline{
     background: transparent;
     color: color($name);
     border-color: color($name);
+    &:hover{
+      background: color($name);
+      color: color('light');
+    }
+  }
+  @if $name == "night"{
+    > .close{
+       @include closeBtnColor('light', .4);
+    }
   }
   @if $name == "snow" {
     color: color('dark', 0.8);
@@ -41,14 +88,20 @@ label[mui-chips] {
     color: color('dark', 0.8);
     > i {
       color: color('dark');
+      &.close{
+         @include closeBtnColor('dark', .6);
+      }
     }
   } @else {
     color: color('light', 0.8);
-    > i {
+    > i:nth-child(1) {
       color: color('light');
+      &.close{
+         @include closeBtnColor('dark', .4);
+      }
     }
   }
 }
 
 $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
-@include build-color-class(label, mui-chip, $color_vars);
+@include build-color-class([mui-chips], mui-chip, $color_vars);
