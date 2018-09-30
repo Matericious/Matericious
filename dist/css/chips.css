@@ -1,5 +1,9 @@
-label[mui-chips] {
-  background: #ececec;
+a {
+  text-decoration: none;
+}
+
+[mui-chips] {
+  background: rgba(236, 236, 236, 0.6);
   padding: 8px;
   border-radius: 30px;
   font-size: 15px;
@@ -8,120 +12,231 @@ label[mui-chips] {
   margin-left: 5px;
   color: #2f2f2f;
   cursor: pointer;
+  text-decoration: none;
 }
-label[mui-chips][br] {
-  border: 1px solid #222;
+[mui-chips]:hover {
+  background: #ececec;
 }
-label[mui-chips][rd] {
+[mui-chips].raised {
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
-label[mui-chips] > i {
+[mui-chips].outline {
+  background: transparent;
+  border: 1px solid #ececec;
+}
+[mui-chips].outline:hover {
+  background: #ececec;
+  color: #424242;
+}
+[mui-chips] > i {
   vertical-align: middle;
   font-size: 18px;
   margin-top: -2px;
   color: #2f2f2f;
 }
+[mui-chips] > i:nth-child(1) {
+  font-size: 25px;
+  margin-left: -4px;
+}
+[mui-chips] > .close {
+  font-size: 25px;
+  position: relative;
+  left: 8px;
+  transition: color .2s ease-in-out;
+  color: rgba(66, 66, 66, 0.4);
+}
+[mui-chips] > .close:hover {
+  color: #424242;
+}
+[mui-chips] > img {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-top: -3px;
+  margin-left: -7px;
+  border-radius: 50%;
+}
 
-label[mui-chip=earth] {
+[mui-chips].earth {
   background: #34c559;
   color: rgba(255, 255, 255, 0.8);
 }
-label[mui-chip=earth][br] {
+[mui-chips].earth.outline {
   background: transparent;
   color: #34c559;
   border-color: #34c559;
 }
-label[mui-chip=earth] > i {
+[mui-chips].earth.outline:hover {
+  background: #34c559;
   color: #fff;
 }
+[mui-chips].earth > i:nth-child(1) {
+  color: #fff;
+}
+[mui-chips].earth > i:nth-child(1).close {
+  color: rgba(66, 66, 66, 0.4);
+}
+[mui-chips].earth > i:nth-child(1).close:hover {
+  color: #424242;
+}
 
-label[mui-chip=night] {
+[mui-chips].night {
   background: #424242;
   color: rgba(255, 255, 255, 0.8);
 }
-label[mui-chip=night][br] {
+[mui-chips].night.outline {
   background: transparent;
   color: #424242;
   border-color: #424242;
 }
-label[mui-chip=night] > i {
+[mui-chips].night.outline:hover {
+  background: #424242;
   color: #fff;
 }
+[mui-chips].night > .close {
+  color: rgba(255, 255, 255, 0.4);
+}
+[mui-chips].night > .close:hover {
+  color: white;
+}
+[mui-chips].night > i:nth-child(1) {
+  color: #fff;
+}
+[mui-chips].night > i:nth-child(1).close {
+  color: rgba(66, 66, 66, 0.4);
+}
+[mui-chips].night > i:nth-child(1).close:hover {
+  color: #424242;
+}
 
-label[mui-chip=ocean] {
+[mui-chips].ocean {
   background: #2e72ee;
   color: rgba(255, 255, 255, 0.8);
 }
-label[mui-chip=ocean][br] {
+[mui-chips].ocean.outline {
   background: transparent;
   color: #2e72ee;
   border-color: #2e72ee;
 }
-label[mui-chip=ocean] > i {
+[mui-chips].ocean.outline:hover {
+  background: #2e72ee;
   color: #fff;
 }
+[mui-chips].ocean > i:nth-child(1) {
+  color: #fff;
+}
+[mui-chips].ocean > i:nth-child(1).close {
+  color: rgba(66, 66, 66, 0.4);
+}
+[mui-chips].ocean > i:nth-child(1).close:hover {
+  color: #424242;
+}
 
-label[mui-chip=red] {
+[mui-chips].red {
   background: #e93030;
   color: rgba(255, 255, 255, 0.8);
 }
-label[mui-chip=red][br] {
+[mui-chips].red.outline {
   background: transparent;
   color: #e93030;
   border-color: #e93030;
 }
-label[mui-chip=red] > i {
+[mui-chips].red.outline:hover {
+  background: #e93030;
   color: #fff;
 }
+[mui-chips].red > i:nth-child(1) {
+  color: #fff;
+}
+[mui-chips].red > i:nth-child(1).close {
+  color: rgba(66, 66, 66, 0.4);
+}
+[mui-chips].red > i:nth-child(1).close:hover {
+  color: #424242;
+}
 
-label[mui-chip=snow] {
+[mui-chips].snow {
   background: #fff;
   color: rgba(66, 66, 66, 0.8);
 }
-label[mui-chip=snow][br] {
+[mui-chips].snow.outline {
   background: transparent;
   color: #fff;
   border-color: #fff;
 }
-label[mui-chip=snow] > i {
+[mui-chips].snow.outline:hover {
+  background: #fff;
+  color: #fff;
+}
+[mui-chips].snow > i {
   color: #424242;
 }
 
-label[mui-chip=yellow] {
+[mui-chips].yellow {
   background: #e7e828;
   color: rgba(66, 66, 66, 0.8);
 }
-label[mui-chip=yellow][br] {
+[mui-chips].yellow.outline {
   background: transparent;
   color: #e7e828;
   border-color: #e7e828;
 }
-label[mui-chip=yellow] > i {
+[mui-chips].yellow.outline:hover {
+  background: #e7e828;
+  color: #fff;
+}
+[mui-chips].yellow > i {
+  color: #424242;
+}
+[mui-chips].yellow > i.close {
+  color: rgba(66, 66, 66, 0.6);
+}
+[mui-chips].yellow > i.close:hover {
   color: #424242;
 }
 
-label[mui-chip=purple] {
+[mui-chips].purple {
   background: #6924f0;
   color: rgba(255, 255, 255, 0.8);
 }
-label[mui-chip=purple][br] {
+[mui-chips].purple.outline {
   background: transparent;
   color: #6924f0;
   border-color: #6924f0;
 }
-label[mui-chip=purple] > i {
+[mui-chips].purple.outline:hover {
+  background: #6924f0;
   color: #fff;
 }
+[mui-chips].purple > i:nth-child(1) {
+  color: #fff;
+}
+[mui-chips].purple > i:nth-child(1).close {
+  color: rgba(66, 66, 66, 0.4);
+}
+[mui-chips].purple > i:nth-child(1).close:hover {
+  color: #424242;
+}
 
-label[mui-chip=pink] {
+[mui-chips].pink {
   background: #ff87cb;
   color: rgba(255, 255, 255, 0.8);
 }
-label[mui-chip=pink][br] {
+[mui-chips].pink.outline {
   background: transparent;
   color: #ff87cb;
   border-color: #ff87cb;
 }
-label[mui-chip=pink] > i {
+[mui-chips].pink.outline:hover {
+  background: #ff87cb;
   color: #fff;
+}
+[mui-chips].pink > i:nth-child(1) {
+  color: #fff;
+}
+[mui-chips].pink > i:nth-child(1).close {
+  color: rgba(66, 66, 66, 0.4);
+}
+[mui-chips].pink > i:nth-child(1).close:hover {
+  color: #424242;
 }
