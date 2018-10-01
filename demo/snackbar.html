@@ -10,12 +10,19 @@
       <link rel="stylesheet" href="../dist/css/snackbar.css">
    </head>
    <body>
-      <snackbar class="action bottom center>
-         <div>
-            <text class="text">welcome to my awesome snackbar this is the text that would go there</text>
-            <button class="ripple"><i class="material-icons">close</i></button>
-            <button class="ripple">Retry</button>
-         </div>
-      </snackbar>
+      <snackbar></snackbar>
+      <button onclick="showSnack()">Snackbar</button>
+      <script src="../dist/js/snackbar.js"></script>
+      <script>
+        function showSnack() {
+           var data = {
+               type: "action",
+               text: "Welcome to the most awesome snachbar ever",
+               time: null,
+               actionButton: 'retry',
+            };
+          Snackbar(data);
+        }
+     </script>
    </body>
 </html>
