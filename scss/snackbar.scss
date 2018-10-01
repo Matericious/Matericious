@@ -2,11 +2,13 @@
 @import "_variables.scss";
 @import "ripple.scss";
 
+
 $snackbar-width: 350px;
+$action-snackbar-width: 380px;
 $snackbar-height: 60px;
 $snackbar-maxWidth: 95%;
 $snackbar-radius: 5px;
-$modal-position: 1em;
+$modal-position: .5em;
 
 *:hover,
 *:focus {
@@ -26,6 +28,7 @@ snackbar {
     color: color("basic");
     border-radius: $snackbar-radius;
     position: fixed;
+    bottom: -10px;
     pointer-events: auto;
     overflow: hidden;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -88,6 +91,7 @@ snackbar {
   
   &.action {
     > div {
+      width: $action-snackbar-width;
       > text {
         width: calc(100% - 160px);
       }
@@ -121,3 +125,67 @@ snackbar {
     }
   }
 }
+
+/*##########################
+
+Snackbar Animations*/
+
+.slideUpBottom{
+   @include animation(slideUpBottom .5s 0s ease forwards);
+}
+@include keyframes(slideUpBottom) {
+  from {
+       bottom: -100px
+    }         
+    to {
+       bottom: $modal-position;
+    }   
+}
+
+.slideUpTop{
+  @include animation(slideUpTop .5s 0s ease forwards);
+}
+ 
+
+@include keyframes(slideUpTop){
+  from {              
+      top: -100px;
+    }         
+    to {
+      top: $modal-position;
+    } 
+}
+
+/*
+==============================================
+slideDown Animation 
+==============================================
+*/
+ 
+.slideDownBottom{  
+  @include animation(slideDownBottom .5s 0s ease forwards);
+}
+
+@include keyframes(slideDownBottom){
+    from {
+       bottom: $modal-position;
+    }         
+    to {
+       bottom: -100px
+    }  
+}
+
+
+.slideDownTop{  
+  @include animation(slideDownTop .5s 0s ease forwards)
+}
+
+@include keyframes(slideDownTop){
+    from {
+       top: $modal-position;
+    }         
+    to {
+       top: -100px
+    }   
+}
+
