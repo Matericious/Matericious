@@ -1,6 +1,5 @@
-*:hover, *:focus{
-  outline: none;
-}
+@import "_mixins.scss";
+@import "_variables.scss";
 
 
 /*Modal size*/
@@ -147,6 +146,32 @@ modal-con {
     &.loader {
       width: 250px;
       height: 95px;
+      text-align: center;
+      &.small{
+        width: 50px;
+        height: 50px;
+        > svg{
+          position: relative;
+          top: 8px;
+        }
+      }
+      &.medium{
+        width: 100px;
+        height: 80px;
+        padding: 10px;  
+        text-align: center;
+        color: color('dark');
+        > svg{
+          width: 50px;
+          height: 50px;
+        }
+        > span{
+          position: relative;
+          top: 10px;
+          font-family: $modal-primary-font;
+          color: inherit;
+        }
+      }
       > header {
         height: auto;
         line-height: 30px;
@@ -184,6 +209,9 @@ modal-con {
       > header,
       > main{
          color: color('light', .7);
+      }
+      &.medium{
+        color: color('light');
       }
     }
   }
@@ -242,6 +270,7 @@ modal-con {
     }
   }
 }
+
 
 
 @import "input.scss";
