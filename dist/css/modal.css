@@ -176,6 +176,32 @@ modal-con > modal.action {
 modal-con > modal.loader {
   width: 250px;
   height: 95px;
+  text-align: center;
+}
+modal-con > modal.loader.small {
+  width: 50px;
+  height: 50px;
+}
+modal-con > modal.loader.small > svg {
+  position: relative;
+  top: 8px;
+}
+modal-con > modal.loader.medium {
+  width: 100px;
+  height: 80px;
+  padding: 10px;
+  text-align: center;
+  color: #212121;
+}
+modal-con > modal.loader.medium > svg {
+  width: 50px;
+  height: 50px;
+}
+modal-con > modal.loader.medium > span {
+  position: relative;
+  top: 10px;
+  font-family: "Ubuntu", sans-serif;
+  color: inherit;
 }
 modal-con > modal.loader > header {
   height: auto;
@@ -208,6 +234,9 @@ modal-con.dark > modal {
 modal-con.dark > modal > header,
 modal-con.dark > modal > main {
   color: rgba(255, 255, 255, 0.7);
+}
+modal-con.dark > modal.medium {
+  color: #fff;
 }
 modal-con.light > modal {
   box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1), 0 5px 30px 0 rgba(0, 0, 0, 0.1);
