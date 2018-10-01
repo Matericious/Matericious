@@ -2,27 +2,53 @@
   outline: none;
 }
 
+
 /*Modal size*/
 $modal-width: 350px;
-$modal-height: 200px;
+$modal-height: 150px;
 $modal-maxWidth: 85% !important;
-/*Modal fonts*/
-$modal-header-font: Arial, Helvetica, sans-serif;
-$modal-body-font: "Trebuchet MS", Helvetica, sans-serif;
-$modal-position: 3em;
-/*Material loader color*/
-$material-loader-color: #0091ea;
-/*Light modal colors*/
-$light-modal-background: #fff;
-$light-modal-color: #000;
-$light-modal-overlay: rgba(255, 255, 255, 0.3);
-/*Dark modal colors*/
-$dark-modal-background: #212121;
-$dark-modal-color: #c1bfbf;
-$dark-modal-overlay: rgba(0, 0, 0, 0.7);
 
-modal-con[overlay] {
-  background: $dark-modal-overlay;
+/*Modal fonts*/
+$modal-primary-font: "Ubuntu", sans-serif;
+$modal-secondary-font: "Rubik", sans-serif;
+$modal-position: 3em;
+
+*:hover, *:focus{
+  outline: none;
+}
+
+svg[md-loader] {
+  @include animation(rotate 2s linear infinite);
+  width: 35px;
+  vertical-align: middle;
+  circle {
+    fill: none;
+    stroke: color('blue');
+    stroke-dasharray: 2, 155;
+    stroke-dashoffset: 0;
+    @include animation(dash 1.35s cubic-bezier(0.4, 0, 0.2, 1) infinite);
+  }
+}
+
+@include keyframes(rotate) {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@include keyframes(dash) {
+  0% {
+    stroke-dasharray: 2, 155;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 122, 20;
+    stroke-dashoffset: -20;
+  }
+  100% {
+    stroke-dasharray: 2, 155;
+    stroke-dashoffset: -155;
+  }
 }
 
 modal-con {
@@ -37,43 +63,42 @@ modal-con {
   user-select: none;
   pointer-events: none;
   > modal {
-    width: 350px;
-    height: 150px;
-    max-width: 80% !important;
-    background: #fff;
+    width: $modal-width;
+    height: $modal-height;
+    max-width: $modal-maxWidth;
+    color: color('dark');
+    background: color('light', .8);
     line-height: normal;
     position: fixed;
     margin: auto;
     top: 0;
     right: 0;
-    bottom: 10%;
+    bottom: 0;
     left: 0;
     border-radius: 5px;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.1) !important;
     pointer-events: auto !important;
-    
     > header {
       width: 88%;
       height: 45px;
-      /*background: red;*/
       line-height: 35px;
       margin: 12px auto 0px auto;
       font-size: 16px;
-      font-family: "Ubuntu", sans-serif;
+      font-family: $modal-primary-font;
       font-weight: bold;
-      color: rgba(0, 0, 0, 0.7);
+      color: color('dark');
     }
     > main {
       width: 88%;
       height: auto;
       font-size: 15px;
       margin: 0px auto;
-      font-family: "Rubik", sans-serif;
+      font-family: $modal-secondary-font;
       > input {
         width: 100%;
         font-size: 17px;
         border: none;
-        border-bottom: 1.5px solid #8e8887;
+        border-bottom: 1.5px solid color('dark');
         padding-bottom: 2px;
         margin-top: 6px;
         padding: 4px;
@@ -83,7 +108,7 @@ modal-con {
       }
       > p {
         font-size: 12px;
-        color: #f42929;
+        color: color('dark');
         margin-left: 6px;
         position: relative;
         top: -25px;
@@ -99,7 +124,6 @@ modal-con {
       margin: 0px auto;
       line-height: 48px;
       text-align: right;
-      /*background: red;*/
       position: absolute;
       bottom: 0;
       > button {
@@ -108,9 +132,9 @@ modal-con {
         padding: 4px;
         font-weight: bold;
         outline: none;
-        font-family: "Ubuntu", sans-serif;
+        font-family: $modal-primary-font;
         text-size: 15px;
-        color: rgba(0, 0, 0, 0.7);
+        color: color('blue');
         margin-right: 20px;
         text-transform: uppercase;
         cursor: pointer;
@@ -120,7 +144,104 @@ modal-con {
       width: 300px;
       height: 120px;
     }
+    &.loader {
+      width: 250px;
+      height: 95px;
+      > header {
+        height: auto;
+        line-height: 30px;
+        > label {
+          font-size: 16px;
+        }
+      }
+      > main {
+        > div {
+          display: inline-block;
+          height: 45px;
+          line-height: 45px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          &:nth-child(1) {
+            width: 40px;
+            text-align: center;
+          }
+          &:nth-child(2) {
+            width: calc(100% - 45px);
+            text-indent: 10px;
+            font-family: $modal-secondary-font;
+          }
+        }
+      }
+    }
   }
 }
+
+modal-con {
+  &.dark {
+    > modal {
+      background: color('dark');
+      > header,
+      > main{
+         color: color('light', .7);
+      }
+    }
+  }
+  &.light {
+      > modal {
+        box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1),
+          0 5px 30px 0 rgba(0, 0, 0, 0.1);
+        > header,
+        > main{
+           color: color('dark');
+        }
+      }
+  }
+  
+  &.overlay {
+    pointer-events: auto;
+    background: color('dark', .6);
+    &.light{
+      background: color('light', .6);
+    }
+  }
+
+  &.top {
+    > modal {
+      top: $modal-position;
+      bottom: auto !important;
+    }
+  }
+  &.bottom {
+    > modal {
+      top: auto !important;
+      bottom: $modal-position;
+    }
+  }
+  &.left {
+    > modal {
+      right: auto !important;
+      left: $modal-position;
+    }
+  }
+  &.right {
+    > modal {
+      right: $modal-position;
+      left: auto !important;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  modal-con {
+    &.left,
+    &.right {
+      margin: 0px auto;
+      right: 0px !important;
+      left: 0px !important;
+    }
+  }
+}
+
 
 @import "input.scss";
