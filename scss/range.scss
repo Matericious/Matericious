@@ -21,7 +21,7 @@ input[mui-range]{
   width: 200px;
   height: 8px;
   border-radius: 4px;
-  background: color('grey', .2);
+  background: color('basic', .2);
   margin: 0;
   transition: background .5s ease-in-out;
   &::-webkit-slider-thumb{
@@ -40,7 +40,7 @@ input[mui-range]{
     }
   }
   &:hover{
-    background: color('grey', .6);
+    background: color('basic', .6);
   }
   &:active{
     &::-webkit-slider-thumb{

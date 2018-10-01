@@ -1,6 +1,6 @@
 @import "_mixins.scss";
 @import "_variables.scss";
-@import "_global.scss";
+@import "ripple.scss";
 
 
 @mixin closeBtnColor($color, $rgba){
@@ -13,7 +13,7 @@ a{
   text-decoration: none;
 }
 [mui-chips] {
-  background: color('light-grey', .6);
+  background: color('basic', .6);
   padding: 8px;
   border-radius: 30px;
   font-size: 15px;
@@ -24,16 +24,16 @@ a{
   cursor: pointer;
   text-decoration: none;
   &:hover{
-    background: color('light-grey', 1);
+    background: color('basic', 1);
   }
   &.raised{
      box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
   }
   &.outline{
     background: transparent;
-    border: 1px solid color('light-grey');
+    border: 1px solid color('basic');
     &:hover{
-      background: color('light-grey');
+      background: color('basic');
       color: color('dark');
     }
   }
