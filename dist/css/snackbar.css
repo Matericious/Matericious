@@ -46,6 +46,7 @@ snackbar > div {
   color: #cbcbcb;
   border-radius: 5px;
   position: fixed;
+  bottom: -10px;
   pointer-events: auto;
   overflow: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -104,23 +105,155 @@ snackbar.light > div > text {
 snackbar.light > div > button {
   color: #111111;
 }
+snackbar.action > div {
+  width: 380px;
+}
 snackbar.action > div > text {
   width: calc(100% - 160px);
 }
 snackbar.top > div {
-  top: 1em;
+  top: 0.5em;
 }
 snackbar.bottom > div {
-  bottom: 1em;
+  bottom: 0.5em;
 }
 snackbar.left > div {
-  left: 1em;
+  left: 0.5em;
 }
 snackbar.right > div {
-  right: 1em;
+  right: 0.5em;
 }
 snackbar.center > div {
   margin: 0px auto;
   left: 0px;
   right: 0px;
+}
+
+/*##########################
+
+Snackbar Animations*/
+.slideUpBottom {
+  -webkit-animation: slideUpBottom 0.5s 0s ease forwards;
+  -moz-animation: slideUpBottom 0.5s 0s ease forwards;
+  animation: slideUpBottom 0.5s 0s ease forwards;
+}
+
+@-moz-keyframes slideUpBottom {
+  from {
+    bottom: -100px;
+  }
+  to {
+    bottom: 0.5em;
+  }
+}
+@-webkit-keyframes slideUpBottom {
+  from {
+    bottom: -100px;
+  }
+  to {
+    bottom: 0.5em;
+  }
+}
+@keyframes slideUpBottom {
+  from {
+    bottom: -100px;
+  }
+  to {
+    bottom: 0.5em;
+  }
+}
+.slideUpTop {
+  -webkit-animation: slideUpTop 0.5s 0s ease forwards;
+  -moz-animation: slideUpTop 0.5s 0s ease forwards;
+  animation: slideUpTop 0.5s 0s ease forwards;
+}
+
+@-moz-keyframes slideUpTop {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0.5em;
+  }
+}
+@-webkit-keyframes slideUpTop {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0.5em;
+  }
+}
+@keyframes slideUpTop {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0.5em;
+  }
+}
+/*
+==============================================
+slideDown Animation 
+==============================================
+*/
+.slideDownBottom {
+  -webkit-animation: slideDownBottom 0.5s 0s ease forwards;
+  -moz-animation: slideDownBottom 0.5s 0s ease forwards;
+  animation: slideDownBottom 0.5s 0s ease forwards;
+}
+
+@-moz-keyframes slideDownBottom {
+  from {
+    bottom: 0.5em;
+  }
+  to {
+    bottom: -100px;
+  }
+}
+@-webkit-keyframes slideDownBottom {
+  from {
+    bottom: 0.5em;
+  }
+  to {
+    bottom: -100px;
+  }
+}
+@keyframes slideDownBottom {
+  from {
+    bottom: 0.5em;
+  }
+  to {
+    bottom: -100px;
+  }
+}
+.slideDownTop {
+  -webkit-animation: slideDownTop 0.5s 0s ease forwards;
+  -moz-animation: slideDownTop 0.5s 0s ease forwards;
+  animation: slideDownTop 0.5s 0s ease forwards;
+}
+
+@-moz-keyframes slideDownTop {
+  from {
+    top: 0.5em;
+  }
+  to {
+    top: -100px;
+  }
+}
+@-webkit-keyframes slideDownTop {
+  from {
+    top: 0.5em;
+  }
+  to {
+    top: -100px;
+  }
+}
+@keyframes slideDownTop {
+  from {
+    top: 0.5em;
+  }
+  to {
+    top: -100px;
+  }
 }
