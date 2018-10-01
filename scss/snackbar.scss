@@ -22,8 +22,8 @@ snackbar {
     height: $snackbar-height;
     max-width: $snackbar-maxWidth;
     font-family: $font;
-    background: color('dark');
-    color: color('basic');
+    background: color("dark");
+    color: color("basic");
     border-radius: $snackbar-radius;
     position: fixed;
     pointer-events: auto;
@@ -48,7 +48,7 @@ snackbar {
       margin-top: 16px;
       border: none;
       background: transparent;
-      color: color('basic');
+      color: color("basic");
       border-radius: 5px;
       text-transform: uppercase;
       display: inline-block;
@@ -56,10 +56,10 @@ snackbar {
         width: 40px;
         height: 40px;
         margin-top: 10px;
-        background: color('dark', 0.1);
+        background: color("dark", 0.1);
         border-radius: 50%;
         transition: all 0.5s linear 0s;
-        > i{
+        > i {
           vertical-align: middle;
           font-size: 20px;
         }
@@ -71,56 +71,53 @@ snackbar {
       }
     }
   }
-}
-
-snackbar[action] > div{
-  > text {
-    width: calc(100% - 160px);
-  }
-}
-
-snackbar[top] {
-  > div {
-    top: $modal-position;
-  }
-}
-
-snackbar[bottom] {
-  > div {
-    bottom: $modal-position;
-  }
-}
-
-snackbar {
-  > div[left] {
-    left: $modal-position;
-  }
-}
-
-snackbar {
-  > div[right] {
-    right: $modal-position;
-  }
-}
-
-snackbar{
-  > div[center]{
-    margin: 0px auto;
-    left: 0px;
-    right: 0px;
-  }
-}
-
-snackbar[light] {
-  background: color('dark', 0.6);
-  > div {
-    background: color('light');
-    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1), 0 5px 30px 0 rgba(0, 0, 0, 0.1);
-    > text{
-      color: color('dark');
+  &.light {
+    background: color("dark", 0.6);
+    > div {
+      background: color("light");
+      box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1),
+        0 5px 30px 0 rgba(0, 0, 0, 0.1);
+      > text {
+        color: color("dark");
+      }
+      > button {
+        color: color("dark");
+      }
     }
-    > button{
-      color: color('dark');
+  }
+  
+  &.action {
+    > div {
+      > text {
+        width: calc(100% - 160px);
+      }
+    }
+  }
+  &.top {
+    > div {
+      top: $modal-position;
+    }
+  }
+  &.bottom {
+    > div {
+      bottom: $modal-position;
+    }
+  }
+  &.left {
+    > div {
+      left: $modal-position;
+    }
+  }
+  &.right {
+    > div {
+      right: $modal-position;
+    }
+  }
+  &.center {
+    > div {
+      margin: 0px auto;
+      left: 0px;
+      right: 0px;
     }
   }
 }
