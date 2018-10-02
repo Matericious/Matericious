@@ -1,27 +1,36 @@
 <!Doctype html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <title>Loading Modal</title>
-      <meta name="description" content="Loading modal design">
-      <meta name="author" content="MUI Developer">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-      <link rel="stylesheet" href="../dist/css/modal.css">
-   </head>
-   <body>
-      <modal-con id="loader" class="right bottom">
-         <modal class="loader">
-            <header>Please wait</header>
-            <main>
-               <div>
-                  <svg md-loader stroke-width="5" viewBox="0 0 66 66">
-                     <circle cx="33" cy="33" r="25" />
-                  </svg>
-               </div>
-               <div> Sending data to server.... </div>
-            </main>
-         </modal>
-      </modal-con>
-   </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Loading Modal</title>
+  <meta name="description" content="Loading modal">
+  <meta name="author" content="MUI Developer">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="../dist/css/modal.css">
+</head>
+
+<body>
+  <modal-con></modal-con>
+
+  <button onclick="Loading()">Loading Modal</button>
+  
+  <script src="../dist/js/loading.js"></script>
+  <script>
+    function Loading(){
+      var data = {
+         title: 'Please wait',
+         message: 'Sending your data',
+         time: 4000,
+         pos: {
+            vertical: 'bottom',
+            horizontal: 'right',
+         }
+       }; 
+    LoadingModal(data);
+  }
+  </script>
+</body>
+
 </html>
