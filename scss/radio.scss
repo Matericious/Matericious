@@ -1,6 +1,9 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
+$radio-size: 20px;
+$gap: 10px;
+
 *:hover,
 *:focus {
   outline: none;
@@ -12,85 +15,65 @@
   user-select: none;
 }
 
-label{
-    margin: 15px 8px;
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
-label[mui] {
-  width: auto;
-  min-width: 50px;
-  position: relative;
+[mui-radio] {
+  margin: 16px 0;
   display: inline-block;
-  color: color('dark');
-  font-size: 16px !important;
-  line-height: 24px;
-  cursor: pointer;
-  font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui,
-    -apple-system;
-  font-size: 14px;
-  padding-right: 15px;
-  clear: left;
-  > input[type="radio"] {
-    position: absolute;
-    opacity: 0;
+  input[type="radio"] {
+    display: none;
+    &:checked + label:before {
+      border-color: color('cyan');
+    }
+    &:checked + label:after {
+      transform: scale(1);
+    }
+  }
+  label {
+    display: inline-block;
+    height:$radio-size;
+    position: relative;
+    padding: 0 ($radio-size + 10px);
+    margin-bottom: 0;
     cursor: pointer;
-    &:checked {
-      & ~ span {
-        background: color('ocean');
-        &:after {
-          display: block;
-        }
-      }
-    }
-  }
-  > span {
-    width: 25px;
-    height: 25px;
-    background: #eee;
-    border-radius: 50%;
-    margin: 10px;
-    text-indent: 30px;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-
-    &:after {
-      content: "";
-      width: 8px;
-      height: 8px;
+    vertical-align: bottom;
+    &:before, &:after {
       position: absolute;
-      display: none;
-      top: 9px;
-      left: 9px;
+      content: '';
       border-radius: 50%;
-      background: #fff;
+      transition: all .3s ease;
+      transition-property: transform, border-color;
     }
-  }
-  &:hover {
-    > input {
-      & ~ span {
-        background: color('dark', 0.6);
-      }
+    &:before {
+      left: 0;
+      top: 0;
+      width: $radio-size;
+      height: $radio-size;
+      border: 2px solid rgba(#000, 0.54)
+    }
+    &:after {
+      top: $radio-size / 2 - $gap / 2;
+      left: $radio-size / 2 - $gap / 2;
+      width: $gap;
+      height: $gap;
+      transform: scale(0);
+      background: color('cyan');
     }
   }
 }
 
 @mixin colorClass($name, $tag) {
-  > input {
-    &:checked {
-      & ~ span {
-        background: color($name);
-      }
-    }
+  & input[type=radio]:checked + label:before {
+    border-color: color($name);
   }
-  &:hover {
-    > input {
-      & ~ span {
-        background: color($name, 0.6);
-      }
+  label {
+    &:after {
+      background: color($name);
     }
   }
 }
 
-$color_vars: "earth", "night", "ocean", "red", "yellow", "purple", "pink";
-@include build-color-class(button, mui, $color_vars);
+$color_vars: "cyan", "earth", "night", "ocean", "red", "yellow", "purple", "pink";
+@include build-color-class([mui-radio], null, $color_vars);

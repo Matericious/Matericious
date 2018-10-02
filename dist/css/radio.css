@@ -10,106 +10,107 @@
   user-select: none;
 }
 
-label {
-  margin: 15px 8px;
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
-label[mui] {
-  width: auto;
-  min-width: 50px;
-  position: relative;
+[mui-radio] {
+  margin: 16px 0;
   display: inline-block;
-  color: #424242;
-  font-size: 16px !important;
-  line-height: 24px;
-  cursor: pointer;
-  font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
-  font-size: 14px;
-  padding-right: 15px;
-  clear: left;
 }
-label[mui] > input[type=radio] {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-label[mui] > input[type=radio]:checked ~ span {
-  background: #2e72ee;
-}
-label[mui] > input[type=radio]:checked ~ span:after {
-  display: block;
-}
-label[mui] > span {
-  width: 25px;
-  height: 25px;
-  background: #eee;
-  border-radius: 50%;
-  margin: 10px;
-  text-indent: 30px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-label[mui] > span:after {
-  content: "";
-  width: 8px;
-  height: 8px;
-  position: absolute;
+[mui-radio] input[type=radio] {
   display: none;
-  top: 9px;
-  left: 9px;
-  border-radius: 50%;
-  background: #fff;
 }
-label[mui]:hover > input ~ span {
-  background: rgba(66, 66, 66, 0.6);
+[mui-radio] input[type=radio]:checked + label:before {
+  border-color: #00bcd4;
+}
+[mui-radio] input[type=radio]:checked + label:after {
+  transform: scale(1);
+}
+[mui-radio] label {
+  display: inline-block;
+  height: 20px;
+  position: relative;
+  padding: 0 30px;
+  margin-bottom: 0;
+  cursor: pointer;
+  vertical-align: bottom;
+}
+[mui-radio] label:before, [mui-radio] label:after {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  transition-property: transform, border-color;
+}
+[mui-radio] label:before {
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.54);
+}
+[mui-radio] label:after {
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  transform: scale(0);
+  background: #00bcd4;
 }
 
-button[mui=earth] > input:checked ~ span {
+[mui-radio].cyan input[type=radio]:checked + label:before {
+  border-color: #00bcd4;
+}
+[mui-radio].cyan label:after {
+  background: #00bcd4;
+}
+
+[mui-radio].earth input[type=radio]:checked + label:before {
+  border-color: #34c559;
+}
+[mui-radio].earth label:after {
   background: #34c559;
 }
-button[mui=earth]:hover > input ~ span {
-  background: rgba(52, 197, 89, 0.6);
-}
 
-button[mui=night] > input:checked ~ span {
+[mui-radio].night input[type=radio]:checked + label:before {
+  border-color: #424242;
+}
+[mui-radio].night label:after {
   background: #424242;
 }
-button[mui=night]:hover > input ~ span {
-  background: rgba(66, 66, 66, 0.6);
-}
 
-button[mui=ocean] > input:checked ~ span {
+[mui-radio].ocean input[type=radio]:checked + label:before {
+  border-color: #2e72ee;
+}
+[mui-radio].ocean label:after {
   background: #2e72ee;
 }
-button[mui=ocean]:hover > input ~ span {
-  background: rgba(46, 114, 238, 0.6);
-}
 
-button[mui=red] > input:checked ~ span {
+[mui-radio].red input[type=radio]:checked + label:before {
+  border-color: #e93030;
+}
+[mui-radio].red label:after {
   background: #e93030;
 }
-button[mui=red]:hover > input ~ span {
-  background: rgba(233, 48, 48, 0.6);
-}
 
-button[mui=yellow] > input:checked ~ span {
+[mui-radio].yellow input[type=radio]:checked + label:before {
+  border-color: #e7e828;
+}
+[mui-radio].yellow label:after {
   background: #e7e828;
 }
-button[mui=yellow]:hover > input ~ span {
-  background: rgba(231, 232, 40, 0.6);
-}
 
-button[mui=purple] > input:checked ~ span {
+[mui-radio].purple input[type=radio]:checked + label:before {
+  border-color: #6924f0;
+}
+[mui-radio].purple label:after {
   background: #6924f0;
 }
-button[mui=purple]:hover > input ~ span {
-  background: rgba(105, 36, 240, 0.6);
-}
 
-button[mui=pink] > input:checked ~ span {
-  background: #ff87cb;
+[mui-radio].pink input[type=radio]:checked + label:before {
+  border-color: #ff87cb;
 }
-button[mui=pink]:hover > input ~ span {
-  background: rgba(255, 135, 203, 0.6);
+[mui-radio].pink label:after {
+  background: #ff87cb;
 }
