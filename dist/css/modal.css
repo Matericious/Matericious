@@ -1,3 +1,71 @@
+.md-input {
+  width: 500px;
+  overflow-x: hidden;
+  overflow-y: visible;
+  padding-top: 12px;
+}
+.md-input > input {
+  width: 100%;
+  background: none;
+  color: #222;
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  border: none;
+  font-family: "Roboto", san-serif;
+  border-radius: 0;
+  border-bottom: 1px solid #c6c6c6;
+}
+.md-input > input:focus {
+  outline: none;
+}
+.md-input > input:focus ~ label,
+.md-input > input:focus input:valid ~ label {
+  top: -50px;
+  left: 0px;
+  font-size: 12px;
+  color: #2196f3;
+}
+.md-input > input:focus ~ :before,
+.md-input > input:focus ~ span:before {
+  width: 100% !important;
+}
+.md-input > input[type="password"] {
+  letter-spacing: 0.3em;
+}
+.md-input > label {
+  color: #c6c6c6;
+  font-size: 18px;
+  font-weight: normal;
+  position: relative;
+  pointer-events: none;
+  left: 5px;
+  top: -30px;
+  transition: 300ms ease all;
+}
+.md-input > span {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.md-input > span:before {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 0px;
+  position: absolute;
+  background: #2196f3;
+  transition: 300ms ease all;
+  left: 0%;
+}
+.md-input > p {
+  margin-top: -14px;
+  margin-left: 5px;
+  font-size: 13px;
+  color: colors("red");
+}
+
+/*##########################################################################################################################################################################*/
 /*Modal size*/
 /*Modal fonts*/
 *:hover, *:focus {
@@ -89,12 +157,13 @@ modal-con {
   -ms-user-select: none;
   user-select: none;
   pointer-events: none;
+  visibility: hidden;
 }
 modal-con > modal {
   width: 350px;
   height: 150px;
   max-width: 85% !important;
-  color: #212121;
+  color: #424242;
   background: rgba(255, 255, 255, 0.8);
   line-height: normal;
   position: fixed;
@@ -106,6 +175,7 @@ modal-con > modal {
   border-radius: 5px;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.1) !important;
   pointer-events: auto !important;
+  visibility: hidden;
 }
 modal-con > modal > header {
   width: 88%;
@@ -115,7 +185,7 @@ modal-con > modal > header {
   font-size: 16px;
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
-  color: #212121;
+  color: #424242;
 }
 modal-con > modal > main {
   width: 88%;
@@ -128,7 +198,7 @@ modal-con > modal > main > input {
   width: 100%;
   font-size: 17px;
   border: none;
-  border-bottom: 1.5px solid #212121;
+  border-bottom: 1.5px solid #424242;
   padding-bottom: 2px;
   margin-top: 6px;
   padding: 4px;
@@ -138,7 +208,7 @@ modal-con > modal > main > input {
 }
 modal-con > modal > main > p {
   font-size: 12px;
-  color: #212121;
+  color: #424242;
   margin-left: 6px;
   position: relative;
   top: -25px;
@@ -191,7 +261,7 @@ modal-con > modal.loader.medium {
   height: 80px;
   padding: 10px;
   text-align: center;
-  color: #212121;
+  color: #424242;
 }
 modal-con > modal.loader.medium > svg {
   width: 50px;
@@ -204,8 +274,11 @@ modal-con > modal.loader.medium > span {
   color: inherit;
 }
 modal-con > modal.loader > header {
+  text-align: left;
   height: auto;
   line-height: 30px;
+  font-weight: normal !important;
+  font-size: 17px;
 }
 modal-con > modal.loader > header > label {
   font-size: 16px;
@@ -223,13 +296,13 @@ modal-con > modal.loader > main > div:nth-child(1) {
   text-align: center;
 }
 modal-con > modal.loader > main > div:nth-child(2) {
-  width: calc(100% - 45px);
+  width: calc(100% - 40px);
   text-indent: 10px;
   font-family: "Rubik", sans-serif;
 }
 
 modal-con.dark > modal {
-  background: #212121;
+  background: #424242;
 }
 modal-con.dark > modal > header,
 modal-con.dark > modal > main {
@@ -243,29 +316,29 @@ modal-con.light > modal {
 }
 modal-con.light > modal > header,
 modal-con.light > modal > main {
-  color: #212121;
+  color: #424242;
 }
 modal-con.overlay {
   pointer-events: auto;
-  background: rgba(33, 33, 33, 0.6);
+  background: rgba(66, 66, 66, 0.6);
 }
 modal-con.overlay.light {
   background: rgba(255, 255, 255, 0.6);
 }
 modal-con.top > modal {
-  top: 3em;
+  top: 2em;
   bottom: auto !important;
 }
 modal-con.bottom > modal {
   top: auto !important;
-  bottom: 3em;
+  bottom: 2em;
 }
 modal-con.left > modal {
   right: auto !important;
-  left: 3em;
+  left: 2em;
 }
 modal-con.right > modal {
-  right: 3em;
+  right: 2em;
   left: auto !important;
 }
 
@@ -276,69 +349,59 @@ modal-con.right > modal {
     left: 0px !important;
   }
 }
-.md-input {
-  width: 500px;
-  overflow-x: hidden;
-  overflow-y: visible;
-  padding-top: 12px;
+/*#####################################FadeIn Animation*/
+.fadeIn {
+  animation-name: fadeIn;
+  -webkit-animation-name: fadeIn;
+  animation-duration: .1s;
+  -webkit-animation-duration: .1s;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out;
+  visibility: visible !important;
+  transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  /* easeInOutBack */
 }
-.md-input > input {
-  width: 100%;
-  background: none;
-  color: #222;
-  font-size: 16px;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  border: none;
-  font-family: "Roboto", san-serif;
-  border-radius: 0;
-  border-bottom: 1px solid #c6c6c6;
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-.md-input > input:focus {
-  outline: none;
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-.md-input > input:focus ~ label,
-.md-input > input:focus input:valid ~ label {
-  top: -50px;
-  left: 0px;
-  font-size: 12px;
-  color: #2196f3;
+/*#######################################################SlideDown*/
+.slideDownIn {
+  animation-name: slideDownIn;
+  -webkit-animation-name: slideDownIn;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  animation-timing-function: ease;
+  -webkit-animation-timing-function: ease;
+  visibility: visible !important;
 }
-.md-input > input:focus ~ :before,
-.md-input > input:focus ~ span:before {
-  width: 100% !important;
+
+@keyframes slideDownIn {
+  0% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
-.md-input > input[type="password"] {
-  letter-spacing: 0.3em;
-}
-.md-input > label {
-  color: #c6c6c6;
-  font-size: 18px;
-  font-weight: normal;
-  position: relative;
-  pointer-events: none;
-  left: 5px;
-  top: -30px;
-  transition: 300ms ease all;
-}
-.md-input > span {
-  position: relative;
-  display: block;
-  width: 100%;
-}
-.md-input > span:before {
-  content: "";
-  height: 2px;
-  width: 0;
-  bottom: 0px;
-  position: absolute;
-  background: #2196f3;
-  transition: 300ms ease all;
-  left: 0%;
-}
-.md-input > p {
-  margin-top: -14px;
-  margin-left: 5px;
-  font-size: 13px;
-  color: colors("red");
+@-webkit-keyframes slideDownIn {
+  0% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
