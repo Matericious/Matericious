@@ -2,6 +2,7 @@
 @import "_variables.scss";
 @import "ripple.scss";
 
+$size: 22px;
 
 @mixin closeBtnColor($color, $rgba){
     color: color($color, $rgba);
@@ -16,7 +17,8 @@ a{
   background: color('basic', .6);
   padding: 8px;
   border-radius: 30px;
-  font-size: 15px;
+  font-size: 14px;
+  font-family: $font;
   font-weight: 500;
   line-height: 1.3;
   margin-left: 5px;
@@ -39,27 +41,33 @@ a{
   }
   > i {
     vertical-align: middle;
-    font-size: 18px;
-    margin-top: -2px;
+    width: $size;
+    height: $size;
+    font-size: $size;
+    line-height: $size;
     color: #2f2f2f;
-    &:nth-child(1){
-      font-size: 25px;
-      margin-left: -4px;
+    &:nth-child(1) {
+      height: $size;
+      margin-left: -2px;
+    }
+    &:nth-child(2) {
+      height: $size;
+      margin-right: 2px;
     }
   }
   > .close{
-    font-size: 25px;
+    font-size: $size;
     position: relative;
     left: 8px;
     transition: color .2s ease-in-out;
     @include closeBtnColor('dark', .4);
   }
   > img{
-    width: 30px;
-    height: 30px;
+    width: $size;
+    height: $size;
+    line-height: $size;
     vertical-align: middle;
-    margin-top: -3px;
-    margin-left: -7px;
+    margin-left: -2px;
     border-radius: 50%;
   }
 }

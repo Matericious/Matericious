@@ -1,8 +1,3 @@
-a {
-  text-decoration: none;
-}
-
-/*Ripple*/
 .ripple {
   position: relative;
   overflow: hidden;
@@ -22,19 +17,24 @@ a {
   background-position: 50%;
   transform: scale(10, 10);
   opacity: 0;
-  transition: transform .5s, opacity 1s;
+  transition: transform 0.5s, opacity 1s;
 }
 .ripple:active:after {
   transform: scale(0, 0);
-  opacity: .3;
+  opacity: 0.3;
   transition: 0s;
 }
 
+a {
+  text-decoration: none;
+}
+
 [mui-chips] {
-  background: rgba(236, 236, 236, 0.6);
+  background: rgba(203, 203, 203, 0.6);
   padding: 8px;
   border-radius: 30px;
-  font-size: 15px;
+  font-size: 14px;
+  font-family: "Roboto", san-serif;
   font-weight: 500;
   line-height: 1.3;
   margin-left: 5px;
@@ -43,45 +43,51 @@ a {
   text-decoration: none;
 }
 [mui-chips]:hover {
-  background: #ececec;
+  background: #cbcbcb;
 }
 [mui-chips].raised {
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
 [mui-chips].outline {
   background: transparent;
-  border: 1px solid #ececec;
+  border: 1px solid #cbcbcb;
 }
 [mui-chips].outline:hover {
-  background: #ececec;
+  background: #cbcbcb;
   color: #424242;
 }
 [mui-chips] > i {
   vertical-align: middle;
-  font-size: 18px;
-  margin-top: -2px;
+  width: 22px;
+  height: 22px;
+  font-size: 22px;
+  line-height: 22px;
   color: #2f2f2f;
 }
 [mui-chips] > i:nth-child(1) {
-  font-size: 25px;
-  margin-left: -4px;
+  height: 22px;
+  margin-left: -2px;
+}
+[mui-chips] > i:nth-child(2) {
+  height: 22px;
+  margin-right: 2px;
 }
 [mui-chips] > .close {
-  font-size: 25px;
+  font-size: 22px;
   position: relative;
   left: 8px;
-  transition: color .2s ease-in-out;
+  transition: color 0.2s ease-in-out;
   color: rgba(66, 66, 66, 0.4);
 }
 [mui-chips] > .close:hover {
   color: #424242;
 }
 [mui-chips] > img {
-  width: 30px;
-  height: 30px;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
   vertical-align: middle;
-  margin-top: -3px;
-  margin-left: -7px;
+  margin-left: -2px;
   border-radius: 50%;
 }
 
@@ -201,16 +207,16 @@ a {
 }
 
 [mui-chips].yellow {
-  background: #e7e828;
+  background: #e7d507;
   color: rgba(66, 66, 66, 0.8);
 }
 [mui-chips].yellow.outline {
   background: transparent;
-  color: #e7e828;
-  border-color: #e7e828;
+  color: #e7d507;
+  border-color: #e7d507;
 }
 [mui-chips].yellow.outline:hover {
-  background: #e7e828;
+  background: #e7d507;
   color: #fff;
 }
 [mui-chips].yellow > i {
