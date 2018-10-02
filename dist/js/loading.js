@@ -1,1 +1,96 @@
-function LoadingModal(e,a){e.pos||(e.pos={vertical:"center",horizontal:"center"}),e.theme||(e.theme=""),e.title||(e.title="Please wait"),e.message||(e.message="Loading data....."),!1===e.overlay?e.overlay="":e.overlay="overlay";var t=$getT("modal-con",0);t.innerHTML="",t.className="";var l=e.overlay+" "+e.pos.vertical+" "+e.pos.horizontal+" "+e.theme;t.className+=l;var o,n,s='<modal class="loader '+e.type+'"><svg md-loader stroke-width="5" viewBox="0 0 66 66"><circle cx="33" cy="33" r="25" /></svg></modal>',r='<modal class="loader '+e.type+'"><svg md-loader stroke-width="5" viewBox="0 0 66 66"><circle cx="33" cy="33" r="25" /></svg><span>Loading</span></modal>',d='<modal class="loader"><header>'+e.title+'</header><main><div><svg md-loader stroke-width="5" viewBox="0 0 66 66"><circle cx="33" cy="33" r="25" /></svg></div><div>'+e.message+"</div></main></modal>";"small"==e.type?t.innerHTML=s:"medium"==e.type?t.innerHTML=r:t.innerHTML=d,$getT("modal-con",0).className+=" fadeIn",$getT("modal",0).className+=" slideDownIn",null!=(o=e.time)&&(n=setInterval(function(){clearInterval(n),$getT("modal-con",0).classList.remove("fadeIn"),$getT("modal",0).classList.remove("slideDownIn")},o))}function $getID(e){return document.getElementById(e)}function $getCL(e,a){return document.getElementsByClassName(e)[a]}function $getT(e,a){return document.getElementsByTagName(e)[a]}
+
+function LoadingModal(data, callback) {
+  if (!data.pos) {
+    data["pos"] = {
+      vertical: "center",
+      horizontal: "center"
+    };
+  }
+  
+  if(!data.theme)
+    data.theme = "";
+  
+  if(!data.title)
+    data.title = "Please wait";
+  
+  if(!data.message)
+    data.message = "Loading data.....";
+  
+  if(data.overlay === false){
+     data.overlay = ""
+  }else{
+     data.overlay = "overlay"
+  }
+    
+  var modalElem = $getT("modal-con", 0);  
+  modalElem.innerHTML = "";
+  modalElem.className = "";
+  
+  var modalClass = data.overlay + " " + data.pos.vertical + " " + data.pos.horizontal + " " + data.theme;
+
+  modalElem.className += modalClass;
+  
+  var smallLoadingModalHTML = 
+    '<modal class="loader '+data.type+'">'+
+      '<svg md-loader stroke-width="5" viewBox="0 0 66 66">'+
+       '<circle cx="33" cy="33" r="25" />'+
+    '</svg></modal>';
+  
+  var mediumLoadingModalHTML = 
+       '<modal class="loader '+data.type+'">'+
+          '<svg md-loader stroke-width="5" viewBox="0 0 66 66">'+
+             '<circle cx="33" cy="33" r="25" />'+
+          '</svg><span>Loading</span>'+
+       '</modal>';
+  
+  var largeLoadingModalHTML = 
+       '<modal class="loader">'+
+          '<header>'+data.title+'</header>'+
+          '<main><div>'+
+             '<svg md-loader stroke-width="5" viewBox="0 0 66 66">'+
+                 '<circle cx="33" cy="33" r="25" />'+
+             '</svg></div>'+
+          '<div>'+data.message+'</div>'+
+        '</main></modal>';
+
+  if(data.type == 'small'){
+     modalElem.innerHTML = smallLoadingModalHTML;
+  }else if(data.type == 'medium'){
+     modalElem.innerHTML = mediumLoadingModalHTML;
+  }else{
+     modalElem.innerHTML = largeLoadingModalHTML;
+  }
+  
+  $getT("modal-con", 0).className += " fadeIn";
+  $getT("modal", 0).className += " slideDownIn";
+  
+  function timer(time){
+    var timer;
+    if(time != null){
+       timer = setInterval(function(){
+          clearInterval(timer);
+          close();
+       },time);
+     }
+  }
+  
+  function close(){
+     $getT("modal-con", 0).classList.remove("fadeIn");
+     $getT("modal", 0).classList.remove("slideDownIn");
+  }
+
+  timer(data.time);
+}
+
+/*this function returns the element by ID*/
+function $getID(e) {
+  return document.getElementById(e);
+}
+/*this function returns the element by class name*/
+function $getCL(e, n) {
+  return document.getElementsByClassName(e)[n];
+}
+/*this function returns the element by tag name*/
+function $getT(e, n) {
+  return document.getElementsByTagName(e)[n];
+}
