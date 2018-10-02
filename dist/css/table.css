@@ -1,0 +1,42 @@
+/* Reference specs https://material.io/design/components/data-tables.html#specs */
+table[mui-table] {
+  width: 100%;
+  display: table;
+  background: white;
+  border-collapse: collapse;
+  font-family: "Roboto", san-serif;
+  border-spacing: 0;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+}
+table[mui-table] tr {
+  height: 48px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+table[mui-table] td, table[mui-table] th {
+  padding: 16px;
+  font-size: 12px;
+  font-weight: normal;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+}
+table[mui-table] td, table[mui-table] tr {
+  font-size: 14px;
+}
+table[mui-table].zebra tr {
+  border-bottom: none;
+}
+table[mui-table].zebra > tbody > tr:nth-child(odd) {
+  background-color: rgba(242, 242, 242, 0.5);
+}
+table[mui-table].zebra > tbody > tr > td {
+  border-radius: 0;
+}
+table[mui-table].pop > tbody > tr {
+  -webkit-transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease;
+}
+table[mui-table].pop > tbody > tr :hover {
+  background-color: rgba(242, 242, 242, 0.5);
+}

@@ -1,0 +1,55 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+/* Reference specs https://material.io/design/components/data-tables.html#specs */
+table[mui-table] {
+  width: 100%;
+  display: table;
+  background: white;
+  border-collapse: collapse;
+  font-family: $font;
+  border-spacing: 0;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px 0 rgba(#000, .12);
+	& tr {
+		height: 48px;
+		border-bottom: 1px solid rgba(#000, .12);
+	}
+
+	& td, th {
+		padding: 16px;
+		font-size: 12px;
+		font-weight: normal;
+		display: table-cell;
+		text-align: left;
+		vertical-align: middle;
+	}
+	& td, tr {
+		font-size: 14px;
+	}
+	&.zebra tr {
+	  border-bottom: none;
+	}
+
+	&.zebra > tbody {
+		> tr:nth-child(odd) {
+		  background-color: rgba(#f2f2f2, .5);
+		}
+		> tr > td {
+		  border-radius: 0;
+	 	}
+	}
+
+	&.pop > tbody {
+		> tr {
+		  -webkit-transition: background-color .25s ease;
+		  transition: background-color .25s ease;
+			:hover {
+				background-color: rgba(#f2f2f2, .5);
+			}
+		}
+	}
+}
+
+
+
