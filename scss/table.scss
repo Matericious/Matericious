@@ -19,13 +19,16 @@ table[mui-table] {
 	& td, th {
 		padding: 16px;
 		font-size: 12px;
-		font-weight: normal;
+		color: rgba(#000, .54);
+		font-weight: 700;
 		display: table-cell;
 		text-align: left;
 		vertical-align: middle;
 	}
 	& td, tr {
 		font-size: 14px;
+		font-weight: normal;
+		color: rgba(#000, .87);
 	}
 	&.zebra tr {
 	  border-bottom: none;
@@ -50,6 +53,3 @@ table[mui-table] {
 		}
 	}
 }
-
-
-
