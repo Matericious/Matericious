@@ -9,9 +9,12 @@ table[mui-table] {
   border-radius: 6px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
 }
+table[mui-table] thead {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
 table[mui-table] tr {
   height: 48px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  border-bottom: 0;
 }
 table[mui-table] td, table[mui-table] th {
   padding: 16px;
@@ -23,7 +26,7 @@ table[mui-table] td, table[mui-table] th {
   vertical-align: middle;
 }
 table[mui-table] td, table[mui-table] tr {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.87);
 }
@@ -42,4 +45,7 @@ table[mui-table].pop > tbody > tr {
 }
 table[mui-table].pop > tbody > tr:hover {
   background-color: rgba(242, 242, 242, 0.5);
+}
+table[mui-table].line tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
