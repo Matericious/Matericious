@@ -292,12 +292,13 @@ modal-con > modal.loader > main > div {
   text-overflow: ellipsis;
 }
 modal-con > modal.loader > main > div:nth-child(1) {
-  width: 40px;
+  width: 45px;
   text-align: center;
 }
 modal-con > modal.loader > main > div:nth-child(2) {
-  width: calc(100% - 40px);
+  text-align: left;
   text-indent: 10px;
+  width: calc(100% - 45px);
   font-family: "Rubik", sans-serif;
 }
 
@@ -351,18 +352,14 @@ modal-con.right > modal {
 }
 /*#####################################FadeIn Animation*/
 .fadeIn {
-  animation-name: fadeIn;
-  -webkit-animation-name: fadeIn;
-  animation-duration: .1s;
-  -webkit-animation-duration: .1s;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-timing-function: ease-in-out;
   visibility: visible !important;
   transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  /* easeInOutBack */
+  -webkit-animation: fadeIn 0.1s ease-in-out;
+  -moz-animation: fadeIn 0.1s ease-in-out;
+  animation: fadeIn 0.1s ease-in-out;
 }
 
-@keyframes fadeIn {
+@-moz-keyframes fadeIn {
   0% {
     opacity: 0;
   }
@@ -378,18 +375,23 @@ modal-con.right > modal {
     opacity: 1;
   }
 }
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*#######################################################SlideDown*/
 .slideDownIn {
-  animation-name: slideDownIn;
-  -webkit-animation-name: slideDownIn;
-  animation-duration: 1s;
-  -webkit-animation-duration: 1s;
-  animation-timing-function: ease;
-  -webkit-animation-timing-function: ease;
   visibility: visible !important;
+  -webkit-animation: slideDownIn 1s ease;
+  -moz-animation: slideDownIn 1s ease;
+  animation: slideDownIn 1s ease;
 }
 
-@keyframes slideDownIn {
+@-moz-keyframes slideDownIn {
   0% {
     transform: translateY(-10%);
   }
@@ -398,6 +400,14 @@ modal-con.right > modal {
   }
 }
 @-webkit-keyframes slideDownIn {
+  0% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes slideDownIn {
   0% {
     transform: translateY(-10%);
   }
