@@ -195,12 +195,13 @@ modal-con {
           overflow: hidden;
           text-overflow: ellipsis;
           &:nth-child(1) {
-            width: 40px;
+            width: 45px;
             text-align: center;
           }
           &:nth-child(2) {
-            width: calc(100% - 40px);
+            text-align: left;
             text-indent: 10px;
+            width: calc(100% - 45px);
             font-family: $modal-secondary-font;
           }
         }
@@ -281,41 +282,24 @@ modal-con {
 
 /*#####################################FadeIn Animation*/
 .fadeIn{ 
-  animation-name: fadeIn; 
-  -webkit-animation-name: fadeIn; 
-  animation-duration: .1s; 
-  -webkit-animation-duration: .1s; 
-  animation-timing-function: ease-in-out;
-  -webkit-animation-timing-function: ease-in-out; 
   visibility: visible !important; 
-            transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+  @include animation(fadeIn .1s ease-in-out);
 } 
 
-@keyframes fadeIn { 
-  0% { opacity: 0; }
-  100% { opacity: 1; } 
-} 
-@-webkit-keyframes fadeIn { 
-  0% { opacity: 0; }
-  100% { opacity: 1; } 
+@include keyframes(fadeIn){
+   0% { opacity: 0; }
+   100% { opacity: 1; } 
 }
 
 /*#######################################################SlideDown*/ 
 
 .slideDownIn{ 
-  animation-name: slideDownIn; 
-  -webkit-animation-name: slideDownIn; 
-  animation-duration: 1s; 
-  -webkit-animation-duration: 1s; 
-  animation-timing-function: ease; 
-  -webkit-animation-timing-function: ease; 
   visibility: visible !important; 
+  @include animation(slideDownIn 1s ease)
 } 
-@keyframes slideDownIn { 
-  0% { transform: translateY(-10%);} 
-  100% { transform: translateY(0%);} 
-} 
-@-webkit-keyframes slideDownIn { 
+
+@include keyframes(slideDownIn){
   0% { transform: translateY(-10%);} 
   100% { transform: translateY(0%);} 
 }
