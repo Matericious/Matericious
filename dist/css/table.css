@@ -40,6 +40,6 @@ table[mui-table].pop > tbody > tr {
   -webkit-transition: background-color 0.25s ease;
   transition: background-color 0.25s ease;
 }
-table[mui-table].pop > tbody > tr :hover {
+table[mui-table].pop > tbody > tr:hover {
   background-color: rgba(242, 242, 242, 0.5);
 }

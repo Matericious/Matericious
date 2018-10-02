@@ -15,7 +15,6 @@ table[mui-table] {
 		height: 48px;
 		border-bottom: 1px solid rgba(#000, .12);
 	}
-
 	& td, th {
 		padding: 16px;
 		font-size: 12px;
@@ -33,7 +32,6 @@ table[mui-table] {
 	&.zebra tr {
 	  border-bottom: none;
 	}
-
 	&.zebra > tbody {
 		> tr:nth-child(odd) {
 		  background-color: rgba(#f2f2f2, .5);
@@ -47,7 +45,7 @@ table[mui-table] {
 		> tr {
 		  -webkit-transition: background-color .25s ease;
 		  transition: background-color .25s ease;
-			:hover {
+		   &:hover {
 				background-color: rgba(#f2f2f2, .5);
 			}
 		}
