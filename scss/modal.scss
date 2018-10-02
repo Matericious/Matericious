@@ -1,5 +1,6 @@
 @import "_mixins.scss";
 @import "_variables.scss";
+@import "input.scss";
 
 
 /*Modal size*/
@@ -10,7 +11,7 @@ $modal-maxWidth: 85% !important;
 /*Modal fonts*/
 $modal-primary-font: "Ubuntu", sans-serif;
 $modal-secondary-font: "Rubik", sans-serif;
-$modal-position: 3em;
+$modal-position: 2em;
 
 *:hover, *:focus{
   outline: none;
@@ -61,6 +62,7 @@ modal-con {
   -ms-user-select: none;
   user-select: none;
   pointer-events: none;
+  visibility: hidden;
   > modal {
     width: $modal-width;
     height: $modal-height;
@@ -77,6 +79,7 @@ modal-con {
     border-radius: 5px;
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.1) !important;
     pointer-events: auto !important;
+    visibility: hidden;
     > header {
       width: 88%;
       height: 45px;
@@ -173,12 +176,16 @@ modal-con {
         }
       }
       > header {
+        text-align: left;
         height: auto;
         line-height: 30px;
+        font-weight: normal !important;
+        font-size: 17px;
         > label {
           font-size: 16px;
         }
       }
+      
       > main {
         > div {
           display: inline-block;
@@ -192,7 +199,7 @@ modal-con {
             text-align: center;
           }
           &:nth-child(2) {
-            width: calc(100% - 45px);
+            width: calc(100% - 40px);
             text-indent: 10px;
             font-family: $modal-secondary-font;
           }
@@ -272,5 +279,43 @@ modal-con {
 }
 
 
+/*#####################################FadeIn Animation*/
+.fadeIn{ 
+  animation-name: fadeIn; 
+  -webkit-animation-name: fadeIn; 
+  animation-duration: .1s; 
+  -webkit-animation-duration: .1s; 
+  animation-timing-function: ease-in-out;
+  -webkit-animation-timing-function: ease-in-out; 
+  visibility: visible !important; 
+            transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+} 
 
-@import "input.scss";
+@keyframes fadeIn { 
+  0% { opacity: 0; }
+  100% { opacity: 1; } 
+} 
+@-webkit-keyframes fadeIn { 
+  0% { opacity: 0; }
+  100% { opacity: 1; } 
+}
+
+/*#######################################################SlideDown*/ 
+
+.slideDownIn{ 
+  animation-name: slideDownIn; 
+  -webkit-animation-name: slideDownIn; 
+  animation-duration: 1s; 
+  -webkit-animation-duration: 1s; 
+  animation-timing-function: ease; 
+  -webkit-animation-timing-function: ease; 
+  visibility: visible !important; 
+} 
+@keyframes slideDownIn { 
+  0% { transform: translateY(-10%);} 
+  100% { transform: translateY(0%);} 
+} 
+@-webkit-keyframes slideDownIn { 
+  0% { transform: translateY(-10%);} 
+  100% { transform: translateY(0%);} 
+}
