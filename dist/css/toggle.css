@@ -107,12 +107,12 @@ label.red > input:checked ~ span:after {
 }
 
 label.yellow > input:checked ~ span:before {
-  background: rgba(231, 232, 40, 0.5);
+  background: rgba(231, 213, 7, 0.5);
 }
 label.yellow > input:checked ~ span:after {
   left: 15px;
-  background: #e7e828;
-  border-color: #e7e828;
+  background: #e7d507;
+  border-color: #e7d507;
 }
 
 label.purple > input:checked ~ span:before {
