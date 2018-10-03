@@ -58,6 +58,7 @@ big-modal-con {
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.1) !important;
     pointer-events: auto !important;
     padding: 10px;
+    visibility: hidden;
     &.big{
        width: $full-modal-width;
        height: $full-modal-height;
@@ -77,8 +78,8 @@ big-modal-con {
 @media screen and (max-width: 700px), screen and (max-height: 300px) {
   big-modal-con {
     > modal {
-      width: calc(100% - 20px);
-      height: calc(100% - 20px);
+      width: calc(100% - 40px) !important;
+      height: calc(100% - 40px) !important;
       > a[data=close] {
         cursor: pointer;
         color: #222;
@@ -89,13 +90,11 @@ big-modal-con {
   }
 }
 
-
-
 /*#####################################FadeIn Animation*/
 .fadeIn{ 
   visibility: visible !important; 
   transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
-  @include animation(fadeIn .1s ease-in-out);
+  @include animation(fadeIn .5s ease-in-out);
 } 
 
 @include keyframes(fadeIn){
@@ -107,10 +106,10 @@ big-modal-con {
 
 .slideDownIn{ 
   visibility: visible !important; 
-  @include animation(slideDownIn 1s ease)
+  @include animation(slideDownIn 1s ease-in)
 } 
 
 @include keyframes(slideDownIn){
-  0% { transform: translateY(-10%);} 
+  0% { transform: translateY(-2%);} 
   100% { transform: translateY(0%);} 
 }
