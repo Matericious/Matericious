@@ -2,24 +2,39 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+  <meta charset="utf-8">
 
-    <title>Big Modal</title>
-    <meta name="description" content="Big modal design">
-    <meta name="author" content="MUI Developer">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="../dist/css/big_modal.css">
+  <title>Big Modal</title>
+  <meta name="description" content="Big modal design">
+  <meta name="author" content="MUI Developer">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="../dist/css/big_modal.css">
 
 </head>
 
 <body>
 
-    <modal-con>
-        <modal full>
-            <a href="#"><i class="material-icons">close</i></a>
-        </modal>
-    </modal-con>
+  <big-modal-con id="my_modal">
+    <modal class="big">
+      <a href="#" data="close" class="material-icons">close</a>
+      <h1>Add content here</h1>
+    </modal>
+  </big-modal-con>
+
+  <button onclick="ShowBigModal()">Show Modal</button>
+
+  <script src="../dist/js/big_modal.js"></script>
+
+  <script>
+    function ShowBigModal() {
+      var data = {
+        id: 'my_modal',
+        time: null
+      }
+      BigModal(data);
+    }
+  </script>
 
 </body>
 
