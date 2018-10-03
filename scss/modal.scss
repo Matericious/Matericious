@@ -3,11 +3,11 @@
 @import "input.scss";
 
 
+
 /*Modal size*/
 $modal-width: 350px;
 $modal-height: 150px;
 $modal-maxWidth: 85% !important;
-
 /*Modal fonts*/
 $modal-primary-font: "Ubuntu", sans-serif;
 $modal-secondary-font: "Rubik", sans-serif;
@@ -62,7 +62,6 @@ modal-con {
   -ms-user-select: none;
   user-select: none;
   pointer-events: none;
-  visibility: hidden;
   > modal {
     width: $modal-width;
     height: $modal-height;
@@ -79,7 +78,6 @@ modal-con {
     border-radius: 5px;
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.1) !important;
     pointer-events: auto !important;
-    visibility: hidden;
     > header {
       width: 88%;
       height: 45px;
@@ -278,6 +276,16 @@ modal-con {
     }
   }
 }
+@mixin colorClass($name, $tag) {
+   > action{
+      > button{
+        color: color($name);
+      }
+    }
+}
+
+$color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
+@include build-color-class(modal, $color_vars);
 
 
 /*#####################################FadeIn Animation*/
