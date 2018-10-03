@@ -97,4 +97,4 @@ label[mui-switch] {
 }
 
 $color_vars: "earth", "night", "ocean", "red", "yellow", "purple", "pink";
-@include build-color-class(label, mui, $color_vars);
+@include build-color-class(label, $color_vars);

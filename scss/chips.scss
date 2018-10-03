@@ -113,4 +113,4 @@ a{
 }
 
 $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
-@include build-color-class([mui-chips], mui-chip, $color_vars);
+@include build-color-class([mui-chips], $color_vars);

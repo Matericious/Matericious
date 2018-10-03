@@ -1,4 +1,4 @@
-@mixin build-color-class($tag, $class, $array) {
+@mixin build-color-class($tag, $array) {
   @each $color in $array {
     #{$tag}{
       &.#{$color}{

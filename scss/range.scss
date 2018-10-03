@@ -61,4 +61,4 @@ input[mui-range]{
 }
 
 $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
-@include build-color-class(input, mdi-range, $color_vars);
+@include build-color-class(input, $color_vars);

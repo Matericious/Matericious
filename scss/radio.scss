@@ -76,4 +76,4 @@ $gap: 10px;
 }
 
 $color_vars: "cyan", "earth", "night", "ocean", "red", "yellow", "purple", "pink";
-@include build-color-class([mui-radio], null, $color_vars);
+@include build-color-class([mui-radio], $color_vars);
