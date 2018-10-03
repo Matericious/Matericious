@@ -1,9 +1,9 @@
 function BigModal(data, callback) {
   var modalElem = $getID(data.id);
-  var modal = modalElem.getElementsByTagName("modal", 0);
+  var modal = $getChild('#'+data.id, 'modal', 0);
 
-  modalElem.className += " fadeIn";
- // modal.className += " slideDownIn";
+  modalElem.className += "fadeIn";
+  modal.className += " slideDownIn";
   
   function timer(time) {
     var timer;
@@ -21,14 +21,13 @@ function BigModal(data, callback) {
       clickEvent.tagName === "A" &&
       clickEvent.getAttribute("data") === "close"
     ) {
-      close(data.id);
+      close(modalElem, modal);
     }
   });
 
-  function close(modal_con) {
-   // var modal = modal_con.$getT("modal", 0);
-    $getID(modal_con).classList.remove("fadeIn");
-   // $getID(modal).classList.remove("slideDownIn");
+  function close(modalElem, modal) {
+    modalElem.classList.remove("fadeIn");
+    modal.classList.remove("slideDownIn");
   }
 
   timer(data.time);
@@ -45,4 +44,8 @@ function $getCL(e, n) {
 /*this function returns the element by tag name*/
 function $getT(e, n) {
   return document.getElementsByTagName(e)[n];
+}
+
+function $getChild(parent, child, n){
+  return document.querySelectorAll(parent+' '+child)[n];
 }
