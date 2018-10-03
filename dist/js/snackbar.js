@@ -8,13 +8,9 @@ function Snackbar(data, callback) {
     };
   }
 
-  if (!data.theme) {
-    data.theme = "dark";
-  }
+  if (!data.theme) data.theme = "dark";
   
-  if(!data.actionButton){
-    data.actionButton = "";
-  }
+  if(!data.actionButton) data.actionButton = "";
   
   if(data.pos.vertical == "top"){
     closeAni = "slideDownTop";
@@ -31,8 +27,8 @@ function Snackbar(data, callback) {
 
   var snackbarHTML =
     '<div class="snackbar"><text class="text">'+ data.text +'</text>' +
-    '<button class="ripple SnackClose"><i class="material-icons">close</i></button>' +
-    '<button class="ripple SnackAction">' +data.actionButton +
+      '<button class="ripple SnackClose"><i class="material-icons">close</i></button>' +
+      '<button class="ripple SnackAction">' +data.actionButton +
     "</button></div>";
 
   snackbarElem.innerHTML = snackbarHTML;
@@ -63,7 +59,6 @@ function Snackbar(data, callback) {
   
   timer(data.time);
 }
-
 
 /*this function returns the element by ID*/
 function $getID(e) {
