@@ -4,6 +4,7 @@
 
 
 
+
 /*Modal size*/
 $modal-width: 350px;
 $modal-height: 150px;
@@ -277,15 +278,26 @@ modal-con {
   }
 }
 @mixin colorClass($name, $tag) {
-   > action{
+  @if $tag == 'modal'{
+    > action{
       > button{
         color: color($name);
       }
     }
+  }
+  
+  @else{
+    background: color($name, .8);
+    &.gradient{
+      background: color($name+"-gradient");
+    }
+  }
 }
 
 $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
 @include build-color-class(modal, $color_vars);
+
+@include build-color-class(modal-con, $color_vars);
 
 
 /*#####################################FadeIn Animation*/
