@@ -1,3 +1,4 @@
+/*###########################################################################################################################################################*/
 /*Material loader color*/
 /* Dark colors */
 /* Light colors */
@@ -5,7 +6,7 @@
 /*Modal fonts*/
 /*Light modal colors*/
 /*Dark modal colors*/
-modal-con {
+big-modal-con {
   width: 100%;
   height: 100vh;
   background: rgba(0, 0, 0, 0.8);
@@ -17,10 +18,9 @@ modal-con {
   -ms-user-select: none;
   user-select: none;
   overflow: hidden;
+  visibility: hidden;
 }
-modal-con > modal[full] {
-  width: calc(100% - 100px);
-  height: calc(100% - 100px);
+big-modal-con > modal {
   max-width: 100% !important;
   background: #fff;
   color: #000;
@@ -34,22 +34,95 @@ modal-con > modal[full] {
   border-radius: 5px;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.1) !important;
   pointer-events: auto !important;
+  padding: 10px;
+  visibility: hidden;
 }
-modal-con > modal[full] > a {
+big-modal-con > modal.big {
+  width: calc(100% - 110px);
+  height: calc(100% - 110px);
+}
+big-modal-con > modal > a[data=close] {
   color: #fff;
   position: absolute;
   top: -30px;
   right: -30px;
+  text-decoration: none;
 }
+
 @media screen and (max-width: 700px), screen and (max-height: 300px) {
-  modal-con > modal[full] {
+  big-modal-con > modal {
     width: calc(100% - 20px);
     height: calc(100% - 20px);
   }
-  modal-con > modal[full] > a {
+  big-modal-con > modal > a[data=close] {
     cursor: pointer;
     color: #222;
     top: 10px;
     right: 10px;
+  }
+}
+/*#####################################FadeIn Animation*/
+.fadeIn {
+  visibility: visible !important;
+  transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-animation: fadeIn 0.1s ease-in-out;
+  -moz-animation: fadeIn 0.1s ease-in-out;
+  animation: fadeIn 0.1s ease-in-out;
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*#######################################################SlideDown*/
+.slideDownIn {
+  visibility: visible !important;
+  -webkit-animation: slideDownIn 1s ease;
+  -moz-animation: slideDownIn 1s ease;
+  animation: slideDownIn 1s ease;
+}
+
+@-moz-keyframes slideDownIn {
+  0% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes slideDownIn {
+  0% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes slideDownIn {
+  0% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
   }
 }
