@@ -372,6 +372,59 @@ modal.pink > action > button {
   color: #ff87cb;
 }
 
+modal-con.earth {
+  background: rgba(52, 197, 89, 0.8);
+}
+modal-con.earth.gradient {
+  background: linear-gradient(90deg, #21f379 0%, #3be76c 49%, #00ba66 95%);
+}
+
+modal-con.night {
+  background: rgba(66, 66, 66, 0.8);
+}
+modal-con.night.gradient {
+  background: linear-gradient(90deg, #3b3a3a 5%, #444343 47%, #b9b9b9 100%);
+}
+
+modal-con.ocean {
+  background: rgba(46, 114, 238, 0.8);
+}
+modal-con.ocean.gradient {
+  background: linear-gradient(90deg, #2196f3 0%, #03c5d6 61%, #00d4ff 84%);
+}
+
+modal-con.red {
+  background: rgba(233, 48, 48, 0.8);
+}
+modal-con.red.gradient {
+  background: linear-gradient(90deg, #e9e130 0%, #f0247a 0%, #ff2a00 46%, #e93030 95%);
+}
+
+modal-con.snow {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+modal-con.yellow {
+  background: rgba(231, 213, 7, 0.8);
+}
+modal-con.yellow.gradient {
+  background: linear-gradient(90deg, #ffeb00 0%, #f4ed15 45%, #e0ff00 65%, #b9ff00 100%);
+}
+
+modal-con.purple {
+  background: rgba(105, 36, 240, 0.8);
+}
+modal-con.purple.gradient {
+  background: linear-gradient(90deg, #e9e130 0%, #6924f0 0%, #b40f91 44%, #e82890 95%);
+}
+
+modal-con.pink {
+  background: rgba(255, 135, 203, 0.8);
+}
+modal-con.pink.gradient {
+  background: linear-gradient(90deg, #e9e130 0%, #ff87cb 0%, #e977e1 46%, #e523e7 95%);
+}
+
 /*#####################################FadeIn Animation*/
 .fadeIn {
   visibility: visible !important;
