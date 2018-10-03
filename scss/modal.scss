@@ -87,7 +87,7 @@ modal-con {
       font-size: 16px;
       font-family: $modal-primary-font;
       font-weight: bold;
-      color: color('dark');
+      color: inherit !important;
     }
     > main {
       width: 88%;
@@ -109,7 +109,7 @@ modal-con {
       }
       > p {
         font-size: 12px;
-        color: color('dark');
+        color: inherit;
         margin-left: 6px;
         position: relative;
         top: -25px;
@@ -284,6 +284,34 @@ modal-con {
         color: color($name);
       }
     }
+    &.gradient{
+      background: color($name+"-gradient");
+      color: color('light');
+      > header{
+        color: color('light');
+      }
+      > action{
+        > button{
+          color: color('light');
+        }
+      }
+      @if $name == "yellow"{
+        color: color('dark');
+        > action {
+          > button{
+            color: color('dark');
+          }
+        }
+      }
+      @if $name == "snow"{
+        color: color('dark');
+        > action {
+          > button{
+            color: color('dark');
+          }
+        }
+      }
+    }
   }
   
   @else{
@@ -298,6 +326,7 @@ $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink
 @include build-color-class(modal, $color_vars);
 
 @include build-color-class(modal-con, $color_vars);
+ 
 
 
 /*#####################################FadeIn Animation*/
