@@ -1,61 +1,68 @@
-*:hover,
-*:focus {
+.md-input {
+  width: 500px;
+  overflow-x: hidden;
+  overflow-y: visible;
+  padding-top: 12px;
+}
+.md-input > input {
+  width: 100%;
+  background: none;
+  color: #222;
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  border: none;
+  font-family: "Roboto", san-serif;
+  border-radius: 0;
+  border-bottom: 1px solid #c6c6c6;
+}
+.md-input > input:focus {
   outline: none;
 }
-
-label[mui-label] {
-  padding: 6px;
-  padding-left: 8px;
-  padding-right: 8px;
-  color: #222;
-  background: colors("basic");
-  border-radius: 14px;
+.md-input > input:focus ~ label,
+.md-input > input:focus input:valid ~ label {
+  top: -50px;
+  left: 0px;
   font-size: 12px;
-  text-transform: uppercase;
-  font-weight: bold;
-  line-height: 1.3;
-  cursor: pointer;
-  font-family: Tahoma, Geneva, sans-serif;
+  color: #2196f3;
 }
-
-label.earth {
-  color: #fff;
-  background: #34c559;
+.md-input > input:focus ~ :before,
+.md-input > input:focus ~ span:before {
+  width: 100% !important;
 }
-
-label.night {
-  color: #fff;
-  background: #424242;
+.md-input > input[type="password"] {
+  letter-spacing: 0.3em;
 }
-
-label.ocean {
-  color: #fff;
-  background: #2e72ee;
+.md-input > label {
+  color: #c6c6c6;
+  font-size: 18px;
+  font-weight: normal;
+  position: relative;
+  pointer-events: none;
+  left: 5px;
+  top: -30px;
+  transition: 300ms ease all;
 }
-
-label.red {
-  color: #fff;
-  background: #e93030;
+.md-input > span {
+  position: relative;
+  display: block;
+  width: 100%;
 }
-
-label.snow {
-  color: #fff;
-  background: #fff;
+.md-input > span:before {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 0px;
+  position: absolute;
+  background: #2196f3;
+  transition: 300ms ease all;
+  left: 0%;
 }
-
-label.yellow {
-  color: #fff;
-  background: #e7d507;
-}
-
-label.purple {
-  color: #fff;
-  background: #6924f0;
-}
-
-label.pink {
-  color: #fff;
-  background: #ff87cb;
+.md-input > p {
+  margin-top: -14px;
+  margin-left: 5px;
+  font-size: 13px;
+  color: colors("red");
 }
 
 /*Modal size*/
@@ -175,7 +182,7 @@ modal-con > modal > header {
   font-size: 16px;
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
-  color: #424242;
+  color: inherit !important;
 }
 modal-con > modal > main {
   width: 88%;
@@ -198,7 +205,7 @@ modal-con > modal > main > input {
 }
 modal-con > modal > main > p {
   font-size: 12px;
-  color: #424242;
+  color: inherit;
   margin-left: 6px;
   position: relative;
   top: -25px;
@@ -343,33 +350,120 @@ modal-con.right > modal {
 modal.earth > action > button {
   color: #34c559;
 }
+modal.earth.gradient {
+  background: linear-gradient(90deg, #21f379 0%, #3be76c 49%, #00ba66 95%);
+  color: #fff;
+}
+modal.earth.gradient > header {
+  color: #fff;
+}
+modal.earth.gradient > action > button {
+  color: #fff;
+}
 
 modal.night > action > button {
   color: #424242;
+}
+modal.night.gradient {
+  background: linear-gradient(90deg, #3b3a3a 5%, #444343 47%, #b9b9b9 100%);
+  color: #fff;
+}
+modal.night.gradient > header {
+  color: #fff;
+}
+modal.night.gradient > action > button {
+  color: #fff;
 }
 
 modal.ocean > action > button {
   color: #2e72ee;
 }
+modal.ocean.gradient {
+  background: linear-gradient(90deg, #2196f3 0%, #03c5d6 61%, #00d4ff 84%);
+  color: #fff;
+}
+modal.ocean.gradient > header {
+  color: #fff;
+}
+modal.ocean.gradient > action > button {
+  color: #fff;
+}
 
 modal.red > action > button {
   color: #e93030;
+}
+modal.red.gradient {
+  background: linear-gradient(90deg, #e9e130 0%, #f0247a 0%, #ff2a00 46%, #e93030 95%);
+  color: #fff;
+}
+modal.red.gradient > header {
+  color: #fff;
+}
+modal.red.gradient > action > button {
+  color: #fff;
 }
 
 modal.snow > action > button {
   color: #fff;
 }
+modal.snow.gradient {
+  color: #fff;
+  color: #424242;
+}
+modal.snow.gradient > header {
+  color: #fff;
+}
+modal.snow.gradient > action > button {
+  color: #fff;
+}
+modal.snow.gradient > action > button {
+  color: #424242;
+}
 
 modal.yellow > action > button {
   color: #e7d507;
+}
+modal.yellow.gradient {
+  background: linear-gradient(90deg, #ffeb00 0%, #f4ed15 45%, #e0ff00 65%, #b9ff00 100%);
+  color: #fff;
+  color: #424242;
+}
+modal.yellow.gradient > header {
+  color: #fff;
+}
+modal.yellow.gradient > action > button {
+  color: #fff;
+}
+modal.yellow.gradient > action > button {
+  color: #424242;
 }
 
 modal.purple > action > button {
   color: #6924f0;
 }
+modal.purple.gradient {
+  background: linear-gradient(90deg, #e9e130 0%, #6924f0 0%, #b40f91 44%, #e82890 95%);
+  color: #fff;
+}
+modal.purple.gradient > header {
+  color: #fff;
+}
+modal.purple.gradient > action > button {
+  color: #fff;
+}
 
 modal.pink > action > button {
   color: #ff87cb;
+}
+modal.pink.gradient {
+  background: linear-gradient(90deg, #e9e130 0%, #ff87cb 0%, #e977e1 46%, #e523e7 95%);
+  color: #fff;
+}
+modal.pink.gradient > header {
+  color: #fff;
+}
+modal.pink.gradient > action > button {
+  color: #fff;
 }
 
 modal-con.earth {
