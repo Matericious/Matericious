@@ -326,7 +326,7 @@ button[mui-button][ts]:hover {
 }
 
 [mui-button].yellow {
-  background: #e7e828;
+  background: #e7d507;
   color: #424242;
 }
 [mui-button].yellow.gradient {
@@ -334,13 +334,13 @@ button[mui-button][ts]:hover {
 }
 [mui-button].yellow.outline {
   background: transparent;
-  border: #e7e828 1px solid;
+  border: #e7d507 1px solid;
 }
 [mui-button].yellow.outline {
   color: #424242;
 }
 [mui-button].yellow.outline:hover {
-  background: #e7e828;
+  background: #e7d507;
   color: #424242;
 }
 
@@ -403,7 +403,7 @@ a.snow {
 }
 
 a.yellow {
-  color: #e7e828;
+  color: #e7d507;
 }
 
 a.purple {
@@ -557,14 +557,14 @@ label.red > input:active + span::before {
 }
 
 label.yellow > input:checked {
-  background: #e7e828;
+  background: #e7d507;
 }
 label.yellow > input:checked + span::before {
-  border-color: #e7e828;
-  background: #e7e828;
+  border-color: #e7d507;
+  background: #e7d507;
 }
 label.yellow > input:active + span::before {
-  border-color: #e7e828;
+  border-color: #e7d507;
 }
 
 label.purple > input:checked {
@@ -624,7 +624,8 @@ a {
   background: rgba(203, 203, 203, 0.6);
   padding: 8px;
   border-radius: 30px;
-  font-size: 15px;
+  font-size: 14px;
+  font-family: "Roboto", san-serif;
   font-weight: 500;
   line-height: 1.3;
   margin-left: 5px;
@@ -648,16 +649,22 @@ a {
 }
 [mui-chips] > i {
   vertical-align: middle;
-  font-size: 18px;
-  margin-top: -2px;
+  width: 22px;
+  height: 22px;
+  font-size: 22px;
+  line-height: 22px;
   color: #2f2f2f;
 }
 [mui-chips] > i:nth-child(1) {
-  font-size: 25px;
-  margin-left: -4px;
+  height: 22px;
+  margin-left: -2px;
+}
+[mui-chips] > i:nth-child(2) {
+  height: 22px;
+  margin-right: 2px;
 }
 [mui-chips] > .close {
-  font-size: 25px;
+  font-size: 22px;
   position: relative;
   left: 8px;
   transition: color 0.2s ease-in-out;
@@ -667,11 +674,11 @@ a {
   color: #424242;
 }
 [mui-chips] > img {
-  width: 30px;
-  height: 30px;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
   vertical-align: middle;
-  margin-top: -3px;
-  margin-left: -7px;
+  margin-left: -2px;
   border-radius: 50%;
 }
 
@@ -791,16 +798,16 @@ a {
 }
 
 [mui-chips].yellow {
-  background: #e7e828;
+  background: #e7d507;
   color: rgba(66, 66, 66, 0.8);
 }
 [mui-chips].yellow.outline {
   background: transparent;
-  color: #e7e828;
-  border-color: #e7e828;
+  color: #e7d507;
+  border-color: #e7d507;
 }
 [mui-chips].yellow.outline:hover {
-  background: #e7e828;
+  background: #e7d507;
   color: #fff;
 }
 [mui-chips].yellow > i {
@@ -973,7 +980,7 @@ label.snow {
 
 label.yellow {
   color: #fff;
-  background: #e7e828;
+  background: #e7d507;
 }
 
 label.purple {
@@ -984,6 +991,73 @@ label.purple {
 label.pink {
   color: #fff;
   background: #ff87cb;
+}
+
+.md-input {
+  width: 500px;
+  overflow-x: hidden;
+  overflow-y: visible;
+  padding-top: 12px;
+}
+.md-input > input {
+  width: 100%;
+  background: none;
+  color: #222;
+  font-size: 16px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  border: none;
+  font-family: "Roboto", san-serif;
+  border-radius: 0;
+  border-bottom: 1px solid #c6c6c6;
+}
+.md-input > input:focus {
+  outline: none;
+}
+.md-input > input:focus ~ label,
+.md-input > input:focus input:valid ~ label {
+  top: -50px;
+  left: 0px;
+  font-size: 12px;
+  color: #2196f3;
+}
+.md-input > input:focus ~ :before,
+.md-input > input:focus ~ span:before {
+  width: 100% !important;
+}
+.md-input > input[type=password] {
+  letter-spacing: 0.3em;
+}
+.md-input > label {
+  color: #c6c6c6;
+  font-size: 18px;
+  font-weight: normal;
+  position: relative;
+  pointer-events: none;
+  left: 5px;
+  top: -30px;
+  transition: 300ms ease all;
+}
+.md-input > span {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.md-input > span:before {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 0px;
+  position: absolute;
+  background: #2196f3;
+  transition: 300ms ease all;
+  left: 0%;
+}
+.md-input > p {
+  margin-top: -14px;
+  margin-left: 5px;
+  font-size: 13px;
+  color: colors("red");
 }
 
 /*Modal size*/
@@ -1077,6 +1151,7 @@ modal-con {
   -ms-user-select: none;
   user-select: none;
   pointer-events: none;
+  visibility: hidden;
 }
 modal-con > modal {
   width: 350px;
@@ -1094,6 +1169,7 @@ modal-con > modal {
   border-radius: 5px;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.1) !important;
   pointer-events: auto !important;
+  visibility: hidden;
 }
 modal-con > modal > header {
   width: 88%;
@@ -1192,8 +1268,11 @@ modal-con > modal.loader.medium > span {
   color: inherit;
 }
 modal-con > modal.loader > header {
+  text-align: left;
   height: auto;
   line-height: 30px;
+  font-weight: normal !important;
+  font-size: 17px;
 }
 modal-con > modal.loader > header > label {
   font-size: 16px;
@@ -1207,12 +1286,13 @@ modal-con > modal.loader > main > div {
   text-overflow: ellipsis;
 }
 modal-con > modal.loader > main > div:nth-child(1) {
-  width: 40px;
+  width: 45px;
   text-align: center;
 }
 modal-con > modal.loader > main > div:nth-child(2) {
-  width: calc(100% - 45px);
+  text-align: left;
   text-indent: 10px;
+  width: calc(100% - 45px);
   font-family: "Rubik", sans-serif;
 }
 
@@ -1241,19 +1321,19 @@ modal-con.overlay.light {
   background: rgba(255, 255, 255, 0.6);
 }
 modal-con.top > modal {
-  top: 3em;
+  top: 2em;
   bottom: auto !important;
 }
 modal-con.bottom > modal {
   top: auto !important;
-  bottom: 3em;
+  bottom: 2em;
 }
 modal-con.left > modal {
   right: auto !important;
-  left: 3em;
+  left: 2em;
 }
 modal-con.right > modal {
-  right: 3em;
+  right: 2em;
   left: auto !important;
 }
 
@@ -1264,73 +1344,71 @@ modal-con.right > modal {
     left: 0px !important;
   }
 }
-.md-input {
-  width: 500px;
-  overflow-x: hidden;
-  overflow-y: visible;
-  padding-top: 12px;
-}
-.md-input > input {
-  width: 100%;
-  background: none;
-  color: #222;
-  font-size: 16px;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  border: none;
-  font-family: "Roboto", san-serif;
-  border-radius: 0;
-  border-bottom: 1px solid #c6c6c6;
-}
-.md-input > input:focus {
-  outline: none;
-}
-.md-input > input:focus ~ label,
-.md-input > input:focus input:valid ~ label {
-  top: -50px;
-  left: 0px;
-  font-size: 12px;
-  color: #2196f3;
-}
-.md-input > input:focus ~ :before,
-.md-input > input:focus ~ span:before {
-  width: 100% !important;
-}
-.md-input > input[type=password] {
-  letter-spacing: 0.3em;
-}
-.md-input > label {
-  color: #c6c6c6;
-  font-size: 18px;
-  font-weight: normal;
-  position: relative;
-  pointer-events: none;
-  left: 5px;
-  top: -30px;
-  transition: 300ms ease all;
-}
-.md-input > span {
-  position: relative;
-  display: block;
-  width: 100%;
-}
-.md-input > span:before {
-  content: "";
-  height: 2px;
-  width: 0;
-  bottom: 0px;
-  position: absolute;
-  background: #2196f3;
-  transition: 300ms ease all;
-  left: 0%;
-}
-.md-input > p {
-  margin-top: -14px;
-  margin-left: 5px;
-  font-size: 13px;
-  color: colors("red");
+/*#####################################FadeIn Animation*/
+.fadeIn {
+  visibility: visible !important;
+  transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-animation: fadeIn 0.1s ease-in-out;
+  -moz-animation: fadeIn 0.1s ease-in-out;
+  animation: fadeIn 0.1s ease-in-out;
 }
 
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*#######################################################SlideDown*/
+.slideDownIn {
+  visibility: visible !important;
+  -webkit-animation: slideDownIn 1s ease;
+  -moz-animation: slideDownIn 1s ease;
+  animation: slideDownIn 1s ease;
+}
+
+@-moz-keyframes slideDownIn {
+  0% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes slideDownIn {
+  0% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes slideDownIn {
+  0% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 /*Material loader color*/
 /* Dark colors */
 /* Light colors */
@@ -1338,7 +1416,7 @@ modal-con.right > modal {
 /*Modal fonts*/
 /*Light modal colors*/
 /*Dark modal colors*/
-modal-con {
+big-modal-con {
   width: 100%;
   height: 100vh;
   background: rgba(0, 0, 0, 0.8);
@@ -1350,10 +1428,9 @@ modal-con {
   -ms-user-select: none;
   user-select: none;
   overflow: hidden;
+  visibility: hidden;
 }
-modal-con > modal[full] {
-  width: calc(100% - 100px);
-  height: calc(100% - 100px);
+big-modal-con > modal {
   max-width: 100% !important;
   background: #fff;
   color: #000;
@@ -1367,228 +1444,96 @@ modal-con > modal[full] {
   border-radius: 5px;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.1) !important;
   pointer-events: auto !important;
+  padding: 10px;
+  visibility: hidden;
 }
-modal-con > modal[full] > a {
+big-modal-con > modal.big {
+  width: calc(100% - 110px);
+  height: calc(100% - 110px);
+}
+big-modal-con > modal > a[data=close] {
   color: #fff;
   position: absolute;
   top: -30px;
   right: -30px;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 700px), screen and (max-height: 300px) {
-  modal-con > modal[full] {
-    width: calc(100% - 20px);
-    height: calc(100% - 20px);
+  big-modal-con > modal {
+    width: calc(100% - 40px) !important;
+    height: calc(100% - 40px) !important;
   }
-  modal-con > modal[full] > a {
+  big-modal-con > modal > a[data=close] {
     cursor: pointer;
     color: #222;
     top: 10px;
     right: 10px;
   }
 }
-/*Modal size*/
-/*Modal fonts*/
-/*Light modal colors*/
-/*Dark modal colors*/
-/* Dark colors */
-/* Light colors */
-svg[md-loader] {
-  -webkit-animation: rotate 2s linear infinite;
-  -moz-animation: rotate 2s linear infinite;
-  animation: rotate 2s linear infinite;
-  width: 35px;
-  vertical-align: middle;
-}
-svg[md-loader] circle {
-  fill: none;
-  stroke: #0091ea;
-  stroke-dasharray: 2, 155;
-  stroke-dashoffset: 0;
-  -webkit-animation: dash 1.35s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  -moz-animation: dash 1.35s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  animation: dash 1.35s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+/*#####################################FadeIn Animation*/
+.fadeIn {
+  visibility: visible !important;
+  transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-animation: fadeIn 0.5s ease-in-out;
+  -moz-animation: fadeIn 0.5s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
-@-moz-keyframes rotate {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes rotate {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes rotate {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@-moz-keyframes dash {
+@-moz-keyframes fadeIn {
   0% {
-    stroke-dasharray: 2, 155;
-    stroke-dashoffset: 0;
-  }
-  50% {
-    stroke-dasharray: 122, 20;
-    stroke-dashoffset: -20;
+    opacity: 0;
   }
   100% {
-    stroke-dasharray: 2, 155;
-    stroke-dashoffset: -155;
+    opacity: 1;
   }
 }
-@-webkit-keyframes dash {
+@-webkit-keyframes fadeIn {
   0% {
-    stroke-dasharray: 2, 155;
-    stroke-dashoffset: 0;
-  }
-  50% {
-    stroke-dasharray: 122, 20;
-    stroke-dashoffset: -20;
+    opacity: 0;
   }
   100% {
-    stroke-dasharray: 2, 155;
-    stroke-dashoffset: -155;
+    opacity: 1;
   }
 }
-@keyframes dash {
+@keyframes fadeIn {
   0% {
-    stroke-dasharray: 2, 155;
-    stroke-dashoffset: 0;
-  }
-  50% {
-    stroke-dasharray: 122, 20;
-    stroke-dashoffset: -20;
+    opacity: 0;
   }
   100% {
-    stroke-dasharray: 2, 155;
-    stroke-dashoffset: -155;
+    opacity: 1;
   }
 }
-modal-con[overlay] {
-  background: rgba(255, 255, 255, 0.3);
+/*#######################################################SlideDown*/
+.slideDownIn {
+  visibility: visible !important;
+  -webkit-animation: slideDownIn 1s ease-in;
+  -moz-animation: slideDownIn 1s ease-in;
+  animation: slideDownIn 1s ease-in;
 }
 
-modal-con {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  pointer-events: none;
+@-moz-keyframes slideDownIn {
+  0% {
+    transform: translateY(-2%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
-modal-con > modal {
-  width: 350px;
-  height: 200px;
-  max-width: 85% !important;
-  color: #000;
-  background: #fff;
-  line-height: normal;
-  position: fixed;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: 5px;
-  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.1) !important;
-  pointer-events: auto !important;
+@-webkit-keyframes slideDownIn {
+  0% {
+    transform: translateY(-2%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
-modal-con > modal > header {
-  width: 90%;
-  margin: 0px auto;
-  height: 40px;
-  margin-top: 10px;
-  line-height: 40px;
-  font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-modal-con > modal > main {
-  width: 90%;
-  margin: 0px auto;
-  height: calc(100% - 60px);
-}
-modal-con > modal[loader] {
-  width: 250px;
-  height: 95px;
-}
-modal-con > modal[loader] > header {
-  height: auto;
-  line-height: 30px;
-}
-modal-con > modal[loader] > header > label {
-  font-size: 16px;
-}
-modal-con > modal[loader] > main > div {
-  display: inline-block;
-  height: 45px;
-  line-height: 45px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-modal-con > modal[loader] > main > div:nth-child(1) {
-  width: 40px;
-  text-align: center;
-}
-modal-con > modal[loader] > main > div:nth-child(2) {
-  width: calc(100% - 45px);
-  text-indent: 10px;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
-}
-
-modal-con[dark] > modal {
-  background: #212121;
-  color: #c1bfbf;
-}
-
-[overlay] {
-  pointer-events: auto;
-}
-
-[overlay][dark] {
-  background: rgba(0, 0, 0, 0.6);
-}
-
-[overlay][light] {
-  background: rgba(255, 255, 255, 0.3);
-}
-[overlay][light] > modal {
-  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1), 0 5px 30px 0 rgba(0, 0, 0, 0.1);
-}
-
-modal-con[top] > modal {
-  top: 3em;
-  bottom: auto !important;
-}
-
-modal-con[bottom] > modal {
-  top: auto !important;
-  bottom: 3em;
-}
-
-modal-con > modal[left] {
-  right: auto !important;
-  left: 3em;
-}
-
-modal-con > modal[right] {
-  right: 3em;
-  left: auto !important;
-}
-
-@media screen and (max-width: 400px) {
-  modal-con > modal[left],
-modal-con > modal[right] {
-    margin: 0px auto;
-    right: 0px !important;
-    left: 0px !important;
+@keyframes slideDownIn {
+  0% {
+    transform: translateY(-2%);
+  }
+  100% {
+    transform: translateY(0%);
   }
 }
 *:hover,
@@ -1603,108 +1548,109 @@ modal-con > modal[right] {
   user-select: none;
 }
 
-label {
-  margin: 15px 8px;
+*, *:before, *:after {
+  box-sizing: border-box;
 }
 
-label[mui] {
-  width: auto;
-  min-width: 50px;
-  position: relative;
+[mui-radio] {
+  margin: 16px 0;
   display: inline-block;
-  color: #424242;
-  font-size: 16px !important;
-  line-height: 24px;
-  cursor: pointer;
-  font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
-  font-size: 14px;
-  padding-right: 15px;
-  clear: left;
 }
-label[mui] > input[type=radio] {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-label[mui] > input[type=radio]:checked ~ span {
-  background: #2e72ee;
-}
-label[mui] > input[type=radio]:checked ~ span:after {
-  display: block;
-}
-label[mui] > span {
-  width: 25px;
-  height: 25px;
-  background: #eee;
-  border-radius: 50%;
-  margin: 10px;
-  text-indent: 30px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-label[mui] > span:after {
-  content: "";
-  width: 8px;
-  height: 8px;
-  position: absolute;
+[mui-radio] input[type=radio] {
   display: none;
-  top: 9px;
-  left: 9px;
-  border-radius: 50%;
-  background: #fff;
 }
-label[mui]:hover > input ~ span {
-  background: rgba(66, 66, 66, 0.6);
+[mui-radio] input[type=radio]:checked + label:before {
+  border-color: #00bcd4;
+}
+[mui-radio] input[type=radio]:checked + label:after {
+  transform: scale(1);
+}
+[mui-radio] label {
+  display: inline-block;
+  height: 20px;
+  position: relative;
+  padding: 0 30px;
+  margin-bottom: 0;
+  cursor: pointer;
+  vertical-align: bottom;
+}
+[mui-radio] label:before, [mui-radio] label:after {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  transition-property: transform, border-color;
+}
+[mui-radio] label:before {
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.54);
+}
+[mui-radio] label:after {
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  transform: scale(0);
+  background: #00bcd4;
 }
 
-button.earth > input:checked ~ span {
+[mui-radio].cyan input[type=radio]:checked + label:before {
+  border-color: #00bcd4;
+}
+[mui-radio].cyan label:after {
+  background: #00bcd4;
+}
+
+[mui-radio].earth input[type=radio]:checked + label:before {
+  border-color: #34c559;
+}
+[mui-radio].earth label:after {
   background: #34c559;
 }
-button.earth:hover > input ~ span {
-  background: rgba(52, 197, 89, 0.6);
-}
 
-button.night > input:checked ~ span {
+[mui-radio].night input[type=radio]:checked + label:before {
+  border-color: #424242;
+}
+[mui-radio].night label:after {
   background: #424242;
 }
-button.night:hover > input ~ span {
-  background: rgba(66, 66, 66, 0.6);
-}
 
-button.ocean > input:checked ~ span {
+[mui-radio].ocean input[type=radio]:checked + label:before {
+  border-color: #2e72ee;
+}
+[mui-radio].ocean label:after {
   background: #2e72ee;
 }
-button.ocean:hover > input ~ span {
-  background: rgba(46, 114, 238, 0.6);
-}
 
-button.red > input:checked ~ span {
+[mui-radio].red input[type=radio]:checked + label:before {
+  border-color: #e93030;
+}
+[mui-radio].red label:after {
   background: #e93030;
 }
-button.red:hover > input ~ span {
-  background: rgba(233, 48, 48, 0.6);
+
+[mui-radio].yellow input[type=radio]:checked + label:before {
+  border-color: #e7d507;
+}
+[mui-radio].yellow label:after {
+  background: #e7d507;
 }
 
-button.yellow > input:checked ~ span {
-  background: #e7e828;
+[mui-radio].purple input[type=radio]:checked + label:before {
+  border-color: #6924f0;
 }
-button.yellow:hover > input ~ span {
-  background: rgba(231, 232, 40, 0.6);
-}
-
-button.purple > input:checked ~ span {
+[mui-radio].purple label:after {
   background: #6924f0;
 }
-button.purple:hover > input ~ span {
-  background: rgba(105, 36, 240, 0.6);
-}
 
-button.pink > input:checked ~ span {
-  background: #ff87cb;
+[mui-radio].pink input[type=radio]:checked + label:before {
+  border-color: #ff87cb;
 }
-button.pink:hover > input ~ span {
-  background: rgba(255, 135, 203, 0.6);
+[mui-radio].pink label:after {
+  background: #ff87cb;
 }
 
 *:hover,
@@ -1773,7 +1719,7 @@ input.snow[mui-range]::-webkit-slider-thumb {
 }
 
 input.yellow[mui-range]::-webkit-slider-thumb {
-  background: #e7e828;
+  background: #e7d507;
 }
 
 input.purple[mui-range]::-webkit-slider-thumb {
@@ -1830,6 +1776,7 @@ snackbar > div {
   color: #cbcbcb;
   border-radius: 5px;
   position: fixed;
+  bottom: -10px;
   pointer-events: auto;
   overflow: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -1875,45 +1822,221 @@ snackbar > div > button:nth-child(3) {
   position: relative;
   left: 20px !important;
 }
-
-snackbar[action] > div > text {
+snackbar.light {
+  background: rgba(66, 66, 66, 0.6);
+}
+snackbar.light > div {
+  background: #fff;
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1), 0 5px 30px 0 rgba(0, 0, 0, 0.1);
+}
+snackbar.light > div > text {
+  color: #424242;
+}
+snackbar.light > div > button {
+  color: #424242;
+}
+snackbar.action > div {
+  width: 380px;
+}
+snackbar.action > div > text {
   width: calc(100% - 160px);
 }
-
-snackbar[top] > div {
-  top: 1em;
+snackbar.top > div {
+  top: 0.5em;
 }
-
-snackbar[bottom] > div {
-  bottom: 1em;
+snackbar.bottom > div {
+  bottom: 0.5em;
 }
-
-snackbar > div[left] {
-  left: 1em;
+snackbar.left > div {
+  left: 0.5em;
 }
-
-snackbar > div[right] {
-  right: 1em;
+snackbar.right > div {
+  right: 0.5em;
 }
-
-snackbar > div[center] {
+snackbar.center > div {
   margin: 0px auto;
   left: 0px;
   right: 0px;
 }
 
-snackbar[light] {
-  background: rgba(66, 66, 66, 0.6);
+/*##########################
+
+Snackbar Animations*/
+.slideUpBottom {
+  -webkit-animation: slideUpBottom 0.5s 0s ease forwards;
+  -moz-animation: slideUpBottom 0.5s 0s ease forwards;
+  animation: slideUpBottom 0.5s 0s ease forwards;
 }
-snackbar[light] > div {
-  background: #fff;
-  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1), 0 5px 30px 0 rgba(0, 0, 0, 0.1);
+
+@-moz-keyframes slideUpBottom {
+  from {
+    bottom: -100px;
+  }
+  to {
+    bottom: 0.5em;
+  }
 }
-snackbar[light] > div > text {
-  color: #424242;
+@-webkit-keyframes slideUpBottom {
+  from {
+    bottom: -100px;
+  }
+  to {
+    bottom: 0.5em;
+  }
 }
-snackbar[light] > div > button {
-  color: #424242;
+@keyframes slideUpBottom {
+  from {
+    bottom: -100px;
+  }
+  to {
+    bottom: 0.5em;
+  }
+}
+.slideUpTop {
+  -webkit-animation: slideUpTop 0.5s 0s ease forwards;
+  -moz-animation: slideUpTop 0.5s 0s ease forwards;
+  animation: slideUpTop 0.5s 0s ease forwards;
+}
+
+@-moz-keyframes slideUpTop {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0.5em;
+  }
+}
+@-webkit-keyframes slideUpTop {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0.5em;
+  }
+}
+@keyframes slideUpTop {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 0.5em;
+  }
+}
+/*
+==============================================
+slideDown Animation 
+==============================================
+*/
+.slideDownBottom {
+  -webkit-animation: slideDownBottom 0.5s 0s ease forwards;
+  -moz-animation: slideDownBottom 0.5s 0s ease forwards;
+  animation: slideDownBottom 0.5s 0s ease forwards;
+}
+
+@-moz-keyframes slideDownBottom {
+  from {
+    bottom: 0.5em;
+  }
+  to {
+    bottom: -100px;
+  }
+}
+@-webkit-keyframes slideDownBottom {
+  from {
+    bottom: 0.5em;
+  }
+  to {
+    bottom: -100px;
+  }
+}
+@keyframes slideDownBottom {
+  from {
+    bottom: 0.5em;
+  }
+  to {
+    bottom: -100px;
+  }
+}
+.slideDownTop {
+  -webkit-animation: slideDownTop 0.5s 0s ease forwards;
+  -moz-animation: slideDownTop 0.5s 0s ease forwards;
+  animation: slideDownTop 0.5s 0s ease forwards;
+}
+
+@-moz-keyframes slideDownTop {
+  from {
+    top: 0.5em;
+  }
+  to {
+    top: -100px;
+  }
+}
+@-webkit-keyframes slideDownTop {
+  from {
+    top: 0.5em;
+  }
+  to {
+    top: -100px;
+  }
+}
+@keyframes slideDownTop {
+  from {
+    top: 0.5em;
+  }
+  to {
+    top: -100px;
+  }
+}
+/* Reference specs https://material.io/design/components/data-tables.html#specs */
+table[mui-table] {
+  width: 100%;
+  display: table;
+  background: white;
+  border-collapse: collapse;
+  font-family: "Roboto", san-serif;
+  border-spacing: 0;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+}
+table[mui-table] thead {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+table[mui-table] tr {
+  height: 48px;
+  border-bottom: 0;
+}
+table[mui-table] td, table[mui-table] th {
+  padding: 16px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.54);
+  font-weight: 700;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+}
+table[mui-table] td, table[mui-table] tr {
+  font-size: 13px;
+  font-weight: normal;
+  color: rgba(0, 0, 0, 0.87);
+}
+table[mui-table].zebra tr {
+  border-bottom: none;
+}
+table[mui-table].zebra > tbody > tr:nth-child(odd) {
+  background-color: rgba(242, 242, 242, 0.5);
+}
+table[mui-table].zebra > tbody > tr > td {
+  border-radius: 0;
+}
+table[mui-table].pop > tbody > tr {
+  -webkit-transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease;
+}
+table[mui-table].pop > tbody > tr:hover {
+  background-color: rgba(242, 242, 242, 0.5);
+}
+table[mui-table].line tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 *:hover,
@@ -2025,12 +2148,12 @@ label.red > input:checked ~ span:after {
 }
 
 label.yellow > input:checked ~ span:before {
-  background: rgba(231, 232, 40, 0.5);
+  background: rgba(231, 213, 7, 0.5);
 }
 label.yellow > input:checked ~ span:after {
   left: 15px;
-  background: #e7e828;
-  border-color: #e7e828;
+  background: #e7d507;
+  border-color: #e7d507;
 }
 
 label.purple > input:checked ~ span:before {
