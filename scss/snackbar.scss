@@ -177,7 +177,7 @@ slideDown Animation
 
 
 .slideDownTop{  
-  @include animation(slideDownTop .5s 0s ease forwards)
+  @include animation(slideDownTop 1s 0s ease forwards)
 }
 
 @include keyframes(slideDownTop){
