@@ -142,11 +142,12 @@ modal-con {
       }
     }
     &.decision{
-      width: 220px;
+      width: 250px;
       height: 100px;
       min-width: 200px;
       > header{
         line-height: 25px;
+        font-weight: normal;
       }
     }
     &.loader {
