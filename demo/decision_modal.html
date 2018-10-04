@@ -13,15 +13,28 @@
 </head>
 
 <body>
-  <modal-con class="overlay">
-    <modal class="action earth">
-      <header>Do you live Ice cream?</header>
-      <action>
-        <button>No</button>
-        <button>Yes</button>
-      </action>
-    </modal>
-  </modal-con>
+  <modal-con></modal-con>
+
+  <button onclick="decisionModal()">Decision Modal</button>
+  <script src="../dist/js/modal.js"></script>
+
+  <script>
+    function decisionModal() {
+      var data = {
+        type: 'decision',
+        message: 'Do you like Ice cream?',
+        primaryButton: 'yes',
+        secondaryButton: 'no'
+      }
+      Modal(data, function(button) {
+        if (button) {
+          //User click primary button
+        } else {
+          //User click secondary button
+        }
+      });
+    }
+  </script>
 </body>
 
 </html>
