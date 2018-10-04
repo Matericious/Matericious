@@ -554,6 +554,38 @@ modal-con.pink.gradient {
     opacity: 1;
   }
 }
+.fadeOut {
+  transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-animation: fadeOut 1s;
+  -moz-animation: fadeOut 1s;
+  animation: fadeOut 1s;
+  visibility: hidden;
+}
+
+@-moz-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 /*#######################################################SlideDown*/
 .slideDownIn {
   -webkit-animation: slideDownIn 1s ease;
@@ -585,4 +617,7 @@ modal-con.pink.gradient {
   100% {
     transform: translateY(0%);
   }
+}
+.hideElem {
+  visibility: hidden;
 }
