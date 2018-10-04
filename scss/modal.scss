@@ -136,14 +136,14 @@ modal-con {
         font-family: $modal-primary-font;
         text-size: 15px;
         color: color('blue');
-        margin-right: 20px;
+        margin-right: 10px;
         text-transform: uppercase;
         cursor: pointer;
       }
     }
     &.decision{
-      width: 300px;
-      height: 120px;
+      width: 220px;
+      height: 100px;
       min-width: 200px;
       > header{
         line-height: 25px;
