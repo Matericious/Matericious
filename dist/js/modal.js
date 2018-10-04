@@ -79,8 +79,12 @@ function Modal(data, callback) {
   }
   
   function close(){
-     $getT("modal-con", 0).classList.remove("fadeIn");
+     $getT("modal-con", 0).className += " fadeOut";
+     $getT("modal", 0).className += " hideElem";
      $getT("modal", 0).classList.remove("slideDownIn");
+     setTimeout(function(){
+        $getT("modal-con", 0).classList.remove("fadeIn");
+     }, 500);
   }
 
   timer(data.time);
