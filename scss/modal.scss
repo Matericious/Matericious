@@ -63,12 +63,13 @@ modal-con {
   -ms-user-select: none;
   user-select: none;
   pointer-events: none;
+  visibility: hidden;
   > modal {
     width: $modal-width;
     height: $modal-height;
     max-width: $modal-maxWidth;
     color: color('dark');
-    background: color('light', .8);
+    background: color('light', .9);
     line-height: normal;
     position: fixed;
     margin: auto;
@@ -79,6 +80,7 @@ modal-con {
     border-radius: 5px;
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.1) !important;
     pointer-events: auto !important;
+    visibility: hidden;
     > header {
       width: 88%;
       height: 45px;
@@ -324,28 +326,26 @@ modal-con {
 
 $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
 @include build-color-class(modal, $color_vars);
-
 @include build-color-class(modal-con, $color_vars);
  
-
 
 /*#####################################FadeIn Animation*/
 .fadeIn{ 
   visibility: visible !important; 
   transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
-  @include animation(fadeIn .1s ease-in-out);
+  @include animation(fadeIn 2s);
 } 
 
 @include keyframes(fadeIn){
-   0% { opacity: 0; }
-   100% { opacity: 1; } 
+   from { opacity: 0; }
+   to { opacity: 1; } 
 }
 
 /*#######################################################SlideDown*/ 
 
 .slideDownIn{ 
+  @include animation(slideDownIn 1s ease);
   visibility: visible !important; 
-  @include animation(slideDownIn 1s ease)
 } 
 
 @include keyframes(slideDownIn){
