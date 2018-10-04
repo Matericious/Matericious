@@ -1,3 +1,4 @@
+
 .md-input {
   width: 500px;
   overflow-x: hidden;
@@ -239,12 +240,13 @@ modal-con > modal > action > button {
   cursor: pointer;
 }
 modal-con > modal.decision {
-  width: 220px;
+  width: 250px;
   height: 100px;
   min-width: 200px;
 }
 modal-con > modal.decision > header {
   line-height: 25px;
+  font-weight: normal;
 }
 modal-con > modal.loader {
   width: 230px;
