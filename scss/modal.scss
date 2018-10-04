@@ -2,6 +2,7 @@
 @import "_variables.scss";
 @import "input.scss";
 
+]
 /*Modal size*/
 $modal-width: 350px;
 $modal-height: 150px;
@@ -338,6 +339,17 @@ $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink
    to { opacity: 1; } 
 }
 
+.fadeOut{
+  transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550); 
+  @include animation(fadeOut 1s);
+  visibility: hidden;
+}
+
+@include keyframes(fadeOut){
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
 /*#######################################################SlideDown*/ 
 
 .slideDownIn{ 
@@ -349,3 +361,7 @@ $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink
   0% { transform: translateY(-10%);} 
   100% { transform: translateY(0%);} 
 }
+
+.hideElem{ 
+   visibility: hidden;
+} 
