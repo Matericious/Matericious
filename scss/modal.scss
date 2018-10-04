@@ -2,7 +2,7 @@
 @import "_variables.scss";
 @import "input.scss";
 
-]
+
 /*Modal size*/
 $modal-width: 350px;
 $modal-height: 150px;
@@ -141,12 +141,16 @@ modal-con {
         cursor: pointer;
       }
     }
-    &.action{
+    &.decision{
       width: 300px;
       height: 120px;
+      min-width: 200px;
+      > header{
+        line-height: 25px;
+      }
     }
     &.loader {
-      width: 250px;
+      width: 230px;
       height: 95px;
       text-align: center;
       &.small{
@@ -275,8 +279,14 @@ modal-con {
       right: 0px !important;
       left: 0px !important;
     }
+    > modal{
+      &.decision{
+         width: 70%;
+      } 
+    }
   }
 }
+
 @mixin colorClass($name, $tag) {
   @if $tag == 'modal'{
     > action{
