@@ -13,13 +13,23 @@
 </head>
 
 <body>
-  <modal-con class="overlay gradient earth">
-    <modal class="earth">
-      <header>Modal</header>
-      <main>This is the awesome modal you can use to show cool messages!</main>
-      <action><button>OK</button></action>
-    </modal>
-  </modal-con>
+  <modal-con></modal-con>
+
+  <button onclick="messageModal()">Open Modal</button>
+  <script src="../dist/js/modal.js"></script>
+  <script>
+    function messageModal() {
+      var data = {
+        type: 'message',
+        title: 'Modal',
+        message: 'This is a awesome modal',
+        primaryButton: 'OK',
+        overlayStyle: 'gradient red',
+        // modalStyle: 'gradient earth'
+      }
+      Modal(data);
+    }
+  </script>
 </body>
 
 </html>
