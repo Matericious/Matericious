@@ -1,4 +1,3 @@
-
 .md-input {
   width: 500px;
   overflow-x: hidden;
@@ -235,13 +234,13 @@ modal-con > modal > action > button {
   font-family: "Ubuntu", sans-serif;
   text-size: 15px;
   color: #0091ea;
-  margin-right: 20px;
+  margin-right: 10px;
   text-transform: uppercase;
   cursor: pointer;
 }
 modal-con > modal.decision {
-  width: 300px;
-  height: 120px;
+  width: 220px;
+  height: 100px;
   min-width: 200px;
 }
 modal-con > modal.decision > header {
