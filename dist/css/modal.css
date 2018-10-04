@@ -235,7 +235,7 @@ modal-con > modal > action > button {
   font-family: "Ubuntu", sans-serif;
   text-size: 15px;
   color: #0091ea;
-  margin-right: 10px;
+  margin-right: 20px;
   text-transform: uppercase;
   cursor: pointer;
 }
