@@ -1,3 +1,4 @@
+
 .md-input {
   width: 500px;
   overflow-x: hidden;
@@ -238,12 +239,16 @@ modal-con > modal > action > button {
   text-transform: uppercase;
   cursor: pointer;
 }
-modal-con > modal.action {
+modal-con > modal.decision {
   width: 300px;
   height: 120px;
+  min-width: 200px;
+}
+modal-con > modal.decision > header {
+  line-height: 25px;
 }
 modal-con > modal.loader {
-  width: 250px;
+  width: 230px;
   height: 95px;
   text-align: center;
 }
@@ -347,6 +352,9 @@ modal-con.right > modal {
     margin: 0px auto;
     right: 0px !important;
     left: 0px !important;
+  }
+  modal-con > modal.decision {
+    width: 70%;
   }
 }
 modal.earth > action > button {
