@@ -156,13 +156,14 @@ modal-con {
   -ms-user-select: none;
   user-select: none;
   pointer-events: none;
+  visibility: hidden;
 }
 modal-con > modal {
   width: 350px;
   height: 150px;
   max-width: 85% !important;
   color: #424242;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   line-height: normal;
   position: fixed;
   margin: auto;
@@ -173,6 +174,7 @@ modal-con > modal {
   border-radius: 5px;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.1) !important;
   pointer-events: auto !important;
+  visibility: hidden;
 }
 modal-con > modal > header {
   width: 88%;
@@ -523,41 +525,41 @@ modal-con.pink.gradient {
 .fadeIn {
   visibility: visible !important;
   transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  -webkit-animation: fadeIn 0.1s ease-in-out;
-  -moz-animation: fadeIn 0.1s ease-in-out;
-  animation: fadeIn 0.1s ease-in-out;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  animation: fadeIn 2s;
 }
 
 @-moz-keyframes fadeIn {
-  0% {
+  from {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
 @-webkit-keyframes fadeIn {
-  0% {
+  from {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
 @keyframes fadeIn {
-  0% {
+  from {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
 /*#######################################################SlideDown*/
 .slideDownIn {
-  visibility: visible !important;
   -webkit-animation: slideDownIn 1s ease;
   -moz-animation: slideDownIn 1s ease;
   animation: slideDownIn 1s ease;
+  visibility: visible !important;
 }
 
 @-moz-keyframes slideDownIn {
