@@ -1,0 +1,30 @@
+doctype
+html(lang='en')
+  head
+    include /includes/head.pug
+      body
+        h2 Matericious
+        - 
+          var components = {
+            'buttons':'Buttons',
+            'checkbox':'Checkbox',
+            'chips':'Chips',
+            'labels':'Labels',
+            'table':'Table',
+            'input':'Input',
+            'radio':'Radio',
+            'toggle':'Toggle',
+            'range':'Range',
+            'input_modal':'Input Modal',
+            'md_input_modal':'Material Input Modal',
+            'message_modal':'Message Modal',
+            'decision_modal':'Decision Modal',
+            'loading_modal':'Loading Modal',
+            'small_loader':'Small Loader',
+            'medium_loader':'Medium Loader',
+            'snackbar':'Snackbar'
+          };
+        ul
+          each name,file in components
+            li
+              a(href='components/'+file+'.html')=name

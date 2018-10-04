@@ -1,0 +1,29 @@
+<!Doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Snackbar</title>
+      <meta name="author" content="Matericious">
+      <meta name="description" content="Delicious Material framework">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://rawgit.com/Matericious/Matericious/master/dist/css/snackbar.css">
+   </head>
+   <body>
+      <snackbar></snackbar>
+      <button onclick="showSnack()">Snackbar</button>
+      <script src="https://rawgit.com/Matericious/Matericious/master/dist/js/snackbar.js"></script>
+      <script>
+        function showSnack() {
+           var data = {
+               type: "action",
+               text: "Welcome to the most awesome snachbar ever",
+               time: null,
+               actionButton: 'retry',
+            };
+          Snackbar(data);
+        }
+     </script>
+   </body>
+</html>

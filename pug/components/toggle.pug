@@ -1,0 +1,13 @@
+- var title = 'Toggle'
+- var css = 'toggle'
+doctype
+html(lang='en')
+  head
+    include /includes/head.pug
+      body
+          h3 Toggle
+          - var colors = ['basic', 'earth', 'night', 'ocean', 'red', 'yellow', 'pink'];
+          each color in colors
+            label(class=color mui-switch)
+              input(type='checkbox')
+              span #{color}

@@ -1,0 +1,19 @@
+- var title = 'Buttons'
+- var css = 'buttons'
+doctype
+html(lang='en')
+  head
+    include /includes/head.pug
+      body
+          h3 Buttons
+          - var colors = ['basic', 'earth', 'night', 'ocean', 'red', 'yellow', 'pink', 'snow'];
+          each color in colors
+            button(class=color mui-button)=color + ' button'
+          hr
+            
+          h3 Input Submit Buttons
+          - var submit_btns = ['earth', 'red', 'gradient ocean', 'gradient pink'];
+          each cls in submit_btns
+            input(class=cls type="submit" value="Input Submit" mui-button)
+          hr
+          
