@@ -1,69 +1,62 @@
+@import "_mixins.scss";
 @import "_variables.scss";
 
+/*@!
+################################################################
+@!*/
 
-.md-input {
-  width: 500px;
-  overflow-x: hidden;
-  overflow-y: visible;
-  padding-top: 12px;
-  > input {
+*:hover,
+*:focus {
+  outline: none;
+}
+body{
+  padding: 10px;
+}
+[mui-input] {
+  position: relative;
+  > input{
     width: 100%;
-    background: none;
-    color: #222;
-    font-size: 16px;
-    padding: 10px 10px 10px 5px;
-    display: block;
+    background: transparent;
+    padding: 8px 0px;
     border: none;
-    font-family: $font;
-    border-radius: 0;
-    border-bottom: 1px solid #c6c6c6;
-    &:focus {
-      outline: none;
-      & ~ label,
-      input:valid ~ label {
-        top: -50px;
-        left: 0px;
-        font-size: 12px;
-        color: #2196f3;
-      }
-      & ~ :before,
-      ~ span:before {
-        width: 100% !important;
+    border-bottom: 2px solid color('grey');
+    transition: border-color .5s;
+    cursor: pointer;
+    &:focus ~ label,
+    &:valid ~ label{
+      bottom: 32px;
+      font-size: 12px;
+    }
+    
+    &:hover, &:focus {
+      border-bottom: 2px solid color('dark');
+      &:active, &:focus{
+        cursor: text;
       }
     }
-    &[type="password"] {
-      letter-spacing: 0.3em;
-    }
   }
-  > label {
-    color: #c6c6c6;
-    font-size: 18px;
-    font-weight: normal;
-    position: relative;
-    pointer-events: none;
-    left: 5px;
-    top: -30px;
-    transition: 300ms ease all;
-  }
-  > span {
-    position: relative;
+  > label{
+    position: absolute;
     display: block;
-    width: 100%;
-    &:before {
-      content: "";
-      height: 2px;
-      width: 0;
-      bottom: 0px;
-      position: absolute;
-      background: #2196f3;
-      transition: 300ms ease all;
-      left: 0%;
-    }
-  }
-  > p{
-    margin-top: -14px;
-    margin-left: 5px;
-    font-size: 13px;
-    color: colors('red');
+    bottom: 8px;
+    font-sizE: 17px;
+    font-family: $font;
+    transition: all 200ms;
+    color: color('grey');
+    z-index: -1;
   }
 }
+
+@mixin colorClass($name, $tag) {
+  > input{
+    &:hover, &:focus{
+       border-color: color($name);
+      & ~ label{
+        color: color($name);
+      }
+    }
+  }
+}
+
+$color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
+@include build-color-class([mui-input], $color_vars);
