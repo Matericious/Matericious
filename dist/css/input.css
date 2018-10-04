@@ -1,66 +1,100 @@
-.md-input {
-  width: 500px;
-  overflow-x: hidden;
-  overflow-y: visible;
-  padding-top: 12px;
-}
-.md-input > input {
-  width: 100%;
-  background: none;
-  color: #222;
-  font-size: 16px;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  border: none;
-  font-family: "Roboto", san-serif;
-  border-radius: 0;
-  border-bottom: 1px solid #c6c6c6;
-}
-.md-input > input:focus {
+/*@!
+################################################################
+@!*/
+*:hover,
+*:focus {
   outline: none;
 }
-.md-input > input:focus ~ label,
-.md-input > input:focus input:valid ~ label {
-  top: -50px;
-  left: 0px;
-  font-size: 12px;
-  color: #2196f3;
+
+body {
+  padding: 10px;
 }
-.md-input > input:focus ~ :before,
-.md-input > input:focus ~ span:before {
-  width: 100% !important;
-}
-.md-input > input[type="password"] {
-  letter-spacing: 0.3em;
-}
-.md-input > label {
-  color: #c6c6c6;
-  font-size: 18px;
-  font-weight: normal;
+
+[mui-input] {
   position: relative;
-  pointer-events: none;
-  left: 5px;
-  top: -30px;
-  transition: 300ms ease all;
 }
-.md-input > span {
-  position: relative;
-  display: block;
+[mui-input] > input {
   width: 100%;
+  background: transparent;
+  padding: 8px 0px;
+  border: none;
+  border-bottom: 2px solid #969696;
+  transition: border-color .5s;
+  cursor: pointer;
 }
-.md-input > span:before {
-  content: "";
-  height: 2px;
-  width: 0;
-  bottom: 0px;
+[mui-input] > input:focus ~ label, [mui-input] > input:valid ~ label {
+  bottom: 32px;
+  font-size: 12px;
+}
+[mui-input] > input:hover, [mui-input] > input:focus {
+  border-bottom: 2px solid #424242;
+}
+[mui-input] > input:hover:active, [mui-input] > input:hover:focus, [mui-input] > input:focus:active, [mui-input] > input:focus:focus {
+  cursor: text;
+}
+[mui-input] > label {
   position: absolute;
-  background: #2196f3;
-  transition: 300ms ease all;
-  left: 0%;
+  display: block;
+  bottom: 8px;
+  font-sizE: 17px;
+  font-family: "Roboto", san-serif;
+  transition: all 200ms;
+  color: #969696;
+  z-index: -1;
 }
-.md-input > p {
-  margin-top: -14px;
-  margin-left: 5px;
-  font-size: 13px;
+
+[mui-input].earth > input:hover, [mui-input].earth > input:focus {
+  border-color: #34c559;
+}
+[mui-input].earth > input:hover ~ label, [mui-input].earth > input:focus ~ label {
+  color: #34c559;
+}
+
+[mui-input].night > input:hover, [mui-input].night > input:focus {
+  border-color: #424242;
+}
+[mui-input].night > input:hover ~ label, [mui-input].night > input:focus ~ label {
+  color: #424242;
+}
+
+[mui-input].ocean > input:hover, [mui-input].ocean > input:focus {
+  border-color: #2e72ee;
+}
+[mui-input].ocean > input:hover ~ label, [mui-input].ocean > input:focus ~ label {
+  color: #2e72ee;
+}
+
+[mui-input].red > input:hover, [mui-input].red > input:focus {
+  border-color: #e93030;
+}
+[mui-input].red > input:hover ~ label, [mui-input].red > input:focus ~ label {
   color: #e93030;
+}
+
+[mui-input].snow > input:hover, [mui-input].snow > input:focus {
+  border-color: #fff;
+}
+[mui-input].snow > input:hover ~ label, [mui-input].snow > input:focus ~ label {
+  color: #fff;
+}
+
+[mui-input].yellow > input:hover, [mui-input].yellow > input:focus {
+  border-color: #e7d507;
+}
+[mui-input].yellow > input:hover ~ label, [mui-input].yellow > input:focus ~ label {
+  color: #e7d507;
+}
+
+[mui-input].purple > input:hover, [mui-input].purple > input:focus {
+  border-color: #6924f0;
+}
+[mui-input].purple > input:hover ~ label, [mui-input].purple > input:focus ~ label {
+  color: #6924f0;
+}
+
+[mui-input].pink > input:hover, [mui-input].pink > input:focus {
+  border-color: #ff87cb;
+}
+[mui-input].pink > input:hover ~ label, [mui-input].pink > input:focus ~ label {
+  color: #ff87cb;
 }
