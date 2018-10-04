@@ -10,35 +10,61 @@ function Modal(data, callback) {
 
   if (!data.title) data.title = "Modal";
 
-  if (!data.message) data.message = "This is the awesome modal you can use to show cool messages!";
-  
-  if(!data.overlayStyle) data.overlayStyle = "";
+  if (!data.message)
+    data.message =
+      "This is the awesome modal you can use to show cool messages!";
+
+  if (!data.overlayStyle) data.overlayStyle = "";
 
   if (data.overlay === false) {
-     data.overlay = "";
+    data.overlay = "";
   } else {
-     data.overlay = "overlay";
+    data.overlay = "overlay";
   }
 
   var modalElem = $getT("modal-con", 0);
   modalElem.innerHTML = "";
   modalElem.className = "";
 
-  
-  if(data.primary == "") data.primary = "OK";
-  
-  if(!data.secondary || data.secondary == "") data.secondary = "";
-  
-  if(data.title == "") data.title = "modal";
-  
-  if(!data.modalStyle) data.modalStyle = 'ocean';
-  
-  if(data.message == "") data.message = "";
-  
-  var messageModalHTML = 
-      '<modal class="'+data.modalStyle+'">'+
-      '<header>'+data.title+'</header><main>'+data.message+'</main>'+
-      '<action><button class="actionTwo">'+data.secondary+'</button><button class="actionOne">'+data.primaryButton+'</button></action></modal>';
+  if (data.primary == "") data.primary = "OK";
+
+  if (!data.secondaryButton || data.secondaryButton == "")
+    data.secondaryButton = "";
+
+  if (data.title == "") data.title = "modal";
+
+  if (!data.modalStyle) data.modalStyle = "ocean";
+
+  if (data.message == "") data.message = "";
+
+  var messageModalHTML =
+    '<modal class="' +
+    data.modalStyle +
+    '">' +
+    "<header>" +
+    data.title +
+    "</header><main>" +
+    data.message +
+    "</main>" +
+    '<action><button class="actionTwo">' +
+    data.secondaryButton +
+    '</button><button class="actionOne">' +
+    data.primaryButton +
+    "</button></action></modal>";
+
+  var decisionModalHTML =
+    '<modal class="' +
+    data.type +
+    " " +
+    data.modalStyle +
+    '"><header>' +
+    data.message +
+    "</header>" +
+    '<action><button class="actionTwo">' +
+    data.secondaryButton +
+    '</button><button class="actionOne">' +
+    data.primaryButton +
+    "</button></action></modal>";
 
   var modalClass =
     data.overlay +
@@ -47,44 +73,47 @@ function Modal(data, callback) {
     " " +
     data.pos.horizontal +
     " " +
-    data.theme + 
-    " " + 
+    data.theme +
+    " " +
     data.overlayStyle;
-  
-  if(data.type = 'message'){
-     modalElem.innerHTML = messageModalHTML;
+
+  if (data.type == "message") {
+    modalElem.innerHTML = messageModalHTML;
+  } else if (data.type == "decision") {
+    modalElem.innerHTML = decisionModalHTML;
   }
+
   modalElem.className += modalClass;
-  
+
   $getT("modal-con", 0).className += " fadeIn";
   $getT("modal", 0).className += " slideDownIn";
-  
+
   $getCL("actionTwo", 0).addEventListener("click", function() {
-     close();
-     callback(false);
+    close();
+    callback(false);
   });
   $getCL("actionOne", 0).addEventListener("click", function() {
-    close();     
+    close();
     callback(true);
-  }); 
-  
-  function timer(time){
+  });
+
+  function timer(time) {
     var timer;
-    if(time != null){
-       timer = setInterval(function(){
-          clearInterval(timer);
-          close();
-       },time);
-     }
+    if (time != null) {
+      timer = setInterval(function() {
+        clearInterval(timer);
+        close();
+      }, time);
+    }
   }
-  
-  function close(){
-     $getT("modal-con", 0).className += " fadeOut";
-     $getT("modal", 0).className += " hideElem";
-     $getT("modal", 0).classList.remove("slideDownIn");
-     setTimeout(function(){
-        $getT("modal-con", 0).classList.remove("fadeIn");
-     }, 500);
+
+  function close() {
+    $getT("modal-con", 0).className += " fadeOut";
+    $getT("modal", 0).className += " hideElem";
+    $getT("modal", 0).classList.remove("slideDownIn");
+    setTimeout(function() {
+      $getT("modal-con", 0).classList.remove("fadeIn");
+    }, 500);
   }
 
   timer(data.time);
