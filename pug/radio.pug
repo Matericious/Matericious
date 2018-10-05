@@ -1,0 +1,15 @@
+- var title = 'Radio'
+doctype
+html(lang='en')
+  head
+    include /includes/head.pug
+  body
+    h3 Radio
+    - var colors = ['cyan', 'earth', 'night', 'ocean', 'red', 'yellow', 'pink', 'purple'];
+      each color in colors
+        div(class=color mui-radio)
+          if color == 'cyan'
+            input(id=color type='radio' name='color' checked)
+          else
+            input(id=color type='radio' name='color')
+          label(for=color)=color
