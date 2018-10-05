@@ -24,7 +24,6 @@
   opacity: 0.3;
   transition: 0s;
 }
-
 a {
   text-decoration: none;
 }
@@ -75,19 +74,21 @@ a {
 [mui-chips] > .close {
   font-size: 22px;
   position: relative;
+  top: -1.2px;
   left: 8px;
-  transition: color 0.2s ease-in-out;
+  transition: color .2s ease-in-out;
   color: rgba(66, 66, 66, 0.4);
 }
 [mui-chips] > .close:hover {
   color: #424242;
 }
 [mui-chips] > img {
-  width: 22px;
-  height: 22px;
+  width: 30px;
+  height: 30px;
   line-height: 22px;
   vertical-align: middle;
-  margin-left: -2px;
+  margin-left: -6px;
+  margin-top: -3px;
   border-radius: 50%;
 }
 
@@ -274,3 +275,4 @@ a {
 [mui-chips].pink > i:nth-child(1).close:hover {
   color: #424242;
 }
+
