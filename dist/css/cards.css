@@ -1,18 +1,18 @@
-body {
-  margin: 10px;
-}
-
 [mui-card] {
   width: 300px;
   height: auto;
   background: #fff;
   border-radius: 4px;
-  padding: 5px;
+  overflow: hidden;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+}
+[mui-card] > img {
+  width: 100%;
+  clear: both;
 }
 [mui-card] > .header {
   width: 90%;
-  height: 40px;
+  height: auto;
   margin: 0px auto;
   position: relative;
   top: 10px;
@@ -41,9 +41,9 @@ body {
   width: 95%;
   height: auto;
   margin: 0px auto;
-  display: block;
   display: flex;
   justify-content: space-between;
+  padding-bottom: 8px;
 }
 [mui-card] > action button {
   padding: 8px;
