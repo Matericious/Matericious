@@ -17,12 +17,68 @@
   background-position: 50%;
   transform: scale(10, 10);
   opacity: 0;
-  transition: transform 0.5s, opacity 1s;
+  transition: transform .5s, opacity 1s;
 }
 .ripple:active:after {
   transform: scale(0, 0);
-  opacity: 0.3;
+  opacity: .3;
   transition: 0s;
+}
+
+.ripple.earth {
+  background: red;
+}
+.ripple.earth:after {
+  background-image: radial-gradient(circle, #34c559 10%, transparent 10.01%);
+}
+
+.ripple.night {
+  background: red;
+}
+.ripple.night:after {
+  background-image: radial-gradient(circle, #424242 10%, transparent 10.01%);
+}
+
+.ripple.ocean {
+  background: red;
+}
+.ripple.ocean:after {
+  background-image: radial-gradient(circle, #2e72ee 10%, transparent 10.01%);
+}
+
+.ripple.red {
+  background: red;
+}
+.ripple.red:after {
+  background-image: radial-gradient(circle, #e93030 10%, transparent 10.01%);
+}
+
+.ripple.snow {
+  background: red;
+}
+.ripple.snow:after {
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+}
+
+.ripple.yellow {
+  background: red;
+}
+.ripple.yellow:after {
+  background-image: radial-gradient(circle, #e7e828 10%, transparent 10.01%);
+}
+
+.ripple.purple {
+  background: red;
+}
+.ripple.purple:after {
+  background-image: radial-gradient(circle, #6924f0 10%, transparent 10.01%);
+}
+
+.ripple.pink {
+  background: red;
+}
+.ripple.pink:after {
+  background-image: radial-gradient(circle, #ff87cb 10%, transparent 10.01%);
 }
 
 *:hover,
@@ -66,7 +122,7 @@
   transition: all 150ms linear;
   opacity: 0.9;
 }
-[mui-button]:hover > i[ani=left] {
+[mui-button]:hover > i[ani="left"] {
   -webkit-animation: ani-left 1s infinite;
   -moz-animation: ani-left 1s infinite;
   animation: ani-left 1s infinite;
@@ -95,7 +151,7 @@
     left: -5px;
   }
 }
-[mui-button]:hover > i[ani=right] {
+[mui-button]:hover > i[ani="right"] {
   -webkit-animation: ani-right 1s infinite;
   -moz-animation: ani-right 1s infinite;
   animation: ani-right 1s infinite;
@@ -124,7 +180,7 @@
     left: 5px;
   }
 }
-[mui-button]:hover > i[ani=rotate] {
+[mui-button]:hover > i[ani="rotate"] {
   -webkit-animation: ani-rotate 1s infinite;
   -moz-animation: ani-rotate 1s infinite;
   animation: ani-rotate 1s infinite;
@@ -153,17 +209,17 @@
     transform: rotate(360deg);
   }
 }
-[mui-button]:hover > i[move=left] {
+[mui-button]:hover > i[move="left"] {
   -webkit-animation: ani-left 1s 1;
   -moz-animation: ani-left 1s 1;
   animation: ani-left 1s 1;
 }
-[mui-button]:hover > i[move=right] {
+[mui-button]:hover > i[move="right"] {
   -webkit-animation: ani-right 1s 1;
   -moz-animation: ani-right 1s 1;
   animation: ani-right 1s 1;
 }
-[mui-button]:hover > i[move=rotate] {
+[mui-button]:hover > i[move="rotate"] {
   -webkit-animation: ani-rotate 1s 1;
   -moz-animation: ani-rotate 1s 1;
   animation: ani-rotate 1s 1;
@@ -181,6 +237,10 @@
 [mui-button].outline:hover {
   background: #cbcbcb;
   color: #424242;
+}
+[mui-button].text {
+  background: transparent;
+  box-shadow: none;
 }
 [mui-button].round, [mui-button].transparent {
   width: 50px;
@@ -251,6 +311,12 @@ button[mui-button][ts]:hover {
   background: #34c559;
   color: #fff;
 }
+[mui-button].earth.text {
+  color: #424242;
+}
+[mui-button].earth.text {
+  background: transparent;
+}
 
 [mui-button].night {
   background: #424242;
@@ -269,6 +335,12 @@ button[mui-button][ts]:hover {
 [mui-button].night.outline:hover {
   background: #424242;
   color: #fff;
+}
+[mui-button].night.text {
+  color: #424242;
+}
+[mui-button].night.text {
+  background: transparent;
 }
 
 [mui-button].ocean {
@@ -289,6 +361,12 @@ button[mui-button][ts]:hover {
   background: #2e72ee;
   color: #fff;
 }
+[mui-button].ocean.text {
+  color: #424242;
+}
+[mui-button].ocean.text {
+  background: transparent;
+}
 
 [mui-button].red {
   background: #e93030;
@@ -308,6 +386,12 @@ button[mui-button][ts]:hover {
   background: #e93030;
   color: #fff;
 }
+[mui-button].red.text {
+  color: #424242;
+}
+[mui-button].red.text {
+  background: transparent;
+}
 
 [mui-button].snow {
   background: #fff;
@@ -324,9 +408,12 @@ button[mui-button][ts]:hover {
   background: #fff;
   color: #424242;
 }
+[mui-button].snow.text {
+  background: transparent;
+}
 
 [mui-button].yellow {
-  background: #e7d507;
+  background: #e7e828;
   color: #424242;
 }
 [mui-button].yellow.gradient {
@@ -334,14 +421,17 @@ button[mui-button][ts]:hover {
 }
 [mui-button].yellow.outline {
   background: transparent;
-  border: #e7d507 1px solid;
+  border: #e7e828 1px solid;
 }
 [mui-button].yellow.outline {
   color: #424242;
 }
 [mui-button].yellow.outline:hover {
-  background: #e7d507;
+  background: #e7e828;
   color: #424242;
+}
+[mui-button].yellow.text {
+  background: transparent;
 }
 
 [mui-button].purple {
@@ -362,6 +452,12 @@ button[mui-button][ts]:hover {
   background: #6924f0;
   color: #fff;
 }
+[mui-button].purple.text {
+  color: #424242;
+}
+[mui-button].purple.text {
+  background: transparent;
+}
 
 [mui-button].pink {
   background: #ff87cb;
@@ -380,6 +476,12 @@ button[mui-button][ts]:hover {
 [mui-button].pink.outline:hover {
   background: #ff87cb;
   color: #fff;
+}
+[mui-button].pink.text {
+  color: #424242;
+}
+[mui-button].pink.text {
+  background: transparent;
 }
 
 a.earth {
@@ -403,7 +505,7 @@ a.snow {
 }
 
 a.yellow {
-  color: #e7d507;
+  color: #e7e828;
 }
 
 a.purple {
