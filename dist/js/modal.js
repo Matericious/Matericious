@@ -9,11 +9,7 @@ function Modal(data, callback) {
   if (!data.theme) data.theme = "";
 
   if (!data.title) data.title = "Modal";
-
-  if (!data.message)
-    data.message =
-      "This is the awesome modal you can use to show cool messages!";
-
+  
   if (!data.overlayStyle) data.overlayStyle = "";
 
   if (data.overlay === false) {
@@ -35,7 +31,7 @@ function Modal(data, callback) {
 
   if (!data.modalStyle) data.modalStyle = "ocean";
 
-  if (data.message == "") data.message = "";
+  if (!data.message) data.message = "";
 
   var messageModalHTML =
     '<modal class="' +
@@ -66,6 +62,24 @@ function Modal(data, callback) {
     data.primaryButton +
     "</button></action></modal>";
 
+  var inputModalHTML =
+    '<modal class="' +
+    data.type +
+    " " +
+    data.modalStyle +
+    '"><header>' +
+    data.title +
+    "</header>" +
+      
+    '<main><div class="'+data.modalStyle+'" mui-input><input required="required" autofocus/>'+
+    '<label>'+data.placeholder+'</label></div><span></span></main>'+
+      
+    '<action><button class="actionTwo">' +
+    data.secondaryButton +
+    '</button><button class="actionOne">' +
+    data.primaryButton +
+    "</button></action></modal>";
+
   var modalClass =
     data.overlay +
     " " +
@@ -76,11 +90,12 @@ function Modal(data, callback) {
     data.theme +
     " " +
     data.overlayStyle;
-
   if (data.type == "message") {
     modalElem.innerHTML = messageModalHTML;
   } else if (data.type == "decision") {
     modalElem.innerHTML = decisionModalHTML;
+  }else if(data.type == 'input'){
+    modalElem.innerHTML = inputModalHTML;
   }
 
   modalElem.className += modalClass;
