@@ -5,7 +5,7 @@ html(lang='en')
     include /includes/head.pug
       body
           h3 Buttons
-          - var colors = ['basic', 'earth', 'night', 'ocean', 'red', 'yellow', 'pink', 'snow'];
+          - var colors = ['basic', 'earth', 'night', 'ocean', 'red ripple', 'yellow', 'pink', 'snow'];
           each color in colors
             button(class=color mui-button)=color + ' button'
           hr
@@ -16,3 +16,23 @@ html(lang='en')
             input(class=cls type="submit" value="Input Submit" mui-button)
           hr
           
+          h3 Gradient Buttons
+          - var grad_btns = ['earth', 'night', 'ocean', 'red', 'yellow', 'purple ripple', 'pink'];
+          each grad in grad_btns
+            button(class='gradient '+grad mui-button)= grad + ' gradient'
+          hr
+          
+          h3 Icon Buttons
+          button.red(mui-button)
+            i.material-icons favorite
+            | Favorite
+          button.ocean(mui-button)
+            i.material-icons cloud_download
+            | Download
+          button.earth(mui-button)
+            i.material-icons cloud_upload
+            | Upload
+          button.gradient.red.ripple(mui-button)
+            i.material-icons restaurant
+            | Restaurant
+          hr
