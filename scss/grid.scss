@@ -1,28 +1,44 @@
-$mobile-break-point: 600px;
+$default-break-point: 600px;
 
-@mixin build-grid(){
+@mixin build-grid() {
   @for $i from 1 through 100 {
-    > [col= "#{$i}"]{
+    > [col= "#{$i}"] {
       flex-basis: #{$i+"%"};
     }
   }
 }
 
-[mui-row]{
+@mixin build-break-points() {
+  @for $i from 1 through 10 {
+    [mui-row= "#{$i}"] {
+      @media screen and (max-width: #{$i+"00px"}) {
+        flex-flow: column wrap;
+        display: block;
+        > * {
+          flex: 0;
+        }
+      }
+    }
+  }
+}
+
+[mui-row] {
   width: 100%;
   height: auto;
   display: flex;
 }
 
-[mui-row]{
+[mui-row] {
   > * {
     flex: 1 1 auto;
   }
-  @include build-grid();  
+  @include build-grid();
 }
 
+@include build-break-points();
 
-@media screen and (max-width: $mobile-break-point) {
+/*Default breaking point */
+@media screen and (max-width: $default-break-point) {
   [mui-row] {
     flex-flow: column wrap;
     display: block;
