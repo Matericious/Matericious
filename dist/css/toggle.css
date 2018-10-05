@@ -70,64 +70,64 @@ label[mui-switch] > span {
   text-indent: 45px;
 }
 
-label.earth > input:checked ~ span:before {
+[mui-switch].earth > input:checked ~ span:before {
   background: rgba(52, 197, 89, 0.5);
 }
-label.earth > input:checked ~ span:after {
+[mui-switch].earth > input:checked ~ span:after {
   left: 15px;
   background: #34c559;
   border-color: #34c559;
 }
 
-label.night > input:checked ~ span:before {
+[mui-switch].night > input:checked ~ span:before {
   background: rgba(66, 66, 66, 0.5);
 }
-label.night > input:checked ~ span:after {
+[mui-switch].night > input:checked ~ span:after {
   left: 15px;
   background: #424242;
   border-color: #424242;
 }
 
-label.ocean > input:checked ~ span:before {
+[mui-switch].ocean > input:checked ~ span:before {
   background: rgba(46, 114, 238, 0.5);
 }
-label.ocean > input:checked ~ span:after {
+[mui-switch].ocean > input:checked ~ span:after {
   left: 15px;
   background: #2e72ee;
   border-color: #2e72ee;
 }
 
-label.red > input:checked ~ span:before {
+[mui-switch].red > input:checked ~ span:before {
   background: rgba(233, 48, 48, 0.5);
 }
-label.red > input:checked ~ span:after {
+[mui-switch].red > input:checked ~ span:after {
   left: 15px;
   background: #e93030;
   border-color: #e93030;
 }
 
-label.yellow > input:checked ~ span:before {
+[mui-switch].yellow > input:checked ~ span:before {
   background: rgba(231, 213, 7, 0.5);
 }
-label.yellow > input:checked ~ span:after {
+[mui-switch].yellow > input:checked ~ span:after {
   left: 15px;
   background: #e7d507;
   border-color: #e7d507;
 }
 
-label.purple > input:checked ~ span:before {
+[mui-switch].purple > input:checked ~ span:before {
   background: rgba(105, 36, 240, 0.5);
 }
-label.purple > input:checked ~ span:after {
+[mui-switch].purple > input:checked ~ span:after {
   left: 15px;
   background: #6924f0;
   border-color: #6924f0;
 }
 
-label.pink > input:checked ~ span:before {
+[mui-switch].pink > input:checked ~ span:before {
   background: rgba(255, 135, 203, 0.5);
 }
-label.pink > input:checked ~ span:after {
+[mui-switch].pink > input:checked ~ span:after {
   left: 15px;
   background: #ff87cb;
   border-color: #ff87cb;
