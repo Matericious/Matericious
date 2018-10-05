@@ -1,0 +1,39 @@
+$mobile-break-point: 600px;
+
+@mixin build-grid(){
+  @for $i from 1 through 100 {
+    > [grid-width= "#{$i}"]{
+      flex-basis: #{$i+"%"};
+    }
+  }
+}
+
+[mui-row] {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+[mui-col] {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+[mui-col] {
+  > * {
+    flex: 1 1 auto;
+  }
+  @include build-grid();  
+}
+
+
+@media screen and (max-width: $mobile-break-point) {
+  [mui-col] {
+    flex-flow: column wrap;
+    display: block;
+    > * {
+      flex: 0;
+    }
+  }
+}
