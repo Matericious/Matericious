@@ -4,322 +4,316 @@
   display: flex;
 }
 
-[mui-col] {
-  width: 100%;
-  height: auto;
-  display: flex;
-}
-
-[mui-col] > * {
+[mui-row] > * {
   flex: 1 1 auto;
 }
-[mui-col] > [grid-width="1"] {
+[mui-row] > [col="1"] {
   flex-basis: 1%;
 }
-[mui-col] > [grid-width="2"] {
+[mui-row] > [col="2"] {
   flex-basis: 2%;
 }
-[mui-col] > [grid-width="3"] {
+[mui-row] > [col="3"] {
   flex-basis: 3%;
 }
-[mui-col] > [grid-width="4"] {
+[mui-row] > [col="4"] {
   flex-basis: 4%;
 }
-[mui-col] > [grid-width="5"] {
+[mui-row] > [col="5"] {
   flex-basis: 5%;
 }
-[mui-col] > [grid-width="6"] {
+[mui-row] > [col="6"] {
   flex-basis: 6%;
 }
-[mui-col] > [grid-width="7"] {
+[mui-row] > [col="7"] {
   flex-basis: 7%;
 }
-[mui-col] > [grid-width="8"] {
+[mui-row] > [col="8"] {
   flex-basis: 8%;
 }
-[mui-col] > [grid-width="9"] {
+[mui-row] > [col="9"] {
   flex-basis: 9%;
 }
-[mui-col] > [grid-width="10"] {
+[mui-row] > [col="10"] {
   flex-basis: 10%;
 }
-[mui-col] > [grid-width="11"] {
+[mui-row] > [col="11"] {
   flex-basis: 11%;
 }
-[mui-col] > [grid-width="12"] {
+[mui-row] > [col="12"] {
   flex-basis: 12%;
 }
-[mui-col] > [grid-width="13"] {
+[mui-row] > [col="13"] {
   flex-basis: 13%;
 }
-[mui-col] > [grid-width="14"] {
+[mui-row] > [col="14"] {
   flex-basis: 14%;
 }
-[mui-col] > [grid-width="15"] {
+[mui-row] > [col="15"] {
   flex-basis: 15%;
 }
-[mui-col] > [grid-width="16"] {
+[mui-row] > [col="16"] {
   flex-basis: 16%;
 }
-[mui-col] > [grid-width="17"] {
+[mui-row] > [col="17"] {
   flex-basis: 17%;
 }
-[mui-col] > [grid-width="18"] {
+[mui-row] > [col="18"] {
   flex-basis: 18%;
 }
-[mui-col] > [grid-width="19"] {
+[mui-row] > [col="19"] {
   flex-basis: 19%;
 }
-[mui-col] > [grid-width="20"] {
+[mui-row] > [col="20"] {
   flex-basis: 20%;
 }
-[mui-col] > [grid-width="21"] {
+[mui-row] > [col="21"] {
   flex-basis: 21%;
 }
-[mui-col] > [grid-width="22"] {
+[mui-row] > [col="22"] {
   flex-basis: 22%;
 }
-[mui-col] > [grid-width="23"] {
+[mui-row] > [col="23"] {
   flex-basis: 23%;
 }
-[mui-col] > [grid-width="24"] {
+[mui-row] > [col="24"] {
   flex-basis: 24%;
 }
-[mui-col] > [grid-width="25"] {
+[mui-row] > [col="25"] {
   flex-basis: 25%;
 }
-[mui-col] > [grid-width="26"] {
+[mui-row] > [col="26"] {
   flex-basis: 26%;
 }
-[mui-col] > [grid-width="27"] {
+[mui-row] > [col="27"] {
   flex-basis: 27%;
 }
-[mui-col] > [grid-width="28"] {
+[mui-row] > [col="28"] {
   flex-basis: 28%;
 }
-[mui-col] > [grid-width="29"] {
+[mui-row] > [col="29"] {
   flex-basis: 29%;
 }
-[mui-col] > [grid-width="30"] {
+[mui-row] > [col="30"] {
   flex-basis: 30%;
 }
-[mui-col] > [grid-width="31"] {
+[mui-row] > [col="31"] {
   flex-basis: 31%;
 }
-[mui-col] > [grid-width="32"] {
+[mui-row] > [col="32"] {
   flex-basis: 32%;
 }
-[mui-col] > [grid-width="33"] {
+[mui-row] > [col="33"] {
   flex-basis: 33%;
 }
-[mui-col] > [grid-width="34"] {
+[mui-row] > [col="34"] {
   flex-basis: 34%;
 }
-[mui-col] > [grid-width="35"] {
+[mui-row] > [col="35"] {
   flex-basis: 35%;
 }
-[mui-col] > [grid-width="36"] {
+[mui-row] > [col="36"] {
   flex-basis: 36%;
 }
-[mui-col] > [grid-width="37"] {
+[mui-row] > [col="37"] {
   flex-basis: 37%;
 }
-[mui-col] > [grid-width="38"] {
+[mui-row] > [col="38"] {
   flex-basis: 38%;
 }
-[mui-col] > [grid-width="39"] {
+[mui-row] > [col="39"] {
   flex-basis: 39%;
 }
-[mui-col] > [grid-width="40"] {
+[mui-row] > [col="40"] {
   flex-basis: 40%;
 }
-[mui-col] > [grid-width="41"] {
+[mui-row] > [col="41"] {
   flex-basis: 41%;
 }
-[mui-col] > [grid-width="42"] {
+[mui-row] > [col="42"] {
   flex-basis: 42%;
 }
-[mui-col] > [grid-width="43"] {
+[mui-row] > [col="43"] {
   flex-basis: 43%;
 }
-[mui-col] > [grid-width="44"] {
+[mui-row] > [col="44"] {
   flex-basis: 44%;
 }
-[mui-col] > [grid-width="45"] {
+[mui-row] > [col="45"] {
   flex-basis: 45%;
 }
-[mui-col] > [grid-width="46"] {
+[mui-row] > [col="46"] {
   flex-basis: 46%;
 }
-[mui-col] > [grid-width="47"] {
+[mui-row] > [col="47"] {
   flex-basis: 47%;
 }
-[mui-col] > [grid-width="48"] {
+[mui-row] > [col="48"] {
   flex-basis: 48%;
 }
-[mui-col] > [grid-width="49"] {
+[mui-row] > [col="49"] {
   flex-basis: 49%;
 }
-[mui-col] > [grid-width="50"] {
+[mui-row] > [col="50"] {
   flex-basis: 50%;
 }
-[mui-col] > [grid-width="51"] {
+[mui-row] > [col="51"] {
   flex-basis: 51%;
 }
-[mui-col] > [grid-width="52"] {
+[mui-row] > [col="52"] {
   flex-basis: 52%;
 }
-[mui-col] > [grid-width="53"] {
+[mui-row] > [col="53"] {
   flex-basis: 53%;
 }
-[mui-col] > [grid-width="54"] {
+[mui-row] > [col="54"] {
   flex-basis: 54%;
 }
-[mui-col] > [grid-width="55"] {
+[mui-row] > [col="55"] {
   flex-basis: 55%;
 }
-[mui-col] > [grid-width="56"] {
+[mui-row] > [col="56"] {
   flex-basis: 56%;
 }
-[mui-col] > [grid-width="57"] {
+[mui-row] > [col="57"] {
   flex-basis: 57%;
 }
-[mui-col] > [grid-width="58"] {
+[mui-row] > [col="58"] {
   flex-basis: 58%;
 }
-[mui-col] > [grid-width="59"] {
+[mui-row] > [col="59"] {
   flex-basis: 59%;
 }
-[mui-col] > [grid-width="60"] {
+[mui-row] > [col="60"] {
   flex-basis: 60%;
 }
-[mui-col] > [grid-width="61"] {
+[mui-row] > [col="61"] {
   flex-basis: 61%;
 }
-[mui-col] > [grid-width="62"] {
+[mui-row] > [col="62"] {
   flex-basis: 62%;
 }
-[mui-col] > [grid-width="63"] {
+[mui-row] > [col="63"] {
   flex-basis: 63%;
 }
-[mui-col] > [grid-width="64"] {
+[mui-row] > [col="64"] {
   flex-basis: 64%;
 }
-[mui-col] > [grid-width="65"] {
+[mui-row] > [col="65"] {
   flex-basis: 65%;
 }
-[mui-col] > [grid-width="66"] {
+[mui-row] > [col="66"] {
   flex-basis: 66%;
 }
-[mui-col] > [grid-width="67"] {
+[mui-row] > [col="67"] {
   flex-basis: 67%;
 }
-[mui-col] > [grid-width="68"] {
+[mui-row] > [col="68"] {
   flex-basis: 68%;
 }
-[mui-col] > [grid-width="69"] {
+[mui-row] > [col="69"] {
   flex-basis: 69%;
 }
-[mui-col] > [grid-width="70"] {
+[mui-row] > [col="70"] {
   flex-basis: 70%;
 }
-[mui-col] > [grid-width="71"] {
+[mui-row] > [col="71"] {
   flex-basis: 71%;
 }
-[mui-col] > [grid-width="72"] {
+[mui-row] > [col="72"] {
   flex-basis: 72%;
 }
-[mui-col] > [grid-width="73"] {
+[mui-row] > [col="73"] {
   flex-basis: 73%;
 }
-[mui-col] > [grid-width="74"] {
+[mui-row] > [col="74"] {
   flex-basis: 74%;
 }
-[mui-col] > [grid-width="75"] {
+[mui-row] > [col="75"] {
   flex-basis: 75%;
 }
-[mui-col] > [grid-width="76"] {
+[mui-row] > [col="76"] {
   flex-basis: 76%;
 }
-[mui-col] > [grid-width="77"] {
+[mui-row] > [col="77"] {
   flex-basis: 77%;
 }
-[mui-col] > [grid-width="78"] {
+[mui-row] > [col="78"] {
   flex-basis: 78%;
 }
-[mui-col] > [grid-width="79"] {
+[mui-row] > [col="79"] {
   flex-basis: 79%;
 }
-[mui-col] > [grid-width="80"] {
+[mui-row] > [col="80"] {
   flex-basis: 80%;
 }
-[mui-col] > [grid-width="81"] {
+[mui-row] > [col="81"] {
   flex-basis: 81%;
 }
-[mui-col] > [grid-width="82"] {
+[mui-row] > [col="82"] {
   flex-basis: 82%;
 }
-[mui-col] > [grid-width="83"] {
+[mui-row] > [col="83"] {
   flex-basis: 83%;
 }
-[mui-col] > [grid-width="84"] {
+[mui-row] > [col="84"] {
   flex-basis: 84%;
 }
-[mui-col] > [grid-width="85"] {
+[mui-row] > [col="85"] {
   flex-basis: 85%;
 }
-[mui-col] > [grid-width="86"] {
+[mui-row] > [col="86"] {
   flex-basis: 86%;
 }
-[mui-col] > [grid-width="87"] {
+[mui-row] > [col="87"] {
   flex-basis: 87%;
 }
-[mui-col] > [grid-width="88"] {
+[mui-row] > [col="88"] {
   flex-basis: 88%;
 }
-[mui-col] > [grid-width="89"] {
+[mui-row] > [col="89"] {
   flex-basis: 89%;
 }
-[mui-col] > [grid-width="90"] {
+[mui-row] > [col="90"] {
   flex-basis: 90%;
 }
-[mui-col] > [grid-width="91"] {
+[mui-row] > [col="91"] {
   flex-basis: 91%;
 }
-[mui-col] > [grid-width="92"] {
+[mui-row] > [col="92"] {
   flex-basis: 92%;
 }
-[mui-col] > [grid-width="93"] {
+[mui-row] > [col="93"] {
   flex-basis: 93%;
 }
-[mui-col] > [grid-width="94"] {
+[mui-row] > [col="94"] {
   flex-basis: 94%;
 }
-[mui-col] > [grid-width="95"] {
+[mui-row] > [col="95"] {
   flex-basis: 95%;
 }
-[mui-col] > [grid-width="96"] {
+[mui-row] > [col="96"] {
   flex-basis: 96%;
 }
-[mui-col] > [grid-width="97"] {
+[mui-row] > [col="97"] {
   flex-basis: 97%;
 }
-[mui-col] > [grid-width="98"] {
+[mui-row] > [col="98"] {
   flex-basis: 98%;
 }
-[mui-col] > [grid-width="99"] {
+[mui-row] > [col="99"] {
   flex-basis: 99%;
 }
-[mui-col] > [grid-width="100"] {
+[mui-row] > [col="100"] {
   flex-basis: 100%;
 }
 
 @media screen and (max-width: 600px) {
-  [mui-col] {
+  [mui-row] {
     flex-flow: column wrap;
     display: block;
   }
-  [mui-col] > * {
+  [mui-row] > * {
     flex: 0;
   }
 }
