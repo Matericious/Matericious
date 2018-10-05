@@ -5,7 +5,7 @@ html(lang='en')
   head
     include /includes/head.pug
       body
-          h3 Toggle
+          h3= title
           - var colors = ['basic', 'earth', 'night', 'ocean', 'red', 'yellow', 'pink'];
           each color in colors
             label(class=color mui-switch)
