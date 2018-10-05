@@ -1,3 +1,4 @@
+
 .ripple{
     position: relative;
     overflow: hidden;
@@ -26,3 +27,13 @@
       }
     }
   }
+
+$color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
+@mixin colorClass($name, $tag) {
+  background: red;
+  &:after{
+    background-image: radial-gradient(circle, color($name) 10%, transparent 10.01%);
+  }
+}
+
+@include build-color-class('.ripple', mui-link, $color_vars);
