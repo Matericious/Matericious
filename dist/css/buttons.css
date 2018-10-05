@@ -312,7 +312,7 @@ button[mui-button][ts]:hover {
   color: #fff;
 }
 [mui-button].earth.text {
-  color: #424242;
+  color: #34c559;
 }
 [mui-button].earth.text {
   background: transparent;
@@ -362,7 +362,7 @@ button[mui-button][ts]:hover {
   color: #fff;
 }
 [mui-button].ocean.text {
-  color: #424242;
+  color: #2e72ee;
 }
 [mui-button].ocean.text {
   background: transparent;
@@ -387,7 +387,7 @@ button[mui-button][ts]:hover {
   color: #fff;
 }
 [mui-button].red.text {
-  color: #424242;
+  color: #e93030;
 }
 [mui-button].red.text {
   background: transparent;
@@ -453,7 +453,7 @@ button[mui-button][ts]:hover {
   color: #fff;
 }
 [mui-button].purple.text {
-  color: #424242;
+  color: #6924f0;
 }
 [mui-button].purple.text {
   background: transparent;
@@ -478,7 +478,7 @@ button[mui-button][ts]:hover {
   color: #fff;
 }
 [mui-button].pink.text {
-  color: #424242;
+  color: #ff87cb;
 }
 [mui-button].pink.text {
   background: transparent;
