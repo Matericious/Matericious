@@ -10,10 +10,6 @@
   user-select: none;
 }
 
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
 [mui-radio] {
   margin: 16px 0;
   display: inline-block;
@@ -44,6 +40,7 @@
   transition-property: transform, border-color;
 }
 [mui-radio] label:before {
+  box-sizing: border-box;
   left: 0;
   top: 0;
   width: 20px;
@@ -51,6 +48,7 @@
   border: 2px solid rgba(0, 0, 0, 0.54);
 }
 [mui-radio] label:after {
+  box-sizing: border-box;
   top: 5px;
   left: 5px;
   width: 10px;
@@ -95,10 +93,10 @@
 }
 
 [mui-radio].yellow input[type=radio]:checked + label:before {
-  border-color: #e7e828;
+  border-color: #e7d507;
 }
 [mui-radio].yellow label:after {
-  background: #e7e828;
+  background: #e7d507;
 }
 
 [mui-radio].purple input[type=radio]:checked + label:before {

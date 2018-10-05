@@ -2040,10 +2040,6 @@ big-modal-con > modal > a[data=close] {
   user-select: none;
 }
 
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
 [mui-radio] {
   margin: 16px 0;
   display: inline-block;
@@ -2074,6 +2070,7 @@ big-modal-con > modal > a[data=close] {
   transition-property: transform, border-color;
 }
 [mui-radio] label:before {
+  box-sizing: border-box;
   left: 0;
   top: 0;
   width: 20px;
@@ -2081,6 +2078,7 @@ big-modal-con > modal > a[data=close] {
   border: 2px solid rgba(0, 0, 0, 0.54);
 }
 [mui-radio] label:after {
+  box-sizing: border-box;
   top: 5px;
   left: 5px;
   width: 10px;

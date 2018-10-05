@@ -15,10 +15,6 @@ $gap: 10px;
   user-select: none;
 }
 
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
 [mui-radio] {
   margin: 16px 0;
   display: inline-block;
@@ -47,6 +43,7 @@ $gap: 10px;
       transition-property: transform, border-color;
     }
     &:before {
+      box-sizing: border-box;
       left: 0;
       top: 0;
       width: $radio-size;
@@ -54,6 +51,7 @@ $gap: 10px;
       border: 2px solid rgba(#000, 0.54)
     }
     &:after {
+      box-sizing: border-box;
       top: $radio-size / 2 - $gap / 2;
       left: $radio-size / 2 - $gap / 2;
       width: $gap;
