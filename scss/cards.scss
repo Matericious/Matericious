@@ -2,17 +2,27 @@
 @import "_variables.scss";
 
 
+$font: 'Roboto', san-serif;
+
+$modal-primary-font: "Ubuntu", sans-serif;
+$modal-secondary-font: "Rubik", sans-serif;
+$modal-position: 2em;
+
 [mui-card]{
   width: 300px;
   height: auto;
   background: #fff;
   border-radius: 4px;
-  padding: 5px;
+  overflow: hidden;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14),
       0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  > img{
+    width: 100%;
+    clear: both;
+  }
   > .header{
     width: 90%;
-    height: 40px;
+    height: auto;
     margin: 0px auto;
     position: relative;
     top: 10px;
@@ -41,9 +51,9 @@
     width: 95%;
     height: auto;
     margin: 0px auto;
-    display: block;
     display: flex;
     justify-content: space-between;
+    padding-bottom: 8px;
      button{
       padding: 8px;
       display: inline-block;
