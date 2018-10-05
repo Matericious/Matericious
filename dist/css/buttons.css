@@ -1,86 +1,3 @@
-.ripple {
-  position: relative;
-  overflow: hidden;
-  transform: translate3d(0, 0, 0);
-}
-.ripple:after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-  background-repeat: no-repeat;
-  background-position: 50%;
-  transform: scale(10, 10);
-  opacity: 0;
-  transition: transform .5s, opacity 1s;
-}
-.ripple:active:after {
-  transform: scale(0, 0);
-  opacity: .3;
-  transition: 0s;
-}
-
-.ripple.earth {
-  background: red;
-}
-.ripple.earth:after {
-  background-image: radial-gradient(circle, #34c559 10%, transparent 10.01%);
-}
-
-.ripple.night {
-  background: red;
-}
-.ripple.night:after {
-  background-image: radial-gradient(circle, #424242 10%, transparent 10.01%);
-}
-
-.ripple.ocean {
-  background: red;
-}
-.ripple.ocean:after {
-  background-image: radial-gradient(circle, #2e72ee 10%, transparent 10.01%);
-}
-
-.ripple.red {
-  background: red;
-}
-.ripple.red:after {
-  background-image: radial-gradient(circle, #e93030 10%, transparent 10.01%);
-}
-
-.ripple.snow {
-  background: red;
-}
-.ripple.snow:after {
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-}
-
-.ripple.yellow {
-  background: red;
-}
-.ripple.yellow:after {
-  background-image: radial-gradient(circle, #e7e828 10%, transparent 10.01%);
-}
-
-.ripple.purple {
-  background: red;
-}
-.ripple.purple:after {
-  background-image: radial-gradient(circle, #6924f0 10%, transparent 10.01%);
-}
-
-.ripple.pink {
-  background: red;
-}
-.ripple.pink:after {
-  background-image: radial-gradient(circle, #ff87cb 10%, transparent 10.01%);
-}
-
 *:hover,
 *:focus {
   outline: none;
@@ -122,7 +39,7 @@
   transition: all 150ms linear;
   opacity: 0.9;
 }
-[mui-button]:hover > i[ani="left"] {
+[mui-button]:hover > i[ani=left] {
   -webkit-animation: ani-left 1s infinite;
   -moz-animation: ani-left 1s infinite;
   animation: ani-left 1s infinite;
@@ -151,7 +68,7 @@
     left: -5px;
   }
 }
-[mui-button]:hover > i[ani="right"] {
+[mui-button]:hover > i[ani=right] {
   -webkit-animation: ani-right 1s infinite;
   -moz-animation: ani-right 1s infinite;
   animation: ani-right 1s infinite;
@@ -180,7 +97,7 @@
     left: 5px;
   }
 }
-[mui-button]:hover > i[ani="rotate"] {
+[mui-button]:hover > i[ani=rotate] {
   -webkit-animation: ani-rotate 1s infinite;
   -moz-animation: ani-rotate 1s infinite;
   animation: ani-rotate 1s infinite;
@@ -209,17 +126,17 @@
     transform: rotate(360deg);
   }
 }
-[mui-button]:hover > i[move="left"] {
+[mui-button]:hover > i[move=left] {
   -webkit-animation: ani-left 1s 1;
   -moz-animation: ani-left 1s 1;
   animation: ani-left 1s 1;
 }
-[mui-button]:hover > i[move="right"] {
+[mui-button]:hover > i[move=right] {
   -webkit-animation: ani-right 1s 1;
   -moz-animation: ani-right 1s 1;
   animation: ani-right 1s 1;
 }
-[mui-button]:hover > i[move="rotate"] {
+[mui-button]:hover > i[move=rotate] {
   -webkit-animation: ani-rotate 1s 1;
   -moz-animation: ani-rotate 1s 1;
   animation: ani-rotate 1s 1;
@@ -413,7 +330,7 @@ button[mui-button][ts]:hover {
 }
 
 [mui-button].yellow {
-  background: #e7e828;
+  background: #e7d507;
   color: #424242;
 }
 [mui-button].yellow.gradient {
@@ -421,13 +338,13 @@ button[mui-button][ts]:hover {
 }
 [mui-button].yellow.outline {
   background: transparent;
-  border: #e7e828 1px solid;
+  border: #e7d507 1px solid;
 }
 [mui-button].yellow.outline {
   color: #424242;
 }
 [mui-button].yellow.outline:hover {
-  background: #e7e828;
+  background: #e7d507;
   color: #424242;
 }
 [mui-button].yellow.text {
@@ -505,7 +422,7 @@ a.snow {
 }
 
 a.yellow {
-  color: #e7e828;
+  color: #e7d507;
 }
 
 a.purple {
