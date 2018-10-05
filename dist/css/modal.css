@@ -196,6 +196,7 @@ modal-con > modal {
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.1) !important;
   pointer-events: auto !important;
   visibility: hidden;
+  overflow: hidden;
 }
 modal-con > modal > header {
   width: 88%;
@@ -211,7 +212,8 @@ modal-con > modal > main {
   width: 88%;
   height: auto;
   font-size: 15px;
-  margin: 0px auto;
+  display: block;
+  margin: 12px auto 0px auto;
   font-family: "Rubik", sans-serif;
 }
 modal-con > modal > main > input {
