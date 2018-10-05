@@ -1,0 +1,13 @@
+- var title = 'Checkbox'
+- var css = 'checkbox'
+doctype
+html(lang='en')
+  head
+    include /includes/head.pug
+      body
+          h3= title
+          - var colors = ['basic', 'earth', 'night', 'ocean', 'red', 'yellow', 'pink'];
+          each color in colors
+            label(class=color mui-checkbox)
+              input(type='checkbox')
+              span #{color}
