@@ -3,6 +3,7 @@
 @import "ripple.scss";
 
 
+
 *:hover,
 *:focus {
   outline: none;
@@ -89,7 +90,11 @@
     color: #222;
     @include hoverColor(color('basic'), color('dark'));
   }
-  &.round,
+  &.text{
+    background: transparent;
+    box-shadow: none;
+  }
+  &.round, 
   &.transparent{
   width: 50px;
   height: 50px;
@@ -145,7 +150,7 @@ button[mui-button][ts] {
 @mixin colorClass($name, $tag) {
   @if $tag == "a" {
     color: color($name);
-  }
+  } 
   @else {
     background: color($name);
     &.gradient{
@@ -173,10 +178,17 @@ button[mui-button][ts] {
         color: color($name);
         @include hoverColor(color($name), color('light'));
       }
+      &.text{
+        color: color('dark');
+      }
+    }
+     &.text{
+      background: transparent;
     }
   }
 }
 
 $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
-@include build-color-class([mui-button], $color_vars);
-@include build-color-class(a, $color_vars);
+
+@include build-color-class([mui-button], mui-button, $color_vars);
+@include build-color-class(a, mui-link, $color_vars);
