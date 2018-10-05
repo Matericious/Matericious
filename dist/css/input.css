@@ -6,10 +6,6 @@
   outline: none;
 }
 
-body {
-  padding: 10px;
-}
-
 [mui-input] {
   position: relative;
 }
