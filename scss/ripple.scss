@@ -1,4 +1,3 @@
-
 .ripple{
     position: relative;
     overflow: hidden;
@@ -36,4 +35,4 @@ $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink
   }
 }
 
-@include build-color-class('.ripple', mui-link, $color_vars);
+@include build-color-class('.ripple', $color_vars);

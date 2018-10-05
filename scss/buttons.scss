@@ -190,5 +190,5 @@ button[mui-button][ts] {
 
 $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
 
-@include build-color-class([mui-button], mui-button, $color_vars);
-@include build-color-class(a, mui-link, $color_vars);
+@include build-color-class([mui-button], $color_vars);
+@include build-color-class(a, $color_vars);
