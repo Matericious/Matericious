@@ -2,6 +2,8 @@
 @import "_variables.scss";
 @import "ripple.scss";
 
+
+
 $size: 22px;
 
 @mixin closeBtnColor($color, $rgba){
@@ -58,16 +60,18 @@ a{
   > .close{
     font-size: $size;
     position: relative;
+    top: -1.2px;
     left: 8px;
     transition: color .2s ease-in-out;
     @include closeBtnColor('dark', .4);
   }
   > img{
-    width: $size;
-    height: $size;
+    width: 30px;
+    height: 30px;
     line-height: $size;
     vertical-align: middle;
-    margin-left: -2px;
+    margin-left: -6px;
+    margin-top: -3px;
     border-radius: 50%;
   }
 }
