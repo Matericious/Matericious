@@ -1,0 +1,325 @@
+[mui-row] {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+[mui-col] {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+[mui-col] > * {
+  flex: 1 1 auto;
+}
+[mui-col] > [grid-width="1"] {
+  flex-basis: 1%;
+}
+[mui-col] > [grid-width="2"] {
+  flex-basis: 2%;
+}
+[mui-col] > [grid-width="3"] {
+  flex-basis: 3%;
+}
+[mui-col] > [grid-width="4"] {
+  flex-basis: 4%;
+}
+[mui-col] > [grid-width="5"] {
+  flex-basis: 5%;
+}
+[mui-col] > [grid-width="6"] {
+  flex-basis: 6%;
+}
+[mui-col] > [grid-width="7"] {
+  flex-basis: 7%;
+}
+[mui-col] > [grid-width="8"] {
+  flex-basis: 8%;
+}
+[mui-col] > [grid-width="9"] {
+  flex-basis: 9%;
+}
+[mui-col] > [grid-width="10"] {
+  flex-basis: 10%;
+}
+[mui-col] > [grid-width="11"] {
+  flex-basis: 11%;
+}
+[mui-col] > [grid-width="12"] {
+  flex-basis: 12%;
+}
+[mui-col] > [grid-width="13"] {
+  flex-basis: 13%;
+}
+[mui-col] > [grid-width="14"] {
+  flex-basis: 14%;
+}
+[mui-col] > [grid-width="15"] {
+  flex-basis: 15%;
+}
+[mui-col] > [grid-width="16"] {
+  flex-basis: 16%;
+}
+[mui-col] > [grid-width="17"] {
+  flex-basis: 17%;
+}
+[mui-col] > [grid-width="18"] {
+  flex-basis: 18%;
+}
+[mui-col] > [grid-width="19"] {
+  flex-basis: 19%;
+}
+[mui-col] > [grid-width="20"] {
+  flex-basis: 20%;
+}
+[mui-col] > [grid-width="21"] {
+  flex-basis: 21%;
+}
+[mui-col] > [grid-width="22"] {
+  flex-basis: 22%;
+}
+[mui-col] > [grid-width="23"] {
+  flex-basis: 23%;
+}
+[mui-col] > [grid-width="24"] {
+  flex-basis: 24%;
+}
+[mui-col] > [grid-width="25"] {
+  flex-basis: 25%;
+}
+[mui-col] > [grid-width="26"] {
+  flex-basis: 26%;
+}
+[mui-col] > [grid-width="27"] {
+  flex-basis: 27%;
+}
+[mui-col] > [grid-width="28"] {
+  flex-basis: 28%;
+}
+[mui-col] > [grid-width="29"] {
+  flex-basis: 29%;
+}
+[mui-col] > [grid-width="30"] {
+  flex-basis: 30%;
+}
+[mui-col] > [grid-width="31"] {
+  flex-basis: 31%;
+}
+[mui-col] > [grid-width="32"] {
+  flex-basis: 32%;
+}
+[mui-col] > [grid-width="33"] {
+  flex-basis: 33%;
+}
+[mui-col] > [grid-width="34"] {
+  flex-basis: 34%;
+}
+[mui-col] > [grid-width="35"] {
+  flex-basis: 35%;
+}
+[mui-col] > [grid-width="36"] {
+  flex-basis: 36%;
+}
+[mui-col] > [grid-width="37"] {
+  flex-basis: 37%;
+}
+[mui-col] > [grid-width="38"] {
+  flex-basis: 38%;
+}
+[mui-col] > [grid-width="39"] {
+  flex-basis: 39%;
+}
+[mui-col] > [grid-width="40"] {
+  flex-basis: 40%;
+}
+[mui-col] > [grid-width="41"] {
+  flex-basis: 41%;
+}
+[mui-col] > [grid-width="42"] {
+  flex-basis: 42%;
+}
+[mui-col] > [grid-width="43"] {
+  flex-basis: 43%;
+}
+[mui-col] > [grid-width="44"] {
+  flex-basis: 44%;
+}
+[mui-col] > [grid-width="45"] {
+  flex-basis: 45%;
+}
+[mui-col] > [grid-width="46"] {
+  flex-basis: 46%;
+}
+[mui-col] > [grid-width="47"] {
+  flex-basis: 47%;
+}
+[mui-col] > [grid-width="48"] {
+  flex-basis: 48%;
+}
+[mui-col] > [grid-width="49"] {
+  flex-basis: 49%;
+}
+[mui-col] > [grid-width="50"] {
+  flex-basis: 50%;
+}
+[mui-col] > [grid-width="51"] {
+  flex-basis: 51%;
+}
+[mui-col] > [grid-width="52"] {
+  flex-basis: 52%;
+}
+[mui-col] > [grid-width="53"] {
+  flex-basis: 53%;
+}
+[mui-col] > [grid-width="54"] {
+  flex-basis: 54%;
+}
+[mui-col] > [grid-width="55"] {
+  flex-basis: 55%;
+}
+[mui-col] > [grid-width="56"] {
+  flex-basis: 56%;
+}
+[mui-col] > [grid-width="57"] {
+  flex-basis: 57%;
+}
+[mui-col] > [grid-width="58"] {
+  flex-basis: 58%;
+}
+[mui-col] > [grid-width="59"] {
+  flex-basis: 59%;
+}
+[mui-col] > [grid-width="60"] {
+  flex-basis: 60%;
+}
+[mui-col] > [grid-width="61"] {
+  flex-basis: 61%;
+}
+[mui-col] > [grid-width="62"] {
+  flex-basis: 62%;
+}
+[mui-col] > [grid-width="63"] {
+  flex-basis: 63%;
+}
+[mui-col] > [grid-width="64"] {
+  flex-basis: 64%;
+}
+[mui-col] > [grid-width="65"] {
+  flex-basis: 65%;
+}
+[mui-col] > [grid-width="66"] {
+  flex-basis: 66%;
+}
+[mui-col] > [grid-width="67"] {
+  flex-basis: 67%;
+}
+[mui-col] > [grid-width="68"] {
+  flex-basis: 68%;
+}
+[mui-col] > [grid-width="69"] {
+  flex-basis: 69%;
+}
+[mui-col] > [grid-width="70"] {
+  flex-basis: 70%;
+}
+[mui-col] > [grid-width="71"] {
+  flex-basis: 71%;
+}
+[mui-col] > [grid-width="72"] {
+  flex-basis: 72%;
+}
+[mui-col] > [grid-width="73"] {
+  flex-basis: 73%;
+}
+[mui-col] > [grid-width="74"] {
+  flex-basis: 74%;
+}
+[mui-col] > [grid-width="75"] {
+  flex-basis: 75%;
+}
+[mui-col] > [grid-width="76"] {
+  flex-basis: 76%;
+}
+[mui-col] > [grid-width="77"] {
+  flex-basis: 77%;
+}
+[mui-col] > [grid-width="78"] {
+  flex-basis: 78%;
+}
+[mui-col] > [grid-width="79"] {
+  flex-basis: 79%;
+}
+[mui-col] > [grid-width="80"] {
+  flex-basis: 80%;
+}
+[mui-col] > [grid-width="81"] {
+  flex-basis: 81%;
+}
+[mui-col] > [grid-width="82"] {
+  flex-basis: 82%;
+}
+[mui-col] > [grid-width="83"] {
+  flex-basis: 83%;
+}
+[mui-col] > [grid-width="84"] {
+  flex-basis: 84%;
+}
+[mui-col] > [grid-width="85"] {
+  flex-basis: 85%;
+}
+[mui-col] > [grid-width="86"] {
+  flex-basis: 86%;
+}
+[mui-col] > [grid-width="87"] {
+  flex-basis: 87%;
+}
+[mui-col] > [grid-width="88"] {
+  flex-basis: 88%;
+}
+[mui-col] > [grid-width="89"] {
+  flex-basis: 89%;
+}
+[mui-col] > [grid-width="90"] {
+  flex-basis: 90%;
+}
+[mui-col] > [grid-width="91"] {
+  flex-basis: 91%;
+}
+[mui-col] > [grid-width="92"] {
+  flex-basis: 92%;
+}
+[mui-col] > [grid-width="93"] {
+  flex-basis: 93%;
+}
+[mui-col] > [grid-width="94"] {
+  flex-basis: 94%;
+}
+[mui-col] > [grid-width="95"] {
+  flex-basis: 95%;
+}
+[mui-col] > [grid-width="96"] {
+  flex-basis: 96%;
+}
+[mui-col] > [grid-width="97"] {
+  flex-basis: 97%;
+}
+[mui-col] > [grid-width="98"] {
+  flex-basis: 98%;
+}
+[mui-col] > [grid-width="99"] {
+  flex-basis: 99%;
+}
+[mui-col] > [grid-width="100"] {
+  flex-basis: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  [mui-col] {
+    flex-flow: column wrap;
+    display: block;
+  }
+  [mui-col] > * {
+    flex: 0;
+  }
+}
