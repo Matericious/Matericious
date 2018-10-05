@@ -2,27 +2,27 @@ doctype
 html(lang='en')
   head
     include /includes/head.pug
-      body
-        h2 Matericious
-        - 
-          var components = {
-            'buttons':'Buttons',
-            'checkbox':'Checkbox',
-            'chips':'Chips',
-            'cards':'Cards',
-            'labels':'Labels',
-            'table':'Table',
-            'input':'Input',
-            'radio':'Radio',
-            'toggle':'Toggle',
-            'range':'Range',
-            'modal':'modal',
-            'loading_modal':'Loading Modal',
-            'small_loader':'Small Loader',
-            'medium_loader':'Medium Loader',
-            'snackbar':'Snackbar'
-          };
-        ul
-          each name,file in components
-            li
-              a(href='components/'+file+'.html')=name
+  body
+    h2 Matericious
+    - 
+      var components = {
+        'buttons':'Buttons',
+        'checkbox':'Checkbox',
+        'chips':'Chips',
+        'cards':'Cards',
+        'labels':'Labels',
+        'table':'Table',
+        'input':'Input',
+        'radio':'Radio',
+        'toggle':'Toggle',
+        'range':'Range',
+        'modal':'modal',
+        'loading_modal':'Loading Modal',
+        'small_loader':'Small Loader',
+        'medium_loader':'Medium Loader',
+        'snackbar':'Snackbar'
+      };
+    ul
+      each name,file in components
+        li
+          a(href=file+'.html')=name
