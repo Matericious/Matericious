@@ -25,6 +25,62 @@
   transition: 0s;
 }
 
+.ripple.earth {
+  background: red;
+}
+.ripple.earth:after {
+  background-image: radial-gradient(circle, #34c559 10%, transparent 10.01%);
+}
+
+.ripple.night {
+  background: red;
+}
+.ripple.night:after {
+  background-image: radial-gradient(circle, #424242 10%, transparent 10.01%);
+}
+
+.ripple.ocean {
+  background: red;
+}
+.ripple.ocean:after {
+  background-image: radial-gradient(circle, #2e72ee 10%, transparent 10.01%);
+}
+
+.ripple.red {
+  background: red;
+}
+.ripple.red:after {
+  background-image: radial-gradient(circle, #e93030 10%, transparent 10.01%);
+}
+
+.ripple.snow {
+  background: red;
+}
+.ripple.snow:after {
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+}
+
+.ripple.yellow {
+  background: red;
+}
+.ripple.yellow:after {
+  background-image: radial-gradient(circle, #e7d507 10%, transparent 10.01%);
+}
+
+.ripple.purple {
+  background: red;
+}
+.ripple.purple:after {
+  background-image: radial-gradient(circle, #6924f0 10%, transparent 10.01%);
+}
+
+.ripple.pink {
+  background: red;
+}
+.ripple.pink:after {
+  background-image: radial-gradient(circle, #ff87cb 10%, transparent 10.01%);
+}
+
 *:hover,
 *:focus {
   outline: none;
@@ -182,6 +238,10 @@
   background: #cbcbcb;
   color: #424242;
 }
+[mui-button].text {
+  background: transparent;
+  box-shadow: none;
+}
 [mui-button].round, [mui-button].transparent {
   width: 50px;
   height: 50px;
@@ -251,6 +311,12 @@ button[mui-button][ts]:hover {
   background: #34c559;
   color: #fff;
 }
+[mui-button].earth.text {
+  color: #34c559;
+}
+[mui-button].earth.text {
+  background: transparent;
+}
 
 [mui-button].night {
   background: #424242;
@@ -269,6 +335,12 @@ button[mui-button][ts]:hover {
 [mui-button].night.outline:hover {
   background: #424242;
   color: #fff;
+}
+[mui-button].night.text {
+  color: #424242;
+}
+[mui-button].night.text {
+  background: transparent;
 }
 
 [mui-button].ocean {
@@ -289,6 +361,12 @@ button[mui-button][ts]:hover {
   background: #2e72ee;
   color: #fff;
 }
+[mui-button].ocean.text {
+  color: #2e72ee;
+}
+[mui-button].ocean.text {
+  background: transparent;
+}
 
 [mui-button].red {
   background: #e93030;
@@ -308,6 +386,12 @@ button[mui-button][ts]:hover {
   background: #e93030;
   color: #fff;
 }
+[mui-button].red.text {
+  color: #e93030;
+}
+[mui-button].red.text {
+  background: transparent;
+}
 
 [mui-button].snow {
   background: #fff;
@@ -323,6 +407,9 @@ button[mui-button][ts]:hover {
 [mui-button].snow:hover {
   background: #fff;
   color: #424242;
+}
+[mui-button].snow.text {
+  background: transparent;
 }
 
 [mui-button].yellow {
@@ -343,6 +430,9 @@ button[mui-button][ts]:hover {
   background: #e7d507;
   color: #424242;
 }
+[mui-button].yellow.text {
+  background: transparent;
+}
 
 [mui-button].purple {
   background: #6924f0;
@@ -362,6 +452,12 @@ button[mui-button][ts]:hover {
   background: #6924f0;
   color: #fff;
 }
+[mui-button].purple.text {
+  color: #6924f0;
+}
+[mui-button].purple.text {
+  background: transparent;
+}
 
 [mui-button].pink {
   background: #ff87cb;
@@ -380,6 +476,12 @@ button[mui-button][ts]:hover {
 [mui-button].pink.outline:hover {
   background: #ff87cb;
   color: #fff;
+}
+[mui-button].pink.text {
+  color: #ff87cb;
+}
+[mui-button].pink.text {
+  background: transparent;
 }
 
 a.earth {
@@ -412,6 +514,65 @@ a.purple {
 
 a.pink {
   color: #ff87cb;
+}
+
+[mui-card] {
+  width: 300px;
+  height: auto;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+}
+[mui-card] > img {
+  width: 100%;
+  clear: both;
+}
+[mui-card] > .header {
+  width: 90%;
+  height: auto;
+  margin: 0px auto;
+  position: relative;
+  top: 10px;
+}
+[mui-card] > .header > label {
+  font-size: 18px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  color: inherit !important;
+}
+[mui-card] > .header > span {
+  display: block;
+  color: #99A3A4;
+  font-size: 12px;
+  font-family: "Rubik", sans-serif;
+  position: relative;
+  top: 4px;
+}
+[mui-card] > .main {
+  width: 90%;
+  height: auto;
+  margin: 0px auto;
+  padding-top: 10px;
+}
+[mui-card] > action {
+  width: 95%;
+  height: auto;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 8px;
+}
+[mui-card] > action button {
+  padding: 8px;
+  display: inline-block;
+}
+[mui-card] > action button > i {
+  vertical-align: middle;
+}
+[mui-card] > action button.round {
+  width: 35px;
+  height: 35px;
 }
 
 *:hover,
@@ -614,6 +775,62 @@ label.pink > input:active + span::before {
   transform: scale(0, 0);
   opacity: 0.3;
   transition: 0s;
+}
+
+.ripple.earth {
+  background: red;
+}
+.ripple.earth:after {
+  background-image: radial-gradient(circle, #34c559 10%, transparent 10.01%);
+}
+
+.ripple.night {
+  background: red;
+}
+.ripple.night:after {
+  background-image: radial-gradient(circle, #424242 10%, transparent 10.01%);
+}
+
+.ripple.ocean {
+  background: red;
+}
+.ripple.ocean:after {
+  background-image: radial-gradient(circle, #2e72ee 10%, transparent 10.01%);
+}
+
+.ripple.red {
+  background: red;
+}
+.ripple.red:after {
+  background-image: radial-gradient(circle, #e93030 10%, transparent 10.01%);
+}
+
+.ripple.snow {
+  background: red;
+}
+.ripple.snow:after {
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+}
+
+.ripple.yellow {
+  background: red;
+}
+.ripple.yellow:after {
+  background-image: radial-gradient(circle, #e7d507 10%, transparent 10.01%);
+}
+
+.ripple.purple {
+  background: red;
+}
+.ripple.purple:after {
+  background-image: radial-gradient(circle, #6924f0 10%, transparent 10.01%);
+}
+
+.ripple.pink {
+  background: red;
+}
+.ripple.pink:after {
+  background-image: radial-gradient(circle, #ff87cb 10%, transparent 10.01%);
 }
 
 a {
@@ -866,71 +1083,101 @@ a {
   color: #424242;
 }
 
-.md-input {
-  width: 500px;
-  overflow-x: hidden;
-  overflow-y: visible;
-  padding-top: 12px;
-}
-.md-input > input {
-  width: 100%;
-  background: none;
-  color: #222;
-  font-size: 16px;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  border: none;
-  font-family: "Roboto", san-serif;
-  border-radius: 0;
-  border-bottom: 1px solid #c6c6c6;
-}
-.md-input > input:focus {
+/*@!
+################################################################
+@!*/
+*:hover,
+*:focus {
   outline: none;
 }
-.md-input > input:focus ~ label,
-.md-input > input:focus input:valid ~ label {
-  top: -50px;
-  left: 0px;
-  font-size: 12px;
-  color: #2196f3;
-}
-.md-input > input:focus ~ :before,
-.md-input > input:focus ~ span:before {
-  width: 100% !important;
-}
-.md-input > input[type=password] {
-  letter-spacing: 0.3em;
-}
-.md-input > label {
-  color: #c6c6c6;
-  font-size: 18px;
-  font-weight: normal;
+
+[mui-input] {
   position: relative;
-  pointer-events: none;
-  left: 5px;
-  top: -30px;
-  transition: 300ms ease all;
 }
-.md-input > span {
-  position: relative;
-  display: block;
+[mui-input] > input {
   width: 100%;
+  background: transparent;
+  padding: 8px 0px;
+  border: none;
+  border-bottom: 2px solid #99A3A4;
+  transition: border-color 0.5s;
+  cursor: pointer;
 }
-.md-input > span:before {
-  content: "";
-  height: 2px;
-  width: 0;
-  bottom: 0px;
+[mui-input] > input:focus ~ label, [mui-input] > input:valid ~ label {
+  bottom: 32px;
+  font-size: 12px;
+}
+[mui-input] > input:hover, [mui-input] > input:focus {
+  border-bottom: 2px solid #424242;
+}
+[mui-input] > input:hover:active, [mui-input] > input:hover:focus, [mui-input] > input:focus:active, [mui-input] > input:focus:focus {
+  cursor: text;
+}
+[mui-input] > label {
   position: absolute;
-  background: #2196f3;
-  transition: 300ms ease all;
-  left: 0%;
+  display: block;
+  bottom: 8px;
+  font-sizE: 17px;
+  font-family: "Roboto", san-serif;
+  transition: all 200ms;
+  color: #99A3A4;
+  z-index: -1;
 }
-.md-input > p {
-  margin-top: -14px;
-  margin-left: 5px;
-  font-size: 13px;
-  color: colors("red");
+
+[mui-input].earth > input:hover, [mui-input].earth > input:focus {
+  border-color: #34c559;
+}
+[mui-input].earth > input:hover ~ label, [mui-input].earth > input:focus ~ label {
+  color: #34c559;
+}
+
+[mui-input].night > input:hover, [mui-input].night > input:focus {
+  border-color: #424242;
+}
+[mui-input].night > input:hover ~ label, [mui-input].night > input:focus ~ label {
+  color: #424242;
+}
+
+[mui-input].ocean > input:hover, [mui-input].ocean > input:focus {
+  border-color: #2e72ee;
+}
+[mui-input].ocean > input:hover ~ label, [mui-input].ocean > input:focus ~ label {
+  color: #2e72ee;
+}
+
+[mui-input].red > input:hover, [mui-input].red > input:focus {
+  border-color: #e93030;
+}
+[mui-input].red > input:hover ~ label, [mui-input].red > input:focus ~ label {
+  color: #e93030;
+}
+
+[mui-input].snow > input:hover, [mui-input].snow > input:focus {
+  border-color: #fff;
+}
+[mui-input].snow > input:hover ~ label, [mui-input].snow > input:focus ~ label {
+  color: #fff;
+}
+
+[mui-input].yellow > input:hover, [mui-input].yellow > input:focus {
+  border-color: #e7d507;
+}
+[mui-input].yellow > input:hover ~ label, [mui-input].yellow > input:focus ~ label {
+  color: #e7d507;
+}
+
+[mui-input].purple > input:hover, [mui-input].purple > input:focus {
+  border-color: #6924f0;
+}
+[mui-input].purple > input:hover ~ label, [mui-input].purple > input:focus ~ label {
+  color: #6924f0;
+}
+
+[mui-input].pink > input:hover, [mui-input].pink > input:focus {
+  border-color: #ff87cb;
+}
+[mui-input].pink > input:hover ~ label, [mui-input].pink > input:focus ~ label {
+  color: #ff87cb;
 }
 
 *:hover,
@@ -993,71 +1240,101 @@ label.pink {
   background: #ff87cb;
 }
 
-.md-input {
-  width: 500px;
-  overflow-x: hidden;
-  overflow-y: visible;
-  padding-top: 12px;
-}
-.md-input > input {
-  width: 100%;
-  background: none;
-  color: #222;
-  font-size: 16px;
-  padding: 10px 10px 10px 5px;
-  display: block;
-  border: none;
-  font-family: "Roboto", san-serif;
-  border-radius: 0;
-  border-bottom: 1px solid #c6c6c6;
-}
-.md-input > input:focus {
+/*@!
+################################################################
+@!*/
+*:hover,
+*:focus {
   outline: none;
 }
-.md-input > input:focus ~ label,
-.md-input > input:focus input:valid ~ label {
-  top: -50px;
-  left: 0px;
-  font-size: 12px;
-  color: #2196f3;
-}
-.md-input > input:focus ~ :before,
-.md-input > input:focus ~ span:before {
-  width: 100% !important;
-}
-.md-input > input[type=password] {
-  letter-spacing: 0.3em;
-}
-.md-input > label {
-  color: #c6c6c6;
-  font-size: 18px;
-  font-weight: normal;
+
+[mui-input] {
   position: relative;
-  pointer-events: none;
-  left: 5px;
-  top: -30px;
-  transition: 300ms ease all;
 }
-.md-input > span {
-  position: relative;
-  display: block;
+[mui-input] > input {
   width: 100%;
+  background: transparent;
+  padding: 8px 0px;
+  border: none;
+  border-bottom: 2px solid #99A3A4;
+  transition: border-color 0.5s;
+  cursor: pointer;
 }
-.md-input > span:before {
-  content: "";
-  height: 2px;
-  width: 0;
-  bottom: 0px;
+[mui-input] > input:focus ~ label, [mui-input] > input:valid ~ label {
+  bottom: 32px;
+  font-size: 12px;
+}
+[mui-input] > input:hover, [mui-input] > input:focus {
+  border-bottom: 2px solid #424242;
+}
+[mui-input] > input:hover:active, [mui-input] > input:hover:focus, [mui-input] > input:focus:active, [mui-input] > input:focus:focus {
+  cursor: text;
+}
+[mui-input] > label {
   position: absolute;
-  background: #2196f3;
-  transition: 300ms ease all;
-  left: 0%;
+  display: block;
+  bottom: 8px;
+  font-sizE: 17px;
+  font-family: "Roboto", san-serif;
+  transition: all 200ms;
+  color: #99A3A4;
+  z-index: -1;
 }
-.md-input > p {
-  margin-top: -14px;
-  margin-left: 5px;
-  font-size: 13px;
-  color: colors("red");
+
+[mui-input].earth > input:hover, [mui-input].earth > input:focus {
+  border-color: #34c559;
+}
+[mui-input].earth > input:hover ~ label, [mui-input].earth > input:focus ~ label {
+  color: #34c559;
+}
+
+[mui-input].night > input:hover, [mui-input].night > input:focus {
+  border-color: #424242;
+}
+[mui-input].night > input:hover ~ label, [mui-input].night > input:focus ~ label {
+  color: #424242;
+}
+
+[mui-input].ocean > input:hover, [mui-input].ocean > input:focus {
+  border-color: #2e72ee;
+}
+[mui-input].ocean > input:hover ~ label, [mui-input].ocean > input:focus ~ label {
+  color: #2e72ee;
+}
+
+[mui-input].red > input:hover, [mui-input].red > input:focus {
+  border-color: #e93030;
+}
+[mui-input].red > input:hover ~ label, [mui-input].red > input:focus ~ label {
+  color: #e93030;
+}
+
+[mui-input].snow > input:hover, [mui-input].snow > input:focus {
+  border-color: #fff;
+}
+[mui-input].snow > input:hover ~ label, [mui-input].snow > input:focus ~ label {
+  color: #fff;
+}
+
+[mui-input].yellow > input:hover, [mui-input].yellow > input:focus {
+  border-color: #e7d507;
+}
+[mui-input].yellow > input:hover ~ label, [mui-input].yellow > input:focus ~ label {
+  color: #e7d507;
+}
+
+[mui-input].purple > input:hover, [mui-input].purple > input:focus {
+  border-color: #6924f0;
+}
+[mui-input].purple > input:hover ~ label, [mui-input].purple > input:focus ~ label {
+  color: #6924f0;
+}
+
+[mui-input].pink > input:hover, [mui-input].pink > input:focus {
+  border-color: #ff87cb;
+}
+[mui-input].pink > input:hover ~ label, [mui-input].pink > input:focus ~ label {
+  color: #ff87cb;
 }
 
 /*Modal size*/
@@ -1158,7 +1435,7 @@ modal-con > modal {
   height: 150px;
   max-width: 85% !important;
   color: #424242;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   line-height: normal;
   position: fixed;
   margin: auto;
@@ -1179,7 +1456,7 @@ modal-con > modal > header {
   font-size: 16px;
   font-family: "Ubuntu", sans-serif;
   font-weight: bold;
-  color: #424242;
+  color: inherit !important;
 }
 modal-con > modal > main {
   width: 88%;
@@ -1202,7 +1479,7 @@ modal-con > modal > main > input {
 }
 modal-con > modal > main > p {
   font-size: 12px;
-  color: #424242;
+  color: inherit;
   margin-left: 6px;
   position: relative;
   top: -25px;
@@ -1233,12 +1510,17 @@ modal-con > modal > action > button {
   text-transform: uppercase;
   cursor: pointer;
 }
-modal-con > modal.action {
-  width: 300px;
-  height: 120px;
+modal-con > modal.decision {
+  width: 250px;
+  height: 100px;
+  min-width: 200px;
+}
+modal-con > modal.decision > header {
+  line-height: 25px;
+  font-weight: normal;
 }
 modal-con > modal.loader {
-  width: 250px;
+  width: 230px;
   height: 95px;
   text-align: center;
 }
@@ -1343,46 +1625,252 @@ modal-con.right > modal {
     right: 0px !important;
     left: 0px !important;
   }
+  modal-con > modal.decision {
+    width: 70%;
+  }
 }
+modal.earth > action > button {
+  color: #34c559;
+}
+modal.earth.gradient {
+  background: linear-gradient(90deg, #21f379 0%, #3be76c 49%, #00ba66 95%);
+  color: #fff;
+}
+modal.earth.gradient > header {
+  color: #fff;
+}
+modal.earth.gradient > action > button {
+  color: #fff;
+}
+
+modal.night > action > button {
+  color: #424242;
+}
+modal.night.gradient {
+  background: linear-gradient(90deg, #3b3a3a 5%, #444343 47%, #b9b9b9 100%);
+  color: #fff;
+}
+modal.night.gradient > header {
+  color: #fff;
+}
+modal.night.gradient > action > button {
+  color: #fff;
+}
+
+modal.ocean > action > button {
+  color: #2e72ee;
+}
+modal.ocean.gradient {
+  background: linear-gradient(90deg, #2196f3 0%, #03c5d6 61%, #00d4ff 84%);
+  color: #fff;
+}
+modal.ocean.gradient > header {
+  color: #fff;
+}
+modal.ocean.gradient > action > button {
+  color: #fff;
+}
+
+modal.red > action > button {
+  color: #e93030;
+}
+modal.red.gradient {
+  background: linear-gradient(90deg, #e9e130 0%, #f0247a 0%, #ff2a00 46%, #e93030 95%);
+  color: #fff;
+}
+modal.red.gradient > header {
+  color: #fff;
+}
+modal.red.gradient > action > button {
+  color: #fff;
+}
+
+modal.snow > action > button {
+  color: #fff;
+}
+modal.snow.gradient {
+  color: #fff;
+  color: #424242;
+}
+modal.snow.gradient > header {
+  color: #fff;
+}
+modal.snow.gradient > action > button {
+  color: #fff;
+}
+modal.snow.gradient > action > button {
+  color: #424242;
+}
+
+modal.yellow > action > button {
+  color: #e7d507;
+}
+modal.yellow.gradient {
+  background: linear-gradient(90deg, #ffeb00 0%, #f4ed15 45%, #e0ff00 65%, #b9ff00 100%);
+  color: #fff;
+  color: #424242;
+}
+modal.yellow.gradient > header {
+  color: #fff;
+}
+modal.yellow.gradient > action > button {
+  color: #fff;
+}
+modal.yellow.gradient > action > button {
+  color: #424242;
+}
+
+modal.purple > action > button {
+  color: #6924f0;
+}
+modal.purple.gradient {
+  background: linear-gradient(90deg, #e9e130 0%, #6924f0 0%, #b40f91 44%, #e82890 95%);
+  color: #fff;
+}
+modal.purple.gradient > header {
+  color: #fff;
+}
+modal.purple.gradient > action > button {
+  color: #fff;
+}
+
+modal.pink > action > button {
+  color: #ff87cb;
+}
+modal.pink.gradient {
+  background: linear-gradient(90deg, #e9e130 0%, #ff87cb 0%, #e977e1 46%, #e523e7 95%);
+  color: #fff;
+}
+modal.pink.gradient > header {
+  color: #fff;
+}
+modal.pink.gradient > action > button {
+  color: #fff;
+}
+
+modal-con.earth {
+  background: rgba(52, 197, 89, 0.8);
+}
+modal-con.earth.gradient {
+  background: linear-gradient(90deg, #21f379 0%, #3be76c 49%, #00ba66 95%);
+}
+
+modal-con.night {
+  background: rgba(66, 66, 66, 0.8);
+}
+modal-con.night.gradient {
+  background: linear-gradient(90deg, #3b3a3a 5%, #444343 47%, #b9b9b9 100%);
+}
+
+modal-con.ocean {
+  background: rgba(46, 114, 238, 0.8);
+}
+modal-con.ocean.gradient {
+  background: linear-gradient(90deg, #2196f3 0%, #03c5d6 61%, #00d4ff 84%);
+}
+
+modal-con.red {
+  background: rgba(233, 48, 48, 0.8);
+}
+modal-con.red.gradient {
+  background: linear-gradient(90deg, #e9e130 0%, #f0247a 0%, #ff2a00 46%, #e93030 95%);
+}
+
+modal-con.snow {
+  background: rgba(255, 255, 255, 0.8);
+}
+modal-con.yellow {
+  background: rgba(231, 213, 7, 0.8);
+}
+modal-con.yellow.gradient {
+  background: linear-gradient(90deg, #ffeb00 0%, #f4ed15 45%, #e0ff00 65%, #b9ff00 100%);
+}
+
+modal-con.purple {
+  background: rgba(105, 36, 240, 0.8);
+}
+modal-con.purple.gradient {
+  background: linear-gradient(90deg, #e9e130 0%, #6924f0 0%, #b40f91 44%, #e82890 95%);
+}
+
+modal-con.pink {
+  background: rgba(255, 135, 203, 0.8);
+}
+modal-con.pink.gradient {
+  background: linear-gradient(90deg, #e9e130 0%, #ff87cb 0%, #e977e1 46%, #e523e7 95%);
+}
+
 /*#####################################FadeIn Animation*/
 .fadeIn {
   visibility: visible !important;
   transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  -webkit-animation: fadeIn 0.1s ease-in-out;
-  -moz-animation: fadeIn 0.1s ease-in-out;
-  animation: fadeIn 0.1s ease-in-out;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  animation: fadeIn 2s;
 }
 
 @-moz-keyframes fadeIn {
-  0% {
+  from {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
 @-webkit-keyframes fadeIn {
-  0% {
+  from {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
 @keyframes fadeIn {
-  0% {
+  from {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
+  }
+}
+.fadeOut {
+  transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-animation: fadeOut 1s;
+  -moz-animation: fadeOut 1s;
+  animation: fadeOut 1s;
+  visibility: hidden;
+}
+
+@-moz-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 /*#######################################################SlideDown*/
 .slideDownIn {
-  visibility: visible !important;
   -webkit-animation: slideDownIn 1s ease;
   -moz-animation: slideDownIn 1s ease;
   animation: slideDownIn 1s ease;
+  visibility: visible !important;
 }
 
 @-moz-keyframes slideDownIn {
@@ -1409,6 +1897,10 @@ modal-con.right > modal {
     transform: translateY(0%);
   }
 }
+.hideElem {
+  visibility: hidden;
+}
+
 /*Material loader color*/
 /* Dark colors */
 /* Light colors */
@@ -1757,6 +2249,62 @@ input.pink[mui-range]::-webkit-slider-thumb {
   transition: 0s;
 }
 
+.ripple.earth {
+  background: red;
+}
+.ripple.earth:after {
+  background-image: radial-gradient(circle, #34c559 10%, transparent 10.01%);
+}
+
+.ripple.night {
+  background: red;
+}
+.ripple.night:after {
+  background-image: radial-gradient(circle, #424242 10%, transparent 10.01%);
+}
+
+.ripple.ocean {
+  background: red;
+}
+.ripple.ocean:after {
+  background-image: radial-gradient(circle, #2e72ee 10%, transparent 10.01%);
+}
+
+.ripple.red {
+  background: red;
+}
+.ripple.red:after {
+  background-image: radial-gradient(circle, #e93030 10%, transparent 10.01%);
+}
+
+.ripple.snow {
+  background: red;
+}
+.ripple.snow:after {
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+}
+
+.ripple.yellow {
+  background: red;
+}
+.ripple.yellow:after {
+  background-image: radial-gradient(circle, #e7d507 10%, transparent 10.01%);
+}
+
+.ripple.purple {
+  background: red;
+}
+.ripple.purple:after {
+  background-image: radial-gradient(circle, #6924f0 10%, transparent 10.01%);
+}
+
+.ripple.pink {
+  background: red;
+}
+.ripple.pink:after {
+  background-image: radial-gradient(circle, #ff87cb 10%, transparent 10.01%);
+}
+
 *:hover,
 *:focus {
   outline: none;
@@ -1958,9 +2506,9 @@ slideDown Animation
   }
 }
 .slideDownTop {
-  -webkit-animation: slideDownTop 0.5s 0s ease forwards;
-  -moz-animation: slideDownTop 0.5s 0s ease forwards;
-  animation: slideDownTop 0.5s 0s ease forwards;
+  -webkit-animation: slideDownTop 1s 0s ease forwards;
+  -moz-animation: slideDownTop 1s 0s ease forwards;
+  animation: slideDownTop 1s 0s ease forwards;
 }
 
 @-moz-keyframes slideDownTop {
