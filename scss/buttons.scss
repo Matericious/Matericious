@@ -179,7 +179,7 @@ button[mui-button][ts] {
         @include hoverColor(color($name), color('light'));
       }
       &.text{
-        color: color('dark');
+        color: color($name);
       }
     }
      &.text{
