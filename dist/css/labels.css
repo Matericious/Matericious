@@ -18,42 +18,42 @@ label[mui-label] {
   font-family: Tahoma, Geneva, sans-serif;
 }
 
-label.earth {
+[mui-label].earth {
   color: #fff;
   background: #34c559;
 }
 
-label.night {
+[mui-label].night {
   color: #fff;
   background: #424242;
 }
 
-label.ocean {
+[mui-label].ocean {
   color: #fff;
   background: #2e72ee;
 }
 
-label.red {
+[mui-label].red {
   color: #fff;
   background: #e93030;
 }
 
-label.snow {
+[mui-label].snow {
   color: #fff;
   background: #fff;
 }
 
-label.yellow {
+[mui-label].yellow {
   color: #fff;
   background: #e7d507;
 }
 
-label.purple {
+[mui-label].purple {
   color: #fff;
   background: #6924f0;
 }
 
-label.pink {
+[mui-label].pink {
   color: #fff;
   background: #ff87cb;
 }
