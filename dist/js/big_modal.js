@@ -15,19 +15,21 @@ function BigModal(data, callback) {
     }
   }
 
-  modalElem.addEventListener("click", function(event) {
-    var clickEvent = event.target;
-    if (
-      clickEvent.tagName === "A" &&
-      clickEvent.getAttribute("data") === "close"
-    ) {
-      close(modalElem, modal);
-    }
+  $getCL("close", 0).addEventListener("click", function(){
+     close(modalElem, modal);
   });
 
   function close(modalElem, modal) {
     modalElem.classList.remove("fadeIn");
     modal.classList.remove("slideDownIn");
+    function close() {
+    modalElem.className += " fadeOut";
+    modal.className += " hideElem";
+    modal.classList.remove("slideDownIn");
+    setTimeout(function() {
+      modalElem.classList.remove("fadeIn");
+    }, 500);
+  }
   }
 
   timer(data.time);
