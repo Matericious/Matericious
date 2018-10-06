@@ -26,7 +26,7 @@
   bottom: 8px;
   font-sizE: 17px;
   font-family: "Roboto", san-serif;
-  transition: all .1s ease-in-out;
+  transition: all 200ms;
   z-index: -1;
 }
 
@@ -275,6 +275,9 @@ modal-con > modal.loader {
   height: 95px;
   text-align: center;
 }
+modal-con > modal.loader > main {
+  margin: 0 auto;
+}
 modal-con > modal.loader.small {
   width: 50px;
   height: 50px;
@@ -378,6 +381,13 @@ modal-con.right > modal {
   }
   modal-con > modal.decision {
     width: 70%;
+  }
+}
+@media screen and (max-width: 400px) {
+  modal-con.left > modal, modal-con.right > modal {
+    margin: 0px auto;
+    right: 0px !important;
+    left: 0px !important;
   }
 }
 modal.earth > action > button {
