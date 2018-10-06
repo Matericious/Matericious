@@ -22,13 +22,17 @@ html(lang='en')
             button(class='gradient '+grad mui-button)= grad + ' gradient'
           hr
           
-          h3 Text Buttons
+          h3 Outline Buttons
+          - var outlines = ['earth', 'night', 'ocean', 'red', 'yellow', 'purple ripple', 'pink'];
+          each outline in outlines
+            button(class='outline '+outline mui-button)=outline + ' button'
+          hr
           
-          button.ocean.ripple.text(mui-button)
-            | Explore 
+          h3 Text Buttons
+          button.ocean.ripple.text(mui-button) Explore 
           button.purple.ripple.text(mui-button)
             i.material-icons search
-          
+            | search
           hr
           
           h3 Icon Buttons
@@ -45,3 +49,45 @@ html(lang='en')
             i.material-icons restaurant
             | Restaurant
           hr
+          
+          h3 Animated Icon Buttons
+          h4 Continous Animation
+          button.red(mui-button)
+            i.material-icons(ani='left') arrow_back
+            | &nbsp;Back
+          button.earth(mui-button) Next&nbsp;
+            i.material-icons(ani='right') arrow_forward
+          button.ripple(mui-button) Reload&nbsp;
+            i.material-icons(ani='rotate') refresh
+          h4 One Time Animation
+          button.red(mui-button)
+            i.material-icons(move='left') arrow_back
+            | &nbsp;Back
+          button.earth(mui-button) Next&nbsp;
+            i.material-icons(move='right') arrow_forward
+          button.ripple(mui-button) Reload&nbsp;
+            i.material-icons(move='rotate') refresh
+          hr
+          
+          h3 FAB Buttons
+          - 
+            var fabs = {
+              'cloud_upload':'ocean',
+              'email':'red',
+              'shopping_basket':'night',
+              'add_circle':'earth', 
+              'loyalty':'purple',
+              'done':'pink',
+            };
+          each icon,cls in fabs
+            button(class='round '+icon mui-button)
+              i.material-icons= cls
+          hr
+          
+          h3 Icon Buttons
+          button(mui-button ts)
+            i.material-icons shopping_basket
+          button(mui-button ts)
+            i.material-icons favorite
+          button(mui-button ts)
+            i.material-icons face
