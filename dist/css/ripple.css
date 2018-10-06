@@ -25,58 +25,34 @@
   transition: 0s;
 }
 
-.ripple.earth {
-  background: red;
-}
-.ripple.earth:after {
+.ripple.earth.text:after {
   background-image: radial-gradient(circle, #34c559 10%, transparent 10.01%);
 }
 
-.ripple.night {
-  background: red;
-}
-.ripple.night:after {
+.ripple.night.text:after {
   background-image: radial-gradient(circle, #424242 10%, transparent 10.01%);
 }
 
-.ripple.ocean {
-  background: red;
-}
-.ripple.ocean:after {
+.ripple.ocean.text:after {
   background-image: radial-gradient(circle, #2e72ee 10%, transparent 10.01%);
 }
 
-.ripple.red {
-  background: red;
-}
-.ripple.red:after {
+.ripple.red.text:after {
   background-image: radial-gradient(circle, #e93030 10%, transparent 10.01%);
 }
 
-.ripple.snow {
-  background: red;
-}
-.ripple.snow:after {
+.ripple.snow.text:after {
   background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
 }
 
-.ripple.yellow {
-  background: red;
-}
-.ripple.yellow:after {
+.ripple.yellow.text:after {
   background-image: radial-gradient(circle, #e7d507 10%, transparent 10.01%);
 }
 
-.ripple.purple {
-  background: red;
-}
-.ripple.purple:after {
+.ripple.purple.text:after {
   background-image: radial-gradient(circle, #6924f0 10%, transparent 10.01%);
 }
 
-.ripple.pink {
-  background: red;
-}
-.ripple.pink:after {
+.ripple.pink.text:after {
   background-image: radial-gradient(circle, #ff87cb 10%, transparent 10.01%);
 }
