@@ -1,41 +1,47 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
-.ripple{
-    position: relative;
-    overflow: hidden;
-    transform: translate3d(0, 0, 0);
-    &:after{
-      content: "";
-      width: 100%;
-      height: 100%;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      pointer-events: none;
-      background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-      background-repeat: no-repeat;
-      background-position: 50%;
-      transform: scale(10, 10);
-      opacity: 0;
-      transition: transform .5s, opacity 1s;
-    }
-    &:active{
-      &:after{
-        transform: scale(0, 0);
-        opacity: .3;
-        transition: 0s;
-      }
-    }
-  }
 
-$color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
-@mixin colorClass($name, $tag) {
-  background: red;
-  &:after{
-    background-image: radial-gradient(circle, color($name) 10%, transparent 10.01%);
+.ripple {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  &:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform 0.5s, opacity 1s;
+  }
+  &:active {
+    &:after {
+      transform: scale(0, 0);
+      opacity: 0.3;
+      transition: 0s;
+    }
   }
 }
 
-@include build-color-class('.ripple', $color_vars);
+$color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
+@mixin colorClass($name, $tag) {
+  &.text {
+    &:after {
+      background-image: radial-gradient(
+        circle,
+        color($name) 10%,
+        transparent 10.01%
+      );
+    }
+  }
+}
+
+@include build-color-class(".ripple", $color_vars);
