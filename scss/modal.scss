@@ -50,7 +50,6 @@ svg[md-loader] {
   }
 }
 
-
 modal-con {
   width: 100%;
   height: 100vh;
@@ -157,6 +156,9 @@ modal-con {
       width: 230px;
       height: 95px;
       text-align: center;
+      > main{
+        margin: 0 auto;
+      }
       &.small{
         width: 50px;
         height: 50px;
@@ -336,6 +338,20 @@ modal-con {
   }
 }
 
+@media screen and (max-width: 400px) {
+  modal-con {
+    &.left,
+    &.right {
+      > modal{
+         margin: 0px auto;
+         right: 0px !important;
+         left: 0px !important;  
+      }
+    }
+  }
+}
+
+
 $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
 @include build-color-class(modal, $color_vars);
 @include build-color-class(modal-con, $color_vars);
@@ -379,4 +395,3 @@ $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink
 .hideElem{ 
    visibility: hidden;
 } 
-
