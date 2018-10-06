@@ -9,8 +9,9 @@ function Menu(id){
   targetMenu.className = "pullDown";
   
   var pos = [targetBtn.offsetTop, targetBtn.offsetLeft];
-    
-  targetMenu.style.top = pos[0]+"px";
+  
+  var size = [targetBtn.offsetWidth, targetBtn.offsetHeight];
+  targetMenu.style.top = (size[1] / 2) + pos[0]+"px";
   targetMenu.style.left = pos[1]+"px";
     
   document.addEventListener("click", function(event){
@@ -24,7 +25,13 @@ function Menu(id){
   });
   
   function close(targetMenu){
-    targetMenu.className = " ";
+    targetMenu.className += " pullUp";
+    targetMenu.classList.remove = "pullDown";
+    setTimeout(function() {
+      targetMenu.classList.remove = "pullUp";
+      targetMenu.className = default_class;
+    }, 500);
+     
   }
 }
 
