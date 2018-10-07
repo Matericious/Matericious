@@ -1,0 +1,68 @@
+
+[mui-appbar] {
+  width: 100%;
+  height: 60px;
+  background: red;
+  text-indent: 10px;
+  line-height: 55px;
+  overflow: hidden;
+}
+[mui-appbar].raised {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+}
+[mui-appbar] > div {
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+}
+[mui-appbar] > div > section {
+  display: inline-block;
+}
+[mui-appbar] > div > section.left {
+  width: 200px;
+  height: 100%;
+  display: inline-block;
+  float: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+[mui-appbar] > div > section.left > label {
+  margin-left: 10px;
+}
+[mui-appbar] > div > section.right {
+  width: auto;
+  height: 100%;
+  display: flex;
+  float: right;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+[mui-appbar] > div > section > label {
+  font-size: 16px;
+  color: #fff;
+  vertical-align: middle;
+  font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
+}
+[mui-appbar] > div > section > button {
+  width: 45px;
+  height: 45px;
+  color: #fff;
+}
+[mui-appbar] > div > section > button > i {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  [mui-appbar] > div > section.left {
+    width: 45%;
+  }
+  [mui-appbar] > div > section.right {
+    width: 40%;
+  }
+  [mui-appbar] > div > section > button {
+    width: 30px;
+    height: 30px;
+  }
+}
