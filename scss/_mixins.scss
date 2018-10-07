@@ -40,3 +40,28 @@
     @return map-get($colors, $name);
   }
 }
+
+@mixin shadow-build($value, $opacity-boost: 0) {
+  $param-1-value: map-get($shadow-param-1, $value);
+  $param-2-value: map-get($shadow-param-2, $value);
+  $param-3-value: map-get($shadow-param-3, $value);
+
+  $param-1-color: rgba(#000, $shadow-param-1-opacity + $opacity-boost);
+  $param-2-color: rgba(#000, $shadow-param-2-opacity + $opacity-boost);
+  $param-3-color: rgba(#000, $shadow-param-3-opacity + $opacity-boost);
+
+  -webkit-box-shadow:
+    #{"#{$param-1-value} #{$param-1-color}"},
+    #{"#{$param-2-value} #{$param-2-color}"},
+    #{$param-3-value} $param-3-color;
+  box-shadow:
+    #{"#{$param-1-value} #{$param-1-color}"},
+    #{"#{$param-2-value} #{$param-2-color}"},
+    #{$param-3-value} $param-3-color;
+}
+
+@function shadow-transition-value(
+$duration: $shadow-transition-duration,
+$easing: $shadow-transition-timing-function) {
+  @return #{$shadow-property} #{$duration} #{$easing};
+}
