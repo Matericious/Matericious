@@ -22,7 +22,11 @@
                time: null,
                actionButton: 'retry',
             };
-          Snackbar(data);
+          Snackbar(data, function(action){
+            if(action){
+              alert("retry");
+            }
+          });
         }
      </script>
    </body>
