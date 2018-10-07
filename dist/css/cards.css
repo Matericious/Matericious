@@ -4,62 +4,74 @@
   background: #fff;
   border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12); }
-  [mui-card] > img {
-    width: 100%;
-    clear: both; }
-  [mui-card] > p {
-    margin: 0;
-    height: auto;
-    line-height: 1.25rem;
-    font-weight: 400;
-    font-family: "Roboto", san-serif;
-    font-size: .875rem;
-    letter-spacing: .01786em;
-    padding: 1rem; }
-  [mui-card] > .header {
-    width: 90%;
-    height: auto;
-    margin: 0px auto;
-    position: relative;
-    padding: 1rem; }
-    [mui-card] > .header > label {
-      font-family: "Roboto", san-serif;
-      font-size: 1.25rem;
-      font-weight: 600;
-      letter-spacing: .0125em;
-      color: inherit !important; }
-    [mui-card] > .header > span {
-      display: block;
-      color: #99A3A4;
-      font-family: "Roboto", san-serif;
-      position: relative;
-      font-size: .875rem;
-      line-height: 1.375rem;
-      font-weight: 500;
-      letter-spacing: .00714em;
-      top: 4px; }
-  [mui-card] > .content {
-    width: 90%;
-    height: auto;
-    line-height: 1.25rem;
-    font-weight: 400;
-    font-family: "Roboto", san-serif;
-    font-size: .875rem;
-    letter-spacing: .01786em;
-    padding: 0 1rem 8px; }
-  [mui-card] > action {
-    width: 95%;
-    height: auto;
-    margin: 0px auto;
-    display: flex;
-    justify-content: space-between;
-    padding: 8px; }
-    [mui-card] > action button {
-      padding: 8px;
-      display: inline-block; }
-      [mui-card] > action button > i {
-        vertical-align: middle; }
-      [mui-card] > action button.round {
-        width: 35px;
-        height: 35px; }
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2),
+    0 1px 8px 0 rgba(0, 0, 0, 0.12);
+}
+[mui-card] > img {
+  width: 100%;
+  clear: both;
+}
+[mui-card] > p {
+  margin: 0;
+  height: auto;
+  line-height: 1.25rem;
+  font-weight: 400;
+  font-family: "Roboto", san-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.01786em;
+  padding: 1rem;
+}
+[mui-card] > .header {
+  width: 90%;
+  height: auto;
+  margin: 0px auto;
+  position: relative;
+  padding: 1rem;
+}
+[mui-card] > .header > label {
+  font-family: "Roboto", san-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.0125em;
+  color: inherit !important;
+}
+[mui-card] > .header > span {
+  display: block;
+  color: #99a3a4;
+  font-family: "Roboto", san-serif;
+  position: relative;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 500;
+  letter-spacing: 0.00714em;
+  top: 4px;
+}
+[mui-card] > .content {
+  width: 90%;
+  height: auto;
+  line-height: 1.25rem;
+  font-weight: 400;
+  font-family: "Roboto", san-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.01786em;
+  padding: 0 1rem 8px;
+}
+[mui-card] > action {
+  width: 95%;
+  height: auto;
+  margin: 0px auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+}
+[mui-card] > action button {
+  padding: 8px;
+  display: inline-block;
+}
+[mui-card] > action button > i {
+  vertical-align: middle;
+}
+[mui-card] > action button.round {
+  width: 35px;
+  height: 35px;
+}
