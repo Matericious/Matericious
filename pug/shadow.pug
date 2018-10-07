@@ -1,0 +1,10 @@
+- var title = 'Shadows'
+doctype
+html(lang='en')
+  head
+    include /includes/head.pug
+  body
+    h3 Shadows
+    - for(var i = 0; i < 24; i++)
+      div(mui-card class='z-'+i style='height:80px;width:80px;padding:20px')= '.z-'+i
+      br
