@@ -9,8 +9,12 @@
 *:focus {
   outline: none;
 }
+*:hover,
+*:focus {
+  outline: none;
+}
 
-[mui-input] {
+.mui-input {
   position: relative;
   > input{
     width: 100%;
@@ -57,4 +61,4 @@
 }
 
 $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
-@include build-color-class([mui-input], $color_vars);
+@include build-color-class(".mui-input", $color_vars);
