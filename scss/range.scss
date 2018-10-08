@@ -13,10 +13,7 @@
   user-select: none;
 }
 
-
-
-
-input[mui-range]{
+.mui-range{
   -webkit-appearance: none;
   width: 200px;
   height: 8px;
@@ -61,4 +58,5 @@ input[mui-range]{
 }
 
 $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
-@include build-color-class(input, $color_vars);
+@include build-color-class(".mui-range", $color_vars);
+
