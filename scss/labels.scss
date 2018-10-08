@@ -6,7 +6,7 @@
   outline: none;
 }
 
-label[mui-label] {
+.mui-label {
   padding: 6px;
   padding-left: 8px;
   padding-right: 8px;
@@ -28,4 +28,4 @@ $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink
     background: color($color);
 }
 
-@include build-color-class([mui-label], $color_vars);
+@include build-color-class(".mui-label", $color_vars);
