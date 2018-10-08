@@ -1,6 +1,7 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
+
 *:hover,
 *:focus {
   outline: none;
@@ -12,7 +13,7 @@
   user-select: none;
 }
 
-label[mui-switch] {
+.mui-switch {
   width: auto;
   min-width: 50px;
   position: relative;
@@ -97,4 +98,4 @@ label[mui-switch] {
 }
 
 $color_vars: "earth", "night", "ocean", "red", "yellow", "purple", "pink";
-@include build-color-class([mui-switch], $color_vars);
+@include build-color-class("mui-switch", $color_vars);
