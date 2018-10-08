@@ -1,8 +1,9 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
+
 /* Reference specs https://material.io/design/components/data-tables.html#specs */
-table[mui-table] {
+.mui-table {
   width: 100%;
   display: table;
   background: white;
@@ -58,3 +59,4 @@ table[mui-table] {
     border-bottom: 1px solid rgba(#000, .12);
 	}
 }
+
