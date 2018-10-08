@@ -1,3 +1,4 @@
+/*##############################################################################################################################################*/
 *:hover,
 *:focus {
   outline: none;
@@ -10,20 +11,20 @@
   user-select: none;
 }
 
-[mui-radio] {
+.mui-radio {
   margin: 16px 0;
   display: inline-block;
 }
-[mui-radio] input[type=radio] {
+.mui-radio input[type="radio"] {
   display: none;
 }
-[mui-radio] input[type=radio]:checked + label:before {
+.mui-radio input[type="radio"]:checked + label:before {
   border-color: #00bcd4;
 }
-[mui-radio] input[type=radio]:checked + label:after {
+.mui-radio input[type="radio"]:checked + label:after {
   transform: scale(1);
 }
-[mui-radio] label {
+.mui-radio label {
   display: inline-block;
   height: 20px;
   position: relative;
@@ -32,14 +33,14 @@
   cursor: pointer;
   vertical-align: bottom;
 }
-[mui-radio] label:before, [mui-radio] label:after {
+.mui-radio label:before, .mui-radio label:after {
   position: absolute;
-  content: "";
+  content: '';
   border-radius: 50%;
-  transition: all 0.3s ease;
+  transition: all .3s ease;
   transition-property: transform, border-color;
 }
-[mui-radio] label:before {
+.mui-radio label:before {
   box-sizing: border-box;
   left: 0;
   top: 0;
@@ -47,7 +48,7 @@
   height: 20px;
   border: 2px solid rgba(0, 0, 0, 0.54);
 }
-[mui-radio] label:after {
+.mui-radio label:after {
   box-sizing: border-box;
   top: 5px;
   left: 5px;
@@ -57,58 +58,58 @@
   background: #00bcd4;
 }
 
-[mui-radio].cyan input[type=radio]:checked + label:before {
+.mui-radio.cyan input[type=radio]:checked + label:before {
   border-color: #00bcd4;
 }
-[mui-radio].cyan label:after {
+.mui-radio.cyan label:after {
   background: #00bcd4;
 }
 
-[mui-radio].earth input[type=radio]:checked + label:before {
+.mui-radio.earth input[type=radio]:checked + label:before {
   border-color: #34c559;
 }
-[mui-radio].earth label:after {
+.mui-radio.earth label:after {
   background: #34c559;
 }
 
-[mui-radio].night input[type=radio]:checked + label:before {
+.mui-radio.night input[type=radio]:checked + label:before {
   border-color: #424242;
 }
-[mui-radio].night label:after {
+.mui-radio.night label:after {
   background: #424242;
 }
 
-[mui-radio].ocean input[type=radio]:checked + label:before {
+.mui-radio.ocean input[type=radio]:checked + label:before {
   border-color: #2e72ee;
 }
-[mui-radio].ocean label:after {
+.mui-radio.ocean label:after {
   background: #2e72ee;
 }
 
-[mui-radio].red input[type=radio]:checked + label:before {
+.mui-radio.red input[type=radio]:checked + label:before {
   border-color: #e93030;
 }
-[mui-radio].red label:after {
+.mui-radio.red label:after {
   background: #e93030;
 }
 
-[mui-radio].yellow input[type=radio]:checked + label:before {
+.mui-radio.yellow input[type=radio]:checked + label:before {
   border-color: #e7d507;
 }
-[mui-radio].yellow label:after {
+.mui-radio.yellow label:after {
   background: #e7d507;
 }
 
-[mui-radio].purple input[type=radio]:checked + label:before {
+.mui-radio.purple input[type=radio]:checked + label:before {
   border-color: #6924f0;
 }
-[mui-radio].purple label:after {
+.mui-radio.purple label:after {
   background: #6924f0;
 }
 
-[mui-radio].pink input[type=radio]:checked + label:before {
+.mui-radio.pink input[type=radio]:checked + label:before {
   border-color: #ff87cb;
 }
-[mui-radio].pink label:after {
+.mui-radio.pink label:after {
   background: #ff87cb;
 }
