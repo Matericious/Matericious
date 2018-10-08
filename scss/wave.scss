@@ -2,7 +2,7 @@
 @import "_variables.scss";
 
 
-.ripple {
+.wave {
   position: relative;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
@@ -44,4 +44,4 @@ $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink
   }
 }
 
-@include build-color-class(".ripple", $color_vars);
+@include build-color-class(".wave", $color_vars);
