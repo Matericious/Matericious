@@ -423,7 +423,7 @@
   outline: none;
 }
 
-[mui-button] {
+.mui-button {
   margin-top: 5px;
   padding: 12px 20px;
   overflow: hidden;
@@ -439,26 +439,26 @@
   transition: all 150ms linear;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
 }
-[mui-button] > i {
+.mui-button > i {
   font-size: 15px;
   vertical-align: middle;
   margin-top: 0px;
   transition: all 0.5s linear 0s;
   position: relative;
 }
-[mui-button] > i:nth-child(1) {
+.mui-button > i:nth-child(1) {
   position: relative;
   left: -5px;
 }
-[mui-button] > i[ani], [mui-button] > i[move] {
+.mui-button > i[ani], .mui-button > i[move] {
   left: 0px;
   right: 0px;
 }
-[mui-button]:hover {
+.mui-button:hover {
   transition: all 150ms linear;
   opacity: 0.9;
 }
-[mui-button]:hover > i[ani=left] {
+.mui-button:hover > i[ani=left] {
   -webkit-animation: ani-left 1s infinite;
   -moz-animation: ani-left 1s infinite;
   animation: ani-left 1s infinite;
@@ -487,7 +487,7 @@
     left: -5px;
   }
 }
-[mui-button]:hover > i[ani=right] {
+.mui-button:hover > i[ani=right] {
   -webkit-animation: ani-right 1s infinite;
   -moz-animation: ani-right 1s infinite;
   animation: ani-right 1s infinite;
@@ -516,7 +516,7 @@
     left: 5px;
   }
 }
-[mui-button]:hover > i[ani=rotate] {
+.mui-button:hover > i[ani=rotate] {
   -webkit-animation: ani-rotate 1s infinite;
   -moz-animation: ani-rotate 1s infinite;
   animation: ani-rotate 1s infinite;
@@ -545,40 +545,40 @@
     transform: rotate(360deg);
   }
 }
-[mui-button]:hover > i[move=left] {
+.mui-button:hover > i[move=left] {
   -webkit-animation: ani-left 1s 1;
   -moz-animation: ani-left 1s 1;
   animation: ani-left 1s 1;
 }
-[mui-button]:hover > i[move=right] {
+.mui-button:hover > i[move=right] {
   -webkit-animation: ani-right 1s 1;
   -moz-animation: ani-right 1s 1;
   animation: ani-right 1s 1;
 }
-[mui-button]:hover > i[move=rotate] {
+.mui-button:hover > i[move=rotate] {
   -webkit-animation: ani-rotate 1s 1;
   -moz-animation: ani-rotate 1s 1;
   animation: ani-rotate 1s 1;
 }
-[mui-button]:active {
+.mui-button:active {
   transition: all 150ms linear;
   opacity: 0.7;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
-[mui-button].outline {
+.mui-button.outline {
   background: transparent;
   border: #cbcbcb 1px solid;
   color: #222;
 }
-[mui-button].outline:hover {
+.mui-button.outline:hover {
   background: #cbcbcb;
   color: #424242;
 }
-[mui-button].text {
+.mui-button.text {
   background: transparent;
   box-shadow: none;
 }
-[mui-button].round, [mui-button].transparent {
+.mui-button.round, .mui-button.transparent {
   width: 50px;
   height: 50px;
   padding: 0px;
@@ -586,12 +586,12 @@
   text-align: center;
   border-radius: 50%;
 }
-[mui-button].round > i, [mui-button].transparent > i {
+.mui-button.round > i, .mui-button.transparent > i {
   font-size: 20px;
   left: 0;
   right: 0;
 }
-[mui-button].round:before, [mui-button].transparent:before {
+.mui-button.round:before, .mui-button.transparent:before {
   content: "";
   width: 30px;
   height: 30px;
@@ -617,206 +617,206 @@ a[mui-link] {
   font-family: Tahoma, Geneva, sans-serif;
 }
 
-button[mui-button][ts] {
+button.mui-button[ts] {
   background: transparent;
   text-align: center;
   box-shadow: none;
 }
-button[mui-button][ts] > i {
+button.mui-button[ts] > i {
   font-size: 20px;
 }
-button[mui-button][ts]:hover {
+button.mui-button[ts]:hover {
   box-shadow: none;
 }
 
-[mui-button].earth {
+.mui-button.earth {
   background: #34c559;
   color: #fff;
 }
-[mui-button].earth.gradient {
+.mui-button.earth.gradient {
   background: linear-gradient(90deg, #21f379 0%, #3be76c 49%, #00ba66 95%);
 }
-[mui-button].earth.outline {
+.mui-button.earth.outline {
   background: transparent;
   border: #34c559 1px solid;
 }
-[mui-button].earth.outline {
+.mui-button.earth.outline {
   color: #34c559;
 }
-[mui-button].earth.outline:hover {
+.mui-button.earth.outline:hover {
   background: #34c559;
   color: #fff;
 }
-[mui-button].earth.text {
+.mui-button.earth.text {
   color: #34c559;
 }
-[mui-button].earth.text {
+.mui-button.earth.text {
   background: transparent;
 }
 
-[mui-button].night {
+.mui-button.night {
   background: #424242;
   color: #fff;
 }
-[mui-button].night.gradient {
+.mui-button.night.gradient {
   background: linear-gradient(90deg, #3b3a3a 5%, #444343 47%, #b9b9b9 100%);
 }
-[mui-button].night.outline {
+.mui-button.night.outline {
   background: transparent;
   border: #424242 1px solid;
 }
-[mui-button].night.outline {
+.mui-button.night.outline {
   color: #424242;
 }
-[mui-button].night.outline:hover {
+.mui-button.night.outline:hover {
   background: #424242;
   color: #fff;
 }
-[mui-button].night.text {
+.mui-button.night.text {
   color: #424242;
 }
-[mui-button].night.text {
+.mui-button.night.text {
   background: transparent;
 }
 
-[mui-button].ocean {
+.mui-button.ocean {
   background: #2e72ee;
   color: #fff;
 }
-[mui-button].ocean.gradient {
+.mui-button.ocean.gradient {
   background: linear-gradient(90deg, #2196f3 0%, #03c5d6 61%, #00d4ff 84%);
 }
-[mui-button].ocean.outline {
+.mui-button.ocean.outline {
   background: transparent;
   border: #2e72ee 1px solid;
 }
-[mui-button].ocean.outline {
+.mui-button.ocean.outline {
   color: #2e72ee;
 }
-[mui-button].ocean.outline:hover {
+.mui-button.ocean.outline:hover {
   background: #2e72ee;
   color: #fff;
 }
-[mui-button].ocean.text {
+.mui-button.ocean.text {
   color: #2e72ee;
 }
-[mui-button].ocean.text {
+.mui-button.ocean.text {
   background: transparent;
 }
 
-[mui-button].red {
+.mui-button.red {
   background: #e93030;
   color: #fff;
 }
-[mui-button].red.gradient {
+.mui-button.red.gradient {
   background: linear-gradient(90deg, #e9e130 0%, #f0247a 0%, #ff2a00 46%, #e93030 95%);
 }
-[mui-button].red.outline {
+.mui-button.red.outline {
   background: transparent;
   border: #e93030 1px solid;
 }
-[mui-button].red.outline {
+.mui-button.red.outline {
   color: #e93030;
 }
-[mui-button].red.outline:hover {
+.mui-button.red.outline:hover {
   background: #e93030;
   color: #fff;
 }
-[mui-button].red.text {
+.mui-button.red.text {
   color: #e93030;
 }
-[mui-button].red.text {
+.mui-button.red.text {
   background: transparent;
 }
 
-[mui-button].snow {
+.mui-button.snow {
   background: #fff;
   color: #424242;
 }
-[mui-button].snow.outline {
+.mui-button.snow.outline {
   background: transparent;
   border: #fff 1px solid;
 }
-[mui-button].snow[outline] {
+.mui-button.snow[outline] {
   color: #424242;
 }
-[mui-button].snow:hover {
+.mui-button.snow:hover {
   background: #fff;
   color: #424242;
 }
-[mui-button].snow.text {
+.mui-button.snow.text {
   background: transparent;
 }
 
-[mui-button].yellow {
+.mui-button.yellow {
   background: #e7d507;
   color: #424242;
 }
-[mui-button].yellow.gradient {
+.mui-button.yellow.gradient {
   background: linear-gradient(90deg, #ffeb00 0%, #f4ed15 45%, #e0ff00 65%, #b9ff00 100%);
 }
-[mui-button].yellow.outline {
+.mui-button.yellow.outline {
   background: transparent;
   border: #e7d507 1px solid;
 }
-[mui-button].yellow.outline {
+.mui-button.yellow.outline {
   color: #424242;
 }
-[mui-button].yellow.outline:hover {
+.mui-button.yellow.outline:hover {
   background: #e7d507;
   color: #424242;
 }
-[mui-button].yellow.text {
+.mui-button.yellow.text {
   background: transparent;
 }
 
-[mui-button].purple {
+.mui-button.purple {
   background: #6924f0;
   color: #fff;
 }
-[mui-button].purple.gradient {
+.mui-button.purple.gradient {
   background: linear-gradient(90deg, #e9e130 0%, #6924f0 0%, #b40f91 44%, #e82890 95%);
 }
-[mui-button].purple.outline {
+.mui-button.purple.outline {
   background: transparent;
   border: #6924f0 1px solid;
 }
-[mui-button].purple.outline {
+.mui-button.purple.outline {
   color: #6924f0;
 }
-[mui-button].purple.outline:hover {
+.mui-button.purple.outline:hover {
   background: #6924f0;
   color: #fff;
 }
-[mui-button].purple.text {
+.mui-button.purple.text {
   color: #6924f0;
 }
-[mui-button].purple.text {
+.mui-button.purple.text {
   background: transparent;
 }
 
-[mui-button].pink {
+.mui-button.pink {
   background: #ff87cb;
   color: #fff;
 }
-[mui-button].pink.gradient {
+.mui-button.pink.gradient {
   background: linear-gradient(90deg, #e9e130 0%, #ff87cb 0%, #e977e1 46%, #e523e7 95%);
 }
-[mui-button].pink.outline {
+.mui-button.pink.outline {
   background: transparent;
   border: #ff87cb 1px solid;
 }
-[mui-button].pink.outline {
+.mui-button.pink.outline {
   color: #ff87cb;
 }
-[mui-button].pink.outline:hover {
+.mui-button.pink.outline:hover {
   background: #ff87cb;
   color: #fff;
 }
-[mui-button].pink.text {
+.mui-button.pink.text {
   color: #ff87cb;
 }
-[mui-button].pink.text {
+.mui-button.pink.text {
   background: transparent;
 }
 
@@ -852,7 +852,7 @@ a.pink {
   color: #ff87cb;
 }
 
-[mui-card] {
+.mui-card {
   width: 300px;
   height: auto;
   background: #fff;
@@ -860,11 +860,11 @@ a.pink {
   overflow: hidden;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
-[mui-card] > img {
+.mui-card > img {
   width: 100%;
   clear: both;
 }
-[mui-card] > p {
+.mui-card > p {
   margin: 0;
   height: auto;
   line-height: 1.25rem;
@@ -874,21 +874,21 @@ a.pink {
   letter-spacing: 0.01786em;
   padding: 1rem;
 }
-[mui-card] > .header {
+.mui-card > .header {
   width: 90%;
   height: auto;
   margin: 0px auto;
   position: relative;
   padding: 1rem;
 }
-[mui-card] > .header > label {
+.mui-card > .header > label {
   font-family: "Roboto", san-serif;
   font-size: 1.25rem;
   font-weight: 600;
   letter-spacing: 0.0125em;
   color: inherit !important;
 }
-[mui-card] > .header > span {
+.mui-card > .header > span {
   display: block;
   color: #99A3A4;
   font-family: "Roboto", san-serif;
@@ -899,7 +899,7 @@ a.pink {
   letter-spacing: 0.00714em;
   top: 4px;
 }
-[mui-card] > .content {
+.mui-card > .content {
   width: 90%;
   height: auto;
   line-height: 1.25rem;
@@ -909,7 +909,7 @@ a.pink {
   letter-spacing: 0.01786em;
   padding: 0 1rem 8px;
 }
-[mui-card] > action {
+.mui-card > action {
   width: 95%;
   height: auto;
   margin: 0px auto;
@@ -917,14 +917,14 @@ a.pink {
   justify-content: space-between;
   padding: 8px;
 }
-[mui-card] > action button {
+.mui-card > action button {
   padding: 8px;
   display: inline-block;
 }
-[mui-card] > action button > i {
+.mui-card > action button > i {
   vertical-align: middle;
 }
-[mui-card] > action button.round {
+.mui-card > action button.round {
   width: 35px;
   height: 35px;
 }
@@ -941,7 +941,7 @@ a.pink {
   user-select: none;
 }
 
-label[mui-checkbox] {
+.mui-checkbox {
   position: relative;
   display: inline-block;
   color: #424242;
@@ -951,7 +951,7 @@ label[mui-checkbox] {
   font-size: 14px;
   padding-right: 15px;
 }
-label[mui-checkbox] > input {
+.mui-checkbox > input {
   width: 48px;
   height: 48px;
   margin: 0px;
@@ -968,34 +968,34 @@ label[mui-checkbox] > input {
   -moz-appearance: none;
   -webkit-appearance: none;
 }
-label[mui-checkbox] > input:checked {
+.mui-checkbox > input:checked {
   background: #0091ea;
 }
-label[mui-checkbox] > input:checked + span::after {
+.mui-checkbox > input:checked + span::after {
   border-color: #fff;
 }
-label[mui-checkbox] > input:checked + span::before {
+.mui-checkbox > input:checked + span::before {
   border-color: #0091ea;
   background: #0091ea;
 }
-label[mui-checkbox] > input:checked:disabled + span::before {
+.mui-checkbox > input:checked:disabled + span::before {
   border-color: transparent;
   background: rgba(0, 0, 0, 0.26);
 }
-label[mui-checkbox] > input:disabled {
+.mui-checkbox > input:disabled {
   opacity: 0;
 }
-label[mui-checkbox] > input:disabled + span {
+.mui-checkbox > input:disabled + span {
   color: rgba(0, 0, 0, 0.38);
   cursor: initial;
 }
-label[mui-checkbox] > input:disabled + span::before {
+.mui-checkbox > input:disabled + span::before {
   border-color: rgba(0, 0, 0, 0.26);
 }
-label[mui-checkbox] > input:active + span::before {
+.mui-checkbox > input:active + span::before {
   border-color: #0091ea;
 }
-label[mui-checkbox] > span::before {
+.mui-checkbox > span::before {
   content: "";
   width: 14px;
   height: 14px;
@@ -1006,7 +1006,7 @@ label[mui-checkbox] > span::before {
   vertical-align: middle;
   transition: border-color 0.5s, background 0.5s;
 }
-label[mui-checkbox] > span::after {
+.mui-checkbox > span::after {
   content: "";
   width: 5px;
   height: 10px;
@@ -1021,86 +1021,86 @@ label[mui-checkbox] > span::after {
   transform: translate(5.5px, 1px) rotate(45deg);
   -ms-transform: translate(5.5px, 1px) rotate(45deg);
 }
-label[mui-checkbox]:active > input {
+.mui-checkbox:active > input {
   opacity: 1;
   transform: scale(0);
   transition: opacity 0s, transform 0s;
 }
 
-label.earth > input:checked {
+.mui-checkbox.earth > input:checked {
   background: #34c559;
 }
-label.earth > input:checked + span::before {
+.mui-checkbox.earth > input:checked + span::before {
   border-color: #34c559;
   background: #34c559;
 }
-label.earth > input:active + span::before {
+.mui-checkbox.earth > input:active + span::before {
   border-color: #34c559;
 }
 
-label.night > input:checked {
+.mui-checkbox.night > input:checked {
   background: #424242;
 }
-label.night > input:checked + span::before {
+.mui-checkbox.night > input:checked + span::before {
   border-color: #424242;
   background: #424242;
 }
-label.night > input:active + span::before {
+.mui-checkbox.night > input:active + span::before {
   border-color: #424242;
 }
 
-label.ocean > input:checked {
+.mui-checkbox.ocean > input:checked {
   background: #2e72ee;
 }
-label.ocean > input:checked + span::before {
+.mui-checkbox.ocean > input:checked + span::before {
   border-color: #2e72ee;
   background: #2e72ee;
 }
-label.ocean > input:active + span::before {
+.mui-checkbox.ocean > input:active + span::before {
   border-color: #2e72ee;
 }
 
-label.red > input:checked {
+.mui-checkbox.red > input:checked {
   background: #e93030;
 }
-label.red > input:checked + span::before {
+.mui-checkbox.red > input:checked + span::before {
   border-color: #e93030;
   background: #e93030;
 }
-label.red > input:active + span::before {
+.mui-checkbox.red > input:active + span::before {
   border-color: #e93030;
 }
 
-label.yellow > input:checked {
+.mui-checkbox.yellow > input:checked {
   background: #e7d507;
 }
-label.yellow > input:checked + span::before {
+.mui-checkbox.yellow > input:checked + span::before {
   border-color: #e7d507;
   background: #e7d507;
 }
-label.yellow > input:active + span::before {
+.mui-checkbox.yellow > input:active + span::before {
   border-color: #e7d507;
 }
 
-label.purple > input:checked {
+.mui-checkbox.purple > input:checked {
   background: #6924f0;
 }
-label.purple > input:checked + span::before {
+.mui-checkbox.purple > input:checked + span::before {
   border-color: #6924f0;
   background: #6924f0;
 }
-label.purple > input:active + span::before {
+.mui-checkbox.purple > input:active + span::before {
   border-color: #6924f0;
 }
 
-label.pink > input:checked {
+.mui-checkbox.pink > input:checked {
   background: #ff87cb;
 }
-label.pink > input:checked + span::before {
+.mui-checkbox.pink > input:checked + span::before {
   border-color: #ff87cb;
   background: #ff87cb;
 }
-label.pink > input:active + span::before {
+.mui-checkbox.pink > input:active + span::before {
   border-color: #ff87cb;
 }
 
@@ -1167,7 +1167,7 @@ a {
   text-decoration: none;
 }
 
-[mui-chips] {
+.mui-chips {
   background: rgba(203, 203, 203, 0.6);
   padding: 8px;
   border-radius: 30px;
@@ -1180,21 +1180,21 @@ a {
   cursor: pointer;
   text-decoration: none;
 }
-[mui-chips]:hover {
+.mui-chips:hover {
   background: #cbcbcb;
 }
-[mui-chips].raised {
+.mui-chips.raised {
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
-[mui-chips].outline {
+.mui-chips.outline {
   background: transparent;
   border: 1px solid #cbcbcb;
 }
-[mui-chips].outline:hover {
+.mui-chips.outline:hover {
   background: #cbcbcb;
   color: #424242;
 }
-[mui-chips] > i {
+.mui-chips > i {
   vertical-align: middle;
   width: 22px;
   height: 22px;
@@ -1202,15 +1202,15 @@ a {
   line-height: 22px;
   color: #2f2f2f;
 }
-[mui-chips] > i:nth-child(1) {
+.mui-chips > i:nth-child(1) {
   height: 22px;
   margin-left: -2px;
 }
-[mui-chips] > i:nth-child(2) {
+.mui-chips > i:nth-child(2) {
   height: 22px;
   margin-right: 2px;
 }
-[mui-chips] > .close {
+.mui-chips > .close {
   font-size: 22px;
   position: relative;
   top: -1.2px;
@@ -1218,10 +1218,10 @@ a {
   transition: color 0.2s ease-in-out;
   color: rgba(66, 66, 66, 0.4);
 }
-[mui-chips] > .close:hover {
+.mui-chips > .close:hover {
   color: #424242;
 }
-[mui-chips] > img {
+.mui-chips > img {
   width: 30px;
   height: 30px;
   line-height: 22px;
@@ -1231,187 +1231,187 @@ a {
   border-radius: 50%;
 }
 
-[mui-chips].earth {
+.mui-chips.earth {
   background: #34c559;
   color: rgba(255, 255, 255, 0.8);
 }
-[mui-chips].earth.outline {
+.mui-chips.earth.outline {
   background: transparent;
   color: #34c559;
   border-color: #34c559;
 }
-[mui-chips].earth.outline:hover {
+.mui-chips.earth.outline:hover {
   background: #34c559;
   color: #fff;
 }
-[mui-chips].earth > i:nth-child(1) {
+.mui-chips.earth > i:nth-child(1) {
   color: #fff;
 }
-[mui-chips].earth > i:nth-child(1).close {
+.mui-chips.earth > i:nth-child(1).close {
   color: rgba(66, 66, 66, 0.4);
 }
-[mui-chips].earth > i:nth-child(1).close:hover {
+.mui-chips.earth > i:nth-child(1).close:hover {
   color: #424242;
 }
 
-[mui-chips].night {
+.mui-chips.night {
   background: #424242;
   color: rgba(255, 255, 255, 0.8);
 }
-[mui-chips].night.outline {
+.mui-chips.night.outline {
   background: transparent;
   color: #424242;
   border-color: #424242;
 }
-[mui-chips].night.outline:hover {
+.mui-chips.night.outline:hover {
   background: #424242;
   color: #fff;
 }
-[mui-chips].night > .close {
+.mui-chips.night > .close {
   color: rgba(255, 255, 255, 0.4);
 }
-[mui-chips].night > .close:hover {
+.mui-chips.night > .close:hover {
   color: white;
 }
-[mui-chips].night > i:nth-child(1) {
+.mui-chips.night > i:nth-child(1) {
   color: #fff;
 }
-[mui-chips].night > i:nth-child(1).close {
+.mui-chips.night > i:nth-child(1).close {
   color: rgba(66, 66, 66, 0.4);
 }
-[mui-chips].night > i:nth-child(1).close:hover {
+.mui-chips.night > i:nth-child(1).close:hover {
   color: #424242;
 }
 
-[mui-chips].ocean {
+.mui-chips.ocean {
   background: #2e72ee;
   color: rgba(255, 255, 255, 0.8);
 }
-[mui-chips].ocean.outline {
+.mui-chips.ocean.outline {
   background: transparent;
   color: #2e72ee;
   border-color: #2e72ee;
 }
-[mui-chips].ocean.outline:hover {
+.mui-chips.ocean.outline:hover {
   background: #2e72ee;
   color: #fff;
 }
-[mui-chips].ocean > i:nth-child(1) {
+.mui-chips.ocean > i:nth-child(1) {
   color: #fff;
 }
-[mui-chips].ocean > i:nth-child(1).close {
+.mui-chips.ocean > i:nth-child(1).close {
   color: rgba(66, 66, 66, 0.4);
 }
-[mui-chips].ocean > i:nth-child(1).close:hover {
+.mui-chips.ocean > i:nth-child(1).close:hover {
   color: #424242;
 }
 
-[mui-chips].red {
+.mui-chips.red {
   background: #e93030;
   color: rgba(255, 255, 255, 0.8);
 }
-[mui-chips].red.outline {
+.mui-chips.red.outline {
   background: transparent;
   color: #e93030;
   border-color: #e93030;
 }
-[mui-chips].red.outline:hover {
+.mui-chips.red.outline:hover {
   background: #e93030;
   color: #fff;
 }
-[mui-chips].red > i:nth-child(1) {
+.mui-chips.red > i:nth-child(1) {
   color: #fff;
 }
-[mui-chips].red > i:nth-child(1).close {
+.mui-chips.red > i:nth-child(1).close {
   color: rgba(66, 66, 66, 0.4);
 }
-[mui-chips].red > i:nth-child(1).close:hover {
+.mui-chips.red > i:nth-child(1).close:hover {
   color: #424242;
 }
 
-[mui-chips].snow {
+.mui-chips.snow {
   background: #fff;
   color: rgba(66, 66, 66, 0.8);
 }
-[mui-chips].snow.outline {
+.mui-chips.snow.outline {
   background: transparent;
   color: #fff;
   border-color: #fff;
 }
-[mui-chips].snow.outline:hover {
+.mui-chips.snow.outline:hover {
   background: #fff;
   color: #fff;
 }
-[mui-chips].snow > i {
+.mui-chips.snow > i {
   color: #424242;
 }
 
-[mui-chips].yellow {
+.mui-chips.yellow {
   background: #e7d507;
   color: rgba(66, 66, 66, 0.8);
 }
-[mui-chips].yellow.outline {
+.mui-chips.yellow.outline {
   background: transparent;
   color: #e7d507;
   border-color: #e7d507;
 }
-[mui-chips].yellow.outline:hover {
+.mui-chips.yellow.outline:hover {
   background: #e7d507;
   color: #fff;
 }
-[mui-chips].yellow > i {
+.mui-chips.yellow > i {
   color: #424242;
 }
-[mui-chips].yellow > i.close {
+.mui-chips.yellow > i.close {
   color: rgba(66, 66, 66, 0.6);
 }
-[mui-chips].yellow > i.close:hover {
+.mui-chips.yellow > i.close:hover {
   color: #424242;
 }
 
-[mui-chips].purple {
+.mui-chips.purple {
   background: #6924f0;
   color: rgba(255, 255, 255, 0.8);
 }
-[mui-chips].purple.outline {
+.mui-chips.purple.outline {
   background: transparent;
   color: #6924f0;
   border-color: #6924f0;
 }
-[mui-chips].purple.outline:hover {
+.mui-chips.purple.outline:hover {
   background: #6924f0;
   color: #fff;
 }
-[mui-chips].purple > i:nth-child(1) {
+.mui-chips.purple > i:nth-child(1) {
   color: #fff;
 }
-[mui-chips].purple > i:nth-child(1).close {
+.mui-chips.purple > i:nth-child(1).close {
   color: rgba(66, 66, 66, 0.4);
 }
-[mui-chips].purple > i:nth-child(1).close:hover {
+.mui-chips.purple > i:nth-child(1).close:hover {
   color: #424242;
 }
 
-[mui-chips].pink {
+.mui-chips.pink {
   background: #ff87cb;
   color: rgba(255, 255, 255, 0.8);
 }
-[mui-chips].pink.outline {
+.mui-chips.pink.outline {
   background: transparent;
   color: #ff87cb;
   border-color: #ff87cb;
 }
-[mui-chips].pink.outline:hover {
+.mui-chips.pink.outline:hover {
   background: #ff87cb;
   color: #fff;
 }
-[mui-chips].pink > i:nth-child(1) {
+.mui-chips.pink > i:nth-child(1) {
   color: #fff;
 }
-[mui-chips].pink > i:nth-child(1).close {
+.mui-chips.pink > i:nth-child(1).close {
   color: rgba(66, 66, 66, 0.4);
 }
-[mui-chips].pink > i:nth-child(1).close:hover {
+.mui-chips.pink > i:nth-child(1).close:hover {
   color: #424242;
 }
 
@@ -1423,10 +1423,10 @@ a {
   outline: none;
 }
 
-[mui-input] {
+.mui-input {
   position: relative;
 }
-[mui-input] > input {
+.mui-input > input {
   width: 100%;
   background: transparent;
   padding: 8px 0px;
@@ -1435,17 +1435,17 @@ a {
   transition: border-color 0.5s;
   cursor: pointer;
 }
-[mui-input] > input:focus ~ label, [mui-input] > input:valid ~ label {
+.mui-input > input:focus ~ label, .mui-input > input:valid ~ label {
   bottom: 32px;
   font-size: 12px;
 }
-[mui-input] > input:hover, [mui-input] > input:focus {
+.mui-input > input:hover, .mui-input > input:focus {
   border-bottom: 2px solid #424242;
 }
-[mui-input] > input:hover:active, [mui-input] > input:hover:focus, [mui-input] > input:focus:active, [mui-input] > input:focus:focus {
+.mui-input > input:hover:active, .mui-input > input:hover:focus, .mui-input > input:focus:active, .mui-input > input:focus:focus {
   cursor: text;
 }
-[mui-input] > label {
+.mui-input > label {
   position: absolute;
   display: block;
   bottom: 8px;
@@ -1456,59 +1456,59 @@ a {
   z-index: -1;
 }
 
-[mui-input].earth > input:hover, [mui-input].earth > input:focus {
+.mui-input.earth > input:hover, .mui-input.earth > input:focus {
   border-color: #34c559;
 }
-[mui-input].earth > input:hover ~ label, [mui-input].earth > input:focus ~ label {
+.mui-input.earth > input:hover ~ label, .mui-input.earth > input:focus ~ label {
   color: #34c559;
 }
 
-[mui-input].night > input:hover, [mui-input].night > input:focus {
+.mui-input.night > input:hover, .mui-input.night > input:focus {
   border-color: #424242;
 }
-[mui-input].night > input:hover ~ label, [mui-input].night > input:focus ~ label {
+.mui-input.night > input:hover ~ label, .mui-input.night > input:focus ~ label {
   color: #424242;
 }
 
-[mui-input].ocean > input:hover, [mui-input].ocean > input:focus {
+.mui-input.ocean > input:hover, .mui-input.ocean > input:focus {
   border-color: #2e72ee;
 }
-[mui-input].ocean > input:hover ~ label, [mui-input].ocean > input:focus ~ label {
+.mui-input.ocean > input:hover ~ label, .mui-input.ocean > input:focus ~ label {
   color: #2e72ee;
 }
 
-[mui-input].red > input:hover, [mui-input].red > input:focus {
+.mui-input.red > input:hover, .mui-input.red > input:focus {
   border-color: #e93030;
 }
-[mui-input].red > input:hover ~ label, [mui-input].red > input:focus ~ label {
+.mui-input.red > input:hover ~ label, .mui-input.red > input:focus ~ label {
   color: #e93030;
 }
 
-[mui-input].snow > input:hover, [mui-input].snow > input:focus {
+.mui-input.snow > input:hover, .mui-input.snow > input:focus {
   border-color: #fff;
 }
-[mui-input].snow > input:hover ~ label, [mui-input].snow > input:focus ~ label {
+.mui-input.snow > input:hover ~ label, .mui-input.snow > input:focus ~ label {
   color: #fff;
 }
 
-[mui-input].yellow > input:hover, [mui-input].yellow > input:focus {
+.mui-input.yellow > input:hover, .mui-input.yellow > input:focus {
   border-color: #e7d507;
 }
-[mui-input].yellow > input:hover ~ label, [mui-input].yellow > input:focus ~ label {
+.mui-input.yellow > input:hover ~ label, .mui-input.yellow > input:focus ~ label {
   color: #e7d507;
 }
 
-[mui-input].purple > input:hover, [mui-input].purple > input:focus {
+.mui-input.purple > input:hover, .mui-input.purple > input:focus {
   border-color: #6924f0;
 }
-[mui-input].purple > input:hover ~ label, [mui-input].purple > input:focus ~ label {
+.mui-input.purple > input:hover ~ label, .mui-input.purple > input:focus ~ label {
   color: #6924f0;
 }
 
-[mui-input].pink > input:hover, [mui-input].pink > input:focus {
+.mui-input.pink > input:hover, .mui-input.pink > input:focus {
   border-color: #ff87cb;
 }
-[mui-input].pink > input:hover ~ label, [mui-input].pink > input:focus ~ label {
+.mui-input.pink > input:hover ~ label, .mui-input.pink > input:focus ~ label {
   color: #ff87cb;
 }
 
@@ -1517,7 +1517,7 @@ a {
   outline: none;
 }
 
-label[mui-label] {
+.mui-label {
   padding: 6px;
   padding-left: 8px;
   padding-right: 8px;
@@ -1532,42 +1532,42 @@ label[mui-label] {
   font-family: Tahoma, Geneva, sans-serif;
 }
 
-[mui-label].earth {
+.mui-label.earth {
   color: #fff;
   background: #34c559;
 }
 
-[mui-label].night {
+.mui-label.night {
   color: #fff;
   background: #424242;
 }
 
-[mui-label].ocean {
+.mui-label.ocean {
   color: #fff;
   background: #2e72ee;
 }
 
-[mui-label].red {
+.mui-label.red {
   color: #fff;
   background: #e93030;
 }
 
-[mui-label].snow {
+.mui-label.snow {
   color: #fff;
   background: #fff;
 }
 
-[mui-label].yellow {
+.mui-label.yellow {
   color: #fff;
   background: #e7d507;
 }
 
-[mui-label].purple {
+.mui-label.purple {
   color: #fff;
   background: #6924f0;
 }
 
-[mui-label].pink {
+.mui-label.pink {
   color: #fff;
   background: #ff87cb;
 }
@@ -1580,10 +1580,10 @@ label[mui-label] {
   outline: none;
 }
 
-[mui-input] {
+.mui-input {
   position: relative;
 }
-[mui-input] > input {
+.mui-input > input {
   width: 100%;
   background: transparent;
   padding: 8px 0px;
@@ -1592,17 +1592,17 @@ label[mui-label] {
   transition: border-color 0.5s;
   cursor: pointer;
 }
-[mui-input] > input:focus ~ label, [mui-input] > input:valid ~ label {
+.mui-input > input:focus ~ label, .mui-input > input:valid ~ label {
   bottom: 32px;
   font-size: 12px;
 }
-[mui-input] > input:hover, [mui-input] > input:focus {
+.mui-input > input:hover, .mui-input > input:focus {
   border-bottom: 2px solid #424242;
 }
-[mui-input] > input:hover:active, [mui-input] > input:hover:focus, [mui-input] > input:focus:active, [mui-input] > input:focus:focus {
+.mui-input > input:hover:active, .mui-input > input:hover:focus, .mui-input > input:focus:active, .mui-input > input:focus:focus {
   cursor: text;
 }
-[mui-input] > label {
+.mui-input > label {
   position: absolute;
   display: block;
   bottom: 8px;
@@ -1613,59 +1613,59 @@ label[mui-label] {
   z-index: -1;
 }
 
-[mui-input].earth > input:hover, [mui-input].earth > input:focus {
+.mui-input.earth > input:hover, .mui-input.earth > input:focus {
   border-color: #34c559;
 }
-[mui-input].earth > input:hover ~ label, [mui-input].earth > input:focus ~ label {
+.mui-input.earth > input:hover ~ label, .mui-input.earth > input:focus ~ label {
   color: #34c559;
 }
 
-[mui-input].night > input:hover, [mui-input].night > input:focus {
+.mui-input.night > input:hover, .mui-input.night > input:focus {
   border-color: #424242;
 }
-[mui-input].night > input:hover ~ label, [mui-input].night > input:focus ~ label {
+.mui-input.night > input:hover ~ label, .mui-input.night > input:focus ~ label {
   color: #424242;
 }
 
-[mui-input].ocean > input:hover, [mui-input].ocean > input:focus {
+.mui-input.ocean > input:hover, .mui-input.ocean > input:focus {
   border-color: #2e72ee;
 }
-[mui-input].ocean > input:hover ~ label, [mui-input].ocean > input:focus ~ label {
+.mui-input.ocean > input:hover ~ label, .mui-input.ocean > input:focus ~ label {
   color: #2e72ee;
 }
 
-[mui-input].red > input:hover, [mui-input].red > input:focus {
+.mui-input.red > input:hover, .mui-input.red > input:focus {
   border-color: #e93030;
 }
-[mui-input].red > input:hover ~ label, [mui-input].red > input:focus ~ label {
+.mui-input.red > input:hover ~ label, .mui-input.red > input:focus ~ label {
   color: #e93030;
 }
 
-[mui-input].snow > input:hover, [mui-input].snow > input:focus {
+.mui-input.snow > input:hover, .mui-input.snow > input:focus {
   border-color: #fff;
 }
-[mui-input].snow > input:hover ~ label, [mui-input].snow > input:focus ~ label {
+.mui-input.snow > input:hover ~ label, .mui-input.snow > input:focus ~ label {
   color: #fff;
 }
 
-[mui-input].yellow > input:hover, [mui-input].yellow > input:focus {
+.mui-input.yellow > input:hover, .mui-input.yellow > input:focus {
   border-color: #e7d507;
 }
-[mui-input].yellow > input:hover ~ label, [mui-input].yellow > input:focus ~ label {
+.mui-input.yellow > input:hover ~ label, .mui-input.yellow > input:focus ~ label {
   color: #e7d507;
 }
 
-[mui-input].purple > input:hover, [mui-input].purple > input:focus {
+.mui-input.purple > input:hover, .mui-input.purple > input:focus {
   border-color: #6924f0;
 }
-[mui-input].purple > input:hover ~ label, [mui-input].purple > input:focus ~ label {
+.mui-input.purple > input:hover ~ label, .mui-input.purple > input:focus ~ label {
   color: #6924f0;
 }
 
-[mui-input].pink > input:hover, [mui-input].pink > input:focus {
+.mui-input.pink > input:hover, .mui-input.pink > input:focus {
   border-color: #ff87cb;
 }
-[mui-input].pink > input:hover ~ label, [mui-input].pink > input:focus ~ label {
+.mui-input.pink > input:hover ~ label, .mui-input.pink > input:focus ~ label {
   color: #ff87cb;
 }
 
@@ -2421,20 +2421,20 @@ big-modal-con > modal > .close {
   user-select: none;
 }
 
-[mui-radio] {
+.mui-radio {
   margin: 16px 0;
   display: inline-block;
 }
-[mui-radio] input[type=radio] {
+.mui-radio input[type=radio] {
   display: none;
 }
-[mui-radio] input[type=radio]:checked + label:before {
+.mui-radio input[type=radio]:checked + label:before {
   border-color: #00bcd4;
 }
-[mui-radio] input[type=radio]:checked + label:after {
+.mui-radio input[type=radio]:checked + label:after {
   transform: scale(1);
 }
-[mui-radio] label {
+.mui-radio label {
   display: inline-block;
   height: 20px;
   position: relative;
@@ -2443,14 +2443,14 @@ big-modal-con > modal > .close {
   cursor: pointer;
   vertical-align: bottom;
 }
-[mui-radio] label:before, [mui-radio] label:after {
+.mui-radio label:before, .mui-radio label:after {
   position: absolute;
   content: "";
   border-radius: 50%;
   transition: all 0.3s ease;
   transition-property: transform, border-color;
 }
-[mui-radio] label:before {
+.mui-radio label:before {
   box-sizing: border-box;
   left: 0;
   top: 0;
@@ -2458,7 +2458,7 @@ big-modal-con > modal > .close {
   height: 20px;
   border: 2px solid rgba(0, 0, 0, 0.54);
 }
-[mui-radio] label:after {
+.mui-radio label:after {
   box-sizing: border-box;
   top: 5px;
   left: 5px;
@@ -2468,59 +2468,59 @@ big-modal-con > modal > .close {
   background: #00bcd4;
 }
 
-[mui-radio].cyan input[type=radio]:checked + label:before {
+.mui-radio.cyan input[type=radio]:checked + label:before {
   border-color: #00bcd4;
 }
-[mui-radio].cyan label:after {
+.mui-radio.cyan label:after {
   background: #00bcd4;
 }
 
-[mui-radio].earth input[type=radio]:checked + label:before {
+.mui-radio.earth input[type=radio]:checked + label:before {
   border-color: #34c559;
 }
-[mui-radio].earth label:after {
+.mui-radio.earth label:after {
   background: #34c559;
 }
 
-[mui-radio].night input[type=radio]:checked + label:before {
+.mui-radio.night input[type=radio]:checked + label:before {
   border-color: #424242;
 }
-[mui-radio].night label:after {
+.mui-radio.night label:after {
   background: #424242;
 }
 
-[mui-radio].ocean input[type=radio]:checked + label:before {
+.mui-radio.ocean input[type=radio]:checked + label:before {
   border-color: #2e72ee;
 }
-[mui-radio].ocean label:after {
+.mui-radio.ocean label:after {
   background: #2e72ee;
 }
 
-[mui-radio].red input[type=radio]:checked + label:before {
+.mui-radio.red input[type=radio]:checked + label:before {
   border-color: #e93030;
 }
-[mui-radio].red label:after {
+.mui-radio.red label:after {
   background: #e93030;
 }
 
-[mui-radio].yellow input[type=radio]:checked + label:before {
+.mui-radio.yellow input[type=radio]:checked + label:before {
   border-color: #e7d507;
 }
-[mui-radio].yellow label:after {
+.mui-radio.yellow label:after {
   background: #e7d507;
 }
 
-[mui-radio].purple input[type=radio]:checked + label:before {
+.mui-radio.purple input[type=radio]:checked + label:before {
   border-color: #6924f0;
 }
-[mui-radio].purple label:after {
+.mui-radio.purple label:after {
   background: #6924f0;
 }
 
-[mui-radio].pink input[type=radio]:checked + label:before {
+.mui-radio.pink input[type=radio]:checked + label:before {
   border-color: #ff87cb;
 }
-[mui-radio].pink label:after {
+.mui-radio.pink label:after {
   background: #ff87cb;
 }
 
@@ -2536,7 +2536,7 @@ big-modal-con > modal > .close {
   user-select: none;
 }
 
-input[mui-range] {
+.mui-range {
   -webkit-appearance: none;
   width: 200px;
   height: 8px;
@@ -2545,7 +2545,7 @@ input[mui-range] {
   margin: 0;
   transition: background 0.5s ease-in-out;
 }
-input[mui-range]::-webkit-slider-thumb {
+.mui-range::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 20px;
@@ -2556,48 +2556,48 @@ input[mui-range]::-webkit-slider-thumb {
   transition: background 0.15s ease-in-out;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
-input[mui-range]::-webkit-slider-thumb:hover {
+.mui-range::-webkit-slider-thumb:hover {
   background: #1abc9c;
 }
-input[mui-range]:hover {
+.mui-range:hover {
   background: rgba(203, 203, 203, 0.6);
 }
-input[mui-range]:active::-webkit-slider-thumb {
+.mui-range:active::-webkit-slider-thumb {
   width: 30px;
   height: 30px;
   background: #fff;
   border: 3px solid #2c3e50;
 }
 
-input.earth[mui-range]::-webkit-slider-thumb {
+input.earth.mui-range::-webkit-slider-thumb {
   background: #34c559;
 }
 
-input.night[mui-range]::-webkit-slider-thumb {
+input.night.mui-range::-webkit-slider-thumb {
   background: #424242;
 }
 
-input.ocean[mui-range]::-webkit-slider-thumb {
+input.ocean.mui-range::-webkit-slider-thumb {
   background: #2e72ee;
 }
 
-input.red[mui-range]::-webkit-slider-thumb {
+input.red.mui-range::-webkit-slider-thumb {
   background: #e93030;
 }
 
-input.snow[mui-range]::-webkit-slider-thumb {
+input.snow.mui-range::-webkit-slider-thumb {
   background: #fff;
 }
 
-input.yellow[mui-range]::-webkit-slider-thumb {
+input.yellow.mui-range::-webkit-slider-thumb {
   background: #e7d507;
 }
 
-input.purple[mui-range]::-webkit-slider-thumb {
+input.purple.mui-range::-webkit-slider-thumb {
   background: #6924f0;
 }
 
-input.pink[mui-range]::-webkit-slider-thumb {
+input.pink.mui-range::-webkit-slider-thumb {
   background: #ff87cb;
 }
 
@@ -2891,7 +2891,7 @@ slideDown Animation
   }
 }
 /* Reference specs https://material.io/design/components/data-tables.html#specs */
-table[mui-table] {
+.mui-table {
   width: 100%;
   display: table;
   background: white;
@@ -2901,14 +2901,14 @@ table[mui-table] {
   border-radius: 6px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
 }
-table[mui-table] thead {
+.mui-table thead {
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
-table[mui-table] tr {
+.mui-table tr {
   height: 48px;
   border-bottom: 0;
 }
-table[mui-table] td, table[mui-table] th {
+.mui-table td, .mui-table th {
   padding: 16px;
   font-size: 12px;
   color: rgba(0, 0, 0, 0.54);
@@ -2917,28 +2917,28 @@ table[mui-table] td, table[mui-table] th {
   text-align: left;
   vertical-align: middle;
 }
-table[mui-table] td, table[mui-table] tr {
+.mui-table td, .mui-table tr {
   font-size: 13px;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.87);
 }
-table[mui-table].zebra tr {
+.mui-table.zebra tr {
   border-bottom: none;
 }
-table[mui-table].zebra > tbody > tr:nth-child(odd) {
+.mui-table.zebra > tbody > tr:nth-child(odd) {
   background-color: rgba(242, 242, 242, 0.5);
 }
-table[mui-table].zebra > tbody > tr > td {
+.mui-table.zebra > tbody > tr > td {
   border-radius: 0;
 }
-table[mui-table].pop > tbody > tr {
+.mui-table.pop > tbody > tr {
   -webkit-transition: background-color 0.25s ease;
   transition: background-color 0.25s ease;
 }
-table[mui-table].pop > tbody > tr:hover {
+.mui-table.pop > tbody > tr:hover {
   background-color: rgba(242, 242, 242, 0.5);
 }
-table[mui-table].line tr {
+.mui-table.line tr {
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
 
@@ -2954,7 +2954,7 @@ table[mui-table].line tr {
   user-select: none;
 }
 
-label[mui-switch] {
+.mui-switch {
   width: auto;
   min-width: 50px;
   position: relative;
@@ -2967,16 +2967,16 @@ label[mui-switch] {
   padding-right: 15px;
   clear: both;
 }
-label[mui-switch] > input:empty {
+.mui-switch > input:empty {
   margin-left: -1000px;
 }
-label[mui-switch] > input:empty ~ span {
+.mui-switch > input:empty ~ span {
   width: auto;
   position: relative;
   float: left;
   cursor: pointer;
 }
-label[mui-switch] > input:empty ~ span:before {
+.mui-switch > input:empty ~ span:before {
   width: 30px;
   height: 13px;
   border-radius: 12px;
@@ -2984,7 +2984,7 @@ label[mui-switch] > input:empty ~ span:before {
   top: 3px;
   left: 0px;
 }
-label[mui-switch] > input:empty ~ span:after {
+.mui-switch > input:empty ~ span:after {
   width: 17px;
   height: 17px;
   margin-left: 0.1em;
@@ -2995,83 +2995,83 @@ label[mui-switch] > input:empty ~ span:after {
   top: -1px;
   left: -9px;
 }
-label[mui-switch] > input:empty ~ span:before, label[mui-switch] > input:empty ~ span:after {
+.mui-switch > input:empty ~ span:before, .mui-switch > input:empty ~ span:after {
   content: "";
   position: absolute;
   display: block;
   -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-label[mui-switch] > input:checked ~ span:before {
+.mui-switch > input:checked ~ span:before {
   background: rgba(46, 114, 238, 0.8);
 }
-label[mui-switch] > input:checked ~ span:after {
+.mui-switch > input:checked ~ span:after {
   left: 15px;
   background: #2e72ee;
   border-color: #2e72ee;
 }
-label[mui-switch] > span {
+.mui-switch > span {
   text-indent: 45px;
 }
 
-[mui-switch].earth > input:checked ~ span:before {
+.mui-switch.earth > input:checked ~ span:before {
   background: rgba(52, 197, 89, 0.5);
 }
-[mui-switch].earth > input:checked ~ span:after {
+.mui-switch.earth > input:checked ~ span:after {
   left: 15px;
   background: #34c559;
   border-color: #34c559;
 }
 
-[mui-switch].night > input:checked ~ span:before {
+.mui-switch.night > input:checked ~ span:before {
   background: rgba(66, 66, 66, 0.5);
 }
-[mui-switch].night > input:checked ~ span:after {
+.mui-switch.night > input:checked ~ span:after {
   left: 15px;
   background: #424242;
   border-color: #424242;
 }
 
-[mui-switch].ocean > input:checked ~ span:before {
+.mui-switch.ocean > input:checked ~ span:before {
   background: rgba(46, 114, 238, 0.5);
 }
-[mui-switch].ocean > input:checked ~ span:after {
+.mui-switch.ocean > input:checked ~ span:after {
   left: 15px;
   background: #2e72ee;
   border-color: #2e72ee;
 }
 
-[mui-switch].red > input:checked ~ span:before {
+.mui-switch.red > input:checked ~ span:before {
   background: rgba(233, 48, 48, 0.5);
 }
-[mui-switch].red > input:checked ~ span:after {
+.mui-switch.red > input:checked ~ span:after {
   left: 15px;
   background: #e93030;
   border-color: #e93030;
 }
 
-[mui-switch].yellow > input:checked ~ span:before {
+.mui-switch.yellow > input:checked ~ span:before {
   background: rgba(231, 213, 7, 0.5);
 }
-[mui-switch].yellow > input:checked ~ span:after {
+.mui-switch.yellow > input:checked ~ span:after {
   left: 15px;
   background: #e7d507;
   border-color: #e7d507;
 }
 
-[mui-switch].purple > input:checked ~ span:before {
+.mui-switch.purple > input:checked ~ span:before {
   background: rgba(105, 36, 240, 0.5);
 }
-[mui-switch].purple > input:checked ~ span:after {
+.mui-switch.purple > input:checked ~ span:after {
   left: 15px;
   background: #6924f0;
   border-color: #6924f0;
 }
 
-[mui-switch].pink > input:checked ~ span:before {
+.mui-switch.pink > input:checked ~ span:before {
   background: rgba(255, 135, 203, 0.5);
 }
-[mui-switch].pink > input:checked ~ span:after {
+.mui-switch.pink > input:checked ~ span:after {
   left: 15px;
   background: #ff87cb;
   border-color: #ff87cb;
