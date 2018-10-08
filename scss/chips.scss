@@ -1,8 +1,5 @@
 @import "_mixins.scss";
 @import "_variables.scss";
-@import "ripple.scss";
-
-
 
 $size: 22px;
 
@@ -66,13 +63,18 @@ a{
     @include closeBtnColor('dark', .4);
   }
   > img{
-    width: 30px;
-    height: 30px;
-    line-height: $size;
+    width: 33px;
+    height: 33px;
     vertical-align: middle;
-    margin-left: -6px;
-    margin-top: -3px;
+    margin: -2px 5px 0 -8px;
     border-radius: 50%;
+    &.space{
+      width: 25px;
+      height: 25px;
+      margin: -2px 5px 0 -3px;
+      vertical-align: middle;
+      border-radius: 50%;
+    }
   }
 }
 
