@@ -34,11 +34,12 @@ function Snackbar(data, callback) {
   snackbarElem.innerHTML = snackbarHTML;
 
   $getCL("SnackClose", 0).addEventListener("click", function() {
-     close();
+    callback(true);
+    close();
   });
   $getCL("SnackAction", 0).addEventListener("click", function() {
+    callback(true);
     close();
-    callback();
   });  
   
   $getCL("snackbar", 0).className += " "+openAni;
