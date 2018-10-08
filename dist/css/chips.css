@@ -2,7 +2,7 @@ a {
   text-decoration: none;
 }
 
-[mui-chips] {
+.mui-chips {
   background: rgba(203, 203, 203, 0.6);
   padding: 8px;
   border-radius: 30px;
@@ -15,21 +15,21 @@ a {
   cursor: pointer;
   text-decoration: none;
 }
-[mui-chips]:hover {
+.mui-chips:hover {
   background: #cbcbcb;
 }
-[mui-chips].raised {
+.mui-chips.raised {
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
-[mui-chips].outline {
+.mui-chips.outline {
   background: transparent;
   border: 1px solid #cbcbcb;
 }
-[mui-chips].outline:hover {
+.mui-chips.outline:hover {
   background: #cbcbcb;
   color: #424242;
 }
-[mui-chips] > i {
+.mui-chips > i {
   vertical-align: middle;
   width: 22px;
   height: 22px;
@@ -37,33 +37,33 @@ a {
   line-height: 22px;
   color: #2f2f2f;
 }
-[mui-chips] > i:nth-child(1) {
+.mui-chips > i:nth-child(1) {
   height: 22px;
   margin-left: -2px;
 }
-[mui-chips] > i:nth-child(2) {
+.mui-chips > i:nth-child(2) {
   height: 22px;
   margin-right: 2px;
 }
-[mui-chips] > .close {
+.mui-chips > .close {
   font-size: 22px;
   position: relative;
   top: -1.2px;
   left: 8px;
-  transition: color 0.2s ease-in-out;
+  transition: color .2s ease-in-out;
   color: rgba(66, 66, 66, 0.4);
 }
-[mui-chips] > .close:hover {
+.mui-chips > .close:hover {
   color: #424242;
 }
-[mui-chips] > img {
+.mui-chips > img {
   width: 33px;
   height: 33px;
   vertical-align: middle;
   margin: -2px 5px 0 -8px;
   border-radius: 50%;
 }
-[mui-chips] > img.space {
+.mui-chips > img.space {
   width: 25px;
   height: 25px;
   margin: -2px 5px 0 -3px;
@@ -71,186 +71,186 @@ a {
   border-radius: 50%;
 }
 
-[mui-chips].earth {
+.mui-chips.earth {
   background: #34c559;
   color: rgba(255, 255, 255, 0.8);
 }
-[mui-chips].earth.outline {
+.mui-chips.earth.outline {
   background: transparent;
   color: #34c559;
   border-color: #34c559;
 }
-[mui-chips].earth.outline:hover {
+.mui-chips.earth.outline:hover {
   background: #34c559;
   color: #fff;
 }
-[mui-chips].earth > i:nth-child(1) {
+.mui-chips.earth > i:nth-child(1) {
   color: #fff;
 }
-[mui-chips].earth > i:nth-child(1).close {
+.mui-chips.earth > i:nth-child(1).close {
   color: rgba(66, 66, 66, 0.4);
 }
-[mui-chips].earth > i:nth-child(1).close:hover {
+.mui-chips.earth > i:nth-child(1).close:hover {
   color: #424242;
 }
 
-[mui-chips].night {
+.mui-chips.night {
   background: #424242;
   color: rgba(255, 255, 255, 0.8);
 }
-[mui-chips].night.outline {
+.mui-chips.night.outline {
   background: transparent;
   color: #424242;
   border-color: #424242;
 }
-[mui-chips].night.outline:hover {
+.mui-chips.night.outline:hover {
   background: #424242;
   color: #fff;
 }
-[mui-chips].night > .close {
+.mui-chips.night > .close {
   color: rgba(255, 255, 255, 0.4);
 }
-[mui-chips].night > .close:hover {
+.mui-chips.night > .close:hover {
   color: white;
 }
-[mui-chips].night > i:nth-child(1) {
+.mui-chips.night > i:nth-child(1) {
   color: #fff;
 }
-[mui-chips].night > i:nth-child(1).close {
+.mui-chips.night > i:nth-child(1).close {
   color: rgba(66, 66, 66, 0.4);
 }
-[mui-chips].night > i:nth-child(1).close:hover {
+.mui-chips.night > i:nth-child(1).close:hover {
   color: #424242;
 }
 
-[mui-chips].ocean {
+.mui-chips.ocean {
   background: #2e72ee;
   color: rgba(255, 255, 255, 0.8);
 }
-[mui-chips].ocean.outline {
+.mui-chips.ocean.outline {
   background: transparent;
   color: #2e72ee;
   border-color: #2e72ee;
 }
-[mui-chips].ocean.outline:hover {
+.mui-chips.ocean.outline:hover {
   background: #2e72ee;
   color: #fff;
 }
-[mui-chips].ocean > i:nth-child(1) {
+.mui-chips.ocean > i:nth-child(1) {
   color: #fff;
 }
-[mui-chips].ocean > i:nth-child(1).close {
+.mui-chips.ocean > i:nth-child(1).close {
   color: rgba(66, 66, 66, 0.4);
 }
-[mui-chips].ocean > i:nth-child(1).close:hover {
+.mui-chips.ocean > i:nth-child(1).close:hover {
   color: #424242;
 }
 
-[mui-chips].red {
+.mui-chips.red {
   background: #e93030;
   color: rgba(255, 255, 255, 0.8);
 }
-[mui-chips].red.outline {
+.mui-chips.red.outline {
   background: transparent;
   color: #e93030;
   border-color: #e93030;
 }
-[mui-chips].red.outline:hover {
+.mui-chips.red.outline:hover {
   background: #e93030;
   color: #fff;
 }
-[mui-chips].red > i:nth-child(1) {
+.mui-chips.red > i:nth-child(1) {
   color: #fff;
 }
-[mui-chips].red > i:nth-child(1).close {
+.mui-chips.red > i:nth-child(1).close {
   color: rgba(66, 66, 66, 0.4);
 }
-[mui-chips].red > i:nth-child(1).close:hover {
+.mui-chips.red > i:nth-child(1).close:hover {
   color: #424242;
 }
 
-[mui-chips].snow {
+.mui-chips.snow {
   background: #fff;
   color: rgba(66, 66, 66, 0.8);
 }
-[mui-chips].snow.outline {
+.mui-chips.snow.outline {
   background: transparent;
   color: #fff;
   border-color: #fff;
 }
-[mui-chips].snow.outline:hover {
+.mui-chips.snow.outline:hover {
   background: #fff;
   color: #fff;
 }
-[mui-chips].snow > i {
+.mui-chips.snow > i {
   color: #424242;
 }
 
-[mui-chips].yellow {
+.mui-chips.yellow {
   background: #e7d507;
   color: rgba(66, 66, 66, 0.8);
 }
-[mui-chips].yellow.outline {
+.mui-chips.yellow.outline {
   background: transparent;
   color: #e7d507;
   border-color: #e7d507;
 }
-[mui-chips].yellow.outline:hover {
+.mui-chips.yellow.outline:hover {
   background: #e7d507;
   color: #fff;
 }
-[mui-chips].yellow > i {
+.mui-chips.yellow > i {
   color: #424242;
 }
-[mui-chips].yellow > i.close {
+.mui-chips.yellow > i.close {
   color: rgba(66, 66, 66, 0.6);
 }
-[mui-chips].yellow > i.close:hover {
+.mui-chips.yellow > i.close:hover {
   color: #424242;
 }
 
-[mui-chips].purple {
+.mui-chips.purple {
   background: #6924f0;
   color: rgba(255, 255, 255, 0.8);
 }
-[mui-chips].purple.outline {
+.mui-chips.purple.outline {
   background: transparent;
   color: #6924f0;
   border-color: #6924f0;
 }
-[mui-chips].purple.outline:hover {
+.mui-chips.purple.outline:hover {
   background: #6924f0;
   color: #fff;
 }
-[mui-chips].purple > i:nth-child(1) {
+.mui-chips.purple > i:nth-child(1) {
   color: #fff;
 }
-[mui-chips].purple > i:nth-child(1).close {
+.mui-chips.purple > i:nth-child(1).close {
   color: rgba(66, 66, 66, 0.4);
 }
-[mui-chips].purple > i:nth-child(1).close:hover {
+.mui-chips.purple > i:nth-child(1).close:hover {
   color: #424242;
 }
 
-[mui-chips].pink {
+.mui-chips.pink {
   background: #ff87cb;
   color: rgba(255, 255, 255, 0.8);
 }
-[mui-chips].pink.outline {
+.mui-chips.pink.outline {
   background: transparent;
   color: #ff87cb;
   border-color: #ff87cb;
 }
-[mui-chips].pink.outline:hover {
+.mui-chips.pink.outline:hover {
   background: #ff87cb;
   color: #fff;
 }
-[mui-chips].pink > i:nth-child(1) {
+.mui-chips.pink > i:nth-child(1) {
   color: #fff;
 }
-[mui-chips].pink > i:nth-child(1).close {
+.mui-chips.pink > i:nth-child(1).close {
   color: rgba(66, 66, 66, 0.4);
 }
-[mui-chips].pink > i:nth-child(1).close:hover {
+.mui-chips.pink > i:nth-child(1).close:hover {
   color: #424242;
 }
