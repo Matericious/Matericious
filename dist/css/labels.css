@@ -1,9 +1,10 @@
+/*##############################################################################################################################################*/
 *:hover,
 *:focus {
   outline: none;
 }
 
-label[mui-label] {
+.mui-label {
   padding: 6px;
   padding-left: 8px;
   padding-right: 8px;
@@ -18,42 +19,42 @@ label[mui-label] {
   font-family: Tahoma, Geneva, sans-serif;
 }
 
-[mui-label].earth {
+.mui-label.earth {
   color: #fff;
   background: #34c559;
 }
 
-[mui-label].night {
+.mui-label.night {
   color: #fff;
   background: #424242;
 }
 
-[mui-label].ocean {
+.mui-label.ocean {
   color: #fff;
   background: #2e72ee;
 }
 
-[mui-label].red {
+.mui-label.red {
   color: #fff;
   background: #e93030;
 }
 
-[mui-label].snow {
+.mui-label.snow {
   color: #fff;
   background: #fff;
 }
 
-[mui-label].yellow {
+.mui-label.yellow {
   color: #fff;
   background: #e7d507;
 }
 
-[mui-label].purple {
+.mui-label.purple {
   color: #fff;
   background: #6924f0;
 }
 
-[mui-label].pink {
+.mui-label.pink {
   color: #fff;
   background: #ff87cb;
 }
