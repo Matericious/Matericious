@@ -1,3 +1,4 @@
+/*##############################################################################################################################################*/
 *:hover,
 *:focus {
   outline: none;
@@ -10,16 +11,16 @@
   user-select: none;
 }
 
-input[mui-range] {
+.mui-range {
   -webkit-appearance: none;
   width: 200px;
   height: 8px;
   border-radius: 4px;
   background: rgba(203, 203, 203, 0.2);
   margin: 0;
-  transition: background 0.5s ease-in-out;
+  transition: background .5s ease-in-out;
 }
-input[mui-range]::-webkit-slider-thumb {
+.mui-range::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 20px;
@@ -27,50 +28,50 @@ input[mui-range]::-webkit-slider-thumb {
   border-radius: 50%;
   background: #cbcbcb;
   cursor: pointer;
-  transition: background 0.15s ease-in-out;
+  transition: background .15s ease-in-out;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
-input[mui-range]::-webkit-slider-thumb:hover {
+.mui-range::-webkit-slider-thumb:hover {
   background: #1abc9c;
 }
-input[mui-range]:hover {
+.mui-range:hover {
   background: rgba(203, 203, 203, 0.6);
 }
-input[mui-range]:active::-webkit-slider-thumb {
+.mui-range:active::-webkit-slider-thumb {
   width: 30px;
   height: 30px;
   background: #fff;
   border: 3px solid #2c3e50;
 }
 
-input.earth[mui-range]::-webkit-slider-thumb {
+.mui-range.earth[mui-range]::-webkit-slider-thumb {
   background: #34c559;
 }
 
-input.night[mui-range]::-webkit-slider-thumb {
+.mui-range.night[mui-range]::-webkit-slider-thumb {
   background: #424242;
 }
 
-input.ocean[mui-range]::-webkit-slider-thumb {
+.mui-range.ocean[mui-range]::-webkit-slider-thumb {
   background: #2e72ee;
 }
 
-input.red[mui-range]::-webkit-slider-thumb {
+.mui-range.red[mui-range]::-webkit-slider-thumb {
   background: #e93030;
 }
 
-input.snow[mui-range]::-webkit-slider-thumb {
+.mui-range.snow[mui-range]::-webkit-slider-thumb {
   background: #fff;
 }
 
-input.yellow[mui-range]::-webkit-slider-thumb {
+.mui-range.yellow[mui-range]::-webkit-slider-thumb {
   background: #e7d507;
 }
 
-input.purple[mui-range]::-webkit-slider-thumb {
+.mui-range.purple[mui-range]::-webkit-slider-thumb {
   background: #6924f0;
 }
 
-input.pink[mui-range]::-webkit-slider-thumb {
+.mui-range.pink[mui-range]::-webkit-slider-thumb {
   background: #ff87cb;
 }
