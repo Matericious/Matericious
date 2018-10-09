@@ -4,7 +4,7 @@ ready(function() {
     var defaultIn = $self.innerHTML;
     var elemPos = ($self.style.position = "relative"),
       pos = [e.pageY - $self.offsetTop, e.pageX - $self.offsetLeft],
-      diameter = Math.min($self.offsetHeight, $self.offsetWidth),
+      diameter = Math.min(this.offsetHeight, this.offsetWidth, 100),
       $ripple,
       $rippleWave,
       $rippleWaveStyle;
