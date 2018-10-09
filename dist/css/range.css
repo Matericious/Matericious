@@ -13,65 +13,95 @@
 
 .mui-range {
   -webkit-appearance: none;
-  width: 200px;
-  height: 8px;
+  width: auto;
+  height: 2px;
   border-radius: 4px;
-  background: rgba(203, 203, 203, 0.2);
+  background: rgba(153, 163, 164, 0.2);
   margin: 0;
   transition: background .5s ease-in-out;
 }
 .mui-range::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: #cbcbcb;
   cursor: pointer;
-  transition: background .15s ease-in-out;
+  transition: all .15s ease-in;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
 .mui-range::-webkit-slider-thumb:hover {
   background: #1abc9c;
 }
 .mui-range:hover {
-  background: rgba(203, 203, 203, 0.6);
+  background: rgba(153, 163, 164, 0.6);
 }
 .mui-range:active::-webkit-slider-thumb {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   background: #fff;
-  border: 3px solid #2c3e50;
 }
 
-.mui-range.earth[mui-range]::-webkit-slider-thumb {
+.mui-range.earth {
+  background: rgba(52, 197, 89, 0.7);
+}
+.mui-range.earth::-webkit-slider-thumb {
   background: #34c559;
 }
 
-.mui-range.night[mui-range]::-webkit-slider-thumb {
+.mui-range.night {
+  background: rgba(66, 66, 66, 0.7);
+}
+.mui-range.night::-webkit-slider-thumb {
   background: #424242;
 }
 
-.mui-range.ocean[mui-range]::-webkit-slider-thumb {
+.mui-range.ocean {
+  background: rgba(46, 114, 238, 0.7);
+}
+.mui-range.ocean::-webkit-slider-thumb {
   background: #2e72ee;
 }
 
-.mui-range.red[mui-range]::-webkit-slider-thumb {
+.mui-range.red {
+  background: rgba(233, 48, 48, 0.7);
+}
+.mui-range.red::-webkit-slider-thumb {
   background: #e93030;
 }
 
-.mui-range.snow[mui-range]::-webkit-slider-thumb {
+.mui-range.snow {
+  background: rgba(255, 255, 255, 0.7);
+}
+.mui-range.snow::-webkit-slider-thumb {
   background: #fff;
 }
 
-.mui-range.yellow[mui-range]::-webkit-slider-thumb {
+.mui-range.yellow {
+  background: rgba(231, 213, 7, 0.7);
+}
+.mui-range.yellow::-webkit-slider-thumb {
   background: #e7d507;
 }
 
-.mui-range.purple[mui-range]::-webkit-slider-thumb {
+.mui-range.purple {
+  background: rgba(105, 36, 240, 0.7);
+}
+.mui-range.purple::-webkit-slider-thumb {
   background: #6924f0;
 }
 
-.mui-range.pink[mui-range]::-webkit-slider-thumb {
+.mui-range.pink {
+  background: rgba(255, 135, 203, 0.7);
+}
+.mui-range.pink::-webkit-slider-thumb {
   background: #ff87cb;
+}
+
+.mui-range.cyan {
+  background: rgba(0, 188, 212, 0.7);
+}
+.mui-range.cyan::-webkit-slider-thumb {
+  background: #00bcd4;
 }
