@@ -1,0 +1,21 @@
+{
+  "name": "matericious",
+  "version": "0.1.0",
+  "description": "Delicious Material Framework",
+  "style": "dist/css/matericious.css",
+  "sass": "sass/matericious.scss",
+  "keywords": [
+    "delicious components",
+    "material design"
+  ],
+  "author": "Kascique Lowman, Shamshid",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Matericious/Matericious.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Matericious/Matericious/issues"
+  },
+  "homepage": "https://matericious.com"
+}
