@@ -1,4 +1,4 @@
-[mui-menu] {
+.mui-menu {
   width: auto;
   min-width: 120px;
   height: auto;
@@ -13,24 +13,24 @@
   left: 0px;
   z-index: 1;
 }
-[mui-menu] > li {
+.mui-menu > li {
   width: 100%;
   height: 40px;
   line-height: 40px;
   text-transform: capitalize;
 }
-[mui-menu] > li > button {
+.mui-menu > li > button {
   width: 100%;
   text-align: left;
   border-radius: 0;
 }
-[mui-menu] > li > button > i {
+.mui-menu > li > button > i {
   vertical-align: middle;
 }
-[mui-menu] > li > button:hover {
+.mui-menu > li > button:hover {
   background: #f2f2f2 !important;
 }
-[mui-menu] > hr {
+.mui-menu > hr {
   width: 100%;
   height: 1px;
   border: none;
