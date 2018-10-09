@@ -1,8 +1,7 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
-
-*:hover,
+:hover,
 *:focus {
   outline: none;
 }
@@ -15,21 +14,21 @@
 
 .mui-range{
   -webkit-appearance: none;
-  width: 200px;
-  height: 8px;
+  width: auto;
+  height: 2px;
   border-radius: 4px;
-  background: color('basic', .2);
+  background: color('grey', .2);
   margin: 0;
   transition: background .5s ease-in-out;
   &::-webkit-slider-thumb{
     -webkit-appearance: none;
     appearance: none;
-    width: 20px;
-    height: 20px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     background: color('basic');
     cursor: pointer;
-    transition: background .15s ease-in-out;
+    transition: all .15s ease-in;
           box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14),
             0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
     &:hover{
@@ -37,26 +36,25 @@
     }
   }
   &:hover{
-    background: color('basic', .6);
+    background: color('grey', .6);
   }
   &:active{
     &::-webkit-slider-thumb{
-      width: 30px;
-      height: 30px;
+      width: 20px;
+      height: 20px;
       background: #fff;
-      border: 3px solid #2c3e50;
     }
   }
 }
 
 @mixin colorClass($name, $tag){
-  &[mui-range]{
+     background: color($name, .7);
       &::-webkit-slider-thumb{
           background: color($name);
       }
-  }
 }
 
-$color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
+$color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink", "cyan";
+
 @include build-color-class(".mui-range", $color_vars);
 
