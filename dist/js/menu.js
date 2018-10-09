@@ -1,36 +1,53 @@
 ready(function() {
-  call("[menu]", "mousedown", function() {
-    var id = this.getAttribute('menu');
+  call("[open-menu]", "mousedown", function() {
+    var id = this.getAttribute("open-menu");
     var clickTimes = 0,
-      targetBtn = $get("[menu=" + id + "]"),
+      targetBtn = $get("[open-menu=" + id + "]"),
       targetMenu = $getID(id),
       default_class = targetMenu.className;
     
-    targetMenu.className += " pullDown";
+    if(default_class.includes("pullDown")) close();
+      
+    $addClass(targetMenu, "pullDown");
+    setPosition();
 
-    var pos = [targetBtn.offsetTop, targetBtn.offsetLeft],
-       size = [targetBtn.offsetWidth, targetBtn.offsetHeight];
-    
-    targetMenu.style.top = size[1] / 2 + pos[0] + "px";
-    targetMenu.style.left = pos[1] + "px";
+    function setPosition() {
+      var w =
+          window.innerWidth ||
+          document.documentElement.clientWidth ||
+          document.body.clientWidth,
+        h =
+          window.innerHeight ||
+          document.documentElement.clientHeight ||
+          document.body.clientHeight,
+        pos = [targetBtn.offsetTop, targetBtn.offsetLeft],
+        size = [targetBtn.offsetWidth, targetBtn.offsetHeight];
+
+      targetMenu.style.top = size[1] / 2 + pos[0] + "px";
+      if (default_class.includes("right")) {
+        targetMenu.style.right = w - pos[1] - size[0] + "px";
+      } else {
+        targetMenu.style.left = pos[1] + "px";
+      }
+    }
 
     document.addEventListener("click", function(event) {
       clickTimes++;
-      // if (!event.target.closest(id)) {
       if (clickTimes > 1) {
         clickTimes = 0;
         close(targetMenu);
       }
-      // };
+      /*When window size change reposition menu*/
+      window.onresize = function() {
+        setPosition();
+      };
     });
 
     function close(targetMenu) {
-      targetMenu.className += " pullUp";
-      targetMenu.classList.remove = "pullDown";
-      setTimeout(function() {
-        targetMenu.classList.remove = "pullUp";
-        targetMenu.className = default_class;
-      }, 500);
+      $addClass(targetMenu, "pullUp");
+      $removeClass(targetMenu, "pullDown");
+      $removeClass(targetMenu, "pullUp");
+      return;
     }
   });
 });
@@ -74,4 +91,26 @@ function $get(e) {
 
 function $getAll(e) {
   return document.querySelectorAll(e);
+}
+
+function hasClass(el, className) {
+  if (el.classList)
+    return el.classList.contains(className)
+  else
+    return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'))
+}
+
+function $addClass(el, className) {
+  if (el.classList)
+    el.classList.add(className)
+  else if (!hasClass(el, className)) el.className += " " + className
+}
+
+function $removeClass(el, className) {
+  if (el.classList)
+    el.classList.remove(className)
+  else if (hasClass(el, className)) {
+    var reg = new RegExp('(\\s|^)' + className + '(\\s|$)')
+    el.className=el.className.replace(reg, ' ')
+  }
 }
