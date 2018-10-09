@@ -1,4 +1,5 @@
 ready(function() {
+  var count = 0;
   call(".ripple", "mousedown", function(e) {
     var $self = this;
     var defaultIn = $self.innerHTML;
@@ -16,7 +17,6 @@ ready(function() {
     $ripple = '<div class="md-ripple">' + $rippleWave + "</div>";
 
     $self.innerHTML += $ripple;
-
     $rippleWaveStyle =
       "width: " +
       diameter +
@@ -27,10 +27,13 @@ ready(function() {
       "px;top: " +
       (pos[0] - diameter / 2) +
       "px;";
-    $getChild(".md-ripple", ".rippleWave", 0).style = $rippleWaveStyle;
+    
+    $getChild(".md-ripple", ".rippleWave", count).style = $rippleWaveStyle;
+    count++
     setTimeout(function() {
-        $getCL("md-ripple", 0).remove();
-    }, 2000);
+      count = 0;
+         $getCL("md-ripple", 0).remove();
+    }, 500);
   });
 });
 
