@@ -5,10 +5,8 @@ ready(function() {
       targetBtn = $get("[menu=" + id + "]"),
       targetMenu = $getID(id),
       default_class = targetMenu.className;
-
-    // alert(targetBtn.getAttribute("menu"));
-
-    targetMenu.className = "pullDown";
+    
+    targetMenu.className += " pullDown";
 
     var pos = [targetBtn.offsetTop, targetBtn.offsetLeft],
        size = [targetBtn.offsetWidth, targetBtn.offsetHeight];
@@ -36,7 +34,6 @@ ready(function() {
     }
   });
 });
-//function Menu(id) {}
 
 function ready(callback) {
   // in case the document is already rendered
