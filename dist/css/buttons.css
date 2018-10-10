@@ -3,7 +3,7 @@
   outline: none;
 }
 
-.mui-button {
+.btn {
   margin-top: 5px;
   padding: 12px 20px;
   overflow: hidden;
@@ -19,26 +19,26 @@
   transition: all 150ms linear;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
 }
-.mui-button > i {
+.btn > i {
   font-size: 15px;
   vertical-align: middle;
   margin-top: -2px;
   transition: all 0.5s linear 0s;
   position: relative;
 }
-.mui-button > i:nth-child(1) {
+.btn > i:nth-child(1) {
   position: relative;
   left: -5px;
 }
-.mui-button > i[ani], .mui-button > i[move] {
+.btn > i[ani], .btn > i[move] {
   left: 0px;
   right: 0px;
 }
-.mui-button:hover {
+.btn:hover {
   transition: all 150ms linear;
   opacity: 0.9;
 }
-.mui-button:hover > i[ani="left"] {
+.btn:hover > i[ani="left"] {
   -webkit-animation: ani-left 1s infinite;
   -moz-animation: ani-left 1s infinite;
   animation: ani-left 1s infinite;
@@ -67,7 +67,7 @@
     left: -5px;
   }
 }
-.mui-button:hover > i[ani="right"] {
+.btn:hover > i[ani="right"] {
   -webkit-animation: ani-right 1s infinite;
   -moz-animation: ani-right 1s infinite;
   animation: ani-right 1s infinite;
@@ -96,7 +96,7 @@
     left: 5px;
   }
 }
-.mui-button:hover > i[ani="rotate"] {
+.btn:hover > i[ani="rotate"] {
   -webkit-animation: ani-rotate 1s infinite;
   -moz-animation: ani-rotate 1s infinite;
   animation: ani-rotate 1s infinite;
@@ -125,40 +125,40 @@
     transform: rotate(360deg);
   }
 }
-.mui-button:hover > i[move="left"] {
+.btn:hover > i[move="left"] {
   -webkit-animation: ani-left 1s 1;
   -moz-animation: ani-left 1s 1;
   animation: ani-left 1s 1;
 }
-.mui-button:hover > i[move="right"] {
+.btn:hover > i[move="right"] {
   -webkit-animation: ani-right 1s 1;
   -moz-animation: ani-right 1s 1;
   animation: ani-right 1s 1;
 }
-.mui-button:hover > i[move="rotate"] {
+.btn:hover > i[move="rotate"] {
   -webkit-animation: ani-rotate 1s 1;
   -moz-animation: ani-rotate 1s 1;
   animation: ani-rotate 1s 1;
 }
-.mui-button:active {
+.btn:active {
   transition: all 150ms linear;
   opacity: 0.7;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
-.mui-button.outline {
+.btn.outline {
   background: transparent;
   border: #cbcbcb 1px solid;
   color: #222;
 }
-.mui-button.outline:hover {
+.btn.outline:hover {
   background: #cbcbcb;
   color: #424242;
 }
-.mui-button.text {
+.btn.text {
   background: transparent;
   box-shadow: none;
 }
-.mui-button.round, .mui-button.transparent {
+.btn.round, .btn.transparent {
   width: 50px;
   height: 50px;
   padding: 0px;
@@ -166,12 +166,12 @@
   text-align: center;
   border-radius: 50%;
 }
-.mui-button.round > i, .mui-button.transparent > i {
+.btn.round > i, .btn.transparent > i {
   font-size: 20px;
   left: 0;
   right: 0;
 }
-.mui-button.round:before, .mui-button.transparent:before {
+.btn.round:before, .btn.transparent:before {
   content: "";
   width: 30px;
   height: 30px;
@@ -184,7 +184,7 @@
   transition: all 0.5s linear 0s;
 }
 
-.mui-link {
+.link {
   margin-top: 5px;
   padding: 10px 15px;
   text-decoration: none;
@@ -197,396 +197,396 @@
   font-family: Tahoma, Geneva, sans-serif;
 }
 
-button.mui-button[ts] {
+btn.btn[ts] {
   background: transparent;
   text-align: center;
   box-shadow: none;
 }
-button.mui-button[ts] > i {
+btn.btn[ts] > i {
   font-size: 20px;
 }
-button.mui-button[ts]:hover {
+btn.btn[ts]:hover {
   box-shadow: none;
 }
 
-.mui-button.earth {
+.btn.earth {
   background: #34c559;
   color: #fff;
 }
-.mui-button.earth.gradient {
+.btn.earth.gradient {
   background: linear-gradient(90deg, #21f379 0%, #3be76c 49%, #00ba66 95%);
 }
-.mui-button.earth.outline {
+.btn.earth.outline {
   background: transparent;
   border: #34c559 1px solid;
 }
-.mui-button.earth.outline {
+.btn.earth.outline {
   color: #34c559;
 }
-.mui-button.earth.outline:hover {
+.btn.earth.outline:hover {
   background: #34c559;
   color: #fff;
 }
-.mui-button.earth.text {
+.btn.earth.text {
   color: #34c559;
 }
-.mui-button.earth.text {
+.btn.earth.text {
   background: transparent;
 }
 
-.mui-button.night {
+.btn.night {
   background: #424242;
   color: #fff;
 }
-.mui-button.night.gradient {
+.btn.night.gradient {
   background: linear-gradient(90deg, #3b3a3a 5%, #444343 47%, #b9b9b9 100%);
 }
-.mui-button.night.outline {
+.btn.night.outline {
   background: transparent;
   border: #424242 1px solid;
 }
-.mui-button.night.outline {
+.btn.night.outline {
   color: #424242;
 }
-.mui-button.night.outline:hover {
+.btn.night.outline:hover {
   background: #424242;
   color: #fff;
 }
-.mui-button.night.text {
+.btn.night.text {
   color: #424242;
 }
-.mui-button.night.text {
+.btn.night.text {
   background: transparent;
 }
 
-.mui-button.ocean {
+.btn.ocean {
   background: #2e72ee;
   color: #fff;
 }
-.mui-button.ocean.gradient {
+.btn.ocean.gradient {
   background: linear-gradient(90deg, #2196f3 0%, #03c5d6 61%, #00d4ff 84%);
 }
-.mui-button.ocean.outline {
+.btn.ocean.outline {
   background: transparent;
   border: #2e72ee 1px solid;
 }
-.mui-button.ocean.outline {
+.btn.ocean.outline {
   color: #2e72ee;
 }
-.mui-button.ocean.outline:hover {
+.btn.ocean.outline:hover {
   background: #2e72ee;
   color: #fff;
 }
-.mui-button.ocean.text {
+.btn.ocean.text {
   color: #2e72ee;
 }
-.mui-button.ocean.text {
+.btn.ocean.text {
   background: transparent;
 }
 
-.mui-button.red {
+.btn.red {
   background: #e93030;
   color: #fff;
 }
-.mui-button.red.gradient {
+.btn.red.gradient {
   background: linear-gradient(90deg, #e9e130 0%, #f0247a 0%, #ff2a00 46%, #e93030 95%);
 }
-.mui-button.red.outline {
+.btn.red.outline {
   background: transparent;
   border: #e93030 1px solid;
 }
-.mui-button.red.outline {
+.btn.red.outline {
   color: #e93030;
 }
-.mui-button.red.outline:hover {
+.btn.red.outline:hover {
   background: #e93030;
   color: #fff;
 }
-.mui-button.red.text {
+.btn.red.text {
   color: #e93030;
 }
-.mui-button.red.text {
+.btn.red.text {
   background: transparent;
 }
 
-.mui-button.snow {
+.btn.snow {
   background: #fff;
   color: #424242;
 }
-.mui-button.snow.outline {
+.btn.snow.outline {
   background: transparent;
   border: #fff 1px solid;
 }
-.mui-button.snow[outline] {
+.btn.snow[outline] {
   color: #424242;
 }
-.mui-button.snow:hover {
+.btn.snow:hover {
   background: #fff;
   color: #424242;
 }
-.mui-button.snow.text {
+.btn.snow.text {
   background: transparent;
 }
 
-.mui-button.yellow {
+.btn.yellow {
   background: #e7d507;
   color: #424242;
 }
-.mui-button.yellow.gradient {
+.btn.yellow.gradient {
   background: linear-gradient(90deg, #ffeb00 0%, #f4ed15 45%, #e0ff00 65%, #b9ff00 100%);
 }
-.mui-button.yellow.outline {
+.btn.yellow.outline {
   background: transparent;
   border: #e7d507 1px solid;
 }
-.mui-button.yellow.outline {
+.btn.yellow.outline {
   color: #424242;
 }
-.mui-button.yellow.outline:hover {
+.btn.yellow.outline:hover {
   background: #e7d507;
   color: #424242;
 }
-.mui-button.yellow.text {
+.btn.yellow.text {
   background: transparent;
 }
 
-.mui-button.purple {
+.btn.purple {
   background: #6924f0;
   color: #fff;
 }
-.mui-button.purple.gradient {
+.btn.purple.gradient {
   background: linear-gradient(90deg, #e9e130 0%, #6924f0 0%, #b40f91 44%, #e82890 95%);
 }
-.mui-button.purple.outline {
+.btn.purple.outline {
   background: transparent;
   border: #6924f0 1px solid;
 }
-.mui-button.purple.outline {
+.btn.purple.outline {
   color: #6924f0;
 }
-.mui-button.purple.outline:hover {
+.btn.purple.outline:hover {
   background: #6924f0;
   color: #fff;
 }
-.mui-button.purple.text {
+.btn.purple.text {
   color: #6924f0;
 }
-.mui-button.purple.text {
+.btn.purple.text {
   background: transparent;
 }
 
-.mui-button.pink {
+.btn.pink {
   background: #ff87cb;
   color: #fff;
 }
-.mui-button.pink.gradient {
+.btn.pink.gradient {
   background: linear-gradient(90deg, #e9e130 0%, #ff87cb 0%, #e977e1 46%, #e523e7 95%);
 }
-.mui-button.pink.outline {
+.btn.pink.outline {
   background: transparent;
   border: #ff87cb 1px solid;
 }
-.mui-button.pink.outline {
+.btn.pink.outline {
   color: #ff87cb;
 }
-.mui-button.pink.outline:hover {
+.btn.pink.outline:hover {
   background: #ff87cb;
   color: #fff;
 }
-.mui-button.pink.text {
+.btn.pink.text {
   color: #ff87cb;
 }
-.mui-button.pink.text {
+.btn.pink.text {
   background: transparent;
 }
 
-.mui-link.earth {
+.link.earth {
   background: #34c559;
   color: #fff;
 }
-.mui-link.earth.gradient {
+.link.earth.gradient {
   background: linear-gradient(90deg, #21f379 0%, #3be76c 49%, #00ba66 95%);
 }
-.mui-link.earth.outline {
+.link.earth.outline {
   background: transparent;
   border: #34c559 1px solid;
 }
-.mui-link.earth.outline {
+.link.earth.outline {
   color: #34c559;
 }
-.mui-link.earth.outline:hover {
+.link.earth.outline:hover {
   background: #34c559;
   color: #fff;
 }
-.mui-link.earth.text {
+.link.earth.text {
   color: #34c559;
 }
-.mui-link.earth.text {
+.link.earth.text {
   background: transparent;
 }
 
-.mui-link.night {
+.link.night {
   background: #424242;
   color: #fff;
 }
-.mui-link.night.gradient {
+.link.night.gradient {
   background: linear-gradient(90deg, #3b3a3a 5%, #444343 47%, #b9b9b9 100%);
 }
-.mui-link.night.outline {
+.link.night.outline {
   background: transparent;
   border: #424242 1px solid;
 }
-.mui-link.night.outline {
+.link.night.outline {
   color: #424242;
 }
-.mui-link.night.outline:hover {
+.link.night.outline:hover {
   background: #424242;
   color: #fff;
 }
-.mui-link.night.text {
+.link.night.text {
   color: #424242;
 }
-.mui-link.night.text {
+.link.night.text {
   background: transparent;
 }
 
-.mui-link.ocean {
+.link.ocean {
   background: #2e72ee;
   color: #fff;
 }
-.mui-link.ocean.gradient {
+.link.ocean.gradient {
   background: linear-gradient(90deg, #2196f3 0%, #03c5d6 61%, #00d4ff 84%);
 }
-.mui-link.ocean.outline {
+.link.ocean.outline {
   background: transparent;
   border: #2e72ee 1px solid;
 }
-.mui-link.ocean.outline {
+.link.ocean.outline {
   color: #2e72ee;
 }
-.mui-link.ocean.outline:hover {
+.link.ocean.outline:hover {
   background: #2e72ee;
   color: #fff;
 }
-.mui-link.ocean.text {
+.link.ocean.text {
   color: #2e72ee;
 }
-.mui-link.ocean.text {
+.link.ocean.text {
   background: transparent;
 }
 
-.mui-link.red {
+.link.red {
   background: #e93030;
   color: #fff;
 }
-.mui-link.red.gradient {
+.link.red.gradient {
   background: linear-gradient(90deg, #e9e130 0%, #f0247a 0%, #ff2a00 46%, #e93030 95%);
 }
-.mui-link.red.outline {
+.link.red.outline {
   background: transparent;
   border: #e93030 1px solid;
 }
-.mui-link.red.outline {
+.link.red.outline {
   color: #e93030;
 }
-.mui-link.red.outline:hover {
+.link.red.outline:hover {
   background: #e93030;
   color: #fff;
 }
-.mui-link.red.text {
+.link.red.text {
   color: #e93030;
 }
-.mui-link.red.text {
+.link.red.text {
   background: transparent;
 }
 
-.mui-link.snow {
+.link.snow {
   background: #fff;
   color: #424242;
 }
-.mui-link.snow.outline {
+.link.snow.outline {
   background: transparent;
   border: #fff 1px solid;
 }
-.mui-link.snow[outline] {
+.link.snow[outline] {
   color: #424242;
 }
-.mui-link.snow:hover {
+.link.snow:hover {
   background: #fff;
   color: #424242;
 }
-.mui-link.snow.text {
+.link.snow.text {
   background: transparent;
 }
 
-.mui-link.yellow {
+.link.yellow {
   background: #e7d507;
   color: #424242;
 }
-.mui-link.yellow.gradient {
+.link.yellow.gradient {
   background: linear-gradient(90deg, #ffeb00 0%, #f4ed15 45%, #e0ff00 65%, #b9ff00 100%);
 }
-.mui-link.yellow.outline {
+.link.yellow.outline {
   background: transparent;
   border: #e7d507 1px solid;
 }
-.mui-link.yellow.outline {
+.link.yellow.outline {
   color: #424242;
 }
-.mui-link.yellow.outline:hover {
+.link.yellow.outline:hover {
   background: #e7d507;
   color: #424242;
 }
-.mui-link.yellow.text {
+.link.yellow.text {
   background: transparent;
 }
 
-.mui-link.purple {
+.link.purple {
   background: #6924f0;
   color: #fff;
 }
-.mui-link.purple.gradient {
+.link.purple.gradient {
   background: linear-gradient(90deg, #e9e130 0%, #6924f0 0%, #b40f91 44%, #e82890 95%);
 }
-.mui-link.purple.outline {
+.link.purple.outline {
   background: transparent;
   border: #6924f0 1px solid;
 }
-.mui-link.purple.outline {
+.link.purple.outline {
   color: #6924f0;
 }
-.mui-link.purple.outline:hover {
+.link.purple.outline:hover {
   background: #6924f0;
   color: #fff;
 }
-.mui-link.purple.text {
+.link.purple.text {
   color: #6924f0;
 }
-.mui-link.purple.text {
+.link.purple.text {
   background: transparent;
 }
 
-.mui-link.pink {
+.link.pink {
   background: #ff87cb;
   color: #fff;
 }
-.mui-link.pink.gradient {
+.link.pink.gradient {
   background: linear-gradient(90deg, #e9e130 0%, #ff87cb 0%, #e977e1 46%, #e523e7 95%);
 }
-.mui-link.pink.outline {
+.link.pink.outline {
   background: transparent;
   border: #ff87cb 1px solid;
 }
-.mui-link.pink.outline {
+.link.pink.outline {
   color: #ff87cb;
 }
-.mui-link.pink.outline:hover {
+.link.pink.outline:hover {
   background: #ff87cb;
   color: #fff;
 }
-.mui-link.pink.text {
+.link.pink.text {
   color: #ff87cb;
 }
-.mui-link.pink.text {
+.link.pink.text {
   background: transparent;
 }
