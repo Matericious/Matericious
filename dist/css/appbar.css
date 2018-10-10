@@ -1,24 +1,25 @@
 
-[mui-appbar] {
+.mui-appbar {
   width: 100%;
   height: 60px;
-  background: red;
+  background: #2e72ee;
   text-indent: 10px;
   line-height: 55px;
   overflow: hidden;
+  color: #fff;
 }
-[mui-appbar].raised {
+.mui-appbar.raised {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
-[mui-appbar] > div {
-  width: 100%;
+.mui-appbar > div {
+  width: 95%;
   margin: 0 auto;
   height: 100%;
 }
-[mui-appbar] > div > section {
+.mui-appbar > div > section {
   display: inline-block;
 }
-[mui-appbar] > div > section.left {
+.mui-appbar > div > section.left {
   width: 200px;
   height: 100%;
   display: inline-block;
@@ -27,10 +28,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-[mui-appbar] > div > section.left > label {
+.mui-appbar > div > section.left > label {
   margin-left: 10px;
 }
-[mui-appbar] > div > section.right {
+.mui-appbar > div > section.right {
   width: auto;
   height: 100%;
   display: flex;
@@ -39,18 +40,18 @@
   justify-content: flex-end;
   overflow: hidden;
 }
-[mui-appbar] > div > section > label {
+.mui-appbar > div > section > label {
   font-size: 16px;
-  color: #fff;
+  color: inherit;
   vertical-align: middle;
   font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
 }
-[mui-appbar] > div > section > button {
+.mui-appbar > div > section > button {
   width: 45px;
   height: 45px;
-  color: #fff;
+  color: inherit;
 }
-[mui-appbar] > div > section > button > i {
+.mui-appbar > div > section > button > i {
   font-size: 20px;
 }
 
@@ -65,4 +66,50 @@
     width: 30px;
     height: 30px;
   }
+}
+.mui-appbar.earth {
+  background: #34c559;
+  color: #fff;
+}
+
+.mui-appbar.night {
+  background: #424242;
+  color: #fff;
+}
+
+.mui-appbar.ocean {
+  background: #2e72ee;
+  color: #fff;
+}
+
+.mui-appbar.red {
+  background: #e93030;
+  color: #fff;
+}
+
+.mui-appbar.snow {
+  background: #fff;
+  color: #fff;
+  color: #424242;
+}
+
+.mui-appbar.yellow {
+  background: #e7d507;
+  color: #fff;
+  color: #424242;
+}
+
+.mui-appbar.purple {
+  background: #6924f0;
+  color: #fff;
+}
+
+.mui-appbar.pink {
+  background: #ff87cb;
+  color: #fff;
+}
+
+.mui-appbar.cyan {
+  background: #00bcd4;
+  color: #fff;
 }
