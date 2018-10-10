@@ -2,43 +2,77 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Appbar Demo</title>
-    <meta name="author" content="Matericious">
-    <meta name="description" content="Delicious Material framework">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://rawgit.com/Matericious/Matericious/master/dist/css/appbar.css">
-    <link rel="stylesheet" href="https://rawgit.com/Matericious/Matericious/master/dist/css/buttons.css">
-    <link rel="stylesheet" href="https://rawgit.com/Matericious/Matericious/master/dist/css/ripple.css">
-    <style>
-        body{ margin: 0}
-    </style>
+  <meta charset="utf-8">
+  <title>Appbar Demo</title>
+  <meta name="author" content="Matericious">
+  <meta name="description" content="Delicious Material framework">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://rawgit.com/Matericious/Matericious/master/dist/css/appbar.css">
+  <link rel="stylesheet" href="https://rawgit.com/Matericious/Matericious/master/dist/css/buttons.css">
+  <link rel="stylesheet" href="https://rawgit.com/Matericious/Matericious/master/dist/css/ripple.css">
+  <link rel="stylesheet" href="https://rawgit.com/Matericious/Matericious/master/dist/css/menu.css">
+  <style>
+    body {
+      margin: 0
+    }
+  </style>
 </head>
 
 <body>
-    <header mui-appbar>
-  <div class="wrap">
-    <section class="left">
-      <button class="round ripple text" mui-button>
+  <br/>
+  <h3>Appbar with menu</h3>
+  <header class="mui-appbar cyan">
+    <div class="wrap">
+      <section class="left">
+        <button class="mui-button round wave text">
         <i class="material-icons">menu</i>
       </button>
-      <label>San Francisco</label>
-    </section>
-    <section class="right">
-      <button class="round ripple text" mui-button>
+        <label>San Francisco</label>
+      </section>
+      <section class="right">
+        <button class="mui-button round wave text">
         <i class="material-icons">cloud_queue</i>
       </button>
-      <button class="round ripple text" mui-button>
-        <i class="material-icons">people_outline</i>
-      </button>
-      <button class="round ripple text" mui-button>
+        <button class="mui-button round wave text">
         <i class="material-icons">notifications_none</i>
-      </button>  
-    </section>
-  </div>
-</header>
+      </button>
+      </section>
+    </div>
+  </header>
+  <br/><br/><br/>
+  <h3>Appbar with menu</h3>
+    <header class="mui-appbar cyan">
+    <div class="wrap">
+      <section class="left">
+        <button class="mui-button round wave text">
+        <i class="material-icons">menu</i>
+      </button>
+        <label>San Francisco</label>
+      </section>
+      <section class="right">
+        <button class="mui-button round wave text">
+        <i class="material-icons">cloud_queue</i>
+      </button>
+        <button class="mui-button round wave text">
+        <i class="material-icons">notifications_none</i>
+      </button>
+       <button open-menu="menu" class="mui-button round wave text">
+        <i class="material-icons">more_vert</i>
+      </button>
+      </section>
+    </div>
+  </header>
+
+  <ul id="menu" class="mui-menu right">
+    <li><a href="#">Help</a></li>
+    <li><a href="#">Feedback</a></li>
+    <hr>
+    <li><a href="#">Settings</a></li>
+  </ul>
+  
+  <script src="https://rawgit.com/Matericious/Matericious/master/dist/js/menu.js"></script>
 </body>
 
 </html>
