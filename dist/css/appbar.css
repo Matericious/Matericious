@@ -53,16 +53,20 @@
 }
 .mui-appbar > div > section > button > i {
   font-size: 20px;
+  vertical-align: middle;
 }
 
 @media screen and (max-width: 500px) {
-  [mui-appbar] > div > section.left {
+  .mui-appbar > div {
+    width: 100%;
+  }
+  .mui-appbar > div > section.left {
     width: 45%;
   }
-  [mui-appbar] > div > section.right {
+  .mui-appbar > div > section.right {
     width: 40%;
   }
-  [mui-appbar] > div > section > button {
+  .mui-appbar > div > section > button {
     width: 30px;
     height: 30px;
   }
