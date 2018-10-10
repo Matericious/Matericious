@@ -21,8 +21,9 @@ ready(function() {
           document.documentElement.clientHeight ||
           document.body.clientHeight,
         pos = [targetBtn.offsetTop, targetBtn.offsetLeft],
-        size = [targetBtn.offsetWidth, targetBtn.offsetHeight];
-
+        size = [targetBtn.offsetWidth, targetBtn.offsetHeight],
+        menu_size = [targetMenu.offsetWidth, targetMenu.offsetHeight];
+         
       targetMenu.style.top = size[1] / 2 + pos[0] + "px";
       if (default_class.includes("right")) {
         targetMenu.style.right = w - pos[1] - size[0] + "px";
@@ -31,22 +32,25 @@ ready(function() {
       }
     }
 
-    document.addEventListener("click", function(event) {
+    document.addEventListener("click", clickOutSide, true);
+    /*When window size change reposition menu*/
+    window.onresize = function() {
+       setPosition();
+    };
+
+    function clickOutSide(event) {
       clickTimes++;
       if (clickTimes > 1) {
         clickTimes = 0;
         close(targetMenu);
       }
-      /*When window size change reposition menu*/
-      window.onresize = function() {
-        setPosition();
-      };
-    });
-
+    }
+    
     function close(targetMenu) {
       $addClass(targetMenu, "pullUp");
       $removeClass(targetMenu, "pullDown");
       $removeClass(targetMenu, "pullUp");
+      document.removeEventListener("click", clickOutSide, true);
       return;
     }
   });
