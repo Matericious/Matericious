@@ -1,0 +1,19 @@
+- var title = 'Menu'
+doctype
+html(lang='en')
+  head
+    include /includes/head.pug
+      body
+          h3= title
+          ul.mui-menu(id='menu')
+            - var items = ['Back', 'Forward', 'Reload', 'Settings'];
+            each item,pos in items
+              if pos == 2
+                li
+                  a(href='#')= item
+                hr
+              else
+                li
+                  a(href='#')= item
+          button.mui-button(open-menu='menu') Menu
+          script(src='https://rawgit.com/Matericious/Matericious/master/dist/js/menu.js')
