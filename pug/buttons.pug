@@ -7,65 +7,65 @@ html(lang='en')
           h3 Buttons
           - var colors = ['basic', 'earth', 'night', 'ocean', 'red ripple', 'yellow', 'pink', 'snow'];
           each color in colors
-            button(class=color mui-button)=color + ' button'
+            button(class='btn '+color)=color + ' button'
           hr
             
           h3 Input Submit Buttons
           - var submit_btns = ['earth', 'red', 'gradient ocean', 'gradient pink'];
           each cls in submit_btns
-            input(class=cls type="submit" value="Input Submit" mui-button)
+            input(class='btn '+cls type="submit" value="Input Submit")
           hr
           
           h3 Gradient Buttons
           - var grad_btns = ['earth', 'night', 'ocean', 'red', 'yellow', 'purple ripple', 'pink'];
           each grad in grad_btns
-            button(class='gradient '+grad mui-button)= grad + ' gradient'
+            button(class='btn gradient '+grad)= grad + ' gradient'
           hr
           
           h3 Outline Buttons
           - var outlines = ['earth', 'night', 'ocean', 'red', 'yellow', 'purple ripple', 'pink'];
           each outline in outlines
-            button(class='outline '+outline mui-button)=outline + ' button'
+            button(class='btn outline '+outline)=outline + ' button'
           hr
           
           h3 Text Buttons
-          button.ocean.ripple.text(mui-button) Explore 
-          button.purple.ripple.text(mui-button)
+          button.btn.ocean.ripple.text Explore 
+          button.btn.purple.ripple.text
             i.material-icons search
             | search
           hr
           
           h3 Icon Buttons
-          button.red(mui-button)
+          button.btn.red
             i.material-icons favorite
             | Favorite
-          button.ocean(mui-button)
+          button.btn.ocean
             i.material-icons cloud_download
             | Download
-          button.earth(mui-button)
+          button.btn.earth
             i.material-icons cloud_upload
             | Upload
-          button.gradient.red.ripple(mui-button)
+          button.btn.gradient.red.ripple
             i.material-icons restaurant
             | Restaurant
           hr
           
           h3 Animated Icon Buttons
           h4 Continous Animation
-          button.red(mui-button)
+          button.btn.red
             i.material-icons(ani='left') arrow_back
             | &nbsp;Back
-          button.earth(mui-button) Next&nbsp;
+          button.btn.earth Next&nbsp;
             i.material-icons(ani='right') arrow_forward
-          button.ripple(mui-button) Reload&nbsp;
+          button.btn.ripple Reload&nbsp;
             i.material-icons(ani='rotate') refresh
           h4 One Time Animation
-          button.red(mui-button)
+          button.btn.red
             i.material-icons(move='left') arrow_back
             | &nbsp;Back
-          button.earth(mui-button) Next&nbsp;
+          button.btn.earth Next&nbsp;
             i.material-icons(move='right') arrow_forward
-          button.ripple(mui-button) Reload&nbsp;
+          button.btn.ripple Reload&nbsp;
             i.material-icons(move='rotate') refresh
           hr
           
@@ -80,14 +80,14 @@ html(lang='en')
               'done':'pink',
             };
           each icon,cls in fabs
-            button(class='round '+icon mui-button)
+            button(class='btn round '+icon)
               i.material-icons= cls
           hr
           
           h3 Icon Buttons
-          button(mui-button ts)
+          button.btn(ts)
             i.material-icons shopping_basket
-          button(mui-button ts)
+          button.btn(ts)
             i.material-icons favorite
-          button(mui-button ts)
+          button.btn(ts)
             i.material-icons face
