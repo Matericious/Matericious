@@ -1,3 +1,122 @@
+.mui-appbar {
+  width: 100%;
+  height: 60px;
+  background: #2e72ee;
+  text-indent: 10px;
+  line-height: 55px;
+  overflow: hidden;
+  color: #fff;
+}
+.mui-appbar.raised {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+}
+.mui-appbar > div {
+  width: 95%;
+  margin: 0 auto;
+  height: 100%;
+}
+.mui-appbar > div > section {
+  display: inline-block;
+}
+.mui-appbar > div > section.left {
+  width: 200px;
+  height: 100%;
+  display: inline-block;
+  float: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mui-appbar > div > section.left > label {
+  margin-left: 10px;
+}
+.mui-appbar > div > section.right {
+  width: auto;
+  height: 100%;
+  display: flex;
+  float: right;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+.mui-appbar > div > section > label {
+  font-size: 16px;
+  color: inherit;
+  vertical-align: middle;
+  font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
+}
+.mui-appbar > div > section > button {
+  width: 45px;
+  height: 45px;
+  color: inherit;
+}
+.mui-appbar > div > section > button > i {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 500px) {
+  .mui-appbar > div {
+    width: 100%;
+  }
+  .mui-appbar > div > section.left {
+    width: 45%;
+  }
+  .mui-appbar > div > section.right {
+    width: 40%;
+  }
+  .mui-appbar > div > section > button {
+    width: 30px;
+    height: 30px;
+  }
+}
+.mui-appbar.earth {
+  background: #34c559;
+  color: #fff;
+}
+
+.mui-appbar.night {
+  background: #424242;
+  color: #fff;
+}
+
+.mui-appbar.ocean {
+  background: #2e72ee;
+  color: #fff;
+}
+
+.mui-appbar.red {
+  background: #e93030;
+  color: #fff;
+}
+
+.mui-appbar.snow {
+  background: #fff;
+  color: #fff;
+  color: #424242;
+}
+
+.mui-appbar.yellow {
+  background: #e7d507;
+  color: #fff;
+  color: #424242;
+}
+
+.mui-appbar.purple {
+  background: #6924f0;
+  color: #fff;
+}
+
+.mui-appbar.pink {
+  background: #ff87cb;
+  color: #fff;
+}
+
+.mui-appbar.cyan {
+  background: #00bcd4;
+  color: #fff;
+}
+
 [mui-row] {
   width: 100%;
   height: auto;
@@ -442,7 +561,7 @@
 .mui-button > i {
   font-size: 15px;
   vertical-align: middle;
-  margin-top: 0px;
+  margin-top: -2px;
   transition: all 0.5s linear 0s;
   position: relative;
 }
@@ -604,7 +723,7 @@
   transition: all 0.5s linear 0s;
 }
 
-a[mui-link] {
+.mui-link {
   margin-top: 5px;
   padding: 10px 15px;
   text-decoration: none;
@@ -820,36 +939,195 @@ button.mui-button[ts]:hover {
   background: transparent;
 }
 
-a.earth {
-  color: #34c559;
-}
-
-a.night {
-  color: #424242;
-}
-
-a.ocean {
-  color: #2e72ee;
-}
-
-a.red {
-  color: #e93030;
-}
-
-a.snow {
+.mui-link.earth {
+  background: #34c559;
   color: #fff;
 }
-
-a.yellow {
-  color: #e7d507;
+.mui-link.earth.gradient {
+  background: linear-gradient(90deg, #21f379 0%, #3be76c 49%, #00ba66 95%);
+}
+.mui-link.earth.outline {
+  background: transparent;
+  border: #34c559 1px solid;
+}
+.mui-link.earth.outline {
+  color: #34c559;
+}
+.mui-link.earth.outline:hover {
+  background: #34c559;
+  color: #fff;
+}
+.mui-link.earth.text {
+  color: #34c559;
+}
+.mui-link.earth.text {
+  background: transparent;
 }
 
-a.purple {
+.mui-link.night {
+  background: #424242;
+  color: #fff;
+}
+.mui-link.night.gradient {
+  background: linear-gradient(90deg, #3b3a3a 5%, #444343 47%, #b9b9b9 100%);
+}
+.mui-link.night.outline {
+  background: transparent;
+  border: #424242 1px solid;
+}
+.mui-link.night.outline {
+  color: #424242;
+}
+.mui-link.night.outline:hover {
+  background: #424242;
+  color: #fff;
+}
+.mui-link.night.text {
+  color: #424242;
+}
+.mui-link.night.text {
+  background: transparent;
+}
+
+.mui-link.ocean {
+  background: #2e72ee;
+  color: #fff;
+}
+.mui-link.ocean.gradient {
+  background: linear-gradient(90deg, #2196f3 0%, #03c5d6 61%, #00d4ff 84%);
+}
+.mui-link.ocean.outline {
+  background: transparent;
+  border: #2e72ee 1px solid;
+}
+.mui-link.ocean.outline {
+  color: #2e72ee;
+}
+.mui-link.ocean.outline:hover {
+  background: #2e72ee;
+  color: #fff;
+}
+.mui-link.ocean.text {
+  color: #2e72ee;
+}
+.mui-link.ocean.text {
+  background: transparent;
+}
+
+.mui-link.red {
+  background: #e93030;
+  color: #fff;
+}
+.mui-link.red.gradient {
+  background: linear-gradient(90deg, #e9e130 0%, #f0247a 0%, #ff2a00 46%, #e93030 95%);
+}
+.mui-link.red.outline {
+  background: transparent;
+  border: #e93030 1px solid;
+}
+.mui-link.red.outline {
+  color: #e93030;
+}
+.mui-link.red.outline:hover {
+  background: #e93030;
+  color: #fff;
+}
+.mui-link.red.text {
+  color: #e93030;
+}
+.mui-link.red.text {
+  background: transparent;
+}
+
+.mui-link.snow {
+  background: #fff;
+  color: #424242;
+}
+.mui-link.snow.outline {
+  background: transparent;
+  border: #fff 1px solid;
+}
+.mui-link.snow[outline] {
+  color: #424242;
+}
+.mui-link.snow:hover {
+  background: #fff;
+  color: #424242;
+}
+.mui-link.snow.text {
+  background: transparent;
+}
+
+.mui-link.yellow {
+  background: #e7d507;
+  color: #424242;
+}
+.mui-link.yellow.gradient {
+  background: linear-gradient(90deg, #ffeb00 0%, #f4ed15 45%, #e0ff00 65%, #b9ff00 100%);
+}
+.mui-link.yellow.outline {
+  background: transparent;
+  border: #e7d507 1px solid;
+}
+.mui-link.yellow.outline {
+  color: #424242;
+}
+.mui-link.yellow.outline:hover {
+  background: #e7d507;
+  color: #424242;
+}
+.mui-link.yellow.text {
+  background: transparent;
+}
+
+.mui-link.purple {
+  background: #6924f0;
+  color: #fff;
+}
+.mui-link.purple.gradient {
+  background: linear-gradient(90deg, #e9e130 0%, #6924f0 0%, #b40f91 44%, #e82890 95%);
+}
+.mui-link.purple.outline {
+  background: transparent;
+  border: #6924f0 1px solid;
+}
+.mui-link.purple.outline {
   color: #6924f0;
 }
+.mui-link.purple.outline:hover {
+  background: #6924f0;
+  color: #fff;
+}
+.mui-link.purple.text {
+  color: #6924f0;
+}
+.mui-link.purple.text {
+  background: transparent;
+}
 
-a.pink {
+.mui-link.pink {
+  background: #ff87cb;
+  color: #fff;
+}
+.mui-link.pink.gradient {
+  background: linear-gradient(90deg, #e9e130 0%, #ff87cb 0%, #e977e1 46%, #e523e7 95%);
+}
+.mui-link.pink.outline {
+  background: transparent;
+  border: #ff87cb 1px solid;
+}
+.mui-link.pink.outline {
   color: #ff87cb;
+}
+.mui-link.pink.outline:hover {
+  background: #ff87cb;
+  color: #fff;
+}
+.mui-link.pink.text {
+  color: #ff87cb;
+}
+.mui-link.pink.text {
+  background: transparent;
 }
 
 .mui-card {
@@ -929,7 +1207,7 @@ a.pink {
   height: 35px;
 }
 
-*:hover,
+:hover,
 *:focus {
   outline: none;
 }
@@ -1104,65 +1382,6 @@ a.pink {
   border-color: #ff87cb;
 }
 
-.wave {
-  position: relative;
-  overflow: hidden;
-  transform: translate3d(0, 0, 0);
-}
-.wave:after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-  background-repeat: no-repeat;
-  background-position: 50%;
-  transform: scale(10, 10);
-  opacity: 0;
-  transition: transform 0.5s, opacity 1s;
-}
-.wave:active:after {
-  transform: scale(0, 0);
-  opacity: 0.3;
-  transition: 0s;
-}
-
-.wave.earth.text:after {
-  background-image: radial-gradient(circle, #34c559 10%, transparent 10.01%);
-}
-
-.wave.night.text:after {
-  background-image: radial-gradient(circle, #424242 10%, transparent 10.01%);
-}
-
-.wave.ocean.text:after {
-  background-image: radial-gradient(circle, #2e72ee 10%, transparent 10.01%);
-}
-
-.wave.red.text:after {
-  background-image: radial-gradient(circle, #e93030 10%, transparent 10.01%);
-}
-
-.wave.snow.text:after {
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-}
-
-.wave.yellow.text:after {
-  background-image: radial-gradient(circle, #e7d507 10%, transparent 10.01%);
-}
-
-.wave.purple.text:after {
-  background-image: radial-gradient(circle, #6924f0 10%, transparent 10.01%);
-}
-
-.wave.pink.text:after {
-  background-image: radial-gradient(circle, #ff87cb 10%, transparent 10.01%);
-}
-
 a {
   text-decoration: none;
 }
@@ -1222,12 +1441,17 @@ a {
   color: #424242;
 }
 .mui-chips > img {
-  width: 30px;
-  height: 30px;
-  line-height: 22px;
+  width: 33px;
+  height: 33px;
   vertical-align: middle;
-  margin-left: -6px;
-  margin-top: -3px;
+  margin: -2px 5px 0 -8px;
+  border-radius: 50%;
+}
+.mui-chips > img.space {
+  width: 25px;
+  height: 25px;
+  margin: -2px 5px 0 -3px;
+  vertical-align: middle;
   border-radius: 50%;
 }
 
@@ -1423,6 +1647,11 @@ a {
   outline: none;
 }
 
+*:hover,
+*:focus {
+  outline: none;
+}
+
 .mui-input {
   position: relative;
 }
@@ -1512,69 +1741,164 @@ a {
   color: #ff87cb;
 }
 
-*:hover,
-*:focus {
-  outline: none;
-}
-
-.mui-label {
-  padding: 6px;
-  padding-left: 8px;
-  padding-right: 8px;
-  color: #222;
-  background: colors("basic");
-  border-radius: 14px;
-  font-size: 12px;
-  text-transform: uppercase;
-  font-weight: bold;
-  line-height: 1.3;
-  cursor: pointer;
-  font-family: Tahoma, Geneva, sans-serif;
-}
-
-.mui-label.earth {
-  color: #fff;
-  background: #34c559;
-}
-
-.mui-label.night {
-  color: #fff;
-  background: #424242;
-}
-
-.mui-label.ocean {
-  color: #fff;
-  background: #2e72ee;
-}
-
-.mui-label.red {
-  color: #fff;
-  background: #e93030;
-}
-
-.mui-label.snow {
-  color: #fff;
+.mui-list {
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  list-style: none;
+  padding: 10px 0 10px 0;
+  border-radius: 2px;
   background: #fff;
 }
-
-.mui-label.yellow {
-  color: #fff;
-  background: #e7d507;
+.mui-list > li {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-indent: 20px;
+  font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
+}
+.mui-list > li:hover {
+  background: #efefef;
+}
+.mui-list > li > label {
+  font-size: 18px;
+}
+.mui-list > li > span {
+  display: block;
+  font-size: 14px;
+  color: #aeafaf;
+}
+.mui-list > li > i {
+  font-size: 25px;
+  vertical-align: middle;
+  color: #aeafaf;
+  position: relative;
+  left: -25px;
+  top: -2px;
+}
+.mui-list > li > i.trail-icon {
+  display: inline-block;
+  float: right;
+  top: 12px;
+  left: -20px;
+}
+.mui-list > li.two-line {
+  padding: 10px 0 10px 0;
+  height: auto;
+  line-height: 20px;
+}
+.mui-list > li.two-line .lead-icon {
+  font-size: 35px;
+  top: 10px;
+}
+.mui-list > li.two-line-lead {
+  padding: 10px 0 0px 0;
+  height: auto;
+  line-height: 20px;
+}
+.mui-list > li.two-line-lead .lead-icon {
+  font-size: 35px;
+  top: 10px;
+}
+.mui-list > li.two-line-lead > span {
+  text-indent: 80px;
+}
+.mui-list > li.two-line-lead > .trail-icon {
+  top: -40px;
+}
+.mui-list > hr {
+  width: 100%;
+  height: 1px;
+  border: none;
+  background: #d9d9d9;
 }
 
-.mui-label.purple {
-  color: #fff;
-  background: #6924f0;
+.mui-menu {
+  width: auto;
+  min-width: 120px;
+  height: auto;
+  -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  list-style: none;
+  padding: 8px 0 8px 0;
+  border-radius: 2px;
+  background: #fff;
+  visibility: hidden;
+  position: absolute;
+  top: 0px;
+  z-index: 1;
+}
+.mui-menu > li {
+  height: 48px;
+  line-height: 48px;
+  padding: 0 16px;
+}
+.mui-menu > li > a {
+  width: 100%;
+  text-align: left;
+  font-family: "Roboto", san-serif;
+  font-size: 1rem;
+  color: #424242;
+  text-decoration: none;
+  border-radius: 0;
+}
+.mui-menu > li > a > i {
+  vertical-align: middle;
+}
+.mui-menu > li:hover {
+  background: #f2f2f2 !important;
+}
+.mui-menu > hr {
+  width: 100%;
+  height: 1px;
+  border: none;
+  background: #d9d9d9;
 }
 
-.mui-label.pink {
-  color: #fff;
-  background: #ff87cb;
+/*CSS Animations*/
+.pullDown {
+  visibility: visible;
+  animation-name: pullDown;
+  -webkit-animation-name: pullDown;
+  animation-duration: 0.15s;
+  -webkit-animation-duration: 0.15s;
+  animation-timing-function: ease-out;
+  -webkit-animation-timing-function: ease-out;
+  transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  -webkit-transform-origin: 50% 0%;
+}
+
+@keyframes pullDown {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.pullUp {
+  visibility: hidden;
+  animation-name: pullDown;
+  -webkit-animation-name: pullDown;
+  animation-duration: 0.1s;
+  -webkit-animation-duration: 0.1s;
+  animation-timing-function: ease-out;
+  -webkit-animation-timing-function: ease-out;
+  animation-direction: reverse;
+  transform-origin: 50% 0%;
+  -ms-transform-origin: 50% 0%;
+  -webkit-transform-origin: 50% 0%;
 }
 
 /*@!
 ################################################################
 @!*/
+*:hover,
+*:focus {
+  outline: none;
+}
+
 *:hover,
 *:focus {
   outline: none;
@@ -2524,7 +2848,7 @@ big-modal-con > modal > .close {
   background: #ff87cb;
 }
 
-*:hover,
+:hover,
 *:focus {
   outline: none;
 }
@@ -2538,128 +2862,166 @@ big-modal-con > modal > .close {
 
 .mui-range {
   -webkit-appearance: none;
-  width: 200px;
-  height: 8px;
+  width: auto;
+  height: 2px;
   border-radius: 4px;
-  background: rgba(203, 203, 203, 0.2);
+  background: rgba(153, 163, 164, 0.2);
   margin: 0;
   transition: background 0.5s ease-in-out;
 }
 .mui-range::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: #cbcbcb;
   cursor: pointer;
-  transition: background 0.15s ease-in-out;
+  transition: all 0.15s ease-in;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
 .mui-range::-webkit-slider-thumb:hover {
   background: #1abc9c;
 }
 .mui-range:hover {
-  background: rgba(203, 203, 203, 0.6);
+  background: rgba(153, 163, 164, 0.6);
 }
 .mui-range:active::-webkit-slider-thumb {
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   background: #fff;
-  border: 3px solid #2c3e50;
 }
 
-input.earth.mui-range::-webkit-slider-thumb {
+.mui-range.earth {
+  background: rgba(52, 197, 89, 0.7);
+}
+.mui-range.earth::-webkit-slider-thumb {
   background: #34c559;
 }
 
-input.night.mui-range::-webkit-slider-thumb {
+.mui-range.night {
+  background: rgba(66, 66, 66, 0.7);
+}
+.mui-range.night::-webkit-slider-thumb {
   background: #424242;
 }
 
-input.ocean.mui-range::-webkit-slider-thumb {
+.mui-range.ocean {
+  background: rgba(46, 114, 238, 0.7);
+}
+.mui-range.ocean::-webkit-slider-thumb {
   background: #2e72ee;
 }
 
-input.red.mui-range::-webkit-slider-thumb {
+.mui-range.red {
+  background: rgba(233, 48, 48, 0.7);
+}
+.mui-range.red::-webkit-slider-thumb {
   background: #e93030;
 }
 
-input.snow.mui-range::-webkit-slider-thumb {
+.mui-range.snow {
+  background: rgba(255, 255, 255, 0.7);
+}
+.mui-range.snow::-webkit-slider-thumb {
   background: #fff;
 }
 
-input.yellow.mui-range::-webkit-slider-thumb {
+.mui-range.yellow {
+  background: rgba(231, 213, 7, 0.7);
+}
+.mui-range.yellow::-webkit-slider-thumb {
   background: #e7d507;
 }
 
-input.purple.mui-range::-webkit-slider-thumb {
+.mui-range.purple {
+  background: rgba(105, 36, 240, 0.7);
+}
+.mui-range.purple::-webkit-slider-thumb {
   background: #6924f0;
 }
 
-input.pink.mui-range::-webkit-slider-thumb {
+.mui-range.pink {
+  background: rgba(255, 135, 203, 0.7);
+}
+.mui-range.pink::-webkit-slider-thumb {
   background: #ff87cb;
 }
 
-.wave {
-  position: relative;
-  overflow: hidden;
-  transform: translate3d(0, 0, 0);
+.mui-range.cyan {
+  background: rgba(0, 188, 212, 0.7);
 }
-.wave:after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  display: block;
+.mui-range.cyan::-webkit-slider-thumb {
+  background: #00bcd4;
+}
+
+.ripple.dark > .md-ripple > .rippleWave {
+  background: rgba(0, 0, 0, 0.5);
+}
+.ripple.light > .md-ripple > .rippleWave {
+  background: white;
+}
+
+.md-ripple {
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  border-radius: inherit;
   pointer-events: none;
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-  background-repeat: no-repeat;
-  background-position: 50%;
-  transform: scale(10, 10);
-  opacity: 0;
-  transition: transform 0.5s, opacity 1s;
+  animation: ripple-shadow 0.4s forwards;
+  -webkit-animation: ripple-shadow 0.4s forwards;
 }
-.wave:active:after {
-  transform: scale(0, 0);
-  opacity: 0.3;
-  transition: 0s;
-}
-
-.wave.earth.text:after {
-  background-image: radial-gradient(circle, #34c559 10%, transparent 10.01%);
+.md-ripple > .rippleWave {
+  backface-visibility: hidden;
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0.7);
+  background: white;
+  -webkit-transform: scale(0.7);
+  opacity: 0.45;
+  animation: ripple 2s forwards;
+  -webkit-animation: ripple 2s forwards;
 }
 
-.wave.night.text:after {
-  background-image: radial-gradient(circle, #424242 10%, transparent 10.01%);
+@keyframes ripple-shadow {
+  0% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  20% {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
 }
-
-.wave.ocean.text:after {
-  background-image: radial-gradient(circle, #2e72ee 10%, transparent 10.01%);
+@-webkit-keyframes ripple-shadow {
+  0% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  20% {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
 }
-
-.wave.red.text:after {
-  background-image: radial-gradient(circle, #e93030 10%, transparent 10.01%);
+@keyframes ripple {
+  to {
+    transform: scale(24);
+    opacity: 0;
+  }
 }
-
-.wave.snow.text:after {
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+@-webkit-keyframes ripple {
+  to {
+    -webkit-transform: scale(24);
+    opacity: 0;
+  }
 }
-
-.wave.yellow.text:after {
-  background-image: radial-gradient(circle, #e7d507 10%, transparent 10.01%);
-}
-
-.wave.purple.text:after {
-  background-image: radial-gradient(circle, #6924f0 10%, transparent 10.01%);
-}
-
-.wave.pink.text:after {
-  background-image: radial-gradient(circle, #ff87cb 10%, transparent 10.01%);
-}
-
 *:hover,
 *:focus {
   outline: none;
@@ -2899,7 +3261,6 @@ slideDown Animation
   font-family: "Roboto", san-serif;
   border-spacing: 0;
   border-radius: 6px;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
 }
 .mui-table thead {
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
@@ -3014,126 +3375,67 @@ slideDown Animation
   text-indent: 45px;
 }
 
-.mui-switch.earth > input:checked ~ span:before {
+mui-switch.earth > input:checked ~ span:before {
   background: rgba(52, 197, 89, 0.5);
 }
-.mui-switch.earth > input:checked ~ span:after {
+mui-switch.earth > input:checked ~ span:after {
   left: 15px;
   background: #34c559;
   border-color: #34c559;
 }
 
-.mui-switch.night > input:checked ~ span:before {
+mui-switch.night > input:checked ~ span:before {
   background: rgba(66, 66, 66, 0.5);
 }
-.mui-switch.night > input:checked ~ span:after {
+mui-switch.night > input:checked ~ span:after {
   left: 15px;
   background: #424242;
   border-color: #424242;
 }
 
-.mui-switch.ocean > input:checked ~ span:before {
+mui-switch.ocean > input:checked ~ span:before {
   background: rgba(46, 114, 238, 0.5);
 }
-.mui-switch.ocean > input:checked ~ span:after {
+mui-switch.ocean > input:checked ~ span:after {
   left: 15px;
   background: #2e72ee;
   border-color: #2e72ee;
 }
 
-.mui-switch.red > input:checked ~ span:before {
+mui-switch.red > input:checked ~ span:before {
   background: rgba(233, 48, 48, 0.5);
 }
-.mui-switch.red > input:checked ~ span:after {
+mui-switch.red > input:checked ~ span:after {
   left: 15px;
   background: #e93030;
   border-color: #e93030;
 }
 
-.mui-switch.yellow > input:checked ~ span:before {
+mui-switch.yellow > input:checked ~ span:before {
   background: rgba(231, 213, 7, 0.5);
 }
-.mui-switch.yellow > input:checked ~ span:after {
+mui-switch.yellow > input:checked ~ span:after {
   left: 15px;
   background: #e7d507;
   border-color: #e7d507;
 }
 
-.mui-switch.purple > input:checked ~ span:before {
+mui-switch.purple > input:checked ~ span:before {
   background: rgba(105, 36, 240, 0.5);
 }
-.mui-switch.purple > input:checked ~ span:after {
+mui-switch.purple > input:checked ~ span:after {
   left: 15px;
   background: #6924f0;
   border-color: #6924f0;
 }
 
-.mui-switch.pink > input:checked ~ span:before {
+mui-switch.pink > input:checked ~ span:before {
   background: rgba(255, 135, 203, 0.5);
 }
-.mui-switch.pink > input:checked ~ span:after {
+mui-switch.pink > input:checked ~ span:after {
   left: 15px;
   background: #ff87cb;
   border-color: #ff87cb;
-}
-
-.wave {
-  position: relative;
-  overflow: hidden;
-  transform: translate3d(0, 0, 0);
-}
-.wave:after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-  background-repeat: no-repeat;
-  background-position: 50%;
-  transform: scale(10, 10);
-  opacity: 0;
-  transition: transform 0.5s, opacity 1s;
-}
-.wave:active:after {
-  transform: scale(0, 0);
-  opacity: 0.3;
-  transition: 0s;
-}
-
-.wave.earth.text:after {
-  background-image: radial-gradient(circle, #34c559 10%, transparent 10.01%);
-}
-
-.wave.night.text:after {
-  background-image: radial-gradient(circle, #424242 10%, transparent 10.01%);
-}
-
-.wave.ocean.text:after {
-  background-image: radial-gradient(circle, #2e72ee 10%, transparent 10.01%);
-}
-
-.wave.red.text:after {
-  background-image: radial-gradient(circle, #e93030 10%, transparent 10.01%);
-}
-
-.wave.snow.text:after {
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-}
-
-.wave.yellow.text:after {
-  background-image: radial-gradient(circle, #e7d507 10%, transparent 10.01%);
-}
-
-.wave.purple.text:after {
-  background-image: radial-gradient(circle, #6924f0 10%, transparent 10.01%);
-}
-
-.wave.pink.text:after {
-  background-image: radial-gradient(circle, #ff87cb 10%, transparent 10.01%);
 }
 
 .z-0 {
@@ -3264,6 +3566,65 @@ slideDown Animation
 .z-anim {
   transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
   will-change: box-shadow;
+}
+
+.wave {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+.wave:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform 0.5s, opacity 1s;
+}
+.wave:active:after {
+  transform: scale(0, 0);
+  opacity: 0.3;
+  transition: 0s;
+}
+
+.wave.earth.text:after {
+  background-image: radial-gradient(circle, #34c559 10%, transparent 10.01%);
+}
+
+.wave.night.text:after {
+  background-image: radial-gradient(circle, #424242 10%, transparent 10.01%);
+}
+
+.wave.ocean.text:after {
+  background-image: radial-gradient(circle, #2e72ee 10%, transparent 10.01%);
+}
+
+.wave.red.text:after {
+  background-image: radial-gradient(circle, #e93030 10%, transparent 10.01%);
+}
+
+.wave.snow.text:after {
+  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+}
+
+.wave.yellow.text:after {
+  background-image: radial-gradient(circle, #e7d507 10%, transparent 10.01%);
+}
+
+.wave.purple.text:after {
+  background-image: radial-gradient(circle, #6924f0 10%, transparent 10.01%);
+}
+
+.wave.pink.text:after {
+  background-image: radial-gradient(circle, #ff87cb 10%, transparent 10.01%);
 }
 
 .ripple.dark > .md-ripple > .rippleWave {
