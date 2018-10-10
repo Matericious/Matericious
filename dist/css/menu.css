@@ -2,9 +2,10 @@
   width: auto;
   min-width: 120px;
   height: auto;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
   list-style: none;
-  padding: 10px 0 15px 0;
+  padding: 8px 0 8px 0;
   border-radius: 2px;
   background: #fff;
   visibility: hidden;
@@ -13,20 +14,23 @@
   z-index: 1;
 }
 .mui-menu > li {
-  width: 100%;
-  height: 40px;
-  line-height: 40px;
-  text-transform: capitalize;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 16px;
 }
-.mui-menu > li > button {
+.mui-menu > li > a {
   width: 100%;
   text-align: left;
+  font-family: "Roboto", san-serif;
+  font-size: 1rem;
+  color: #424242;
+  text-decoration: none;
   border-radius: 0;
 }
-.mui-menu > li > button > i {
+.mui-menu > li > a > i {
   vertical-align: middle;
 }
-.mui-menu > li > button:hover {
+.mui-menu > li:hover {
   background: #f2f2f2 !important;
 }
 .mui-menu > hr {
@@ -37,13 +41,12 @@
 }
 
 /*CSS Animations*/
-/*#############################################################################################################*/
 .pullDown {
   visibility: visible;
   animation-name: pullDown;
   -webkit-animation-name: pullDown;
-  animation-duration: .15s;
-  -webkit-animation-duration: .15s;
+  animation-duration: 0.15s;
+  -webkit-animation-duration: 0.15s;
   animation-timing-function: ease-out;
   -webkit-animation-timing-function: ease-out;
   transform-origin: 50% 0%;
@@ -63,8 +66,8 @@
   visibility: hidden;
   animation-name: pullDown;
   -webkit-animation-name: pullDown;
-  animation-duration: .1s;
-  -webkit-animation-duration: .1s;
+  animation-duration: 0.1s;
+  -webkit-animation-duration: 0.1s;
   animation-timing-function: ease-out;
   -webkit-animation-timing-function: ease-out;
   animation-direction: reverse;
