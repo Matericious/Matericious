@@ -1,6 +1,6 @@
 /*##############################################################################################################################################*/
 /* Reference specs https://material.io/design/components/data-tables.html#specs */
-.mui-table {
+.table {
   width: 100%;
   display: table;
   background: white;
@@ -9,14 +9,14 @@
   border-spacing: 0;
   border-radius: 6px;
 }
-.mui-table thead {
+.table thead {
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
-.mui-table tr {
+.table tr {
   height: 48px;
   border-bottom: 0;
 }
-.mui-table td, .mui-table th {
+.table td, .table th {
   padding: 16px;
   font-size: 12px;
   color: rgba(0, 0, 0, 0.54);
@@ -25,27 +25,27 @@
   text-align: left;
   vertical-align: middle;
 }
-.mui-table td, .mui-table tr {
+.table td, .table tr {
   font-size: 13px;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.87);
 }
-.mui-table.zebra tr {
+.table.zebra tr {
   border-bottom: none;
 }
-.mui-table.zebra > tbody > tr:nth-child(odd) {
+.table.zebra > tbody > tr:nth-child(odd) {
   background-color: rgba(242, 242, 242, 0.5);
 }
-.mui-table.zebra > tbody > tr > td {
+.table.zebra > tbody > tr > td {
   border-radius: 0;
 }
-.mui-table.pop > tbody > tr {
+.table.pop > tbody > tr {
   -webkit-transition: background-color .25s ease;
   transition: background-color .25s ease;
 }
-.mui-table.pop > tbody > tr:hover {
+.table.pop > tbody > tr:hover {
   background-color: rgba(242, 242, 242, 0.5);
 }
-.mui-table.line tr {
+.table.line tr {
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 }
