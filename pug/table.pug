@@ -1,0 +1,29 @@
+- var title = 'Table'
+doctype
+html(lang='en')
+  head
+    include /includes/head.pug
+  body(style='background:#eee')
+      h3= title
+      - 
+        var tables = {
+          'zebra':'Zebra',
+          'pop':'Hover',
+          'line':'Lined'
+        };
+      each name,cls in tables
+        h3= name + ' Table'
+        div(style='width:500px')
+          table(class='table z-1 '+cls)
+            thead
+              tr
+                th First
+                th last
+                th Price
+            tbody
+              - for(var i = 0; i < 3; i++)
+                tr
+                  td John
+                  td Doe
+                  td $10
+        br
