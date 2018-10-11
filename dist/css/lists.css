@@ -1,5 +1,8 @@
-/*##############################################################################################################################################*/
-.mui-list {
+.mylist {
+  width: 500px;
+}
+
+.list {
   max-width: 100%;
   height: auto;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
@@ -8,25 +11,25 @@
   border-radius: 2px;
   background: #fff;
 }
-.mui-list > li {
+.list > li {
   width: 100%;
   height: 50px;
   line-height: 50px;
   text-indent: 20px;
   font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
 }
-.mui-list > li:hover {
+.list > li:hover {
   background: #efefef;
 }
-.mui-list > li > label {
+.list > li > label {
   font-size: 18px;
 }
-.mui-list > li > span {
+.list > li > span {
   display: block;
   font-size: 14px;
   color: #aeafaf;
 }
-.mui-list > li > i {
+.list > li > i {
   font-size: 25px;
   vertical-align: middle;
   color: #aeafaf;
@@ -34,37 +37,37 @@
   left: -25px;
   top: -2px;
 }
-.mui-list > li > i.trail-icon {
+.list > li > i.trail-icon {
   display: inline-block;
   float: right;
   top: 12px;
   left: -20px;
 }
-.mui-list > li.two-line {
+.list > li.two-line {
   padding: 10px 0 10px 0;
   height: auto;
   line-height: 20px;
 }
-.mui-list > li.two-line .lead-icon {
+.list > li.two-line .lead-icon {
   font-size: 35px;
   top: 10px;
 }
-.mui-list > li.two-line-lead {
+.list > li.two-line-lead {
   padding: 10px 0 0px 0;
   height: auto;
   line-height: 20px;
 }
-.mui-list > li.two-line-lead .lead-icon {
+.list > li.two-line-lead .lead-icon {
   font-size: 35px;
   top: 10px;
 }
-.mui-list > li.two-line-lead > span {
+.list > li.two-line-lead > span {
   text-indent: 80px;
 }
-.mui-list > li.two-line-lead > .trail-icon {
+.list > li.two-line-lead > .trail-icon {
   top: -40px;
 }
-.mui-list > hr {
+.list > hr {
   width: 100%;
   height: 1px;
   border: none;
