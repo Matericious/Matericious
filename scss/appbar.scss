@@ -2,7 +2,7 @@
 @import "_variables.scss";
 
 
-.mui-appbar {
+.appbar {
   width: 100%;
   height: 60px;
   background: color('ocean');
@@ -61,7 +61,7 @@
 }
 
 @media screen and (max-width: 500px){
-  .mui-appbar{
+  .appbar{
     > div{
       width: 100%;
       > section{
@@ -93,4 +93,4 @@ $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink
   }
 }
 
-@include build-color-class(".mui-appbar", $color_vars);
+@include build-color-class(".appbar", $color_vars);
