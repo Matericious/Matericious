@@ -1,5 +1,4 @@
-
-.mui-appbar {
+.appbar {
   width: 100%;
   height: 60px;
   background: #2e72ee;
@@ -8,18 +7,18 @@
   overflow: hidden;
   color: #fff;
 }
-.mui-appbar.raised {
+.appbar.raised {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
-.mui-appbar > div {
+.appbar > div {
   width: 95%;
   margin: 0 auto;
   height: 100%;
 }
-.mui-appbar > div > section {
+.appbar > div > section {
   display: inline-block;
 }
-.mui-appbar > div > section.left {
+.appbar > div > section.left {
   width: 200px;
   height: 100%;
   display: inline-block;
@@ -28,10 +27,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.mui-appbar > div > section.left > label {
+.appbar > div > section.left > label {
   margin-left: 10px;
 }
-.mui-appbar > div > section.right {
+.appbar > div > section.right {
   width: auto;
   height: 100%;
   display: flex;
@@ -40,80 +39,80 @@
   justify-content: flex-end;
   overflow: hidden;
 }
-.mui-appbar > div > section > label {
+.appbar > div > section > label {
   font-size: 16px;
   color: inherit;
   vertical-align: middle;
   font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
 }
-.mui-appbar > div > section > button {
+.appbar > div > section > button {
   width: 45px;
   height: 45px;
   color: inherit;
 }
-.mui-appbar > div > section > button > i {
+.appbar > div > section > button > i {
   font-size: 20px;
   vertical-align: middle;
 }
 
 @media screen and (max-width: 500px) {
-  .mui-appbar > div {
+  .appbar > div {
     width: 100%;
   }
-  .mui-appbar > div > section.left {
+  .appbar > div > section.left {
     width: 45%;
   }
-  .mui-appbar > div > section.right {
+  .appbar > div > section.right {
     width: 40%;
   }
-  .mui-appbar > div > section > button {
+  .appbar > div > section > button {
     width: 30px;
     height: 30px;
   }
 }
-.mui-appbar.earth {
+.appbar.earth {
   background: #34c559;
   color: #fff;
 }
 
-.mui-appbar.night {
+.appbar.night {
   background: #424242;
   color: #fff;
 }
 
-.mui-appbar.ocean {
+.appbar.ocean {
   background: #2e72ee;
   color: #fff;
 }
 
-.mui-appbar.red {
+.appbar.red {
   background: #e93030;
   color: #fff;
 }
 
-.mui-appbar.snow {
+.appbar.snow {
   background: #fff;
   color: #fff;
   color: #424242;
 }
 
-.mui-appbar.yellow {
+.appbar.yellow {
   background: #e7d507;
   color: #fff;
   color: #424242;
 }
 
-.mui-appbar.purple {
+.appbar.purple {
   background: #6924f0;
   color: #fff;
 }
 
-.mui-appbar.pink {
+.appbar.pink {
   background: #ff87cb;
   color: #fff;
 }
 
-.mui-appbar.cyan {
+.appbar.cyan {
   background: #00bcd4;
   color: #fff;
 }
