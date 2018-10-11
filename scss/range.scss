@@ -12,7 +12,7 @@
   user-select: none;
 }
 
-.mui-range{
+.range{
   -webkit-appearance: none;
   width: auto;
   height: 2px;
@@ -56,5 +56,4 @@
 
 $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink", "cyan";
 
-@include build-color-class(".mui-range", $color_vars);
-
+@include build-color-class(".range", $color_vars);
