@@ -12,7 +12,8 @@ $size: 22px;
 a{
   text-decoration: none;
 }
-.mui-chips {
+
+.chips {
   background: color('basic', .6);
   padding: 8px;
   border-radius: 30px;
@@ -119,4 +120,4 @@ a{
 }
 
 $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
-@include build-color-class(".mui-chips", $color_vars);
+@include build-color-class(".chips", $color_vars);
