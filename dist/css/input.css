@@ -1,4 +1,3 @@
-/*##############################################################################################################################################*/
 /*@!
 ################################################################
 @!*/
@@ -7,91 +6,91 @@
   outline: none;
 }
 
-.mui-input {
+.input {
   position: relative;
 }
-.mui-input > input {
+.input > input {
   width: 100%;
   background: transparent;
   padding: 8px 0px;
   border: none;
-  border-bottom: 2px solid #99A3A4;
+  border-bottom: 2px solid #969696;
   transition: border-color .5s;
   cursor: pointer;
 }
-.mui-input > input:focus ~ label, .mui-input > input:valid ~ label {
+.input > input:focus ~ label, .input > input:valid ~ label {
   bottom: 32px;
   font-size: 12px;
 }
-.mui-input > input:hover, .mui-input > input:focus {
+.input > input:hover, .input > input:focus {
   border-bottom: 2px solid #424242;
 }
-.mui-input > input:hover:active, .mui-input > input:hover:focus, .mui-input > input:focus:active, .mui-input > input:focus:focus {
+.input > input:hover:active, .input > input:hover:focus, .input > input:focus:active, .input > input:focus:focus {
   cursor: text;
 }
-.mui-input > label {
+.input > label {
   position: absolute;
   display: block;
   bottom: 8px;
   font-sizE: 17px;
   font-family: "Roboto", san-serif;
   transition: all 200ms;
-  color: #99A3A4;
+  color: #969696;
   z-index: -1;
 }
 
-.mui-input.earth > input:hover, .mui-input.earth > input:focus {
+.input.earth > input:hover, .input.earth > input:focus {
   border-color: #34c559;
 }
-.mui-input.earth > input:hover ~ label, .mui-input.earth > input:focus ~ label {
+.input.earth > input:hover ~ label, .input.earth > input:focus ~ label {
   color: #34c559;
 }
 
-.mui-input.night > input:hover, .mui-input.night > input:focus {
+.input.night > input:hover, .input.night > input:focus {
   border-color: #424242;
 }
-.mui-input.night > input:hover ~ label, .mui-input.night > input:focus ~ label {
+.input.night > input:hover ~ label, .input.night > input:focus ~ label {
   color: #424242;
 }
 
-.mui-input.ocean > input:hover, .mui-input.ocean > input:focus {
+.input.ocean > input:hover, .input.ocean > input:focus {
   border-color: #2e72ee;
 }
-.mui-input.ocean > input:hover ~ label, .mui-input.ocean > input:focus ~ label {
+.input.ocean > input:hover ~ label, .input.ocean > input:focus ~ label {
   color: #2e72ee;
 }
 
-.mui-input.red > input:hover, .mui-input.red > input:focus {
+.input.red > input:hover, .input.red > input:focus {
   border-color: #e93030;
 }
-.mui-input.red > input:hover ~ label, .mui-input.red > input:focus ~ label {
+.input.red > input:hover ~ label, .input.red > input:focus ~ label {
   color: #e93030;
 }
 
-.mui-input.snow > input:hover, .mui-input.snow > input:focus {
+.input.snow > input:hover, .input.snow > input:focus {
   border-color: #fff;
 }
-.mui-input.snow > input:hover ~ label, .mui-input.snow > input:focus ~ label {
+.input.snow > input:hover ~ label, .input.snow > input:focus ~ label {
   color: #fff;
 }
 
-.mui-input.yellow > input:hover, .mui-input.yellow > input:focus {
+.input.yellow > input:hover, .input.yellow > input:focus {
   border-color: #e7d507;
 }
-.mui-input.yellow > input:hover ~ label, .mui-input.yellow > input:focus ~ label {
+.input.yellow > input:hover ~ label, .input.yellow > input:focus ~ label {
   color: #e7d507;
 }
 
-.mui-input.purple > input:hover, .mui-input.purple > input:focus {
+.input.purple > input:hover, .input.purple > input:focus {
   border-color: #6924f0;
 }
-.mui-input.purple > input:hover ~ label, .mui-input.purple > input:focus ~ label {
+.input.purple > input:hover ~ label, .input.purple > input:focus ~ label {
   color: #6924f0;
 }
 
-.mui-input.pink > input:hover, .mui-input.pink > input:focus {
+.input.pink > input:hover, .input.pink > input:focus {
   border-color: #ff87cb;
 }
-.mui-input.pink > input:hover ~ label, .mui-input.pink > input:focus ~ label {
+.input.pink > input:hover ~ label, .input.pink > input:focus ~ label {
   color: #ff87cb;
 }
