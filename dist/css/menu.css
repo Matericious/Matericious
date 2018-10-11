@@ -1,4 +1,4 @@
-.mui-menu {
+.menu {
   width: auto;
   min-width: 120px;
   height: auto;
@@ -13,12 +13,12 @@
   top: 0px;
   z-index: 1;
 }
-.mui-menu > li {
+.menu > li {
   height: 48px;
   line-height: 48px;
   padding: 0 16px;
 }
-.mui-menu > li > a {
+.menu > li > a {
   width: 100%;
   text-align: left;
   font-family: "Roboto", san-serif;
@@ -27,13 +27,13 @@
   text-decoration: none;
   border-radius: 0;
 }
-.mui-menu > li > a > i {
+.menu > li > a > i {
   vertical-align: middle;
 }
-.mui-menu > li:hover {
+.menu > li:hover {
   background: #f2f2f2 !important;
 }
-.mui-menu > hr {
+.menu > hr {
   width: 100%;
   height: 1px;
   border: none;
