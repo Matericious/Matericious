@@ -2,7 +2,12 @@
 @import "_variables.scss";
 
 
-.mui-card{
+$modal-primary-font: "Ubuntu", sans-serif;
+$modal-secondary-font: "Rubik", sans-serif;
+$modal-position: 2em;
+
+
+.card{
   width: 300px;
   height: auto;
   background: #fff;
