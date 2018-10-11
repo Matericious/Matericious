@@ -14,7 +14,7 @@
   outline: none;
 }
 
-.mui-input {
+.input {
   position: relative;
   > input{
     width: 100%;
@@ -61,4 +61,4 @@
 }
 
 $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
-@include build-color-class(".mui-input", $color_vars);
+@include build-color-class(".input", $color_vars);
