@@ -1,4 +1,4 @@
-:hover,
+*:hover,
 *:focus {
   outline: none;
 }
@@ -10,7 +10,7 @@
   user-select: none;
 }
 
-.mui-checkbox {
+.checkbox {
   position: relative;
   display: inline-block;
   color: #424242;
@@ -20,7 +20,7 @@
   font-size: 14px;
   padding-right: 15px;
 }
-.mui-checkbox > input {
+.checkbox > input {
   width: 48px;
   height: 48px;
   margin: 0px;
@@ -37,34 +37,34 @@
   -moz-appearance: none;
   -webkit-appearance: none;
 }
-.mui-checkbox > input:checked {
+.checkbox > input:checked {
   background: #0091ea;
 }
-.mui-checkbox > input:checked + span::after {
+.checkbox > input:checked + span::after {
   border-color: #fff;
 }
-.mui-checkbox > input:checked + span::before {
+.checkbox > input:checked + span::before {
   border-color: #0091ea;
   background: #0091ea;
 }
-.mui-checkbox > input:checked:disabled + span::before {
+.checkbox > input:checked:disabled + span::before {
   border-color: transparent;
   background: rgba(0, 0, 0, 0.26);
 }
-.mui-checkbox > input:disabled {
+.checkbox > input:disabled {
   opacity: 0;
 }
-.mui-checkbox > input:disabled + span {
+.checkbox > input:disabled + span {
   color: rgba(0, 0, 0, 0.38);
   cursor: initial;
 }
-.mui-checkbox > input:disabled + span::before {
+.checkbox > input:disabled + span::before {
   border-color: rgba(0, 0, 0, 0.26);
 }
-.mui-checkbox > input:active + span::before {
+.checkbox > input:active + span::before {
   border-color: #0091ea;
 }
-.mui-checkbox > span::before {
+.checkbox > span::before {
   content: "";
   width: 14px;
   height: 14px;
@@ -75,7 +75,7 @@
   vertical-align: middle;
   transition: border-color 0.5s, background 0.5s;
 }
-.mui-checkbox > span::after {
+.checkbox > span::after {
   content: "";
   width: 5px;
   height: 10px;
@@ -90,85 +90,85 @@
   transform: translate(5.5px, 1px) rotate(45deg);
   -ms-transform: translate(5.5px, 1px) rotate(45deg);
 }
-.mui-checkbox:active > input {
+.checkbox:active > input {
   opacity: 1;
   transform: scale(0);
   transition: opacity 0s, transform 0s;
 }
 
-.mui-checkbox.earth > input:checked {
+.checkbox.earth > input:checked {
   background: #34c559;
 }
-.mui-checkbox.earth > input:checked + span::before {
+.checkbox.earth > input:checked + span::before {
   border-color: #34c559;
   background: #34c559;
 }
-.mui-checkbox.earth > input:active + span::before {
+.checkbox.earth > input:active + span::before {
   border-color: #34c559;
 }
 
-.mui-checkbox.night > input:checked {
+.checkbox.night > input:checked {
   background: #424242;
 }
-.mui-checkbox.night > input:checked + span::before {
+.checkbox.night > input:checked + span::before {
   border-color: #424242;
   background: #424242;
 }
-.mui-checkbox.night > input:active + span::before {
+.checkbox.night > input:active + span::before {
   border-color: #424242;
 }
 
-.mui-checkbox.ocean > input:checked {
+.checkbox.ocean > input:checked {
   background: #2e72ee;
 }
-.mui-checkbox.ocean > input:checked + span::before {
+.checkbox.ocean > input:checked + span::before {
   border-color: #2e72ee;
   background: #2e72ee;
 }
-.mui-checkbox.ocean > input:active + span::before {
+.checkbox.ocean > input:active + span::before {
   border-color: #2e72ee;
 }
 
-.mui-checkbox.red > input:checked {
+.checkbox.red > input:checked {
   background: #e93030;
 }
-.mui-checkbox.red > input:checked + span::before {
+.checkbox.red > input:checked + span::before {
   border-color: #e93030;
   background: #e93030;
 }
-.mui-checkbox.red > input:active + span::before {
+.checkbox.red > input:active + span::before {
   border-color: #e93030;
 }
 
-.mui-checkbox.yellow > input:checked {
+.checkbox.yellow > input:checked {
   background: #e7d507;
 }
-.mui-checkbox.yellow > input:checked + span::before {
+.checkbox.yellow > input:checked + span::before {
   border-color: #e7d507;
   background: #e7d507;
 }
-.mui-checkbox.yellow > input:active + span::before {
+.checkbox.yellow > input:active + span::before {
   border-color: #e7d507;
 }
 
-.mui-checkbox.purple > input:checked {
+.checkbox.purple > input:checked {
   background: #6924f0;
 }
-.mui-checkbox.purple > input:checked + span::before {
+.checkbox.purple > input:checked + span::before {
   border-color: #6924f0;
   background: #6924f0;
 }
-.mui-checkbox.purple > input:active + span::before {
+.checkbox.purple > input:active + span::before {
   border-color: #6924f0;
 }
 
-.mui-checkbox.pink > input:checked {
+.checkbox.pink > input:checked {
   background: #ff87cb;
 }
-.mui-checkbox.pink > input:checked + span::before {
+.checkbox.pink > input:checked + span::before {
   border-color: #ff87cb;
   background: #ff87cb;
 }
-.mui-checkbox.pink > input:active + span::before {
+.checkbox.pink > input:active + span::before {
   border-color: #ff87cb;
 }
