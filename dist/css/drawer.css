@@ -1,0 +1,186 @@
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  transition: margin-left .5s;
+}
+body.overlay {
+  overflow: hidden;
+}
+body.overlay.fadeIn:after {
+  visibility: visible !important;
+  transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-animation: fadeIn 0.5s;
+  -moz-animation: fadeIn 0.5s;
+  animation: fadeIn 0.5s;
+}
+body.overlay:after {
+  content: "";
+  width: 100%;
+  height: 140vh;
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  visibility: hidden;
+}
+
+.drawer {
+  width: 240px;
+  height: 100vh;
+  max-width: calc(100% - 56px);
+  background: #fff;
+  padding-left: 8px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: fixed;
+  transition: left .4s;
+  top: 0px;
+  left: -100%;
+  z-index: 2;
+  border-right: 1px solid #ccc;
+}
+.drawer > .header {
+  width: 95%;
+  height: 45px;
+  margin: 0px auto;
+  line-height: 25px;
+}
+.drawer > .header.image {
+  text-indent: 15px;
+  display: inline-block;
+}
+.drawer > .header > img {
+  width: 45px;
+  height: 45px;
+  float: left;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.drawer > .header > h3,
+.drawer > .header > h5 {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", san-serif;
+}
+.drawer > .header > h3 {
+  font-size: 22px;
+}
+.drawer > .header > h5 {
+  font-size: 15px;
+  color: #989898;
+  font-weight: normal;
+  margin-top: -4px;
+}
+.drawer > .content {
+  width: auto;
+  height: calc(100% - 80px);
+  padding-top: 5px;
+  padding-right: 6px;
+  overflow-y: scroll;
+}
+.drawer > .content::-webkit-scrollbar {
+  width: 4px;
+}
+.drawer > .content::-webkit-scrollbar-track {
+  background: #fff;
+}
+.drawer > .content::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.drawer > .content h4 {
+  height: 30px;
+  font-size: 15px;
+  color: #989898;
+  padding: 0;
+  margin: 0;
+  margin-left: 10px;
+  font-weight: normal;
+  line-height: 30px;
+  font-family: "Roboto", san-serif;
+}
+.drawer > .content > ul {
+  box-shadow: none;
+  padding-top: 0px;
+  margin: 0;
+}
+.drawer > .content > ul > li {
+  height: 45px;
+  font-size: 15px;
+  line-height: 45px;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.drawer > .content > ul > li > i {
+  font-size: 22px;
+  margin-left: -10px;
+}
+.drawer > .content > ul > li > label {
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/*Fade In and Out animations*/
+/*#####################################FadeIn Animation*/
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fadeOut {
+  transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-animation: fadeOut 1s;
+  -moz-animation: fadeOut 1s;
+  animation: fadeOut 1s;
+  visibility: hidden;
+}
+
+@-moz-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
