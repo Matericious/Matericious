@@ -8,6 +8,6 @@ html(lang='en')
           h3= title
           - var colors = ['basic', 'earth', 'night', 'ocean', 'red', 'yellow', 'pink'];
           each color in colors
-            label(class=color mui-checkbox)
+            label(class='checkbox '+color)
               input(type='checkbox')
               span #{color}
