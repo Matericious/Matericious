@@ -2,7 +2,7 @@ $default-break-point: 600px;
 
 @mixin build-grid() {
   @for $i from 1 through 100 {
-    > [col= "#{$i}"] {
+    > .col-#{$i} {
       flex-basis: #{$i+"%"};
     }
   }
@@ -10,7 +10,7 @@ $default-break-point: 600px;
 
 @mixin build-break-points() {
   @for $i from 1 through 10 {
-    [mui-row= "#{$i}"] {
+    .break-#{$i} {
       @media screen and (max-width: #{$i+"00px"}) {
         flex-flow: column wrap;
         display: block;
@@ -22,13 +22,13 @@ $default-break-point: 600px;
   }
 }
 
-[mui-row] {
+.row {
   width: 100%;
   height: auto;
   display: flex;
 }
 
-[mui-row] {
+.row {
   > * {
     flex: 1 1 auto;
   }
@@ -39,7 +39,7 @@ $default-break-point: 600px;
 
 /*Default breaking point */
 @media screen and (max-width: $default-break-point) {
-  [mui-row] {
+  .row {
     flex-flow: column wrap;
     display: block;
     > * {
