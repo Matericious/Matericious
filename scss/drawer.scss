@@ -177,6 +177,7 @@ body {
         list-style-type: none;
         box-shadow: none;
         cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
         > hr {
           height: 0;
           margin: 3px 0 4px;
