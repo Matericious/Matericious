@@ -9,48 +9,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://rawgit.com/Matericious/Matericious/master/dist/css/drawer.css">
-  <link rel="stylesheet" href="https://rawgit.com/Matericious/Matericious/master/dist/css/lists.css">
-  <link rel="stylesheet" href="https://rawgit.com/Matericious/Matericious/master/dist/css/buttons.css">
+  <style>
+    .toplink {
+      font-size: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      margin-top: 20px;
+    }
+  </style>
 
   <body>
-    <aside class="drawer">
-      <div class="header">
-        <h3 class="title">Mail</h3>
-        <h6 class="subtitle">info@matericious.com</h6>
-      </div>
-      <div class="content">
-        <nav class="list">
-          <a class="night ripple">
-            <i class="material-icons">mail</i>Inbox
-          </a>
-          <a class="night ripple">
-            <i class="material-icons">send</i>Sent
-          </a>
-          <a class="night ripple">
-            <i class="material-icons">favorite</i>Favorite
-          </a>
-          <a class="night ripple">
-            <i class="material-icons">archive</i>Archive
-          </a>
-          <hr>
-          <h6 class="subheader">Labels</h6>
-          <a class="night ripple">
-            <i class="material-icons">delete</i>Delete
-          </a>
-          <a class="night ripple">
-            <i class="material-icons">add_box</i>Add Category
-          </a>
-          <a class="night ripple">
-            <i class="material-icons">settings</i>Settings
-          </a>
-        </nav>
-      </div>
-    </aside>
+    <a class="toplink" target="_blank" href="https://matericious.com/drawer/permanent">Permanent drawer</a>
+    <br/>
+    <iframe src="https://matericious.com/drawer/permanent"></iframe>
 
-    <button class="btn red" drawer="push">Push</button>
-    <button class="btn earth" drawer="overlay">Overlay</button>
-    <script src="https://rawgit.com/Matericious/Matericious/master/dist/js/drawer.js"></script>
+    <br/><br/>
+
+    <a class="toplink" target="_blank" href="https://matericious.com/drawer/active">Dismissible drawer</a>
+    <iframe src="https://matericious.com/drawer/active"></iframe>
+
+    <br/><br/>
+
+    <a class="toplink" target="_blank" href="https://matericious.com/drawer/overlay">Modal drawer</a>
+    <iframe src="https://matericious.com/drawer/overlay"></iframe>
+
+    <br/><br/>
+
+    <a class="toplink" target="_blank" href="https://matericious.com/drawer/push">Push drawer</a>
+    <iframe src="https://matericious.com/drawer/push"></iframe>
   </body>
 </head>
 
