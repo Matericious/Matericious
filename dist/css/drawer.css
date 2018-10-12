@@ -122,7 +122,8 @@ body.overlay:after {
   content: "";
 }
 .drawer > .content {
-  height: 100%;
+  width: auto;
+  height: calc(100% - 80px);
   overflow-y: auto;
 }
 .drawer > .content::-webkit-scrollbar {
