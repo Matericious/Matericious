@@ -124,7 +124,8 @@ body {
     }
   }
   > .content {
-      height: 100%;
+      width: auto;
+      height: calc(100% - 80px);
       overflow-y: auto;
       &::-webkit-scrollbar {
         width: 4px;
