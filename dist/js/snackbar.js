@@ -17,7 +17,7 @@ function Snackbar(data, callback) {
     openAni = "slideUpTop";
   }
     
-  var snackbarElem = $getT("snackbar", 0);  
+  var snackbarElem = $get("snackbar");  
   snackbarElem.innerHTML = "";
   snackbarElem.className = "";
   
@@ -33,16 +33,16 @@ function Snackbar(data, callback) {
 
   snackbarElem.innerHTML = snackbarHTML;
 
-  $getCL("SnackClose", 0).addEventListener("click", function() {
+  $get(".SnackClose").addEventListener("click", function() {
     callback(false);
     close();
   });
-  $getCL("SnackAction", 0).addEventListener("click", function() {
+  $get(".SnackAction").addEventListener("click", function() {
     callback(true);
     close();
   });  
   
-  $getCL("snackbar", 0).className += " "+openAni;
+  $get(".snackbar").className += " "+openAni;
   
   function timer(time){
     var timer;
@@ -55,21 +55,12 @@ function Snackbar(data, callback) {
   }
   
   function close(){
-     $getCL("snackbar", 0).className += " "+closeAni;
+     $get(".snackbar").className += " "+closeAni;
   }
   
   timer(data.time);
 }
 
-/*this function returns the element by ID*/
-function $getID(e) {
-  return document.getElementById(e);
-}
-/*this function returns the element by class name*/
-function $getCL(e, n) {
-  return document.getElementsByClassName(e)[n];
-}
-/*this function returns the element by tag name*/
-function $getT(e, n) {
-  return document.getElementsByTagName(e)[n];
+function $get(e) {
+  return document.querySelector(e);
 }
