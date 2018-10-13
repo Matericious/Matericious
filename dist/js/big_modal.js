@@ -1,5 +1,5 @@
 function BigModal(data, callback) {
-  var modalElem = $getID(data.id);
+  var modalElem = $get("#"+data.id);
   var modal = $getChild('#'+data.id, 'modal', 0);
 
   modalElem.className += "fadeIn";
@@ -15,7 +15,7 @@ function BigModal(data, callback) {
     }
   }
 
-  $getCL("close", 0).addEventListener("click", function(){
+  $get(".close").addEventListener("click", function(){
      close(modalElem, modal);
   });
 
@@ -35,18 +35,10 @@ function BigModal(data, callback) {
   timer(data.time);
 }
 
-/*this function returns the element by ID*/
-function $getID(e) {
-  return document.getElementById(e);
+function $get(e) {
+  return document.querySelector(e);
 }
-/*this function returns the element by class name*/
-function $getCL(e, n) {
-  return document.getElementsByClassName(e)[n];
-}
-/*this function returns the element by tag name*/
-function $getT(e, n) {
-  return document.getElementsByTagName(e)[n];
-}
+
 
 function $getChild(parent, child, n){
   return document.querySelectorAll(parent+' '+child)[n];
