@@ -1,5 +1,8 @@
 ready(function() {
-  var drawer = function() {
+  drawer();
+});
+
+function drawer() {
     var _drawer = $get(".drawer"),
       _doc = $get("body");
     if (_drawer.className.includes("active")) {
@@ -51,8 +54,6 @@ ready(function() {
       });
     }
   };
-  drawer();
-});
 
 function ready(callback) {
   // in case the document is already rendered
