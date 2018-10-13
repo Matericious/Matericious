@@ -1,6 +1,6 @@
 {
   "name": "matericious",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Delicious Material Framework",
   "style": "dist/css/matericious.css",
   "sass": "sass/matericious.scss",
@@ -20,6 +20,7 @@
   "homepage": "https://matericious.com",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.1"
