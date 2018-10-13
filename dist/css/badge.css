@@ -1,0 +1,21 @@
+.badge[data-badge] {
+  position: relative;
+}
+.badge[data-badge]:after {
+  content: attr(data-badge);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  font-weight: 600;
+  font-size: 12px;
+  align-content: center;
+  align-items: center;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: red;
+  border-radius: 50%;
+}
