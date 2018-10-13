@@ -17,7 +17,7 @@ function Modal(data, callback) {
     data.overlay = "overlay";
   }
 
-  var modalElem = $getT("modal-con", 0);
+  var modalElem = $get("modal-con");
   modalElem.innerHTML = "";
   modalElem.className = "";
 
