@@ -1,9 +1,12 @@
-ready(function() {
-  call("[open-menu]", "mousedown", function() {
+ready(function(){
+  call("[open-menu]", "mousedown", menu);
+});
+
+function menu() {
     var id = this.getAttribute("open-menu");
     var clickTimes = 0,
       targetBtn = $get("[open-menu=" + id + "]"),
-      targetMenu = $getID(id),
+      targetMenu = $get("#"+id),
       default_class = targetMenu.className;
     
     if(default_class.includes("pullDown")) close();
@@ -23,6 +26,13 @@ ready(function() {
         pos = [targetBtn.offsetTop, targetBtn.offsetLeft],
         size = [targetBtn.offsetWidth, targetBtn.offsetHeight],
         menu_size = [targetMenu.offsetWidth, targetMenu.offsetHeight];
+
+      if(!(default_class.includes("right")) && (pos[1] + menu_size[0]) > w){
+        $addClass(targetMenu, "right");
+      //  alert("adding class");
+      }else if((pos[1] - menu_size[0]) > w){
+        //menu cannot go right
+      }
          
       targetMenu.style.top = size[1] / 2 + pos[0] + "px";
       if (default_class.includes("right")) {
@@ -53,8 +63,7 @@ ready(function() {
       document.removeEventListener("click", clickOutSide, true);
       return;
     }
-  });
-});
+  }
 
 function ready(callback) {
   // in case the document is already rendered
@@ -76,25 +85,8 @@ function call($class, $event, $func) {
   }
 }
 
-/*this function returns the element by ID*/
-function $getID(e) {
-  return document.getElementById(e);
-}
-/*this function returns the element by class name*/
-function $getCL(e, n) {
-  return document.getElementsByClassName(e)[n];
-}
-/*this function returns the element by tag name*/
-function $getT(e, n) {
-  return document.getElementsByTagName(e)[n];
-}
-
 function $get(e) {
   return document.querySelector(e);
-}
-
-function $getAll(e) {
-  return document.querySelectorAll(e);
 }
 
 function hasClass(el, className) {
