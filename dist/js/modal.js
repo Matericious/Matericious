@@ -5,7 +5,6 @@ function Modal(data, callback) {
       horizontal: "center"
     };
   }
-
   if (!data.theme) data.theme = "";
 
   if (!data.title) data.title = "Modal";
@@ -69,8 +68,7 @@ function Modal(data, callback) {
     data.modalStyle +
     '"><header>' +
     data.title +
-    "</header>" +
-      
+    "</header>" +  
     '<main><div class="'+data.modalStyle+'" mui-input><input required="required" autofocus/>'+
     '<label>'+data.placeholder+'</label></div><span></span></main>'+
       
@@ -90,6 +88,7 @@ function Modal(data, callback) {
     data.theme +
     " " +
     data.overlayStyle;
+  
   if (data.type == "message") {
     modalElem.innerHTML = messageModalHTML;
   } else if (data.type == "decision") {
@@ -100,14 +99,14 @@ function Modal(data, callback) {
 
   modalElem.className += modalClass;
 
-  $getT("modal-con", 0).className += " fadeIn";
-  $getT("modal", 0).className += " slideDownIn";
+  $get("modal-con").className += " fadeIn";
+  $get("modal").className += " slideDownIn";
 
-  $getCL("actionTwo", 0).addEventListener("click", function() {
+  $get(".actionTwo").addEventListener("click", function() {
     close();
     callback(false);
   });
-  $getCL("actionOne", 0).addEventListener("click", function() {
+  $get(".actionOne").addEventListener("click", function() {
     close();
     callback(true);
   });
@@ -123,26 +122,17 @@ function Modal(data, callback) {
   }
 
   function close() {
-    $getT("modal-con", 0).className += " fadeOut";
-    $getT("modal", 0).className += " hideElem";
-    $getT("modal", 0).classList.remove("slideDownIn");
+    $get("modal-con").className += " fadeOut";
+    $get("modal").className += " hideElem";
+    $get("modal").classList.remove("slideDownIn");
     setTimeout(function() {
-      $getT("modal-con", 0).classList.remove("fadeIn");
+      $get("modal-con").classList.remove("fadeIn");
     }, 500);
   }
 
   timer(data.time);
 }
 
-/*this function returns the element by ID*/
-function $getID(e) {
-  return document.getElementById(e);
-}
-/*this function returns the element by class name*/
-function $getCL(e, n) {
-  return document.getElementsByClassName(e)[n];
-}
-/*this function returns the element by tag name*/
-function $getT(e, n) {
-  return document.getElementsByTagName(e)[n];
+function $get(e) {
+  return document.querySelector(e);
 }
