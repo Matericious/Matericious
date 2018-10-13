@@ -22,7 +22,7 @@ function LoadingModal(data, callback) {
      data.overlay = "overlay"
   }
     
-  var modalElem = $getT("modal-con", 0);  
+  var modalElem = $get("modal-con");  
   modalElem.innerHTML = "";
   modalElem.className = "";
   
@@ -61,8 +61,8 @@ function LoadingModal(data, callback) {
      modalElem.innerHTML = largeLoadingModalHTML;
   }
   
-  $getT("modal-con", 0).className += " fadeIn";
-  $getT("modal", 0).className += " slideDownIn";
+  $get("modal-con").className += " fadeIn";
+  $get("modal").className += " slideDownIn";
   
   function timer(time){
     var timer;
@@ -75,22 +75,14 @@ function LoadingModal(data, callback) {
   }
   
   function close(){
-     $getT("modal-con", 0).classList.remove("fadeIn");
-     $getT("modal", 0).classList.remove("slideDownIn");
+     $get("modal-con").classList.remove("fadeIn");
+     $get("modal").classList.remove("slideDownIn");
+    return;
   }
 
   timer(data.time);
 }
 
-/*this function returns the element by ID*/
-function $getID(e) {
-  return document.getElementById(e);
-}
-/*this function returns the element by class name*/
-function $getCL(e, n) {
-  return document.getElementsByClassName(e)[n];
-}
-/*this function returns the element by tag name*/
-function $getT(e, n) {
-  return document.getElementsByTagName(e)[n];
+function $get(e) {
+  return document.querySelector(e);
 }
