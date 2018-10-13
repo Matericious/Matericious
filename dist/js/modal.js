@@ -69,7 +69,7 @@ function Modal(data, callback) {
     '"><header>' +
     data.title +
     "</header>" +  
-    '<main><div class="'+data.modalStyle+'" mui-input><input required="required" autofocus/>'+
+    '<main><div class="input '+data.modalStyle+'"><input required="required" autofocus/>'+
     '<label>'+data.placeholder+'</label></div><span></span></main>'+
       
     '<action><button class="actionTwo">' +
