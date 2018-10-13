@@ -1,5 +1,4 @@
-/*##############################################################################################################################################*/
-*:hover,
+:hover,
 *:focus {
   outline: none;
 }
@@ -20,6 +19,7 @@
   margin: 0;
   transition: background .5s ease-in-out;
 }
+
 .range::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -31,12 +31,15 @@
   transition: all .15s ease-in;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
+
 .range::-webkit-slider-thumb:hover {
   background: #1abc9c;
 }
+
 .range:hover {
   background: rgba(153, 163, 164, 0.6);
 }
+
 .range:active::-webkit-slider-thumb {
   width: 20px;
   height: 20px;
@@ -46,6 +49,7 @@
 .range.earth {
   background: rgba(52, 197, 89, 0.7);
 }
+
 .range.earth::-webkit-slider-thumb {
   background: #34c559;
 }
@@ -53,6 +57,7 @@
 .range.night {
   background: rgba(66, 66, 66, 0.7);
 }
+
 .range.night::-webkit-slider-thumb {
   background: #424242;
 }
@@ -60,6 +65,7 @@
 .range.ocean {
   background: rgba(46, 114, 238, 0.7);
 }
+
 .range.ocean::-webkit-slider-thumb {
   background: #2e72ee;
 }
@@ -67,6 +73,7 @@
 .range.red {
   background: rgba(233, 48, 48, 0.7);
 }
+
 .range.red::-webkit-slider-thumb {
   background: #e93030;
 }
@@ -74,6 +81,7 @@
 .range.snow {
   background: rgba(255, 255, 255, 0.7);
 }
+
 .range.snow::-webkit-slider-thumb {
   background: #fff;
 }
@@ -81,6 +89,7 @@
 .range.yellow {
   background: rgba(231, 213, 7, 0.7);
 }
+
 .range.yellow::-webkit-slider-thumb {
   background: #e7d507;
 }
@@ -88,6 +97,7 @@
 .range.purple {
   background: rgba(105, 36, 240, 0.7);
 }
+
 .range.purple::-webkit-slider-thumb {
   background: #6924f0;
 }
@@ -95,6 +105,7 @@
 .range.pink {
   background: rgba(255, 135, 203, 0.7);
 }
+
 .range.pink::-webkit-slider-thumb {
   background: #ff87cb;
 }
@@ -102,6 +113,7 @@
 .range.cyan {
   background: rgba(0, 188, 212, 0.7);
 }
+
 .range.cyan::-webkit-slider-thumb {
   background: #00bcd4;
 }

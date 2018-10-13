@@ -1,4 +1,3 @@
-/*###########################################################################################################################################################*/
 /*Material loader color*/
 /* Dark colors */
 /* Light colors */
@@ -20,6 +19,7 @@ big-modal-con {
   overflow: hidden;
   visibility: hidden;
 }
+
 big-modal-con > modal {
   max-width: 100% !important;
   background: #fff;
@@ -37,10 +37,12 @@ big-modal-con > modal {
   padding: 10px;
   visibility: hidden;
 }
+
 big-modal-con > modal.big {
   width: calc(100% - 140px);
   height: calc(100% - 140px);
 }
+
 big-modal-con > modal > .close {
   color: #fff;
   position: absolute;
@@ -61,6 +63,7 @@ big-modal-con > modal > .close {
     right: 5px;
   }
 }
+
 /*#####################################FadeIn Animation*/
 /*#####################################FadeIn Animation*/
 .fadeIn {
@@ -79,6 +82,7 @@ big-modal-con > modal > .close {
     opacity: 1;
   }
 }
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -87,6 +91,7 @@ big-modal-con > modal > .close {
     opacity: 1;
   }
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -95,6 +100,7 @@ big-modal-con > modal > .close {
     opacity: 1;
   }
 }
+
 .fadeOut {
   transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   -webkit-animation: fadeOut 1s;
@@ -111,6 +117,7 @@ big-modal-con > modal > .close {
     opacity: 0;
   }
 }
+
 @-webkit-keyframes fadeOut {
   from {
     opacity: 1;
@@ -119,6 +126,7 @@ big-modal-con > modal > .close {
     opacity: 0;
   }
 }
+
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -127,6 +135,7 @@ big-modal-con > modal > .close {
     opacity: 0;
   }
 }
+
 /*#######################################################SlideDown*/
 .slideDownIn {
   -webkit-animation: slideDownIn 1s ease;
@@ -143,6 +152,7 @@ big-modal-con > modal > .close {
     transform: translateY(0%);
   }
 }
+
 @-webkit-keyframes slideDownIn {
   0% {
     transform: translateY(-10%);
@@ -151,6 +161,7 @@ big-modal-con > modal > .close {
     transform: translateY(0%);
   }
 }
+
 @keyframes slideDownIn {
   0% {
     transform: translateY(-10%);
@@ -159,6 +170,7 @@ big-modal-con > modal > .close {
     transform: translateY(0%);
   }
 }
+
 .hideElem {
   visibility: hidden;
 }

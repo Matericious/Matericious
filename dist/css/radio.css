@@ -1,4 +1,3 @@
-/*##############################################################################################################################################*/
 *:hover,
 *:focus {
   outline: none;
@@ -15,15 +14,19 @@
   margin: 16px 0;
   display: inline-block;
 }
+
 .radio input[type="radio"] {
   display: none;
 }
+
 .radio input[type="radio"]:checked + label:before {
   border-color: #00bcd4;
 }
+
 .radio input[type="radio"]:checked + label:after {
   transform: scale(1);
 }
+
 .radio label {
   display: inline-block;
   height: 20px;
@@ -33,6 +36,7 @@
   cursor: pointer;
   vertical-align: bottom;
 }
+
 .radio label:before, .radio label:after {
   position: absolute;
   content: '';
@@ -40,6 +44,7 @@
   transition: all .3s ease;
   transition-property: transform, border-color;
 }
+
 .radio label:before {
   box-sizing: border-box;
   left: 0;
@@ -48,6 +53,7 @@
   height: 20px;
   border: 2px solid rgba(0, 0, 0, 0.54);
 }
+
 .radio label:after {
   box-sizing: border-box;
   top: 5px;
@@ -61,6 +67,7 @@
 .radio.cyan input[type=radio]:checked + label:before {
   border-color: #00bcd4;
 }
+
 .radio.cyan label:after {
   background: #00bcd4;
 }
@@ -68,6 +75,7 @@
 .radio.earth input[type=radio]:checked + label:before {
   border-color: #34c559;
 }
+
 .radio.earth label:after {
   background: #34c559;
 }
@@ -75,6 +83,7 @@
 .radio.night input[type=radio]:checked + label:before {
   border-color: #424242;
 }
+
 .radio.night label:after {
   background: #424242;
 }
@@ -82,6 +91,7 @@
 .radio.ocean input[type=radio]:checked + label:before {
   border-color: #2e72ee;
 }
+
 .radio.ocean label:after {
   background: #2e72ee;
 }
@@ -89,6 +99,7 @@
 .radio.red input[type=radio]:checked + label:before {
   border-color: #e93030;
 }
+
 .radio.red label:after {
   background: #e93030;
 }
@@ -96,6 +107,7 @@
 .radio.yellow input[type=radio]:checked + label:before {
   border-color: #e7d507;
 }
+
 .radio.yellow label:after {
   background: #e7d507;
 }
@@ -103,6 +115,7 @@
 .radio.purple input[type=radio]:checked + label:before {
   border-color: #6924f0;
 }
+
 .radio.purple label:after {
   background: #6924f0;
 }
@@ -110,6 +123,7 @@
 .radio.pink input[type=radio]:checked + label:before {
   border-color: #ff87cb;
 }
+
 .radio.pink label:after {
   background: #ff87cb;
 }

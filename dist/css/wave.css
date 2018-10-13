@@ -3,6 +3,7 @@
   overflow: hidden;
   transform: translate3d(0, 0, 0);
 }
+
 .wave:after {
   content: "";
   width: 100%;
@@ -19,6 +20,7 @@
   opacity: 0;
   transition: transform 0.5s, opacity 1s;
 }
+
 .wave:active:after {
   transform: scale(0, 0);
   opacity: 0.3;

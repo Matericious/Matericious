@@ -1,88 +1,116 @@
-[mui-input] {
+/*@!
+################################################################
+@!*/
+*:hover,
+*:focus {
+  outline: none;
+}
+
+*:hover,
+*:focus {
+  outline: none;
+}
+
+.input {
   position: relative;
 }
-[mui-input] > input {
+
+.input > input {
   width: 100%;
   background: transparent;
   padding: 8px 0px;
   border: none;
-  border-bottom: 2px solid;
+  border-bottom: 2px solid #99A3A4;
   transition: border-color .5s;
   cursor: pointer;
 }
-[mui-input] > input:focus ~ label, [mui-input] > input:valid ~ label {
+
+.input > input:focus ~ label,
+.input > input:valid ~ label {
   bottom: 32px;
   font-size: 12px;
 }
-[mui-input] > input:hover, [mui-input] > input:focus {
+
+.input > input:hover, .input > input:focus {
   border-bottom: 2px solid #424242;
 }
-[mui-input] > input:hover:active, [mui-input] > input:hover:focus, [mui-input] > input:focus:active, [mui-input] > input:focus:focus {
+
+.input > input:hover:active, .input > input:hover:focus, .input > input:focus:active, .input > input:focus:focus {
   cursor: text;
 }
-[mui-input] > label {
+
+.input > label {
   position: absolute;
   display: block;
   bottom: 8px;
   font-sizE: 17px;
   font-family: "Roboto", san-serif;
   transition: all 200ms;
+  color: #99A3A4;
   z-index: -1;
 }
 
-[mui-input].earth > input:hover, [mui-input].earth > input:focus {
+.input.earth > input:hover, .input.earth > input:focus {
   border-color: #34c559;
 }
-[mui-input].earth > input:hover ~ label, [mui-input].earth > input:focus ~ label {
+
+.input.earth > input:hover ~ label, .input.earth > input:focus ~ label {
   color: #34c559;
 }
 
-[mui-input].night > input:hover, [mui-input].night > input:focus {
+.input.night > input:hover, .input.night > input:focus {
   border-color: #424242;
 }
-[mui-input].night > input:hover ~ label, [mui-input].night > input:focus ~ label {
+
+.input.night > input:hover ~ label, .input.night > input:focus ~ label {
   color: #424242;
 }
 
-[mui-input].ocean > input:hover, [mui-input].ocean > input:focus {
+.input.ocean > input:hover, .input.ocean > input:focus {
   border-color: #2e72ee;
 }
-[mui-input].ocean > input:hover ~ label, [mui-input].ocean > input:focus ~ label {
+
+.input.ocean > input:hover ~ label, .input.ocean > input:focus ~ label {
   color: #2e72ee;
 }
 
-[mui-input].red > input:hover, [mui-input].red > input:focus {
+.input.red > input:hover, .input.red > input:focus {
   border-color: #e93030;
 }
-[mui-input].red > input:hover ~ label, [mui-input].red > input:focus ~ label {
+
+.input.red > input:hover ~ label, .input.red > input:focus ~ label {
   color: #e93030;
 }
 
-[mui-input].snow > input:hover, [mui-input].snow > input:focus {
+.input.snow > input:hover, .input.snow > input:focus {
   border-color: #fff;
 }
-[mui-input].snow > input:hover ~ label, [mui-input].snow > input:focus ~ label {
+
+.input.snow > input:hover ~ label, .input.snow > input:focus ~ label {
   color: #fff;
 }
 
-[mui-input].yellow > input:hover, [mui-input].yellow > input:focus {
+.input.yellow > input:hover, .input.yellow > input:focus {
   border-color: #e7d507;
 }
-[mui-input].yellow > input:hover ~ label, [mui-input].yellow > input:focus ~ label {
+
+.input.yellow > input:hover ~ label, .input.yellow > input:focus ~ label {
   color: #e7d507;
 }
 
-[mui-input].purple > input:hover, [mui-input].purple > input:focus {
+.input.purple > input:hover, .input.purple > input:focus {
   border-color: #6924f0;
 }
-[mui-input].purple > input:hover ~ label, [mui-input].purple > input:focus ~ label {
+
+.input.purple > input:hover ~ label, .input.purple > input:focus ~ label {
   color: #6924f0;
 }
 
-[mui-input].pink > input:hover, [mui-input].pink > input:focus {
+.input.pink > input:hover, .input.pink > input:focus {
   border-color: #ff87cb;
 }
-[mui-input].pink > input:hover ~ label, [mui-input].pink > input:focus ~ label {
+
+.input.pink > input:hover ~ label, .input.pink > input:focus ~ label {
   color: #ff87cb;
 }
 
@@ -99,6 +127,7 @@ svg[md-loader] {
   width: 35px;
   vertical-align: middle;
 }
+
 svg[md-loader] circle {
   fill: none;
   stroke: #0091ea;
@@ -114,16 +143,19 @@ svg[md-loader] circle {
     transform: rotate(360deg);
   }
 }
+
 @-webkit-keyframes rotate {
   100% {
     transform: rotate(360deg);
   }
 }
+
 @keyframes rotate {
   100% {
     transform: rotate(360deg);
   }
 }
+
 @-moz-keyframes dash {
   0% {
     stroke-dasharray: 2, 155;
@@ -138,6 +170,7 @@ svg[md-loader] circle {
     stroke-dashoffset: -155;
   }
 }
+
 @-webkit-keyframes dash {
   0% {
     stroke-dasharray: 2, 155;
@@ -152,6 +185,7 @@ svg[md-loader] circle {
     stroke-dashoffset: -155;
   }
 }
+
 @keyframes dash {
   0% {
     stroke-dasharray: 2, 155;
@@ -166,6 +200,7 @@ svg[md-loader] circle {
     stroke-dashoffset: -155;
   }
 }
+
 modal-con {
   width: 100%;
   height: 100vh;
@@ -179,6 +214,7 @@ modal-con {
   pointer-events: none;
   visibility: hidden;
 }
+
 modal-con > modal {
   width: 350px;
   height: 150px;
@@ -198,6 +234,7 @@ modal-con > modal {
   visibility: hidden;
   overflow: hidden;
 }
+
 modal-con > modal > header {
   width: 88%;
   height: 45px;
@@ -208,6 +245,7 @@ modal-con > modal > header {
   font-weight: bold;
   color: inherit !important;
 }
+
 modal-con > modal > main {
   width: 88%;
   height: auto;
@@ -216,6 +254,7 @@ modal-con > modal > main {
   margin: 12px auto 0px auto;
   font-family: "Rubik", sans-serif;
 }
+
 modal-con > modal > main > input {
   width: 100%;
   font-size: 17px;
@@ -228,6 +267,7 @@ modal-con > modal > main > input {
   padding-right: 0px;
   background: transparent;
 }
+
 modal-con > modal > main > p {
   font-size: 12px;
   color: inherit;
@@ -235,10 +275,12 @@ modal-con > modal > main > p {
   position: relative;
   top: -25px;
 }
+
 modal-con > modal > main > .md-input {
   max-width: 305px;
   margin-top: -10px;
 }
+
 modal-con > modal > action {
   width: 100%;
   height: 48px;
@@ -248,6 +290,7 @@ modal-con > modal > action {
   position: absolute;
   bottom: 0;
 }
+
 modal-con > modal > action > button {
   background: transparent;
   border: none;
@@ -261,31 +304,38 @@ modal-con > modal > action > button {
   text-transform: uppercase;
   cursor: pointer;
 }
+
 modal-con > modal.decision {
   width: 250px;
   height: 100px;
   min-width: 200px;
 }
+
 modal-con > modal.decision > header {
   line-height: 25px;
   font-weight: normal;
 }
+
 modal-con > modal.loader {
   width: 230px;
   height: 95px;
   text-align: center;
 }
+
 modal-con > modal.loader > main {
   margin: 0 auto;
 }
+
 modal-con > modal.loader.small {
   width: 50px;
   height: 50px;
 }
+
 modal-con > modal.loader.small > svg {
   position: relative;
   top: 8px;
 }
+
 modal-con > modal.loader.medium {
   width: 100px;
   height: 80px;
@@ -293,16 +343,19 @@ modal-con > modal.loader.medium {
   text-align: center;
   color: #424242;
 }
+
 modal-con > modal.loader.medium > svg {
   width: 50px;
   height: 50px;
 }
+
 modal-con > modal.loader.medium > span {
   position: relative;
   top: 10px;
   font-family: "Ubuntu", sans-serif;
   color: inherit;
 }
+
 modal-con > modal.loader > header {
   text-align: left;
   height: auto;
@@ -310,9 +363,11 @@ modal-con > modal.loader > header {
   font-weight: normal !important;
   font-size: 17px;
 }
+
 modal-con > modal.loader > header > label {
   font-size: 16px;
 }
+
 modal-con > modal.loader > main > div {
   display: inline-block;
   height: 45px;
@@ -321,10 +376,12 @@ modal-con > modal.loader > main > div {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 modal-con > modal.loader > main > div:nth-child(1) {
   width: 45px;
   text-align: center;
 }
+
 modal-con > modal.loader > main > div:nth-child(2) {
   text-align: left;
   text-indent: 10px;
@@ -335,39 +392,49 @@ modal-con > modal.loader > main > div:nth-child(2) {
 modal-con.dark > modal {
   background: #424242;
 }
+
 modal-con.dark > modal > header,
 modal-con.dark > modal > main {
   color: rgba(255, 255, 255, 0.7);
 }
+
 modal-con.dark > modal.medium {
   color: #fff;
 }
+
 modal-con.light > modal {
   box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1), 0 5px 30px 0 rgba(0, 0, 0, 0.1);
 }
+
 modal-con.light > modal > header,
 modal-con.light > modal > main {
   color: #424242;
 }
+
 modal-con.overlay {
   pointer-events: auto;
   background: rgba(66, 66, 66, 0.6);
 }
+
 modal-con.overlay.light {
   background: rgba(255, 255, 255, 0.6);
 }
+
 modal-con.top > modal {
   top: 2em;
   bottom: auto !important;
 }
+
 modal-con.bottom > modal {
   top: auto !important;
   bottom: 2em;
 }
+
 modal-con.left > modal {
   right: auto !important;
   left: 2em;
 }
+
 modal-con.right > modal {
   right: 2em;
   left: auto !important;
@@ -383,6 +450,7 @@ modal-con.right > modal {
     width: 70%;
   }
 }
+
 @media screen and (max-width: 400px) {
   modal-con.left > modal, modal-con.right > modal {
     margin: 0px auto;
@@ -390,16 +458,20 @@ modal-con.right > modal {
     left: 0px !important;
   }
 }
+
 modal.earth > action > button {
   color: #34c559;
 }
+
 modal.earth.gradient {
   background: linear-gradient(90deg, #21f379 0%, #3be76c 49%, #00ba66 95%);
   color: #fff;
 }
+
 modal.earth.gradient > header {
   color: #fff;
 }
+
 modal.earth.gradient > action > button {
   color: #fff;
 }
@@ -407,13 +479,16 @@ modal.earth.gradient > action > button {
 modal.night > action > button {
   color: #424242;
 }
+
 modal.night.gradient {
   background: linear-gradient(90deg, #3b3a3a 5%, #444343 47%, #b9b9b9 100%);
   color: #fff;
 }
+
 modal.night.gradient > header {
   color: #fff;
 }
+
 modal.night.gradient > action > button {
   color: #fff;
 }
@@ -421,13 +496,16 @@ modal.night.gradient > action > button {
 modal.ocean > action > button {
   color: #2e72ee;
 }
+
 modal.ocean.gradient {
   background: linear-gradient(90deg, #2196f3 0%, #03c5d6 61%, #00d4ff 84%);
   color: #fff;
 }
+
 modal.ocean.gradient > header {
   color: #fff;
 }
+
 modal.ocean.gradient > action > button {
   color: #fff;
 }
@@ -435,13 +513,16 @@ modal.ocean.gradient > action > button {
 modal.red > action > button {
   color: #e93030;
 }
+
 modal.red.gradient {
   background: linear-gradient(90deg, #e9e130 0%, #f0247a 0%, #ff2a00 46%, #e93030 95%);
   color: #fff;
 }
+
 modal.red.gradient > header {
   color: #fff;
 }
+
 modal.red.gradient > action > button {
   color: #fff;
 }
@@ -449,16 +530,20 @@ modal.red.gradient > action > button {
 modal.snow > action > button {
   color: #fff;
 }
+
 modal.snow.gradient {
   color: #fff;
   color: #424242;
 }
+
 modal.snow.gradient > header {
   color: #fff;
 }
+
 modal.snow.gradient > action > button {
   color: #fff;
 }
+
 modal.snow.gradient > action > button {
   color: #424242;
 }
@@ -466,17 +551,21 @@ modal.snow.gradient > action > button {
 modal.yellow > action > button {
   color: #e7d507;
 }
+
 modal.yellow.gradient {
   background: linear-gradient(90deg, #ffeb00 0%, #f4ed15 45%, #e0ff00 65%, #b9ff00 100%);
   color: #fff;
   color: #424242;
 }
+
 modal.yellow.gradient > header {
   color: #fff;
 }
+
 modal.yellow.gradient > action > button {
   color: #fff;
 }
+
 modal.yellow.gradient > action > button {
   color: #424242;
 }
@@ -484,13 +573,16 @@ modal.yellow.gradient > action > button {
 modal.purple > action > button {
   color: #6924f0;
 }
+
 modal.purple.gradient {
   background: linear-gradient(90deg, #e9e130 0%, #6924f0 0%, #b40f91 44%, #e82890 95%);
   color: #fff;
 }
+
 modal.purple.gradient > header {
   color: #fff;
 }
+
 modal.purple.gradient > action > button {
   color: #fff;
 }
@@ -498,13 +590,16 @@ modal.purple.gradient > action > button {
 modal.pink > action > button {
   color: #ff87cb;
 }
+
 modal.pink.gradient {
   background: linear-gradient(90deg, #e9e130 0%, #ff87cb 0%, #e977e1 46%, #e523e7 95%);
   color: #fff;
 }
+
 modal.pink.gradient > header {
   color: #fff;
 }
+
 modal.pink.gradient > action > button {
   color: #fff;
 }
@@ -512,6 +607,7 @@ modal.pink.gradient > action > button {
 modal-con.earth {
   background: rgba(52, 197, 89, 0.8);
 }
+
 modal-con.earth.gradient {
   background: linear-gradient(90deg, #21f379 0%, #3be76c 49%, #00ba66 95%);
 }
@@ -519,6 +615,7 @@ modal-con.earth.gradient {
 modal-con.night {
   background: rgba(66, 66, 66, 0.8);
 }
+
 modal-con.night.gradient {
   background: linear-gradient(90deg, #3b3a3a 5%, #444343 47%, #b9b9b9 100%);
 }
@@ -526,6 +623,7 @@ modal-con.night.gradient {
 modal-con.ocean {
   background: rgba(46, 114, 238, 0.8);
 }
+
 modal-con.ocean.gradient {
   background: linear-gradient(90deg, #2196f3 0%, #03c5d6 61%, #00d4ff 84%);
 }
@@ -533,6 +631,7 @@ modal-con.ocean.gradient {
 modal-con.red {
   background: rgba(233, 48, 48, 0.8);
 }
+
 modal-con.red.gradient {
   background: linear-gradient(90deg, #e9e130 0%, #f0247a 0%, #ff2a00 46%, #e93030 95%);
 }
@@ -544,6 +643,7 @@ modal-con.snow {
 modal-con.yellow {
   background: rgba(231, 213, 7, 0.8);
 }
+
 modal-con.yellow.gradient {
   background: linear-gradient(90deg, #ffeb00 0%, #f4ed15 45%, #e0ff00 65%, #b9ff00 100%);
 }
@@ -551,6 +651,7 @@ modal-con.yellow.gradient {
 modal-con.purple {
   background: rgba(105, 36, 240, 0.8);
 }
+
 modal-con.purple.gradient {
   background: linear-gradient(90deg, #e9e130 0%, #6924f0 0%, #b40f91 44%, #e82890 95%);
 }
@@ -558,6 +659,7 @@ modal-con.purple.gradient {
 modal-con.pink {
   background: rgba(255, 135, 203, 0.8);
 }
+
 modal-con.pink.gradient {
   background: linear-gradient(90deg, #e9e130 0%, #ff87cb 0%, #e977e1 46%, #e523e7 95%);
 }
@@ -579,6 +681,7 @@ modal-con.pink.gradient {
     opacity: 1;
   }
 }
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -587,6 +690,7 @@ modal-con.pink.gradient {
     opacity: 1;
   }
 }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -595,6 +699,7 @@ modal-con.pink.gradient {
     opacity: 1;
   }
 }
+
 .fadeOut {
   transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   -webkit-animation: fadeOut 1s;
@@ -611,6 +716,7 @@ modal-con.pink.gradient {
     opacity: 0;
   }
 }
+
 @-webkit-keyframes fadeOut {
   from {
     opacity: 1;
@@ -619,6 +725,7 @@ modal-con.pink.gradient {
     opacity: 0;
   }
 }
+
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -627,6 +734,7 @@ modal-con.pink.gradient {
     opacity: 0;
   }
 }
+
 /*#######################################################SlideDown*/
 .slideDownIn {
   -webkit-animation: slideDownIn 1s ease;
@@ -643,6 +751,7 @@ modal-con.pink.gradient {
     transform: translateY(0%);
   }
 }
+
 @-webkit-keyframes slideDownIn {
   0% {
     transform: translateY(-10%);
@@ -651,6 +760,7 @@ modal-con.pink.gradient {
     transform: translateY(0%);
   }
 }
+
 @keyframes slideDownIn {
   0% {
     transform: translateY(-10%);
@@ -659,6 +769,7 @@ modal-con.pink.gradient {
     transform: translateY(0%);
   }
 }
+
 .hideElem {
   visibility: hidden;
 }

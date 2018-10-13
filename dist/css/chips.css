@@ -15,20 +15,25 @@ a {
   cursor: pointer;
   text-decoration: none;
 }
+
 .chips:hover {
   background: #cbcbcb;
 }
+
 .chips.raised {
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
+
 .chips.outline {
   background: transparent;
   border: 1px solid #cbcbcb;
 }
+
 .chips.outline:hover {
   background: #cbcbcb;
   color: #424242;
 }
+
 .chips > i {
   vertical-align: middle;
   width: 22px;
@@ -37,14 +42,17 @@ a {
   line-height: 22px;
   color: #2f2f2f;
 }
+
 .chips > i:nth-child(1) {
   height: 22px;
   margin-left: -2px;
 }
+
 .chips > i:nth-child(2) {
   height: 22px;
   margin-right: 2px;
 }
+
 .chips > .close {
   font-size: 22px;
   position: relative;
@@ -53,9 +61,11 @@ a {
   transition: color .2s ease-in-out;
   color: rgba(66, 66, 66, 0.4);
 }
+
 .chips > .close:hover {
   color: #424242;
 }
+
 .chips > img {
   width: 33px;
   height: 33px;
@@ -63,6 +73,7 @@ a {
   margin: -2px 5px 0 -8px;
   border-radius: 50%;
 }
+
 .chips > img.space {
   width: 25px;
   height: 25px;
@@ -75,21 +86,26 @@ a {
   background: #34c559;
   color: rgba(255, 255, 255, 0.8);
 }
+
 .chips.earth.outline {
   background: transparent;
   color: #34c559;
   border-color: #34c559;
 }
+
 .chips.earth.outline:hover {
   background: #34c559;
   color: #fff;
 }
+
 .chips.earth > i:nth-child(1) {
   color: #fff;
 }
+
 .chips.earth > i:nth-child(1).close {
   color: rgba(66, 66, 66, 0.4);
 }
+
 .chips.earth > i:nth-child(1).close:hover {
   color: #424242;
 }
@@ -98,27 +114,34 @@ a {
   background: #424242;
   color: rgba(255, 255, 255, 0.8);
 }
+
 .chips.night.outline {
   background: transparent;
   color: #424242;
   border-color: #424242;
 }
+
 .chips.night.outline:hover {
   background: #424242;
   color: #fff;
 }
+
 .chips.night > .close {
   color: rgba(255, 255, 255, 0.4);
 }
+
 .chips.night > .close:hover {
   color: white;
 }
+
 .chips.night > i:nth-child(1) {
   color: #fff;
 }
+
 .chips.night > i:nth-child(1).close {
   color: rgba(66, 66, 66, 0.4);
 }
+
 .chips.night > i:nth-child(1).close:hover {
   color: #424242;
 }
@@ -127,21 +150,26 @@ a {
   background: #2e72ee;
   color: rgba(255, 255, 255, 0.8);
 }
+
 .chips.ocean.outline {
   background: transparent;
   color: #2e72ee;
   border-color: #2e72ee;
 }
+
 .chips.ocean.outline:hover {
   background: #2e72ee;
   color: #fff;
 }
+
 .chips.ocean > i:nth-child(1) {
   color: #fff;
 }
+
 .chips.ocean > i:nth-child(1).close {
   color: rgba(66, 66, 66, 0.4);
 }
+
 .chips.ocean > i:nth-child(1).close:hover {
   color: #424242;
 }
@@ -150,21 +178,26 @@ a {
   background: #e93030;
   color: rgba(255, 255, 255, 0.8);
 }
+
 .chips.red.outline {
   background: transparent;
   color: #e93030;
   border-color: #e93030;
 }
+
 .chips.red.outline:hover {
   background: #e93030;
   color: #fff;
 }
+
 .chips.red > i:nth-child(1) {
   color: #fff;
 }
+
 .chips.red > i:nth-child(1).close {
   color: rgba(66, 66, 66, 0.4);
 }
+
 .chips.red > i:nth-child(1).close:hover {
   color: #424242;
 }
@@ -173,15 +206,18 @@ a {
   background: #fff;
   color: rgba(66, 66, 66, 0.8);
 }
+
 .chips.snow.outline {
   background: transparent;
   color: #fff;
   border-color: #fff;
 }
+
 .chips.snow.outline:hover {
   background: #fff;
   color: #fff;
 }
+
 .chips.snow > i {
   color: #424242;
 }
@@ -190,21 +226,26 @@ a {
   background: #e7d507;
   color: rgba(66, 66, 66, 0.8);
 }
+
 .chips.yellow.outline {
   background: transparent;
   color: #e7d507;
   border-color: #e7d507;
 }
+
 .chips.yellow.outline:hover {
   background: #e7d507;
   color: #fff;
 }
+
 .chips.yellow > i {
   color: #424242;
 }
+
 .chips.yellow > i.close {
   color: rgba(66, 66, 66, 0.6);
 }
+
 .chips.yellow > i.close:hover {
   color: #424242;
 }
@@ -213,21 +254,26 @@ a {
   background: #6924f0;
   color: rgba(255, 255, 255, 0.8);
 }
+
 .chips.purple.outline {
   background: transparent;
   color: #6924f0;
   border-color: #6924f0;
 }
+
 .chips.purple.outline:hover {
   background: #6924f0;
   color: #fff;
 }
+
 .chips.purple > i:nth-child(1) {
   color: #fff;
 }
+
 .chips.purple > i:nth-child(1).close {
   color: rgba(66, 66, 66, 0.4);
 }
+
 .chips.purple > i:nth-child(1).close:hover {
   color: #424242;
 }
@@ -236,21 +282,26 @@ a {
   background: #ff87cb;
   color: rgba(255, 255, 255, 0.8);
 }
+
 .chips.pink.outline {
   background: transparent;
   color: #ff87cb;
   border-color: #ff87cb;
 }
+
 .chips.pink.outline:hover {
   background: #ff87cb;
   color: #fff;
 }
+
 .chips.pink > i:nth-child(1) {
   color: #fff;
 }
+
 .chips.pink > i:nth-child(1).close {
   color: rgba(66, 66, 66, 0.4);
 }
+
 .chips.pink > i:nth-child(1).close:hover {
   color: #424242;
 }

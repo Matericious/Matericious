@@ -1,32 +1,76 @@
-.ripple {
-  position: relative;
-  overflow: hidden;
-  transform: translate3d(0, 0, 0);
+.ripple.dark > .md-ripple > .rippleWave {
+  background: rgba(0, 0, 0, 0.5);
 }
-.ripple:after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  display: block;
+
+.ripple.light > .md-ripple > .rippleWave {
+  background: white;
+}
+
+.md-ripple {
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  border-radius: inherit;
   pointer-events: none;
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-  background-repeat: no-repeat;
-  background-position: 50%;
-  transform: scale(10, 10);
-  opacity: 0;
-  transition: transform 0.5s, opacity 1s;
-}
-.ripple:active:after {
-  transform: scale(0, 0);
-  opacity: 0.3;
-  transition: 0s;
+  animation: ripple-shadow 0.4s forwards;
+  -webkit-animation: ripple-shadow 0.4s forwards;
 }
 
-/*#################################################################################################################################################################################################################################################################################################
-*/
+.md-ripple > .rippleWave {
+  backface-visibility: hidden;
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0.7);
+  background: white;
+  -webkit-transform: scale(0.7);
+  opacity: 0.45;
+  animation: ripple 2s forwards;
+  -webkit-animation: ripple 2s forwards;
+}
+
+@keyframes ripple-shadow {
+  0% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  20% {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+@-webkit-keyframes ripple-shadow {
+  0% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  20% {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(24);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes ripple {
+  to {
+    -webkit-transform: scale(24);
+    opacity: 0;
+  }
+}
+
 *:hover,
 *:focus {
   outline: none;
@@ -37,12 +81,13 @@ snackbar {
   height: 100vh;
   pointer-events: none;
 }
+
 snackbar > div {
   width: 350px;
   height: 60px;
   max-width: 95%;
   font-family: "Roboto", san-serif;
-  background: #111111;
+  background: #424242;
   color: #cbcbcb;
   border-radius: 5px;
   position: fixed;
@@ -51,6 +96,7 @@ snackbar > div {
   overflow: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 snackbar > div > text {
   width: calc(100% - 90px);
   height: 60px;
@@ -62,6 +108,7 @@ snackbar > div > text {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 snackbar > div > button {
   display: inline-block;
   float: right;
@@ -75,54 +122,68 @@ snackbar > div > button {
   text-transform: uppercase;
   display: inline-block;
 }
+
 snackbar > div > button:nth-child(2) {
   width: 40px;
   height: 40px;
   margin-top: 10px;
-  background: rgba(17, 17, 17, 0.1);
+  background: rgba(66, 66, 66, 0.1);
   border-radius: 50%;
   transition: all 0.5s linear 0s;
 }
+
 snackbar > div > button:nth-child(2) > i {
   vertical-align: middle;
   font-size: 20px;
 }
+
 snackbar > div > button:nth-child(3) {
   font-size: 14px;
   position: relative;
   left: 20px !important;
 }
+
 snackbar.light {
-  background: rgba(17, 17, 17, 0.6);
+  background: rgba(66, 66, 66, 0.6);
 }
+
 snackbar.light > div {
   background: #fff;
   box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1), 0 5px 30px 0 rgba(0, 0, 0, 0.1);
 }
+
 snackbar.light > div > text {
-  color: #111111;
+  color: #424242;
 }
+
 snackbar.light > div > button {
-  color: #111111;
+  color: #424242;
 }
+
 snackbar.action > div {
   width: 380px;
 }
+
 snackbar.action > div > text {
   width: calc(100% - 160px);
 }
+
 snackbar.top > div {
   top: 0.5em;
 }
+
 snackbar.bottom > div {
   bottom: 0.5em;
 }
+
 snackbar.left > div {
   left: 0.5em;
 }
+
 snackbar.right > div {
   right: 0.5em;
 }
+
 snackbar.center > div {
   margin: 0px auto;
   left: 0px;
@@ -146,6 +207,7 @@ Snackbar Animations*/
     bottom: 0.5em;
   }
 }
+
 @-webkit-keyframes slideUpBottom {
   from {
     bottom: -100px;
@@ -154,6 +216,7 @@ Snackbar Animations*/
     bottom: 0.5em;
   }
 }
+
 @keyframes slideUpBottom {
   from {
     bottom: -100px;
@@ -162,6 +225,7 @@ Snackbar Animations*/
     bottom: 0.5em;
   }
 }
+
 .slideUpTop {
   -webkit-animation: slideUpTop 0.5s 0s ease forwards;
   -moz-animation: slideUpTop 0.5s 0s ease forwards;
@@ -176,6 +240,7 @@ Snackbar Animations*/
     top: 0.5em;
   }
 }
+
 @-webkit-keyframes slideUpTop {
   from {
     top: -100px;
@@ -184,6 +249,7 @@ Snackbar Animations*/
     top: 0.5em;
   }
 }
+
 @keyframes slideUpTop {
   from {
     top: -100px;
@@ -192,6 +258,7 @@ Snackbar Animations*/
     top: 0.5em;
   }
 }
+
 /*
 ==============================================
 slideDown Animation 
@@ -211,6 +278,7 @@ slideDown Animation
     bottom: -100px;
   }
 }
+
 @-webkit-keyframes slideDownBottom {
   from {
     bottom: 0.5em;
@@ -219,6 +287,7 @@ slideDown Animation
     bottom: -100px;
   }
 }
+
 @keyframes slideDownBottom {
   from {
     bottom: 0.5em;
@@ -227,10 +296,11 @@ slideDown Animation
     bottom: -100px;
   }
 }
+
 .slideDownTop {
-  -webkit-animation: slideDownTop 0.5s 0s ease forwards;
-  -moz-animation: slideDownTop 0.5s 0s ease forwards;
-  animation: slideDownTop 0.5s 0s ease forwards;
+  -webkit-animation: slideDownTop 1s 0s ease forwards;
+  -moz-animation: slideDownTop 1s 0s ease forwards;
+  animation: slideDownTop 1s 0s ease forwards;
 }
 
 @-moz-keyframes slideDownTop {
@@ -241,6 +311,7 @@ slideDown Animation
     top: -100px;
   }
 }
+
 @-webkit-keyframes slideDownTop {
   from {
     top: 0.5em;
@@ -249,6 +320,7 @@ slideDown Animation
     top: -100px;
   }
 }
+
 @keyframes slideDownTop {
   from {
     top: 0.5em;

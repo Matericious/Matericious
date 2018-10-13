@@ -6,28 +6,39 @@
   outline: none;
 }
 
+*:hover,
+*:focus {
+  outline: none;
+}
+
 .input {
   position: relative;
 }
+
 .input > input {
   width: 100%;
   background: transparent;
   padding: 8px 0px;
   border: none;
-  border-bottom: 2px solid #969696;
+  border-bottom: 2px solid #99A3A4;
   transition: border-color .5s;
   cursor: pointer;
 }
-.input > input:focus ~ label, .input > input:valid ~ label {
+
+.input > input:focus ~ label,
+.input > input:valid ~ label {
   bottom: 32px;
   font-size: 12px;
 }
+
 .input > input:hover, .input > input:focus {
   border-bottom: 2px solid #424242;
 }
+
 .input > input:hover:active, .input > input:hover:focus, .input > input:focus:active, .input > input:focus:focus {
   cursor: text;
 }
+
 .input > label {
   position: absolute;
   display: block;
@@ -35,13 +46,14 @@
   font-sizE: 17px;
   font-family: "Roboto", san-serif;
   transition: all 200ms;
-  color: #969696;
+  color: #99A3A4;
   z-index: -1;
 }
 
 .input.earth > input:hover, .input.earth > input:focus {
   border-color: #34c559;
 }
+
 .input.earth > input:hover ~ label, .input.earth > input:focus ~ label {
   color: #34c559;
 }
@@ -49,6 +61,7 @@
 .input.night > input:hover, .input.night > input:focus {
   border-color: #424242;
 }
+
 .input.night > input:hover ~ label, .input.night > input:focus ~ label {
   color: #424242;
 }
@@ -56,6 +69,7 @@
 .input.ocean > input:hover, .input.ocean > input:focus {
   border-color: #2e72ee;
 }
+
 .input.ocean > input:hover ~ label, .input.ocean > input:focus ~ label {
   color: #2e72ee;
 }
@@ -63,6 +77,7 @@
 .input.red > input:hover, .input.red > input:focus {
   border-color: #e93030;
 }
+
 .input.red > input:hover ~ label, .input.red > input:focus ~ label {
   color: #e93030;
 }
@@ -70,6 +85,7 @@
 .input.snow > input:hover, .input.snow > input:focus {
   border-color: #fff;
 }
+
 .input.snow > input:hover ~ label, .input.snow > input:focus ~ label {
   color: #fff;
 }
@@ -77,6 +93,7 @@
 .input.yellow > input:hover, .input.yellow > input:focus {
   border-color: #e7d507;
 }
+
 .input.yellow > input:hover ~ label, .input.yellow > input:focus ~ label {
   color: #e7d507;
 }
@@ -84,6 +101,7 @@
 .input.purple > input:hover, .input.purple > input:focus {
   border-color: #6924f0;
 }
+
 .input.purple > input:hover ~ label, .input.purple > input:focus ~ label {
   color: #6924f0;
 }
@@ -91,6 +109,7 @@
 .input.pink > input:hover, .input.pink > input:focus {
   border-color: #ff87cb;
 }
+
 .input.pink > input:hover ~ label, .input.pink > input:focus ~ label {
   color: #ff87cb;
 }

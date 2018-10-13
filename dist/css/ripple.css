@@ -1,6 +1,7 @@
 .ripple.dark > .md-ripple > .rippleWave {
   background: rgba(0, 0, 0, 0.5);
 }
+
 .ripple.light > .md-ripple > .rippleWave {
   background: white;
 }
@@ -19,6 +20,7 @@
   animation: ripple-shadow 0.4s forwards;
   -webkit-animation: ripple-shadow 0.4s forwards;
 }
+
 .md-ripple > .rippleWave {
   backface-visibility: hidden;
   position: absolute;
@@ -42,6 +44,7 @@
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   }
 }
+
 @-webkit-keyframes ripple-shadow {
   0% {
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
@@ -53,12 +56,14 @@
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   }
 }
+
 @keyframes ripple {
   to {
     transform: scale(24);
     opacity: 0;
   }
 }
+
 @-webkit-keyframes ripple {
   to {
     -webkit-transform: scale(24);

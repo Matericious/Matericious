@@ -18,6 +18,7 @@
   transition: all 150ms linear;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
 }
+
 .btn > i {
   font-size: 15px;
   vertical-align: middle;
@@ -25,23 +26,28 @@
   transition: all 0.5s linear 0s;
   position: relative;
 }
+
 .btn > i:nth-child(1) {
   position: relative;
   left: -5px;
 }
+
 .btn > i[ani], .btn > i[move] {
   left: 0px;
   right: 0px;
 }
+
 .btn:hover {
   transition: all 150ms linear;
   opacity: 0.9;
 }
+
 .btn:hover > i[ani="left"] {
   -webkit-animation: ani-left 1s infinite;
   -moz-animation: ani-left 1s infinite;
   animation: ani-left 1s infinite;
 }
+
 @-moz-keyframes ani-left {
   10% {
     left: 0px;
@@ -50,6 +56,7 @@
     left: -5px;
   }
 }
+
 @-webkit-keyframes ani-left {
   10% {
     left: 0px;
@@ -58,6 +65,7 @@
     left: -5px;
   }
 }
+
 @keyframes ani-left {
   10% {
     left: 0px;
@@ -66,11 +74,13 @@
     left: -5px;
   }
 }
+
 .btn:hover > i[ani="right"] {
   -webkit-animation: ani-right 1s infinite;
   -moz-animation: ani-right 1s infinite;
   animation: ani-right 1s infinite;
 }
+
 @-moz-keyframes ani-right {
   10% {
     left: 0px;
@@ -79,6 +89,7 @@
     left: 5px;
   }
 }
+
 @-webkit-keyframes ani-right {
   10% {
     left: 0px;
@@ -87,6 +98,7 @@
     left: 5px;
   }
 }
+
 @keyframes ani-right {
   10% {
     left: 0px;
@@ -95,11 +107,13 @@
     left: 5px;
   }
 }
+
 .btn:hover > i[ani="rotate"] {
   -webkit-animation: ani-rotate 1s infinite;
   -moz-animation: ani-rotate 1s infinite;
   animation: ani-rotate 1s infinite;
 }
+
 @-moz-keyframes ani-rotate {
   from {
     transform: rotate(0deg);
@@ -108,6 +122,7 @@
     transform: rotate(360deg);
   }
 }
+
 @-webkit-keyframes ani-rotate {
   from {
     transform: rotate(0deg);
@@ -116,6 +131,7 @@
     transform: rotate(360deg);
   }
 }
+
 @keyframes ani-rotate {
   from {
     transform: rotate(0deg);
@@ -124,39 +140,47 @@
     transform: rotate(360deg);
   }
 }
+
 .btn:hover > i[move="left"] {
   -webkit-animation: ani-left 1s 1;
   -moz-animation: ani-left 1s 1;
   animation: ani-left 1s 1;
 }
+
 .btn:hover > i[move="right"] {
   -webkit-animation: ani-right 1s 1;
   -moz-animation: ani-right 1s 1;
   animation: ani-right 1s 1;
 }
+
 .btn:hover > i[move="rotate"] {
   -webkit-animation: ani-rotate 1s 1;
   -moz-animation: ani-rotate 1s 1;
   animation: ani-rotate 1s 1;
 }
+
 .btn:active {
   transition: all 150ms linear;
   opacity: 0.7;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
+
 .btn.outline {
   background: transparent;
   border: #cbcbcb 1px solid;
   color: #222;
 }
+
 .btn.outline:hover {
   background: #cbcbcb;
   color: #424242;
 }
+
 .btn.text {
   background: transparent;
   box-shadow: none;
 }
+
 .btn.round, .btn.transparent {
   width: 50px;
   height: 50px;
@@ -165,11 +189,13 @@
   text-align: center;
   border-radius: 50%;
 }
+
 .btn.round > i, .btn.transparent > i {
   font-size: 20px;
   left: 0;
   right: 0;
 }
+
 .btn.round:before, .btn.transparent:before {
   content: "";
   width: 30px;
@@ -201,9 +227,11 @@ btn.btn[ts] {
   text-align: center;
   box-shadow: none;
 }
+
 btn.btn[ts] > i {
   font-size: 20px;
 }
+
 btn.btn[ts]:hover {
   box-shadow: none;
 }
@@ -212,23 +240,29 @@ btn.btn[ts]:hover {
   background: #34c559;
   color: #fff;
 }
+
 .btn.earth.gradient {
   background: linear-gradient(90deg, #21f379 0%, #3be76c 49%, #00ba66 95%);
 }
+
 .btn.earth.outline {
   background: transparent;
   border: #34c559 1px solid;
 }
+
 .btn.earth.outline {
   color: #34c559;
 }
+
 .btn.earth.outline:hover {
   background: #34c559;
   color: #fff;
 }
+
 .btn.earth.text {
   color: #34c559;
 }
+
 .btn.earth.text {
   background: transparent;
 }
@@ -237,23 +271,29 @@ btn.btn[ts]:hover {
   background: #424242;
   color: #fff;
 }
+
 .btn.night.gradient {
   background: linear-gradient(90deg, #3b3a3a 5%, #444343 47%, #b9b9b9 100%);
 }
+
 .btn.night.outline {
   background: transparent;
   border: #424242 1px solid;
 }
+
 .btn.night.outline {
   color: #424242;
 }
+
 .btn.night.outline:hover {
   background: #424242;
   color: #fff;
 }
+
 .btn.night.text {
   color: #424242;
 }
+
 .btn.night.text {
   background: transparent;
 }
@@ -262,23 +302,29 @@ btn.btn[ts]:hover {
   background: #2e72ee;
   color: #fff;
 }
+
 .btn.ocean.gradient {
   background: linear-gradient(90deg, #2196f3 0%, #03c5d6 61%, #00d4ff 84%);
 }
+
 .btn.ocean.outline {
   background: transparent;
   border: #2e72ee 1px solid;
 }
+
 .btn.ocean.outline {
   color: #2e72ee;
 }
+
 .btn.ocean.outline:hover {
   background: #2e72ee;
   color: #fff;
 }
+
 .btn.ocean.text {
   color: #2e72ee;
 }
+
 .btn.ocean.text {
   background: transparent;
 }
@@ -287,23 +333,29 @@ btn.btn[ts]:hover {
   background: #e93030;
   color: #fff;
 }
+
 .btn.red.gradient {
   background: linear-gradient(90deg, #e9e130 0%, #f0247a 0%, #ff2a00 46%, #e93030 95%);
 }
+
 .btn.red.outline {
   background: transparent;
   border: #e93030 1px solid;
 }
+
 .btn.red.outline {
   color: #e93030;
 }
+
 .btn.red.outline:hover {
   background: #e93030;
   color: #fff;
 }
+
 .btn.red.text {
   color: #e93030;
 }
+
 .btn.red.text {
   background: transparent;
 }
@@ -312,17 +364,21 @@ btn.btn[ts]:hover {
   background: #fff;
   color: #424242;
 }
+
 .btn.snow.outline {
   background: transparent;
   border: #fff 1px solid;
 }
+
 .btn.snow[outline] {
   color: #424242;
 }
+
 .btn.snow:hover {
   background: #fff;
   color: #424242;
 }
+
 .btn.snow.text {
   background: transparent;
 }
@@ -331,20 +387,25 @@ btn.btn[ts]:hover {
   background: #e7d507;
   color: #424242;
 }
+
 .btn.yellow.gradient {
   background: linear-gradient(90deg, #ffeb00 0%, #f4ed15 45%, #e0ff00 65%, #b9ff00 100%);
 }
+
 .btn.yellow.outline {
   background: transparent;
   border: #e7d507 1px solid;
 }
+
 .btn.yellow.outline {
   color: #424242;
 }
+
 .btn.yellow.outline:hover {
   background: #e7d507;
   color: #424242;
 }
+
 .btn.yellow.text {
   background: transparent;
 }
@@ -353,23 +414,29 @@ btn.btn[ts]:hover {
   background: #6924f0;
   color: #fff;
 }
+
 .btn.purple.gradient {
   background: linear-gradient(90deg, #e9e130 0%, #6924f0 0%, #b40f91 44%, #e82890 95%);
 }
+
 .btn.purple.outline {
   background: transparent;
   border: #6924f0 1px solid;
 }
+
 .btn.purple.outline {
   color: #6924f0;
 }
+
 .btn.purple.outline:hover {
   background: #6924f0;
   color: #fff;
 }
+
 .btn.purple.text {
   color: #6924f0;
 }
+
 .btn.purple.text {
   background: transparent;
 }
@@ -378,23 +445,29 @@ btn.btn[ts]:hover {
   background: #ff87cb;
   color: #fff;
 }
+
 .btn.pink.gradient {
   background: linear-gradient(90deg, #e9e130 0%, #ff87cb 0%, #e977e1 46%, #e523e7 95%);
 }
+
 .btn.pink.outline {
   background: transparent;
   border: #ff87cb 1px solid;
 }
+
 .btn.pink.outline {
   color: #ff87cb;
 }
+
 .btn.pink.outline:hover {
   background: #ff87cb;
   color: #fff;
 }
+
 .btn.pink.text {
   color: #ff87cb;
 }
+
 .btn.pink.text {
   background: transparent;
 }
@@ -403,23 +476,29 @@ btn.btn[ts]:hover {
   background: #34c559;
   color: #fff;
 }
+
 .link.earth.gradient {
   background: linear-gradient(90deg, #21f379 0%, #3be76c 49%, #00ba66 95%);
 }
+
 .link.earth.outline {
   background: transparent;
   border: #34c559 1px solid;
 }
+
 .link.earth.outline {
   color: #34c559;
 }
+
 .link.earth.outline:hover {
   background: #34c559;
   color: #fff;
 }
+
 .link.earth.text {
   color: #34c559;
 }
+
 .link.earth.text {
   background: transparent;
 }
@@ -428,23 +507,29 @@ btn.btn[ts]:hover {
   background: #424242;
   color: #fff;
 }
+
 .link.night.gradient {
   background: linear-gradient(90deg, #3b3a3a 5%, #444343 47%, #b9b9b9 100%);
 }
+
 .link.night.outline {
   background: transparent;
   border: #424242 1px solid;
 }
+
 .link.night.outline {
   color: #424242;
 }
+
 .link.night.outline:hover {
   background: #424242;
   color: #fff;
 }
+
 .link.night.text {
   color: #424242;
 }
+
 .link.night.text {
   background: transparent;
 }
@@ -453,23 +538,29 @@ btn.btn[ts]:hover {
   background: #2e72ee;
   color: #fff;
 }
+
 .link.ocean.gradient {
   background: linear-gradient(90deg, #2196f3 0%, #03c5d6 61%, #00d4ff 84%);
 }
+
 .link.ocean.outline {
   background: transparent;
   border: #2e72ee 1px solid;
 }
+
 .link.ocean.outline {
   color: #2e72ee;
 }
+
 .link.ocean.outline:hover {
   background: #2e72ee;
   color: #fff;
 }
+
 .link.ocean.text {
   color: #2e72ee;
 }
+
 .link.ocean.text {
   background: transparent;
 }
@@ -478,23 +569,29 @@ btn.btn[ts]:hover {
   background: #e93030;
   color: #fff;
 }
+
 .link.red.gradient {
   background: linear-gradient(90deg, #e9e130 0%, #f0247a 0%, #ff2a00 46%, #e93030 95%);
 }
+
 .link.red.outline {
   background: transparent;
   border: #e93030 1px solid;
 }
+
 .link.red.outline {
   color: #e93030;
 }
+
 .link.red.outline:hover {
   background: #e93030;
   color: #fff;
 }
+
 .link.red.text {
   color: #e93030;
 }
+
 .link.red.text {
   background: transparent;
 }
@@ -503,17 +600,21 @@ btn.btn[ts]:hover {
   background: #fff;
   color: #424242;
 }
+
 .link.snow.outline {
   background: transparent;
   border: #fff 1px solid;
 }
+
 .link.snow[outline] {
   color: #424242;
 }
+
 .link.snow:hover {
   background: #fff;
   color: #424242;
 }
+
 .link.snow.text {
   background: transparent;
 }
@@ -522,20 +623,25 @@ btn.btn[ts]:hover {
   background: #e7d507;
   color: #424242;
 }
+
 .link.yellow.gradient {
   background: linear-gradient(90deg, #ffeb00 0%, #f4ed15 45%, #e0ff00 65%, #b9ff00 100%);
 }
+
 .link.yellow.outline {
   background: transparent;
   border: #e7d507 1px solid;
 }
+
 .link.yellow.outline {
   color: #424242;
 }
+
 .link.yellow.outline:hover {
   background: #e7d507;
   color: #424242;
 }
+
 .link.yellow.text {
   background: transparent;
 }
@@ -544,23 +650,29 @@ btn.btn[ts]:hover {
   background: #6924f0;
   color: #fff;
 }
+
 .link.purple.gradient {
   background: linear-gradient(90deg, #e9e130 0%, #6924f0 0%, #b40f91 44%, #e82890 95%);
 }
+
 .link.purple.outline {
   background: transparent;
   border: #6924f0 1px solid;
 }
+
 .link.purple.outline {
   color: #6924f0;
 }
+
 .link.purple.outline:hover {
   background: #6924f0;
   color: #fff;
 }
+
 .link.purple.text {
   color: #6924f0;
 }
+
 .link.purple.text {
   background: transparent;
 }
@@ -569,23 +681,29 @@ btn.btn[ts]:hover {
   background: #ff87cb;
   color: #fff;
 }
+
 .link.pink.gradient {
   background: linear-gradient(90deg, #e9e130 0%, #ff87cb 0%, #e977e1 46%, #e523e7 95%);
 }
+
 .link.pink.outline {
   background: transparent;
   border: #ff87cb 1px solid;
 }
+
 .link.pink.outline {
   color: #ff87cb;
 }
+
 .link.pink.outline:hover {
   background: #ff87cb;
   color: #fff;
 }
+
 .link.pink.text {
   color: #ff87cb;
 }
+
 .link.pink.text {
   background: transparent;
 }
