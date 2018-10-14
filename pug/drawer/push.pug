@@ -1,0 +1,22 @@
+- var title = 'Active Drawer'
+doctype
+html(lang='en')
+  head
+    include ../includes/head.pug
+    style(type="text/css").
+      body { margin: 0 }
+  body
+    -var type = ''
+    include ../includes/drawer.pug
+    header.appbar.cyan.z-1
+      div.wrap
+        section.left
+          button.btn.round.wave.text(drawer='push')
+            i.material-icons menu
+          label Matericious
+        section.right
+          button.btn.round.wave.text
+            i.material-icons cloud_queue
+          button.btn.round.wave.text
+            i.material-icons notifications_none
+    script(src='https://rawgit.com/Matericious/Matericious/master/dist/js/drawer.js')
