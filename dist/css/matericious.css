@@ -393,6 +393,15 @@ body.overlay:after {
   fill: currentColor;
 }
 
+.drawer > .content > nav.list > a.active {
+  background: rgba(0, 188, 212, 0.1);
+  color: #00bcd4;
+}
+
+.drawer > .content > nav.list > a.active > i {
+  color: #00bcd4;
+}
+
 @-moz-keyframes fadeIn {
   from {
     opacity: 0;
@@ -2520,6 +2529,7 @@ a {
   position: absolute;
   top: 0px;
   z-index: 1;
+  border-radius: 4px;
 }
 
 .menu > li {
