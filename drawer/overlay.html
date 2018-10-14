@@ -1,79 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <title>Overlay Drawer Demo</title>
-  <meta charset="utf-8">
-  <meta name="author" content="Matericious">
-  <meta name="description" content="Delicious Material framework">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://rawgit.com/Matericious/Matericious/master/dist/css/drawer.css">
-  <link rel="stylesheet" href="https://rawgit.com/Matericious/Matericious/master/dist/css/appbar.css">
-  <link rel="stylesheet" href="https://rawgit.com/Matericious/Matericious/master/dist/css/lists.css">
-  <link rel="stylesheet" href="https://rawgit.com/Matericious/Matericious/master/dist/css/buttons.css">
-  <style>
-    body {
-      margin: 0
-    }
-  </style>
-</head>
-
-<body>
-  <aside class="drawer">
-    <div class="header">
-      <h3 class="title">Mail</h3>
-      <h6 class="subtitle">info@matericious.com</h6>
-    </div>
-    <div class="content">
-      <nav class="list">
-        <a class="night ripple">
-            <i class="material-icons">mail</i>Inbox
-          </a>
-        <a class="night ripple">
-            <i class="material-icons">send</i>Sent
-          </a>
-        <a class="night ripple">
-            <i class="material-icons">favorite</i>Favorite
-          </a>
-        <a class="night ripple">
-            <i class="material-icons">archive</i>Archive
-          </a>
-        <hr>
-        <h6 class="subheader">Labels</h6>
-        <a class="night ripple">
-            <i class="material-icons">delete</i>Delete
-          </a>
-        <a class="night ripple">
-            <i class="material-icons">add_box</i>Add Category
-          </a>
-        <a class="night ripple">
-            <i class="material-icons">settings</i>Settings
-          </a>
-      </nav>
-    </div>
-  </aside>
-  <header class="appbar cyan">
-    <div class="wrap">
-      <section class="left">
-        <button drawer="overlay" class="btn round wave text">
-        <i class="material-icons">menu</i>
-      </button>
-        <label>Matericious</label>
-      </section>
-      <section class="right">
-        <button class="btn round wave text">
-        <i class="material-icons">cloud_queue</i>
-      </button>
-        <button class="btn round wave text">
-        <i class="material-icons">notifications_none</i>
-      </button>
-      </section>
-    </div>
-  </header>
-  <script src="https://rawgit.com/Matericious/Matericious/master/dist/js/drawer.js"></script>
-</body>
-</head>
-
+  <head>
+    <title>Overlay Drawer Demo</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Matericious">
+    <meta name="description" content="Delicious Material framework">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://rawgit.com/Matericious/Matericious/master/dist/css/matericious.min.css">
+    <style type="text/css">body { margin: 0 }</style>
+  </head>
+  <body>
+    <aside class="drawer z-10">
+      <div class="header">
+        <h3 class="title">Matericious</h3>
+        <h6 class="subtitle">info@matericious.com</h6>
+      </div>
+      <div class="content">
+        <nav class="list"><a class="night ripple"><i class="material-icons">mail</i>Inbox</a><a class="night ripple"><i class="material-icons">send</i>Send</a><a class="night ripple"><i class="material-icons">favorite</i>Favorite</a><a class="night ripple"><i class="material-icons">archive</i>Archive</a>
+          <hr>
+          <h6 class="subheader">Labels</h6><a class="night ripple"><i class="material-icons">delete</i>Delete</a><a class="night ripple"><i class="material-icons">add_box</i>Add Category</a><a class="night ripple"><i class="material-icons">settings</i>Settings</a>
+        </nav>
+      </div>
+    </aside>
+    <header class="appbar cyan z-1">
+      <div class="wrap">
+        <section class="left">
+          <button class="btn round wave text" drawer="overlay"><i class="material-icons">menu</i></button>
+          <label>Matericious</label>
+        </section>
+        <section class="right">
+          <button class="btn round wave text"><i class="material-icons">cloud_queue</i></button>
+          <button class="btn round wave text"><i class="material-icons">notifications_none</i></button>
+        </section>
+      </div>
+    </header>
+    <script src="https://rawgit.com/Matericious/Matericious/master/dist/js/drawer.js"></script>
+  </body>
 </html>

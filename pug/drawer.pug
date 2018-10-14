@@ -1,0 +1,25 @@
+- var title = 'Drawer'
+doctype
+html(lang='en')
+  head
+    include /includes/head.pug
+    style(type="text/css").
+      .toplink { font-size: 18px; }
+      iframe { width: 100%; height: 300px; margin-top: 10px }
+  body
+    h3 Drawers
+    a.toplink(target='_blank' href='drawer/permanent.html') Permanent drawer
+    iframe(src='drawer/permanent.html')
+    br
+    br
+    a.toplink(target='_blank' href='drawer/active.html') Dismissible drawer
+    iframe(src='drawer/active.html')
+    br
+    br
+    a.toplink(target='_blank' href='drawer/overlay.html') Modal drawer
+    iframe(src='drawer/overlay.html')
+    br
+    br
+    a.toplink(target='_blank' href='drawer/push.html') Push drawer
+    iframe(src='drawer/push.html')
+          
