@@ -19,6 +19,7 @@ $height: 48px;
   position: absolute;
   top: 0px;
   z-index: 1;
+  border-radius: 4px;
   > li {
     height: $height;
     line-height: $height;
