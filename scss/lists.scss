@@ -1,67 +1,74 @@
-
 .list {
   max-width: 100%;
   height: auto;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2),
-    0 1px 8px 0 rgba(0, 0, 0, 0.12);
   list-style: none;
-  padding: 10px 0 10px 0;
-  border-radius: 2px;
+  padding: 8px 0;
+  border-radius: 4px;
   background: #fff;
   > li {
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    text-indent: 20px;
+    width: auto;
+    height: 48px;
+    line-height: 48px;
+    font-size: 16px;
+    padding: 0 16px;
+    color: #424242;
     font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui,
       -apple-system;
     &:hover {
       background: #efefef;
     }
-    > label {
-      font-size: 18px;
+    > a {
+      text-decoration: none;
+      color: #424242;
     }
-    > span{
-      display: block;
-      font-size: 14px;
-      color: #aeafaf;
+    > div span {
+      &.title {
+        color: #424242;
+      }
+      &.subtitle {
+        display: block;
+        font-size: 14px;
+        color: #999;
+      }
     }
-    > i{
-      font-size: 25px;
+    > i {
+      font-size: 24px;
       vertical-align: middle;
-      color: #aeafaf;
+      color: #999;
       position: relative;
-      left: -25px;
-      top: -2px;
-      &.trail-icon{
+      margin-right: 32px;
+      &.trail-icon {
+        margin-right: 0;
+        margin-top: 12px;
         display: inline-block;
         float: right;
-        top: 12px;
-        left: -20px;
+        position: relative;
       }
     }
-      &.two-line{
-      padding: 10px 0 10px 0;
-      height: auto;
-      line-height: 20px; 
-      .lead-icon{
-        font-size: 35px;
-        top: 10px;
+    &.two-line {
+      padding: 8px 16px;
+      height: 56px;
+      line-height: 20px;
+      display:flex;
+      align-items: center;
+      .lead-icon {
+        margin-right: 16px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+        color: #fff;
+        background-color: #999;
+        text-align: center;
+        float: left;
+        border-radius: 50%;
       }
-    }
-    &.two-line-lead{
-      padding: 10px 0 0px 0;
-      height: auto;
-      line-height: 20px; 
-      .lead-icon{
-        font-size: 35px;
-        top: 10px;
+      > .trail-icon {
+        display: inline-block;
+        margin: 0 0 0 auto;
       }
-      > span{
-        text-indent: 80px;
-      }
-      > .trail-icon{
-        top: -40px;
+      + hr {
+        margin: 0;
       }
     }
   }

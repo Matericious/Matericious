@@ -1,18 +1,19 @@
 .list {
   max-width: 100%;
   height: auto;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
   list-style: none;
-  padding: 10px 0 10px 0;
-  border-radius: 2px;
+  padding: 8px 0;
+  border-radius: 4px;
   background: #fff;
 }
 
 .list > li {
-  width: 100%;
-  height: 50px;
-  line-height: 50px;
-  text-indent: 20px;
+  width: auto;
+  height: 48px;
+  line-height: 48px;
+  font-size: 16px;
+  padding: 0 16px;
+  color: #424242;
   font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
 }
 
@@ -20,60 +21,65 @@
   background: #efefef;
 }
 
-.list > li > label {
-  font-size: 18px;
+.list > li > a {
+  text-decoration: none;
+  color: #424242;
 }
 
-.list > li > span {
+.list > li > div span.title {
+  color: #424242;
+}
+
+.list > li > div span.subtitle {
   display: block;
   font-size: 14px;
-  color: #aeafaf;
+  color: #999;
 }
 
 .list > li > i {
-  font-size: 25px;
+  font-size: 24px;
   vertical-align: middle;
-  color: #aeafaf;
+  color: #999;
   position: relative;
-  left: -25px;
-  top: -2px;
+  margin-right: 32px;
 }
 
 .list > li > i.trail-icon {
+  margin-right: 0;
+  margin-top: 12px;
   display: inline-block;
   float: right;
-  top: 12px;
-  left: -20px;
+  position: relative;
 }
 
 .list > li.two-line {
-  padding: 10px 0 10px 0;
-  height: auto;
+  padding: 8px 16px;
+  height: 56px;
   line-height: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .list > li.two-line .lead-icon {
-  font-size: 35px;
-  top: 10px;
+  margin-right: 16px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #999;
+  text-align: center;
+  float: left;
+  border-radius: 50%;
 }
 
-.list > li.two-line-lead {
-  padding: 10px 0 0px 0;
-  height: auto;
-  line-height: 20px;
+.list > li.two-line > .trail-icon {
+  display: inline-block;
+  margin: 0 0 0 auto;
 }
 
-.list > li.two-line-lead .lead-icon {
-  font-size: 35px;
-  top: 10px;
-}
-
-.list > li.two-line-lead > span {
-  text-indent: 80px;
-}
-
-.list > li.two-line-lead > .trail-icon {
-  top: -40px;
+.list > li.two-line + hr {
+  margin: 0;
 }
 
 .list > hr {
