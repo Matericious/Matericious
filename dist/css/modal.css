@@ -664,13 +664,27 @@ modal-con.pink.gradient {
   background: linear-gradient(90deg, #e9e130 0%, #ff87cb 0%, #e977e1 46%, #e523e7 95%);
 }
 
+
 /*#####################################FadeIn Animation*/
-.fadeIn {
+modal-con.fadeIn {
   visibility: visible !important;
   transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   -webkit-animation: fadeIn 2s;
   -moz-animation: fadeIn 2s;
   animation: fadeIn 2s;
+}
+modal-con.fadeOut {
+  transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-animation: fadeOut 1s;
+  -moz-animation: fadeOut 1s;
+  animation: fadeOut 1s;
+  visibility: hidden;
+}
+modal-con > modal.slideDownIn {
+  -webkit-animation: slideDownIn 1s ease;
+  -moz-animation: slideDownIn 1s ease;
+  animation: slideDownIn 1s ease;
+  visibility: visible !important;
 }
 
 @-moz-keyframes fadeIn {
@@ -681,7 +695,6 @@ modal-con.pink.gradient {
     opacity: 1;
   }
 }
-
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -690,7 +703,6 @@ modal-con.pink.gradient {
     opacity: 1;
   }
 }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -699,15 +711,6 @@ modal-con.pink.gradient {
     opacity: 1;
   }
 }
-
-.fadeOut {
-  transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  -webkit-animation: fadeOut 1s;
-  -moz-animation: fadeOut 1s;
-  animation: fadeOut 1s;
-  visibility: hidden;
-}
-
 @-moz-keyframes fadeOut {
   from {
     opacity: 1;
@@ -716,7 +719,6 @@ modal-con.pink.gradient {
     opacity: 0;
   }
 }
-
 @-webkit-keyframes fadeOut {
   from {
     opacity: 1;
@@ -725,7 +727,6 @@ modal-con.pink.gradient {
     opacity: 0;
   }
 }
-
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -734,15 +735,7 @@ modal-con.pink.gradient {
     opacity: 0;
   }
 }
-
 /*#######################################################SlideDown*/
-.slideDownIn {
-  -webkit-animation: slideDownIn 1s ease;
-  -moz-animation: slideDownIn 1s ease;
-  animation: slideDownIn 1s ease;
-  visibility: visible !important;
-}
-
 @-moz-keyframes slideDownIn {
   0% {
     transform: translateY(-10%);
@@ -751,7 +744,6 @@ modal-con.pink.gradient {
     transform: translateY(0%);
   }
 }
-
 @-webkit-keyframes slideDownIn {
   0% {
     transform: translateY(-10%);
@@ -760,7 +752,6 @@ modal-con.pink.gradient {
     transform: translateY(0%);
   }
 }
-
 @keyframes slideDownIn {
   0% {
     transform: translateY(-10%);
@@ -769,7 +760,6 @@ modal-con.pink.gradient {
     transform: translateY(0%);
   }
 }
-
 .hideElem {
   visibility: hidden;
 }
