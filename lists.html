@@ -9,49 +9,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://rawgit.com/Matericious/Matericious/master/dist/css/lists.css">
-  <link rel="stylesheet" href="https://rawgit.com/Matericious/Matericious/master/dist/css/ripple.css">
+  <link rel="stylesheet" href="https://rawgit.com/Matericious/Matericious/master/dist/css/matericious.min.css">
 </head>
 
 <body>
   <h3>Single-Line</h3>
-  <ul class="list" style="width: 500px">
-    <li class="night ripple">
-      <label>Line item</label>
-    </li>
-    <li class="night ripple">
-      <label>Line item</label>
-    </li>
-    <li class="night ripple">
-      <label>Line item</label>
-    </li>
+  <ul class="list z-2" style="width: 500px">
+    <li class="night ripple">List item</li>
+    <li class="night ripple">List item</li>
+    <li class="night ripple"><a href='#'>Link item</a></li>
   </ul>
 
   <h3>Two-Line</h3>
-  <ul class="list" style="width: 500px">
+  <ul class="list z-2" style="width: 500px">
     <li class="night ripple two-line">
-      <label>Line item</label>
-      <span>Secondary text</span>
+      <div class="content">
+        <span class='title'>Line item</span>
+        <span class='subtitle'>Secondary text</span>
+      </div>
     </li>
     <li class="night ripple two-line">
-      <label>Line item</label>
-      <span>Secondary text</span>
+      <div class="content">
+        <span class='title'>Line item</span>
+        <span class='subtitle'>Secondary text</span>
+      </div>
     </li>
     <li class="night ripple two-line">
-      <label>Line item</label>
-      <span>Secondary text</span>
+      <div class="content">
+        <span class='title'>Line item</span>
+        <span class='subtitle'>Secondary text</span>
+      </div>
     </li>
   </ul>
 
   <h3>Leading Line</h3>
-  <ul class="list" style="width: 500px">
+  <ul class="list z-2" style="width: 500px">
     <li class="night ripple">
       <i class="material-icons">wifi</i>
       <label>WiFi Settings</label>
     </li>
     <li class="night ripple">
-      <i class="material-icons">settings_bluetooth</i>
-      <label>Bluetook Settings</label>
+      <i class="material-icons">bluetooth</i>
+      <label>Bluetooth Settings</label>
     </li>
     <li class="night ripple">
       <i class="material-icons">location_on</i>
@@ -69,31 +68,45 @@
   </ul>
 
   <h3>Trailing Icons</h3>
-  <ul class="list" style="width: 500px">
-    <li class="night ripple">
-      <label>Line item</label>
-      <i class="material-icons trail-icon">info</i>
-    </li>
-    <li class="night ripple">
-      <label>Line item</label>
-      <i class="material-icons trail-icon">info</i>
-    </li>
-    <li class="night ripple">
-      <label>Line item</label>
-      <i class="material-icons trail-icon">info</i>
-    </li>
-    <li class="night ripple">
-      <label>Line item</label>
-      <i class="material-icons trail-icon">info</i>
-    </li>
+  <ul class="list z-2" style="width: 500px">
+    <li class="night ripple">Line item<i class="material-icons trail-icon">info</i></li>
+    <li class="night ripple">Line item<i class="material-icons trail-icon">info</i></li>
+    <li class="night ripple">Line item<i class="material-icons trail-icon">info</i></li>
   </ul>
 
   <h3>Single-Line</h3>
-  <ul class="list" style="width: 500px">
-    <li class="night ripple two-line-lead">
+  <ul class="list z-2" style="width: 500px">
+    <li class="night ripple two-line">
       <i class="material-icons lead-icon">folder</i>
-      <label>Documents </label>
-      <span> 24 Dec 2018</span>
+      <div class="content">
+        <span class="title">Documents</span>
+        <span class="subtitle">24 Dec 2018</span>
+      </div>
+      <i class="material-icons trail-icon">info</i>
+    </li>
+    <li class="night ripple two-line">
+      <i class="material-icons lead-icon">folder</i>
+      <div class="content">
+        <span class="title">Documents</span>
+        <span class="subtitle">24 Dec 2018</span>
+      </div>
+      <i class="material-icons trail-icon">info</i>
+    </li>
+    <hr>
+    <li class="night ripple two-line">
+      <i class="material-icons lead-icon">folder</i>
+      <div class="content">
+        <span class="title">Documents</span>
+        <span class="subtitle">24 Dec 2018</span>
+      </div>
+      <i class="material-icons trail-icon">info</i>
+    </li>
+    <li class="night ripple two-line">
+      <i class="material-icons lead-icon">folder</i>
+      <div class="content">
+        <span class="title">Documents</span>
+        <span class="subtitle">24 Dec 2018</span>
+      </div>
       <i class="material-icons trail-icon">info</i>
     </li>
   </ul>
