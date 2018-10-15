@@ -1,6 +1,7 @@
 .badge[data-badge] {
   position: relative;
 }
+
 .badge[data-badge]:after {
   content: attr(data-badge);
   display: flex;
