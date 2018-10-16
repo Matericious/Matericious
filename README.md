@@ -1,5 +1,14 @@
-[![Version](https://img.shields.io/npm/v/matericious.svg)](https://www.npmjs.com/package/matericious)
-# Matericious
-### Delicious Material framework with basic web components
-
-### WE'RE working on something AWESOME (:
+<h2 align="center">Matericious</h2>
+<p align="center">
+  Delicious Framework with Material Components.
+  <br>
+  <a href="https://matericious.com"><strong>« Components Demo »</strong></a>
+  <br>
+  <br>
+  <a href="https://www.npmjs.com/package/matericious">
+    <img alt="npm" src="https://img.shields.io/npm/v/matericious.svg">
+  </a>  
+  <a href="https://david-dm.org/matericious/matericious?type=dev">
+    <img alt="devdep" src="https://david-dm.org/matericious/matericious/dev-status.svg">
+  </a>
+</p>
