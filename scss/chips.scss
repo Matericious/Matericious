@@ -25,6 +25,7 @@ a{
   color: #2f2f2f;
   cursor: pointer;
   text-decoration: none;
+  overflow: hidden;
   &:hover{
     background: color('basic', 1);
   }
