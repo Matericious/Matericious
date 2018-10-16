@@ -14,6 +14,7 @@ a {
   color: #2f2f2f;
   cursor: pointer;
   text-decoration: none;
+  overflow: hidden;
 }
 
 .chips:hover {
