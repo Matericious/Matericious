@@ -1,7 +1,7 @@
 .ripple {
   z-index: 1;
   position: relative;
-  overflow: hidden;
+  overflow: hidden !important;
 }
 .ripple .rippleWave {
   width: 12px;
