@@ -1,7 +1,6 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
-
 .ripple {
   z-index: 1;
   position: relative;
@@ -10,7 +9,7 @@
     width: 12px;
     height: 12px;
     position: absolute;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.3) !important;
     border-radius: 100%;
     animation: ripple 1.6s;
   }
@@ -31,7 +30,7 @@
 @mixin colorClass($name, $tag) {
   &.text {
     > .rippleWave {
-      background: color($name, 0.4);
+      background: color($name, 0.4) !important;
     }
   }
 }
