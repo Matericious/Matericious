@@ -26,39 +26,39 @@
   }
 }
 .ripple.cyan > .rippleWave {
-  background: rgba(0, 188, 212, 0.3);
+  background: rgba(0, 188, 212, 0.2);
 }
 
 .ripple.earth > .rippleWave {
-  background: rgba(52, 197, 89, 0.3);
+  background: rgba(52, 197, 89, 0.2);
 }
 
 .ripple.night > .rippleWave {
-  background: rgba(66, 66, 66, 0.3);
+  background: rgba(66, 66, 66, 0.2);
 }
 
 .ripple.ocean > .rippleWave {
-  background: rgba(46, 114, 238, 0.3);
+  background: rgba(46, 114, 238, 0.2);
 }
 
 .ripple.red > .rippleWave {
-  background: rgba(233, 48, 48, 0.3);
+  background: rgba(233, 48, 48, 0.2);
 }
 
 .ripple.snow > .rippleWave {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .ripple.yellow > .rippleWave {
-  background: rgba(231, 213, 7, 0.3);
+  background: rgba(231, 213, 7, 0.2);
 }
 
 .ripple.purple > .rippleWave {
-  background: rgba(105, 36, 240, 0.3);
+  background: rgba(105, 36, 240, 0.2);
 }
 
 .ripple.pink > .rippleWave {
-  background: rgba(255, 135, 203, 0.3);
+  background: rgba(255, 135, 203, 0.2);
 }
 
 .ripple.light .rippleWave {
