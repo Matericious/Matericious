@@ -1,4 +1,4 @@
-<h2 align="center">Matericious</h2>
+<h3 align="center">Matericious</h3>
 <p align="center">
   Delicious Framework with Material Components.
   <br>
