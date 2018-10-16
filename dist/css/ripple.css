@@ -7,12 +7,9 @@
   width: 12px;
   height: 12px;
   position: absolute;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 100%;
   animation: ripple 1.6s;
-}
-.ripple.text > .rippleWave {
-  background: red;
 }
 
 @keyframes ripple {
@@ -25,45 +22,45 @@
     opacity: 0;
   }
 }
-.ripple.cyan > .rippleWave {
-  background: rgba(0, 188, 212, 0.2);
+.ripple.cyan.text > .rippleWave {
+  background: rgba(0, 188, 212, 0.4);
 }
 
-.ripple.earth > .rippleWave {
-  background: rgba(52, 197, 89, 0.2);
+.ripple.earth.text > .rippleWave {
+  background: rgba(52, 197, 89, 0.4);
 }
 
-.ripple.night > .rippleWave {
-  background: rgba(66, 66, 66, 0.2);
+.ripple.night.text > .rippleWave {
+  background: rgba(66, 66, 66, 0.4);
 }
 
-.ripple.ocean > .rippleWave {
-  background: rgba(46, 114, 238, 0.2);
+.ripple.ocean.text > .rippleWave {
+  background: rgba(46, 114, 238, 0.4);
 }
 
-.ripple.red > .rippleWave {
-  background: rgba(233, 48, 48, 0.2);
+.ripple.red.text > .rippleWave {
+  background: rgba(233, 48, 48, 0.4);
 }
 
-.ripple.snow > .rippleWave {
-  background: rgba(255, 255, 255, 0.2);
+.ripple.snow.text > .rippleWave {
+  background: rgba(255, 255, 255, 0.4);
 }
 
-.ripple.yellow > .rippleWave {
-  background: rgba(231, 213, 7, 0.2);
+.ripple.yellow.text > .rippleWave {
+  background: rgba(231, 213, 7, 0.4);
 }
 
-.ripple.purple > .rippleWave {
-  background: rgba(105, 36, 240, 0.2);
+.ripple.purple.text > .rippleWave {
+  background: rgba(105, 36, 240, 0.4);
 }
 
-.ripple.pink > .rippleWave {
-  background: rgba(255, 135, 203, 0.2);
+.ripple.pink.text > .rippleWave {
+  background: rgba(255, 135, 203, 0.4);
 }
 
 .ripple.light .rippleWave {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.3) !important;
 }
 .ripple.dark .rippleWave {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.3) !important;
 }
