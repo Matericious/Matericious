@@ -1,72 +1,69 @@
-.ripple.dark > .md-ripple > .rippleWave {
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.ripple.light > .md-ripple > .rippleWave {
-  background: white;
-}
-
-.md-ripple {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+.ripple {
+  z-index: 1;
+  position: relative;
   overflow: hidden;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  border-radius: inherit;
-  pointer-events: none;
-  animation: ripple-shadow 0.4s forwards;
-  -webkit-animation: ripple-shadow 0.4s forwards;
 }
-
-.md-ripple > .rippleWave {
-  backface-visibility: hidden;
+.ripple .rippleWave {
+  width: 12px;
+  height: 12px;
   position: absolute;
-  border-radius: 50%;
-  transform: scale(0.7);
-  background: white;
-  -webkit-transform: scale(0.7);
-  opacity: 0.45;
-  animation: ripple 2s forwards;
-  -webkit-animation: ripple 2s forwards;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 100%;
+  animation: ripple 1.6s;
 }
-
-@keyframes ripple-shadow {
-  0% {
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  }
-  20% {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-  }
-  100% {
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  }
-}
-
-@-webkit-keyframes ripple-shadow {
-  0% {
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  }
-  20% {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-  }
-  100% {
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  }
+.ripple.text > .rippleWave {
+  background: red;
 }
 
 @keyframes ripple {
-  to {
-    transform: scale(24);
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(40);
     opacity: 0;
   }
 }
+.ripple.cyan > .rippleWave {
+  background: rgba(0, 188, 212, 0.3);
+}
 
-@-webkit-keyframes ripple {
-  to {
-    -webkit-transform: scale(24);
-    opacity: 0;
-  }
+.ripple.earth > .rippleWave {
+  background: rgba(52, 197, 89, 0.3);
+}
+
+.ripple.night > .rippleWave {
+  background: rgba(66, 66, 66, 0.3);
+}
+
+.ripple.ocean > .rippleWave {
+  background: rgba(46, 114, 238, 0.3);
+}
+
+.ripple.red > .rippleWave {
+  background: rgba(233, 48, 48, 0.3);
+}
+
+.ripple.snow > .rippleWave {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.ripple.yellow > .rippleWave {
+  background: rgba(231, 213, 7, 0.3);
+}
+
+.ripple.purple > .rippleWave {
+  background: rgba(105, 36, 240, 0.3);
+}
+
+.ripple.pink > .rippleWave {
+  background: rgba(255, 135, 203, 0.3);
+}
+
+.ripple.light .rippleWave {
+  background: rgba(255, 255, 255, 0.3);
+}
+.ripple.dark .rippleWave {
+  background: rgba(0, 0, 0, 0.3);
 }
