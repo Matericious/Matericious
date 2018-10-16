@@ -35,7 +35,7 @@
 
 @mixin colorClass($name, $tag) {
   > .rippleWave{
-    background: color($name, .3);
+    background: color($name, .2);
   }
 }
 
