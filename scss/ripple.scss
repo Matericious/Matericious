@@ -1,77 +1,57 @@
-@mixin rippleFunc($bg){
-   > .md-ripple{
-      > .rippleWave{
-          background: $bg;
-      }
+@import "_mixins.scss";
+@import "_variables.scss";
+
+
+.ripple {
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  .rippleWave {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    background: rgba(255,255,255, .5);
+    border-radius: 100%;
+    animation: ripple 1.6s;
+  }
+  &.text{
+   > .rippleWave{
+      background: red;
     }
+  }
 }
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(40);
+    opacity: 0;
+  }
+}
+
+@mixin colorClass($name, $tag) {
+  > .rippleWave{
+    background: color($name, .3);
+  }
+}
+
+$color_vars: "cyan", "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
+
+@include build-color-class(".ripple", $color_vars);
 
 .ripple{
-  &.dark{
-    @include rippleFunc(rgba(0, 0, 0, .5));
-  }
   &.light{
-    @include rippleFunc(rgba(255,255,255, 1));
+    .rippleWave{
+      background: rgba(255,255,255, .3);
+    }
   }
-}
-
-.md-ripple {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  overflow: hidden;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  border-radius: inherit;
-  pointer-events: none;
-  animation: ripple-shadow 0.4s forwards;
-  -webkit-animation: ripple-shadow 0.4s forwards;
-  > .rippleWave {
-    backface-visibility: hidden;
-    position: absolute;
-    border-radius: 50%;
-    transform: scale(0.7);
-    background: rgba(255,255,255, 1);
-    -webkit-transform: scale(0.7);
-    opacity: 0.45;
-    animation: ripple 2s forwards;
-    -webkit-animation: ripple 2s forwards;
-  }
-}
-
-@keyframes ripple-shadow {
-  0% {
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  }
-  20% {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-  }
-  100% {
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  }
-}
-@-webkit-keyframes ripple-shadow {
-  0% {
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  }
-  20% {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-  }
-  100% {
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  }
-}
-@keyframes ripple {
-  to {
-    transform: scale(24);
-    opacity: 0;
-  }
-}
-@-webkit-keyframes ripple {
-  to {
-    -webkit-transform: scale(24);
-    opacity: 0;
+  &.dark{
+    .rippleWave{
+      background: rgba(0,0,0, .3);
+    }
   }
 }
