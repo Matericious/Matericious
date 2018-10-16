@@ -1,24 +1,21 @@
 ready(function() {
-  var count = 0;
-  call(".ripple", "mousedown", function(e) {
-    var $self = this;
-    var defaultIn = $self.innerHTML;
-    var elemPos = ($self.style.position = "relative"),
-      pos = [e.pageY - $self.offsetTop, e.pageX - $self.offsetLeft],
-      diameter = Math.min(this.offsetHeight, this.offsetWidth, 100),
-      $ripple,
-      $rippleWave,
-      $rippleWaveStyle;
+  call(".ripple", "mousedown", ripple);
+});
 
-    if (!elemPos || elemPos === "static") $self.style.position = "relative";
+function ripple(event) {
+  var $self = this,
+    elemPos = ($self.style.position = "relative"),
+    rippleDiv = document.createElement('div'),
+    pos = [event.pageY - this.offsetTop, event.pageX - this.offsetLeft],
+    diameter = Math.min(this.offsetHeight, this.offsetWidth, 100);
+  
+  rippleDiv.setAttribute("class", "rippleWave");
+ var ripple = $get(".rippleWave");
 
-    $rippleWave = '<div class="rippleWave"></div>';
+   if (!elemPos || elemPos === "static") $self.style.position = "relative";
 
-    $ripple = '<div class="md-ripple">' + $rippleWave + "</div>";
-
-    $self.innerHTML += $ripple;
-    $rippleWaveStyle =
-      "width: " +
+  var rippleDivStyle = 
+       "width: " +
       diameter +
       "px; height: " +
       diameter +
@@ -27,16 +24,16 @@ ready(function() {
       "px;top: " +
       (pos[0] - diameter / 2) +
       "px;";
-    
-    $getChild(".md-ripple", ".rippleWave", count).style = $rippleWaveStyle;
-    count++
-    setTimeout(function() {
-      count = 0;
-         $getCL("md-ripple", 0).remove();
-    }, 500);
-  });
-});
+  
+  rippleDiv.style = rippleDivStyle;
+  $self.appendChild(rippleDiv);
+  
+  window.setTimeout(function () {
+      rippleDiv.parentNode.removeChild(rippleDiv);
+    }, 1500);
+}
 
+/*Main functions*/
 function ready(callback) {
   // in case the document is already rendered
   if (document.readyState != "loading") callback();
@@ -50,7 +47,6 @@ function ready(callback) {
     });
 }
 
-
 function call($class, $event, $func) {
   var elems = document.querySelectorAll($class);
   for (i = 0; i < elems.length; ++i) {
@@ -58,31 +54,25 @@ function call($class, $event, $func) {
   }
 }
 
-/*this function returns the element by ID*/
-function $getID(e) {
-  return document.getElementById(e);
-}
-/*this function returns the element by class name*/
-function $getCL(e, n) {
-  return document.getElementsByClassName(e)[n];
-}
-/*this function returns the element by tag name*/
-function $getT(e, n) {
-  return document.getElementsByTagName(e)[n];
-}
-
 function $get(e) {
   return document.querySelector(e);
 }
 
-function $getAll(e) {
-  return document.querySelectorAll(e);
+function hasClass(el, className) {
+  if (el.classList) return el.classList.contains(className);
+  else
+    return !!el.className.match(new RegExp("(\\s|^)" + className + "(\\s|$)"));
 }
 
-function $get(e) {
-  return document.querySelector(e);
+function $addClass(el, className) {
+  if (el.classList) el.classList.add(className);
+  else if (!hasClass(el, className)) el.className += " " + className;
 }
 
-function $getChild(parent, child, n){
-  return document.querySelectorAll(parent+' '+child)[n];
+function $removeClass(el, className) {
+  if (el.classList) el.classList.remove(className);
+  else if (hasClass(el, className)) {
+    var reg = new RegExp("(\\s|^)" + className + "(\\s|$)");
+    el.className = el.className.replace(reg, " ");
+  }
 }
