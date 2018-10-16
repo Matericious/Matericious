@@ -10,14 +10,9 @@
     width: 12px;
     height: 12px;
     position: absolute;
-    background: rgba(255,255,255, .5);
+    background: rgba(255, 255, 255, 0.3);
     border-radius: 100%;
     animation: ripple 1.6s;
-  }
-  &.text{
-   > .rippleWave{
-      background: red;
-    }
   }
 }
 
@@ -34,24 +29,27 @@
 }
 
 @mixin colorClass($name, $tag) {
-  > .rippleWave{
-    background: color($name, .2);
+  &.text {
+    > .rippleWave {
+      background: color($name, 0.4);
+    }
   }
 }
+
 
 $color_vars: "cyan", "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
 
 @include build-color-class(".ripple", $color_vars);
 
-.ripple{
-  &.light{
-    .rippleWave{
-      background: rgba(255,255,255, .3);
+.ripple {
+  &.light {
+    .rippleWave {
+      background: rgba(255, 255, 255, 0.3) !important;
     }
   }
-  &.dark{
-    .rippleWave{
-      background: rgba(0,0,0, .3);
+  &.dark {
+    .rippleWave {
+      background: rgba(0, 0, 0, 0.3) !important;
     }
   }
 }
