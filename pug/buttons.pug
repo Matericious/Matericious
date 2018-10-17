@@ -5,7 +5,7 @@ html(lang='en')
     include /includes/head.pug
       body
           h3 Buttons
-          - var colors = ['basic', 'earth', 'night', 'ocean', 'red ripple', 'yellow', 'pink', 'snow'];
+          - var colors = ['basic', 'earth', 'night', 'ocean', 'red wave', 'yellow', 'pink', 'snow'];
           each color in colors
             button(class='btn '+color)=color + ' button'
           hr
@@ -17,7 +17,7 @@ html(lang='en')
           hr
           
           h3 Gradient Buttons
-          - var grad_btns = ['earth', 'night', 'ocean', 'red', 'yellow', 'purple ripple', 'pink'];
+          - var grad_btns = ['earth', 'night', 'ocean', 'red', 'yellow ripple', 'purple wave', 'pink ripple'];
           each grad in grad_btns
             button(class='btn gradient '+grad)= grad + ' gradient'
           hr
@@ -29,7 +29,7 @@ html(lang='en')
           hr
           
           h3 Text Buttons
-          button.btn.ocean.ripple.text Explore 
+          button.btn.ocean.wave.text Explore 
           button.btn.purple.ripple.text
             i.material-icons search
             | search
@@ -39,13 +39,13 @@ html(lang='en')
           button.btn.red
             i.material-icons favorite
             | Favorite
-          button.btn.ocean
+          button.btn.ocean.ripple
             i.material-icons cloud_download
             | Download
           button.btn.earth
             i.material-icons cloud_upload
             | Upload
-          button.btn.gradient.red.ripple
+          button.btn.gradient.red.wave
             i.material-icons restaurant
             | Restaurant
           hr
@@ -57,7 +57,7 @@ html(lang='en')
             | &nbsp;Back
           button.btn.earth Next&nbsp;
             i.material-icons(ani='right') arrow_forward
-          button.btn.ripple Reload&nbsp;
+          button.btn.wave Reload&nbsp;
             i.material-icons(ani='rotate') refresh
           h4 One Time Animation
           button.btn.red
@@ -65,7 +65,7 @@ html(lang='en')
             | &nbsp;Back
           button.btn.earth Next&nbsp;
             i.material-icons(move='right') arrow_forward
-          button.btn.ripple Reload&nbsp;
+          button.btn.wave Reload&nbsp;
             i.material-icons(move='rotate') refresh
           hr
           
@@ -73,10 +73,10 @@ html(lang='en')
           - 
             var fabs = {
               'cloud_upload':'ocean',
-              'email':'red',
-              'shopping_basket':'night',
+              'email':'red ripple',
+              'shopping_basket':'night ripple',
               'add_circle':'earth', 
-              'loyalty':'purple',
+              'loyalty':'purple ripple',
               'done':'pink',
             };
           each icon,cls in fabs
@@ -91,3 +91,4 @@ html(lang='en')
             i.material-icons favorite
           button.btn(ts)
             i.material-icons face
+          script(src='https://rawgit.com/Matericious/Matericious/master/dist/js/ripple.js')
