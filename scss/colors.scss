@@ -312,13 +312,13 @@ $colors: (
         background: $set !important;
       }
       .text-#{$name} {
-        background: $set !important;
+        color: $set !important;
       }
     }
     @else{
       @each $key, $value in $set {
         .#{$name}-#{$type}-#{$key} {
-          color: $value !important;
+          background: $value !important;
         }
         .text-#{$name}-#{$type}-#{$key} {
           color: $value !important;
