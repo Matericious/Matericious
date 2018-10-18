@@ -470,6 +470,10 @@ function $get(e) {
   return document.querySelector(e);
 }
 
+function $all(e) {
+  return document.querySelectorAll(e);
+}
+
 function $getChild(parent, child, n) {
   return document.querySelectorAll(parent + " " + child)[n];
 }
