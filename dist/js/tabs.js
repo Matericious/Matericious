@@ -16,6 +16,9 @@ function tabs(event) {
       size = [activePos.offsetWidth, activePos.offsetHeight];
 
     border.style = "left: " + pos[1] + "px; width: " + size[0] + "px";
+    
+   // var scrollH = $get('.tabs-header');
+  //  scrollH.scrollTo(pos[1],0);
   }
   changePos();
   var tabHeight = tab.offsetHeight;
@@ -29,17 +32,15 @@ function tabs(event) {
         $removeClass(tabs[c], "active");
     }
     $addClass(newTab, 'active');
-    console.log(tabID);
   }
- //  changeTab();
 
   function tabClick(event) {
     var tabID = this.getAttribute("tab-id");    
     var tabs = $all(".tabs-header a");
     for (var c = 0; c < tabs.length; c++) {
-        $removeClass(tabs[c].parentNode, "active");
+        $removeClass(tabs[c], "active");
     }
-    $addClass(this.parentNode, "active");
+    $addClass(this, "active");
     changePos();
     changeTab(tabID);
   }
