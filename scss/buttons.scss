@@ -1,6 +1,6 @@
 @import "_mixins.scss";
-@import "_variables.scss";
 
+$font: "Roboto", san-serif;
 
 *:hover,
 *:focus {
@@ -142,52 +142,4 @@ btn.btn[ts] {
     box-shadow: none;
   }
 }
-
-@mixin colorClass($name, $tag) {
-  @if $tag == "a" {
-    color: color($name);
-  } 
-  @else {
-    background: color($name);
-    &.gradient{
-      background: color($name+"-gradient");
-    }
-    &.outline{
-      background: transparent;
-      border: color($name) 1px solid;
-    }
-    @if $name == "snow" {
-      color: color('dark');
-      &[outline]{
-        color: color('dark');
-      }
-      @include hoverColor(color($name), color('dark'));
-    } @else if $name == "yellow" {
-      color: color('dark');
-      &.outline{
-        color: color('dark');
-        @include hoverColor(color($name), color('dark'));
-      }
-    } @else {
-      color: color('light');
-      &.outline{
-        color: color($name);
-        @include hoverColor(color($name), color('light'));
-      }
-      &.text{
-        color: color($name);
-      }
-    }
-     &.text{
-      background: transparent;
-    }
-  }
-}
-
-$color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
-
-
-@include build-color-class(".btn", $color_vars);
-@include build-color-class(".link", $color_vars);
-
 
