@@ -1,9 +1,7 @@
-@mixin build-color-class($tag, $array) {
+@mixin build-color-class($array) {
   @each $color in $array {
-    #{$tag}{
-      &.#{$color}{
-        @include colorClass($color, $tag);
-      }
+    .#{$color} {
+      @include colorClass($color);
     }
   }
 }
@@ -20,7 +18,7 @@
   }
 }
 
- @mixin animation($arguments) {
+@mixin animation($arguments) {
   -webkit-animation: $arguments;
   -moz-animation: $arguments;
   animation: $arguments;
@@ -50,14 +48,10 @@
   $param-2-color: rgba(#000, $shadow-param-2-opacity + $opacity-boost);
   $param-3-color: rgba(#000, $shadow-param-3-opacity + $opacity-boost);
 
-  -webkit-box-shadow:
-    #{"#{$param-1-value} #{$param-1-color}"},
-    #{"#{$param-2-value} #{$param-2-color}"},
-    #{$param-3-value} $param-3-color;
-  box-shadow:
-    #{"#{$param-1-value} #{$param-1-color}"},
-    #{"#{$param-2-value} #{$param-2-color}"},
-    #{$param-3-value} $param-3-color;
+  -webkit-box-shadow: #{"#{$param-1-value} #{$param-1-color}"},
+    #{"#{$param-2-value} #{$param-2-color}"}, #{$param-3-value} $param-3-color;
+  box-shadow: #{"#{$param-1-value} #{$param-1-color}"},
+    #{"#{$param-2-value} #{$param-2-color}"}, #{$param-3-value} $param-3-color;
 }
 
 @function shadow-transition-value(
