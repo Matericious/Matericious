@@ -1,3 +1,6 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
 $colors: (
   red: (
     base: #F44336,
@@ -327,3 +330,55 @@ $colors: (
     }
   }
 }
+
+
+@mixin colorClass($name) {
+  &.outline {
+    color: color($name);
+    background: transparent !important;
+    border: color($name) 1px solid;
+    &:hover {
+      color: #fff;
+      background: color($name) !important;
+    }
+  }
+
+  &.text {
+    background: transparent !important;
+    color: color($name);
+  }
+
+  &.checkbox {
+    background: transparent !important;
+    > input {
+      &:checked {
+        background: color($name);
+        & + span::before {
+          border-color: color($name);
+          background: color($name);
+        }
+      }
+      &:active {
+        & + span::before {
+          border-color: color($name);
+        }
+      }
+    }
+  }
+  
+  &.radio {
+    input[type="radio"]:checked + label:before {
+      border-color: color($name);
+    }
+    label {
+      &:after {
+        background: color($name);
+      }
+    }
+  }
+}
+
+$color_vars: "white", "red", "pink", "purple", "indigo", "blue", "cyan", "teal",
+  "green", "lime", "yellow", "amber", "orange", "brown", "grey", "blue-grey";
+
+@include build-color-class($color_vars);
