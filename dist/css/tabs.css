@@ -1,0 +1,66 @@
+.tabs {
+  overflow: hidden;
+  max-width: 100%;
+}
+.tabs > .tabs-header {
+  position: relative;
+  overflow: hidden;
+  overflow-x: scroll;
+  height: 80px;
+}
+.tabs > .tabs-header::-webkit-scrollbar {
+  width: 0px;
+}
+.tabs > .tabs-header > ul {
+  width: 100%;
+  background: #fff;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.tabs > .tabs-header > ul > li {
+  padding: 0;
+  margin: 0;
+}
+.tabs > .tabs-header > ul > li > a {
+  z-index: 1;
+  display: block;
+  padding: 15px 25px;
+  font-weight: 500;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: "Roboto", san-serif;
+  transition: background 0.2s;
+}
+.tabs > .tabs-header > ul > li > a:hover {
+  background: #efefef;
+}
+.tabs > .tabs-header > .border {
+  width: auto;
+  height: 2px;
+  background: #222222;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease;
+  z-index: 1;
+}
+.tabs > .tabs-content {
+  overflow: hidden;
+}
+.tabs > .tabs-content > .tab {
+  display: none;
+}
+.tabs > .tabs-content > .tab.active {
+  display: block;
+}
+
+@media screen and (max-width: 500px) {
+  .tabs .tabs-header > ul li a {
+    padding: 10px 15px;
+  }
+}
