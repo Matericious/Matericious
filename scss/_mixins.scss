@@ -33,9 +33,9 @@
 
 @function color($name, $rgb: null) {
   @if variable-exists(rgb) and $rgb != null {
-    @return rgba(map-get($colors, $name), $rgb);
+    @return rgba(map-get($base-colors, $name), $rgb);
   } @else {
-    @return map-get($colors, $name);
+    @return map-get($base-colors, $name);
   }
 }
 
