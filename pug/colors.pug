@@ -1,0 +1,37 @@
+- var title = 'Colors'
+doctype
+html(lang='en')
+  head
+    include /includes/head.pug
+    style(type='text/css').
+      div {
+        padding: 10px;
+        width:200px;
+        height:30px;
+      }
+  body
+    h3= title
+    - var colors = ['red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'indigo', 'light-blue', 'cyan', 'teal', 'green', 'light-green', 'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey'];
+    each color in colors
+      div(class=color+'-light-5')
+      div(class=color+'-light-4')
+      div(class=color+'-light-3')
+      div(class=color+'-light-2')
+      div(class=color+'-light-1')
+      div(class=color)
+      div(class=color+'-dark-1')
+      div(class=color+'-dark-2')
+      div(class=color+'-dark-3')
+      div(class=color+'-dark-4')
+      br
+      
+    script(type='application/javascript').
+      var colors = document.getElementsByTagName('div');
+      for (var i = 0; i < colors.length; i++) {
+        var colorbox = colors[i];
+        var classes = colorbox.getAttribute("class");
+        colorbox.innerHTML = '.'+classes;
+        if (classes.indexOf('dark') >= 0) {
+          colorbox.style.color = 'rgba(255,255,255,.9)';
+        }
+      }
