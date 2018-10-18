@@ -17,6 +17,6 @@
   top: -4px;
   right: -4px;
   background: #ff0026;
-  color: #ffffff;
+  color: #ffffff !important;
   border-radius: 50%;
 }
