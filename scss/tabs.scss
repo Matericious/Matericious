@@ -1,42 +1,26 @@
 $font: "Roboto", san-serif;
 
 .tabs {
-  overflow: hidden;
-  max-width: 100%;
   > .tabs-header {
+    overflow: auto;
+    white-space: nowrap;
     position: relative;
-    overflow: hidden;
-    overflow-x: scroll;
-    height: 80px;
     &::-webkit-scrollbar {
-      width: 0px;
+      width: 4px;
+      height: 0px;
     }
-    > ul {
-      width: 100%;
-      background: #fff;
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      > li {
-        padding: 0;
-        margin: 0;
-        > a {
-          z-index: 1;
-          display: block;
-          padding: 15px 25px;
-          font-weight: 500;
-          font-size: 14px;
-          text-decoration: none;
-          text-transform: uppercase;
-          cursor: pointer;
-          font-family: $font;
-          transition: background 0.2s;
-          &:hover {
-            background: #efefef;
-          }
-        }
+    > a {
+      display: inline-block;
+      text-align: center;
+      padding: 14px;
+      font-weight: 500;
+      font-size: 14px;
+      text-decoration: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-family: $font;
+      &:hover {
+        background-color: #efefef;
       }
     }
     > .border {
@@ -59,12 +43,4 @@ $font: "Roboto", san-serif;
       }
     }
   }
-}
-
-@media screen and (max-width: 500px) {
-  .tabs .tabs-header {
-      > ul li a{
-        padding: 10px 15px;
-      }
-    }
 }
