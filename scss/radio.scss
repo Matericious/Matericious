@@ -1,21 +1,10 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
-$font: "Roboto", san-serif;
 
+/**/
 $radio-size: 20px;
 $gap: 10px;
-
-*:hover,
-*:focus {
-  outline: none;
-}
-* {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
 
 .radio {
   margin: 16px 0;
@@ -31,7 +20,7 @@ $gap: 10px;
   }
   label {
     display: inline-block;
-    height:$radio-size;
+    height: $radio-size;
     position: relative;
     padding: 0 ($radio-size + 10px);
     margin-bottom: 0;
