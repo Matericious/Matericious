@@ -1,6 +1,7 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
+
 $colors: (
   red: (
     base: #F44336,
@@ -367,6 +368,7 @@ $colors: (
   }
   
   &.radio {
+    background: transparent !important;
     input[type="radio"]:checked + label:before {
       border-color: color($name);
     }
