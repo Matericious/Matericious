@@ -6,12 +6,6 @@
 *:focus {
   outline: none;
 }
-* {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
 
 .switch {
   width: auto;
@@ -79,23 +73,3 @@
     text-indent: 45px;
   }
 }
-
-@mixin colorClass($name, $tag) {
-  > input {
-    &:checked {
-      & ~ span {
-        &:before {
-          background: color($name, 0.5);
-        }
-        &:after {
-          left: 15px;
-          background: color($name);
-          border-color: color($name);
-        }
-      }
-    }
-  }
-}
-
-$color_vars: "earth", "night", "ocean", "red", "yellow", "purple", "pink";
-@include build-color-class(".switch", $color_vars);
