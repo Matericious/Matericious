@@ -35,16 +35,31 @@ html(lang='en')
         var hex = rgb2hex(styles.getPropertyValue("background-color"));
         var classes = colorbox.getAttribute("class");
         colorbox.innerHTML = '.'+classes+' #'+hex;
-        if (classes.indexOf('dark') >= 0) {
+        if (isDark(hex)) {
           colorbox.style.color = 'rgba(255,255,255,.9)';
         }
       }
-      function rgb2hex(rgb) {
+      function rgb2array(rgb) {
         var a = rgb.split("(")[1].split(")")[0];
         a = a.split(",");
+        return a;
+      }
+      function rgb2hex(rgb) {
+        var a = rgb2array(rgb);
         var b = a.map(function(x) {
           x = parseInt(x).toString(16);
           return (x.length==1) ? "0"+x : x;
         });
         return b = b.join("").toUpperCase();
+      }
+      function isDark(hex) {
+        var rgb = parseInt(hex, 16),
+        r = (rgb >> 16) & 0xff,
+        g = (rgb >>  8) & 0xff,
+        b = (rgb >>  0) & 0xff,
+        luma = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+        if (luma > 130) {
+          return false;
+        }
+        return true;
       }
