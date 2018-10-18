@@ -1,7 +1,5 @@
 @import "_mixins.scss";
 @import "_variables.scss";
-@import "ripple.scss";
-
 
 $snackbar-width: 350px;
 $action-snackbar-width: 380px;
@@ -88,7 +86,7 @@ snackbar {
       }
     }
   }
-  
+
   &.action {
     > div {
       width: $action-snackbar-width;
@@ -136,56 +134,55 @@ Snackbar Animations*/
 @include keyframes(slideUpBottom) {
   from {
        bottom: -100px
-    }         
+    }
     to {
        bottom: $modal-position;
-    }   
+    }
 }
 
 .slideUpTop{
   @include animation(slideUpTop .5s 0s ease forwards);
 }
- 
+
 
 @include keyframes(slideUpTop){
-  from {              
+  from {
       top: -100px;
-    }         
+    }
     to {
       top: $modal-position;
-    } 
+    }
 }
 
 /*
 ==============================================
-slideDown Animation 
+slideDown Animation
 ==============================================
 */
- 
-.slideDownBottom{  
+
+.slideDownBottom{
   @include animation(slideDownBottom .5s 0s ease forwards);
 }
 
 @include keyframes(slideDownBottom){
     from {
        bottom: $modal-position;
-    }         
+    }
     to {
        bottom: -100px
-    }  
+    }
 }
 
 
-.slideDownTop{  
+.slideDownTop{
   @include animation(slideDownTop 1s 0s ease forwards)
 }
 
 @include keyframes(slideDownTop){
     from {
        top: $modal-position;
-    }         
+    }
     to {
        top: -100px
-    }   
+    }
 }
-
