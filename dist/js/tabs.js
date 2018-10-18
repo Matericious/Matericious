@@ -17,8 +17,8 @@ function tabs(event) {
 
     border.style = "left: " + pos[1] + "px; width: " + size[0] + "px";
     
-   // var scrollH = $get('.tabs-header');
-  //  scrollH.scrollTo(pos[1],0);
+   var scrollH = $get('.tabs-header');
+   scrollH.scrollLeft = pos[1];
   }
   changePos();
   var tabHeight = tab.offsetHeight;
