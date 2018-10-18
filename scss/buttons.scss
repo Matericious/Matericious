@@ -1,11 +1,6 @@
 @import "_mixins.scss";
+@import "_variables.scss";
 
-$font: "Roboto", san-serif;
-
-*:hover,
-*:focus {
-  outline: none;
-}
 
 .btn {
   margin-top: 5px;
@@ -13,8 +8,8 @@ $font: "Roboto", san-serif;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  background: color('basic');
-  color: color('dark');
+  background: color('blue');
+  color: color('white');
   border: 0px;
   border-radius: 6px;
   font-size: 12px;
@@ -82,9 +77,9 @@ $font: "Roboto", san-serif;
   }
   &.outline {
     background: transparent;
-    border: color('basic') 1px solid;
+    border: color('blue') 1px solid;
     color: #222;
-    @include hoverColor(color('basic'), color('dark'));
+    @include hoverColor(color('blue'), color('dark'));
   }
   &.text{
     background: transparent;
