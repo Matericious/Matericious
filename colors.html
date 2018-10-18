@@ -20,6 +20,8 @@
     <meta name="og:image:height" content="630">
     <style type="text/css">
       div {
+        font-family: 'roboto';
+        font-size: 14px;
         padding: 10px;
         width:200px;
         height:30px;
@@ -222,11 +224,22 @@
       var colors = document.getElementsByTagName('div');
       for (var i = 0; i < colors.length; i++) {
         var colorbox = colors[i];
+        var styles = window.getComputedStyle(colorbox);
+        var hex = rgb2hex(styles.getPropertyValue("background-color"));
         var classes = colorbox.getAttribute("class");
-        colorbox.innerHTML = '.'+classes;
+        colorbox.innerHTML = '.'+classes+' #'+hex;
         if (classes.indexOf('dark') >= 0) {
           colorbox.style.color = 'rgba(255,255,255,.9)';
         }
+      }
+      function rgb2hex(rgb) {
+        var a = rgb.split("(")[1].split(")")[0];
+        a = a.split(",");
+        var b = a.map(function(x) {
+          x = parseInt(x).toString(16);
+          return (x.length==1) ? "0"+x : x;
+        });
+        return b = b.join("").toUpperCase();
       }
     </script>
   </body>
