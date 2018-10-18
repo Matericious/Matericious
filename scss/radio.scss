@@ -1,5 +1,6 @@
 @import "_mixins.scss";
-@import "_variables.scss";
+
+$font: "Roboto", san-serif;
 
 $radio-size: 20px;
 $gap: 10px;
@@ -61,17 +62,3 @@ $gap: 10px;
     }
   }
 }
-
-@mixin colorClass($name, $tag) {
-  & input[type=radio]:checked + label:before {
-    border-color: color($name);
-  }
-  label {
-    &:after {
-      background: color($name);
-    }
-  }
-}
-
-$color_vars: "cyan", "earth", "night", "ocean", "red", "yellow", "purple", "pink";
-@include build-color-class(".radio", $color_vars);
