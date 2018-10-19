@@ -2693,7 +2693,7 @@ big-modal-con > modal.slideDownIn {
 }
 .btn.outline:hover {
   background: #2196f3;
-  color: #cbcbcb;
+  color: #000000;
 }
 .btn.text {
   background: transparent;
@@ -2839,7 +2839,7 @@ btn.btn[ts]:hover {
 .checkbox {
   position: relative;
   display: inline-block;
-  color: #cbcbcb;
+  color: #000000;
   line-height: 18px;
   cursor: pointer;
   font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
@@ -2941,7 +2941,7 @@ a {
 }
 
 .chips:hover {
-  background: #cbcbcb;
+  background: #000000;
 }
 
 .chips.raised {
@@ -2950,11 +2950,11 @@ a {
 
 .chips.outline {
   background: transparent;
-  border: 1px solid #cbcbcb;
+  border: 1px solid #000000;
 }
 
 .chips.outline:hover {
-  background: #cbcbcb;
+  background: #000000;
   color: #424242;
 }
 
@@ -5217,7 +5217,7 @@ modal-con > modal.slideDownIn {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: #cbcbcb;
+  background: #000000;
   cursor: pointer;
   transition: all .15s ease-in;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
@@ -5520,7 +5520,7 @@ snackbar > div {
   max-width: 95%;
   font-family: "Roboto", san-serif;
   background: #424242;
-  color: #cbcbcb;
+  color: #000000;
   border-radius: 5px;
   position: fixed;
   bottom: -10px;
@@ -5549,7 +5549,7 @@ snackbar > div > button {
   margin-top: 16px;
   border: none;
   background: transparent;
-  color: #cbcbcb;
+  color: #000000;
   border-radius: 5px;
   text-transform: uppercase;
   display: inline-block;
@@ -5869,7 +5869,7 @@ slideDown Animation
   min-width: 50px;
   position: relative;
   display: inline-block;
-  color: #cbcbcb;
+  color: #000000;
   line-height: 18px;
   cursor: pointer;
   font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
