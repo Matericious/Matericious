@@ -8,7 +8,7 @@ function menu() {
       targetBtn = $get("[open-menu=" + id + "]"),
       targetMenu = $get("#"+id),
       default_class = targetMenu.className,
-      nesting_appbar = $get('.appbar').className;
+      appbar_class = $get('.appbar').className;
     
     if(default_class.includes("pullDown")) close();
       
@@ -47,7 +47,7 @@ function menu() {
     /*When window size change reposition menu*/
     window.onresize = function() {
        setPosition();
-      if(default_class.includes("nesting")) nesting();
+      if(appbar_class.includes("nesting")) nesting();
     };
 
     function clickOutSide(event) {
