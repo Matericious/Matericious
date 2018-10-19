@@ -61,7 +61,6 @@ function menu() {
       $removeClass(targetMenu, "pullDown");
       $removeClass(targetMenu, "pullUp");
       document.removeEventListener("click", clickOutSide, true);
-      window.onresize = null;
       return;
     }
   }
