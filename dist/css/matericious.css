@@ -1,3 +1,7 @@
+*:hover,
+*:focus {
+  outline: none !important;
+}
 .red {
   background: #f44336 !important;
 }
@@ -2370,13 +2374,7 @@
   color: #ffffff !important;
   border-radius: 50%;
 }
-/*Material loader color*/
-/* Dark colors */
-/* Light colors */
-/*Modal size*/
-/*Modal fonts*/
-/*Light modal colors*/
-/*Dark modal colors*/
+
 big-modal-con {
   width: 100%;
   height: 100vh;
@@ -3229,12 +3227,6 @@ a {
 .chips.pink > i:nth-child(1).close:hover {
   color: #424242;
 }
-* {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
 
 .notrans {
   -webkit-transition: none !important;
@@ -3282,6 +3274,10 @@ body.overlay:after {
   left: -100%;
   z-index: 2;
   border-right: 1px solid #ccc;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .drawer > .header {
@@ -4079,18 +4075,6 @@ body.overlay:after {
     flex: 0;
   }
 }
-/*@!
-################################################################
-@!*/
-*:hover,
-*:focus {
-  outline: none;
-}
-
-*:hover,
-*:focus {
-  outline: none;
-}
 
 .input {
   position: relative;
@@ -4333,7 +4317,6 @@ body.overlay:after {
   background: #d9d9d9;
 }
 
-/*CSS Animations*/
 .pullDown {
   visibility: visible;
   animation-name: pullDown;
@@ -4368,18 +4351,6 @@ body.overlay:after {
   transform-origin: 50% 0%;
   -ms-transform-origin: 50% 0%;
   -webkit-transform-origin: 50% 0%;
-}
-/*@!
-################################################################
-@!*/
-*:hover,
-*:focus {
-  outline: none;
-}
-
-*:hover,
-*:focus {
-  outline: none;
 }
 
 .input {
@@ -4485,11 +4456,6 @@ body.overlay:after {
   color: #ff87cb;
 }
 
-/*Modal size*/
-/*Modal fonts*/
-*:hover, *:focus {
-  outline: none;
-}
 
 svg[md-loader] {
   -webkit-animation: rotate 2s linear infinite;
@@ -5189,17 +5155,7 @@ modal-con > modal.slideDownIn {
   transform: scale(0);
   background: #00bcd4;
 }
-:hover,
-*:focus {
-  outline: none;
-}
 
-* {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
 
 .range {
   -webkit-appearance: none;
@@ -5209,6 +5165,10 @@ modal-con > modal.slideDownIn {
   background: rgba(153, 163, 164, 0.2);
   margin: 0;
   transition: background .5s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .range::-webkit-slider-thumb {
@@ -5503,10 +5463,6 @@ modal-con > modal.slideDownIn {
   transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
   will-change: box-shadow;
 }
-*:hover,
-*:focus {
-  outline: none;
-}
 
 snackbar {
   width: 100%;
@@ -5622,9 +5578,6 @@ snackbar.center > div {
   right: 0px;
 }
 
-/*##########################
-
-Snackbar Animations*/
 .slideUpBottom {
   -webkit-animation: slideUpBottom 0.5s 0s ease forwards;
   -moz-animation: slideUpBottom 0.5s 0s ease forwards;
@@ -5691,11 +5644,6 @@ Snackbar Animations*/
   }
 }
 
-/*
-==============================================
-slideDown Animation
-==============================================
-*/
 .slideDownBottom {
   -webkit-animation: slideDownBottom 0.5s 0s ease forwards;
   -moz-animation: slideDownBottom 0.5s 0s ease forwards;
