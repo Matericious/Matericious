@@ -1,386 +1,385 @@
-/**/
 .red {
-  background: #F44336 !important;
+  background: #f44336 !important;
 }
 
 .text-red {
-  color: #F44336 !important;
+  color: #f44336 !important;
 }
 
 .red-light-1 {
-  background: #EF5350 !important;
+  background: #ef5350 !important;
 }
 
 .text-red-light-1 {
-  color: #EF5350 !important;
+  color: #ef5350 !important;
 }
 
 .red-light-2 {
-  background: #E57373 !important;
+  background: #e57373 !important;
 }
 
 .text-red-light-2 {
-  color: #E57373 !important;
+  color: #e57373 !important;
 }
 
 .red-light-3 {
-  background: #EF9A9A !important;
+  background: #ef9a9a !important;
 }
 
 .text-red-light-3 {
-  color: #EF9A9A !important;
+  color: #ef9a9a !important;
 }
 
 .red-light-4 {
-  background: #FFCDD2 !important;
+  background: #ffcdd2 !important;
 }
 
 .text-red-light-4 {
-  color: #FFCDD2 !important;
+  color: #ffcdd2 !important;
 }
 
 .red-light-5 {
-  background: #FFEBEE !important;
+  background: #ffebee !important;
 }
 
 .text-red-light-5 {
-  color: #FFEBEE !important;
+  color: #ffebee !important;
 }
 
 .red-dark-1 {
-  background: #E53935 !important;
+  background: #e53935 !important;
 }
 
 .text-red-dark-1 {
-  color: #E53935 !important;
+  color: #e53935 !important;
 }
 
 .red-dark-2 {
-  background: #D32F2F !important;
+  background: #d32f2f !important;
 }
 
 .text-red-dark-2 {
-  color: #D32F2F !important;
+  color: #d32f2f !important;
 }
 
 .red-dark-3 {
-  background: #C62828 !important;
+  background: #c62828 !important;
 }
 
 .text-red-dark-3 {
-  color: #C62828 !important;
+  color: #c62828 !important;
 }
 
 .red-dark-4 {
-  background: #B71C1C !important;
+  background: #b71c1c !important;
 }
 
 .text-red-dark-4 {
-  color: #B71C1C !important;
+  color: #b71c1c !important;
 }
 
 .pink {
-  background: #E91E63 !important;
+  background: #e91e63 !important;
 }
 
 .text-pink {
-  color: #E91E63 !important;
+  color: #e91e63 !important;
 }
 
 .pink-light-1 {
-  background: #EC407A !important;
+  background: #ec407a !important;
 }
 
 .text-pink-light-1 {
-  color: #EC407A !important;
+  color: #ec407a !important;
 }
 
 .pink-light-2 {
-  background: #F06292 !important;
+  background: #f06292 !important;
 }
 
 .text-pink-light-2 {
-  color: #F06292 !important;
+  color: #f06292 !important;
 }
 
 .pink-light-3 {
-  background: #F48FB1 !important;
+  background: #f48fb1 !important;
 }
 
 .text-pink-light-3 {
-  color: #F48FB1 !important;
+  color: #f48fb1 !important;
 }
 
 .pink-light-4 {
-  background: #F8BBD0 !important;
+  background: #f8bbd0 !important;
 }
 
 .text-pink-light-4 {
-  color: #F8BBD0 !important;
+  color: #f8bbd0 !important;
 }
 
 .pink-light-5 {
-  background: #FCE4EC !important;
+  background: #fce4ec !important;
 }
 
 .text-pink-light-5 {
-  color: #FCE4EC !important;
+  color: #fce4ec !important;
 }
 
 .pink-dark-1 {
-  background: #D81B60 !important;
+  background: #d81b60 !important;
 }
 
 .text-pink-dark-1 {
-  color: #D81B60 !important;
+  color: #d81b60 !important;
 }
 
 .pink-dark-2 {
-  background: #C2185B !important;
+  background: #c2185b !important;
 }
 
 .text-pink-dark-2 {
-  color: #C2185B !important;
+  color: #c2185b !important;
 }
 
 .pink-dark-3 {
-  background: #AD1457 !important;
+  background: #ad1457 !important;
 }
 
 .text-pink-dark-3 {
-  color: #AD1457 !important;
+  color: #ad1457 !important;
 }
 
 .pink-dark-4 {
-  background: #880E4F !important;
+  background: #880e4f !important;
 }
 
 .text-pink-dark-4 {
-  color: #880E4F !important;
+  color: #880e4f !important;
 }
 
 .purple {
-  background: #9C27B0 !important;
+  background: #9c27b0 !important;
 }
 
 .text-purple {
-  color: #9C27B0 !important;
+  color: #9c27b0 !important;
 }
 
 .purple-light-1 {
-  background: #AB47BC !important;
+  background: #ab47bc !important;
 }
 
 .text-purple-light-1 {
-  color: #AB47BC !important;
+  color: #ab47bc !important;
 }
 
 .purple-light-2 {
-  background: #BA68C8 !important;
+  background: #ba68c8 !important;
 }
 
 .text-purple-light-2 {
-  color: #BA68C8 !important;
+  color: #ba68c8 !important;
 }
 
 .purple-light-3 {
-  background: #CE93D8 !important;
+  background: #ce93d8 !important;
 }
 
 .text-purple-light-3 {
-  color: #CE93D8 !important;
+  color: #ce93d8 !important;
 }
 
 .purple-light-4 {
-  background: #E1BEE7 !important;
+  background: #e1bee7 !important;
 }
 
 .text-purple-light-4 {
-  color: #E1BEE7 !important;
+  color: #e1bee7 !important;
 }
 
 .purple-light-5 {
-  background: #F3E5F5 !important;
+  background: #f3e5f5 !important;
 }
 
 .text-purple-light-5 {
-  color: #F3E5F5 !important;
+  color: #f3e5f5 !important;
 }
 
 .purple-dark-1 {
-  background: #8E24AA !important;
+  background: #8e24aa !important;
 }
 
 .text-purple-dark-1 {
-  color: #8E24AA !important;
+  color: #8e24aa !important;
 }
 
 .purple-dark-2 {
-  background: #7B1FA2 !important;
+  background: #7b1fa2 !important;
 }
 
 .text-purple-dark-2 {
-  color: #7B1FA2 !important;
+  color: #7b1fa2 !important;
 }
 
 .purple-dark-3 {
-  background: #6A1B9A !important;
+  background: #6a1b9a !important;
 }
 
 .text-purple-dark-3 {
-  color: #6A1B9A !important;
+  color: #6a1b9a !important;
 }
 
 .purple-dark-4 {
-  background: #4A148C !important;
+  background: #4a148c !important;
 }
 
 .text-purple-dark-4 {
-  color: #4A148C !important;
+  color: #4a148c !important;
 }
 
 .deep-purple {
-  background: #673AB7 !important;
+  background: #673ab7 !important;
 }
 
 .text-deep-purple {
-  color: #673AB7 !important;
+  color: #673ab7 !important;
 }
 
 .deep-purple-light-1 {
-  background: #7E57C2 !important;
+  background: #7e57c2 !important;
 }
 
 .text-deep-purple-light-1 {
-  color: #7E57C2 !important;
+  color: #7e57c2 !important;
 }
 
 .deep-purple-light-2 {
-  background: #9575CD !important;
+  background: #9575cd !important;
 }
 
 .text-deep-purple-light-2 {
-  color: #9575CD !important;
+  color: #9575cd !important;
 }
 
 .deep-purple-light-3 {
-  background: #B39DDB !important;
+  background: #b39ddb !important;
 }
 
 .text-deep-purple-light-3 {
-  color: #B39DDB !important;
+  color: #b39ddb !important;
 }
 
 .deep-purple-light-4 {
-  background: #D1C4E9 !important;
+  background: #d1c4e9 !important;
 }
 
 .text-deep-purple-light-4 {
-  color: #D1C4E9 !important;
+  color: #d1c4e9 !important;
 }
 
 .deep-purple-light-5 {
-  background: #EDE7F6 !important;
+  background: #ede7f6 !important;
 }
 
 .text-deep-purple-light-5 {
-  color: #EDE7F6 !important;
+  color: #ede7f6 !important;
 }
 
 .deep-purple-dark-1 {
-  background: #5E35B1 !important;
+  background: #5e35b1 !important;
 }
 
 .text-deep-purple-dark-1 {
-  color: #5E35B1 !important;
+  color: #5e35b1 !important;
 }
 
 .deep-purple-dark-2 {
-  background: #512DA8 !important;
+  background: #512da8 !important;
 }
 
 .text-deep-purple-dark-2 {
-  color: #512DA8 !important;
+  color: #512da8 !important;
 }
 
 .deep-purple-dark-3 {
-  background: #4527A0 !important;
+  background: #4527a0 !important;
 }
 
 .text-deep-purple-dark-3 {
-  color: #4527A0 !important;
+  color: #4527a0 !important;
 }
 
 .deep-purple-dark-4 {
-  background: #311B92 !important;
+  background: #311b92 !important;
 }
 
 .text-deep-purple-dark-4 {
-  color: #311B92 !important;
+  color: #311b92 !important;
 }
 
 .indigo {
-  background: #3F51B5 !important;
+  background: #3f51b5 !important;
 }
 
 .text-indigo {
-  color: #3F51B5 !important;
+  color: #3f51b5 !important;
 }
 
 .indigo-light-1 {
-  background: #5C6BC0 !important;
+  background: #5c6bc0 !important;
 }
 
 .text-indigo-light-1 {
-  color: #5C6BC0 !important;
+  color: #5c6bc0 !important;
 }
 
 .indigo-light-2 {
-  background: #7986CB !important;
+  background: #7986cb !important;
 }
 
 .text-indigo-light-2 {
-  color: #7986CB !important;
+  color: #7986cb !important;
 }
 
 .indigo-light-3 {
-  background: #9FA8DA !important;
+  background: #9fa8da !important;
 }
 
 .text-indigo-light-3 {
-  color: #9FA8DA !important;
+  color: #9fa8da !important;
 }
 
 .indigo-light-4 {
-  background: #C5CAE9 !important;
+  background: #c5cae9 !important;
 }
 
 .text-indigo-light-4 {
-  color: #C5CAE9 !important;
+  color: #c5cae9 !important;
 }
 
 .indigo-light-5 {
-  background: #E8EAF6 !important;
+  background: #e8eaf6 !important;
 }
 
 .text-indigo-light-5 {
-  color: #E8EAF6 !important;
+  color: #e8eaf6 !important;
 }
 
 .indigo-dark-1 {
-  background: #3949AB !important;
+  background: #3949ab !important;
 }
 
 .text-indigo-dark-1 {
-  color: #3949AB !important;
+  color: #3949ab !important;
 }
 
 .indigo-dark-2 {
-  background: #303F9F !important;
+  background: #303f9f !important;
 }
 
 .text-indigo-dark-2 {
-  color: #303F9F !important;
+  color: #303f9f !important;
 }
 
 .indigo-dark-3 {
@@ -392,243 +391,243 @@
 }
 
 .indigo-dark-4 {
-  background: #1A237E !important;
+  background: #1a237e !important;
 }
 
 .text-indigo-dark-4 {
-  color: #1A237E !important;
+  color: #1a237e !important;
 }
 
 .blue {
-  background: #2196F3 !important;
+  background: #2196f3 !important;
 }
 
 .text-blue {
-  color: #2196F3 !important;
+  color: #2196f3 !important;
 }
 
 .blue-light-1 {
-  background: #42A5F5 !important;
+  background: #42a5f5 !important;
 }
 
 .text-blue-light-1 {
-  color: #42A5F5 !important;
+  color: #42a5f5 !important;
 }
 
 .blue-light-2 {
-  background: #64B5F6 !important;
+  background: #64b5f6 !important;
 }
 
 .text-blue-light-2 {
-  color: #64B5F6 !important;
+  color: #64b5f6 !important;
 }
 
 .blue-light-3 {
-  background: #90CAF9 !important;
+  background: #90caf9 !important;
 }
 
 .text-blue-light-3 {
-  color: #90CAF9 !important;
+  color: #90caf9 !important;
 }
 
 .blue-light-4 {
-  background: #BBDEFB !important;
+  background: #bbdefb !important;
 }
 
 .text-blue-light-4 {
-  color: #BBDEFB !important;
+  color: #bbdefb !important;
 }
 
 .blue-light-5 {
-  background: #E3F2FD !important;
+  background: #e3f2fd !important;
 }
 
 .text-blue-light-5 {
-  color: #E3F2FD !important;
+  color: #e3f2fd !important;
 }
 
 .blue-dark-1 {
-  background: #1E88E5 !important;
+  background: #1e88e5 !important;
 }
 
 .text-blue-dark-1 {
-  color: #1E88E5 !important;
+  color: #1e88e5 !important;
 }
 
 .blue-dark-2 {
-  background: #1976D2 !important;
+  background: #1976d2 !important;
 }
 
 .text-blue-dark-2 {
-  color: #1976D2 !important;
+  color: #1976d2 !important;
 }
 
 .blue-dark-3 {
-  background: #1565C0 !important;
+  background: #1565c0 !important;
 }
 
 .text-blue-dark-3 {
-  color: #1565C0 !important;
+  color: #1565c0 !important;
 }
 
 .blue-dark-4 {
-  background: #0D47A1 !important;
+  background: #0d47a1 !important;
 }
 
 .text-blue-dark-4 {
-  color: #0D47A1 !important;
+  color: #0d47a1 !important;
 }
 
 .light-blue {
-  background: #03A9F4 !important;
+  background: #03a9f4 !important;
 }
 
 .text-light-blue {
-  color: #03A9F4 !important;
+  color: #03a9f4 !important;
 }
 
 .light-blue-light-1 {
-  background: #29B6F6 !important;
+  background: #29b6f6 !important;
 }
 
 .text-light-blue-light-1 {
-  color: #29B6F6 !important;
+  color: #29b6f6 !important;
 }
 
 .light-blue-light-2 {
-  background: #4FC3F7 !important;
+  background: #4fc3f7 !important;
 }
 
 .text-light-blue-light-2 {
-  color: #4FC3F7 !important;
+  color: #4fc3f7 !important;
 }
 
 .light-blue-light-3 {
-  background: #81D4FA !important;
+  background: #81d4fa !important;
 }
 
 .text-light-blue-light-3 {
-  color: #81D4FA !important;
+  color: #81d4fa !important;
 }
 
 .light-blue-light-4 {
-  background: #B3E5FC !important;
+  background: #b3e5fc !important;
 }
 
 .text-light-blue-light-4 {
-  color: #B3E5FC !important;
+  color: #b3e5fc !important;
 }
 
 .light-blue-light-5 {
-  background: #E1F5FE !important;
+  background: #e1f5fe !important;
 }
 
 .text-light-blue-light-5 {
-  color: #E1F5FE !important;
+  color: #e1f5fe !important;
 }
 
 .light-blue-dark-1 {
-  background: #039BE5 !important;
+  background: #039be5 !important;
 }
 
 .text-light-blue-dark-1 {
-  color: #039BE5 !important;
+  color: #039be5 !important;
 }
 
 .light-blue-dark-2 {
-  background: #0288D1 !important;
+  background: #0288d1 !important;
 }
 
 .text-light-blue-dark-2 {
-  color: #0288D1 !important;
+  color: #0288d1 !important;
 }
 
 .light-blue-dark-3 {
-  background: #0277BD !important;
+  background: #0277bd !important;
 }
 
 .text-light-blue-dark-3 {
-  color: #0277BD !important;
+  color: #0277bd !important;
 }
 
 .light-blue-dark-4 {
-  background: #01579B !important;
+  background: #01579b !important;
 }
 
 .text-light-blue-dark-4 {
-  color: #01579B !important;
+  color: #01579b !important;
 }
 
 .cyan {
-  background: #00BCD4 !important;
+  background: #00bcd4 !important;
 }
 
 .text-cyan {
-  color: #00BCD4 !important;
+  color: #00bcd4 !important;
 }
 
 .cyan-light-1 {
-  background: #26C6DA !important;
+  background: #26c6da !important;
 }
 
 .text-cyan-light-1 {
-  color: #26C6DA !important;
+  color: #26c6da !important;
 }
 
 .cyan-light-2 {
-  background: #4DD0E1 !important;
+  background: #4dd0e1 !important;
 }
 
 .text-cyan-light-2 {
-  color: #4DD0E1 !important;
+  color: #4dd0e1 !important;
 }
 
 .cyan-light-3 {
-  background: #80DEEA !important;
+  background: #80deea !important;
 }
 
 .text-cyan-light-3 {
-  color: #80DEEA !important;
+  color: #80deea !important;
 }
 
 .cyan-light-4 {
-  background: #B2EBF2 !important;
+  background: #b2ebf2 !important;
 }
 
 .text-cyan-light-4 {
-  color: #B2EBF2 !important;
+  color: #b2ebf2 !important;
 }
 
 .cyan-light-5 {
-  background: #E0F7FA !important;
+  background: #e0f7fa !important;
 }
 
 .text-cyan-light-5 {
-  color: #E0F7FA !important;
+  color: #e0f7fa !important;
 }
 
 .cyan-dark-1 {
-  background: #00ACC1 !important;
+  background: #00acc1 !important;
 }
 
 .text-cyan-dark-1 {
-  color: #00ACC1 !important;
+  color: #00acc1 !important;
 }
 
 .cyan-dark-2 {
-  background: #0097A7 !important;
+  background: #0097a7 !important;
 }
 
 .text-cyan-dark-2 {
-  color: #0097A7 !important;
+  color: #0097a7 !important;
 }
 
 .cyan-dark-3 {
-  background: #00838F !important;
+  background: #00838f !important;
 }
 
 .text-cyan-dark-3 {
-  color: #00838F !important;
+  color: #00838f !important;
 }
 
 .cyan-dark-4 {
@@ -648,307 +647,307 @@
 }
 
 .teal-light-1 {
-  background: #26A69A !important;
+  background: #26a69a !important;
 }
 
 .text-teal-light-1 {
-  color: #26A69A !important;
+  color: #26a69a !important;
 }
 
 .teal-light-2 {
-  background: #4DB6AC !important;
+  background: #4db6ac !important;
 }
 
 .text-teal-light-2 {
-  color: #4DB6AC !important;
+  color: #4db6ac !important;
 }
 
 .teal-light-3 {
-  background: #80CBC4 !important;
+  background: #80cbc4 !important;
 }
 
 .text-teal-light-3 {
-  color: #80CBC4 !important;
+  color: #80cbc4 !important;
 }
 
 .teal-light-4 {
-  background: #B2DFDB !important;
+  background: #b2dfdb !important;
 }
 
 .text-teal-light-4 {
-  color: #B2DFDB !important;
+  color: #b2dfdb !important;
 }
 
 .teal-light-5 {
-  background: #E0F2F1 !important;
+  background: #e0f2f1 !important;
 }
 
 .text-teal-light-5 {
-  color: #E0F2F1 !important;
+  color: #e0f2f1 !important;
 }
 
 .teal-dark-1 {
-  background: #00897B !important;
+  background: #00897b !important;
 }
 
 .text-teal-dark-1 {
-  color: #00897B !important;
+  color: #00897b !important;
 }
 
 .teal-dark-2 {
-  background: #00796B !important;
+  background: #00796b !important;
 }
 
 .text-teal-dark-2 {
-  color: #00796B !important;
+  color: #00796b !important;
 }
 
 .teal-dark-3 {
-  background: #00695C !important;
+  background: #00695c !important;
 }
 
 .text-teal-dark-3 {
-  color: #00695C !important;
+  color: #00695c !important;
 }
 
 .teal-dark-4 {
-  background: #004D40 !important;
+  background: #004d40 !important;
 }
 
 .text-teal-dark-4 {
-  color: #004D40 !important;
+  color: #004d40 !important;
 }
 
 .green {
-  background: #4CAF50 !important;
+  background: #4caf50 !important;
 }
 
 .text-green {
-  color: #4CAF50 !important;
+  color: #4caf50 !important;
 }
 
 .green-light-1 {
-  background: #66BB6A !important;
+  background: #66bb6a !important;
 }
 
 .text-green-light-1 {
-  color: #66BB6A !important;
+  color: #66bb6a !important;
 }
 
 .green-light-2 {
-  background: #81C784 !important;
+  background: #81c784 !important;
 }
 
 .text-green-light-2 {
-  color: #81C784 !important;
+  color: #81c784 !important;
 }
 
 .green-light-3 {
-  background: #A5D6A7 !important;
+  background: #a5d6a7 !important;
 }
 
 .text-green-light-3 {
-  color: #A5D6A7 !important;
+  color: #a5d6a7 !important;
 }
 
 .green-light-4 {
-  background: #C8E6C9 !important;
+  background: #c8e6c9 !important;
 }
 
 .text-green-light-4 {
-  color: #C8E6C9 !important;
+  color: #c8e6c9 !important;
 }
 
 .green-light-5 {
-  background: #E8F5E9 !important;
+  background: #e8f5e9 !important;
 }
 
 .text-green-light-5 {
-  color: #E8F5E9 !important;
+  color: #e8f5e9 !important;
 }
 
 .green-dark-1 {
-  background: #43A047 !important;
+  background: #43a047 !important;
 }
 
 .text-green-dark-1 {
-  color: #43A047 !important;
+  color: #43a047 !important;
 }
 
 .green-dark-2 {
-  background: #388E3C !important;
+  background: #388e3c !important;
 }
 
 .text-green-dark-2 {
-  color: #388E3C !important;
+  color: #388e3c !important;
 }
 
 .green-dark-3 {
-  background: #2E7D32 !important;
+  background: #2e7d32 !important;
 }
 
 .text-green-dark-3 {
-  color: #2E7D32 !important;
+  color: #2e7d32 !important;
 }
 
 .green-dark-4 {
-  background: #1B5E20 !important;
+  background: #1b5e20 !important;
 }
 
 .text-green-dark-4 {
-  color: #1B5E20 !important;
+  color: #1b5e20 !important;
 }
 
 .light-green {
-  background: #8BC34A !important;
+  background: #8bc34a !important;
 }
 
 .text-light-green {
-  color: #8BC34A !important;
+  color: #8bc34a !important;
 }
 
 .light-green-light-1 {
-  background: #9CCC65 !important;
+  background: #9ccc65 !important;
 }
 
 .text-light-green-light-1 {
-  color: #9CCC65 !important;
+  color: #9ccc65 !important;
 }
 
 .light-green-light-2 {
-  background: #AED581 !important;
+  background: #aed581 !important;
 }
 
 .text-light-green-light-2 {
-  color: #AED581 !important;
+  color: #aed581 !important;
 }
 
 .light-green-light-3 {
-  background: #C5E1A5 !important;
+  background: #c5e1a5 !important;
 }
 
 .text-light-green-light-3 {
-  color: #C5E1A5 !important;
+  color: #c5e1a5 !important;
 }
 
 .light-green-light-4 {
-  background: #DCEDC8 !important;
+  background: #dcedc8 !important;
 }
 
 .text-light-green-light-4 {
-  color: #DCEDC8 !important;
+  color: #dcedc8 !important;
 }
 
 .light-green-light-5 {
-  background: #F1F8E9 !important;
+  background: #f1f8e9 !important;
 }
 
 .text-light-green-light-5 {
-  color: #F1F8E9 !important;
+  color: #f1f8e9 !important;
 }
 
 .light-green-dark-1 {
-  background: #7CB342 !important;
+  background: #7cb342 !important;
 }
 
 .text-light-green-dark-1 {
-  color: #7CB342 !important;
+  color: #7cb342 !important;
 }
 
 .light-green-dark-2 {
-  background: #689F38 !important;
+  background: #689f38 !important;
 }
 
 .text-light-green-dark-2 {
-  color: #689F38 !important;
+  color: #689f38 !important;
 }
 
 .light-green-dark-3 {
-  background: #558B2F !important;
+  background: #558b2f !important;
 }
 
 .text-light-green-dark-3 {
-  color: #558B2F !important;
+  color: #558b2f !important;
 }
 
 .light-green-dark-4 {
-  background: #33691E !important;
+  background: #33691e !important;
 }
 
 .text-light-green-dark-4 {
-  color: #33691E !important;
+  color: #33691e !important;
 }
 
 .lime {
-  background: #CDDC39 !important;
+  background: #cddc39 !important;
 }
 
 .text-lime {
-  color: #CDDC39 !important;
+  color: #cddc39 !important;
 }
 
 .lime-light-1 {
-  background: #D4E157 !important;
+  background: #d4e157 !important;
 }
 
 .text-lime-light-1 {
-  color: #D4E157 !important;
+  color: #d4e157 !important;
 }
 
 .lime-light-2 {
-  background: #DCE775 !important;
+  background: #dce775 !important;
 }
 
 .text-lime-light-2 {
-  color: #DCE775 !important;
+  color: #dce775 !important;
 }
 
 .lime-light-3 {
-  background: #E6EE9C !important;
+  background: #e6ee9c !important;
 }
 
 .text-lime-light-3 {
-  color: #E6EE9C !important;
+  color: #e6ee9c !important;
 }
 
 .lime-light-4 {
-  background: #F0F4C3 !important;
+  background: #f0f4c3 !important;
 }
 
 .text-lime-light-4 {
-  color: #F0F4C3 !important;
+  color: #f0f4c3 !important;
 }
 
 .lime-light-5 {
-  background: #F9FBE7 !important;
+  background: #f9fbe7 !important;
 }
 
 .text-lime-light-5 {
-  color: #F9FBE7 !important;
+  color: #f9fbe7 !important;
 }
 
 .lime-dark-1 {
-  background: #C0CA33 !important;
+  background: #c0ca33 !important;
 }
 
 .text-lime-dark-1 {
-  color: #C0CA33 !important;
+  color: #c0ca33 !important;
 }
 
 .lime-dark-2 {
-  background: #AFB42B !important;
+  background: #afb42b !important;
 }
 
 .text-lime-dark-2 {
-  color: #AFB42B !important;
+  color: #afb42b !important;
 }
 
 .lime-dark-3 {
-  background: #9E9D24 !important;
+  background: #9e9d24 !important;
 }
 
 .text-lime-dark-3 {
-  color: #9E9D24 !important;
+  color: #9e9d24 !important;
 }
 
 .lime-dark-4 {
@@ -960,323 +959,323 @@
 }
 
 .yellow {
-  background: #FFEB3B !important;
+  background: #ffeb3b !important;
 }
 
 .text-yellow {
-  color: #FFEB3B !important;
+  color: #ffeb3b !important;
 }
 
 .yellow-light-1 {
-  background: #FFEE58 !important;
+  background: #ffee58 !important;
 }
 
 .text-yellow-light-1 {
-  color: #FFEE58 !important;
+  color: #ffee58 !important;
 }
 
 .yellow-light-2 {
-  background: #FFF176 !important;
+  background: #fff176 !important;
 }
 
 .text-yellow-light-2 {
-  color: #FFF176 !important;
+  color: #fff176 !important;
 }
 
 .yellow-light-3 {
-  background: #FFF59D !important;
+  background: #fff59d !important;
 }
 
 .text-yellow-light-3 {
-  color: #FFF59D !important;
+  color: #fff59d !important;
 }
 
 .yellow-light-4 {
-  background: #FFF9C4 !important;
+  background: #fff9c4 !important;
 }
 
 .text-yellow-light-4 {
-  color: #FFF9C4 !important;
+  color: #fff9c4 !important;
 }
 
 .yellow-light-5 {
-  background: #FFFDE7 !important;
+  background: #fffde7 !important;
 }
 
 .text-yellow-light-5 {
-  color: #FFFDE7 !important;
+  color: #fffde7 !important;
 }
 
 .yellow-dark-1 {
-  background: #FDD835 !important;
+  background: #fdd835 !important;
 }
 
 .text-yellow-dark-1 {
-  color: #FDD835 !important;
+  color: #fdd835 !important;
 }
 
 .yellow-dark-2 {
-  background: #FBC02D !important;
+  background: #fbc02d !important;
 }
 
 .text-yellow-dark-2 {
-  color: #FBC02D !important;
+  color: #fbc02d !important;
 }
 
 .yellow-dark-3 {
-  background: #F9A825 !important;
+  background: #f9a825 !important;
 }
 
 .text-yellow-dark-3 {
-  color: #F9A825 !important;
+  color: #f9a825 !important;
 }
 
 .yellow-dark-4 {
-  background: #F57F17 !important;
+  background: #f57f17 !important;
 }
 
 .text-yellow-dark-4 {
-  color: #F57F17 !important;
+  color: #f57f17 !important;
 }
 
 .amber {
-  background: #FFC107 !important;
+  background: #ffc107 !important;
 }
 
 .text-amber {
-  color: #FFC107 !important;
+  color: #ffc107 !important;
 }
 
 .amber-light-1 {
-  background: #FFCA28 !important;
+  background: #ffca28 !important;
 }
 
 .text-amber-light-1 {
-  color: #FFCA28 !important;
+  color: #ffca28 !important;
 }
 
 .amber-light-2 {
-  background: #FFD54F !important;
+  background: #ffd54f !important;
 }
 
 .text-amber-light-2 {
-  color: #FFD54F !important;
+  color: #ffd54f !important;
 }
 
 .amber-light-3 {
-  background: #FFE082 !important;
+  background: #ffe082 !important;
 }
 
 .text-amber-light-3 {
-  color: #FFE082 !important;
+  color: #ffe082 !important;
 }
 
 .amber-light-4 {
-  background: #FFECB3 !important;
+  background: #ffecb3 !important;
 }
 
 .text-amber-light-4 {
-  color: #FFECB3 !important;
+  color: #ffecb3 !important;
 }
 
 .amber-light-5 {
-  background: #FFF8E1 !important;
+  background: #fff8e1 !important;
 }
 
 .text-amber-light-5 {
-  color: #FFF8E1 !important;
+  color: #fff8e1 !important;
 }
 
 .amber-dark-1 {
-  background: #FFB300 !important;
+  background: #ffb300 !important;
 }
 
 .text-amber-dark-1 {
-  color: #FFB300 !important;
+  color: #ffb300 !important;
 }
 
 .amber-dark-2 {
-  background: #FFA000 !important;
+  background: #ffa000 !important;
 }
 
 .text-amber-dark-2 {
-  color: #FFA000 !important;
+  color: #ffa000 !important;
 }
 
 .amber-dark-3 {
-  background: #FF8F00 !important;
+  background: #ff8f00 !important;
 }
 
 .text-amber-dark-3 {
-  color: #FF8F00 !important;
+  color: #ff8f00 !important;
 }
 
 .amber-dark-4 {
-  background: #FF6F00 !important;
+  background: #ff6f00 !important;
 }
 
 .text-amber-dark-4 {
-  color: #FF6F00 !important;
+  color: #ff6f00 !important;
 }
 
 .orange {
-  background: #FF9800 !important;
+  background: #ff9800 !important;
 }
 
 .text-orange {
-  color: #FF9800 !important;
+  color: #ff9800 !important;
 }
 
 .orange-light-1 {
-  background: #FFA726 !important;
+  background: #ffa726 !important;
 }
 
 .text-orange-light-1 {
-  color: #FFA726 !important;
+  color: #ffa726 !important;
 }
 
 .orange-light-2 {
-  background: #FFB74D !important;
+  background: #ffb74d !important;
 }
 
 .text-orange-light-2 {
-  color: #FFB74D !important;
+  color: #ffb74d !important;
 }
 
 .orange-light-3 {
-  background: #FFCC80 !important;
+  background: #ffcc80 !important;
 }
 
 .text-orange-light-3 {
-  color: #FFCC80 !important;
+  color: #ffcc80 !important;
 }
 
 .orange-light-4 {
-  background: #FFE0B2 !important;
+  background: #ffe0b2 !important;
 }
 
 .text-orange-light-4 {
-  color: #FFE0B2 !important;
+  color: #ffe0b2 !important;
 }
 
 .orange-light-5 {
-  background: #FFF3E0 !important;
+  background: #fff3e0 !important;
 }
 
 .text-orange-light-5 {
-  color: #FFF3E0 !important;
+  color: #fff3e0 !important;
 }
 
 .orange-dark-1 {
-  background: #FB8C00 !important;
+  background: #fb8c00 !important;
 }
 
 .text-orange-dark-1 {
-  color: #FB8C00 !important;
+  color: #fb8c00 !important;
 }
 
 .orange-dark-2 {
-  background: #F57C00 !important;
+  background: #f57c00 !important;
 }
 
 .text-orange-dark-2 {
-  color: #F57C00 !important;
+  color: #f57c00 !important;
 }
 
 .orange-dark-3 {
-  background: #EF6C00 !important;
+  background: #ef6c00 !important;
 }
 
 .text-orange-dark-3 {
-  color: #EF6C00 !important;
+  color: #ef6c00 !important;
 }
 
 .orange-dark-4 {
-  background: #E65100 !important;
+  background: #e65100 !important;
 }
 
 .text-orange-dark-4 {
-  color: #E65100 !important;
+  color: #e65100 !important;
 }
 
 .deep-orange {
-  background: #FF5722 !important;
+  background: #ff5722 !important;
 }
 
 .text-deep-orange {
-  color: #FF5722 !important;
+  color: #ff5722 !important;
 }
 
 .deep-orange-light-1 {
-  background: #FF7043 !important;
+  background: #ff7043 !important;
 }
 
 .text-deep-orange-light-1 {
-  color: #FF7043 !important;
+  color: #ff7043 !important;
 }
 
 .deep-orange-light-2 {
-  background: #FF8A65 !important;
+  background: #ff8a65 !important;
 }
 
 .text-deep-orange-light-2 {
-  color: #FF8A65 !important;
+  color: #ff8a65 !important;
 }
 
 .deep-orange-light-3 {
-  background: #FFAB91 !important;
+  background: #ffab91 !important;
 }
 
 .text-deep-orange-light-3 {
-  color: #FFAB91 !important;
+  color: #ffab91 !important;
 }
 
 .deep-orange-light-4 {
-  background: #FFCCBC !important;
+  background: #ffccbc !important;
 }
 
 .text-deep-orange-light-4 {
-  color: #FFCCBC !important;
+  color: #ffccbc !important;
 }
 
 .deep-orange-light-5 {
-  background: #FBE9E7 !important;
+  background: #fbe9e7 !important;
 }
 
 .text-deep-orange-light-5 {
-  color: #FBE9E7 !important;
+  color: #fbe9e7 !important;
 }
 
 .deep-orange-dark-1 {
-  background: #F4511E !important;
+  background: #f4511e !important;
 }
 
 .text-deep-orange-dark-1 {
-  color: #F4511E !important;
+  color: #f4511e !important;
 }
 
 .deep-orange-dark-2 {
-  background: #E64A19 !important;
+  background: #e64a19 !important;
 }
 
 .text-deep-orange-dark-2 {
-  color: #E64A19 !important;
+  color: #e64a19 !important;
 }
 
 .deep-orange-dark-3 {
-  background: #D84315 !important;
+  background: #d84315 !important;
 }
 
 .text-deep-orange-dark-3 {
-  color: #D84315 !important;
+  color: #d84315 !important;
 }
 
 .deep-orange-dark-4 {
-  background: #BF360C !important;
+  background: #bf360c !important;
 }
 
 .text-deep-orange-dark-4 {
-  color: #BF360C !important;
+  color: #bf360c !important;
 }
 
 .brown {
@@ -1288,123 +1287,123 @@
 }
 
 .brown-light-1 {
-  background: #8D6E63 !important;
+  background: #8d6e63 !important;
 }
 
 .text-brown-light-1 {
-  color: #8D6E63 !important;
+  color: #8d6e63 !important;
 }
 
 .brown-light-2 {
-  background: #A1887F !important;
+  background: #a1887f !important;
 }
 
 .text-brown-light-2 {
-  color: #A1887F !important;
+  color: #a1887f !important;
 }
 
 .brown-light-3 {
-  background: #BCAAA4 !important;
+  background: #bcaaa4 !important;
 }
 
 .text-brown-light-3 {
-  color: #BCAAA4 !important;
+  color: #bcaaa4 !important;
 }
 
 .brown-light-4 {
-  background: #D7CCC8 !important;
+  background: #d7ccc8 !important;
 }
 
 .text-brown-light-4 {
-  color: #D7CCC8 !important;
+  color: #d7ccc8 !important;
 }
 
 .brown-light-5 {
-  background: #EFEBE9 !important;
+  background: #efebe9 !important;
 }
 
 .text-brown-light-5 {
-  color: #EFEBE9 !important;
+  color: #efebe9 !important;
 }
 
 .brown-dark-1 {
-  background: #6D4C41 !important;
+  background: #6d4c41 !important;
 }
 
 .text-brown-dark-1 {
-  color: #6D4C41 !important;
+  color: #6d4c41 !important;
 }
 
 .brown-dark-2 {
-  background: #5D4037 !important;
+  background: #5d4037 !important;
 }
 
 .text-brown-dark-2 {
-  color: #5D4037 !important;
+  color: #5d4037 !important;
 }
 
 .brown-dark-3 {
-  background: #4E342E !important;
+  background: #4e342e !important;
 }
 
 .text-brown-dark-3 {
-  color: #4E342E !important;
+  color: #4e342e !important;
 }
 
 .brown-dark-4 {
-  background: #3E2723 !important;
+  background: #3e2723 !important;
 }
 
 .text-brown-dark-4 {
-  color: #3E2723 !important;
+  color: #3e2723 !important;
 }
 
 .grey {
-  background: #9E9E9E !important;
+  background: #9e9e9e !important;
 }
 
 .text-grey {
-  color: #9E9E9E !important;
+  color: #9e9e9e !important;
 }
 
 .grey-light-1 {
-  background: #BDBDBD !important;
+  background: #bdbdbd !important;
 }
 
 .text-grey-light-1 {
-  color: #BDBDBD !important;
+  color: #bdbdbd !important;
 }
 
 .grey-light-2 {
-  background: #E0E0E0 !important;
+  background: #e0e0e0 !important;
 }
 
 .text-grey-light-2 {
-  color: #E0E0E0 !important;
+  color: #e0e0e0 !important;
 }
 
 .grey-light-3 {
-  background: #EEEEEE !important;
+  background: #eeeeee !important;
 }
 
 .text-grey-light-3 {
-  color: #EEEEEE !important;
+  color: #eeeeee !important;
 }
 
 .grey-light-4 {
-  background: #F5F5F5 !important;
+  background: #f5f5f5 !important;
 }
 
 .text-grey-light-4 {
-  color: #F5F5F5 !important;
+  color: #f5f5f5 !important;
 }
 
 .grey-light-5 {
-  background: #FAFAFA !important;
+  background: #fafafa !important;
 }
 
 .text-grey-light-5 {
-  color: #FAFAFA !important;
+  color: #fafafa !important;
 }
 
 .grey-dark-1 {
@@ -1440,75 +1439,75 @@
 }
 
 .blue-grey {
-  background: #607D8B !important;
+  background: #607d8b !important;
 }
 
 .text-blue-grey {
-  color: #607D8B !important;
+  color: #607d8b !important;
 }
 
 .blue-grey-light-1 {
-  background: #78909C !important;
+  background: #78909c !important;
 }
 
 .text-blue-grey-light-1 {
-  color: #78909C !important;
+  color: #78909c !important;
 }
 
 .blue-grey-light-2 {
-  background: #90A4AE !important;
+  background: #90a4ae !important;
 }
 
 .text-blue-grey-light-2 {
-  color: #90A4AE !important;
+  color: #90a4ae !important;
 }
 
 .blue-grey-light-3 {
-  background: #B0BEC5 !important;
+  background: #b0bec5 !important;
 }
 
 .text-blue-grey-light-3 {
-  color: #B0BEC5 !important;
+  color: #b0bec5 !important;
 }
 
 .blue-grey-light-4 {
-  background: #CFD8DC !important;
+  background: #cfd8dc !important;
 }
 
 .text-blue-grey-light-4 {
-  color: #CFD8DC !important;
+  color: #cfd8dc !important;
 }
 
 .blue-grey-light-5 {
-  background: #ECEFF1 !important;
+  background: #eceff1 !important;
 }
 
 .text-blue-grey-light-5 {
-  color: #ECEFF1 !important;
+  color: #eceff1 !important;
 }
 
 .blue-grey-dark-1 {
-  background: #546E7A !important;
+  background: #546e7a !important;
 }
 
 .text-blue-grey-dark-1 {
-  color: #546E7A !important;
+  color: #546e7a !important;
 }
 
 .blue-grey-dark-2 {
-  background: #455A64 !important;
+  background: #455a64 !important;
 }
 
 .text-blue-grey-dark-2 {
-  color: #455A64 !important;
+  color: #455a64 !important;
 }
 
 .blue-grey-dark-3 {
-  background: #37474F !important;
+  background: #37474f !important;
 }
 
 .text-blue-grey-dark-3 {
-  color: #37474F !important;
+  color: #37474f !important;
 }
 
 .blue-grey-dark-4 {
@@ -1520,580 +1519,757 @@
 }
 
 .white.outline {
-  color: #ffffff;
+  color: #ffffff !important;
   background: transparent !important;
   border: #ffffff 1px solid !important;
 }
 .white.outline:hover {
-  color: #fff;
+  color: #fff !important;
   background: #ffffff !important;
 }
 .white.text {
   background: transparent !important;
-  color: #ffffff;
+  color: #ffffff !important;
 }
 .white.checkbox {
   background: transparent !important;
 }
 .white.checkbox > input:checked {
-  background: #ffffff;
+  background: #ffffff !important;
 }
 .white.checkbox > input:checked + span::before {
-  border-color: #ffffff;
-  background: #ffffff;
+  border-color: #ffffff !important;
+  background: #ffffff !important;
 }
 .white.checkbox > input:active + span::before {
-  border-color: #ffffff;
+  border-color: #ffffff !important;
 }
 .white.radio {
   background: transparent !important;
 }
 .white.radio input[type="radio"]:checked + label:before {
-  border-color: #ffffff;
+  border-color: #ffffff !important;
 }
 .white.radio label:after {
-  background: #ffffff;
+  background: #ffffff !important;
+}
+.white.switch {
+  background: transparent !important;
+}
+.white.switch > input:checked ~ span:before {
+  background: rgba(255, 255, 255, 0.5) !important;
+}
+.white.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #ffffff !important;
+  border-color: #ffffff !important;
 }
 
 .red.outline {
-  color: #f44336;
+  color: #f44336 !important;
   background: transparent !important;
   border: #f44336 1px solid !important;
 }
 .red.outline:hover {
-  color: #fff;
+  color: #fff !important;
   background: #f44336 !important;
 }
 .red.text {
   background: transparent !important;
-  color: #f44336;
+  color: #f44336 !important;
 }
 .red.checkbox {
   background: transparent !important;
 }
 .red.checkbox > input:checked {
-  background: #f44336;
+  background: #f44336 !important;
 }
 .red.checkbox > input:checked + span::before {
-  border-color: #f44336;
-  background: #f44336;
+  border-color: #f44336 !important;
+  background: #f44336 !important;
 }
 .red.checkbox > input:active + span::before {
-  border-color: #f44336;
+  border-color: #f44336 !important;
 }
 .red.radio {
   background: transparent !important;
 }
 .red.radio input[type="radio"]:checked + label:before {
-  border-color: #f44336;
+  border-color: #f44336 !important;
 }
 .red.radio label:after {
-  background: #f44336;
+  background: #f44336 !important;
+}
+.red.switch {
+  background: transparent !important;
+}
+.red.switch > input:checked ~ span:before {
+  background: rgba(244, 67, 54, 0.5) !important;
+}
+.red.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #f44336 !important;
+  border-color: #f44336 !important;
 }
 
 .pink.outline {
-  color: #e91e63;
+  color: #e91e63 !important;
   background: transparent !important;
   border: #e91e63 1px solid !important;
 }
 .pink.outline:hover {
-  color: #fff;
+  color: #fff !important;
   background: #e91e63 !important;
 }
 .pink.text {
   background: transparent !important;
-  color: #e91e63;
+  color: #e91e63 !important;
 }
 .pink.checkbox {
   background: transparent !important;
 }
 .pink.checkbox > input:checked {
-  background: #e91e63;
+  background: #e91e63 !important;
 }
 .pink.checkbox > input:checked + span::before {
-  border-color: #e91e63;
-  background: #e91e63;
+  border-color: #e91e63 !important;
+  background: #e91e63 !important;
 }
 .pink.checkbox > input:active + span::before {
-  border-color: #e91e63;
+  border-color: #e91e63 !important;
 }
 .pink.radio {
   background: transparent !important;
 }
 .pink.radio input[type="radio"]:checked + label:before {
-  border-color: #e91e63;
+  border-color: #e91e63 !important;
 }
 .pink.radio label:after {
-  background: #e91e63;
+  background: #e91e63 !important;
+}
+.pink.switch {
+  background: transparent !important;
+}
+.pink.switch > input:checked ~ span:before {
+  background: rgba(233, 30, 99, 0.5) !important;
+}
+.pink.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #e91e63 !important;
+  border-color: #e91e63 !important;
 }
 
 .purple.outline {
-  color: #9c27b0;
+  color: #9c27b0 !important;
   background: transparent !important;
   border: #9c27b0 1px solid !important;
 }
 .purple.outline:hover {
-  color: #fff;
+  color: #fff !important;
   background: #9c27b0 !important;
 }
 .purple.text {
   background: transparent !important;
-  color: #9c27b0;
+  color: #9c27b0 !important;
 }
 .purple.checkbox {
   background: transparent !important;
 }
 .purple.checkbox > input:checked {
-  background: #9c27b0;
+  background: #9c27b0 !important;
 }
 .purple.checkbox > input:checked + span::before {
-  border-color: #9c27b0;
-  background: #9c27b0;
+  border-color: #9c27b0 !important;
+  background: #9c27b0 !important;
 }
 .purple.checkbox > input:active + span::before {
-  border-color: #9c27b0;
+  border-color: #9c27b0 !important;
 }
 .purple.radio {
   background: transparent !important;
 }
 .purple.radio input[type="radio"]:checked + label:before {
-  border-color: #9c27b0;
+  border-color: #9c27b0 !important;
 }
 .purple.radio label:after {
-  background: #9c27b0;
+  background: #9c27b0 !important;
+}
+.purple.switch {
+  background: transparent !important;
+}
+.purple.switch > input:checked ~ span:before {
+  background: rgba(156, 39, 176, 0.5) !important;
+}
+.purple.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #9c27b0 !important;
+  border-color: #9c27b0 !important;
 }
 
 .indigo.outline {
-  color: #3f51b5;
+  color: #3f51b5 !important;
   background: transparent !important;
   border: #3f51b5 1px solid !important;
 }
 .indigo.outline:hover {
-  color: #fff;
+  color: #fff !important;
   background: #3f51b5 !important;
 }
 .indigo.text {
   background: transparent !important;
-  color: #3f51b5;
+  color: #3f51b5 !important;
 }
 .indigo.checkbox {
   background: transparent !important;
 }
 .indigo.checkbox > input:checked {
-  background: #3f51b5;
+  background: #3f51b5 !important;
 }
 .indigo.checkbox > input:checked + span::before {
-  border-color: #3f51b5;
-  background: #3f51b5;
+  border-color: #3f51b5 !important;
+  background: #3f51b5 !important;
 }
 .indigo.checkbox > input:active + span::before {
-  border-color: #3f51b5;
+  border-color: #3f51b5 !important;
 }
 .indigo.radio {
   background: transparent !important;
 }
 .indigo.radio input[type="radio"]:checked + label:before {
-  border-color: #3f51b5;
+  border-color: #3f51b5 !important;
 }
 .indigo.radio label:after {
-  background: #3f51b5;
+  background: #3f51b5 !important;
+}
+.indigo.switch {
+  background: transparent !important;
+}
+.indigo.switch > input:checked ~ span:before {
+  background: rgba(63, 81, 181, 0.5) !important;
+}
+.indigo.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #3f51b5 !important;
+  border-color: #3f51b5 !important;
 }
 
 .blue.outline {
-  color: #2196f3;
+  color: #2196f3 !important;
   background: transparent !important;
   border: #2196f3 1px solid !important;
 }
 .blue.outline:hover {
-  color: #fff;
+  color: #fff !important;
   background: #2196f3 !important;
 }
 .blue.text {
   background: transparent !important;
-  color: #2196f3;
+  color: #2196f3 !important;
 }
 .blue.checkbox {
   background: transparent !important;
 }
 .blue.checkbox > input:checked {
-  background: #2196f3;
+  background: #2196f3 !important;
 }
 .blue.checkbox > input:checked + span::before {
-  border-color: #2196f3;
-  background: #2196f3;
+  border-color: #2196f3 !important;
+  background: #2196f3 !important;
 }
 .blue.checkbox > input:active + span::before {
-  border-color: #2196f3;
+  border-color: #2196f3 !important;
 }
 .blue.radio {
   background: transparent !important;
 }
 .blue.radio input[type="radio"]:checked + label:before {
-  border-color: #2196f3;
+  border-color: #2196f3 !important;
 }
 .blue.radio label:after {
-  background: #2196f3;
+  background: #2196f3 !important;
+}
+.blue.switch {
+  background: transparent !important;
+}
+.blue.switch > input:checked ~ span:before {
+  background: rgba(33, 150, 243, 0.5) !important;
+}
+.blue.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #2196f3 !important;
+  border-color: #2196f3 !important;
 }
 
 .cyan.outline {
-  color: #00bcd4;
+  color: #00bcd4 !important;
   background: transparent !important;
   border: #00bcd4 1px solid !important;
 }
 .cyan.outline:hover {
-  color: #fff;
+  color: #fff !important;
   background: #00bcd4 !important;
 }
 .cyan.text {
   background: transparent !important;
-  color: #00bcd4;
+  color: #00bcd4 !important;
 }
 .cyan.checkbox {
   background: transparent !important;
 }
 .cyan.checkbox > input:checked {
-  background: #00bcd4;
+  background: #00bcd4 !important;
 }
 .cyan.checkbox > input:checked + span::before {
-  border-color: #00bcd4;
-  background: #00bcd4;
+  border-color: #00bcd4 !important;
+  background: #00bcd4 !important;
 }
 .cyan.checkbox > input:active + span::before {
-  border-color: #00bcd4;
+  border-color: #00bcd4 !important;
 }
 .cyan.radio {
   background: transparent !important;
 }
 .cyan.radio input[type="radio"]:checked + label:before {
-  border-color: #00bcd4;
+  border-color: #00bcd4 !important;
 }
 .cyan.radio label:after {
-  background: #00bcd4;
+  background: #00bcd4 !important;
+}
+.cyan.switch {
+  background: transparent !important;
+}
+.cyan.switch > input:checked ~ span:before {
+  background: rgba(0, 188, 212, 0.5) !important;
+}
+.cyan.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #00bcd4 !important;
+  border-color: #00bcd4 !important;
 }
 
 .teal.outline {
-  color: #009688;
+  color: #009688 !important;
   background: transparent !important;
   border: #009688 1px solid !important;
 }
 .teal.outline:hover {
-  color: #fff;
+  color: #fff !important;
   background: #009688 !important;
 }
 .teal.text {
   background: transparent !important;
-  color: #009688;
+  color: #009688 !important;
 }
 .teal.checkbox {
   background: transparent !important;
 }
 .teal.checkbox > input:checked {
-  background: #009688;
+  background: #009688 !important;
 }
 .teal.checkbox > input:checked + span::before {
-  border-color: #009688;
-  background: #009688;
+  border-color: #009688 !important;
+  background: #009688 !important;
 }
 .teal.checkbox > input:active + span::before {
-  border-color: #009688;
+  border-color: #009688 !important;
 }
 .teal.radio {
   background: transparent !important;
 }
 .teal.radio input[type="radio"]:checked + label:before {
-  border-color: #009688;
+  border-color: #009688 !important;
 }
 .teal.radio label:after {
-  background: #009688;
+  background: #009688 !important;
+}
+.teal.switch {
+  background: transparent !important;
+}
+.teal.switch > input:checked ~ span:before {
+  background: rgba(0, 150, 136, 0.5) !important;
+}
+.teal.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #009688 !important;
+  border-color: #009688 !important;
 }
 
 .green.outline {
-  color: #4caf50;
+  color: #4caf50 !important;
   background: transparent !important;
   border: #4caf50 1px solid !important;
 }
 .green.outline:hover {
-  color: #fff;
+  color: #fff !important;
   background: #4caf50 !important;
 }
 .green.text {
   background: transparent !important;
-  color: #4caf50;
+  color: #4caf50 !important;
 }
 .green.checkbox {
   background: transparent !important;
 }
 .green.checkbox > input:checked {
-  background: #4caf50;
+  background: #4caf50 !important;
 }
 .green.checkbox > input:checked + span::before {
-  border-color: #4caf50;
-  background: #4caf50;
+  border-color: #4caf50 !important;
+  background: #4caf50 !important;
 }
 .green.checkbox > input:active + span::before {
-  border-color: #4caf50;
+  border-color: #4caf50 !important;
 }
 .green.radio {
   background: transparent !important;
 }
 .green.radio input[type="radio"]:checked + label:before {
-  border-color: #4caf50;
+  border-color: #4caf50 !important;
 }
 .green.radio label:after {
-  background: #4caf50;
+  background: #4caf50 !important;
+}
+.green.switch {
+  background: transparent !important;
+}
+.green.switch > input:checked ~ span:before {
+  background: rgba(76, 175, 80, 0.5) !important;
+}
+.green.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #4caf50 !important;
+  border-color: #4caf50 !important;
 }
 
 .lime.outline {
-  color: #cddc39;
+  color: #cddc39 !important;
   background: transparent !important;
   border: #cddc39 1px solid !important;
 }
 .lime.outline:hover {
-  color: #fff;
+  color: #fff !important;
   background: #cddc39 !important;
 }
 .lime.text {
   background: transparent !important;
-  color: #cddc39;
+  color: #cddc39 !important;
 }
 .lime.checkbox {
   background: transparent !important;
 }
 .lime.checkbox > input:checked {
-  background: #cddc39;
+  background: #cddc39 !important;
 }
 .lime.checkbox > input:checked + span::before {
-  border-color: #cddc39;
-  background: #cddc39;
+  border-color: #cddc39 !important;
+  background: #cddc39 !important;
 }
 .lime.checkbox > input:active + span::before {
-  border-color: #cddc39;
+  border-color: #cddc39 !important;
 }
 .lime.radio {
   background: transparent !important;
 }
 .lime.radio input[type="radio"]:checked + label:before {
-  border-color: #cddc39;
+  border-color: #cddc39 !important;
 }
 .lime.radio label:after {
-  background: #cddc39;
+  background: #cddc39 !important;
+}
+.lime.switch {
+  background: transparent !important;
+}
+.lime.switch > input:checked ~ span:before {
+  background: rgba(205, 220, 57, 0.5) !important;
+}
+.lime.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #cddc39 !important;
+  border-color: #cddc39 !important;
 }
 
 .yellow.outline {
-  color: #ffeb3b;
+  color: #ffeb3b !important;
   background: transparent !important;
   border: #ffeb3b 1px solid !important;
 }
 .yellow.outline:hover {
-  color: #fff;
+  color: #fff !important;
   background: #ffeb3b !important;
 }
 .yellow.text {
   background: transparent !important;
-  color: #ffeb3b;
+  color: #ffeb3b !important;
 }
 .yellow.checkbox {
   background: transparent !important;
 }
 .yellow.checkbox > input:checked {
-  background: #ffeb3b;
+  background: #ffeb3b !important;
 }
 .yellow.checkbox > input:checked + span::before {
-  border-color: #ffeb3b;
-  background: #ffeb3b;
+  border-color: #ffeb3b !important;
+  background: #ffeb3b !important;
 }
 .yellow.checkbox > input:active + span::before {
-  border-color: #ffeb3b;
+  border-color: #ffeb3b !important;
 }
 .yellow.radio {
   background: transparent !important;
 }
 .yellow.radio input[type="radio"]:checked + label:before {
-  border-color: #ffeb3b;
+  border-color: #ffeb3b !important;
 }
 .yellow.radio label:after {
-  background: #ffeb3b;
+  background: #ffeb3b !important;
+}
+.yellow.switch {
+  background: transparent !important;
+}
+.yellow.switch > input:checked ~ span:before {
+  background: rgba(255, 235, 59, 0.5) !important;
+}
+.yellow.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #ffeb3b !important;
+  border-color: #ffeb3b !important;
 }
 
 .amber.outline {
-  color: #ffc107;
+  color: #ffc107 !important;
   background: transparent !important;
   border: #ffc107 1px solid !important;
 }
 .amber.outline:hover {
-  color: #fff;
+  color: #fff !important;
   background: #ffc107 !important;
 }
 .amber.text {
   background: transparent !important;
-  color: #ffc107;
+  color: #ffc107 !important;
 }
 .amber.checkbox {
   background: transparent !important;
 }
 .amber.checkbox > input:checked {
-  background: #ffc107;
+  background: #ffc107 !important;
 }
 .amber.checkbox > input:checked + span::before {
-  border-color: #ffc107;
-  background: #ffc107;
+  border-color: #ffc107 !important;
+  background: #ffc107 !important;
 }
 .amber.checkbox > input:active + span::before {
-  border-color: #ffc107;
+  border-color: #ffc107 !important;
 }
 .amber.radio {
   background: transparent !important;
 }
 .amber.radio input[type="radio"]:checked + label:before {
-  border-color: #ffc107;
+  border-color: #ffc107 !important;
 }
 .amber.radio label:after {
-  background: #ffc107;
+  background: #ffc107 !important;
+}
+.amber.switch {
+  background: transparent !important;
+}
+.amber.switch > input:checked ~ span:before {
+  background: rgba(255, 193, 7, 0.5) !important;
+}
+.amber.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #ffc107 !important;
+  border-color: #ffc107 !important;
 }
 
 .orange.outline {
-  color: #ff9800;
+  color: #ff9800 !important;
   background: transparent !important;
   border: #ff9800 1px solid !important;
 }
 .orange.outline:hover {
-  color: #fff;
+  color: #fff !important;
   background: #ff9800 !important;
 }
 .orange.text {
   background: transparent !important;
-  color: #ff9800;
+  color: #ff9800 !important;
 }
 .orange.checkbox {
   background: transparent !important;
 }
 .orange.checkbox > input:checked {
-  background: #ff9800;
+  background: #ff9800 !important;
 }
 .orange.checkbox > input:checked + span::before {
-  border-color: #ff9800;
-  background: #ff9800;
+  border-color: #ff9800 !important;
+  background: #ff9800 !important;
 }
 .orange.checkbox > input:active + span::before {
-  border-color: #ff9800;
+  border-color: #ff9800 !important;
 }
 .orange.radio {
   background: transparent !important;
 }
 .orange.radio input[type="radio"]:checked + label:before {
-  border-color: #ff9800;
+  border-color: #ff9800 !important;
 }
 .orange.radio label:after {
-  background: #ff9800;
+  background: #ff9800 !important;
+}
+.orange.switch {
+  background: transparent !important;
+}
+.orange.switch > input:checked ~ span:before {
+  background: rgba(255, 152, 0, 0.5) !important;
+}
+.orange.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #ff9800 !important;
+  border-color: #ff9800 !important;
 }
 
 .brown.outline {
-  color: #795548;
+  color: #795548 !important;
   background: transparent !important;
   border: #795548 1px solid !important;
 }
 .brown.outline:hover {
-  color: #fff;
+  color: #fff !important;
   background: #795548 !important;
 }
 .brown.text {
   background: transparent !important;
-  color: #795548;
+  color: #795548 !important;
 }
 .brown.checkbox {
   background: transparent !important;
 }
 .brown.checkbox > input:checked {
-  background: #795548;
+  background: #795548 !important;
 }
 .brown.checkbox > input:checked + span::before {
-  border-color: #795548;
-  background: #795548;
+  border-color: #795548 !important;
+  background: #795548 !important;
 }
 .brown.checkbox > input:active + span::before {
-  border-color: #795548;
+  border-color: #795548 !important;
 }
 .brown.radio {
   background: transparent !important;
 }
 .brown.radio input[type="radio"]:checked + label:before {
-  border-color: #795548;
+  border-color: #795548 !important;
 }
 .brown.radio label:after {
-  background: #795548;
+  background: #795548 !important;
+}
+.brown.switch {
+  background: transparent !important;
+}
+.brown.switch > input:checked ~ span:before {
+  background: rgba(121, 85, 72, 0.5) !important;
+}
+.brown.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #795548 !important;
+  border-color: #795548 !important;
 }
 
 .grey.outline {
-  color: #9e9e9e;
+  color: #9e9e9e !important;
   background: transparent !important;
   border: #9e9e9e 1px solid !important;
 }
 .grey.outline:hover {
-  color: #fff;
+  color: #fff !important;
   background: #9e9e9e !important;
 }
 .grey.text {
   background: transparent !important;
-  color: #9e9e9e;
+  color: #9e9e9e !important;
 }
 .grey.checkbox {
   background: transparent !important;
 }
 .grey.checkbox > input:checked {
-  background: #9e9e9e;
+  background: #9e9e9e !important;
 }
 .grey.checkbox > input:checked + span::before {
-  border-color: #9e9e9e;
-  background: #9e9e9e;
+  border-color: #9e9e9e !important;
+  background: #9e9e9e !important;
 }
 .grey.checkbox > input:active + span::before {
-  border-color: #9e9e9e;
+  border-color: #9e9e9e !important;
 }
 .grey.radio {
   background: transparent !important;
 }
 .grey.radio input[type="radio"]:checked + label:before {
-  border-color: #9e9e9e;
+  border-color: #9e9e9e !important;
 }
 .grey.radio label:after {
-  background: #9e9e9e;
+  background: #9e9e9e !important;
+}
+.grey.switch {
+  background: transparent !important;
+}
+.grey.switch > input:checked ~ span:before {
+  background: rgba(158, 158, 158, 0.5) !important;
+}
+.grey.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #9e9e9e !important;
+  border-color: #9e9e9e !important;
 }
 
 .blue-grey.outline {
-  color: #607d8b;
+  color: #607d8b !important;
   background: transparent !important;
   border: #607d8b 1px solid !important;
 }
 .blue-grey.outline:hover {
-  color: #fff;
+  color: #fff !important;
   background: #607d8b !important;
 }
 .blue-grey.text {
   background: transparent !important;
-  color: #607d8b;
+  color: #607d8b !important;
 }
 .blue-grey.checkbox {
   background: transparent !important;
 }
 .blue-grey.checkbox > input:checked {
-  background: #607d8b;
+  background: #607d8b !important;
 }
 .blue-grey.checkbox > input:checked + span::before {
-  border-color: #607d8b;
-  background: #607d8b;
+  border-color: #607d8b !important;
+  background: #607d8b !important;
 }
 .blue-grey.checkbox > input:active + span::before {
-  border-color: #607d8b;
+  border-color: #607d8b !important;
 }
 .blue-grey.radio {
   background: transparent !important;
 }
 .blue-grey.radio input[type="radio"]:checked + label:before {
-  border-color: #607d8b;
+  border-color: #607d8b !important;
 }
 .blue-grey.radio label:after {
-  background: #607d8b;
+  background: #607d8b !important;
 }
+.blue-grey.switch {
+  background: transparent !important;
+}
+.blue-grey.switch > input:checked ~ span:before {
+  background: rgba(96, 125, 139, 0.5) !important;
+}
+.blue-grey.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #607d8b !important;
+  border-color: #607d8b !important;
+}
+
 
 .appbar {
   width: 100%;
