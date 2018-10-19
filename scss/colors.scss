@@ -335,46 +335,64 @@ $colors: (
 
 @mixin colorClass($name) {
   &.outline {
-    color: color($name);
+    color: color($name) !important;
     background: transparent !important;
     border: color($name) 1px solid !important;
     &:hover {
-      color: #fff;
+      color: #fff !important;
       background: color($name) !important;
     }
   }
 
   &.text {
     background: transparent !important;
-    color: color($name);
+    color: color($name) !important;
   }
 
   &.checkbox {
     background: transparent !important;
     > input {
       &:checked {
-        background: color($name);
+        background: color($name) !important;
         & + span::before {
-          border-color: color($name);
-          background: color($name);
+          border-color: color($name) !important;
+          background: color($name) !important;
         }
       }
       &:active {
         & + span::before {
-          border-color: color($name);
+          border-color: color($name) !important;
         }
       }
     }
   }
-  
+
   &.radio {
     background: transparent !important;
     input[type="radio"]:checked + label:before {
-      border-color: color($name);
+      border-color: color($name) !important;
     }
     label {
       &:after {
-        background: color($name);
+        background: color($name) !important;
+      }
+    }
+  }
+
+  &.switch {
+    background: transparent !important;
+    > input {
+      &:checked {
+        & ~ span {
+          &:before {
+            background: color($name, 0.5) !important;
+          }
+          &:after {
+            left: 15px;
+            background: color($name) !important;
+            border-color: color($name) !important;
+          }
+        }
       }
     }
   }
