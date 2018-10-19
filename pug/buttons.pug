@@ -19,7 +19,7 @@ html(lang='en')
           h3 Outline Buttons
           - var outlines = ['green', 'grey', 'blue', 'red', 'yellow', 'purple ripple', 'pink'];
           each outline in outlines
-            button(class='btn outline '+outline)
+            button(class='btn outline '+outline)=outline + ' button'
           hr
           
           h3 Text Buttons
