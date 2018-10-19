@@ -5,31 +5,25 @@ html(lang='en')
     include /includes/head.pug
       body
           h3 Buttons
-          - var colors = ['basic', 'earth', 'night', 'ocean', 'red wave', 'yellow', 'pink', 'snow'];
+          - var colors = ['basic', 'green', 'grey', 'blue', 'red wave', 'yellow', 'pink', 'white'];
           each color in colors
             button(class='btn '+color)=color + ' button'
           hr
             
           h3 Input Submit Buttons
-          - var submit_btns = ['earth', 'red', 'gradient ocean', 'gradient pink'];
+          - var submit_btns = ['green', 'red', 'blue', 'pink'];
           each cls in submit_btns
             input(class='btn '+cls type="submit" value="Input Submit")
           hr
           
-          h3 Gradient Buttons
-          - var grad_btns = ['earth', 'night', 'ocean', 'red', 'yellow ripple', 'purple wave', 'pink ripple'];
-          each grad in grad_btns
-            button(class='btn gradient '+grad)= grad + ' gradient'
-          hr
-          
           h3 Outline Buttons
-          - var outlines = ['earth', 'night', 'ocean', 'red', 'yellow', 'purple ripple', 'pink'];
+          - var outlines = ['green', 'grey', 'blue', 'red', 'yellow', 'purple ripple', 'pink'];
           each outline in outlines
-            button(class='btn outline '+outline)=outline + ' button'
+            button(class='btn outline '+outline)
           hr
           
           h3 Text Buttons
-          button.btn.ocean.wave.text Explore 
+          button.btn.blue.wave.text Explore 
           button.btn.purple.ripple.text
             i.material-icons search
             | search
@@ -39,10 +33,10 @@ html(lang='en')
           button.btn.red
             i.material-icons favorite
             | Favorite
-          button.btn.ocean.ripple
+          button.btn.blue.ripple
             i.material-icons cloud_download
             | Download
-          button.btn.earth
+          button.btn.green
             i.material-icons cloud_upload
             | Upload
           button.btn.gradient.red.wave
@@ -55,7 +49,7 @@ html(lang='en')
           button.btn.red
             i.material-icons(ani='left') arrow_back
             | &nbsp;Back
-          button.btn.earth Next&nbsp;
+          button.btn.green Next&nbsp;
             i.material-icons(ani='right') arrow_forward
           button.btn.wave Reload&nbsp;
             i.material-icons(ani='rotate') refresh
@@ -63,7 +57,7 @@ html(lang='en')
           button.btn.red
             i.material-icons(move='left') arrow_back
             | &nbsp;Back
-          button.btn.earth Next&nbsp;
+          button.btn.green Next&nbsp;
             i.material-icons(move='right') arrow_forward
           button.btn.wave Reload&nbsp;
             i.material-icons(move='rotate') refresh
@@ -72,10 +66,10 @@ html(lang='en')
           h3 FAB Buttons
           - 
             var fabs = {
-              'cloud_upload':'ocean',
+              'cloud_upload':'blue',
               'email':'red ripple',
-              'shopping_basket':'night ripple',
-              'add_circle':'earth', 
+              'shopping_basket':'grey ripple',
+              'add_circle':'green', 
               'loyalty':'purple ripple',
               'done':'pink',
             };
