@@ -2347,10 +2347,6 @@
   .appbar > div > section.right {
     width: 40%;
   }
-  .appbar > div > section > button {
-    width: 30px;
-    height: 30px;
-  }
 }
 .badge[data-badge] {
   position: relative;
