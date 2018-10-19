@@ -337,7 +337,7 @@ $colors: (
   &.outline {
     color: color($name);
     background: transparent !important;
-    border: color($name) 1px solid;
+    border: color($name) 1px solid !important;
     &:hover {
       color: #fff;
       background: color($name) !important;
