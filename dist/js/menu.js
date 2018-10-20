@@ -44,9 +44,9 @@ function menu() {
 
     document.addEventListener("click", clickOutSide, true);
     /*When window size change reposition menu*/
-    window.onresize = function() {
-       setPosition();
-    };
+    addEvent(window, "resize", function(){
+      setPosition();
+    });
 
     function clickOutSide(event) {
       clickTimes++;
@@ -61,7 +61,6 @@ function menu() {
       $removeClass(targetMenu, "pullDown");
       $removeClass(targetMenu, "pullUp");
       document.removeEventListener("click", clickOutSide, true);
-      window.onresize = null;
       return;
     }
   }
@@ -110,4 +109,15 @@ function $removeClass(el, className) {
     var reg = new RegExp('(\\s|^)' + className + '(\\s|$)')
     el.className=el.className.replace(reg, ' ')
   }
+}
+
+function addEvent(object, type, callback) {
+    if (object == null || typeof(object) == 'undefined') return;
+    if (object.addEventListener) {
+        object.addEventListener(type, callback, false);
+    } else if (object.attachEvent) {
+        object.attachEvent("on" + type, callback);
+    } else {
+        object["on"+type] = callback;
+    }
 }
