@@ -1,40 +1,65 @@
+*:hover,
+*:focus {
+  outline: none;
+}
+
 .appbar {
   width: 100%;
   height: 65px;
-  text-indent: 10px;
-  line-height: 65px;
+  line-height: 60px;
   overflow: hidden;
-  color: #222;
+  color: #000;
 }
-
-.appbar.raised {
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
-}
-
 .appbar > div {
   width: 95%;
   margin: 0 auto;
   height: 100%;
 }
-
 .appbar > div > section {
   display: inline-block;
 }
-
+.appbar > div > section > a {
+  min-width: 50px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0px 8px 0px 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 5px;
+  font-family: "Roboto", san-serif;
+}
+.appbar > div > section > a.icon {
+  text-transform: none;
+  width: 50px;
+  height: 50px;
+  padding: 0px;
+  margin: 0;
+  text-align: center;
+  border-radius: 50%;
+}
+.appbar > div > section > a.icon > i {
+  font-size: 24px;
+  position: relative;
+  top: .5em;
+}
 .appbar > div > section.left {
-  width: 200px;
+  width: auto;
   height: 100%;
-  display: inline-block;
+  display: flex;
   float: left;
+  align-items: center;
+  justify-content: initial;
+  overflow: hidden;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
-.appbar > div > section.left > label {
+.appbar > div > section.left > .title {
   margin-left: 10px;
 }
-
 .appbar > div > section.right {
   width: auto;
   height: 100%;
@@ -44,30 +69,20 @@
   justify-content: flex-end;
   overflow: hidden;
 }
-
-.appbar > div > section > label {
+.appbar > div > section > .title {
   font-size: 16px;
   color: inherit;
   vertical-align: middle;
   font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
 }
-
 .appbar > div > section > button {
+  margin-top: 0px;
   color: inherit;
+  margin-left: 5px;
 }
-
 .appbar > div > section > button > i {
   vertical-align: middle;
 }
-
-@media screen and (max-width: 500px) {
-  .appbar > div {
-    width: 100%;
-  }
-  .appbar > div > section.left {
-    width: 45%;
-  }
-  .appbar > div > section.right {
-    width: 40%;
-  }
+.appbar > div > section > button[open-menu="nesting"] {
+  display: none;
 }
