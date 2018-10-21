@@ -27,66 +27,45 @@
       </section>
     </div>
   </header>
-  
+
   <br/><br/><br/>
-  
+
   <h3>Appbar</h3>
-  <header class="appbar cyan z-1">
+  <header class="appbar blue z-1">
     <div class="wrap">
       <section class="left">
-        <button class="btn round wave text">
-        <i class="material-icons">menu</i>
-      </button>
-        <label>San Francisco</label>
+        <a class="wave icon"><i class="material-icons">menu</i></a>
+        <label class="title">San Francisco</label>
       </section>
       <section class="right">
-        <button class="btn ocean wave text">
-          Activity
-       </button>
-        <button class="btn round wave text">
-        <i class="material-icons">cloud_queue</i>
-       </button>
-        <button class="btn round wave text">
-        <i class="material-icons">notifications_none</i>
-       </button>
-      </section>
-    </div>
-  </header>
-  <br/><br/><br/>
-  <h3>Appbar with menu</h3>
-    <header class="appbar orange z-1">
-    <div class="wrap">
-      <section class="left">
-        <button class="btn round wave text">
-        <i class="material-icons">menu</i>
-      </button>
-        <label>San Francisco</label>
-      </section>
-      <section class="right">
-        <button class="btn round wave text">
-        <i class="material-icons">cloud_queue</i>
-      </button>
-        <button class="btn round wave text">
-        <i class="material-icons">notifications_none</i>
-      </button>
-       <button class="btn wave ocean">
-          Login
-       </button>
-       <button open-menu="menu" class="btn round wave text">
-        <i class="material-icons">more_vert</i>
-      </button>
+        <a class="wave">Dashboard</a>
+        <a class="wave">favorite</a>
+        <a class="wave">Account</a>
       </section>
     </div>
   </header>
 
-  <ul id="menu" class="menu right">
-    <li><a href="#">Help</a></li>
-    <li><a href="#">Feedback</a></li>
-    <hr>
-    <li><a href="#">Settings</a></li>
-  </ul>
-  
+  <header class="appbar teal nesting z-1">
+    <div class="wrap">
+      <section class="left">
+        <a class="wave icon"><i class="material-icons">menu</i></a>
+        <label class="title">San Francisco</label>
+      </section>
+      <section class="right">
+        <a class="nest wave icon" title="Notifications"><i class="material-icons">notifications_none</i></a>
+        <a class="nest wave">Dashboard</a>
+        <a class="nest wave">favorite</a>
+        <a class="nest wave">Account</a>
+        <a class="wave icon" open-menu="nesting"><i class="material-icons">more_vert</i></a>
+      </section>
+    </div>
+  </header>
+
+  <ul id="nesting" class="menu right"></ul>
+
   <script src="https://rawgit.com/Matericious/Matericious/master/dist/js/menu.js"></script>
+  <script src="https://rawgit.com/Matericious/Matericious/master/dist/js/appbar.js"></script>
+
 </body>
 
 </html>
