@@ -28,7 +28,6 @@
 .text-field > input,
 .text-field textarea {
   width: 100%;
-  max-width: 100%;
   height: 56px;
   border: none;
   border-bottom: 2px solid #8e8e8f;
@@ -49,22 +48,22 @@
   border-bottom: none;
   background: #e5e5e5;
 }
-.text-field > input:focus ~ label,
-.text-field textarea:focus ~ label {
+.text-field > input:focus ~ .floating-label,
+.text-field textarea:focus ~ .floating-label {
   color: #6200ee;
 }
 .text-field > input:focus ~ .line-ripple,
 .text-field textarea:focus ~ .line-ripple {
   transform: scaleX(1);
 }
-.text-field > input:focus ~ label, .text-field > input:not(:placeholder-shown) ~ label,
-.text-field textarea:focus ~ label,
-.text-field textarea:not(:placeholder-shown) ~ label {
+.text-field > input:focus ~ .floating-label, .text-field > input:not(:placeholder-shown) ~ .floating-label,
+.text-field textarea:focus ~ .floating-label,
+.text-field textarea:not(:placeholder-shown) ~ .floating-label {
   top: 8px;
   font-size: 12px;
   will-change: top, font-size, color;
 }
-.text-field > label {
+.text-field > .floating-label {
   font-size: 16px;
   position: absolute;
   top: 16px;
@@ -74,10 +73,10 @@
   transition: top 0.18s cubic-bezier(0.4, 0, 0.2, 1), font-size 0.18s cubic-bezier(0.4, 0, 0.2, 1);
   clear: both;
 }
-.text-field > label:first-letter {
+.text-field > .floating-label:first-letter {
   text-transform: capitalize;
 }
-.text-field > p {
+.text-field > .helper {
   font-size: 12px;
   height: 16px;
   padding: 0 12px;
@@ -89,7 +88,7 @@
   position: absolute;
   bottom: -20px;
 }
-.text-field.basic > label {
+.text-field.basic > .floating-label {
   top: 16px;
   left: 0px;
 }
@@ -100,7 +99,10 @@
 .text-field.basic > input:hover, .text-field.basic > input:focus {
   background: transparent;
 }
-.text-field.outlined > label {
+.text-field.basic > .helper {
+  padding: 0 0px;
+}
+.text-field.outlined > .floating-label {
   transition: all 0.1s;
 }
 .text-field.outlined > input, .text-field.outlined textarea {
@@ -118,7 +120,7 @@
   background: transparent;
   border: 2px solid #6200ee;
 }
-.text-field.outlined > input:focus ~ label, .text-field.outlined > input:not(:placeholder-shown) ~ label {
+.text-field.outlined > input:focus ~ .floating-label, .text-field.outlined > input:not(:placeholder-shown) ~ .floating-label {
   top: -7px;
   left: 10px;
   font-size: 12px;
@@ -141,7 +143,7 @@
 .text-field .lead ~ input, .text-field .lead ~ textarea {
   padding-left: 45px !important;
 }
-.text-field .lead ~ label {
+.text-field .lead ~ .floating-label {
   left: 45px;
 }
 .text-field .trail {
