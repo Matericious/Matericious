@@ -10,18 +10,70 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://rawgit.com/Matericious/Matericious/master/dist/css/input.css">
+  <style>
+    .text-field {
+      width: 400px;
+    }
+  </style>
 </head>
 
 <body>
-  <div class="input purple">
-    <input required="required" />
-    <label>Label</label>
-  </div><span>error</span><br/><br/>
+  <h3>Basic Input</h3>
+  <div class="text-field basic">
+    <input placeholder=" " />
+    <label>Email Address</label>
+    <hr class="line-ripple" />
+  </div>
+  <br/>
+  <h3>Basic Input with lead icon</h3>
+  <div class="text-field basic">
+    <i class="material-icons lead">mail</i>
+    <input placeholder=" " />
+    <label>Email Address</label>
+    <hr class="line-ripple" />
+  </div>
+  <br/>
+  <hr/>
+  <h3>Fill Input</h3>
+  <div class="text-field">
+    <input placeholder=" " />
+    <label>Email Address</label>
+    <hr class="line-ripple" />
+  </div>
+  <br/>
+  <h3>Fill Input with lead icon</h3>
+  <div class="text-field">
+    <i class="material-icons lead">mail</i>
+    <input placeholder=" " />
+    <label>Email Address</label>
+    <hr class="line-ripple" />
+  </div>
+ 
+  <br/>
+  <h3>Fill Input with trail icon</h3>
+  <div class="text-field">
+    <i class="material-icons trail">mail</i>
+    <input placeholder=" " />
+    <label>Email Address</label>
+    <hr class="line-ripple" />
+  </div>
   
-  <div class="input red">
-    <input required="required" />
-    <label>Label</label>
-  </div><span>error</span>
+  <br/>
+  <hr/>
+  <h3>Outlined Input</h3>
+  <div class="text-field outlined">
+    <i class="material-icons lead">mail</i>
+    <input placeholder=" " />
+    <label>Email Address</label>
+    <hr class="line-ripple" />
+  </div>
+  <br/>
+  <h3>Outlined Input - Textarea</h3>
+  <div class="text-field outlined">
+    <i class="material-icons lead">mail</i>
+    <textarea placeholder=" "></textarea>
+    <label>Email Address</label>
+  </div>
 </body>
 
 </html>
