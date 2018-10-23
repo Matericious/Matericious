@@ -46,7 +46,7 @@
     }
   }
 }
-
+/*
 @mixin colorClass($name, $tag){
      background: color($name, .7);
       &::-webkit-slider-thumb{
@@ -56,4 +56,4 @@
 
 $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink", "cyan";
 
-@include build-color-class(".range", $color_vars);
+@include build-color-class(".range", $color_vars);*/
