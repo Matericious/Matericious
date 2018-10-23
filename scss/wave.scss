@@ -30,7 +30,7 @@
     }
   }
 }
-
+/*
 $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
 @mixin colorClass($name, $tag) {
   &.text {
@@ -45,3 +45,4 @@ $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink
 }
 
 @include build-color-class(".wave", $color_vars);
+*/
