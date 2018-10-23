@@ -4,21 +4,24 @@ const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 
-gulp.task('compile', function () {
+gulp.task('compile', function (cb) {
   return gulp.src('./scss/*.scss')
-    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'expanded' })
+      .on('error', function (err) { cb(err); }))
     .pipe(gulp.dest('./dist/css/'));
 });
 
-gulp.task('mincss', function () {
+gulp.task('mincss', function (cb) {
   return gulp.src('./scss/matericious.scss')
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'compressed' })
+      .on('error', function (err) { cb(err); }))
     .pipe(rename('matericious.min.css'))
     .pipe(gulp.dest('./dist/css/'));
 });
-gulp.task('combinecss', function () {
+gulp.task('combinecss', function (cb) {
   return gulp.src('./scss/matericious.scss')
-    .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'expanded' })
+      .on('error', function (err) { cb(err); }))
     .pipe(rename('matericious.css'))
     .pipe(gulp.dest('./dist/css/'));
 });
