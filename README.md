@@ -15,5 +15,8 @@
     <a href="https://david-dm.org/matericious/matericious?type=dev">
       <img alt="devdep" src="https://david-dm.org/matericious/matericious/dev-status.svg">
     </a>
+    <a href="https://travis-ci.org/Matericious/Matericious">
+      <img alt="devdep" src="https://travis-ci.org/Matericious/Matericious.svg?branch=master">
+    </a>
   </p>
 </p>
