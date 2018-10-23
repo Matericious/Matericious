@@ -79,7 +79,7 @@ a{
     }
   }
 }
-
+/*
 @mixin colorClass($name, $tag) {
   background: color($name);
   &.outline{
@@ -121,4 +121,4 @@ a{
 }
 
 $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
-@include build-color-class(".chips", $color_vars);
+@include build-color-class(".chips", $color_vars);*/
