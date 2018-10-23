@@ -46,5 +46,5 @@ gulp.task('combinejs', function () {
     .pipe(gulp.dest('./dist/js/'));
 });
 
-gulp.task('js', ['combinejs', 'minjs']);
-gulp.task('css', ['compile', 'combinecss', 'mincss']);
+gulp.task('js', gulp.series(['combinejs', 'minjs']));
+gulp.task('css', gulp.series(['compile', 'combinecss', 'mincss']));
