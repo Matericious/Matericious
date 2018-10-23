@@ -14,7 +14,7 @@ a{
 }
 
 .chips {
-  background: color('basic', .6);
+  background: color('grey', .6);
   padding: 8px;
   border-radius: 30px;
   font-size: 14px;
@@ -27,16 +27,16 @@ a{
   text-decoration: none;
   overflow: hidden;
   &:hover{
-    background: color('basic', 1);
+    background: color('grey', 1);
   }
   &.raised{
      box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
   }
   &.outline{
     background: transparent;
-    border: 1px solid color('basic');
+    border: 1px solid color('grey');
     &:hover{
-      background: color('basic');
+      background: color('grey');
       color: color('dark');
     }
   }
@@ -79,46 +79,46 @@ a{
     }
   }
 }
-/*
-@mixin colorClass($name, $tag) {
-  background: color($name);
-  &.outline{
-    background: transparent;
-    color: color($name);
-    border-color: color($name);
-    &:hover{
-      background: color($name);
-      color: color('light');
-    }
-  }
-  @if $name == "night"{
-    > .close{
-       @include closeBtnColor('light', .4);
-    }
-  }
-  @if $name == "snow" {
-    color: color('dark', 0.8);
-    > i {
-      color: color('dark');
-    }
-  } @else if $name == "yellow" {
-    color: color('dark', 0.8);
-    > i {
-      color: color('dark');
-      &.close{
-         @include closeBtnColor('dark', .6);
-      }
-    }
-  } @else {
-    color: color('light', 0.8);
-    > i:nth-child(1) {
-      color: color('light');
-      &.close{
-         @include closeBtnColor('dark', .4);
-      }
-    }
-  }
-}
 
-$color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
-@include build-color-class(".chips", $color_vars);*/
+// @mixin colorClass($name, $tag) {
+//   background: color($name);
+//   &.outline{
+//     background: transparent;
+//     color: color($name);
+//     border-color: color($name);
+//     &:hover{
+//       background: color($name);
+//       color: color('white');
+//     }
+//   }
+//   @if $name == "night"{
+//     > .close{
+//        @include closeBtnColor('white', .4);
+//     }
+//   }
+//   @if $name == "snow" {
+//     color: color('dark', 0.8);
+//     > i {
+//       color: color('dark');
+//     }
+//   } @else if $name == "yellow" {
+//     color: color('dark', 0.8);
+//     > i {
+//       color: color('dark');
+//       &.close{
+//          @include closeBtnColor('dark', .6);
+//       }
+//     }
+//   } @else {
+//     color: color('white', 0.8);
+//     > i:nth-child(1) {
+//       color: color('white');
+//       &.close{
+//          @include closeBtnColor('dark', .4);
+//       }
+//     }
+//   }
+// }
+
+// $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
+// @include build-color-class(".chips", $color_vars);

@@ -67,7 +67,7 @@ modal-con {
     height: $modal-height;
     max-width: $modal-maxWidth;
     color: color('dark');
-    background: color('light', .9);
+    background: color('white', .9);
     line-height: normal;
     position: fixed;
     margin: auto;
@@ -225,10 +225,10 @@ modal-con {
       background: color('dark');
       > header,
       > main{
-         color: color('light', .7);
+         color: color('white', .7);
       }
       &.medium{
-        color: color('light');
+        color: color('white');
       }
     }
   }
@@ -247,7 +247,7 @@ modal-con {
     pointer-events: auto;
     background: color('dark', .6);
     &.light{
-      background: color('light', .6);
+      background: color('white', .6);
     }
   }
 
@@ -351,10 +351,8 @@ modal-con {
   }
 }
 
-
-$color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
-@include build-color-class(modal, $color_vars);
-@include build-color-class(modal-con, $color_vars);
+//$color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
+//@include build-color-class($color_vars);
  
 modal-con {
   &.fadeIn {

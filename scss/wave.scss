@@ -30,19 +30,18 @@
     }
   }
 }
-/*
-$color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
-@mixin colorClass($name, $tag) {
-  &.text {
-    &:after {
-      background-image: radial-gradient(
-        circle,
-        color($name) 10%,
-        transparent 10.01%
-      );
-    }
-  }
-}
 
-@include build-color-class(".wave", $color_vars);
-*/
+// $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
+// @mixin colorClass($name, $tag) {
+//   &.text {
+//     &:after {
+//       background-image: radial-gradient(
+//         circle,
+//         color($name) 10%,
+//         transparent 10.01%
+//       );
+//     }
+//   }
+// }
+
+// @include build-color-class(".wave", $color_vars);

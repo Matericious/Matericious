@@ -48,17 +48,17 @@
     z-index: -1;
   }
 }
-/*
-@mixin colorClass($name, $tag) {
-  > input{
-    &:hover, &:focus{
-       border-color: color($name);
-      & ~ label{
-        color: color($name);
-      }
-    }
-  }
-}
 
-$color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
-@include build-color-class(".input", $color_vars);*/
+// @mixin colorClass($name, $tag) {
+//   > input{
+//     &:hover, &:focus{
+//        border-color: color($name);
+//       & ~ label{
+//         color: color($name);
+//       }
+//     }
+//   }
+// }
+
+// $color_vars: "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
+// @include build-color-class(".input", $color_vars);
