@@ -88,6 +88,12 @@
       }
     }
   }
+  
+  &.text {
+    > .rippleWave {
+      background: color($name, base, 0.5) !important;
+    }
+  }
 }
 
 $color_vars: white, red, pink, purple, indigo, blue, cyan, teal, green, lime, yellow, amber, orange, brown, grey, blue-grey;
