@@ -307,6 +307,12 @@ $colors: (
       4: #263238
     )
   ),
+  black: (
+    base: #000000
+  ),
+  white: (
+    base: #FFFFFF
+  ),
 );
 
 @each $name, $sets in $colors {
