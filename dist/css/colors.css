@@ -1,4 +1,3 @@
-/**/
 .red {
   background: #F44336 !important;
 }
@@ -1584,6 +1583,12 @@
 .white.text > .rippleWave {
   background: #FFFFFF !important;
 }
+.white.range {
+  background: #FFFFFF;
+}
+.white.range::-webkit-slider-thumb {
+  background: #FFFFFF;
+}
 
 .red.outline {
   color: #F44336 !important;
@@ -1633,6 +1638,12 @@
 }
 .red.text > .rippleWave {
   background: #F44336 !important;
+}
+.red.range {
+  background: #F44336;
+}
+.red.range::-webkit-slider-thumb {
+  background: #F44336;
 }
 
 .pink.outline {
@@ -1684,6 +1695,12 @@
 .pink.text > .rippleWave {
   background: #E91E63 !important;
 }
+.pink.range {
+  background: #E91E63;
+}
+.pink.range::-webkit-slider-thumb {
+  background: #E91E63;
+}
 
 .purple.outline {
   color: #9C27B0 !important;
@@ -1733,6 +1750,12 @@
 }
 .purple.text > .rippleWave {
   background: #9C27B0 !important;
+}
+.purple.range {
+  background: #9C27B0;
+}
+.purple.range::-webkit-slider-thumb {
+  background: #9C27B0;
 }
 
 .indigo.outline {
@@ -1784,6 +1807,12 @@
 .indigo.text > .rippleWave {
   background: #3F51B5 !important;
 }
+.indigo.range {
+  background: #3F51B5;
+}
+.indigo.range::-webkit-slider-thumb {
+  background: #3F51B5;
+}
 
 .blue.outline {
   color: #2196F3 !important;
@@ -1833,6 +1862,12 @@
 }
 .blue.text > .rippleWave {
   background: #2196F3 !important;
+}
+.blue.range {
+  background: #2196F3;
+}
+.blue.range::-webkit-slider-thumb {
+  background: #2196F3;
 }
 
 .cyan.outline {
@@ -1884,6 +1919,12 @@
 .cyan.text > .rippleWave {
   background: #00BCD4 !important;
 }
+.cyan.range {
+  background: #00BCD4;
+}
+.cyan.range::-webkit-slider-thumb {
+  background: #00BCD4;
+}
 
 .teal.outline {
   color: #009688 !important;
@@ -1933,6 +1974,12 @@
 }
 .teal.text > .rippleWave {
   background: #009688 !important;
+}
+.teal.range {
+  background: #009688;
+}
+.teal.range::-webkit-slider-thumb {
+  background: #009688;
 }
 
 .green.outline {
@@ -1984,6 +2031,12 @@
 .green.text > .rippleWave {
   background: #4CAF50 !important;
 }
+.green.range {
+  background: #4CAF50;
+}
+.green.range::-webkit-slider-thumb {
+  background: #4CAF50;
+}
 
 .lime.outline {
   color: #CDDC39 !important;
@@ -2033,6 +2086,12 @@
 }
 .lime.text > .rippleWave {
   background: #CDDC39 !important;
+}
+.lime.range {
+  background: #CDDC39;
+}
+.lime.range::-webkit-slider-thumb {
+  background: #CDDC39;
 }
 
 .yellow.outline {
@@ -2084,6 +2143,12 @@
 .yellow.text > .rippleWave {
   background: #FFEB3B !important;
 }
+.yellow.range {
+  background: #FFEB3B;
+}
+.yellow.range::-webkit-slider-thumb {
+  background: #FFEB3B;
+}
 
 .amber.outline {
   color: #FFC107 !important;
@@ -2133,6 +2198,12 @@
 }
 .amber.text > .rippleWave {
   background: #FFC107 !important;
+}
+.amber.range {
+  background: #FFC107;
+}
+.amber.range::-webkit-slider-thumb {
+  background: #FFC107;
 }
 
 .orange.outline {
@@ -2184,6 +2255,12 @@
 .orange.text > .rippleWave {
   background: #FF9800 !important;
 }
+.orange.range {
+  background: #FF9800;
+}
+.orange.range::-webkit-slider-thumb {
+  background: #FF9800;
+}
 
 .brown.outline {
   color: #795548 !important;
@@ -2233,6 +2310,12 @@
 }
 .brown.text > .rippleWave {
   background: #795548 !important;
+}
+.brown.range {
+  background: #795548;
+}
+.brown.range::-webkit-slider-thumb {
+  background: #795548;
 }
 
 .grey.outline {
@@ -2284,6 +2367,12 @@
 .grey.text > .rippleWave {
   background: #9E9E9E !important;
 }
+.grey.range {
+  background: #9E9E9E;
+}
+.grey.range::-webkit-slider-thumb {
+  background: #9E9E9E;
+}
 
 .blue-grey.outline {
   color: #607D8B !important;
@@ -2333,4 +2422,10 @@
 }
 .blue-grey.text > .rippleWave {
   background: #607D8B !important;
+}
+.blue-grey.range {
+  background: #607D8B;
+}
+.blue-grey.range::-webkit-slider-thumb {
+  background: #607D8B;
 }
