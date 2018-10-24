@@ -87,12 +87,17 @@
         }
       }
     }
-  }
-  
+  }  
   &.text {
     > .rippleWave {
       background: color($name, base, 0.5) !important;
     }
+  }
+  &.range{
+    background: color($name, base, 0.7);
+      &::-webkit-slider-thumb{
+          background: color($name, base);
+      }
   }
 }
 
