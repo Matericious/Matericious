@@ -1,6 +1,7 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
+
 @each $name, $sets in $colors {
   @each $type, $set in $sets {
     @if($type == 'base') {
@@ -10,7 +11,8 @@
       .text-#{$name} {
         color: $set !important;
       }
-    } @else {
+    }
+    @else{
       @each $key, $value in $set {
         .#{$name}-#{$type}-#{$key} {
           background: $value !important;
@@ -90,4 +92,4 @@
 
 $color_vars: white, red, pink, purple, indigo, blue, cyan, teal, green, lime, yellow, amber, orange, brown, grey, blue-grey;
 
-//@include build-color-class($color_vars);
+ @include build-color-class($color_vars);
