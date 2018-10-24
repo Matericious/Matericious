@@ -31,11 +31,17 @@
   }
 }
 
-@function color($name, $rgb: null) {
-  @if variable-exists(rgb) and $rgb != null {
-    @return rgba(map-get($base-colors, $name), $rgb);
+@function color($name, $type:null, $val:null) {
+  $type-list: map-get($colors, $name);
+  $type-list-keys: map-get($type-list, $type);
+  @if variable-exists(type) and $type !=null and $type !=base {
+    @if map-has-key($type-list, $type) and $val==null {
+      @return map-get($type-list-keys, 1);
+    } @else {
+      @return map-get($type-list-keys, $val);
+    }
   } @else {
-    @return map-get($base-colors, $name);
+    @return map-get($type-list, base);
   }
 }
 
