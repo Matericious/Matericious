@@ -12,7 +12,7 @@ $gap: 10px;
   input[type="radio"] {
     display: none;
     &:checked + label:before {
-      border-color: color('cyan');
+      border-color: color(cyan);
     }
     &:checked + label:after {
       transform: scale(1);
@@ -39,7 +39,7 @@ $gap: 10px;
       top: 0;
       width: $radio-size;
       height: $radio-size;
-      border: 2px solid rgba(#000, 0.54)
+      border: 2px solid rgba(color(black), 0.54)
     }
     &:after {
       box-sizing: border-box;
@@ -48,7 +48,7 @@ $gap: 10px;
       width: $gap;
       height: $gap;
       transform: scale(0);
-      background: color('cyan');
+      background: color(cyan);
     }
   }
 }

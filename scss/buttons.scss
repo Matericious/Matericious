@@ -1,15 +1,14 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
-
 .btn {
   margin-top: 5px;
   padding: 12px 20px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  background: color('blue');
-  color: color('white');
+  background: color(blue);
+  color: color(white);
   border: 0px;
   border-radius: 6px;
   font-size: 12px;
@@ -77,9 +76,9 @@
   }
   &.outline {
     background: transparent;
-    border: color('blue') 1px solid;
+    border: color(blue) 1px solid;
     color: #222;
-    @include hoverColor(color('blue'), color('dark'));
+    @include hoverColor(color(blue), color(grey, dark, 3));
   }
   &.text{
     background: transparent;
@@ -102,7 +101,7 @@
     content: "";
     width: 30px;
     height: 30px;
-    background: rgba(#2196f3, 0.8);
+    background: rgba(color(blue), 0.8);
     border-radius: 50%;
     margin: -6px -5.5px;
     display: inline-block;
@@ -119,7 +118,7 @@
   text-decoration: none;
   background: transparent;
   box-shadow: none;
-  color: #222;
+  color: color(grey, dark, 3);
   font-size: 14px;
   font-weight: bold;
   line-height: 1.3;

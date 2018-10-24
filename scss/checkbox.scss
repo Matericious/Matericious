@@ -8,7 +8,7 @@ $checkbox-size: 14px;
 .checkbox {
   position: relative;
   display: inline-block;
-  color: color('black');
+  color: color(black);
   line-height: 18px;
   cursor: pointer;
   font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
@@ -31,34 +31,34 @@ $checkbox-size: 14px;
    -moz-appearance: none;
    -webkit-appearance: none;
     &:checked {
-      background: color('blue');
+      background: color(blue);
       & + span::after{
-        border-color: #fff;
+        border-color: color(white);
       }
       & + span::before {
-        border-color: color('blue');
-        background: color('blue');
+        border-color: color(blue);
+        background: color(blue);
       }
       &:disabled{
         & + span::before{
           border-color: transparent;
-          background: rgba(0, 0, 0, 0.26);
+          background: rgba(color(black), 0.26);
         }
       }
     }
     &:disabled {
       opacity: 0;
       & + span {
-        color: rgba(0, 0, 0, 0.38);
+        color: rgba(color(black), 0.38);
         cursor: initial;
         &::before{
-          border-color: rgba(0, 0, 0, 0.26);
+          border-color: rgba(color(black), 0.26);
         }
       }
     }
     &:active{
       & + span::before{
-        border-color: color('blue');
+        border-color: color(blue);
       }
     }
   }
@@ -70,7 +70,7 @@ $checkbox-size: 14px;
       display: inline-block;
       border-radius: 2px;
       margin-right: 15px;
-      border: solid 2px rgba(0, 0, 0, 0.42);
+      border: solid 2px rgba(color(black), 0.42);
       vertical-align: middle;
       transition: border-color 0.5s, background 0.5s;
     }
