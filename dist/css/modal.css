@@ -34,24 +34,26 @@
   height: 56px;
   border: none;
   border-bottom: 2px solid #8e8e8f;
-  padding: 20px 12px 4px 12px;
+  padding: 20px 0px 4px 2px;
   vertical-align: center;
   border-radius: 4px 4px 0 0;
   outline: none;
   font-size: 16px;
   box-sizing: border-box;
   transition: background 0.5s;
+  background: transparent;
+  padding-left: 0px;
 }
 
-.text-field > input:hover,
-.text-field textarea:hover {
-  background: #e5e5e5;
+.text-field > input:hover, .text-field > input:focus,
+.text-field textarea:hover,
+.text-field textarea:focus {
+  background: transparent;
 }
 
 .text-field > input:focus,
 .text-field textarea:focus {
   border-bottom: none;
-  background: #e5e5e5;
 }
 
 .text-field > input:focus ~ .floating-label,
@@ -76,7 +78,7 @@
   font-size: 16px;
   position: absolute;
   top: 16px;
-  left: 12px;
+  left: 0px;
   pointer-events: none;
   color: rgba(0, 0, 0, 0.54);
   transition: top 0.18s cubic-bezier(0.4, 0, 0.2, 1), font-size 0.18s cubic-bezier(0.4, 0, 0.2, 1);
@@ -90,7 +92,6 @@
 .text-field > .helper {
   font-size: 12px;
   height: 16px;
-  padding: 0 12px;
   color: #666666;
   margin: 0;
   display: flex;
@@ -98,24 +99,24 @@
   justify-content: flex-end;
   position: absolute;
   bottom: -20px;
-}
-
-.text-field.basic > .floating-label {
-  top: 16px;
   left: 0px;
 }
 
-.text-field.basic > input {
-  background: transparent;
-  padding-left: 0px;
+.text-field.fill > .floating-label {
+  top: 16px;
+  left: 12px;
 }
 
-.text-field.basic > input:hover, .text-field.basic > input:focus {
-  background: transparent;
+.text-field.fill > input {
+  padding: 20px 12px 4px 12px;
 }
 
-.text-field.basic > .helper {
-  padding: 0 0px;
+.text-field.fill > input:hover {
+  background: #e5e5e5;
+}
+
+.text-field.fill > input:focus {
+  background: #e5e5e5;
 }
 
 .text-field.outlined > .floating-label {
@@ -172,6 +173,10 @@
   left: 45px;
 }
 
+.text-field .lead ~ .helper {
+  left: 20px;
+}
+
 .text-field .trail {
   position: absolute;
   top: 18px;
@@ -179,7 +184,16 @@
 }
 
 .text-field .trail ~ input {
+  padding-left: 8px;
   padding-right: 45px !important;
+}
+
+.text-field .trail ~ .floating-label {
+  left: 8px;
+}
+
+.text-field .trail ~ .helper {
+  left: 10px;
 }
 
 /*Modal size*/
