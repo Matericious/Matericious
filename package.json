@@ -1,0 +1,19 @@
+{
+  "name": "matericious-web",
+  "version": "1.0.0",
+  "description": "Delicious Material Framework",
+  "author": "Kascique Lowman, Shamshid",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Matericious/Matericious.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Matericious/Matericious/issues"
+  },
+  "homepage": "https://matericious.com",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-pug": "^4.0.1"
+  }
+}
