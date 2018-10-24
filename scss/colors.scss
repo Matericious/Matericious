@@ -23,36 +23,35 @@
   }
 }
 
-
 @mixin colorClass($name) {
   &.outline {
-    color: color($name) !important;
+    color: color($name, base) !important;
     background: transparent !important;
-    border: color($name) 1px solid !important;
+    border: color($name, base) 1px solid !important;
     &:hover {
       color: #fff !important;
-      background: color($name) !important;
+      background: color($name, base) !important;
     }
   }
 
   &.text {
     background: transparent !important;
-    color: color($name) !important;
+    color: color($name, base) !important;
   }
 
   &.checkbox {
     background: transparent !important;
     > input {
       &:checked {
-        background: color($name) !important;
+        background: color($name, base) !important;
         & + span::before {
-          border-color: color($name) !important;
-          background: color($name) !important;
+          border-color: color($name, base) !important;
+          background: color($name, base) !important;
         }
       }
       &:active {
         & + span::before {
-          border-color: color($name) !important;
+          border-color: color($name, base) !important;
         }
       }
     }
@@ -61,11 +60,11 @@
   &.radio {
     background: transparent !important;
     input[type="radio"]:checked + label:before {
-      border-color: color($name) !important;
+      border-color: color($name, base) !important;
     }
     label {
       &:after {
-        background: color($name) !important;
+        background: color($name, base) !important;
       }
     }
   }
@@ -76,12 +75,12 @@
       &:checked {
         & ~ span {
           &:before {
-            background: color($name, 0.5) !important;
+            background: color($name, base, 0.5) !important;
           }
           &:after {
             left: 15px;
-            background: color($name) !important;
-            border-color: color($name) !important;
+            background: color($name, base) !important;
+            border-color: color($name, base) !important;
           }
         }
       }
@@ -89,7 +88,6 @@
   }
 }
 
-$color_vars: "white", "red", "pink", "purple", "indigo", "blue", "cyan", "teal",
-  "green", "lime", "yellow", "amber", "orange", "brown", "grey", "blue-grey";
+$color_vars: white, red, pink, purple, indigo, blue, cyan, teal, green, lime, yellow, amber, orange, brown, grey, blue-grey;
 
-// @include build-color-class($color_vars);
+//@include build-color-class($color_vars);
