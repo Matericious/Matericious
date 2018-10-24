@@ -1581,6 +1581,9 @@
   background: #FFFFFF !important;
   border-color: #FFFFFF !important;
 }
+.white.text > .rippleWave {
+  background: #FFFFFF !important;
+}
 
 .red.outline {
   color: #F44336 !important;
@@ -1627,6 +1630,9 @@
   left: 15px;
   background: #F44336 !important;
   border-color: #F44336 !important;
+}
+.red.text > .rippleWave {
+  background: #F44336 !important;
 }
 
 .pink.outline {
@@ -1675,6 +1681,9 @@
   background: #E91E63 !important;
   border-color: #E91E63 !important;
 }
+.pink.text > .rippleWave {
+  background: #E91E63 !important;
+}
 
 .purple.outline {
   color: #9C27B0 !important;
@@ -1721,6 +1730,9 @@
   left: 15px;
   background: #9C27B0 !important;
   border-color: #9C27B0 !important;
+}
+.purple.text > .rippleWave {
+  background: #9C27B0 !important;
 }
 
 .indigo.outline {
@@ -1769,6 +1781,9 @@
   background: #3F51B5 !important;
   border-color: #3F51B5 !important;
 }
+.indigo.text > .rippleWave {
+  background: #3F51B5 !important;
+}
 
 .blue.outline {
   color: #2196F3 !important;
@@ -1815,6 +1830,9 @@
   left: 15px;
   background: #2196F3 !important;
   border-color: #2196F3 !important;
+}
+.blue.text > .rippleWave {
+  background: #2196F3 !important;
 }
 
 .cyan.outline {
@@ -1863,6 +1881,9 @@
   background: #00BCD4 !important;
   border-color: #00BCD4 !important;
 }
+.cyan.text > .rippleWave {
+  background: #00BCD4 !important;
+}
 
 .teal.outline {
   color: #009688 !important;
@@ -1909,6 +1930,9 @@
   left: 15px;
   background: #009688 !important;
   border-color: #009688 !important;
+}
+.teal.text > .rippleWave {
+  background: #009688 !important;
 }
 
 .green.outline {
@@ -1957,6 +1981,9 @@
   background: #4CAF50 !important;
   border-color: #4CAF50 !important;
 }
+.green.text > .rippleWave {
+  background: #4CAF50 !important;
+}
 
 .lime.outline {
   color: #CDDC39 !important;
@@ -2003,6 +2030,9 @@
   left: 15px;
   background: #CDDC39 !important;
   border-color: #CDDC39 !important;
+}
+.lime.text > .rippleWave {
+  background: #CDDC39 !important;
 }
 
 .yellow.outline {
@@ -2051,6 +2081,9 @@
   background: #FFEB3B !important;
   border-color: #FFEB3B !important;
 }
+.yellow.text > .rippleWave {
+  background: #FFEB3B !important;
+}
 
 .amber.outline {
   color: #FFC107 !important;
@@ -2097,6 +2130,9 @@
   left: 15px;
   background: #FFC107 !important;
   border-color: #FFC107 !important;
+}
+.amber.text > .rippleWave {
+  background: #FFC107 !important;
 }
 
 .orange.outline {
@@ -2145,6 +2181,9 @@
   background: #FF9800 !important;
   border-color: #FF9800 !important;
 }
+.orange.text > .rippleWave {
+  background: #FF9800 !important;
+}
 
 .brown.outline {
   color: #795548 !important;
@@ -2191,6 +2230,9 @@
   left: 15px;
   background: #795548 !important;
   border-color: #795548 !important;
+}
+.brown.text > .rippleWave {
+  background: #795548 !important;
 }
 
 .grey.outline {
@@ -2239,6 +2281,9 @@
   background: #9E9E9E !important;
   border-color: #9E9E9E !important;
 }
+.grey.text > .rippleWave {
+  background: #9E9E9E !important;
+}
 
 .blue-grey.outline {
   color: #607D8B !important;
@@ -2285,4 +2330,7 @@
   left: 15px;
   background: #607D8B !important;
   border-color: #607D8B !important;
+}
+.blue-grey.text > .rippleWave {
+  background: #607D8B !important;
 }
