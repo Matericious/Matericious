@@ -47,7 +47,7 @@ $primary_color: #6200ee;
 
     &:focus {
       border-bottom: none;
-      & ~ label {
+      & ~ .floating-label {
         color: $primary_color;
       }
       & ~ .line-ripple {
@@ -56,14 +56,14 @@ $primary_color: #6200ee;
     }
     &:focus,
     &:not(:placeholder-shown) {
-      & ~ label {
+      & ~ .floating-label {
         top: 8px;
         font-size: 12px;
         will-change: top, font-size, color;
       }
     }
   }
-  > label {
+  > .floating-label {
     font-size: 16px;
     position: absolute;
     top: 16px;
@@ -77,10 +77,9 @@ $primary_color: #6200ee;
       text-transform: capitalize;
     }
   }
-  > p {
+  > .helper{
     font-size: 12px;
     height: 16px;
-    padding: 0 12px;
     color: #666666;
     margin: 0;
     display: flex;
@@ -88,9 +87,10 @@ $primary_color: #6200ee;
     justify-content: flex-end;
     position: absolute;
     bottom: -20px;
+    left: 0px;
   }
   &.fill{
-    > label {
+    > .floating-label {
       top: 16px;
       left: 12px;
     }
@@ -105,7 +105,7 @@ $primary_color: #6200ee;
     }
   }
   &.outlined {
-    > label {
+    > .floating-label {
       transition: all 0.1s;
     }
     > input, textarea {
@@ -126,7 +126,7 @@ $primary_color: #6200ee;
       }
       &:focus,
       &:not(:placeholder-shown) {
-        & ~ label {
+        & ~ .floating-label {
           top: -7px;
           left: 10px;
           font-size: 12px;
@@ -154,8 +154,11 @@ $primary_color: #6200ee;
     & ~ input, & ~ textarea {
       padding-left: 45px !important;
     }
-    & ~ label {
+    & ~ .floating-label {
       left: 45px;
+    }
+    & ~ .helper{
+      left: 20px;
     }
   }
   .trail {
@@ -163,7 +166,14 @@ $primary_color: #6200ee;
     top: 18px;
     right: 15px;
     & ~ input{
+      padding-left: 8px;
       padding-right: 45px !important;
+    }
+    & ~ .floating-label {
+      left: 8px;
+    }
+    & ~ .helper{
+      left: 10px;
     }
   }
 }
