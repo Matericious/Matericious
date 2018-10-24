@@ -34,28 +34,41 @@
   height: 56px;
   border: none;
   border-bottom: 2px solid #8e8e8f;
-  padding: 20px 12px 4px 12px;
+  padding: 20px 0px 4px 2px;
   vertical-align: center;
   border-radius: 4px 4px 0 0;
   outline: none;
   font-size: 16px;
   box-sizing: border-box;
   transition: background 0.5s;
+  background: transparent;
+  padding-left: 0px;
 }
+<<<<<<< HEAD
 
 .text-field > input:hover,
 .text-field textarea:hover {
   background: #e5e5e5;
+=======
+.text-field > input:hover, .text-field > input:focus,
+.text-field textarea:hover,
+.text-field textarea:focus {
+  background: transparent;
+>>>>>>> 30a0b42f6f9fbba8a5bd7f0376adf7c706318e66
 }
 
 .text-field > input:focus,
 .text-field textarea:focus {
   border-bottom: none;
-  background: #e5e5e5;
 }
+<<<<<<< HEAD
 
 .text-field > input:focus ~ .floating-label,
 .text-field textarea:focus ~ .floating-label {
+=======
+.text-field > input:focus ~ label,
+.text-field textarea:focus ~ label {
+>>>>>>> 30a0b42f6f9fbba8a5bd7f0376adf7c706318e66
   color: #6200ee;
 }
 
@@ -63,31 +76,48 @@
 .text-field textarea:focus ~ .line-ripple {
   transform: scaleX(1);
 }
+<<<<<<< HEAD
 
 .text-field > input:focus ~ .floating-label, .text-field > input:not(:placeholder-shown) ~ .floating-label,
 .text-field textarea:focus ~ .floating-label,
 .text-field textarea:not(:placeholder-shown) ~ .floating-label {
+=======
+.text-field > input:focus ~ label, .text-field > input:not(:placeholder-shown) ~ label,
+.text-field textarea:focus ~ label,
+.text-field textarea:not(:placeholder-shown) ~ label {
+>>>>>>> 30a0b42f6f9fbba8a5bd7f0376adf7c706318e66
   top: 8px;
   font-size: 12px;
   will-change: top, font-size, color;
 }
+<<<<<<< HEAD
 
 .text-field > .floating-label {
+=======
+.text-field > label {
+>>>>>>> 30a0b42f6f9fbba8a5bd7f0376adf7c706318e66
   font-size: 16px;
   position: absolute;
   top: 16px;
-  left: 12px;
+  left: 0px;
   pointer-events: none;
   color: rgba(0, 0, 0, 0.54);
   transition: top 0.18s cubic-bezier(0.4, 0, 0.2, 1), font-size 0.18s cubic-bezier(0.4, 0, 0.2, 1);
   clear: both;
 }
+<<<<<<< HEAD
 
 .text-field > .floating-label:first-letter {
   text-transform: capitalize;
 }
 
 .text-field > .helper {
+=======
+.text-field > label:first-letter {
+  text-transform: capitalize;
+}
+.text-field > p {
+>>>>>>> 30a0b42f6f9fbba8a5bd7f0376adf7c706318e66
   font-size: 12px;
   height: 16px;
   padding: 0 12px;
@@ -99,11 +129,16 @@
   position: absolute;
   bottom: -20px;
 }
+<<<<<<< HEAD
 
 .text-field.basic > .floating-label {
+=======
+.text-field.fill > label {
+>>>>>>> 30a0b42f6f9fbba8a5bd7f0376adf7c706318e66
   top: 16px;
-  left: 0px;
+  left: 12px;
 }
+<<<<<<< HEAD
 
 .text-field.basic > input {
   background: transparent;
@@ -119,6 +154,18 @@
 }
 
 .text-field.outlined > .floating-label {
+=======
+.text-field.fill > input {
+  padding: 20px 12px 4px 12px;
+}
+.text-field.fill > input:hover {
+  background: #e5e5e5;
+}
+.text-field.fill > input:focus {
+  background: #e5e5e5;
+}
+.text-field.outlined > label {
+>>>>>>> 30a0b42f6f9fbba8a5bd7f0376adf7c706318e66
   transition: all 0.1s;
 }
 
@@ -139,8 +186,12 @@
   background: transparent;
   border: 2px solid #6200ee;
 }
+<<<<<<< HEAD
 
 .text-field.outlined > input:focus ~ .floating-label, .text-field.outlined > input:not(:placeholder-shown) ~ .floating-label {
+=======
+.text-field.outlined > input:focus ~ label, .text-field.outlined > input:not(:placeholder-shown) ~ label {
+>>>>>>> 30a0b42f6f9fbba8a5bd7f0376adf7c706318e66
   top: -7px;
   left: 10px;
   font-size: 12px;
@@ -167,8 +218,12 @@
 .text-field .lead ~ input, .text-field .lead ~ textarea {
   padding-left: 45px !important;
 }
+<<<<<<< HEAD
 
 .text-field .lead ~ .floating-label {
+=======
+.text-field .lead ~ label {
+>>>>>>> 30a0b42f6f9fbba8a5bd7f0376adf7c706318e66
   left: 45px;
 }
 
