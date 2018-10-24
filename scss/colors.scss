@@ -101,6 +101,11 @@
   }
 }
 
-$color_vars: white, red, pink, purple, indigo, blue, cyan, teal, green, lime, yellow, amber, orange, brown, grey, blue-grey;
+$base: ();
+@each $name,$type in $colors {
+  @if $name !=black {
+    $base: append($base, $name);
+  }
+}
 
- @include build-color-class($color_vars);
+@include build-color-class($base);

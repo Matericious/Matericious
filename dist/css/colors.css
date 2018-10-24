@@ -1534,114 +1534,73 @@
   color: #FFFFFF !important;
 }
 
-.white.outline {
-  color: #FFFFFF !important;
-  background: transparent !important;
-  border: #FFFFFF 1px solid !important;
-}
-.white.outline:hover {
-  color: #fff !important;
-  background: #FFFFFF !important;
-}
-.white.text {
-  background: transparent !important;
-  color: #FFFFFF !important;
-}
-.white.checkbox {
-  background: transparent !important;
-}
-.white.checkbox > input:checked {
-  background: #FFFFFF !important;
-}
-.white.checkbox > input:checked + span::before {
-  border-color: #FFFFFF !important;
-  background: #FFFFFF !important;
-}
-.white.checkbox > input:active + span::before {
-  border-color: #FFFFFF !important;
-}
-.white.radio {
-  background: transparent !important;
-}
-.white.radio input[type="radio"]:checked + label:before {
-  border-color: #FFFFFF !important;
-}
-.white.radio label:after {
-  background: #FFFFFF !important;
-}
-.white.switch {
-  background: transparent !important;
-}
-.white.switch > input:checked ~ span:before {
-  background: #FFFFFF !important;
-}
-.white.switch > input:checked ~ span:after {
-  left: 15px;
-  background: #FFFFFF !important;
-  border-color: #FFFFFF !important;
-}
-.white.text > .rippleWave {
-  background: #FFFFFF !important;
-}
-.white.range {
-  background: #FFFFFF;
-}
-.white.range::-webkit-slider-thumb {
-  background: #FFFFFF;
-}
-
 .red.outline {
   color: #F44336 !important;
   background: transparent !important;
   border: #F44336 1px solid !important;
 }
+
 .red.outline:hover {
   color: #fff !important;
   background: #F44336 !important;
 }
+
 .red.text {
   background: transparent !important;
   color: #F44336 !important;
 }
+
 .red.checkbox {
   background: transparent !important;
 }
+
 .red.checkbox > input:checked {
   background: #F44336 !important;
 }
+
 .red.checkbox > input:checked + span::before {
   border-color: #F44336 !important;
   background: #F44336 !important;
 }
+
 .red.checkbox > input:active + span::before {
   border-color: #F44336 !important;
 }
+
 .red.radio {
   background: transparent !important;
 }
+
 .red.radio input[type="radio"]:checked + label:before {
   border-color: #F44336 !important;
 }
+
 .red.radio label:after {
   background: #F44336 !important;
 }
+
 .red.switch {
   background: transparent !important;
 }
+
 .red.switch > input:checked ~ span:before {
   background: #F44336 !important;
 }
+
 .red.switch > input:checked ~ span:after {
   left: 15px;
   background: #F44336 !important;
   border-color: #F44336 !important;
 }
+
 .red.text > .rippleWave {
   background: #F44336 !important;
 }
+
 .red.range {
   background: #F44336;
 }
+
 .red.range::-webkit-slider-thumb {
   background: #F44336;
 }
@@ -1651,53 +1610,68 @@
   background: transparent !important;
   border: #E91E63 1px solid !important;
 }
+
 .pink.outline:hover {
   color: #fff !important;
   background: #E91E63 !important;
 }
+
 .pink.text {
   background: transparent !important;
   color: #E91E63 !important;
 }
+
 .pink.checkbox {
   background: transparent !important;
 }
+
 .pink.checkbox > input:checked {
   background: #E91E63 !important;
 }
+
 .pink.checkbox > input:checked + span::before {
   border-color: #E91E63 !important;
   background: #E91E63 !important;
 }
+
 .pink.checkbox > input:active + span::before {
   border-color: #E91E63 !important;
 }
+
 .pink.radio {
   background: transparent !important;
 }
+
 .pink.radio input[type="radio"]:checked + label:before {
   border-color: #E91E63 !important;
 }
+
 .pink.radio label:after {
   background: #E91E63 !important;
 }
+
 .pink.switch {
   background: transparent !important;
 }
+
 .pink.switch > input:checked ~ span:before {
   background: #E91E63 !important;
 }
+
 .pink.switch > input:checked ~ span:after {
   left: 15px;
   background: #E91E63 !important;
   border-color: #E91E63 !important;
 }
+
 .pink.text > .rippleWave {
   background: #E91E63 !important;
 }
+
 .pink.range {
   background: #E91E63;
 }
+
 .pink.range::-webkit-slider-thumb {
   background: #E91E63;
 }
@@ -1707,55 +1681,141 @@
   background: transparent !important;
   border: #9C27B0 1px solid !important;
 }
+
 .purple.outline:hover {
   color: #fff !important;
   background: #9C27B0 !important;
 }
+
 .purple.text {
   background: transparent !important;
   color: #9C27B0 !important;
 }
+
 .purple.checkbox {
   background: transparent !important;
 }
+
 .purple.checkbox > input:checked {
   background: #9C27B0 !important;
 }
+
 .purple.checkbox > input:checked + span::before {
   border-color: #9C27B0 !important;
   background: #9C27B0 !important;
 }
+
 .purple.checkbox > input:active + span::before {
   border-color: #9C27B0 !important;
 }
+
 .purple.radio {
   background: transparent !important;
 }
+
 .purple.radio input[type="radio"]:checked + label:before {
   border-color: #9C27B0 !important;
 }
+
 .purple.radio label:after {
   background: #9C27B0 !important;
 }
+
 .purple.switch {
   background: transparent !important;
 }
+
 .purple.switch > input:checked ~ span:before {
   background: #9C27B0 !important;
 }
+
 .purple.switch > input:checked ~ span:after {
   left: 15px;
   background: #9C27B0 !important;
   border-color: #9C27B0 !important;
 }
+
 .purple.text > .rippleWave {
   background: #9C27B0 !important;
 }
+
 .purple.range {
   background: #9C27B0;
 }
+
 .purple.range::-webkit-slider-thumb {
   background: #9C27B0;
+}
+
+.deep-purple.outline {
+  color: #673AB7 !important;
+  background: transparent !important;
+  border: #673AB7 1px solid !important;
+}
+
+.deep-purple.outline:hover {
+  color: #fff !important;
+  background: #673AB7 !important;
+}
+
+.deep-purple.text {
+  background: transparent !important;
+  color: #673AB7 !important;
+}
+
+.deep-purple.checkbox {
+  background: transparent !important;
+}
+
+.deep-purple.checkbox > input:checked {
+  background: #673AB7 !important;
+}
+
+.deep-purple.checkbox > input:checked + span::before {
+  border-color: #673AB7 !important;
+  background: #673AB7 !important;
+}
+
+.deep-purple.checkbox > input:active + span::before {
+  border-color: #673AB7 !important;
+}
+
+.deep-purple.radio {
+  background: transparent !important;
+}
+
+.deep-purple.radio input[type="radio"]:checked + label:before {
+  border-color: #673AB7 !important;
+}
+
+.deep-purple.radio label:after {
+  background: #673AB7 !important;
+}
+
+.deep-purple.switch {
+  background: transparent !important;
+}
+
+.deep-purple.switch > input:checked ~ span:before {
+  background: #673AB7 !important;
+}
+
+.deep-purple.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #673AB7 !important;
+  border-color: #673AB7 !important;
+}
+
+.deep-purple.text > .rippleWave {
+  background: #673AB7 !important;
+}
+
+.deep-purple.range {
+  background: #673AB7;
+}
+
+.deep-purple.range::-webkit-slider-thumb {
+  background: #673AB7;
 }
 
 .indigo.outline {
@@ -1763,53 +1823,68 @@
   background: transparent !important;
   border: #3F51B5 1px solid !important;
 }
+
 .indigo.outline:hover {
   color: #fff !important;
   background: #3F51B5 !important;
 }
+
 .indigo.text {
   background: transparent !important;
   color: #3F51B5 !important;
 }
+
 .indigo.checkbox {
   background: transparent !important;
 }
+
 .indigo.checkbox > input:checked {
   background: #3F51B5 !important;
 }
+
 .indigo.checkbox > input:checked + span::before {
   border-color: #3F51B5 !important;
   background: #3F51B5 !important;
 }
+
 .indigo.checkbox > input:active + span::before {
   border-color: #3F51B5 !important;
 }
+
 .indigo.radio {
   background: transparent !important;
 }
+
 .indigo.radio input[type="radio"]:checked + label:before {
   border-color: #3F51B5 !important;
 }
+
 .indigo.radio label:after {
   background: #3F51B5 !important;
 }
+
 .indigo.switch {
   background: transparent !important;
 }
+
 .indigo.switch > input:checked ~ span:before {
   background: #3F51B5 !important;
 }
+
 .indigo.switch > input:checked ~ span:after {
   left: 15px;
   background: #3F51B5 !important;
   border-color: #3F51B5 !important;
 }
+
 .indigo.text > .rippleWave {
   background: #3F51B5 !important;
 }
+
 .indigo.range {
   background: #3F51B5;
 }
+
 .indigo.range::-webkit-slider-thumb {
   background: #3F51B5;
 }
@@ -1819,55 +1894,141 @@
   background: transparent !important;
   border: #2196F3 1px solid !important;
 }
+
 .blue.outline:hover {
   color: #fff !important;
   background: #2196F3 !important;
 }
+
 .blue.text {
   background: transparent !important;
   color: #2196F3 !important;
 }
+
 .blue.checkbox {
   background: transparent !important;
 }
+
 .blue.checkbox > input:checked {
   background: #2196F3 !important;
 }
+
 .blue.checkbox > input:checked + span::before {
   border-color: #2196F3 !important;
   background: #2196F3 !important;
 }
+
 .blue.checkbox > input:active + span::before {
   border-color: #2196F3 !important;
 }
+
 .blue.radio {
   background: transparent !important;
 }
+
 .blue.radio input[type="radio"]:checked + label:before {
   border-color: #2196F3 !important;
 }
+
 .blue.radio label:after {
   background: #2196F3 !important;
 }
+
 .blue.switch {
   background: transparent !important;
 }
+
 .blue.switch > input:checked ~ span:before {
   background: #2196F3 !important;
 }
+
 .blue.switch > input:checked ~ span:after {
   left: 15px;
   background: #2196F3 !important;
   border-color: #2196F3 !important;
 }
+
 .blue.text > .rippleWave {
   background: #2196F3 !important;
 }
+
 .blue.range {
   background: #2196F3;
 }
+
 .blue.range::-webkit-slider-thumb {
   background: #2196F3;
+}
+
+.light-blue.outline {
+  color: #03A9F4 !important;
+  background: transparent !important;
+  border: #03A9F4 1px solid !important;
+}
+
+.light-blue.outline:hover {
+  color: #fff !important;
+  background: #03A9F4 !important;
+}
+
+.light-blue.text {
+  background: transparent !important;
+  color: #03A9F4 !important;
+}
+
+.light-blue.checkbox {
+  background: transparent !important;
+}
+
+.light-blue.checkbox > input:checked {
+  background: #03A9F4 !important;
+}
+
+.light-blue.checkbox > input:checked + span::before {
+  border-color: #03A9F4 !important;
+  background: #03A9F4 !important;
+}
+
+.light-blue.checkbox > input:active + span::before {
+  border-color: #03A9F4 !important;
+}
+
+.light-blue.radio {
+  background: transparent !important;
+}
+
+.light-blue.radio input[type="radio"]:checked + label:before {
+  border-color: #03A9F4 !important;
+}
+
+.light-blue.radio label:after {
+  background: #03A9F4 !important;
+}
+
+.light-blue.switch {
+  background: transparent !important;
+}
+
+.light-blue.switch > input:checked ~ span:before {
+  background: #03A9F4 !important;
+}
+
+.light-blue.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #03A9F4 !important;
+  border-color: #03A9F4 !important;
+}
+
+.light-blue.text > .rippleWave {
+  background: #03A9F4 !important;
+}
+
+.light-blue.range {
+  background: #03A9F4;
+}
+
+.light-blue.range::-webkit-slider-thumb {
+  background: #03A9F4;
 }
 
 .cyan.outline {
@@ -1875,53 +2036,68 @@
   background: transparent !important;
   border: #00BCD4 1px solid !important;
 }
+
 .cyan.outline:hover {
   color: #fff !important;
   background: #00BCD4 !important;
 }
+
 .cyan.text {
   background: transparent !important;
   color: #00BCD4 !important;
 }
+
 .cyan.checkbox {
   background: transparent !important;
 }
+
 .cyan.checkbox > input:checked {
   background: #00BCD4 !important;
 }
+
 .cyan.checkbox > input:checked + span::before {
   border-color: #00BCD4 !important;
   background: #00BCD4 !important;
 }
+
 .cyan.checkbox > input:active + span::before {
   border-color: #00BCD4 !important;
 }
+
 .cyan.radio {
   background: transparent !important;
 }
+
 .cyan.radio input[type="radio"]:checked + label:before {
   border-color: #00BCD4 !important;
 }
+
 .cyan.radio label:after {
   background: #00BCD4 !important;
 }
+
 .cyan.switch {
   background: transparent !important;
 }
+
 .cyan.switch > input:checked ~ span:before {
   background: #00BCD4 !important;
 }
+
 .cyan.switch > input:checked ~ span:after {
   left: 15px;
   background: #00BCD4 !important;
   border-color: #00BCD4 !important;
 }
+
 .cyan.text > .rippleWave {
   background: #00BCD4 !important;
 }
+
 .cyan.range {
   background: #00BCD4;
 }
+
 .cyan.range::-webkit-slider-thumb {
   background: #00BCD4;
 }
@@ -1931,53 +2107,68 @@
   background: transparent !important;
   border: #009688 1px solid !important;
 }
+
 .teal.outline:hover {
   color: #fff !important;
   background: #009688 !important;
 }
+
 .teal.text {
   background: transparent !important;
   color: #009688 !important;
 }
+
 .teal.checkbox {
   background: transparent !important;
 }
+
 .teal.checkbox > input:checked {
   background: #009688 !important;
 }
+
 .teal.checkbox > input:checked + span::before {
   border-color: #009688 !important;
   background: #009688 !important;
 }
+
 .teal.checkbox > input:active + span::before {
   border-color: #009688 !important;
 }
+
 .teal.radio {
   background: transparent !important;
 }
+
 .teal.radio input[type="radio"]:checked + label:before {
   border-color: #009688 !important;
 }
+
 .teal.radio label:after {
   background: #009688 !important;
 }
+
 .teal.switch {
   background: transparent !important;
 }
+
 .teal.switch > input:checked ~ span:before {
   background: #009688 !important;
 }
+
 .teal.switch > input:checked ~ span:after {
   left: 15px;
   background: #009688 !important;
   border-color: #009688 !important;
 }
+
 .teal.text > .rippleWave {
   background: #009688 !important;
 }
+
 .teal.range {
   background: #009688;
 }
+
 .teal.range::-webkit-slider-thumb {
   background: #009688;
 }
@@ -1987,55 +2178,141 @@
   background: transparent !important;
   border: #4CAF50 1px solid !important;
 }
+
 .green.outline:hover {
   color: #fff !important;
   background: #4CAF50 !important;
 }
+
 .green.text {
   background: transparent !important;
   color: #4CAF50 !important;
 }
+
 .green.checkbox {
   background: transparent !important;
 }
+
 .green.checkbox > input:checked {
   background: #4CAF50 !important;
 }
+
 .green.checkbox > input:checked + span::before {
   border-color: #4CAF50 !important;
   background: #4CAF50 !important;
 }
+
 .green.checkbox > input:active + span::before {
   border-color: #4CAF50 !important;
 }
+
 .green.radio {
   background: transparent !important;
 }
+
 .green.radio input[type="radio"]:checked + label:before {
   border-color: #4CAF50 !important;
 }
+
 .green.radio label:after {
   background: #4CAF50 !important;
 }
+
 .green.switch {
   background: transparent !important;
 }
+
 .green.switch > input:checked ~ span:before {
   background: #4CAF50 !important;
 }
+
 .green.switch > input:checked ~ span:after {
   left: 15px;
   background: #4CAF50 !important;
   border-color: #4CAF50 !important;
 }
+
 .green.text > .rippleWave {
   background: #4CAF50 !important;
 }
+
 .green.range {
   background: #4CAF50;
 }
+
 .green.range::-webkit-slider-thumb {
   background: #4CAF50;
+}
+
+.light-green.outline {
+  color: #8BC34A !important;
+  background: transparent !important;
+  border: #8BC34A 1px solid !important;
+}
+
+.light-green.outline:hover {
+  color: #fff !important;
+  background: #8BC34A !important;
+}
+
+.light-green.text {
+  background: transparent !important;
+  color: #8BC34A !important;
+}
+
+.light-green.checkbox {
+  background: transparent !important;
+}
+
+.light-green.checkbox > input:checked {
+  background: #8BC34A !important;
+}
+
+.light-green.checkbox > input:checked + span::before {
+  border-color: #8BC34A !important;
+  background: #8BC34A !important;
+}
+
+.light-green.checkbox > input:active + span::before {
+  border-color: #8BC34A !important;
+}
+
+.light-green.radio {
+  background: transparent !important;
+}
+
+.light-green.radio input[type="radio"]:checked + label:before {
+  border-color: #8BC34A !important;
+}
+
+.light-green.radio label:after {
+  background: #8BC34A !important;
+}
+
+.light-green.switch {
+  background: transparent !important;
+}
+
+.light-green.switch > input:checked ~ span:before {
+  background: #8BC34A !important;
+}
+
+.light-green.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #8BC34A !important;
+  border-color: #8BC34A !important;
+}
+
+.light-green.text > .rippleWave {
+  background: #8BC34A !important;
+}
+
+.light-green.range {
+  background: #8BC34A;
+}
+
+.light-green.range::-webkit-slider-thumb {
+  background: #8BC34A;
 }
 
 .lime.outline {
@@ -2043,53 +2320,68 @@
   background: transparent !important;
   border: #CDDC39 1px solid !important;
 }
+
 .lime.outline:hover {
   color: #fff !important;
   background: #CDDC39 !important;
 }
+
 .lime.text {
   background: transparent !important;
   color: #CDDC39 !important;
 }
+
 .lime.checkbox {
   background: transparent !important;
 }
+
 .lime.checkbox > input:checked {
   background: #CDDC39 !important;
 }
+
 .lime.checkbox > input:checked + span::before {
   border-color: #CDDC39 !important;
   background: #CDDC39 !important;
 }
+
 .lime.checkbox > input:active + span::before {
   border-color: #CDDC39 !important;
 }
+
 .lime.radio {
   background: transparent !important;
 }
+
 .lime.radio input[type="radio"]:checked + label:before {
   border-color: #CDDC39 !important;
 }
+
 .lime.radio label:after {
   background: #CDDC39 !important;
 }
+
 .lime.switch {
   background: transparent !important;
 }
+
 .lime.switch > input:checked ~ span:before {
   background: #CDDC39 !important;
 }
+
 .lime.switch > input:checked ~ span:after {
   left: 15px;
   background: #CDDC39 !important;
   border-color: #CDDC39 !important;
 }
+
 .lime.text > .rippleWave {
   background: #CDDC39 !important;
 }
+
 .lime.range {
   background: #CDDC39;
 }
+
 .lime.range::-webkit-slider-thumb {
   background: #CDDC39;
 }
@@ -2099,53 +2391,68 @@
   background: transparent !important;
   border: #FFEB3B 1px solid !important;
 }
+
 .yellow.outline:hover {
   color: #fff !important;
   background: #FFEB3B !important;
 }
+
 .yellow.text {
   background: transparent !important;
   color: #FFEB3B !important;
 }
+
 .yellow.checkbox {
   background: transparent !important;
 }
+
 .yellow.checkbox > input:checked {
   background: #FFEB3B !important;
 }
+
 .yellow.checkbox > input:checked + span::before {
   border-color: #FFEB3B !important;
   background: #FFEB3B !important;
 }
+
 .yellow.checkbox > input:active + span::before {
   border-color: #FFEB3B !important;
 }
+
 .yellow.radio {
   background: transparent !important;
 }
+
 .yellow.radio input[type="radio"]:checked + label:before {
   border-color: #FFEB3B !important;
 }
+
 .yellow.radio label:after {
   background: #FFEB3B !important;
 }
+
 .yellow.switch {
   background: transparent !important;
 }
+
 .yellow.switch > input:checked ~ span:before {
   background: #FFEB3B !important;
 }
+
 .yellow.switch > input:checked ~ span:after {
   left: 15px;
   background: #FFEB3B !important;
   border-color: #FFEB3B !important;
 }
+
 .yellow.text > .rippleWave {
   background: #FFEB3B !important;
 }
+
 .yellow.range {
   background: #FFEB3B;
 }
+
 .yellow.range::-webkit-slider-thumb {
   background: #FFEB3B;
 }
@@ -2155,53 +2462,68 @@
   background: transparent !important;
   border: #FFC107 1px solid !important;
 }
+
 .amber.outline:hover {
   color: #fff !important;
   background: #FFC107 !important;
 }
+
 .amber.text {
   background: transparent !important;
   color: #FFC107 !important;
 }
+
 .amber.checkbox {
   background: transparent !important;
 }
+
 .amber.checkbox > input:checked {
   background: #FFC107 !important;
 }
+
 .amber.checkbox > input:checked + span::before {
   border-color: #FFC107 !important;
   background: #FFC107 !important;
 }
+
 .amber.checkbox > input:active + span::before {
   border-color: #FFC107 !important;
 }
+
 .amber.radio {
   background: transparent !important;
 }
+
 .amber.radio input[type="radio"]:checked + label:before {
   border-color: #FFC107 !important;
 }
+
 .amber.radio label:after {
   background: #FFC107 !important;
 }
+
 .amber.switch {
   background: transparent !important;
 }
+
 .amber.switch > input:checked ~ span:before {
   background: #FFC107 !important;
 }
+
 .amber.switch > input:checked ~ span:after {
   left: 15px;
   background: #FFC107 !important;
   border-color: #FFC107 !important;
 }
+
 .amber.text > .rippleWave {
   background: #FFC107 !important;
 }
+
 .amber.range {
   background: #FFC107;
 }
+
 .amber.range::-webkit-slider-thumb {
   background: #FFC107;
 }
@@ -2211,55 +2533,141 @@
   background: transparent !important;
   border: #FF9800 1px solid !important;
 }
+
 .orange.outline:hover {
   color: #fff !important;
   background: #FF9800 !important;
 }
+
 .orange.text {
   background: transparent !important;
   color: #FF9800 !important;
 }
+
 .orange.checkbox {
   background: transparent !important;
 }
+
 .orange.checkbox > input:checked {
   background: #FF9800 !important;
 }
+
 .orange.checkbox > input:checked + span::before {
   border-color: #FF9800 !important;
   background: #FF9800 !important;
 }
+
 .orange.checkbox > input:active + span::before {
   border-color: #FF9800 !important;
 }
+
 .orange.radio {
   background: transparent !important;
 }
+
 .orange.radio input[type="radio"]:checked + label:before {
   border-color: #FF9800 !important;
 }
+
 .orange.radio label:after {
   background: #FF9800 !important;
 }
+
 .orange.switch {
   background: transparent !important;
 }
+
 .orange.switch > input:checked ~ span:before {
   background: #FF9800 !important;
 }
+
 .orange.switch > input:checked ~ span:after {
   left: 15px;
   background: #FF9800 !important;
   border-color: #FF9800 !important;
 }
+
 .orange.text > .rippleWave {
   background: #FF9800 !important;
 }
+
 .orange.range {
   background: #FF9800;
 }
+
 .orange.range::-webkit-slider-thumb {
   background: #FF9800;
+}
+
+.deep-orange.outline {
+  color: #FF5722 !important;
+  background: transparent !important;
+  border: #FF5722 1px solid !important;
+}
+
+.deep-orange.outline:hover {
+  color: #fff !important;
+  background: #FF5722 !important;
+}
+
+.deep-orange.text {
+  background: transparent !important;
+  color: #FF5722 !important;
+}
+
+.deep-orange.checkbox {
+  background: transparent !important;
+}
+
+.deep-orange.checkbox > input:checked {
+  background: #FF5722 !important;
+}
+
+.deep-orange.checkbox > input:checked + span::before {
+  border-color: #FF5722 !important;
+  background: #FF5722 !important;
+}
+
+.deep-orange.checkbox > input:active + span::before {
+  border-color: #FF5722 !important;
+}
+
+.deep-orange.radio {
+  background: transparent !important;
+}
+
+.deep-orange.radio input[type="radio"]:checked + label:before {
+  border-color: #FF5722 !important;
+}
+
+.deep-orange.radio label:after {
+  background: #FF5722 !important;
+}
+
+.deep-orange.switch {
+  background: transparent !important;
+}
+
+.deep-orange.switch > input:checked ~ span:before {
+  background: #FF5722 !important;
+}
+
+.deep-orange.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #FF5722 !important;
+  border-color: #FF5722 !important;
+}
+
+.deep-orange.text > .rippleWave {
+  background: #FF5722 !important;
+}
+
+.deep-orange.range {
+  background: #FF5722;
+}
+
+.deep-orange.range::-webkit-slider-thumb {
+  background: #FF5722;
 }
 
 .brown.outline {
@@ -2267,53 +2675,68 @@
   background: transparent !important;
   border: #795548 1px solid !important;
 }
+
 .brown.outline:hover {
   color: #fff !important;
   background: #795548 !important;
 }
+
 .brown.text {
   background: transparent !important;
   color: #795548 !important;
 }
+
 .brown.checkbox {
   background: transparent !important;
 }
+
 .brown.checkbox > input:checked {
   background: #795548 !important;
 }
+
 .brown.checkbox > input:checked + span::before {
   border-color: #795548 !important;
   background: #795548 !important;
 }
+
 .brown.checkbox > input:active + span::before {
   border-color: #795548 !important;
 }
+
 .brown.radio {
   background: transparent !important;
 }
+
 .brown.radio input[type="radio"]:checked + label:before {
   border-color: #795548 !important;
 }
+
 .brown.radio label:after {
   background: #795548 !important;
 }
+
 .brown.switch {
   background: transparent !important;
 }
+
 .brown.switch > input:checked ~ span:before {
   background: #795548 !important;
 }
+
 .brown.switch > input:checked ~ span:after {
   left: 15px;
   background: #795548 !important;
   border-color: #795548 !important;
 }
+
 .brown.text > .rippleWave {
   background: #795548 !important;
 }
+
 .brown.range {
   background: #795548;
 }
+
 .brown.range::-webkit-slider-thumb {
   background: #795548;
 }
@@ -2323,53 +2746,68 @@
   background: transparent !important;
   border: #9E9E9E 1px solid !important;
 }
+
 .grey.outline:hover {
   color: #fff !important;
   background: #9E9E9E !important;
 }
+
 .grey.text {
   background: transparent !important;
   color: #9E9E9E !important;
 }
+
 .grey.checkbox {
   background: transparent !important;
 }
+
 .grey.checkbox > input:checked {
   background: #9E9E9E !important;
 }
+
 .grey.checkbox > input:checked + span::before {
   border-color: #9E9E9E !important;
   background: #9E9E9E !important;
 }
+
 .grey.checkbox > input:active + span::before {
   border-color: #9E9E9E !important;
 }
+
 .grey.radio {
   background: transparent !important;
 }
+
 .grey.radio input[type="radio"]:checked + label:before {
   border-color: #9E9E9E !important;
 }
+
 .grey.radio label:after {
   background: #9E9E9E !important;
 }
+
 .grey.switch {
   background: transparent !important;
 }
+
 .grey.switch > input:checked ~ span:before {
   background: #9E9E9E !important;
 }
+
 .grey.switch > input:checked ~ span:after {
   left: 15px;
   background: #9E9E9E !important;
   border-color: #9E9E9E !important;
 }
+
 .grey.text > .rippleWave {
   background: #9E9E9E !important;
 }
+
 .grey.range {
   background: #9E9E9E;
 }
+
 .grey.range::-webkit-slider-thumb {
   background: #9E9E9E;
 }
@@ -2379,53 +2817,139 @@
   background: transparent !important;
   border: #607D8B 1px solid !important;
 }
+
 .blue-grey.outline:hover {
   color: #fff !important;
   background: #607D8B !important;
 }
+
 .blue-grey.text {
   background: transparent !important;
   color: #607D8B !important;
 }
+
 .blue-grey.checkbox {
   background: transparent !important;
 }
+
 .blue-grey.checkbox > input:checked {
   background: #607D8B !important;
 }
+
 .blue-grey.checkbox > input:checked + span::before {
   border-color: #607D8B !important;
   background: #607D8B !important;
 }
+
 .blue-grey.checkbox > input:active + span::before {
   border-color: #607D8B !important;
 }
+
 .blue-grey.radio {
   background: transparent !important;
 }
+
 .blue-grey.radio input[type="radio"]:checked + label:before {
   border-color: #607D8B !important;
 }
+
 .blue-grey.radio label:after {
   background: #607D8B !important;
 }
+
 .blue-grey.switch {
   background: transparent !important;
 }
+
 .blue-grey.switch > input:checked ~ span:before {
   background: #607D8B !important;
 }
+
 .blue-grey.switch > input:checked ~ span:after {
   left: 15px;
   background: #607D8B !important;
   border-color: #607D8B !important;
 }
+
 .blue-grey.text > .rippleWave {
   background: #607D8B !important;
 }
+
 .blue-grey.range {
   background: #607D8B;
 }
+
 .blue-grey.range::-webkit-slider-thumb {
   background: #607D8B;
+}
+
+.white.outline {
+  color: #FFFFFF !important;
+  background: transparent !important;
+  border: #FFFFFF 1px solid !important;
+}
+
+.white.outline:hover {
+  color: #fff !important;
+  background: #FFFFFF !important;
+}
+
+.white.text {
+  background: transparent !important;
+  color: #FFFFFF !important;
+}
+
+.white.checkbox {
+  background: transparent !important;
+}
+
+.white.checkbox > input:checked {
+  background: #FFFFFF !important;
+}
+
+.white.checkbox > input:checked + span::before {
+  border-color: #FFFFFF !important;
+  background: #FFFFFF !important;
+}
+
+.white.checkbox > input:active + span::before {
+  border-color: #FFFFFF !important;
+}
+
+.white.radio {
+  background: transparent !important;
+}
+
+.white.radio input[type="radio"]:checked + label:before {
+  border-color: #FFFFFF !important;
+}
+
+.white.radio label:after {
+  background: #FFFFFF !important;
+}
+
+.white.switch {
+  background: transparent !important;
+}
+
+.white.switch > input:checked ~ span:before {
+  background: #FFFFFF !important;
+}
+
+.white.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #FFFFFF !important;
+  border-color: #FFFFFF !important;
+}
+
+.white.text > .rippleWave {
+  background: #FFFFFF !important;
+}
+
+.white.range {
+  background: #FFFFFF;
+}
+
+.white.range::-webkit-slider-thumb {
+  background: #FFFFFF;
 }
