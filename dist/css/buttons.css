@@ -1,12 +1,11 @@
-/**/
 .btn {
   margin-top: 5px;
   padding: 12px 20px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  background: #2196f3;
-  color: #ffffff;
+  background: #2196F3;
+  color: #FFFFFF;
   border: 0px;
   border-radius: 6px;
   font-size: 12px;
@@ -14,6 +13,7 @@
   transition: all 150ms linear;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
 }
+
 .btn > i {
   font-size: 15px;
   vertical-align: middle;
@@ -21,23 +21,28 @@
   transition: all 0.5s linear 0s;
   position: relative;
 }
+
 .btn > i:nth-child(1) {
   position: relative;
   left: -5px;
 }
+
 .btn > i[ani], .btn > i[move] {
   left: 0px;
   right: 0px;
 }
+
 .btn:hover {
   transition: all 150ms linear;
   opacity: 0.9;
 }
+
 .btn:hover > i[ani="left"] {
   -webkit-animation: ani-left 1s infinite;
   -moz-animation: ani-left 1s infinite;
   animation: ani-left 1s infinite;
 }
+
 @-moz-keyframes ani-left {
   10% {
     left: 0px;
@@ -46,6 +51,7 @@
     left: -5px;
   }
 }
+
 @-webkit-keyframes ani-left {
   10% {
     left: 0px;
@@ -54,6 +60,7 @@
     left: -5px;
   }
 }
+
 @keyframes ani-left {
   10% {
     left: 0px;
@@ -62,11 +69,13 @@
     left: -5px;
   }
 }
+
 .btn:hover > i[ani="right"] {
   -webkit-animation: ani-right 1s infinite;
   -moz-animation: ani-right 1s infinite;
   animation: ani-right 1s infinite;
 }
+
 @-moz-keyframes ani-right {
   10% {
     left: 0px;
@@ -75,6 +84,7 @@
     left: 5px;
   }
 }
+
 @-webkit-keyframes ani-right {
   10% {
     left: 0px;
@@ -83,6 +93,7 @@
     left: 5px;
   }
 }
+
 @keyframes ani-right {
   10% {
     left: 0px;
@@ -91,11 +102,13 @@
     left: 5px;
   }
 }
+
 .btn:hover > i[ani="rotate"] {
   -webkit-animation: ani-rotate 1s infinite;
   -moz-animation: ani-rotate 1s infinite;
   animation: ani-rotate 1s infinite;
 }
+
 @-moz-keyframes ani-rotate {
   from {
     transform: rotate(0deg);
@@ -104,6 +117,7 @@
     transform: rotate(360deg);
   }
 }
+
 @-webkit-keyframes ani-rotate {
   from {
     transform: rotate(0deg);
@@ -112,6 +126,7 @@
     transform: rotate(360deg);
   }
 }
+
 @keyframes ani-rotate {
   from {
     transform: rotate(0deg);
@@ -120,39 +135,47 @@
     transform: rotate(360deg);
   }
 }
+
 .btn:hover > i[move="left"] {
   -webkit-animation: ani-left 1s 1;
   -moz-animation: ani-left 1s 1;
   animation: ani-left 1s 1;
 }
+
 .btn:hover > i[move="right"] {
   -webkit-animation: ani-right 1s 1;
   -moz-animation: ani-right 1s 1;
   animation: ani-right 1s 1;
 }
+
 .btn:hover > i[move="rotate"] {
   -webkit-animation: ani-rotate 1s 1;
   -moz-animation: ani-rotate 1s 1;
   animation: ani-rotate 1s 1;
 }
+
 .btn:active {
   transition: all 150ms linear;
   opacity: 0.7;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
+
 .btn.outline {
   background: transparent;
-  border: #2196f3 1px solid;
+  border: #2196F3 1px solid;
   color: #222;
 }
+
 .btn.outline:hover {
-  background: #2196f3;
-  color: #cbcbcb;
+  background: #2196F3;
+  color: #424242;
 }
+
 .btn.text {
   background: transparent;
   box-shadow: none;
 }
+
 .btn.round, .btn.transparent {
   width: 50px;
   height: 50px;
@@ -161,11 +184,13 @@
   text-align: center;
   border-radius: 50%;
 }
+
 .btn.round > i, .btn.transparent > i {
   font-size: 20px;
   left: 0;
   right: 0;
 }
+
 .btn.round:before, .btn.transparent:before {
   content: "";
   width: 30px;
@@ -185,7 +210,7 @@
   text-decoration: none;
   background: transparent;
   box-shadow: none;
-  color: #222;
+  color: #424242;
   font-size: 14px;
   font-weight: bold;
   line-height: 1.3;
@@ -197,9 +222,11 @@ btn.btn[ts] {
   text-align: center;
   box-shadow: none;
 }
+
 btn.btn[ts] > i {
   font-size: 20px;
 }
+
 btn.btn[ts]:hover {
   box-shadow: none;
 }

@@ -3,10 +3,12 @@
   white-space: nowrap;
   position: relative;
 }
+
 .tabs > .tabs-header::-webkit-scrollbar {
   width: 4px;
   height: 0px;
 }
+
 .tabs > .tabs-header > a {
   display: inline-block;
   text-align: center;
@@ -18,9 +20,11 @@
   cursor: pointer;
   font-family: "Roboto", san-serif;
 }
+
 .tabs > .tabs-header > a:hover {
   background-color: #efefef;
 }
+
 .tabs > .tabs-header > .border {
   width: auto;
   height: 2px;
@@ -31,12 +35,15 @@
   transition: 0.3s ease;
   z-index: 1;
 }
+
 .tabs > .tabs-content {
   overflow: hidden;
 }
+
 .tabs > .tabs-content > .tab {
   display: none;
 }
+
 .tabs > .tabs-content > .tab.active {
   display: block;
 }

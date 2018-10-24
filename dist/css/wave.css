@@ -26,35 +26,3 @@
   opacity: 0.3;
   transition: 0s;
 }
-
-.wave.earth.text:after {
-  background-image: radial-gradient(circle, #34c559 10%, transparent 10.01%);
-}
-
-.wave.night.text:after {
-  background-image: radial-gradient(circle, #424242 10%, transparent 10.01%);
-}
-
-.wave.ocean.text:after {
-  background-image: radial-gradient(circle, #2e72ee 10%, transparent 10.01%);
-}
-
-.wave.red.text:after {
-  background-image: radial-gradient(circle, #e93030 10%, transparent 10.01%);
-}
-
-.wave.snow.text:after {
-  background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-}
-
-.wave.yellow.text:after {
-  background-image: radial-gradient(circle, #e7d507 10%, transparent 10.01%);
-}
-
-.wave.purple.text:after {
-  background-image: radial-gradient(circle, #6924f0 10%, transparent 10.01%);
-}
-
-.wave.pink.text:after {
-  background-image: radial-gradient(circle, #ff87cb 10%, transparent 10.01%);
-}

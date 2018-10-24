@@ -3,15 +3,19 @@
   margin: 16px 0;
   display: inline-block;
 }
+
 .radio input[type="radio"] {
   display: none;
 }
+
 .radio input[type="radio"]:checked + label:before {
-  border-color: #00bcd4;
+  border-color: #00BCD4;
 }
+
 .radio input[type="radio"]:checked + label:after {
   transform: scale(1);
 }
+
 .radio label {
   display: inline-block;
   height: 20px;
@@ -21,6 +25,7 @@
   cursor: pointer;
   vertical-align: bottom;
 }
+
 .radio label:before, .radio label:after {
   position: absolute;
   content: '';
@@ -28,6 +33,7 @@
   transition: all .3s ease;
   transition-property: transform, border-color;
 }
+
 .radio label:before {
   box-sizing: border-box;
   left: 0;
@@ -36,6 +42,7 @@
   height: 20px;
   border: 2px solid rgba(0, 0, 0, 0.54);
 }
+
 .radio label:after {
   box-sizing: border-box;
   top: 5px;
@@ -43,5 +50,5 @@
   width: 10px;
   height: 10px;
   transform: scale(0);
-  background: #00bcd4;
+  background: #00BCD4;
 }

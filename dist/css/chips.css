@@ -3,7 +3,7 @@ a {
 }
 
 .chips {
-  background: rgba(203, 203, 203, 0.6);
+  background: rgba(158, 158, 158, 0.6);
   padding: 8px;
   border-radius: 30px;
   font-size: 14px;
@@ -18,7 +18,7 @@ a {
 }
 
 .chips:hover {
-  background: #cbcbcb;
+  background: #9E9E9E;
 }
 
 .chips.raised {
@@ -27,11 +27,11 @@ a {
 
 .chips.outline {
   background: transparent;
-  border: 1px solid #cbcbcb;
+  border: 1px solid #9E9E9E;
 }
 
 .chips.outline:hover {
-  background: #cbcbcb;
+  background: #9E9E9E;
   color: #424242;
 }
 
@@ -41,7 +41,7 @@ a {
   height: 22px;
   font-size: 22px;
   line-height: 22px;
-  color: #2f2f2f;
+  color: #424242;
 }
 
 .chips > i:nth-child(1) {
@@ -60,11 +60,11 @@ a {
   top: -1.2px;
   left: 8px;
   transition: color .2s ease-in-out;
-  color: rgba(66, 66, 66, 0.4);
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .chips > .close:hover {
-  color: #424242;
+  color: #000000;
 }
 
 .chips > img {
@@ -81,228 +81,4 @@ a {
   margin: -2px 5px 0 -3px;
   vertical-align: middle;
   border-radius: 50%;
-}
-
-.chips.earth {
-  background: #34c559;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.chips.earth.outline {
-  background: transparent;
-  color: #34c559;
-  border-color: #34c559;
-}
-
-.chips.earth.outline:hover {
-  background: #34c559;
-  color: #fff;
-}
-
-.chips.earth > i:nth-child(1) {
-  color: #fff;
-}
-
-.chips.earth > i:nth-child(1).close {
-  color: rgba(66, 66, 66, 0.4);
-}
-
-.chips.earth > i:nth-child(1).close:hover {
-  color: #424242;
-}
-
-.chips.night {
-  background: #424242;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.chips.night.outline {
-  background: transparent;
-  color: #424242;
-  border-color: #424242;
-}
-
-.chips.night.outline:hover {
-  background: #424242;
-  color: #fff;
-}
-
-.chips.night > .close {
-  color: rgba(255, 255, 255, 0.4);
-}
-
-.chips.night > .close:hover {
-  color: white;
-}
-
-.chips.night > i:nth-child(1) {
-  color: #fff;
-}
-
-.chips.night > i:nth-child(1).close {
-  color: rgba(66, 66, 66, 0.4);
-}
-
-.chips.night > i:nth-child(1).close:hover {
-  color: #424242;
-}
-
-.chips.ocean {
-  background: #2e72ee;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.chips.ocean.outline {
-  background: transparent;
-  color: #2e72ee;
-  border-color: #2e72ee;
-}
-
-.chips.ocean.outline:hover {
-  background: #2e72ee;
-  color: #fff;
-}
-
-.chips.ocean > i:nth-child(1) {
-  color: #fff;
-}
-
-.chips.ocean > i:nth-child(1).close {
-  color: rgba(66, 66, 66, 0.4);
-}
-
-.chips.ocean > i:nth-child(1).close:hover {
-  color: #424242;
-}
-
-.chips.red {
-  background: #e93030;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.chips.red.outline {
-  background: transparent;
-  color: #e93030;
-  border-color: #e93030;
-}
-
-.chips.red.outline:hover {
-  background: #e93030;
-  color: #fff;
-}
-
-.chips.red > i:nth-child(1) {
-  color: #fff;
-}
-
-.chips.red > i:nth-child(1).close {
-  color: rgba(66, 66, 66, 0.4);
-}
-
-.chips.red > i:nth-child(1).close:hover {
-  color: #424242;
-}
-
-.chips.snow {
-  background: #fff;
-  color: rgba(66, 66, 66, 0.8);
-}
-
-.chips.snow.outline {
-  background: transparent;
-  color: #fff;
-  border-color: #fff;
-}
-
-.chips.snow.outline:hover {
-  background: #fff;
-  color: #fff;
-}
-
-.chips.snow > i {
-  color: #424242;
-}
-
-.chips.yellow {
-  background: #e7d507;
-  color: rgba(66, 66, 66, 0.8);
-}
-
-.chips.yellow.outline {
-  background: transparent;
-  color: #e7d507;
-  border-color: #e7d507;
-}
-
-.chips.yellow.outline:hover {
-  background: #e7d507;
-  color: #fff;
-}
-
-.chips.yellow > i {
-  color: #424242;
-}
-
-.chips.yellow > i.close {
-  color: rgba(66, 66, 66, 0.6);
-}
-
-.chips.yellow > i.close:hover {
-  color: #424242;
-}
-
-.chips.purple {
-  background: #6924f0;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.chips.purple.outline {
-  background: transparent;
-  color: #6924f0;
-  border-color: #6924f0;
-}
-
-.chips.purple.outline:hover {
-  background: #6924f0;
-  color: #fff;
-}
-
-.chips.purple > i:nth-child(1) {
-  color: #fff;
-}
-
-.chips.purple > i:nth-child(1).close {
-  color: rgba(66, 66, 66, 0.4);
-}
-
-.chips.purple > i:nth-child(1).close:hover {
-  color: #424242;
-}
-
-.chips.pink {
-  background: #ff87cb;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.chips.pink.outline {
-  background: transparent;
-  color: #ff87cb;
-  border-color: #ff87cb;
-}
-
-.chips.pink.outline:hover {
-  background: #ff87cb;
-  color: #fff;
-}
-
-.chips.pink > i:nth-child(1) {
-  color: #fff;
-}
-
-.chips.pink > i:nth-child(1).close {
-  color: rgba(66, 66, 66, 0.4);
-}
-
-.chips.pink > i:nth-child(1).close:hover {
-  color: #424242;
 }

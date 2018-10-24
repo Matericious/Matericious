@@ -1,7 +1,7 @@
 .card {
   width: 300px;
   height: auto;
-  background: #fff;
+  background: #FFFFFF;
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
@@ -41,7 +41,7 @@
 
 .card > .header > span {
   display: block;
-  color: #99A3A4;
+  color: #9E9E9E;
   font-family: "Roboto", san-serif;
   position: relative;
   font-size: .875rem;
