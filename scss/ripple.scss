@@ -39,15 +39,3 @@
      }
    }
  }
-
-@mixin colorClass($name, $tag) {
-  &.text {
-    > .rippleWave {
-      background: color($name, 0.4) !important;
-    }
-  }
-}
-
-// $color_vars: "cyan", "earth", "night", "ocean", "red", "snow", "yellow", "purple", "pink";
-
-// @include build-color-class(".ripple", $color_vars);
