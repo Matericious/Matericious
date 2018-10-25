@@ -4,7 +4,7 @@ html(lang='en')
   head
     include /includes/head.pug
       body
-          h3 Buttons
+          h3= Buttons
           - var colors = ['white text-black', 'red', 'pink wave', 'purple', 'indigo', 'blue', 'cyan', 'teal ripple', 'green', 'lime', 'yellow', 'amber ripple', 'orange', 'brown', 'grey', 'blue-grey'];
           each color in colors
             button(class='btn '+color)=color + ' button'
