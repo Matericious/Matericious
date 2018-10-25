@@ -1,0 +1,12 @@
+- var title = 'Range Slider'
+doctype
+html(lang='en')
+  head
+    include /includes/head.pug
+      body
+        h3= title
+        - var colors = ['blue', 'green', 'brown', 'pink', 'purple'];
+            each color in colors
+                input(class='range '+color type='range')
+                br
+                br
