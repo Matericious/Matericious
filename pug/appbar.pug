@@ -1,0 +1,46 @@
+- var title = 'App Bar'
+doctype
+html(lang='en')
+  head
+    include /includes/head.pug
+      body
+        h3 title
+        br
+        h2 Basic
+        header.appbar.z-1
+            .wrap
+                section.left
+                    label.title San Francisco
+        br
+        br
+        h2 Default
+        header.appbar.blue.z-1
+            .wrap
+                section.left
+                    a.wave.icon
+                        i.material-icons menu
+                    label.title San Fransisco
+                section.right
+                    a.wave Dashboard
+                    a.wave Favorite
+                    a.wave Account
+        br
+        br
+        h2 Nesting Appbar
+        header.appbar.green.text-white.nesting.z-1
+            .wrap
+                section.left
+                    a.wave.icon
+                        i.material-icons menu
+                    label.title San Fransisco
+                section.right
+                    a.nest.wave.icon(title='notifications')
+                        i.material-icons notifications_none
+                    a.nest.wave Dashboard
+                    a.nest.wave Favorite
+                    a.nest.wave Account
+                    a.wave.icon(open-menu='nesting')
+                        i.material-icons more_vert
+        ul.menu.right(id='nesting')
+        script(src='https://rawgit.com/Matericious/Matericious/master/dist/js/menu.js')
+        script(src='https://rawgit.com/Matericious/Matericious/master/dist/js/appbar.js')
