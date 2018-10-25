@@ -4,10 +4,10 @@ doctype
 html(lang='en')
   head
     include /includes/head.pug
-      body
-          h3= title
-          - var colors = ['red', 'pink', 'purple', 'blue', 'cyan', 'teal', 'green', 'yellow', 'amber', 'orange'];
-          each color in colors
-            label(class='checkbox '+color)
-              input(type='checkbox')
-              span #{color}
+  body
+    h3= title
+    - var colors = ['red', 'pink', 'purple', 'blue', 'cyan', 'teal', 'green', 'yellow', 'amber', 'orange'];
+    each color in colors
+      label(class='checkbox '+color)
+        input(type='checkbox')
+        span #{color}
