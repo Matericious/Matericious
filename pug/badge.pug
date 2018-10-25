@@ -1,0 +1,17 @@
+- var title = 'Badge'
+doctype
+html(lang='en')
+  head
+    include /includes/head.pug
+      body
+        h3= title
+        button.btn.brown.badge(data-badge='5') Notification
+        br
+        br
+        button.btn.text.blue.badge(data-badge='12+')
+            i.material-icons notifications_none
+            | Notifications
+        br
+        br
+        button.btn.round.green.badge(data-badge='1')
+            i.material-icons shopping_cart
