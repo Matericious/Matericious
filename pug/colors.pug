@@ -13,19 +13,24 @@ html(lang='en')
       }
   body
     h3= title
-    - var colors = ['red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green', 'light-green', 'lime', 'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey'];
+    - var colors = ['black', 'white', 'red', 'pink', 'purple', 'deep-purple', 'indigo', 'blue', 'light-blue', 'cyan', 'teal', 'green', 'light-green', 'lime', 'yellow', 'amber', 'orange', 'deep-orange', 'brown', 'grey', 'blue-grey'];
     each color in colors
-      div(class=color+'-light-5')
-      div(class=color+'-light-4')
-      div(class=color+'-light-3')
-      div(class=color+'-light-2')
-      div(class=color+'-light-1')
-      div(class=color)
-      div(class=color+'-dark-1')
-      div(class=color+'-dark-2')
-      div(class=color+'-dark-3')
-      div(class=color+'-dark-4')
-      br
+      case color
+        when 'black'
+        when 'white'
+          div(class=color)
+        default
+          br
+          div(class=color+'-light-5')
+          div(class=color+'-light-4')
+          div(class=color+'-light-3')
+          div(class=color+'-light-2')
+          div(class=color+'-light-1')
+          div(class=color)
+          div(class=color+'-dark-1')
+          div(class=color+'-dark-2')
+          div(class=color+'-dark-3')
+          div(class=color+'-dark-4')
       
     script(type='text/javascript').
       var colors = document.getElementsByTagName('div');
