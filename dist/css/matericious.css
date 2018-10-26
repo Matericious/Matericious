@@ -796,6 +796,7 @@ a {
   vertical-align: middle;
   border-radius: 50%;
 }
+/**/
 .red {
   background: #F44336 !important;
 }
@@ -2332,62 +2333,6 @@ a {
   color: #FFFFFF !important;
 }
 
-.white.outline {
-  color: #FFFFFF !important;
-  background: transparent !important;
-  border: #FFFFFF 1px solid !important;
-}
-.white.outline:hover {
-  color: #fff !important;
-  background: #FFFFFF !important;
-}
-.white.text {
-  background: transparent !important;
-  color: #FFFFFF !important;
-}
-.white.checkbox {
-  background: transparent !important;
-}
-.white.checkbox > input:checked {
-  background: #FFFFFF !important;
-}
-.white.checkbox > input:checked + span::before {
-  border-color: #FFFFFF !important;
-  background: #FFFFFF !important;
-}
-.white.checkbox > input:active + span::before {
-  border-color: #FFFFFF !important;
-}
-.white.radio {
-  background: transparent !important;
-}
-.white.radio input[type="radio"]:checked + label:before {
-  border-color: #FFFFFF !important;
-}
-.white.radio label:after {
-  background: #FFFFFF !important;
-}
-.white.switch {
-  background: transparent !important;
-}
-.white.switch > input:checked ~ span:before {
-  background: #FFFFFF !important;
-}
-.white.switch > input:checked ~ span:after {
-  left: 15px;
-  background: #FFFFFF !important;
-  border-color: #FFFFFF !important;
-}
-.white.text > .rippleWave {
-  background: #FFFFFF !important;
-}
-.white.range {
-  background: #FFFFFF;
-}
-.white.range::-webkit-slider-thumb {
-  background: #FFFFFF;
-}
-
 .red.outline {
   color: #F44336 !important;
   background: transparent !important;
@@ -2434,8 +2379,11 @@ a {
   background: #F44336 !important;
   border-color: #F44336 !important;
 }
+.red.text:hover {
+  background: rgba(244, 67, 54, 0.1) !important;
+}
 .red.text > .rippleWave {
-  background: #F44336 !important;
+  background: rgba(244, 67, 54, 0.2) !important;
 }
 .red.range {
   background: #F44336;
@@ -2490,8 +2438,11 @@ a {
   background: #E91E63 !important;
   border-color: #E91E63 !important;
 }
+.pink.text:hover {
+  background: rgba(233, 30, 99, 0.1) !important;
+}
 .pink.text > .rippleWave {
-  background: #E91E63 !important;
+  background: rgba(233, 30, 99, 0.2) !important;
 }
 .pink.range {
   background: #E91E63;
@@ -2546,14 +2497,76 @@ a {
   background: #9C27B0 !important;
   border-color: #9C27B0 !important;
 }
+.purple.text:hover {
+  background: rgba(156, 39, 176, 0.1) !important;
+}
 .purple.text > .rippleWave {
-  background: #9C27B0 !important;
+  background: rgba(156, 39, 176, 0.2) !important;
 }
 .purple.range {
   background: #9C27B0;
 }
 .purple.range::-webkit-slider-thumb {
   background: #9C27B0;
+}
+
+.deep-purple.outline {
+  color: #673AB7 !important;
+  background: transparent !important;
+  border: #673AB7 1px solid !important;
+}
+.deep-purple.outline:hover {
+  color: #fff !important;
+  background: #673AB7 !important;
+}
+.deep-purple.text {
+  background: transparent !important;
+  color: #673AB7 !important;
+}
+.deep-purple.checkbox {
+  background: transparent !important;
+}
+.deep-purple.checkbox > input:checked {
+  background: #673AB7 !important;
+}
+.deep-purple.checkbox > input:checked + span::before {
+  border-color: #673AB7 !important;
+  background: #673AB7 !important;
+}
+.deep-purple.checkbox > input:active + span::before {
+  border-color: #673AB7 !important;
+}
+.deep-purple.radio {
+  background: transparent !important;
+}
+.deep-purple.radio input[type="radio"]:checked + label:before {
+  border-color: #673AB7 !important;
+}
+.deep-purple.radio label:after {
+  background: #673AB7 !important;
+}
+.deep-purple.switch {
+  background: transparent !important;
+}
+.deep-purple.switch > input:checked ~ span:before {
+  background: #673AB7 !important;
+}
+.deep-purple.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #673AB7 !important;
+  border-color: #673AB7 !important;
+}
+.deep-purple.text:hover {
+  background: rgba(103, 58, 183, 0.1) !important;
+}
+.deep-purple.text > .rippleWave {
+  background: rgba(103, 58, 183, 0.2) !important;
+}
+.deep-purple.range {
+  background: #673AB7;
+}
+.deep-purple.range::-webkit-slider-thumb {
+  background: #673AB7;
 }
 
 .indigo.outline {
@@ -2602,8 +2615,11 @@ a {
   background: #3F51B5 !important;
   border-color: #3F51B5 !important;
 }
+.indigo.text:hover {
+  background: rgba(63, 81, 181, 0.1) !important;
+}
 .indigo.text > .rippleWave {
-  background: #3F51B5 !important;
+  background: rgba(63, 81, 181, 0.2) !important;
 }
 .indigo.range {
   background: #3F51B5;
@@ -2658,14 +2674,76 @@ a {
   background: #2196F3 !important;
   border-color: #2196F3 !important;
 }
+.blue.text:hover {
+  background: rgba(33, 150, 243, 0.1) !important;
+}
 .blue.text > .rippleWave {
-  background: #2196F3 !important;
+  background: rgba(33, 150, 243, 0.2) !important;
 }
 .blue.range {
   background: #2196F3;
 }
 .blue.range::-webkit-slider-thumb {
   background: #2196F3;
+}
+
+.light-blue.outline {
+  color: #03A9F4 !important;
+  background: transparent !important;
+  border: #03A9F4 1px solid !important;
+}
+.light-blue.outline:hover {
+  color: #fff !important;
+  background: #03A9F4 !important;
+}
+.light-blue.text {
+  background: transparent !important;
+  color: #03A9F4 !important;
+}
+.light-blue.checkbox {
+  background: transparent !important;
+}
+.light-blue.checkbox > input:checked {
+  background: #03A9F4 !important;
+}
+.light-blue.checkbox > input:checked + span::before {
+  border-color: #03A9F4 !important;
+  background: #03A9F4 !important;
+}
+.light-blue.checkbox > input:active + span::before {
+  border-color: #03A9F4 !important;
+}
+.light-blue.radio {
+  background: transparent !important;
+}
+.light-blue.radio input[type="radio"]:checked + label:before {
+  border-color: #03A9F4 !important;
+}
+.light-blue.radio label:after {
+  background: #03A9F4 !important;
+}
+.light-blue.switch {
+  background: transparent !important;
+}
+.light-blue.switch > input:checked ~ span:before {
+  background: #03A9F4 !important;
+}
+.light-blue.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #03A9F4 !important;
+  border-color: #03A9F4 !important;
+}
+.light-blue.text:hover {
+  background: rgba(3, 169, 244, 0.1) !important;
+}
+.light-blue.text > .rippleWave {
+  background: rgba(3, 169, 244, 0.2) !important;
+}
+.light-blue.range {
+  background: #03A9F4;
+}
+.light-blue.range::-webkit-slider-thumb {
+  background: #03A9F4;
 }
 
 .cyan.outline {
@@ -2714,8 +2792,11 @@ a {
   background: #00BCD4 !important;
   border-color: #00BCD4 !important;
 }
+.cyan.text:hover {
+  background: rgba(0, 188, 212, 0.1) !important;
+}
 .cyan.text > .rippleWave {
-  background: #00BCD4 !important;
+  background: rgba(0, 188, 212, 0.2) !important;
 }
 .cyan.range {
   background: #00BCD4;
@@ -2770,8 +2851,11 @@ a {
   background: #009688 !important;
   border-color: #009688 !important;
 }
+.teal.text:hover {
+  background: rgba(0, 150, 136, 0.1) !important;
+}
 .teal.text > .rippleWave {
-  background: #009688 !important;
+  background: rgba(0, 150, 136, 0.2) !important;
 }
 .teal.range {
   background: #009688;
@@ -2826,14 +2910,76 @@ a {
   background: #4CAF50 !important;
   border-color: #4CAF50 !important;
 }
+.green.text:hover {
+  background: rgba(76, 175, 80, 0.1) !important;
+}
 .green.text > .rippleWave {
-  background: #4CAF50 !important;
+  background: rgba(76, 175, 80, 0.2) !important;
 }
 .green.range {
   background: #4CAF50;
 }
 .green.range::-webkit-slider-thumb {
   background: #4CAF50;
+}
+
+.light-green.outline {
+  color: #8BC34A !important;
+  background: transparent !important;
+  border: #8BC34A 1px solid !important;
+}
+.light-green.outline:hover {
+  color: #fff !important;
+  background: #8BC34A !important;
+}
+.light-green.text {
+  background: transparent !important;
+  color: #8BC34A !important;
+}
+.light-green.checkbox {
+  background: transparent !important;
+}
+.light-green.checkbox > input:checked {
+  background: #8BC34A !important;
+}
+.light-green.checkbox > input:checked + span::before {
+  border-color: #8BC34A !important;
+  background: #8BC34A !important;
+}
+.light-green.checkbox > input:active + span::before {
+  border-color: #8BC34A !important;
+}
+.light-green.radio {
+  background: transparent !important;
+}
+.light-green.radio input[type="radio"]:checked + label:before {
+  border-color: #8BC34A !important;
+}
+.light-green.radio label:after {
+  background: #8BC34A !important;
+}
+.light-green.switch {
+  background: transparent !important;
+}
+.light-green.switch > input:checked ~ span:before {
+  background: #8BC34A !important;
+}
+.light-green.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #8BC34A !important;
+  border-color: #8BC34A !important;
+}
+.light-green.text:hover {
+  background: rgba(139, 195, 74, 0.1) !important;
+}
+.light-green.text > .rippleWave {
+  background: rgba(139, 195, 74, 0.2) !important;
+}
+.light-green.range {
+  background: #8BC34A;
+}
+.light-green.range::-webkit-slider-thumb {
+  background: #8BC34A;
 }
 
 .lime.outline {
@@ -2882,8 +3028,11 @@ a {
   background: #CDDC39 !important;
   border-color: #CDDC39 !important;
 }
+.lime.text:hover {
+  background: rgba(205, 220, 57, 0.1) !important;
+}
 .lime.text > .rippleWave {
-  background: #CDDC39 !important;
+  background: rgba(205, 220, 57, 0.2) !important;
 }
 .lime.range {
   background: #CDDC39;
@@ -2938,8 +3087,11 @@ a {
   background: #FFEB3B !important;
   border-color: #FFEB3B !important;
 }
+.yellow.text:hover {
+  background: rgba(255, 235, 59, 0.1) !important;
+}
 .yellow.text > .rippleWave {
-  background: #FFEB3B !important;
+  background: rgba(255, 235, 59, 0.2) !important;
 }
 .yellow.range {
   background: #FFEB3B;
@@ -2994,8 +3146,11 @@ a {
   background: #FFC107 !important;
   border-color: #FFC107 !important;
 }
+.amber.text:hover {
+  background: rgba(255, 193, 7, 0.1) !important;
+}
 .amber.text > .rippleWave {
-  background: #FFC107 !important;
+  background: rgba(255, 193, 7, 0.2) !important;
 }
 .amber.range {
   background: #FFC107;
@@ -3050,14 +3205,76 @@ a {
   background: #FF9800 !important;
   border-color: #FF9800 !important;
 }
+.orange.text:hover {
+  background: rgba(255, 152, 0, 0.1) !important;
+}
 .orange.text > .rippleWave {
-  background: #FF9800 !important;
+  background: rgba(255, 152, 0, 0.2) !important;
 }
 .orange.range {
   background: #FF9800;
 }
 .orange.range::-webkit-slider-thumb {
   background: #FF9800;
+}
+
+.deep-orange.outline {
+  color: #FF5722 !important;
+  background: transparent !important;
+  border: #FF5722 1px solid !important;
+}
+.deep-orange.outline:hover {
+  color: #fff !important;
+  background: #FF5722 !important;
+}
+.deep-orange.text {
+  background: transparent !important;
+  color: #FF5722 !important;
+}
+.deep-orange.checkbox {
+  background: transparent !important;
+}
+.deep-orange.checkbox > input:checked {
+  background: #FF5722 !important;
+}
+.deep-orange.checkbox > input:checked + span::before {
+  border-color: #FF5722 !important;
+  background: #FF5722 !important;
+}
+.deep-orange.checkbox > input:active + span::before {
+  border-color: #FF5722 !important;
+}
+.deep-orange.radio {
+  background: transparent !important;
+}
+.deep-orange.radio input[type="radio"]:checked + label:before {
+  border-color: #FF5722 !important;
+}
+.deep-orange.radio label:after {
+  background: #FF5722 !important;
+}
+.deep-orange.switch {
+  background: transparent !important;
+}
+.deep-orange.switch > input:checked ~ span:before {
+  background: #FF5722 !important;
+}
+.deep-orange.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #FF5722 !important;
+  border-color: #FF5722 !important;
+}
+.deep-orange.text:hover {
+  background: rgba(255, 87, 34, 0.1) !important;
+}
+.deep-orange.text > .rippleWave {
+  background: rgba(255, 87, 34, 0.2) !important;
+}
+.deep-orange.range {
+  background: #FF5722;
+}
+.deep-orange.range::-webkit-slider-thumb {
+  background: #FF5722;
 }
 
 .brown.outline {
@@ -3106,8 +3323,11 @@ a {
   background: #795548 !important;
   border-color: #795548 !important;
 }
+.brown.text:hover {
+  background: rgba(121, 85, 72, 0.1) !important;
+}
 .brown.text > .rippleWave {
-  background: #795548 !important;
+  background: rgba(121, 85, 72, 0.2) !important;
 }
 .brown.range {
   background: #795548;
@@ -3162,8 +3382,11 @@ a {
   background: #9E9E9E !important;
   border-color: #9E9E9E !important;
 }
+.grey.text:hover {
+  background: rgba(158, 158, 158, 0.1) !important;
+}
 .grey.text > .rippleWave {
-  background: #9E9E9E !important;
+  background: rgba(158, 158, 158, 0.2) !important;
 }
 .grey.range {
   background: #9E9E9E;
@@ -3218,14 +3441,76 @@ a {
   background: #607D8B !important;
   border-color: #607D8B !important;
 }
+.blue-grey.text:hover {
+  background: rgba(96, 125, 139, 0.1) !important;
+}
 .blue-grey.text > .rippleWave {
-  background: #607D8B !important;
+  background: rgba(96, 125, 139, 0.2) !important;
 }
 .blue-grey.range {
   background: #607D8B;
 }
 .blue-grey.range::-webkit-slider-thumb {
   background: #607D8B;
+}
+
+.white.outline {
+  color: #FFFFFF !important;
+  background: transparent !important;
+  border: #FFFFFF 1px solid !important;
+}
+.white.outline:hover {
+  color: #fff !important;
+  background: #FFFFFF !important;
+}
+.white.text {
+  background: transparent !important;
+  color: #FFFFFF !important;
+}
+.white.checkbox {
+  background: transparent !important;
+}
+.white.checkbox > input:checked {
+  background: #FFFFFF !important;
+}
+.white.checkbox > input:checked + span::before {
+  border-color: #FFFFFF !important;
+  background: #FFFFFF !important;
+}
+.white.checkbox > input:active + span::before {
+  border-color: #FFFFFF !important;
+}
+.white.radio {
+  background: transparent !important;
+}
+.white.radio input[type="radio"]:checked + label:before {
+  border-color: #FFFFFF !important;
+}
+.white.radio label:after {
+  background: #FFFFFF !important;
+}
+.white.switch {
+  background: transparent !important;
+}
+.white.switch > input:checked ~ span:before {
+  background: #FFFFFF !important;
+}
+.white.switch > input:checked ~ span:after {
+  left: 15px;
+  background: #FFFFFF !important;
+  border-color: #FFFFFF !important;
+}
+.white.text:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+.white.text > .rippleWave {
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+.white.range {
+  background: #FFFFFF;
+}
+.white.range::-webkit-slider-thumb {
+  background: #FFFFFF;
 }
 * {
   -webkit-user-select: none;
