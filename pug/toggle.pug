@@ -6,7 +6,7 @@ html(lang='en')
     include /includes/head.pug
       body
           h3= title
-          - var colors = ['basic', 'earth', 'night', 'ocean', 'red', 'yellow', 'pink'];
+          - var colors = ['red', 'pink', 'purple', 'blue', 'cyan', 'teal', 'green', 'yellow', 'amber', 'orange'];
           each color in colors
             label(class='switch '+color)
               input(type='checkbox')
