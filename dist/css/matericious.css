@@ -1584,7 +1584,7 @@
 }
 
 .red.switch > input:checked ~ span:before {
-  background: rgba(244, 67, 54, 0.5) !important;
+  background: rgba(244, 67, 54, 0.54) !important;
 }
 
 .red.switch > input:checked ~ span:after {
@@ -1659,7 +1659,7 @@
 }
 
 .pink.switch > input:checked ~ span:before {
-  background: rgba(233, 30, 99, 0.5) !important;
+  background: rgba(233, 30, 99, 0.54) !important;
 }
 
 .pink.switch > input:checked ~ span:after {
@@ -1734,7 +1734,7 @@
 }
 
 .purple.switch > input:checked ~ span:before {
-  background: rgba(156, 39, 176, 0.5) !important;
+  background: rgba(156, 39, 176, 0.54) !important;
 }
 
 .purple.switch > input:checked ~ span:after {
@@ -1809,7 +1809,7 @@
 }
 
 .deep-purple.switch > input:checked ~ span:before {
-  background: rgba(103, 58, 183, 0.5) !important;
+  background: rgba(103, 58, 183, 0.54) !important;
 }
 
 .deep-purple.switch > input:checked ~ span:after {
@@ -1884,7 +1884,7 @@
 }
 
 .indigo.switch > input:checked ~ span:before {
-  background: rgba(63, 81, 181, 0.5) !important;
+  background: rgba(63, 81, 181, 0.54) !important;
 }
 
 .indigo.switch > input:checked ~ span:after {
@@ -1959,7 +1959,7 @@
 }
 
 .blue.switch > input:checked ~ span:before {
-  background: rgba(33, 150, 243, 0.5) !important;
+  background: rgba(33, 150, 243, 0.54) !important;
 }
 
 .blue.switch > input:checked ~ span:after {
@@ -2034,7 +2034,7 @@
 }
 
 .light-blue.switch > input:checked ~ span:before {
-  background: rgba(3, 169, 244, 0.5) !important;
+  background: rgba(3, 169, 244, 0.54) !important;
 }
 
 .light-blue.switch > input:checked ~ span:after {
@@ -2109,7 +2109,7 @@
 }
 
 .cyan.switch > input:checked ~ span:before {
-  background: rgba(0, 188, 212, 0.5) !important;
+  background: rgba(0, 188, 212, 0.54) !important;
 }
 
 .cyan.switch > input:checked ~ span:after {
@@ -2184,7 +2184,7 @@
 }
 
 .teal.switch > input:checked ~ span:before {
-  background: rgba(0, 150, 136, 0.5) !important;
+  background: rgba(0, 150, 136, 0.54) !important;
 }
 
 .teal.switch > input:checked ~ span:after {
@@ -2259,7 +2259,7 @@
 }
 
 .green.switch > input:checked ~ span:before {
-  background: rgba(76, 175, 80, 0.5) !important;
+  background: rgba(76, 175, 80, 0.54) !important;
 }
 
 .green.switch > input:checked ~ span:after {
@@ -2334,7 +2334,7 @@
 }
 
 .light-green.switch > input:checked ~ span:before {
-  background: rgba(139, 195, 74, 0.5) !important;
+  background: rgba(139, 195, 74, 0.54) !important;
 }
 
 .light-green.switch > input:checked ~ span:after {
@@ -2409,7 +2409,7 @@
 }
 
 .lime.switch > input:checked ~ span:before {
-  background: rgba(205, 220, 57, 0.5) !important;
+  background: rgba(205, 220, 57, 0.54) !important;
 }
 
 .lime.switch > input:checked ~ span:after {
@@ -2484,7 +2484,7 @@
 }
 
 .yellow.switch > input:checked ~ span:before {
-  background: rgba(255, 235, 59, 0.5) !important;
+  background: rgba(255, 235, 59, 0.54) !important;
 }
 
 .yellow.switch > input:checked ~ span:after {
@@ -2559,7 +2559,7 @@
 }
 
 .amber.switch > input:checked ~ span:before {
-  background: rgba(255, 193, 7, 0.5) !important;
+  background: rgba(255, 193, 7, 0.54) !important;
 }
 
 .amber.switch > input:checked ~ span:after {
@@ -2634,7 +2634,7 @@
 }
 
 .orange.switch > input:checked ~ span:before {
-  background: rgba(255, 152, 0, 0.5) !important;
+  background: rgba(255, 152, 0, 0.54) !important;
 }
 
 .orange.switch > input:checked ~ span:after {
@@ -2709,7 +2709,7 @@
 }
 
 .deep-orange.switch > input:checked ~ span:before {
-  background: rgba(255, 87, 34, 0.5) !important;
+  background: rgba(255, 87, 34, 0.54) !important;
 }
 
 .deep-orange.switch > input:checked ~ span:after {
@@ -2784,7 +2784,7 @@
 }
 
 .brown.switch > input:checked ~ span:before {
-  background: rgba(121, 85, 72, 0.5) !important;
+  background: rgba(121, 85, 72, 0.54) !important;
 }
 
 .brown.switch > input:checked ~ span:after {
@@ -2859,7 +2859,7 @@
 }
 
 .grey.switch > input:checked ~ span:before {
-  background: rgba(158, 158, 158, 0.5) !important;
+  background: rgba(158, 158, 158, 0.54) !important;
 }
 
 .grey.switch > input:checked ~ span:after {
@@ -2934,7 +2934,7 @@
 }
 
 .blue-grey.switch > input:checked ~ span:before {
-  background: rgba(96, 125, 139, 0.5) !important;
+  background: rgba(96, 125, 139, 0.54) !important;
 }
 
 .blue-grey.switch > input:checked ~ span:after {
@@ -3009,7 +3009,7 @@
 }
 
 .white.switch > input:checked ~ span:before {
-  background: rgba(255, 255, 255, 0.5) !important;
+  background: rgba(255, 255, 255, 0.54) !important;
 }
 
 .white.switch > input:checked ~ span:after {
@@ -4307,7 +4307,6 @@ btn.btn[ts]:hover {
   height: 35px;
 }
 
-/**/
 .checkbox {
   position: relative;
   display: inline-block;
@@ -4536,10 +4535,10 @@ a {
 .text-field > .line-ripple {
   width: 100%;
   height: 2px;
-  background: #6200ee;
+  background: #3F51B5;
   padding: 0;
   position: absolute;
-  top: 45px;
+  top: 55px;
   left: 0;
   transform: scaleX(0);
   transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
@@ -4575,7 +4574,7 @@ a {
 
 .text-field > input:focus ~ .floating-label,
 .text-field textarea:focus ~ .floating-label {
-  color: #6200ee;
+  color: #3F51B5;
 }
 
 .text-field > input:focus ~ .line-ripple,
@@ -4655,11 +4654,11 @@ a {
 
 .text-field.outlined > input:focus {
   background: transparent;
-  border: 2px solid #6200ee;
+  border: 2px solid #3F51B5;
 }
 
 .text-field.outlined > input:focus ~ .floating-label, .text-field.outlined > input:not(:placeholder-shown) ~ .floating-label {
-  top: -7px;
+  top: -10px;
   left: 10px;
   font-size: 12px;
   will-change: top, font-size, color;
@@ -4669,6 +4668,23 @@ a {
 
 .text-field.outlined > .line-ripple {
   display: none;
+}
+
+.text-field.outlined.capsule > .floating-label {
+  left: 20px;
+}
+
+.text-field.outlined.capsule .lead ~ .floating-label {
+  left: 45px;
+}
+
+.text-field.outlined.capsule > input {
+  padding: 12px 15px;
+  border-radius: 28px;
+}
+
+.text-field.outlined.capsule > input:focus ~ .floating-label, .text-field.outlined.capsule > input:not(:placeholder-shown) ~ .floating-label {
+  left: 25px;
 }
 
 .text-field.fill > input,
@@ -4910,10 +4926,10 @@ a {
 .text-field > .line-ripple {
   width: 100%;
   height: 2px;
-  background: #6200ee;
+  background: #3F51B5;
   padding: 0;
   position: absolute;
-  top: 45px;
+  top: 55px;
   left: 0;
   transform: scaleX(0);
   transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
@@ -4949,7 +4965,7 @@ a {
 
 .text-field > input:focus ~ .floating-label,
 .text-field textarea:focus ~ .floating-label {
-  color: #6200ee;
+  color: #3F51B5;
 }
 
 .text-field > input:focus ~ .line-ripple,
@@ -5029,11 +5045,11 @@ a {
 
 .text-field.outlined > input:focus {
   background: transparent;
-  border: 2px solid #6200ee;
+  border: 2px solid #3F51B5;
 }
 
 .text-field.outlined > input:focus ~ .floating-label, .text-field.outlined > input:not(:placeholder-shown) ~ .floating-label {
-  top: -7px;
+  top: -10px;
   left: 10px;
   font-size: 12px;
   will-change: top, font-size, color;
@@ -5043,6 +5059,23 @@ a {
 
 .text-field.outlined > .line-ripple {
   display: none;
+}
+
+.text-field.outlined.capsule > .floating-label {
+  left: 20px;
+}
+
+.text-field.outlined.capsule .lead ~ .floating-label {
+  left: 45px;
+}
+
+.text-field.outlined.capsule > input {
+  padding: 12px 15px;
+  border-radius: 28px;
+}
+
+.text-field.outlined.capsule > input:focus ~ .floating-label, .text-field.outlined.capsule > input:not(:placeholder-shown) ~ .floating-label {
+  left: 25px;
 }
 
 .text-field.fill > input,
