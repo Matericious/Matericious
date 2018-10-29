@@ -14,8 +14,15 @@ function ready(callback) {
 function call($class, $event, $func) {
   var elems = document.querySelectorAll($class);
   for (i = 0; i < elems.length; ++i) {
-    elems[i].addEventListener($event, $func);
+    addEvent(elems[i], $event, $func);
   }
+}
+
+function $handle(callback){
+  try{
+    callback();
+  }
+  catch(err){}
 }
 
 function $getChild(parent, child, n){
@@ -39,15 +46,17 @@ function hexToRgb(hex) {
 }
 
 function hasClass(el, className) {
-  if (el.classList)
-    return el.classList.contains(className)
-  else
-    return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'))
+  $handle(function(){
+    if (el.classList)
+      return el.classList.contains(className)
+    else
+      return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
+  });
 }
 
 function $addClass(el, className) {
-  if (el.classList) el.classList.add(className);
-  else if (!hasClass(el, className)) el.className += " " + className;
+    if (el.classList) el.classList.add(className);
+    else if (!hasClass(el, className)) el.className += " " + className;
 }
 
 function $removeClass(el, className) {
@@ -164,11 +173,11 @@ ready(function() {
 function drawer() {
     var _drawer = $get(".drawer"),
       _doc = $get("body");
-    if (_drawer.className.includes("active")) {
+    if (hasClass(_drawer, "active")) {
       _drawer.style.left = 0 + "px";
       _doc.style.marginLeft = _drawer.offsetWidth + "px";
     }
-    if (_drawer.className.includes("permanent")) {
+    if (hasClass(_drawer, "permanent")) {
       $addClass(_drawer, "notrans");
       $addClass(_doc, "notrans");
       _drawer.style.left = 0 + "px";
@@ -180,7 +189,6 @@ function drawer() {
         var clickTimes = 0;
         var _drawer = $get(".drawer"),
           _doc = $get("body");
-
         if (_drawer.style.left != 0 + "px") {
           if (_navType == "overlay") {
             _drawer.style.left = 0 + "px";
