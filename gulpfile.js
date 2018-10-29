@@ -3,6 +3,7 @@ const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
+const include = require('gulp-include');
 
 gulp.task('compile', function (cb) {
   return gulp.src('./scss/*.scss')
@@ -41,8 +42,9 @@ gulp.task('minjs', function () {
 });
 
 gulp.task('combinejs', function () {
-  return gulp.src('./dist/js/*.js')
-    .pipe(concat('matericious.js'))
+  return gulp.src('./dist/js/matericious.scripts')
+    .pipe(include())
+    .pipe(rename('matericious.js'))
     .pipe(gulp.dest('./dist/js/'));
 });
 

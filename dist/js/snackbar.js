@@ -9,18 +9,18 @@ function Snackbar(data, callback) {
   }
 
   if (!data.theme) data.theme = "dark";
-  
+
   if(!data.actionButton) data.actionButton = "";
-  
+
   if(data.pos.vertical == "top"){
     closeAni = "slideDownTop";
     openAni = "slideUpTop";
   }
-    
-  var snackbarElem = $get("snackbar");  
+
+  var snackbarElem = $get("snackbar");
   snackbarElem.innerHTML = "";
   snackbarElem.className = "";
-  
+
   var snackbarClass = data.type + " " + data.pos.vertical + " " + data.pos.horizontal + " " + data.theme;
 
   snackbarElem.className += snackbarClass;
@@ -40,10 +40,10 @@ function Snackbar(data, callback) {
   $get(".SnackAction").addEventListener("click", function() {
     callback(true);
     close();
-  });  
-  
+  });
+
   $get(".snackbar").className += " "+openAni;
-  
+
   function timer(time){
     var timer;
     if(time != null){
@@ -53,14 +53,10 @@ function Snackbar(data, callback) {
        },time);
      }
   }
-  
+
   function close(){
      $get(".snackbar").className += " "+closeAni;
   }
-  
-  timer(data.time);
-}
 
-function $get(e) {
-  return document.querySelector(e);
+  timer(data.time);
 }

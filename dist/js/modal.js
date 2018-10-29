@@ -8,7 +8,7 @@ function Modal(data, callback) {
   if (!data.theme) data.theme = "";
 
   if (!data.title) data.title = "Modal";
-  
+
   if (!data.overlayStyle) data.overlayStyle = "";
 
   if (data.overlay === false) {
@@ -68,10 +68,10 @@ function Modal(data, callback) {
     data.modalStyle +
     '"><header>' +
     data.title +
-    "</header>" +  
+    "</header>" +
     '<main><div class="input '+data.modalStyle+'"><input required="required" autofocus/>'+
     '<label>'+data.placeholder+'</label></div><span></span></main>'+
-      
+
     '<action><button class="actionTwo">' +
     data.secondaryButton +
     '</button><button class="actionOne">' +
@@ -88,7 +88,7 @@ function Modal(data, callback) {
     data.theme +
     " " +
     data.overlayStyle;
-  
+
   if (data.type == "message") {
     modalElem.innerHTML = messageModalHTML;
   } else if (data.type == "decision") {
@@ -131,8 +131,4 @@ function Modal(data, callback) {
   }
 
   timer(data.time);
-}
-
-function $get(e) {
-  return document.querySelector(e);
 }

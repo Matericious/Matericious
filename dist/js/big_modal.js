@@ -4,7 +4,7 @@ function BigModal(data, callback) {
 
   modalElem.className += "fadeIn";
   modal.className += " slideDownIn";
-  
+
   function timer(time) {
     var timer;
     if (time != null) {
@@ -33,13 +33,4 @@ function BigModal(data, callback) {
   }
 
   timer(data.time);
-}
-
-function $get(e) {
-  return document.querySelector(e);
-}
-
-
-function $getChild(parent, child, n){
-  return document.querySelectorAll(parent+' '+child)[n];
 }

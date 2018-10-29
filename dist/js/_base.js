@@ -18,6 +18,10 @@ function call($class, $event, $func) {
   }
 }
 
+function $getChild(parent, child, n){
+  return document.querySelectorAll(parent+' '+child)[n];
+}
+
 function $get(e) {
   return document.querySelector(e);
 }

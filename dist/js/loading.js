@@ -6,44 +6,44 @@ function LoadingModal(data, callback) {
       horizontal: "center"
     };
   }
-  
+
   if(!data.theme)
     data.theme = "";
-  
+
   if(!data.title)
     data.title = "Please wait";
-  
+
   if(!data.message)
     data.message = "Loading data.....";
-  
+
   if(data.overlay === false){
      data.overlay = ""
   }else{
      data.overlay = "overlay"
   }
-    
-  var modalElem = $get("modal-con");  
+
+  var modalElem = $get("modal-con");
   modalElem.innerHTML = "";
   modalElem.className = "";
-  
+
   var modalClass = data.overlay + " " + data.pos.vertical + " " + data.pos.horizontal + " " + data.theme;
 
   modalElem.className += modalClass;
-  
-  var smallLoadingModalHTML = 
+
+  var smallLoadingModalHTML =
     '<modal class="loader '+data.type+'">'+
       '<svg md-loader stroke-width="5" viewBox="0 0 66 66">'+
        '<circle cx="33" cy="33" r="25" />'+
     '</svg></modal>';
-  
-  var mediumLoadingModalHTML = 
+
+  var mediumLoadingModalHTML =
        '<modal class="loader '+data.type+'">'+
           '<svg md-loader stroke-width="5" viewBox="0 0 66 66">'+
              '<circle cx="33" cy="33" r="25" />'+
           '</svg><span>Loading</span>'+
        '</modal>';
-  
-  var largeLoadingModalHTML = 
+
+  var largeLoadingModalHTML =
        '<modal class="loader">'+
           '<header>'+data.title+'</header>'+
           '<main><div>'+
@@ -60,10 +60,10 @@ function LoadingModal(data, callback) {
   }else{
      modalElem.innerHTML = largeLoadingModalHTML;
   }
-  
+
   $get("modal-con").className += " fadeIn";
   $get("modal").className += " slideDownIn";
-  
+
   function timer(time){
     var timer;
     if(time != null){
@@ -73,7 +73,7 @@ function LoadingModal(data, callback) {
        },time);
      }
   }
-  
+
   function close(){
      $get("modal-con").classList.remove("fadeIn");
      $get("modal").classList.remove("slideDownIn");
@@ -81,8 +81,4 @@ function LoadingModal(data, callback) {
   }
 
   timer(data.time);
-}
-
-function $get(e) {
-  return document.querySelector(e);
 }
