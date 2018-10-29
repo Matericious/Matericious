@@ -3,32 +3,40 @@ const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
-const include = require('gulp-include');
 
 gulp.task('compile', function (cb) {
-  return gulp.src('./scss/*.scss')
+  return gulp.src('scss/*.scss')
     .pipe(sass({ outputStyle: 'expanded' })
       .on('error', function (err) { cb(err); }))
-    .pipe(gulp.dest('./dist/css/'));
+    .pipe(gulp.dest('dist/css/'));
+});
+
+gulp.task('combinecss', function (cb) {
+  return gulp.src('scss/matericious.scss')
+    .pipe(sass({ outputStyle: 'expanded' })
+      .on('error', function (err) { cb(err); }))
+    .pipe(gulp.dest('dist/css/'));
 });
 
 gulp.task('mincss', function (cb) {
-  return gulp.src('./scss/matericious.scss')
+  return gulp.src('scss/matericious.scss')
     .pipe(sass({ outputStyle: 'compressed' })
       .on('error', function (err) { cb(err); }))
     .pipe(rename('matericious.min.css'))
-    .pipe(gulp.dest('./dist/css/'));
-});
-gulp.task('combinecss', function (cb) {
-  return gulp.src('./scss/matericious.scss')
-    .pipe(sass({ outputStyle: 'expanded' })
-      .on('error', function (err) { cb(err); }))
-    .pipe(rename('matericious.css'))
-    .pipe(gulp.dest('./dist/css/'));
+    .pipe(gulp.dest('dist/css/'));
 });
 
 gulp.task('sass:watch', function () {
   gulp.watch('./scss/*.scss', ['scss']);
+});
+
+gulp.task('combinejs', function () {
+  return gulp.src([
+  	'dist/js/_base.js',
+  	'dist/js/*.js',
+  	'!dist/js/matericious*.js'])
+    .pipe(concat('matericious.js'))
+    .pipe(gulp.dest('dist/js/'));
 });
 
 gulp.task('minjs', function () {
@@ -38,15 +46,9 @@ gulp.task('minjs', function () {
       path.basename += ".min";
       path.extname = ".js";
     }))
-    .pipe(gulp.dest('./dist/js/'));
+    .pipe(gulp.dest('dist/js/'));
 });
 
-gulp.task('combinejs', function () {
-  return gulp.src('./dist/js/matericious.scripts')
-    .pipe(include())
-    .pipe(rename('matericious.js'))
-    .pipe(gulp.dest('./dist/js/'));
-});
 
 gulp.task('js', gulp.series(['combinejs', 'minjs']));
 gulp.task('css', gulp.series(['compile', 'combinecss', 'mincss']));
