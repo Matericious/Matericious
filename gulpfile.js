@@ -3,6 +3,7 @@ const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
+const babel = require('gulp-babel');
 
 gulp.task('compile', function (cb) {
   return gulp.src('scss/*.scss')
@@ -28,6 +29,14 @@ gulp.task('mincss', function (cb) {
 
 gulp.task('sass:watch', function () {
   gulp.watch('./scss/*.scss', ['scss']);
+});
+
+gulp.task('compilejs', () =>{
+  return gulp.src('babel/*.js')
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
+    .pipe(gulp.dest('dist/js'))
 });
 
 gulp.task('combinejs', function () {
