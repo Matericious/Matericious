@@ -1,38 +1,44 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const rename = require('gulp-rename');
-const uglify = require('gulp-uglify');
-const concat = require('gulp-concat');
-const babel = require('gulp-babel');
-const include = require('gulp-include');
+const gulp = require('gulp'),
+path = require('path'),
+sass = require('gulp-sass'),
+rename = require('gulp-rename'),
+header = require('gulp-header-comment'),
+uglify = require('gulp-uglify'),
+concat = require('gulp-concat'),
+babel = require('gulp-babel'),
+include = require('gulp-include');
 
-gulp.task('compile', function (cb) {
-  return gulp.src('scss/*.scss')
+gulp.task('compile',(cb) => {
+  return gulp.src('src/scss/**/*.scss')
     .pipe(sass({ outputStyle: 'expanded' })
       .on('error', function (err) { cb(err); }))
+    .pipe(header({file:path.join(__dirname, 'src/info.txt')}))
+    .pipe(gulp.dest('css/'));
+});
+
+gulp.task('combinecss',(cb) => {
+  return gulp.src('src/scss/**/*.scss')
+    .pipe(concat('matericious.css'))
+    .pipe(sass({ outputStyle: 'expanded' })
+      .on('error', function (err) { cb(err); }))
+    .pipe(header({file:path.join(__dirname, 'src/info.txt')}))
     .pipe(gulp.dest('dist/css/'));
 });
 
-gulp.task('combinecss', function (cb) {
-  return gulp.src('scss/matericious.scss')
-    .pipe(sass({ outputStyle: 'expanded' })
-      .on('error', function (err) { cb(err); }))
-    .pipe(gulp.dest('dist/css/'));
-});
-
-gulp.task('mincss', function (cb) {
-  return gulp.src('scss/matericious.scss')
+gulp.task('mincss',(cb) => {
+  return gulp.src('src/scss/**/*.scss')
+    .pipe(concat('matericious.min.css'))
     .pipe(sass({ outputStyle: 'compressed' })
       .on('error', function (err) { cb(err); }))
-    .pipe(rename('matericious.min.css'))
+    .pipe(header({file:path.join(__dirname, 'src/info.txt')}))
     .pipe(gulp.dest('dist/css/'));
 });
 
-gulp.task('sass:watch', function () {
-  gulp.watch('./scss/*.scss', ['scss']);
+gulp.task('sass:watch',() => {
+  gulp.watch('src/scss/**/*.scss', ['scss']);
 });
 
-gulp.task('compilejs', () =>{
+gulp.task('compilejs', () => {
   return gulp.src('dist/js/*.js')
     .pipe(babel({
       presets: ['@babel/env']
@@ -40,14 +46,14 @@ gulp.task('compilejs', () =>{
     .pipe(gulp.dest('dist/js'))
 });
 
-gulp.task('add_base', function(){
-  return gulp.src('babel/*.js')
+gulp.task('add_base',() => {
+  return gulp.src('src/js/*.js')
     .pipe(include())
        .on('error', console.log)
     .pipe(gulp.dest("dist/js"));
 });
 
-gulp.task('combinejs', function () {
+gulp.task('combinejs',() => {
   return gulp.src([
   	'babel/_base.js',
   	'babel/*.js'])
@@ -58,7 +64,7 @@ gulp.task('combinejs', function () {
     .pipe(gulp.dest('dist/js/'));
 });
 
-gulp.task('minjs', function () {
+gulp.task('minjs',() => {
   return gulp.src('dist/js/matericious.js')
     .pipe(uglify())
     .pipe(rename(function (path) {
