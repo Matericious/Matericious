@@ -4,6 +4,7 @@ const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const babel = require('gulp-babel');
+const include = require('gulp-include');
 
 gulp.task('compile', function (cb) {
   return gulp.src('scss/*.scss')
@@ -32,19 +33,28 @@ gulp.task('sass:watch', function () {
 });
 
 gulp.task('compilejs', () =>{
-  return gulp.src('babel/*.js')
+  return gulp.src('dist/js/*.js')
     .pipe(babel({
       presets: ['@babel/env']
     }))
     .pipe(gulp.dest('dist/js'))
 });
 
+gulp.task('add_base', function(){
+  return gulp.src('babel/*.js')
+    .pipe(include())
+       .on('error', console.log)
+    .pipe(gulp.dest("dist/js"));
+});
+
 gulp.task('combinejs', function () {
   return gulp.src([
-  	'dist/js/_base.js',
-  	'dist/js/*.js',
-  	'!dist/js/matericious*.js'])
+  	'babel/_base.js',
+  	'babel/*.js'])
     .pipe(concat('matericious.js'))
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
     .pipe(gulp.dest('dist/js/'));
 });
 
@@ -58,6 +68,5 @@ gulp.task('minjs', function () {
     .pipe(gulp.dest('dist/js/'));
 });
 
-
-gulp.task('js', gulp.series(['combinejs', 'minjs']));
+gulp.task('js', gulp.series(['add_base', 'compilejs', 'combinejs', 'minjs']));
 gulp.task('css', gulp.series(['compile', 'combinecss', 'mincss']));

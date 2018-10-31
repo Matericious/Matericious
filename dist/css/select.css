@@ -12,10 +12,12 @@
   font-family: "Roboto", sans-serif;
   background-position: right 8px bottom 12px;
 }
+
 .select-field > i {
   color: #707071;
   pointer-events: none;
 }
+
 .select-field > .line-ripple {
   width: 100%;
   height: 2px;
@@ -27,6 +29,7 @@
   transform: scaleX(0);
   transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .select-field > .floating-label {
   font-size: 16px;
   position: absolute;
@@ -37,9 +40,11 @@
   transition: top 0.18s cubic-bezier(0.4, 0, 0.2, 1), font-size 0.18s cubic-bezier(0.4, 0, 0.2, 1);
   clear: both;
 }
+
 .select-field > .floating-label:first-letter {
   text-transform: capitalize;
 }
+
 .select-field > select {
   padding: 20px 26px 4px 4px;
   font-family: Roboto, sans-serif;
@@ -56,20 +61,25 @@
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+
 .select-field > select > option {
   background: #fff;
 }
+
 .select-field > select:focus:focus ~ .floating-label, .select-field > select.has-value:focus ~ .floating-label {
   color: #6200ee;
 }
+
 .select-field > select:focus:focus ~ .line-ripple, .select-field > select.has-value:focus ~ .line-ripple {
   transform: scaleX(1);
 }
+
 .select-field > select:focus ~ .floating-label, .select-field > select.has-value ~ .floating-label {
   top: 8px;
   font-size: 12px;
   will-change: top, font-size, color;
 }
+
 .select-field > .helper {
   font-size: 12px;
   height: 16px;
@@ -82,17 +92,21 @@
   position: absolute;
   bottom: -20px;
 }
+
 .select-field.fill .floating-label {
   left: 12px;
 }
+
 .select-field.fill > select {
   padding: 20px 26px 4px 12px;
   background: #f5f5f6;
 }
+
 .select-field.outlined > .floating-label {
   left: 12px;
   transition: all 0.1s;
 }
+
 .select-field.outlined > select {
   padding: 20px 26px 12px 12px;
   border: none;
@@ -103,13 +117,16 @@
   font-size: 16px;
   border-radius: 6px;
 }
+
 .select-field.outlined > select:hover {
   background: transparent;
 }
+
 .select-field.outlined > select:focus {
   background: transparent;
   border: 2px solid #6200ee;
 }
+
 .select-field.outlined > select.has-value ~ .floating-label {
   top: -7px;
   left: 10px;
@@ -118,22 +135,27 @@
   background: #fff;
   padding: 4px;
 }
+
 .select-field .lead {
   position: absolute;
   top: 17px;
   left: 15px;
 }
+
 .select-field .lead ~ select {
   padding-left: 45px !important;
 }
+
 .select-field .lead ~ .floating-label {
   left: 45px;
 }
+
 .select-field .trail {
   position: absolute;
   top: 18px;
   right: 5px;
 }
+
 .select-field .trail ~ select {
   padding-right: 45px !important;
 }

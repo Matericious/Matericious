@@ -19,10 +19,10 @@
 .text-field > .line-ripple {
   width: 100%;
   height: 2px;
-  background: #6200ee;
+  background: #3F51B5;
   padding: 0;
   position: absolute;
-  top: 45px;
+  top: 55px;
   left: 0;
   transform: scaleX(0);
   transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
@@ -58,7 +58,7 @@
 
 .text-field > input:focus ~ .floating-label,
 .text-field textarea:focus ~ .floating-label {
-  color: #6200ee;
+  color: #3F51B5;
 }
 
 .text-field > input:focus ~ .line-ripple,
@@ -138,11 +138,11 @@
 
 .text-field.outlined > input:focus {
   background: transparent;
-  border: 2px solid #6200ee;
+  border: 2px solid #3F51B5;
 }
 
 .text-field.outlined > input:focus ~ .floating-label, .text-field.outlined > input:not(:placeholder-shown) ~ .floating-label {
-  top: -7px;
+  top: -10px;
   left: 10px;
   font-size: 12px;
   will-change: top, font-size, color;
@@ -152,6 +152,23 @@
 
 .text-field.outlined > .line-ripple {
   display: none;
+}
+
+.text-field.outlined.capsule > .floating-label {
+  left: 20px;
+}
+
+.text-field.outlined.capsule .lead ~ .floating-label {
+  left: 45px;
+}
+
+.text-field.outlined.capsule > input {
+  padding: 12px 15px;
+  border-radius: 28px;
+}
+
+.text-field.outlined.capsule > input:focus ~ .floating-label, .text-field.outlined.capsule > input:not(:placeholder-shown) ~ .floating-label {
+  left: 25px;
 }
 
 .text-field.fill > input,

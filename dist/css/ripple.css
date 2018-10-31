@@ -27,6 +27,7 @@
 .ripple.light .rippleWave {
   background: rgba(255, 255, 255, 0.3) !important;
 }
+
 .ripple.dark .rippleWave {
   background: rgba(0, 0, 0, 0.3) !important;
 }

@@ -13,7 +13,7 @@ function ready(callback) {
 
 function call($class, $event, $func) {
   var elems = document.querySelectorAll($class);
-  for (i = 0; i < elems.length; ++i) {
+  for (var i = 0; i < elems.length; ++i) {
     addEvent(elems[i], $event, $func);
   }
 }
