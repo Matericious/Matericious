@@ -3477,11 +3477,6 @@ body.overlay:after {
   z-index: 1;
 }
 
-body {
-  margin: 0;
-  height: 100vh;
-}
-
 .loader_overlay {
   position: absolute;
   top: 0px;
@@ -3977,11 +3972,6 @@ body {
   left: 0;
   background: rgba(0, 0, 0, 0.2);
   z-index: 1;
-}
-
-body {
-  margin: 0;
-  height: 100vh;
 }
 
 .loader_overlay {
