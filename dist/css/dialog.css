@@ -1,0 +1,496 @@
+.dialog_overlay {
+  position: fixed;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.loader_overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 6;
+}
+
+.loader_overlay.light {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.loader_overlay.light .md-loader circle {
+  stroke: blue;
+}
+
+.dialog {
+  visibility: hidden;
+  width: 320px;
+  height: 160px;
+  max-width: 85% !important;
+  color: black;
+  background: #fff;
+  line-height: normal;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  pointer-events: auto !important;
+  overflow: hidden;
+  font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
+  z-index: 2;
+}
+
+.dialog *:focus, .dialog *:hover {
+  outline: none;
+}
+
+.dialog > header,
+.dialog section,
+.dialog footer {
+  width: calc(100% - (24 * 2px));
+  margin: 0px auto;
+}
+
+.dialog > header {
+  height: auto;
+  padding-top: 20px;
+}
+
+.dialog > header > .title {
+  font-size: 18px;
+  color: #424242;
+  font-family: inherit;
+  font-weight: bold;
+}
+
+.dialog > header > .title:first-letter {
+  text-transform: capitalize;
+}
+
+.dialog > header > .subtitle {
+  display: block;
+  font-size: 14px;
+}
+
+.dialog > section {
+  height: calc(100% - 95px);
+  color: #BDBDBD;
+  font-size: 16px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.dialog > .text-field {
+  width: 100%;
+}
+
+.dialog footer {
+  width: 100%;
+  height: 52px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  background: #FFFFFF;
+}
+
+.dialog footer > a {
+  min-width: 30px;
+  height: 35px;
+  padding: 0px 8px 0px 8px;
+  text-decoration: none;
+  line-height: 35px;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 8px;
+  font-family: inherit;
+  font-weight: 560;
+  border-radius: 5px;
+  transition: all 0s !important;
+}
+
+.dialog footer > a.ripple {
+  transition: all 0s;
+}
+
+.dialog footer > a.left {
+  justify-content: flex-start;
+  position: absolute;
+  margin-left: 15px;
+  left: 0px;
+}
+
+.dialog.alert {
+  width: 280px;
+  height: 118px;
+}
+
+.dialog.alert > header {
+  display: none;
+}
+
+.dialog.alert > section {
+  height: 100%;
+  padding-top: 8px;
+}
+
+.dialog.scrollable {
+  width: 500px;
+  height: calc(100vh - 10%);
+}
+
+.dialog.scrollable > header {
+  height: 40px;
+}
+
+.dialog.scrollable > header > .title {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.dialog.scrollable > section {
+  padding-left: 25px;
+  padding-right: 25px;
+  border-top: 1px solid;
+  border-bottom: 1px solid #BDBDBD;
+  overflow-y: scroll;
+}
+
+.dialog.scrollable > section::-webkit-scrollbar {
+  width: 10px;
+}
+
+.dialog.scrollable > section::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+
+.dialog.scrollable > section::-webkit-scrollbar-thumb {
+  background: #BDBDBD;
+}
+
+.dialog.full {
+  width: 100%;
+  height: 100vh;
+  min-width: 100%;
+  visibility: visible !important;
+  border-radius: 0px;
+  position: fixed;
+  top: none;
+  bottom: -200%;
+  transition: bottom 0.4s;
+}
+
+.dialog.full > header {
+  padding-top: 0;
+  width: 100%;
+}
+
+.dialog.full.active {
+  bottom: 0%;
+}
+
+.dialog.sheet {
+  width: 100%;
+  height: calc(100vh / 1.5);
+  min-width: 100%;
+  visibility: visible !important;
+  border-radius: 8px 8px 0px 0px;
+  position: fixed;
+  top: auto;
+  bottom: -200%;
+  transition: bottom 0.2s;
+}
+
+.dialog.sheet.active {
+  bottom: 0%;
+}
+
+.dialog.sheet > header {
+  height: 55px;
+}
+
+.dialog.sheet > header > .title {
+  font-size: 22px;
+}
+
+.dialog.sheet > footer {
+  position: fixed;
+  bottom: 0px;
+}
+
+.dialog.sheet > section {
+  overflow-y: scroll;
+  border-top: 0.5px solid #BDBDBD;
+  height: calc(100% - 80px);
+  padding-left: 25px;
+  padding-right: 20px;
+}
+
+.dialog.sheet > section::-webkit-scrollbar {
+  width: 10px;
+}
+
+.dialog.sheet > section::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+
+.dialog.sheet > section::-webkit-scrollbar-thumb {
+  background: #BDBDBD;
+}
+
+.dialog.sheet > section footer {
+  position: static !important;
+}
+
+.dialog.sheet > section footer > a:last-child {
+  margin-right: 2px;
+}
+
+.dialog.alert footer, .dialog.scrollable footer, .dialog.full footer {
+  position: absolute;
+  bottom: 0px;
+}
+
+.dialog.loader {
+  width: 230px;
+  height: 95px;
+  text-align: center;
+  visibility: visible !important;
+  position: relative;
+  top: 50%;
+  color: #FFFFFF;
+  transform: translateY(-50%);
+  box-shadow: none;
+  background: transparent;
+}
+
+.dialog.loader > main {
+  margin: 0 auto;
+}
+
+.dialog.loader.small, .dialog.loader.medium {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog.loader.colored {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+}
+
+.dialog.loader.small > svg {
+  width: 30px;
+  height: 30px;
+}
+
+.dialog.loader.small > span {
+  margin-top: 2px;
+  text-indent: 5px;
+  font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
+  color: inherit;
+}
+
+.dialog.loader.medium {
+  width: 100px;
+  height: 80px;
+  padding: 10px;
+  text-align: center;
+  color: #BDBDBD;
+}
+
+.dialog.loader.medium > svg {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 10px;
+}
+
+.dialog.loader.medium > span {
+  position: absolute;
+  bottom: 10px;
+  font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
+  color: inherit;
+}
+
+.dialog.fadeIn {
+  visibility: visible !important;
+  transition: all 100ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-animation: fadeIn 1.5s;
+  -moz-animation: fadeIn 1.5s;
+  animation: fadeIn 1.5s;
+}
+
+.dialog.fadeOut {
+  transition: all 100ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-animation: fadeOut 1s;
+  -moz-animation: fadeOut 1s;
+  animation: fadeOut 1s;
+  visibility: hidden;
+}
+
+.dialog.slideUp {
+  visibility: visible !important;
+  transition: all 100ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-animation: slideUp 1s;
+  -moz-animation: slideUp 1s;
+  animation: slideUp 1s;
+}
+
+.dialog.expandUp {
+  visibility: visible !important;
+  transition: all 100ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-animation: expandUp 0.4s;
+  -moz-animation: expandUp 0.4s;
+  animation: expandUp 0.4s;
+}
+
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.md-loader {
+  -webkit-animation: rotate 2s linear infinite;
+  -moz-animation: rotate 2s linear infinite;
+  animation: rotate 2s linear infinite;
+  width: 35px;
+  vertical-align: middle;
+}
+
+.md-loader > circle {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 5, 155;
+  stroke-dashoffset: 0;
+  -webkit-animation: dash 1.35s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  -moz-animation: dash 1.35s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation: dash 1.35s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@-moz-keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes dash {
+  0% {
+    stroke-dasharray: 2, 155;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 122, 20;
+    stroke-dashoffset: -20;
+  }
+  100% {
+    stroke-dasharray: 2, 155;
+    stroke-dashoffset: -155;
+  }
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 2, 155;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 122, 20;
+    stroke-dashoffset: -20;
+  }
+  100% {
+    stroke-dasharray: 2, 155;
+    stroke-dashoffset: -155;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 2, 155;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 122, 20;
+    stroke-dashoffset: -20;
+  }
+  100% {
+    stroke-dasharray: 2, 155;
+    stroke-dashoffset: -155;
+  }
+}
+
+@-moz-keyframes expandUp {
+  0% {
+    transform: translateY(20%) scale(0.6) scaleY(0.5);
+  }
+  100% {
+    transform: translateY(0%) scale(1) scaleY(1);
+  }
+}
+
+@-webkit-keyframes expandUp {
+  0% {
+    transform: translateY(20%) scale(0.6) scaleY(0.5);
+  }
+  100% {
+    transform: translateY(0%) scale(1) scaleY(1);
+  }
+}
+
+@keyframes expandUp {
+  0% {
+    transform: translateY(20%) scale(0.6) scaleY(0.5);
+  }
+  100% {
+    transform: translateY(0%) scale(1) scaleY(1);
+  }
+}
