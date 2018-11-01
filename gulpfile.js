@@ -1,6 +1,7 @@
 const gulp = require('gulp'),
 path = require('path'),
 sass = require('gulp-sass'),
+autoprefixer = require('gulp-autoprefixer'),
 sourcemaps = require('gulp-sourcemaps'),
 rename = require('gulp-rename'),
 header = require('gulp-header-comment'),
@@ -9,11 +10,17 @@ concat = require('gulp-concat'),
 babel = require('gulp-babel'),
 include = require('gulp-include');
 
+var autoprefixer_options = {
+  browsers: '> 5%, last 2 versions, Firefox ESR',
+  cascade: false
+};
+
 gulp.task('compile',(cb) => {
   return gulp.src('src/scss/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'expanded' })
       .on('error', function (err) { cb(err); }))
+    .pipe(autoprefixer(autoprefixer_options))
     .pipe(sourcemaps.write('.'))
     .pipe(header({file:path.join(__dirname, 'src/info.txt')}))
     .pipe(gulp.dest('css/'));
@@ -25,6 +32,7 @@ gulp.task('combinecss',(cb) => {
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'expanded' })
       .on('error', function (err) { cb(err); }))
+    .pipe(autoprefixer(autoprefixer_options))
     .pipe(sourcemaps.write('.'))
     .pipe(header({file:path.join(__dirname, 'src/info.txt')}))
     .pipe(gulp.dest('dist/css/'));
@@ -36,6 +44,7 @@ gulp.task('mincss',(cb) => {
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed' })
       .on('error', function (err) { cb(err); }))
+    .pipe(autoprefixer(autoprefixer_options))
     .pipe(sourcemaps.write('.'))
     .pipe(header({file:path.join(__dirname, 'src/info.txt')}))
     .pipe(gulp.dest('dist/css/'));
