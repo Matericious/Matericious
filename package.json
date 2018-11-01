@@ -18,6 +18,11 @@
   "bugs": {
     "url": "https://github.com/Matericious/Matericious/issues"
   },
+  "files": [
+    "dist/{css,js}/*.{css,js,map}",
+    "src/{scss,js}/*.{js,scss}",
+    "{css,js}/*.{css,js,map}"
+  ],
   "homepage": "https://matericious.com",
   "devDependencies": {
     "@babel/core": "^7.1.2",
@@ -29,6 +34,7 @@
     "gulp-include": "^2.3.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.1",
     "path": "^0.12.7"
   }
