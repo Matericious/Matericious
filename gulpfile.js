@@ -21,8 +21,8 @@ gulp.task('compile',(cb) => {
     .pipe(sass({ outputStyle: 'expanded' })
       .on('error', function (err) { cb(err); }))
     .pipe(autoprefixer(autoprefixer_options))
-    .pipe(sourcemaps.write('.'))
     .pipe(header({file:path.join(__dirname, 'src/info.txt')}))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('css/'));
 });
 
@@ -33,8 +33,8 @@ gulp.task('combinecss',(cb) => {
     .pipe(sass({ outputStyle: 'expanded' })
       .on('error', function (err) { cb(err); }))
     .pipe(autoprefixer(autoprefixer_options))
-    .pipe(sourcemaps.write('.'))
     .pipe(header({file:path.join(__dirname, 'src/info.txt')}))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist/css/'));
 });
 
@@ -45,8 +45,8 @@ gulp.task('mincss',(cb) => {
     .pipe(sass({ outputStyle: 'compressed' })
       .on('error', function (err) { cb(err); }))
     .pipe(autoprefixer(autoprefixer_options))
-    .pipe(sourcemaps.write('.'))
     .pipe(header({file:path.join(__dirname, 'src/info.txt')}))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist/css/'));
 });
 
