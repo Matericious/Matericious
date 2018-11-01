@@ -1,6 +1,7 @@
 const gulp = require('gulp'),
 path = require('path'),
 sass = require('gulp-sass'),
+sourcemaps = require('gulp-sourcemaps'),
 rename = require('gulp-rename'),
 header = require('gulp-header-comment'),
 uglify = require('gulp-uglify'),
@@ -10,8 +11,10 @@ include = require('gulp-include');
 
 gulp.task('compile',(cb) => {
   return gulp.src('src/scss/**/*.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'expanded' })
       .on('error', function (err) { cb(err); }))
+    .pipe(sourcemaps.write('.'))
     .pipe(header({file:path.join(__dirname, 'src/info.txt')}))
     .pipe(gulp.dest('css/'));
 });
@@ -19,8 +22,10 @@ gulp.task('compile',(cb) => {
 gulp.task('combinecss',(cb) => {
   return gulp.src('src/scss/**/*.scss')
     .pipe(concat('matericious.css'))
+    .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'expanded' })
       .on('error', function (err) { cb(err); }))
+    .pipe(sourcemaps.write('.'))
     .pipe(header({file:path.join(__dirname, 'src/info.txt')}))
     .pipe(gulp.dest('dist/css/'));
 });
@@ -28,8 +33,10 @@ gulp.task('combinecss',(cb) => {
 gulp.task('mincss',(cb) => {
   return gulp.src('src/scss/**/*.scss')
     .pipe(concat('matericious.min.css'))
+    .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed' })
       .on('error', function (err) { cb(err); }))
+    .pipe(sourcemaps.write('.'))
     .pipe(header({file:path.join(__dirname, 'src/info.txt')}))
     .pipe(gulp.dest('dist/css/'));
 });
