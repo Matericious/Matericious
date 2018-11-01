@@ -13,12 +13,11 @@
 
 .notrans {
   -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -o-transition: none !important;
   transition: none !important;
 }
 
 body {
+  -webkit-transition: margin-left .5s;
   transition: margin-left .5s;
 }
 
@@ -28,9 +27,9 @@ body.overlay {
 
 body.overlay.fadeIn:after {
   visibility: visible !important;
+  -webkit-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   -webkit-animation: fadeIn 0.5s;
-  -moz-animation: fadeIn 0.5s;
   animation: fadeIn 0.5s;
 }
 
@@ -52,6 +51,7 @@ body.overlay:after {
   max-width: calc(100% - 56px);
   background: #fff;
   position: fixed;
+  -webkit-transition: left .4s;
   transition: left .4s;
   top: 0px;
   left: -100%;
@@ -60,6 +60,7 @@ body.overlay:after {
 }
 
 .drawer > .header {
+  -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -198,6 +199,7 @@ body.overlay:after {
   padding: 8px 0;
   line-height: 1.5rem;
   list-style-type: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -226,11 +228,15 @@ body.overlay:after {
   height: 40px;
   margin: 8px;
   padding: 0 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   -ms-flex-pack: start;
+  -webkit-box-pack: start;
   justify-content: flex-start;
   overflow: hidden;
   border-radius: 4px;
@@ -252,6 +258,7 @@ body.overlay:after {
 }
 
 .drawer > .content > nav.list > a:after {
+  -webkit-transition: opacity .15s linear;
   transition: opacity .15s linear;
 }
 
@@ -263,23 +270,17 @@ body.overlay:after {
   height: 24px;
   font-size: 24px;
   display: -ms-inline-flexbox;
+  display: -webkit-inline-box;
   display: inline-flex;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
   -ms-flex-pack: center;
+  -webkit-box-pack: center;
   justify-content: center;
   fill: currentColor;
-}
-
-@-moz-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 @-webkit-keyframes fadeIn {
@@ -301,20 +302,11 @@ body.overlay:after {
 }
 
 .fadeOut {
+  -webkit-transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   -webkit-animation: fadeOut 1s;
-  -moz-animation: fadeOut 1s;
   animation: fadeOut 1s;
   visibility: hidden;
-}
-
-@-moz-keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
 }
 
 @-webkit-keyframes fadeOut {

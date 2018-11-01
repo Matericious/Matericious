@@ -16,15 +16,31 @@
   position: absolute;
   background: rgba(255, 255, 255, 0.3) !important;
   border-radius: 100%;
+  -webkit-animation: ripple 1.6s;
   animation: ripple 1.6s;
 }
 
-@keyframes ripple {
+@-webkit-keyframes ripple {
   0% {
+    -webkit-transform: scale(1);
     transform: scale(1);
     opacity: 1;
   }
   100% {
+    -webkit-transform: scale(40);
+    transform: scale(40);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(40);
     transform: scale(40);
     opacity: 0;
   }

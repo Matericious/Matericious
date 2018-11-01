@@ -23,6 +23,7 @@
   border-radius: 4px;
   background: rgba(158, 158, 158, 0.2);
   margin: 0;
+  -webkit-transition: background .5s ease-in-out;
   transition: background .5s ease-in-out;
 }
 
@@ -34,7 +35,9 @@
   border-radius: 50%;
   background: #E0E0E0;
   cursor: pointer;
+  -webkit-transition: all .15s ease-in;
   transition: all .15s ease-in;
+  -webkit-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
 }
 

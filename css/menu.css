@@ -66,11 +66,24 @@
   -webkit-transform-origin: 50% 0%;
 }
 
-@keyframes pullDown {
+@-webkit-keyframes pullDown {
   0% {
+    -webkit-transform: scaleY(0);
     transform: scaleY(0);
   }
   100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+  }
+}
+
+@keyframes pullDown {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
     transform: scaleY(1);
   }
 }

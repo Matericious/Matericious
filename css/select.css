@@ -10,9 +10,15 @@
 }
 
 .select-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background-repeat: no-repeat;
   font-family: "Roboto", sans-serif;
@@ -32,8 +38,12 @@
   position: absolute;
   bottom: -9px;
   left: 0;
+  -webkit-transform: scaleX(0);
   transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.18s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .select-field > .floating-label {
@@ -43,6 +53,7 @@
   left: 4px;
   pointer-events: none;
   color: rgba(0, 0, 0, 0.54);
+  -webkit-transition: top 0.18s cubic-bezier(0.4, 0, 0.2, 1), font-size 0.18s cubic-bezier(0.4, 0, 0.2, 1);
   transition: top 0.18s cubic-bezier(0.4, 0, 0.2, 1), font-size 0.18s cubic-bezier(0.4, 0, 0.2, 1);
   clear: both;
 }
@@ -77,6 +88,7 @@
 }
 
 .select-field > select:focus:focus ~ .line-ripple, .select-field > select.has-value:focus ~ .line-ripple {
+  -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
 
@@ -92,8 +104,15 @@
   padding: 0 12px;
   color: #666666;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
   position: absolute;
   bottom: -20px;
@@ -110,6 +129,7 @@
 
 .select-field.outlined > .floating-label {
   left: 12px;
+  -webkit-transition: all 0.1s;
   transition: all 0.1s;
 }
 

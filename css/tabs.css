@@ -38,6 +38,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
+  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   z-index: 1;
 }

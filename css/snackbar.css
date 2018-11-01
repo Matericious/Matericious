@@ -27,6 +27,7 @@ snackbar > div {
   bottom: -10px;
   pointer-events: auto;
   overflow: hidden;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -62,6 +63,7 @@ snackbar > div > button:nth-child(2) {
   margin-top: 10px;
   background: rgba(66, 66, 66, 0.1);
   border-radius: 50%;
+  -webkit-transition: all 0.5s linear 0s;
   transition: all 0.5s linear 0s;
 }
 
@@ -82,6 +84,7 @@ snackbar.light {
 
 snackbar.light > div {
   background: #FFFFFF;
+  -webkit-box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1), 0 5px 30px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1), 0 5px 30px 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -128,17 +131,7 @@ snackbar.center > div {
 Snackbar Animations*/
 .slideUpBottom {
   -webkit-animation: slideUpBottom 0.5s 0s ease forwards;
-  -moz-animation: slideUpBottom 0.5s 0s ease forwards;
   animation: slideUpBottom 0.5s 0s ease forwards;
-}
-
-@-moz-keyframes slideUpBottom {
-  from {
-    bottom: -100px;
-  }
-  to {
-    bottom: 0.5em;
-  }
 }
 
 @-webkit-keyframes slideUpBottom {
@@ -161,17 +154,7 @@ Snackbar Animations*/
 
 .slideUpTop {
   -webkit-animation: slideUpTop 0.5s 0s ease forwards;
-  -moz-animation: slideUpTop 0.5s 0s ease forwards;
   animation: slideUpTop 0.5s 0s ease forwards;
-}
-
-@-moz-keyframes slideUpTop {
-  from {
-    top: -100px;
-  }
-  to {
-    top: 0.5em;
-  }
 }
 
 @-webkit-keyframes slideUpTop {
@@ -199,17 +182,7 @@ slideDown Animation
 */
 .slideDownBottom {
   -webkit-animation: slideDownBottom 0.5s 0s ease forwards;
-  -moz-animation: slideDownBottom 0.5s 0s ease forwards;
   animation: slideDownBottom 0.5s 0s ease forwards;
-}
-
-@-moz-keyframes slideDownBottom {
-  from {
-    bottom: 0.5em;
-  }
-  to {
-    bottom: -100px;
-  }
 }
 
 @-webkit-keyframes slideDownBottom {
@@ -232,17 +205,7 @@ slideDown Animation
 
 .slideDownTop {
   -webkit-animation: slideDownTop 1s 0s ease forwards;
-  -moz-animation: slideDownTop 1s 0s ease forwards;
   animation: slideDownTop 1s 0s ease forwards;
-}
-
-@-moz-keyframes slideDownTop {
-  from {
-    top: 0.5em;
-  }
-  to {
-    top: -100px;
-  }
 }
 
 @-webkit-keyframes slideDownTop {

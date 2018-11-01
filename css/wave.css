@@ -7,6 +7,7 @@
 .wave {
   position: relative;
   overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
@@ -22,14 +23,20 @@
   background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
   background-repeat: no-repeat;
   background-position: 50%;
+  -webkit-transform: scale(10, 10);
   transform: scale(10, 10);
   opacity: 0;
+  -webkit-transition: opacity 1s, -webkit-transform 0.5s;
+  transition: opacity 1s, -webkit-transform 0.5s;
   transition: transform 0.5s, opacity 1s;
+  transition: transform 0.5s, opacity 1s, -webkit-transform 0.5s;
 }
 
 .wave:active:after {
+  -webkit-transform: scale(0, 0);
   transform: scale(0, 0);
   opacity: 0.3;
+  -webkit-transition: 0s;
   transition: 0s;
 }
 
