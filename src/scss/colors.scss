@@ -5,7 +5,7 @@
 
 @each $name, $sets in $colors {
   @each $type, $set in $sets {
-    @if($type == 'base') {
+    @if $type == 'base' {
       .#{$name} {
         background: $set !important;
       }
