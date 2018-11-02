@@ -161,7 +161,7 @@ function dialog(data) {
   function close(id) {
     var dialog_ID = $get(id),
         _loader = $get(id + " .loader"),
-        _created_overlay = $get(".dialog_overlay"),
+        _created_overlay = $get("." + id.replace(/#/g, "") + ".dialog_overlay"),
         modal_class = dialog_ID.className;
 
     if (_loader != null) {
@@ -255,7 +255,10 @@ function dialog(data) {
       _doc.appendChild(overlay_div);
 
       $addClass(overlay_div, "dialog_overlay");
+      $addClass(overlay_div, id.replace(/#/g, ""));
     }
+
+    $addClass(_doc, "modal_active");
 
     if (modal_class.includes("full") || modal_class.includes("sheet")) {
       $addClass(modal_ID, "active");
