@@ -66,13 +66,13 @@ gulp.task('add_base',() => {
   return gulp.src('src/js/*.js')
     .pipe(include())
        .on('error', console.log)
-    .pipe(gulp.dest("dist/js"));
+    .pipe(gulp.dest("js/"));
 });
 
 gulp.task('combinejs',() => {
   return gulp.src([
-  	'babel/_base.js',
-  	'babel/*.js'])
+  	'src/js/_base.js',
+  	'src/js/*.js'])
     .pipe(concat('matericious.js'))
     .pipe(babel({
       presets: ['@babel/env']
