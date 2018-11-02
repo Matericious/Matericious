@@ -3,11 +3,11 @@
 function drawer() {
     var _drawer = $get(".drawer"),
       _doc = $get("body");
-    if (hasClass(_drawer, "active")) {
+    if (_drawer.className.includes("active")) {
       _drawer.style.left = 0 + "px";
       _doc.style.marginLeft = _drawer.offsetWidth + "px";
     }
-    if (hasClass(_drawer, "permanent")) {
+    if (_drawer.className.includes("permanent")) {
       $addClass(_drawer, "notrans");
       $addClass(_doc, "notrans");
       _drawer.style.left = 0 + "px";
@@ -19,6 +19,7 @@ function drawer() {
         var clickTimes = 0;
         var _drawer = $get(".drawer"),
           _doc = $get("body");
+
         if (_drawer.style.left != 0 + "px") {
           if (_navType == "overlay") {
             _drawer.style.left = 0 + "px";

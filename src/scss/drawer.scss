@@ -1,14 +1,6 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
-
-* {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 .notrans {
   -webkit-transition: none !important;
   -moz-transition: none !important;
@@ -84,17 +76,17 @@ body {
         line-height: normal;
         margin-bottom: -20px;
       &:before {
+        content: "";
         display: inline-block;
         width: 0;
         height: 36px;
-        content: "";
         vertical-align: 0;
       }
       &:after {
+        content: "";
         display: inline-block;
         width: 0;
         height: 20px;
-        content: "";
         vertical-align: -20px;
       }
     }
@@ -114,12 +106,11 @@ body {
         margin-bottom: 0;
         color: rgba(#000, .6);
       &:before{
+        content: "";
         display: inline-block;
         width: 0;
         height: 20px;
-        content: "";
         vertical-align: 0;
-        content: "";
       }
     }
   }

@@ -4,13 +4,6 @@
  * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
  */
 
-* {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 .notrans {
   -webkit-transition: none !important;
   transition: none !important;
@@ -99,18 +92,18 @@ body.overlay:after {
 }
 
 .drawer > .header > .title:before {
+  content: "";
   display: inline-block;
   width: 0;
   height: 36px;
-  content: "";
   vertical-align: 0;
 }
 
 .drawer > .header > .title:after {
+  content: "";
   display: inline-block;
   width: 0;
   height: 20px;
-  content: "";
   vertical-align: -20px;
 }
 
@@ -132,12 +125,11 @@ body.overlay:after {
 }
 
 .drawer > .header > .subtitle:before {
+  content: "";
   display: inline-block;
   width: 0;
   height: 20px;
-  content: "";
   vertical-align: 0;
-  content: "";
 }
 
 .drawer > .content {
