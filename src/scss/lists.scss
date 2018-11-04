@@ -1,40 +1,56 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+$light-4-grey: color(grey, light, 4);
+$dark-1-grey: color(grey, dark, 1);
+$dark-color: rgba(color(black, base), .6);
+$white-color: color(white, base);
+$black-color: color(black, base);
+
 .list {
   max-width: 100%;
   height: auto;
   list-style: none;
   padding: 8px 0;
   border-radius: 4px;
-  background: #fff;
-  > li {
-    width: auto;
+  background: $white-color;
+  > label {
+    position: relative;
+    display: block;
+    color: $black-color;
+    line-height: 18px;
+    cursor: pointer;
+  }
+  > li,
+  > label,
+  > div{
     height: 48px;
     line-height: 48px;
     font-size: 16px;
     padding: 0 16px;
-    color: #424242;
-    font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui,
-      -apple-system;
+    color: $dark-color;
+    font-family: $font;
     &:hover {
-      background: #efefef;
+      background: $light-4-grey;
     }
     > a {
       text-decoration: none;
-      color: #424242;
+      color: $dark-color;
     }
     > div span {
       &.title {
-        color: #424242;
+        color: $dark-color;
       }
       &.subtitle {
         display: block;
         font-size: 14px;
-        color: #999;
+        color: $dark-1-grey;
       }
     }
     > i {
       font-size: 24px;
       vertical-align: middle;
-      color: #999;
+      color: $dark-1-grey;
       position: relative;
       margin-right: 32px;
       &.trail-icon {
@@ -49,7 +65,7 @@
       padding: 8px 16px;
       height: 56px;
       line-height: 20px;
-      display:flex;
+      display: flex;
       align-items: center;
       .lead-icon {
         margin-right: 16px;
@@ -57,8 +73,8 @@
         height: 40px;
         line-height: 40px;
         font-size: 20px;
-        color: #fff;
-        background-color: #999;
+        color: $white-color;
+        background-color: $dark-1-grey;
         text-align: center;
         float: left;
         border-radius: 50%;
@@ -71,11 +87,22 @@
         margin: 0;
       }
     }
+    > .trail {
+      float: right;
+      height: 100%;
+      float: right;
+      position: relative;
+      top: 12px;
+      right: -20px;
+    }
+    > .lead{
+
+    }
   }
   > hr {
     width: 100%;
     height: 1px;
     border: none;
-    background: #d9d9d9;
+    background: $dark-color;
   }
 }
