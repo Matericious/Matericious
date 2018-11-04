@@ -18,12 +18,10 @@ var autoprefixer_options={
 
 gulp.task('compile',(cb)=>{
   return gulp.src('src/scss/**/*.scss')
-    .pipe(sourcemaps.init())
     .pipe(sass({outputStyle:'expanded'})
       .on('error',function(err){cb(err);}))
     .pipe(autoprefixer(autoprefixer_options))
     .pipe(header({file:path.join(__dirname, 'src/info.txt')}))
-    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('css/'));
 });
 
@@ -35,7 +33,7 @@ gulp.task('combinecss',(cb)=>{
       .on('error',function(err){cb(err);}))
     .pipe(autoprefixer(autoprefixer_options))
     .pipe(header({file:path.join(__dirname, 'src/info.txt')}))
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist/css/'));
 });
 
@@ -47,7 +45,7 @@ gulp.task('mincss',(cb)=>{
       .on('error', function (err) { cb(err); }))
     .pipe(autoprefixer(autoprefixer_options))
     .pipe(header({file:path.join(__dirname, 'src/info.txt')}))
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist/css/'));
 });
 
@@ -66,21 +64,23 @@ gulp.task('compilejs',()=>{
 
 gulp.task('combinejs',()=>{
   return gulp.src(['src/js/_base.js','src/js/*.js'])
+    .pipe(sourcemaps.init())
     .pipe(concat('matericious.js'))
     .pipe(babel({presets: ['@babel/env']}))
     .pipe(strip())
     .pipe(header({file:path.join(__dirname, 'src/info.txt')}))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist/js/'));
 });
 
 gulp.task('minjs',()=>{
-  return gulp.src('dist/js/matericious.js')
+  return gulp.src(['src/js/_base.js','src/js/*.js'])
+    .pipe(sourcemaps.init())
+    .pipe(concat('matericious.min.js'))
+    .pipe(babel({presets: ['@babel/env']}))
     .pipe(uglify())
-    .pipe(rename(function(path){
-      path.basename += ".min";
-      path.extname = ".js";
-    }))
     .pipe(header({file:path.join(__dirname, 'src/info.txt')}))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist/js/'));
 });
 
