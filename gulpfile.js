@@ -5,6 +5,7 @@ autoprefixer = require('gulp-autoprefixer'),
 sourcemaps = require('gulp-sourcemaps'),
 rename = require('gulp-rename'),
 header = require('gulp-header-comment'),
+strip = require('gulp-strip-comments'),
 uglify = require('gulp-uglify'),
 concat = require('gulp-concat'),
 babel = require('gulp-babel'),
@@ -58,6 +59,7 @@ gulp.task('compilejs',()=>{
   return gulp.src(['src/js/*.js','!src/js/_base.js'])
     .pipe(include()).on('error', console.log)
     .pipe(babel({presets: ['@babel/env']}))
+    .pipe(strip())
     .pipe(header({file:path.join(__dirname, 'src/info.txt')}))
     .pipe(gulp.dest('js'));
 });
@@ -66,6 +68,7 @@ gulp.task('combinejs',()=>{
   return gulp.src(['src/js/_base.js','src/js/*.js'])
     .pipe(concat('matericious.js'))
     .pipe(babel({presets: ['@babel/env']}))
+    .pipe(strip())
     .pipe(header({file:path.join(__dirname, 'src/info.txt')}))
     .pipe(gulp.dest('dist/js/'));
 });
