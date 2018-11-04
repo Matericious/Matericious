@@ -26,6 +26,7 @@
   }
 }
 
+
 @mixin colorClass($name) {
   &.outline {
     color: color($name) !important;
@@ -62,12 +63,17 @@
 
   &.radio {
     background: transparent !important;
-    input[type="radio"]:checked + label:before {
-      border-color: color($name) !important;
+    > span{
+      &::after{
+        background-color: color($name);
+      }
     }
-    label {
-      &:after {
-        background: color($name) !important;
+    > input{
+      &:checked {
+         background-color: color($name);
+         & + span::before {
+           border-color: color($name);
+         }
       }
     }
   }
@@ -76,37 +82,41 @@
     background: transparent !important;
     > input {
       &:checked {
+        background-color: color($name);
         & ~ span {
           &:before {
-            background: rgba(color($name), .54) !important;
+            background: rgba(color($name), 0.54) !important;
           }
           &:after {
-            left: 15px;
             background: color($name) !important;
             border-color: color($name) !important;
           }
         }
       }
-    }
-  }  
-  &.text {
-    &:hover{
-      background: rgba(color($name), .1) !important;
-    }
-    > .rippleWave {
-      background: rgba(color($name), .2) !important;
+      &:active + span::before {
+        background-color: rgba(color($name), 0.4);
+      }
     }
   }
-  &.range{
+
+  &.text {
+    &:hover {
+      background: rgba(color($name), 0.1) !important;
+    }
+    > .rippleWave {
+      background: rgba(color($name), 0.2) !important;
+    }
+  }
+  &.range {
     background: color($name);
-      &::-webkit-slider-thumb{
-          background: color($name);
-      }
+    &::-webkit-slider-thumb {
+      background: color($name);
+    }
   }
 }
 
 $base: ();
-@each $name,$type in $colors {
+@each $name, $type in $colors {
   @if $name !=black {
     $base: append($base, $name);
   }
