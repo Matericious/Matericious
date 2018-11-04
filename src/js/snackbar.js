@@ -1,4 +1,4 @@
-//=require _base.js
+//=include _base.js
 
 function Snackbar(data, callback) {
   var openAni = "slideUpBottom", closeAni = "slideDownBottom";

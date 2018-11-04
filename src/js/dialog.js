@@ -1,4 +1,4 @@
-//=require _base.js
+//=include _base.js
 
 function dialog(data) {
   this.id = is_string(data) ? data : data.target;

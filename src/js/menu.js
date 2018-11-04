@@ -1,4 +1,4 @@
-//=require _base.js
+//=include _base.js
 
 function menu(){
   call("[open-menu]", "mousedown", openMenu);

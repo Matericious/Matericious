@@ -1,4 +1,4 @@
-//=require _base.js
+//=include _base.js
 
 function drawer() {
     var _drawer = $get(".drawer"),

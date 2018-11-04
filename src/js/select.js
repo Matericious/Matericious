@@ -1,4 +1,4 @@
-//=require _base.js
+//=include _base.js
 
 function select(){
   input_select();
