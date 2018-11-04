@@ -1,13 +1,12 @@
 {
   "name": "matericious",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "Delicious Material Framework",
   "main": "dist/matericious.js",
   "style": "dist/css/matericious.css",
   "sass": "sass/matericious.scss",
   "keywords": [
-    "delicious components",
-    "material design"
+    "Material Design","Matericious","CSS Framework","Web Components"
   ],
   "author": "Kascique Lowman, Shamshid",
   "license": "MIT",
