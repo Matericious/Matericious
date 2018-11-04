@@ -2,53 +2,117 @@
 @import "_variables.scss";
 
 
-/**/
-$radio-size: 20px;
-$gap: 10px;
+$not-active: rgba(color(black, base), 0.4);
+$primary-color: color(cyan, base);
+$font: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
 
 .radio {
-  margin: 16px 0;
+  z-index: 0;
+  position: relative;
   display: inline-block;
-  input[type="radio"] {
-    display: none;
-    &:checked + label:before {
-      border-color: color(cyan);
+  color: rgba(color(black, base), 0.87);
+  font-family: $font;
+  font-size: 16px;
+  line-height: 1.5;
+  padding-right: 15px;
+  * {
+    user-select: none;
+  }
+  > input {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    z-index: -1;
+    position: absolute;
+    left: -10px;
+    top: -8px;
+    display: block;
+    margin: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: $not-active;
+    outline: none;
+    opacity: 0;
+    transform: scale(1);
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.2s;
+  }
+  > span {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    &::before {
+      content: "";
+      display: inline-block;
+      box-sizing: border-box;
+      margin: 2px 10px 2px 0;
+      border: solid 2px;
+      border-color: $not-active;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      vertical-align: top;
+      transition: border-color 0.2s;
     }
-    &:checked + label:after {
-      transform: scale(1);
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 2px;
+      left: 0;
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      background-color: $primary-color;
+      transform: translate(5px, 5px) scale(0);
+      transition: transform 0.2s;
     }
   }
-  label {
-    display: inline-block;
-    height: $radio-size;
-    position: relative;
-    padding: 0 ($radio-size + 10px);
-    margin-bottom: 0;
-    cursor: pointer;
-    vertical-align: bottom;
-    &:before, &:after {
-      position: absolute;
-      content: '';
-      border-radius: 50%;
-      transition: all .3s ease;
-      transition-property: transform, border-color;
+  > input {
+    &:checked {
+      background-color: $primary-color;
+      & + span::before {
+        border-color: $primary-color;
+      }
+      & + span::after {
+        transform: translate(5px, 5px) scale(1);
+      }
     }
-    &:before {
-      box-sizing: border-box;
-      left: 0;
-      top: 0;
-      width: $radio-size;
-      height: $radio-size;
-      border: 2px solid rgba(color(black), 0.54)
+    &:focus {
+      opacity: 0.12;
     }
-    &:after {
-      box-sizing: border-box;
-      top: $radio-size / 2 - $gap / 2;
-      left: $radio-size / 2 - $gap / 2;
-      width: $gap;
-      height: $gap;
+  }
+  &:hover {
+    > input {
+      opacity: 0.04;
+      &:focus {
+        opacity: 0.16;
+      }
+    }
+  }
+  /*Active*/
+  > input {
+    &:active {
+      opacity: 1;
       transform: scale(0);
-      background: color(cyan);
+      transition: transform 0s, opacity 0s;
+      & + span::before {
+        border-color: $primary-color;
+      }
+    }
+    &:disabled {
+      opacity: 0;
+      & + span {
+        color: rgba(0, 0, 0, 0.38);
+        cursor: initial;
+        &::before {
+          border-color: currentColor;
+        }
+        &::after {
+          background-color: currentColor;
+        }
+      }
     }
   }
 }
