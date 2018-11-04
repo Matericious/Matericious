@@ -347,7 +347,7 @@ $font: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
   &.expandUp {
     visibility: visible !important;
     transition: all 100ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    @include animation(expandUp .4s);
+    @include animation(expandUp .2s);
   }
 }
 
