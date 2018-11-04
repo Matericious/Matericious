@@ -3,9 +3,9 @@
 
 $light-4-grey: color(grey, light, 4);
 $dark-1-grey: color(grey, dark, 1);
-$dark-color: rgba(color(black, base), .6);
-$white-color: color(white, base);
-$black-color: color(black, base);
+$dark-color: rgba(color(black), .6);
+$white-color: color(white);
+$black-color: color(black);
 
 .list {
   max-width: 100%;
