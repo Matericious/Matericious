@@ -1,0 +1,24 @@
+- var title = 'Tabs'
+doctype
+html(lang='en')
+  head
+    include /includes/head.pug
+      body
+        .tabs
+          .tabs-header
+              a.active(tab-id='1') Active Tab 1
+              a(tab-id='2') Tab 2
+              a(tab-id='3') Tab 3
+              a(tab-id='4') Tab 4
+              a(tab-id='5') Tab 5
+              .border
+          .tabs-content
+              .tab.active(tab-id='1') Tab1
+              .tab(tab-id='2') Tab 2
+              .tab(tab-id='3') Tab 3
+              .tab(tab-id='4') Tab 4
+              .tab(tab-id='5') Tab 5
+              
+          include /includes/foot.pug
+          script.
+            new tabs();
