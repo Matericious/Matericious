@@ -1,5 +1,5 @@
 /**
- * Matericious v0.6.1 (https://matericious.com/)
+ * Matericious v0.7.0 (https://matericious.com/)
  * Copyright 2018 Matericious Authors
  * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
  */
@@ -1577,16 +1577,24 @@
   background: transparent !important;
 }
 
-.red.radio input[type="radio"]:checked + label:before {
-  border-color: #F44336 !important;
+.red.radio > span::after {
+  background-color: #F44336;
 }
 
-.red.radio label:after {
-  background: #F44336 !important;
+.red.radio > input:checked {
+  background-color: #F44336;
+}
+
+.red.radio > input:checked + span::before {
+  border-color: #F44336;
 }
 
 .red.switch {
   background: transparent !important;
+}
+
+.red.switch > input:checked {
+  background-color: #F44336;
 }
 
 .red.switch > input:checked ~ span:before {
@@ -1594,9 +1602,12 @@
 }
 
 .red.switch > input:checked ~ span:after {
-  left: 15px;
   background: #F44336 !important;
   border-color: #F44336 !important;
+}
+
+.red.switch > input:active + span::before {
+  background-color: rgba(244, 67, 54, 0.4);
 }
 
 .red.text:hover {
@@ -1652,16 +1663,24 @@
   background: transparent !important;
 }
 
-.pink.radio input[type="radio"]:checked + label:before {
-  border-color: #E91E63 !important;
+.pink.radio > span::after {
+  background-color: #E91E63;
 }
 
-.pink.radio label:after {
-  background: #E91E63 !important;
+.pink.radio > input:checked {
+  background-color: #E91E63;
+}
+
+.pink.radio > input:checked + span::before {
+  border-color: #E91E63;
 }
 
 .pink.switch {
   background: transparent !important;
+}
+
+.pink.switch > input:checked {
+  background-color: #E91E63;
 }
 
 .pink.switch > input:checked ~ span:before {
@@ -1669,9 +1688,12 @@
 }
 
 .pink.switch > input:checked ~ span:after {
-  left: 15px;
   background: #E91E63 !important;
   border-color: #E91E63 !important;
+}
+
+.pink.switch > input:active + span::before {
+  background-color: rgba(233, 30, 99, 0.4);
 }
 
 .pink.text:hover {
@@ -1727,16 +1749,24 @@
   background: transparent !important;
 }
 
-.purple.radio input[type="radio"]:checked + label:before {
-  border-color: #9C27B0 !important;
+.purple.radio > span::after {
+  background-color: #9C27B0;
 }
 
-.purple.radio label:after {
-  background: #9C27B0 !important;
+.purple.radio > input:checked {
+  background-color: #9C27B0;
+}
+
+.purple.radio > input:checked + span::before {
+  border-color: #9C27B0;
 }
 
 .purple.switch {
   background: transparent !important;
+}
+
+.purple.switch > input:checked {
+  background-color: #9C27B0;
 }
 
 .purple.switch > input:checked ~ span:before {
@@ -1744,9 +1774,12 @@
 }
 
 .purple.switch > input:checked ~ span:after {
-  left: 15px;
   background: #9C27B0 !important;
   border-color: #9C27B0 !important;
+}
+
+.purple.switch > input:active + span::before {
+  background-color: rgba(156, 39, 176, 0.4);
 }
 
 .purple.text:hover {
@@ -1802,16 +1835,24 @@
   background: transparent !important;
 }
 
-.deep-purple.radio input[type="radio"]:checked + label:before {
-  border-color: #673AB7 !important;
+.deep-purple.radio > span::after {
+  background-color: #673AB7;
 }
 
-.deep-purple.radio label:after {
-  background: #673AB7 !important;
+.deep-purple.radio > input:checked {
+  background-color: #673AB7;
+}
+
+.deep-purple.radio > input:checked + span::before {
+  border-color: #673AB7;
 }
 
 .deep-purple.switch {
   background: transparent !important;
+}
+
+.deep-purple.switch > input:checked {
+  background-color: #673AB7;
 }
 
 .deep-purple.switch > input:checked ~ span:before {
@@ -1819,9 +1860,12 @@
 }
 
 .deep-purple.switch > input:checked ~ span:after {
-  left: 15px;
   background: #673AB7 !important;
   border-color: #673AB7 !important;
+}
+
+.deep-purple.switch > input:active + span::before {
+  background-color: rgba(103, 58, 183, 0.4);
 }
 
 .deep-purple.text:hover {
@@ -1877,16 +1921,24 @@
   background: transparent !important;
 }
 
-.indigo.radio input[type="radio"]:checked + label:before {
-  border-color: #3F51B5 !important;
+.indigo.radio > span::after {
+  background-color: #3F51B5;
 }
 
-.indigo.radio label:after {
-  background: #3F51B5 !important;
+.indigo.radio > input:checked {
+  background-color: #3F51B5;
+}
+
+.indigo.radio > input:checked + span::before {
+  border-color: #3F51B5;
 }
 
 .indigo.switch {
   background: transparent !important;
+}
+
+.indigo.switch > input:checked {
+  background-color: #3F51B5;
 }
 
 .indigo.switch > input:checked ~ span:before {
@@ -1894,9 +1946,12 @@
 }
 
 .indigo.switch > input:checked ~ span:after {
-  left: 15px;
   background: #3F51B5 !important;
   border-color: #3F51B5 !important;
+}
+
+.indigo.switch > input:active + span::before {
+  background-color: rgba(63, 81, 181, 0.4);
 }
 
 .indigo.text:hover {
@@ -1952,16 +2007,24 @@
   background: transparent !important;
 }
 
-.blue.radio input[type="radio"]:checked + label:before {
-  border-color: #2196F3 !important;
+.blue.radio > span::after {
+  background-color: #2196F3;
 }
 
-.blue.radio label:after {
-  background: #2196F3 !important;
+.blue.radio > input:checked {
+  background-color: #2196F3;
+}
+
+.blue.radio > input:checked + span::before {
+  border-color: #2196F3;
 }
 
 .blue.switch {
   background: transparent !important;
+}
+
+.blue.switch > input:checked {
+  background-color: #2196F3;
 }
 
 .blue.switch > input:checked ~ span:before {
@@ -1969,9 +2032,12 @@
 }
 
 .blue.switch > input:checked ~ span:after {
-  left: 15px;
   background: #2196F3 !important;
   border-color: #2196F3 !important;
+}
+
+.blue.switch > input:active + span::before {
+  background-color: rgba(33, 150, 243, 0.4);
 }
 
 .blue.text:hover {
@@ -2027,16 +2093,24 @@
   background: transparent !important;
 }
 
-.light-blue.radio input[type="radio"]:checked + label:before {
-  border-color: #03A9F4 !important;
+.light-blue.radio > span::after {
+  background-color: #03A9F4;
 }
 
-.light-blue.radio label:after {
-  background: #03A9F4 !important;
+.light-blue.radio > input:checked {
+  background-color: #03A9F4;
+}
+
+.light-blue.radio > input:checked + span::before {
+  border-color: #03A9F4;
 }
 
 .light-blue.switch {
   background: transparent !important;
+}
+
+.light-blue.switch > input:checked {
+  background-color: #03A9F4;
 }
 
 .light-blue.switch > input:checked ~ span:before {
@@ -2044,9 +2118,12 @@
 }
 
 .light-blue.switch > input:checked ~ span:after {
-  left: 15px;
   background: #03A9F4 !important;
   border-color: #03A9F4 !important;
+}
+
+.light-blue.switch > input:active + span::before {
+  background-color: rgba(3, 169, 244, 0.4);
 }
 
 .light-blue.text:hover {
@@ -2102,16 +2179,24 @@
   background: transparent !important;
 }
 
-.cyan.radio input[type="radio"]:checked + label:before {
-  border-color: #00BCD4 !important;
+.cyan.radio > span::after {
+  background-color: #00BCD4;
 }
 
-.cyan.radio label:after {
-  background: #00BCD4 !important;
+.cyan.radio > input:checked {
+  background-color: #00BCD4;
+}
+
+.cyan.radio > input:checked + span::before {
+  border-color: #00BCD4;
 }
 
 .cyan.switch {
   background: transparent !important;
+}
+
+.cyan.switch > input:checked {
+  background-color: #00BCD4;
 }
 
 .cyan.switch > input:checked ~ span:before {
@@ -2119,9 +2204,12 @@
 }
 
 .cyan.switch > input:checked ~ span:after {
-  left: 15px;
   background: #00BCD4 !important;
   border-color: #00BCD4 !important;
+}
+
+.cyan.switch > input:active + span::before {
+  background-color: rgba(0, 188, 212, 0.4);
 }
 
 .cyan.text:hover {
@@ -2177,16 +2265,24 @@
   background: transparent !important;
 }
 
-.teal.radio input[type="radio"]:checked + label:before {
-  border-color: #009688 !important;
+.teal.radio > span::after {
+  background-color: #009688;
 }
 
-.teal.radio label:after {
-  background: #009688 !important;
+.teal.radio > input:checked {
+  background-color: #009688;
+}
+
+.teal.radio > input:checked + span::before {
+  border-color: #009688;
 }
 
 .teal.switch {
   background: transparent !important;
+}
+
+.teal.switch > input:checked {
+  background-color: #009688;
 }
 
 .teal.switch > input:checked ~ span:before {
@@ -2194,9 +2290,12 @@
 }
 
 .teal.switch > input:checked ~ span:after {
-  left: 15px;
   background: #009688 !important;
   border-color: #009688 !important;
+}
+
+.teal.switch > input:active + span::before {
+  background-color: rgba(0, 150, 136, 0.4);
 }
 
 .teal.text:hover {
@@ -2252,16 +2351,24 @@
   background: transparent !important;
 }
 
-.green.radio input[type="radio"]:checked + label:before {
-  border-color: #4CAF50 !important;
+.green.radio > span::after {
+  background-color: #4CAF50;
 }
 
-.green.radio label:after {
-  background: #4CAF50 !important;
+.green.radio > input:checked {
+  background-color: #4CAF50;
+}
+
+.green.radio > input:checked + span::before {
+  border-color: #4CAF50;
 }
 
 .green.switch {
   background: transparent !important;
+}
+
+.green.switch > input:checked {
+  background-color: #4CAF50;
 }
 
 .green.switch > input:checked ~ span:before {
@@ -2269,9 +2376,12 @@
 }
 
 .green.switch > input:checked ~ span:after {
-  left: 15px;
   background: #4CAF50 !important;
   border-color: #4CAF50 !important;
+}
+
+.green.switch > input:active + span::before {
+  background-color: rgba(76, 175, 80, 0.4);
 }
 
 .green.text:hover {
@@ -2327,16 +2437,24 @@
   background: transparent !important;
 }
 
-.light-green.radio input[type="radio"]:checked + label:before {
-  border-color: #8BC34A !important;
+.light-green.radio > span::after {
+  background-color: #8BC34A;
 }
 
-.light-green.radio label:after {
-  background: #8BC34A !important;
+.light-green.radio > input:checked {
+  background-color: #8BC34A;
+}
+
+.light-green.radio > input:checked + span::before {
+  border-color: #8BC34A;
 }
 
 .light-green.switch {
   background: transparent !important;
+}
+
+.light-green.switch > input:checked {
+  background-color: #8BC34A;
 }
 
 .light-green.switch > input:checked ~ span:before {
@@ -2344,9 +2462,12 @@
 }
 
 .light-green.switch > input:checked ~ span:after {
-  left: 15px;
   background: #8BC34A !important;
   border-color: #8BC34A !important;
+}
+
+.light-green.switch > input:active + span::before {
+  background-color: rgba(139, 195, 74, 0.4);
 }
 
 .light-green.text:hover {
@@ -2402,16 +2523,24 @@
   background: transparent !important;
 }
 
-.lime.radio input[type="radio"]:checked + label:before {
-  border-color: #CDDC39 !important;
+.lime.radio > span::after {
+  background-color: #CDDC39;
 }
 
-.lime.radio label:after {
-  background: #CDDC39 !important;
+.lime.radio > input:checked {
+  background-color: #CDDC39;
+}
+
+.lime.radio > input:checked + span::before {
+  border-color: #CDDC39;
 }
 
 .lime.switch {
   background: transparent !important;
+}
+
+.lime.switch > input:checked {
+  background-color: #CDDC39;
 }
 
 .lime.switch > input:checked ~ span:before {
@@ -2419,9 +2548,12 @@
 }
 
 .lime.switch > input:checked ~ span:after {
-  left: 15px;
   background: #CDDC39 !important;
   border-color: #CDDC39 !important;
+}
+
+.lime.switch > input:active + span::before {
+  background-color: rgba(205, 220, 57, 0.4);
 }
 
 .lime.text:hover {
@@ -2477,16 +2609,24 @@
   background: transparent !important;
 }
 
-.yellow.radio input[type="radio"]:checked + label:before {
-  border-color: #FFEB3B !important;
+.yellow.radio > span::after {
+  background-color: #FFEB3B;
 }
 
-.yellow.radio label:after {
-  background: #FFEB3B !important;
+.yellow.radio > input:checked {
+  background-color: #FFEB3B;
+}
+
+.yellow.radio > input:checked + span::before {
+  border-color: #FFEB3B;
 }
 
 .yellow.switch {
   background: transparent !important;
+}
+
+.yellow.switch > input:checked {
+  background-color: #FFEB3B;
 }
 
 .yellow.switch > input:checked ~ span:before {
@@ -2494,9 +2634,12 @@
 }
 
 .yellow.switch > input:checked ~ span:after {
-  left: 15px;
   background: #FFEB3B !important;
   border-color: #FFEB3B !important;
+}
+
+.yellow.switch > input:active + span::before {
+  background-color: rgba(255, 235, 59, 0.4);
 }
 
 .yellow.text:hover {
@@ -2552,16 +2695,24 @@
   background: transparent !important;
 }
 
-.amber.radio input[type="radio"]:checked + label:before {
-  border-color: #FFC107 !important;
+.amber.radio > span::after {
+  background-color: #FFC107;
 }
 
-.amber.radio label:after {
-  background: #FFC107 !important;
+.amber.radio > input:checked {
+  background-color: #FFC107;
+}
+
+.amber.radio > input:checked + span::before {
+  border-color: #FFC107;
 }
 
 .amber.switch {
   background: transparent !important;
+}
+
+.amber.switch > input:checked {
+  background-color: #FFC107;
 }
 
 .amber.switch > input:checked ~ span:before {
@@ -2569,9 +2720,12 @@
 }
 
 .amber.switch > input:checked ~ span:after {
-  left: 15px;
   background: #FFC107 !important;
   border-color: #FFC107 !important;
+}
+
+.amber.switch > input:active + span::before {
+  background-color: rgba(255, 193, 7, 0.4);
 }
 
 .amber.text:hover {
@@ -2627,16 +2781,24 @@
   background: transparent !important;
 }
 
-.orange.radio input[type="radio"]:checked + label:before {
-  border-color: #FF9800 !important;
+.orange.radio > span::after {
+  background-color: #FF9800;
 }
 
-.orange.radio label:after {
-  background: #FF9800 !important;
+.orange.radio > input:checked {
+  background-color: #FF9800;
+}
+
+.orange.radio > input:checked + span::before {
+  border-color: #FF9800;
 }
 
 .orange.switch {
   background: transparent !important;
+}
+
+.orange.switch > input:checked {
+  background-color: #FF9800;
 }
 
 .orange.switch > input:checked ~ span:before {
@@ -2644,9 +2806,12 @@
 }
 
 .orange.switch > input:checked ~ span:after {
-  left: 15px;
   background: #FF9800 !important;
   border-color: #FF9800 !important;
+}
+
+.orange.switch > input:active + span::before {
+  background-color: rgba(255, 152, 0, 0.4);
 }
 
 .orange.text:hover {
@@ -2702,16 +2867,24 @@
   background: transparent !important;
 }
 
-.deep-orange.radio input[type="radio"]:checked + label:before {
-  border-color: #FF5722 !important;
+.deep-orange.radio > span::after {
+  background-color: #FF5722;
 }
 
-.deep-orange.radio label:after {
-  background: #FF5722 !important;
+.deep-orange.radio > input:checked {
+  background-color: #FF5722;
+}
+
+.deep-orange.radio > input:checked + span::before {
+  border-color: #FF5722;
 }
 
 .deep-orange.switch {
   background: transparent !important;
+}
+
+.deep-orange.switch > input:checked {
+  background-color: #FF5722;
 }
 
 .deep-orange.switch > input:checked ~ span:before {
@@ -2719,9 +2892,12 @@
 }
 
 .deep-orange.switch > input:checked ~ span:after {
-  left: 15px;
   background: #FF5722 !important;
   border-color: #FF5722 !important;
+}
+
+.deep-orange.switch > input:active + span::before {
+  background-color: rgba(255, 87, 34, 0.4);
 }
 
 .deep-orange.text:hover {
@@ -2777,16 +2953,24 @@
   background: transparent !important;
 }
 
-.brown.radio input[type="radio"]:checked + label:before {
-  border-color: #795548 !important;
+.brown.radio > span::after {
+  background-color: #795548;
 }
 
-.brown.radio label:after {
-  background: #795548 !important;
+.brown.radio > input:checked {
+  background-color: #795548;
+}
+
+.brown.radio > input:checked + span::before {
+  border-color: #795548;
 }
 
 .brown.switch {
   background: transparent !important;
+}
+
+.brown.switch > input:checked {
+  background-color: #795548;
 }
 
 .brown.switch > input:checked ~ span:before {
@@ -2794,9 +2978,12 @@
 }
 
 .brown.switch > input:checked ~ span:after {
-  left: 15px;
   background: #795548 !important;
   border-color: #795548 !important;
+}
+
+.brown.switch > input:active + span::before {
+  background-color: rgba(121, 85, 72, 0.4);
 }
 
 .brown.text:hover {
@@ -2852,16 +3039,24 @@
   background: transparent !important;
 }
 
-.grey.radio input[type="radio"]:checked + label:before {
-  border-color: #9E9E9E !important;
+.grey.radio > span::after {
+  background-color: #9E9E9E;
 }
 
-.grey.radio label:after {
-  background: #9E9E9E !important;
+.grey.radio > input:checked {
+  background-color: #9E9E9E;
+}
+
+.grey.radio > input:checked + span::before {
+  border-color: #9E9E9E;
 }
 
 .grey.switch {
   background: transparent !important;
+}
+
+.grey.switch > input:checked {
+  background-color: #9E9E9E;
 }
 
 .grey.switch > input:checked ~ span:before {
@@ -2869,9 +3064,12 @@
 }
 
 .grey.switch > input:checked ~ span:after {
-  left: 15px;
   background: #9E9E9E !important;
   border-color: #9E9E9E !important;
+}
+
+.grey.switch > input:active + span::before {
+  background-color: rgba(158, 158, 158, 0.4);
 }
 
 .grey.text:hover {
@@ -2927,16 +3125,24 @@
   background: transparent !important;
 }
 
-.blue-grey.radio input[type="radio"]:checked + label:before {
-  border-color: #607D8B !important;
+.blue-grey.radio > span::after {
+  background-color: #607D8B;
 }
 
-.blue-grey.radio label:after {
-  background: #607D8B !important;
+.blue-grey.radio > input:checked {
+  background-color: #607D8B;
+}
+
+.blue-grey.radio > input:checked + span::before {
+  border-color: #607D8B;
 }
 
 .blue-grey.switch {
   background: transparent !important;
+}
+
+.blue-grey.switch > input:checked {
+  background-color: #607D8B;
 }
 
 .blue-grey.switch > input:checked ~ span:before {
@@ -2944,9 +3150,12 @@
 }
 
 .blue-grey.switch > input:checked ~ span:after {
-  left: 15px;
   background: #607D8B !important;
   border-color: #607D8B !important;
+}
+
+.blue-grey.switch > input:active + span::before {
+  background-color: rgba(96, 125, 139, 0.4);
 }
 
 .blue-grey.text:hover {
@@ -3002,16 +3211,24 @@
   background: transparent !important;
 }
 
-.white.radio input[type="radio"]:checked + label:before {
-  border-color: #FFFFFF !important;
+.white.radio > span::after {
+  background-color: #FFFFFF;
 }
 
-.white.radio label:after {
-  background: #FFFFFF !important;
+.white.radio > input:checked {
+  background-color: #FFFFFF;
+}
+
+.white.radio > input:checked + span::before {
+  border-color: #FFFFFF;
 }
 
 .white.switch {
   background: transparent !important;
+}
+
+.white.switch > input:checked {
+  background-color: #FFFFFF;
 }
 
 .white.switch > input:checked ~ span:before {
@@ -3019,9 +3236,12 @@
 }
 
 .white.switch > input:checked ~ span:after {
-  left: 15px;
   background: #FFFFFF !important;
   border-color: #FFFFFF !important;
+}
+
+.white.switch > input:active + span::before {
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .white.text:hover {

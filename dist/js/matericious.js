@@ -1,3 +1,9 @@
+/**
+ * Matericious v0.7.0 (https://matericious.com/)
+ * Copyright 2018 Matericious Authors
+ * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
+ */
+
 "use strict";
 
 function ready(callback) {
@@ -78,7 +84,7 @@ function is_string(data) {
   } else {
     return false;
   }
-} //=require _base.js
+} //=include _base.js
 
 
 function nesting() {
@@ -130,7 +136,7 @@ function nesting() {
   addEvent(window, "resize", function () {
     checkNesting();
   });
-} //=require _base.js
+} //=include _base.js
 
 
 function dialog(data) {
@@ -275,7 +281,7 @@ function dialog(data) {
       close(id);
     });
   };
-} //=require _base.js
+} //=include _base.js
 
 
 function drawer() {
@@ -335,7 +341,7 @@ function drawer() {
   }
 }
 
-; //=require _base.js
+; //=include _base.js
 
 function gradient() {
   var main_colors = {
@@ -377,7 +383,7 @@ function gradient() {
       divs[c].style.background = gradient;
     }
   });
-} //=require _base.js
+} //=include _base.js
 
 
 function menu() {
@@ -438,7 +444,7 @@ function openMenu() {
     document.removeEventListener("click", clickOutSide, true);
     return;
   }
-} //=require _base.js
+} //=include _base.js
 
 
 function ripple() {
@@ -460,7 +466,7 @@ function rippleEffect(event) {
   window.setTimeout(function () {
     rippleDiv.parentNode.removeChild(rippleDiv);
   }, 1500);
-} //=require _base.js
+} //=include _base.js
 
 
 function select() {
@@ -482,7 +488,7 @@ function input_select() {
       }
     }
   });
-} //=require _base.js
+} //=include _base.js
 
 
 function Snackbar(data, callback) {
@@ -537,7 +543,7 @@ function Snackbar(data, callback) {
   }
 
   timer(data.time);
-} //=require _base.js
+} //=include _base.js
 
 
 function tabs(event) {

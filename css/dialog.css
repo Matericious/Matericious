@@ -1,5 +1,5 @@
 /**
- * Matericious v0.6.1 (https://matericious.com/)
+ * Matericious v0.7.0 (https://matericious.com/)
  * Copyright 2018 Matericious Authors
  * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
  */
@@ -385,8 +385,8 @@
   visibility: visible !important;
   -webkit-transition: all 100ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: all 100ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  -webkit-animation: expandUp 0.4s;
-  animation: expandUp 0.4s;
+  -webkit-animation: expandUp 0.2s;
+  animation: expandUp 0.2s;
 }
 
 @-webkit-keyframes fadeIn {
