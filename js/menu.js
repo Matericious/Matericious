@@ -7,9 +7,8 @@
 "use strict";
 
 function ready(callback) {
-  // in case the document is already rendered
-  if (document.readyState != "loading") callback();else if (document.addEventListener) // modern browsers
-    document.addEventListener("DOMContentLoaded", callback);else // IE <= 8
+  if (document.readyState != "loading") callback();else if (document.addEventListener) 
+    document.addEventListener("DOMContentLoaded", callback);else 
     document.attachEvent("onreadystatechange", function () {
       if (document.readyState == "complete") callback();
     });
@@ -108,8 +107,8 @@ function openMenu() {
         menu_size = [targetMenu.offsetWidth, targetMenu.offsetHeight];
 
     if (!default_class.includes("right") && pos[1] + menu_size[0] > w) {
-      $addClass(targetMenu, "right"); //  alert("adding class");
-    } else if (pos[1] - menu_size[0] > w) {//menu cannot go right
+      $addClass(targetMenu, "right"); 
+    } else if (pos[1] - menu_size[0] > w) {
     }
 
     targetMenu.style.top = size[1] / 2 + pos[0] + "px";
@@ -122,7 +121,6 @@ function openMenu() {
   }
 
   document.addEventListener("click", clickOutSide, true);
-  /*When window size change reposition menu*/
 
   addEvent(window, "resize", function () {
     setPosition();

@@ -7,9 +7,8 @@
 "use strict";
 
 function ready(callback) {
-  // in case the document is already rendered
-  if (document.readyState != "loading") callback();else if (document.addEventListener) // modern browsers
-    document.addEventListener("DOMContentLoaded", callback);else // IE <= 8
+  if (document.readyState != "loading") callback();else if (document.addEventListener) 
+    document.addEventListener("DOMContentLoaded", callback);else 
     document.attachEvent("onreadystatechange", function () {
       if (document.readyState == "complete") callback();
     });
@@ -84,7 +83,7 @@ function is_string(data) {
   } else {
     return false;
   }
-} //=include _base.js
+} 
 
 
 function nesting() {
@@ -136,7 +135,7 @@ function nesting() {
   addEvent(window, "resize", function () {
     checkNesting();
   });
-} //=include _base.js
+} 
 
 
 function dialog(data) {
@@ -281,7 +280,7 @@ function dialog(data) {
       close(id);
     });
   };
-} //=include _base.js
+} 
 
 
 function drawer() {
@@ -341,7 +340,7 @@ function drawer() {
   }
 }
 
-; //=include _base.js
+; 
 
 function gradient() {
   var main_colors = {
@@ -383,7 +382,7 @@ function gradient() {
       divs[c].style.background = gradient;
     }
   });
-} //=include _base.js
+} 
 
 
 function menu() {
@@ -408,8 +407,8 @@ function openMenu() {
         menu_size = [targetMenu.offsetWidth, targetMenu.offsetHeight];
 
     if (!default_class.includes("right") && pos[1] + menu_size[0] > w) {
-      $addClass(targetMenu, "right"); //  alert("adding class");
-    } else if (pos[1] - menu_size[0] > w) {//menu cannot go right
+      $addClass(targetMenu, "right"); 
+    } else if (pos[1] - menu_size[0] > w) {
     }
 
     targetMenu.style.top = size[1] / 2 + pos[0] + "px";
@@ -422,7 +421,6 @@ function openMenu() {
   }
 
   document.addEventListener("click", clickOutSide, true);
-  /*When window size change reposition menu*/
 
   addEvent(window, "resize", function () {
     setPosition();
@@ -444,7 +442,7 @@ function openMenu() {
     document.removeEventListener("click", clickOutSide, true);
     return;
   }
-} //=include _base.js
+} 
 
 
 function ripple() {
@@ -466,7 +464,7 @@ function rippleEffect(event) {
   window.setTimeout(function () {
     rippleDiv.parentNode.removeChild(rippleDiv);
   }, 1500);
-} //=include _base.js
+} 
 
 
 function select() {
@@ -488,7 +486,7 @@ function input_select() {
       }
     }
   });
-} //=include _base.js
+} 
 
 
 function Snackbar(data, callback) {
@@ -543,7 +541,7 @@ function Snackbar(data, callback) {
   }
 
   timer(data.time);
-} //=include _base.js
+} 
 
 
 function tabs(event) {

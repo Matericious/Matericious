@@ -7,9 +7,8 @@
 "use strict";
 
 function ready(callback) {
-  // in case the document is already rendered
-  if (document.readyState != "loading") callback();else if (document.addEventListener) // modern browsers
-    document.addEventListener("DOMContentLoaded", callback);else // IE <= 8
+  if (document.readyState != "loading") callback();else if (document.addEventListener) 
+    document.addEventListener("DOMContentLoaded", callback);else 
     document.attachEvent("onreadystatechange", function () {
       if (document.readyState == "complete") callback();
     });
