@@ -145,5 +145,3 @@
 .switch > input:checked:disabled + span::before {
   background-color: rgba(0, 188, 212, 0.6);
 }
-
-/*# sourceMappingURL=switch.css.map */

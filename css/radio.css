@@ -143,5 +143,3 @@
 .radio > input:disabled + span::after {
   background-color: currentColor;
 }
-
-/*# sourceMappingURL=radio.css.map */
