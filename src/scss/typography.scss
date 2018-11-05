@@ -1,0 +1,27 @@
+$font: 'Roboto', sans-serif;
+$light: 300; $regular: 500; $medium: 400;
+$typography: (
+    ("h-1", -1.5, $light, 96, capitalize),
+    ("h-2", -0.5, $light, 60, capitalize),
+    ("h-3", 0, $medium, 48, capitalize),
+    ("h-4", 0.25, $medium, 34, capitalize),
+    ("h-5", 0, $medium, 24, capitalize),
+    ("h-6", 0.15, $regular, 20, capitalize),
+    ("subtitle-1", 0.15, $regular, 16, capitalize),
+    ("subtitle-2", 0.1, $medium, 14, capitalize),
+    ("body-1", 0.5, $regular, 16, capitalize),
+    ("body-2", 0.25, $regular, 14, capitalize),
+    ("btn-txt", 1.25, $regular, 14, uppercase),
+    ("caption", 0.4, $regular, 12, capitalize),
+    ("overline", 0.5, $regular, 10, uppercase),
+);
+
+@each $t in $typography{
+  .#{nth($t,1)}{
+    font-family: $font;
+    letter-spacing: #{nth($t,2)}px;
+    font-weight: #{nth($t,3)};
+    font-size: #{nth($t,4)}px;
+    text-transform: #{nth($t,5)};
+  }
+}
