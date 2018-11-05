@@ -1,0 +1,14 @@
+- var title = 'Typography'
+doctype
+html(lang='en')
+  head
+    include /includes/head.pug
+  body
+    h1.h-1 Headline 1
+    h2.h-2 Headline 2
+    h3.h-3 Headline 3
+    h4.h-4 Headline 4
+    h5.h-5 Headline 5
+    h6.h-6 Headline 6
+    each val in ['subtitle-1', 'subtitle-2', 'body-1', 'body-2', 'btn-txt', 'caption', 'overline']
+      h6(class=val)= val
