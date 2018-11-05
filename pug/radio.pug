@@ -13,3 +13,13 @@ html(lang='en')
           else
             input(id=color type='radio' name='color')
           span(for=color)=color
+  
+    h3 Radio with text left
+    - var textLeft = ['Google', 'Microsoft', 'Apple'];
+      each text in textLeft
+        label(class='radio txt-left')
+          if text == 'Google'
+            input(id=color type='radio' name='text' checked)
+          else
+            input(id=text type='radio' name='text')
+          span(for=text)=text

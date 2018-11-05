@@ -11,3 +11,10 @@ html(lang='en')
             label(class='switch '+color)
               input(type='checkbox')
               span #{color}
+              
+          h3= title
+          - var textLeft = ['Google', 'Microsoft', 'Apple'];
+          each text in textLeft
+            label(class='switch '+text)
+              input(type='checkbox')
+              span color

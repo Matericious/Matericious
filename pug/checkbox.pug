@@ -11,3 +11,10 @@ html(lang='en')
       label(class='checkbox '+color)
         input(type='checkbox')
         span #{color}
+        
+  h3 Radio with text left
+  - var textLeft = ['Google', 'Microsoft', 'Apple'];
+    each text in textLeft
+      label(class='radio txt-left')
+           input(id=text type='checkbox' name='text')
+           span(for=text)=text
