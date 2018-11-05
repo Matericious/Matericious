@@ -12,9 +12,9 @@ html(lang='en')
               input(type='checkbox')
               span #{color}
               
-          h3= title
+          h3 Switch with left text
           - var textLeft = ['Google', 'Microsoft', 'Apple'];
           each text in textLeft
             label(class='switch '+text)
               input(type='checkbox')
-              span color
+              span text
