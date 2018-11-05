@@ -13,8 +13,10 @@ $font: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
   font-family: $font;
   font-size: 16px;
   line-height: 1.5;
-  padding-right: 15px;
   * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
   }
   > input {
@@ -41,6 +43,7 @@ $font: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
     display: inline-block;
     width: 100%;
     cursor: pointer;
+    padding-left: 10px;
     &::before {
       content: "";
       display: inline-block;
@@ -48,6 +51,8 @@ $font: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
       border-radius: 7px;
       width: 36px;
       height: 14px;
+      position: relative;
+      left: -10px;
       background-color: $not-active-color;
       vertical-align: top;
       transition: background-color 0.2s, opacity 0.2s;
@@ -68,7 +73,6 @@ $font: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
   }
 
   > input {
-
     &:checked {
       left: 6px;
       background-color: $main-color;
@@ -120,6 +124,31 @@ $font: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
     &:checked {
       &:disabled + span::before {
         background-color: rgba($main-color, 0.6);
+      }
+    }
+  }
+  &.txt-left{
+    padding-left: 6px;
+    padding-right: 0px;
+    > input{
+      left: calc(100% - 45px);
+      position: absolute;
+      &:checked {
+        left: calc(100% - 30px);
+      }
+    }
+    > span{
+      padding-right: 10px;
+      padding-left: 0;
+      &::after{
+        left: auto;
+        right: 16px;
+      }
+      &::before{
+        float: right;
+        position: relative;
+        left: 0px;
+        right: 0px;
       }
     }
   }

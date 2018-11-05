@@ -12,7 +12,6 @@
   font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
   font-size: 16px;
   line-height: 1.5;
-  padding-right: 15px;
 }
 
 .switch * {
@@ -51,6 +50,7 @@
   display: inline-block;
   width: 100%;
   cursor: pointer;
+  padding-left: 10px;
 }
 
 .switch > span::before {
@@ -60,6 +60,8 @@
   border-radius: 7px;
   width: 36px;
   height: 14px;
+  position: relative;
+  left: -10px;
   background-color: rgba(0, 0, 0, 0.4);
   vertical-align: top;
   -webkit-transition: background-color 0.2s, opacity 0.2s;
@@ -144,4 +146,35 @@
 
 .switch > input:checked:disabled + span::before {
   background-color: rgba(0, 188, 212, 0.6);
+}
+
+.switch.txt-left {
+  padding-left: 6px;
+  padding-right: 0px;
+}
+
+.switch.txt-left > input {
+  left: calc(100% - 45px);
+  position: absolute;
+}
+
+.switch.txt-left > input:checked {
+  left: calc(100% - 30px);
+}
+
+.switch.txt-left > span {
+  padding-right: 10px;
+  padding-left: 0;
+}
+
+.switch.txt-left > span::after {
+  left: auto;
+  right: 16px;
+}
+
+.switch.txt-left > span::before {
+  float: right;
+  position: relative;
+  left: 0px;
+  right: 0px;
 }

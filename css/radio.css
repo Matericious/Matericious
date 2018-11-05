@@ -12,15 +12,7 @@
   font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
   font-size: 16px;
   line-height: 1.5;
-  padding-right: 15px;
   /*Active*/
-}
-
-.radio * {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 .radio > input {
@@ -29,7 +21,7 @@
   -webkit-appearance: none;
   z-index: -1;
   position: absolute;
-  left: -10px;
+  left: -1px;
   top: -8px;
   display: block;
   margin: 0;
@@ -52,6 +44,7 @@
   display: inline-block;
   width: 100%;
   cursor: pointer;
+  padding-left: 10px;
 }
 
 .radio > span::before {
@@ -75,7 +68,7 @@
   display: block;
   position: absolute;
   top: 2px;
-  left: 0;
+  left: 10px;
   border-radius: 50%;
   width: 10px;
   height: 10px;
@@ -142,4 +135,25 @@
 
 .radio > input:disabled + span::after {
   background-color: currentColor;
+}
+
+.radio.txt-left {
+  text-indent: 50xp;
+  padding-right: 0px;
+}
+
+.radio.txt-left > input {
+  left: calc(100% - 30px);
+  position: absolute;
+}
+
+.radio.txt-left > span::after {
+  left: auto;
+  right: 10px;
+}
+
+.radio.txt-left > span::before {
+  float: right;
+  position: relative;
+  right: 0px;
 }

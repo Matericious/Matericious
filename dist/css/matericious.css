@@ -471,13 +471,6 @@ btn.btn[ts]:hover {
   padding-right: 15px;
 }
 
-.checkbox * {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 .checkbox > input {
   width: 40px;
   height: 40px;
@@ -608,6 +601,30 @@ btn.btn[ts]:hover {
 
 .checkbox:hover > input:focus {
   opacity: 0.16;
+}
+
+.checkbox.txt-left {
+  padding-right: 0px;
+}
+
+.checkbox.txt-left > input {
+  left: calc(100% - 30px);
+  position: absolute;
+}
+
+.checkbox.txt-left > span {
+  backgruond: red;
+}
+
+.checkbox.txt-left > span::after {
+  left: auto;
+  right: 6px;
+}
+
+.checkbox.txt-left > span::before {
+  float: right;
+  position: relative;
+  right: -10px;
 }
 
 a {
@@ -5676,47 +5693,68 @@ body.overlay:after {
   list-style: none;
   padding: 8px 0;
   border-radius: 4px;
-  background: #fff;
+  background: #FFFFFF;
 }
 
-.list > li {
-  width: auto;
+.list > label {
+  position: relative;
+  display: block;
+  color: #000000;
+  line-height: 18px;
+  cursor: pointer;
+}
+
+.list > li,
+.list > label,
+.list > div {
   height: 48px;
   line-height: 48px;
   font-size: 16px;
   padding: 0 16px;
-  color: #424242;
-  font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Roboto", san-serif;
 }
 
-.list > li:hover {
-  background: #efefef;
+.list > li:hover,
+.list > label:hover,
+.list > div:hover {
+  background: #F5F5F5;
 }
 
-.list > li > a {
+.list > li > a,
+.list > label > a,
+.list > div > a {
   text-decoration: none;
-  color: #424242;
+  color: rgba(0, 0, 0, 0.6);
 }
 
-.list > li > div span.title {
-  color: #424242;
+.list > li > div span.title,
+.list > label > div span.title,
+.list > div > div span.title {
+  color: rgba(0, 0, 0, 0.6);
 }
 
-.list > li > div span.subtitle {
+.list > li > div span.subtitle,
+.list > label > div span.subtitle,
+.list > div > div span.subtitle {
   display: block;
   font-size: 14px;
-  color: #999;
+  color: #757575;
 }
 
-.list > li > i {
+.list > li > i,
+.list > label > i,
+.list > div > i {
   font-size: 24px;
   vertical-align: middle;
-  color: #999;
+  color: #757575;
   position: relative;
   margin-right: 32px;
 }
 
-.list > li > i.trail-icon {
+.list > li > i.trail-icon,
+.list > label > i.trail-icon,
+.list > div > i.trail-icon {
   margin-right: 0;
   margin-top: 12px;
   display: inline-block;
@@ -5724,7 +5762,9 @@ body.overlay:after {
   position: relative;
 }
 
-.list > li.two-line {
+.list > li.two-line,
+.list > label.two-line,
+.list > div.two-line {
   padding: 8px 16px;
   height: 56px;
   line-height: 20px;
@@ -5736,33 +5776,50 @@ body.overlay:after {
   align-items: center;
 }
 
-.list > li.two-line .lead-icon {
+.list > li.two-line .lead-icon,
+.list > label.two-line .lead-icon,
+.list > div.two-line .lead-icon {
   margin-right: 16px;
   width: 40px;
   height: 40px;
   line-height: 40px;
   font-size: 20px;
-  color: #fff;
-  background-color: #999;
+  color: #FFFFFF;
+  background-color: #757575;
   text-align: center;
   float: left;
   border-radius: 50%;
 }
 
-.list > li.two-line > .trail-icon {
+.list > li.two-line > .trail-icon,
+.list > label.two-line > .trail-icon,
+.list > div.two-line > .trail-icon {
   display: inline-block;
   margin: 0 0 0 auto;
 }
 
-.list > li.two-line + hr {
+.list > li.two-line + hr,
+.list > label.two-line + hr,
+.list > div.two-line + hr {
   margin: 0;
+}
+
+.list > li > .trail,
+.list > label > .trail,
+.list > div > .trail {
+  float: right;
+  height: 100%;
+  float: right;
+  position: relative;
+  top: 12px;
+  right: -20px;
 }
 
 .list > hr {
   width: 100%;
   height: 1px;
   border: none;
-  background: #d9d9d9;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .menu {
@@ -5871,15 +5928,7 @@ body.overlay:after {
   font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
   font-size: 16px;
   line-height: 1.5;
-  padding-right: 15px;
   /*Active*/
-}
-
-.radio * {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 }
 
 .radio > input {
@@ -5888,7 +5937,7 @@ body.overlay:after {
   -webkit-appearance: none;
   z-index: -1;
   position: absolute;
-  left: -10px;
+  left: -1px;
   top: -8px;
   display: block;
   margin: 0;
@@ -5911,6 +5960,7 @@ body.overlay:after {
   display: inline-block;
   width: 100%;
   cursor: pointer;
+  padding-left: 10px;
 }
 
 .radio > span::before {
@@ -5934,7 +5984,7 @@ body.overlay:after {
   display: block;
   position: absolute;
   top: 2px;
-  left: 0;
+  left: 10px;
   border-radius: 50%;
   width: 10px;
   height: 10px;
@@ -6001,6 +6051,27 @@ body.overlay:after {
 
 .radio > input:disabled + span::after {
   background-color: currentColor;
+}
+
+.radio.txt-left {
+  text-indent: 50xp;
+  padding-right: 0px;
+}
+
+.radio.txt-left > input {
+  left: calc(100% - 30px);
+  position: absolute;
+}
+
+.radio.txt-left > span::after {
+  left: auto;
+  right: 10px;
+}
+
+.radio.txt-left > span::before {
+  float: right;
+  position: relative;
+  right: 0px;
 }
 
 :hover,
@@ -6649,7 +6720,6 @@ slideDown Animation
   font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
   font-size: 16px;
   line-height: 1.5;
-  padding-right: 15px;
 }
 
 .switch * {
@@ -6688,6 +6758,7 @@ slideDown Animation
   display: inline-block;
   width: 100%;
   cursor: pointer;
+  padding-left: 10px;
 }
 
 .switch > span::before {
@@ -6697,6 +6768,8 @@ slideDown Animation
   border-radius: 7px;
   width: 36px;
   height: 14px;
+  position: relative;
+  left: -10px;
   background-color: rgba(0, 0, 0, 0.4);
   vertical-align: top;
   -webkit-transition: background-color 0.2s, opacity 0.2s;
@@ -6781,6 +6854,37 @@ slideDown Animation
 
 .switch > input:checked:disabled + span::before {
   background-color: rgba(0, 188, 212, 0.6);
+}
+
+.switch.txt-left {
+  padding-left: 6px;
+  padding-right: 0px;
+}
+
+.switch.txt-left > input {
+  left: calc(100% - 45px);
+  position: absolute;
+}
+
+.switch.txt-left > input:checked {
+  left: calc(100% - 30px);
+}
+
+.switch.txt-left > span {
+  padding-right: 10px;
+  padding-left: 0;
+}
+
+.switch.txt-left > span::after {
+  left: auto;
+  right: 16px;
+}
+
+.switch.txt-left > span::before {
+  float: right;
+  position: relative;
+  left: 0px;
+  right: 0px;
 }
 
 /* Reference specs https://material.io/design/components/data-tables.html#specs */

@@ -15,13 +15,6 @@
   padding-right: 15px;
 }
 
-.checkbox * {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 .checkbox > input {
   width: 40px;
   height: 40px;
@@ -152,4 +145,28 @@
 
 .checkbox:hover > input:focus {
   opacity: 0.16;
+}
+
+.checkbox.txt-left {
+  padding-right: 0px;
+}
+
+.checkbox.txt-left > input {
+  left: calc(100% - 30px);
+  position: absolute;
+}
+
+.checkbox.txt-left > span {
+  backgruond: red;
+}
+
+.checkbox.txt-left > span::after {
+  left: auto;
+  right: 6px;
+}
+
+.checkbox.txt-left > span::before {
+  float: right;
+  position: relative;
+  right: -10px;
 }

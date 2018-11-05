@@ -1,6 +1,7 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
+
 $size: 40px;
 $font: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
 $not-active-color: rgba(0, 0, 0, 0.4);
@@ -15,9 +16,6 @@ $main-color: color(cyan, base);
   font-size: 16px;
   line-height: 1.5;
   padding-right: 15px;
-  * {
-    user-select: none;
-  }
   > input {
     width: $size;
     height: $size;
@@ -131,6 +129,25 @@ $main-color: color(cyan, base);
     > input{
       &:focus{
         opacity: 0.16;
+      }
+    }
+  }
+  &.txt-left{
+    padding-right: 0px;
+    > input{
+      left: calc(100% - 30px);
+      position: absolute;
+    }
+    > span{
+      backgruond: red;
+      &::after{
+        left: auto;
+        right: 6px;
+      }
+      &::before{
+        float: right;
+        position: relative;
+        right: -10px;
       }
     }
   }
