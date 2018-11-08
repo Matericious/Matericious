@@ -1,0 +1,75 @@
+@import "_variables.scss";
+
+[tip] {
+  position: relative;
+  &:hover{
+    &::before,
+    &::after {
+      display: block;
+    }
+  }
+  &.tip {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 4px 6px 0 6px;
+      border-style: solid;
+      border-color: #838383 transparent transparent transparent;
+      z-index: 100;
+      display: none;
+    }
+  }
+  &::after {
+    content: attr(tip);
+    position: absolute;
+    left: 50%;
+    top: -6px;
+    transform: translateX(-50%) translateY(-100%);
+    background: #838383;
+    text-align: center;
+    text-align: center;
+    color: #fff;
+    padding: 6px;
+    text-transform: uppercase;
+    font-family: $font;
+    font-size: 10px;
+    border-radius: 5px;
+    pointer-events: none;
+    display: none;
+    z-index: 2;
+  }
+  &.tip-down{
+    &::after{
+      top: auto;
+      bottom: -35px;
+      transform: translateX(-50%) translateY(0%);
+    }
+  }
+  &.tip-left{
+    &::after{
+      top: 70%;
+      left: -35px;
+      transform: translateX(-50%) translateY(-80%);
+    }
+  }
+  &.tip-right{
+    &::after{
+      top: 70%;
+      left: auto;
+      right: -95px;
+      transform: translateX(-50%) translateY(-80%);
+    }
+  }
+}
+
+  /*For not supported tags*/
+label{
+    &.tip-left, &.tip-right{
+    &::after{
+        margin-top: 5%;
+      }
+    }
+  }
