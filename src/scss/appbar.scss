@@ -75,8 +75,7 @@
         font-size: 16px;
         color: inherit;
         vertical-align: middle;
-        font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui,
-          -apple-system;
+        font-family: $font;
       }
       > button {
         margin-top: 0px;
