@@ -29,6 +29,11 @@
         font-weight: 500;
         margin-right: 5px;
         font-family: $font;
+        > img{
+          height: 25px;
+          vertical-align: middle;
+          margin-top: -2px;
+        }
         &.icon {
           text-transform: none;
           width: 50px;
@@ -41,6 +46,9 @@
             font-size: 24px;
             position: relative;
             top: .5em;
+          }
+          > img {
+            margin-top: 8px;
           }
         }
       }
