@@ -312,8 +312,6 @@ let Colors = {
   },
 };
 
-new gradient();
-
 function gradient() {
   document.querySelectorAll("[gradient]").forEach(function() {
     var divs = document.querySelectorAll("[gradient]");
