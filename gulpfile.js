@@ -85,4 +85,4 @@ gulp.task('minjs',()=>{
 
 gulp.task('js', gulp.series(['compilejs', 'combinejs', 'minjs']));
 gulp.task('css', gulp.series(['compile', 'combinecss', 'mincss']));
-gulp.task('build', gulp.series(['css', 'js']));
+gulp.task('default', gulp.series(['css', 'js']));
