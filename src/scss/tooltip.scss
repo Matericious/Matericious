@@ -1,5 +1,8 @@
 @import "_variables.scss";
 
+
+$font: "Roboto", san-serif;
+
 [tip] {
   position: relative;
   &:hover{
@@ -8,20 +11,20 @@
       display: block;
     }
   }
-  &.tip {
+
     &::before {
       content: "";
       position: absolute;
       top: -6px;
       left: 50%;
       transform: translateX(-50%);
-      border-width: 4px 6px 0 6px;
+      border-width: 5px;
       border-style: solid;
       border-color: #838383 transparent transparent transparent;
       z-index: 100;
       display: none;
     }
-  }
+
   &::after {
     content: attr(tip);
     position: absolute;
@@ -38,24 +41,46 @@
     font-size: 10px;
     border-radius: 5px;
     pointer-events: none;
-    display: none;
+   display: none;
     z-index: 2;
   }
   &.tip-down{
-    &::after{
+    &::before {
+      bottom: -8px;
       top: auto;
-      bottom: -35px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent #838383 transparent;
+    }
+    &::after{
+      top: 120%;
       transform: translateX(-50%) translateY(0%);
     }
   }
   &.tip-left{
+    &::before {
+      bottom: -8px;
+      top: auto;
+      border-width: 4px 6px 4px 6px;
+      border-style: solid;
+      border-color: transparent transparent red transparent;
+    }
     &::after{
       top: 70%;
-      left: -35px;
+      left: auto;
+      right: 30%;
       transform: translateX(-50%) translateY(-80%);
     }
   }
   &.tip-right{
+    &::before {
+      top: 38%;
+      left: auto;
+      right: -18px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent #838383 transparent transparent;
+    }
     &::after{
       top: 70%;
       left: auto;
