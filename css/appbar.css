@@ -4,11 +4,6 @@
  * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
  */
 
-*:hover,
-*:focus {
-  outline: none;
-}
-
 .appbar {
   width: 100%;
   height: 65px;
@@ -41,6 +36,11 @@
   font-family: "Roboto", san-serif;
 }
 
+.appbar > div > section > a > img {
+  height: 25px;
+  vertical-align: middle;
+}
+
 .appbar > div > section > a.icon {
   text-transform: none;
   width: 50px;
@@ -55,6 +55,10 @@
   font-size: 24px;
   position: relative;
   top: .5em;
+}
+
+.appbar > div > section > a.icon > img {
+  margin-top: 8px;
 }
 
 .appbar > div > section.left {
@@ -100,7 +104,7 @@
   font-size: 16px;
   color: inherit;
   vertical-align: middle;
-  font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
+  font-family: "Roboto", san-serif;
 }
 
 .appbar > div > section > button {
