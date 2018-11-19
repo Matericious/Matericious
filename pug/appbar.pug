@@ -10,7 +10,7 @@ html(lang='en')
         header.appbar.z-1
             .wrap
                 section.left
-                    label.title San Francisco
+                  label.title San Francisco
         br
         br
         h4 Default
@@ -42,7 +42,44 @@ html(lang='en')
                     a.wave.icon(open-menu='nesting')
                         i.material-icons more_vert
         ul.menu.right(id='nesting')
-        include /includes/foot.pug
+        
+        br
+        br
+        h4 With images
+        header.appbar.pink.z-1
+         .wrap
+           section.left
+             a.wave.icon
+               img(src='https://matericious.com/assets/img/logo.png')
+             label.title Matericious
+           section.right
+            a.wave Dashboard
+            a.wave Favorite
+            a.wave Account
+        br
+        br
+        header.appbar.pink-light-4.z-1
+          .wrap
+             section.left
+               a.wave
+                img(src='https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png')
+             section.right
+                a.wave Dashboard
+                a.wave Favorite
+                a.wave Account
+        br
+        br
+        header.appbar.red.z-1
+         .wrap
+           section.left
+            a.wave.icon
+              i.material-icons menu
+            label.title San Fransisco
+           section.right
+             a.wave Dashboard
+             a.wave Favorite
+             a.wave Account
+
         script.
           new nesting();
           new menu();
