@@ -2,8 +2,7 @@
 @import "_variables.scss";
 
 $light-4-grey: color(grey, light, 4);
-$dark-1-grey: color(grey, dark, 1);
-$dark-color: rgba(color(black), .6);
+$dark-color: color(grey, dark);
 $white-color: color(white);
 $black-color: color(black);
 
@@ -44,13 +43,13 @@ $black-color: color(black);
       &.subtitle {
         display: block;
         font-size: 14px;
-        color: $dark-1-grey;
+        color: $dark-color;
       }
     }
     > i {
       font-size: 24px;
       vertical-align: middle;
-      color: $dark-1-grey;
+      color: $dark-color;
       position: relative;
       margin-right: 32px;
       &.trail-icon {
@@ -74,7 +73,7 @@ $black-color: color(black);
         line-height: 40px;
         font-size: 20px;
         color: $white-color;
-        background-color: $dark-1-grey;
+        background-color: $dark-color;
         text-align: center;
         float: left;
         border-radius: 50%;
