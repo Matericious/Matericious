@@ -5,13 +5,13 @@ html(lang='en')
     include /includes/head.pug
   body
     h3= title
-    button.btn.wave(data-grad='earth yellow') Earth to Yellow
+    button.btn.wave(gradient='earth yellow') Earth to Yellow
     button.btn.round.wave(data-grad='ocean cyan')
       i.material-icons loyalty
-    button.btn.wave(data-grad='pink red') Pink to Red
-    button.btn.wave(data-grad='cyan ocean') Ocean to Cyan
-    button.btn.wave(data-grad='purple pink red') Purple to pink to red
+    button.btn.wave(gradient='pink red') Pink to Red
+    button.btn.wave(gradient='cyan ocean') Ocean to Cyan
+    button.btn.wave(gradient='purple pink red') Purple to pink to red
 
     include /includes/foot.pug
     script.
-        new gradient();
+        gradient();
