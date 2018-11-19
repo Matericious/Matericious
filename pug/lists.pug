@@ -1,0 +1,109 @@
+- var title = 'Lists'
+doctype
+html(lang='en')
+  head
+    include /includes/head.pug
+  body
+    h3= title
+    h4 Single Line
+    ul.list.z-2(style="width:500px")
+      li.ripple.dark List item
+      li.ripple.dark List item
+      li.ripple.dark
+        a(href="#") Link item
+    br
+    h4 Two Line
+    ul.list.z-2(style="width:500px")
+      li.ripple.dark.two-line
+        div.content
+          span.title Line item
+          span.subtitle Secondary Text
+      li.ripple.dark.two-line
+        div.content
+          span.title Line item
+          span.subtitle Secondary Text
+      li.ripple.dark.two-line
+        div.content
+          span.title Line item
+          span.subtitle Secondary Text
+    br
+    h4 Leading Icon
+    ul.list.z-2(style="width:500px")
+      li.ripple.dark
+        i.material-icons wifi
+        label WiFi Settings
+      li.ripple.dark
+        i.material-icons bluetooth
+        label Bluetooth Settings
+      li.ripple.dark
+        i.material-icons location_on
+        label Location Settings
+      hr
+      li.ripple.dark
+        i.material-icons airplanemode_inactive
+        label Airplane Mode
+      li.ripple.dark
+        i.material-icons lock
+        label Security Settings
+    br
+    h4 Trailing Icon
+    ul.list.z-2(style="width:500px")
+      li.ripple.dark Line item
+        i.material-icons.trail-icon info
+      li.ripple.dark Line item
+        i.material-icons.trail-icon info
+      li.ripple.dark Line item
+        i.material-icons.trail-icon info
+    br
+    h4 Two-Line with Leading and Trailing Icon
+    ul.list.z-2(style="width:500px")
+      li.ripple.dark.two-line
+        i.material-icons.lead-icon folder
+        div.content
+          span.title Documents
+          span.subtitle 24 May 2018
+        i.material-icons.trail-icon info
+      li.ripple.dark.two-line
+        i.material-icons.lead-icon folder
+        div.content
+          span.title Documents
+          span.subtitle 24 May 2018
+        i.material-icons.trail-icon info
+      hr
+      li.ripple.dark.two-line
+        i.material-icons.lead-icon folder
+        div.content
+          span.title Documents
+          span.subtitle 24 May 2018
+        i.material-icons.trail-icon info
+      li.ripple.dark.two-line
+        i.material-icons.lead-icon folder
+        div.content
+          span.title Documents
+          span.subtitle 24 May 2018
+        i.material-icons.trail-icon info
+    br
+    h4 Trailing Input
+    ul.list.z-2(style="width:500px")
+      label
+        i.material-icons cell_wifi
+        | Trailing checkbox
+        div.trail.checkbox
+          input(type="checkbox")
+          span
+      label
+        i.material-icons cell_wifi
+        | Trailing switch
+        div.trail.switch
+          input(type="checkbox")
+          span
+      label
+        div.trail.checkbox
+          input(type="checkbox")
+          span
+        | Trailing checkbox
+        i.material-icons cell_wifi
+          
+    include /includes/foot.pug
+    script.
+      ripple();

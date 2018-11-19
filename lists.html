@@ -1,145 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <title>List Demo</title>
-  <meta charset="utf-8">
-  <meta name="author" content="Matericious">
-  <meta name="description" content="Delicious Material framework">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/matericious@0.8.0/dist/css/matericious.min.css">
-</head>
-
-<body>
-  <h3>Single-Line</h3>
-  <ul class="list z-2" style="width: 500px">
-    <li class="ripple dark">List item</li>
-    <li class="ripple dark">List item</li>
-    <li class="ripple dark"><a href='#'>Link item</a></li>
-  </ul>
-
-  <h3>Two-Line</h3>
-  <ul class="list z-2" style="width: 500px">
-    <li class="ripple dark two-line">
-      <div class="content">
-        <span class='title'>Line item</span>
-        <span class='subtitle'>Secondary text</span>
-      </div>
-    </li>
-    <li class="ripple dark two-line">
-      <div class="content">
-        <span class='title'>Line item</span>
-        <span class='subtitle'>Secondary text</span>
-      </div>
-    </li>
-    <li class="ripple dark two-line">
-      <div class="content">
-        <span class='title'>Line item</span>
-        <span class='subtitle'>Secondary text</span>
-      </div>
-    </li>
-  </ul>
-
-  <h3>Leading Line</h3>
-  <ul class="list z-2" style="width: 500px">
-    <li class="ripple dark">
-      <i class="material-icons">wifi</i>
-      <label>WiFi Settings</label>
-    </li>
-    <li class="ripple dark">
-      <i class="material-icons">bluetooth</i>
-      <label>Bluetooth Settings</label>
-    </li>
-    <li class="ripple dark">
-      <i class="material-icons">location_on</i>
-      <label>Location Settings</label>
-    </li>
-    <hr/>
-    <li class="ripple dark">
-      <i class="material-icons">airplanemode_inactive</i>
-      <label>Airplane Mode</label>
-    </li>
-    <li class="ripple dark">
-      <i class="material-icons">lock</i>
-      <label>Security Settings</label>
-    </li>
-  </ul>
-
-  <h3>Trailing Icons</h3>
-  <ul class="list z-2" style="width: 500px">
-    <li class="ripple dark">Line item<i class="material-icons trail-icon">info</i></li>
-    <li class="ripple dark">Line item<i class="material-icons trail-icon">info</i></li>
-    <li class="ripple dark">Line item<i class="material-icons trail-icon">info</i></li>
-  </ul>
-
-  <h3>Single-Line</h3>
-  <ul class="list z-2" style="width: 500px">
-    <li class="ripple dark two-line">
-      <i class="material-icons lead-icon">folder</i>
-      <div class="content">
-        <span class="title">Documents</span>
-        <span class="subtitle">24 Dec 2018</span>
-      </div>
-      <i class="material-icons trail-icon">info</i>
-    </li>
-    <li class="ripple dark two-line">
-      <i class="material-icons lead-icon">folder</i>
-      <div class="content">
-        <span class="title">Documents</span>
-        <span class="subtitle">24 Dec 2018</span>
-      </div>
-      <i class="material-icons trail-icon">info</i>
-    </li>
-    <hr>
-    <li class="ripple dark two-line">
-      <i class="material-icons lead-icon">folder</i>
-      <div class="content">
-        <span class="title">Documents</span>
-        <span class="subtitle">24 Dec 2018</span>
-      </div>
-      <i class="material-icons trail-icon">info</i>
-    </li>
-    <li class="ripple dark two-line">
-      <i class="material-icons lead-icon">folder</i>
-      <div class="content">
-        <span class="title">Documents</span>
-        <span class="subtitle">24 Dec 2018</span>
-      </div>
-      <i class="material-icons trail-icon">info</i>
-    </li>
-  </ul>
-  
-  <h3>Trailing Input</h3>
-  <div class="list z-2" style="width: 500px">
-    <label>
-      <i class="material-icons">cell_wifi</i>
-      Trailing checkbox
-      <div class="trail checkbox">
-        <input type="checkbox"><span></span>
-      </div>
-    </label>
-    <label>
-      <i class="material-icons">cell_wifi</i>
-      Trailing switch
-      <div class="trail switch">
-        <input type="checkbox"><span></span>
-      </div>
-    </label>
-    <label>
-      <div class="lead radio">
-        <input type="checkbox"><span></span>
-      </div>
-      Leading radio
-      <i class="material-icons trail-icon">cell_wifi</i>
-    </label>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/matericious@0.8.0/dist/js/matericious.min.js"></script>
- <script>
-    new ripple();
- </script>
-</body>
-
+  <head>
+    <title>Lists Demo</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Matericious">
+    <meta name="description" content="Delicious Framework with Material Components.">
+    <meta name="keywords" content="Material Design, Matericious, Framework, Web Components, CSS Grid, Material Ripple, Buttons, Carts, Drawer.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/matericious@0.8.0/dist/css/matericious.min.css">
+    <meta name="og:url" content="https://matericious.com/">
+    <meta name="og:title" content="Lists Demo in Matericious Framework">
+    <meta name="og:description" content="Delicious Framework with Material Components.">
+    <meta name="og:type" content="website">
+    <meta name="og:image" content="https://matericious.com/assets/img/logo_banner.png">
+    <meta name="og:image:type" content="image/png">
+    <meta name="og:image:width" content="1200">
+    <meta name="og:image:height" content="630">
+  </head>
+  <body>
+    <h3>Lists</h3>
+    <h4>Single Line</h4>
+    <ul class="list z-2" style="width:500px">
+      <li class="ripple dark">List item</li>
+      <li class="ripple dark">List item</li>
+      <li class="ripple dark"><a href="#">Link item</a></li>
+    </ul><br>
+    <h4>Two Line</h4>
+    <ul class="list z-2" style="width:500px">
+      <li class="ripple dark two-line">
+        <div class="content"><span class="title">Line item</span><span class="subtitle">Secondary Text</span></div>
+      </li>
+      <li class="ripple dark two-line">
+        <div class="content"><span class="title">Line item</span><span class="subtitle">Secondary Text</span></div>
+      </li>
+      <li class="ripple dark two-line">
+        <div class="content"><span class="title">Line item</span><span class="subtitle">Secondary Text</span></div>
+      </li>
+    </ul><br>
+    <h4>Leading Icon</h4>
+    <ul class="list z-2" style="width:500px">
+      <li class="ripple dark"><i class="material-icons">wifi</i>
+        <label>WiFi Settings</label>
+      </li>
+      <li class="ripple dark"><i class="material-icons">bluetooth</i>
+        <label>Bluetooth Settings</label>
+      </li>
+      <li class="ripple dark"><i class="material-icons">location_on</i>
+        <label>Location Settings</label>
+      </li>
+      <hr>
+      <li class="ripple dark"><i class="material-icons">airplanemode_inactive</i>
+        <label>Airplane Mode</label>
+      </li>
+      <li class="ripple dark"><i class="material-icons">lock</i>
+        <label>Security Settings</label>
+      </li>
+    </ul><br>
+    <h4>Trailing Icon</h4>
+    <ul class="list z-2" style="width:500px">
+      <li class="ripple dark">Line item<i class="material-icons trail-icon">info</i></li>
+      <li class="ripple dark">Line item<i class="material-icons trail-icon">info</i></li>
+      <li class="ripple dark">Line item<i class="material-icons trail-icon">info</i></li>
+    </ul><br>
+    <h4>Two-Line with Leading and Trailing Icon</h4>
+    <ul class="list z-2" style="width:500px">
+      <li class="ripple dark two-line"><i class="material-icons lead-icon">folder</i>
+        <div class="content"><span class="title">Documents</span><span class="subtitle">24 May 2018</span></div><i class="material-icons trail-icon">info</i>
+      </li>
+      <li class="ripple dark two-line"><i class="material-icons lead-icon">folder</i>
+        <div class="content"><span class="title">Documents</span><span class="subtitle">24 May 2018</span></div><i class="material-icons trail-icon">info</i>
+      </li>
+      <hr>
+      <li class="ripple dark two-line"><i class="material-icons lead-icon">folder</i>
+        <div class="content"><span class="title">Documents</span><span class="subtitle">24 May 2018</span></div><i class="material-icons trail-icon">info</i>
+      </li>
+      <li class="ripple dark two-line"><i class="material-icons lead-icon">folder</i>
+        <div class="content"><span class="title">Documents</span><span class="subtitle">24 May 2018</span></div><i class="material-icons trail-icon">info</i>
+      </li>
+    </ul><br>
+    <h4>Trailing Input</h4>
+    <ul class="list z-2" style="width:500px">
+      <label><i class="material-icons">cell_wifi</i>Trailing checkbox
+        <div class="trail checkbox">
+          <input type="checkbox"><span></span>
+        </div>
+      </label>
+      <label><i class="material-icons">cell_wifi</i>Trailing switch
+        <div class="trail switch">
+          <input type="checkbox"><span></span>
+        </div>
+      </label>
+      <label>
+        <div class="trail checkbox">
+          <input type="checkbox"><span></span>
+        </div>Trailing checkbox<i class="material-icons">cell_wifi</i>
+      </label>
+    </ul>
+    <script src="https://cdn.jsdelivr.net/npm/matericious@0.8.0/dist/js/matericious.min.js"></script>
+    <script>ripple();</script>
+  </body>
 </html>
