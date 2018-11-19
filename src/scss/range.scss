@@ -1,19 +1,9 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
-:hover,
-*:focus {
-  outline: none;
-}
-* {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 .range{
   -webkit-appearance: none;
+  user-select: none;
   width: auto;
   height: 2px;
   border-radius: 4px;
@@ -36,7 +26,11 @@
     }
   }
   &:hover{
+    outline: none;
     background: rgba(color(grey), .6);
+  }
+  &:focus{
+    outline: none;
   }
   &:active{
     &::-webkit-slider-thumb{
