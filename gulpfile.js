@@ -15,7 +15,7 @@ var autoprefixer_options={
   cascade: false
 };
 
-gulp.task('compile',(cb)=>{
+gulp.task('compilecss',(cb)=>{
   return gulp.src('src/scss/**/*.scss')
     .pipe(sass({outputStyle:'expanded'})
       .on('error',function(err){cb(err);}))
