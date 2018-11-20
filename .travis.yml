@@ -3,4 +3,4 @@ node_js:
   - "8"
 before_install:
   - npm install -g gulp-cli
-script: gulp compile
+script: gulp
