@@ -15,7 +15,7 @@ var autoprefixer_options={
   cascade: false
 };
 
-gulp.task('compile',(cb)=>{
+gulp.task('compilecss',(cb)=>{
   return gulp.src('src/scss/**/*.scss')
     .pipe(sass({outputStyle:'expanded'})
       .on('error',function(err){cb(err);}))
@@ -84,5 +84,5 @@ gulp.task('minjs',()=>{
 });
 
 gulp.task('js', gulp.series(['compilejs', 'combinejs', 'minjs']));
-gulp.task('css', gulp.series(['compile', 'combinecss', 'mincss']));
+gulp.task('css', gulp.series(['compilecss', 'combinecss', 'mincss']));
 gulp.task('default', gulp.series(['css', 'js']));
