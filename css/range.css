@@ -1,23 +1,15 @@
 /**
- * Matericious v0.8.0 (https://matericious.com/)
+ * Matericious v0.8.1 (https://matericious.com/)
  * Copyright 2018 Matericious Authors
  * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
  */
 
-:hover,
-*:focus {
-  outline: none;
-}
-
-* {
+.range {
+  -webkit-appearance: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-.range {
-  -webkit-appearance: none;
   width: auto;
   height: 2px;
   border-radius: 4px;
@@ -46,7 +38,12 @@
 }
 
 .range:hover {
+  outline: none;
   background: rgba(158, 158, 158, 0.6);
+}
+
+.range:focus {
+  outline: none;
 }
 
 .range:active::-webkit-slider-thumb {
