@@ -1,92 +1,104 @@
 @import "_variables.scss";
 
+
 .appbar {
   width: 100%;
   height: 65px;
   line-height: 60px;
   overflow: hidden;
   color: #000;
-  > div {
+  &.fixed, &.dense, &.short, &.collapse, &.collapsed {
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+  }
+  &.dense{
+    transition: top .4s;
+  }
+  &.collapse{
+    transition: width .4s;
+  }
+  &.collapsed{
+    width: 115px;
+    border-radius: 0px 0px 30px 0px;
+    .title{
+      display: none;
+    }
+  }
+  > .wrap {
     width: 95%;
-    margin: 0 auto;
     height: 100%;
+    position: relative;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
     > section {
-      display: inline-block;
+      > img {
+        height: 40px;
+        vertical-align: middle;
+        padding: 8px;
+      }
       > a {
         min-width: 50px;
         height: 40px;
-        line-height: 42px;
-        padding: 0px 8px 0px 8px;
+        line-height: 40px;
+        padding: 0px 6px 0px 6px;
+        display: inline-block;
         text-decoration: none;
         text-transform: uppercase;
         text-align: center;
         font-size: 14px;
         font-weight: 500;
-        margin-right: 5px;
         font-family: $font;
-        > img{
-          height: 25px;
-          vertical-align: middle;
-        }
+        cursor: pointer;
+        vertical-align: middle;
         &.icon {
           text-transform: none;
           width: 50px;
           height: 50px;
-          padding: 0px;
+          padding: 0;
           margin: 0;
           text-align: center;
           border-radius: 50%;
           > i {
             font-size: 24px;
             position: relative;
-            top: .5em;
+            top: 0.5em;
           }
           > img {
             margin-top: 8px;
           }
         }
       }
-      &.left {
-        width: auto;
-        height: 100%;
-        display: flex;
-        float: left;
-        align-items: center;
-        justify-content: initial;
-        overflow: hidden;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        > .title {
-          margin-left: 10px;
-        }
-      }
-      &.right {
-        width: auto;
-        height: 100%;
-        display: flex;
-        float: right;
-        align-items: center;
-        justify-content: flex-end;
-        overflow: hidden;
-      }
       > .title {
         font-size: 16px;
         color: inherit;
         vertical-align: middle;
         font-family: $font;
+        text-indent: 10px;
       }
-      > button {
-        margin-top: 0px;
-        color: inherit;
-        margin-left: 5px;
-        > i {
-          vertical-align: middle;
-        }
-        &[open-menu="nesting"] {
-          display: none;
+    }
+    > .left {
+      float: left;
+      height: 100%;
+    }
+    > .center {
+      margin: 0px auto;
+      height: 100%;
+      &.static {
+        position: absolute;
+        left: 50%;
+        margin-left: -50px;
+        & ~ .right {
+          margin-left: auto;
+          margin-right: 0;
         }
       }
     }
+    > .right {
+      height: 100%;
+      float: right;
+    }
   }
 }
+
