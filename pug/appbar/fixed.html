@@ -1,0 +1,23 @@
+- var title = 'Fixed Appbar'
+doctype
+html(lang='en')
+  head
+    include ../includes/head.pug
+    style(type="text/css").
+      body { margin: 0 }
+  body
+   header.appbar.fixed.z-5.teal
+    .wrap
+     section.left
+       a.wave.icon
+         i.material-icons menu
+       label.title San Fransisco
+    section.right
+      a.wave.icon
+        i.material-icons share
+      a.wave.icon
+        i.material-icons cloud
+      a.wave.icon
+        i.material-icons save
+
+    
