@@ -1,0 +1,16 @@
+- var title = 'Appbar with logo'
+doctype
+html(lang='en')
+  head
+    include ../includes/head.pug
+    style(type="text/css").
+      body { margin: 0 }
+  body
+   header.appbar.teal-light-5
+    .wrap
+     section.left
+       a.nest Cloud
+       a.nest Account
+       a.nest Dashboard
+     section.right
+       img(src='https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png')
