@@ -1,86 +1,36 @@
 - var title = 'Appbar'
 doctype
 html(lang='en')
-    head
-        include /includes/head.pug
-    body
-        h3= title
-        br
-        h4 Basic
-        header.appbar.z-1
-            .wrap
-                section.left
-                  label.title San Francisco
-        br
-        br
-        h4 Default
-        header.appbar.blue.z-1
-            .wrap
-                section.left
-                    a.wave.icon
-                        i.material-icons menu
-                    label.title San Fransisco
-                section.right
-                    a.wave Dashboard
-                    a.wave Favorite
-                    a.wave Account
-        br
-        br
-        h4 Nesting Appbar
-        header.appbar.green.text-white.nesting.z-1
-            .wrap
-                section.left
-                    a.wave.icon
-                        i.material-icons menu
-                    label.title San Fransisco
-                section.right
-                    a.nest.wave.icon(title='notifications')
-                        i.material-icons notifications_none
-                    a.nest.wave Dashboard
-                    a.nest.wave Favorite
-                    a.nest.wave Account
-                    a.wave.icon(open-menu='nesting')
-                        i.material-icons more_vert
-        ul.menu.right(id='nesting')
-        
-        br
-        br
-        h4 With images
-        header.appbar.pink.z-1
-         .wrap
-           section.left
-             a.wave.icon
-               img(src='https://matericious.com/assets/img/logo.png')
-             label.title Matericious
-           section.right
-            a.wave Dashboard
-            a.wave Favorite
-            a.wave Account
-        br
-        br
-        header.appbar.pink-light-4.z-1
-          .wrap
-             section.left
-               a.wave
-                img(src='https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png')
-             section.right
-                a.wave Dashboard
-                a.wave Favorite
-                a.wave Account
-        br
-        br
-        header.appbar.red.z-1
-         .wrap
-           section.left
-            a.wave.icon
-              i.material-icons menu
-            label.title San Fransisco
-           section.right
-             a.wave Dashboard
-             a.wave Favorite
-             a.wave Account
-             
-        include /includes/foot.pug
-        script.
-          new nesting();
-          new menu();
+  head
+    include /includes/head.pug
+    style(type="text/css").
+      .toplink { font-size: 18px; }
+      iframe { width: 100%; height: 300px; margin-top: 10px }
+  body
+    h3 Appbar demo
+    a.toplink(target='_blank' href='appbar/standard.html') Standard Appbar
+    iframe(src='appbar/standard.html')
+    br
+    br
+    a.toplink(target='_blank' href='appbar/fixed.html') Fixed Appbar
+    iframe(src='appbar/fixed.html')
+    br
+    br
+    a.toplink(target='_blank' href='appbar/collapse.html') Collapse Appbar
+    iframe(src='appbar/collapse.html')
+    br
+    br
+    a.toplink(target='_blank' href='appbar/collapsed.html') Collapsed Appbar
+    iframe(src='appbar/collapsed.html')
+    br
+    br
+    a.toplink(target='_blank' href='appbar/nesting.html') Nesting Appbar
+    iframe(src='appbar/nesting.html')
+    br
+    br
+    a.toplink(target='_blank' href='appbar/with-image.html') Appbar With Logo
+    iframe(src='appbar/with-image.html')
+    br
+    br
+    a.toplink(target='_blank' href='appbar/with-search.html') Appbar With Search
+    iframe(src='appbar/with-search.html')
