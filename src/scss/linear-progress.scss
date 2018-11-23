@@ -1,0 +1,68 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+$primary-color: rgb(33, 150, 243);
+$secondary-color: rgba(33, 150, 243, 0.12);
+$setColor: currentColor;
+$transparent: transparent;
+
+.linear {
+  height: 0.25em;
+  color: $primary-color;
+  background-color: $secondary-color;
+  font-size: 16px;
+  appearance: none;
+  border: none;
+  &::-webkit-progress-bar {
+    background-color: $transparent;
+  }
+  &::-webkit-progress-value {
+    background-color: $setColor;
+    transition: all 0.2s;
+  }
+  &::-moz-progress-bar {
+    background-color: $setColor;
+    transition: all 0.2s;
+  }
+  &::-ms-fill {
+    border: none;
+    background-color: $setColor;
+    transition: all 0.2s;
+  }
+  &:indeterminate {
+    background-size: 200% 100%;
+    background-image: linear-gradient(
+      to right,
+      $transparent 50%,
+      $setColor 50%,
+      $setColor 60%,
+      $transparent 60%,
+      $transparent 71.5%,
+      $setColor 71.5%,
+      $setColor 84%,
+      $transparent 84%
+    );
+    @include animation(progress-linear 2s infinite linear);
+    &::-moz-progress-bar {
+      background-color: $transparent;
+    }
+    &::-ms-fill {
+      animation-name: none;
+    }
+  }
+}
+
+@include keyframes(progress-linear){
+  0% {
+    background-size: 200% 100%;
+    background-position: left -31.25% top 0%;
+  }
+  50% {
+    background-size: 800% 100%;
+    background-position: left -49% top 0%;
+  }
+  100% {
+    background-size: 400% 100%;
+    background-position: left -102% top 0%;
+  }
+}
