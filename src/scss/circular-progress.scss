@@ -1,0 +1,121 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+$size: 3em;
+$primary-color: rgb(33, 150, 243);
+$setColor: currentColor;
+$transparent: transparent;
+$animation-time: 0.75s;
+
+.circular {
+  width: $size;
+  height: $size;
+  padding: 0.25em;
+  border: none;
+  border-radius: 50%;
+  appearance: none;
+  background: $transparent;
+  color: $primary-color;
+  font-size: 16px;
+  overflow: hidden;
+  &::-webkit-progress-bar {
+    background-color: $transparent;
+  }
+  &:indeterminate {
+    -webkit-mask-image: linear-gradient($transparent 50%, black 50%),
+      linear-gradient(to right, $transparent 50%, black 50%);
+    mask-image: linear-gradient($transparent 50%, black 50%),
+      linear-gradient(to right, $transparent 50%, black 50%);
+    @include animation(circular 6s infinite cubic-bezier(0.3, 0.6, 1, 1));
+    &:before,
+    &::-webkit-progress-value {
+      content: "";
+      display: block;
+      box-sizing: border-box;
+      margin-bottom: 0.25em;
+      border: solid 0.25em $transparent;
+      border-top-color: $setColor;
+      border-radius: 50%;
+      width: 100% !important;
+      height: 100%;
+      background-color: $transparent;
+      @include animation(circular-pseudo 0.75s infinite linear alternate)
+    }
+    &::-moz-progress-bar {
+      box-sizing: border-box;
+      border: solid 0.25em $transparent;
+      border-top-color: $setColor;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      background-color: $transparent;
+      @include animation(circular-pseudo 0.75s infinite linear alternate)
+    }
+  }
+}
+
+.circular:indeterminate::-ms-fill {
+  animation-name: -ms-ring;
+}
+
+:-ms-lang(x),
+.circular:indeterminate {
+  animation: none;
+}
+
+@include keyframes(circular){
+  0% {
+    transform: rotate(0deg);
+  }
+  12.5% {
+    transform: rotate(180deg);
+    animation-timing-function: linear;
+  }
+  25% {
+    transform: rotate(630deg);
+  }
+  37.5% {
+    transform: rotate(810deg);
+    animation-timing-function: linear;
+  }
+  50% {
+    transform: rotate(1260deg);
+  }
+  62.5% {
+    transform: rotate(1440deg);
+    animation-timing-function: linear;
+  }
+  75% {
+    transform: rotate(1890deg);
+  }
+  87.5% {
+    transform: rotate(2070deg);
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: rotate(2520deg);
+  }
+}
+
+@include keyframes(circular-pseudo){
+  0% {
+    transform: rotate(-30deg);
+  }
+  29.4% {
+    border-left-color: $transparent;
+  }
+  29.41% {
+    border-left-color: $setColor;
+  }
+  64.7% {
+    border-bottom-color: $transparent;
+  }
+  64.71% {
+    border-bottom-color: $setColor;
+  }
+  100% {
+    border-left-color: $setColor;
+    border-bottom-color: $setColor;
+    transform: rotate(225deg);
+  }
+}
