@@ -5,8 +5,7 @@ html(lang='en')
     include /includes/head.pug
   body
     h3= title
-    - var colors = ['blue', 'green', 'brown', 'pink', 'purple'];
-        each color in colors
-            input(class='range '+color type='range')
-            br
-            br
+    label.slider
+      input(type='range' min='0' max='100')
+      span Slider
+
