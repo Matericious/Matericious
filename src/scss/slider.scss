@@ -1,42 +1,195 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
-.range{
-  -webkit-appearance: none;
-  user-select: none;
-  width: auto;
-  height: 2px;
-  border-radius: 4px;
-  background: rgba(color(grey), .2);
-  margin: 0;
-  transition: background .5s ease-in-out;
-  &::-webkit-slider-thumb{
+
+$not-active-color: rgba(color(black, base), 0.4);
+$main-color: color(cyan, base);
+$font: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
+
+.slider {
+  display: inline-block;
+  width: 200px;
+  color: $not-active-color;
+  font-family: $font;
+  font-size: 16px;
+  line-height: 1.5;
+  > input {
+    width: 100%;
+    height: 36px;
     -webkit-appearance: none;
-    appearance: none;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: color(grey,light,2);
+    display: block;
+    position: relative;
+    top: 24px;
+    margin: 0 0 -36px;
+    background-color: transparent;
     cursor: pointer;
-    transition: all .15s ease-in;
-          box-shadow: 0 3px 4px 0 rgba(color(black), 0.14),
-            0 3px 3px -2px rgba(color(black), 0.2), 0 1px 8px 0 rgba(color(black), 0.12);
-    &:hover{
-      background: #1abc9c
+    &:last-child {
+      position: static;
+      margin: 0;
+    }
+    &:focus {
+      outline: none;
+    }
+    &:disabled {
+      cursor: default;
+      opacity: 0.38;
+      & + span {
+        color: rgba(0, 0, 0, 0.38);
+      }
+    }
+
+    &::-webkit-slider-runnable-track {
+      margin: 17px 0;
+      border-radius: 1px;
+      width: 100%;
+      height: 2px;
+      background-color: rgba($main-color, 0.24);
+    }
+    &::-webkit-slider-thumb {
+      appearance: none;
+      -webkit-appearance: none;
+      border: none;
+      border-radius: 50%;
+      height: 2px;
+      width: 2px;
+      transform: scale(6, 6);
+      transition: box-shadow 0.2s;
+      background-color: $main-color;
     }
   }
-  &:hover{
-    outline: none;
-    background: rgba(color(grey), .6);
+  > span {
+    display: inline-block;
+    margin-bottom: 36px;
   }
-  &:focus{
-    outline: none;
+
+  &:hover {
+    > input::-webkit-slider-thumb {
+      box-shadow: 0 0 0 2px rgba($main-color, 0.04);
+    }
+    > input:hover::-moz-range-thumb {
+      box-shadow: 0 0 0 2px rgba($main-color, 0.04);
+    }
+    > input:focus::-moz-range-thumb {
+      box-shadow: 0 0 0 2px rgba($main-color, 0.16);
+    }
+    > input::-ms-thumb {
+      box-shadow: 0 0 0 2px rgba($main-color, 0.04);
+    }
+    > input:focus::-ms-thumb {
+      box-shadow: 0 0 0 2px rgba($main-color, 0.16);
+    }
   }
-  &:active{
-    &::-webkit-slider-thumb{
-      width: 20px;
-      height: 20px;
-      background: color(white);
+  > input {
+    &:active::-webkit-slider-thumb {
+      box-shadow: 0 0 0 2px rgba($main-color, 0.24) !important;
+    }
+    &:disabled::-webkit-slider-runnable-track {
+      background-color: rgba(0, 0, 0, 0.38);
+      &::-webkit-slider-thumb {
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        box-shadow: 0 0 0 1px rgb(255, 255, 255);
+        transform: scale(4, 4);
+      }
+    }
+    &::-moz-range-track {
+      margin: 17px 0;
+      border-radius: 1px;
+      width: 100%;
+      height: 2px;
+      background-color: rgba($main-color, 0.24);
+    }
+    &::-moz-range-thumb {
+      appearance: none;
+      -moz-appearance: none;
+      border: none;
+      border-radius: 50%;
+      height: 2px;
+      width: 2px;
+      background-color: $main-color;
+      transform: scale(6, 6);
+      transition: box-shadow 0.2s;
+    }
+    &::-moz-range-progress {
+      border-radius: 1px;
+      height: 2px;
+      background-color: $main-color;
+    }
+    &:focus::-moz-range-thumb {
+      box-shadow: 0 0 0 2px rgba($main-color, 0.12);
+    }
+    &:active::-moz-range-thumb {
+      box-shadow: 0 0 0 2px rgba($main-color, 0.24) !important;
+    }
+    &:disabled {
+      &::-moz-range-track {
+        background-color: rgba(0, 0, 0, 0.38);
+      }
+      &::-moz-range-progress {
+        background-color: rgba(0, 0, 0, 0.87);
+      }
+      &::-moz-range-thumb {
+        background-color: rgb(0, 0, 0);
+        box-shadow: 0 0 0 1px rgb(255, 255, 255) !important;
+        transform: scale(4, 4);
+      }
+    }
+    &::-moz-focus-outer {
+      border: none;
+    }
+    &::-ms-track {
+      box-sizing: border-box;
+      margin: 17px 0;
+      border: none;
+      border-radius: 1px;
+      padding: 0 17px;
+      width: 100%;
+      height: 2px;
+      background-color: transparent;
+    }
+    &::-ms-fill-lower {
+      border-radius: 1px;
+      height: 2px;
+      background-color: $main-color;
+    }
+    &::-ms-fill-upper {
+      border-radius: 1px;
+      height: 2px;
+      background-color: rgba($main-color, 0.24);
+    }
+    &::-ms-thumb {
+      appearance: none;
+      margin: 0 17px;
+      border: none;
+      border-radius: 50%;
+      height: 2px;
+      width: 2px;
+      background-color: $main-color;
+      transform: scale(6, 6);
+      transition: box-shadow 0.2s;
+    }
+    &:focus {
+      &::-ms-thumb {
+        box-shadow: 0 0 0 2px rgba($main-color, 0.12);
+      }
+      &::-ms-thumb {
+        box-shadow: 0 0 0 2px rgba($main-color, 0.24) !important;
+      }
+    }
+    &:disabled {
+      &::-ms-fill-lower {
+        background-color: rgba(0, 0, 0, 0.38);
+      }
+      &::-ms-fill-upper {
+        background-color: rgba(0, 0, 0, 0.38);
+        opacity: 0.38;
+      }
+      &::-ms-thumb {
+        background-color: rgb(0, 0, 0);
+        box-shadow: 0 0 0 1px rgb(255, 255, 255) !important;
+        transform: scale(4, 4);
+      }
     }
   }
 }
+
