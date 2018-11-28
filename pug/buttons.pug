@@ -9,6 +9,13 @@ html(lang='en')
           each color in colors
             button(class='btn '+color)=color + ' button'
           hr
+          
+          h3 Group buttons
+          .btns
+             button.btn Login
+             span OR
+             button.btn Signup
+          hr
             
           h3 Input Submit Buttons
           - var submit_btns = ['green', 'red', 'blue', 'pink'];
