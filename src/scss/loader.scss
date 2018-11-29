@@ -1,0 +1,77 @@
+
+$small-loader-width: 60px;
+$small-loader-height: 60px;
+
+$lin-small-width: 200px;
+
+$base-loader-width: 250px;
+$base-loader-height: 100px;
+
+.loader {
+  background: #fff;
+  line-height: normal;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+  pointer-events: auto !important;
+  > .circular{
+    width: 40px;
+    height: 40px;
+  }
+  > .linear{
+    width: calc(100% - 10%);
+    height: 4px;
+  }
+  &.small{
+    width: $small-loader-width;
+    height: $small-loader-height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.lin{
+      width: $lin-small-width;
+    }
+  }
+  &.large{
+    width: $base-loader-width;
+    height: $base-loader-height;
+    font-family: $font;
+    > .title{
+      font-size: 16px;
+      width: 100%;
+      display: block;
+      padding: 16px;
+      box-sizing: border-box;
+    }
+    > .subtext{
+      width: calc(100% - 40px);
+      position: relative;
+      font-size: 15px;
+      top: 8px;
+      left: 10px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    > .circular{
+      float: left;
+      margin-left: 15px;
+    }
+    
+    &.lin{
+      > .linear{
+        width: 90%;
+        margin-left: 5%;
+      }
+    }
+  }
+  &.trans{
+    background: transparent;
+    box-shadow: none;
+  }
+}
