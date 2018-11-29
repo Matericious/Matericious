@@ -1,13 +1,12 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
-
 $modal-width: 320px;
 $modal-height: 160px;
 $modal-maxWidth: 85% !important;
 
 $alert-modal-width: 280px;
-$alert-modal-height: 118px;
+$alert-modal-height: 128px;
 
 $scroll-modal-width: 500px;
 $scroll-modal-height: auto;
@@ -17,11 +16,6 @@ $full-modal-height: 100vh;
 
 $sheet-modal-width: 100%;
 $sheet-modal-height: calc(100vh / 1.5);
-
-$dark-grey: color(grey, dark, 3);
-$light-grey: color(grey, light, 1);
-
-$font: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
 
 .dialog_overlay {
   position: fixed;
@@ -33,7 +27,10 @@ $font: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
   background: rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
-
+body {
+  margin: 0;
+  height: 100vh;
+}
 .loader_overlay {
   position: absolute;
   top: 0px;
@@ -43,230 +40,257 @@ $font: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
   pointer-events: none;
   background: rgba(0, 0, 0, 0.8);
   z-index: 6;
-  &.light{
-    background: rgba(255,255,255, 0.8);
-    .md-loader{
-      circle{
+  &.light {
+    background: rgba(255, 255, 255, 0.8);
+    .md-loader {
+      circle {
         stroke: blue;
       }
     }
   }
 }
 
-.dialog {
-  * {
-    &:focus,
-    &:hover {
-      outline: none;
-    }
-  }
-  visibility: hidden;
-  width: $modal-width;
-  height: $modal-height;
-  max-width: $modal-maxWidth;
-  color: black;
-  background: #fff;
-  line-height: normal;
-  position: fixed;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: 5px;
-  -webkit-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
-    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
-  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
-    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
-  pointer-events: auto !important;
-  overflow: hidden;
-  font-family: $font;
-  z-index: 2;
-  > header,
-  section,
-  footer {
-    width: calc(100% - (24 * 2px));
-    margin: 0px auto;
-  }
-  > header {
-    height: auto;
-    padding-top: 20px;
-    > .title {
-      font-size: 18px;
-      color: $dark-grey;
-      font-family: inherit;
-      font-weight: bold;
-      &:first-letter {
-        text-transform: capitalize;
-      }
-    }
-    > .subtitle {
-      display: block;
-      font-size: 14px;
-    }
-  }
-  > section {
-    height: calc(100% - 95px);
-    color: $light-grey;
-    font-size: 16px;
+body.dialog-open {
     overflow: hidden;
-    scroll-behavior: smooth;
-  }
-  > .text-field {
-    width: 100%;
-  }
-  footer {
-    width: 100%;
-    height: 52px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    background: color(white, base);
-    > a {
-      min-width: 30px;
-      height: 35px;
-      padding: 0px 8px 0px 8px;
-      text-decoration: none;
-      line-height: 35px;
-      text-transform: uppercase;
-      text-align: center;
-      cursor: pointer;
-      font-size: 14px;
-      font-weight: 500;
-      margin-right: 8px;
-      font-family: inherit;
-      font-weight: 560;
-      border-radius: 5px;
-      transition: all 0s !important;
-      &.ripple {
-        transition: all 0s;
-      }
-      &.left {
-        justify-content: flex-start;
-        position: absolute;
-        margin-left: 15px;
-        left: 0px;
+}
+
+.dialog {
+  visibility: hidden;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100vh;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  z-index: 3;
+  pointer-events: none;
+  transition: top 0s;
+  > .content {
+    * {
+      &:focus,
+      &:hover {
+        outline: none;
       }
     }
-  }
-
-  &.alert {
-    width: $alert-modal-width;
-    height: $alert-modal-height;
+    width: $modal-width;
+    height: auto;
+    max-width: $modal-maxWidth;
+    color: black;
+    background: #fff;
+    line-height: normal;
+    margin: auto;
+    pointer-events: auto;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+      0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+      0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+    pointer-events: auto !important;
+    overflow: hidden;
+    font-family: $font;
+    z-index: 2;
+    > header,
+    section,
+    footer {
+      width: calc(100% - (24 * 2px));
+      margin: 0px auto;
+    }
     > header {
-      display: none;
+      height: auto;
+      padding-top: 20px;
+      > .title {
+        font-size: 18px;
+        color: #444444;
+        font-family: inherit;
+        font-weight: bold;
+        &:first-letter {
+          text-transform: capitalize;
+        }
+      }
+      > .subtitle {
+        display: block;
+        font-size: 14px;
+      }
     }
     > section {
-      height: 100%;
-      padding-top: 8px;
+      height: calc(100% - 95px);
+      color: #838383;
+      font-size: 16px;
+      overflow: hidden;
+      scroll-behavior: smooth;
+    }
+    > .text-field {
+      width: 100%;
+    }
+    footer {
+      width: 100%;
+      height: 52px;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      background: #fff;
+      > a {
+        min-width: 30px;
+        height: 35px;
+        padding: 0px 8px 0px 8px;
+        text-decoration: none;
+        line-height: 35px;
+        text-transform: uppercase;
+        text-align: center;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        margin-right: 8px;
+        font-family: inherit;
+        font-weight: 560;
+        border-radius: 5px;
+        transition: all 0s !important;
+        &.ripple {
+          transition: all 0s;
+        }
+        &.left {
+          justify-content: flex-start;
+          position: absolute;
+          margin-left: 15px;
+          left: 0px;
+        }
+      }
+    }
+  }
+  &.alert {
+    > .content {
+      width: $alert-modal-width;
+      > header {
+        display: none;
+      }
+      > section {
+        height: 100%;
+        padding-top: 8px;
+      }
     }
   }
 
   &.scrollable {
-    width: $scroll-modal-width;
-    height: calc(100vh - 10%);
-    > header {
-      height: 40px;
-      > .title {
-        font-weight: 500;
-        font-size: 20px;
+    > .content {
+      width: $scroll-modal-width;
+      max-width: 95% !important;
+      height: calc(100vh - 10%);
+      position: relative;
+      > header {
+        height: 40px;
+        > .title {
+          font-weight: 500;
+          font-size: 20px;
+        }
       }
-    }
-    > section {
-      padding-left: 25px;
-      padding-right: 25px;
-      border-top: 1px solid ;
-      border-bottom: 1px solid $light-grey;
-      overflow-y: scroll;
-      &::-webkit-scrollbar {
-        width: 10px;
-      }
+      > section {
+        padding-left: 25px;
+        padding-right: 25px;
+        border-top: 1px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+          width: 10px;
+        }
 
-      &::-webkit-scrollbar-track {
-        background: color(white, base);
-      }
+        &::-webkit-scrollbar-track {
+          background: #fff;
+        }
 
-      &::-webkit-scrollbar-thumb {
-        background: $light-grey;
-      }
-    }
-  }
-
-  &.full {
-    width: $full-modal-width;
-    height: $full-modal-height;
-    min-width: $full-modal-width;
-    visibility: visible !important;
-    border-radius: 0px;
-    position: fixed;
-    top: none;
-    bottom: -200%;
-    transition: bottom 0.4s;
-    > header {
-      padding-top: 0;
-      width: 100%;
-    }
-    &.active {
-      bottom: 0%;
-    }
-  }
-
-  &.sheet {
-    width: $sheet-modal-width;
-    height: $sheet-modal-height;
-    min-width: $full-modal-width;
-    visibility: visible !important;
-    border-radius: 8px 8px 0px 0px;
-    position: fixed;
-    top: auto;
-    bottom: -200%;
-    transition: bottom 0.2s;
-    &.active {
-      bottom: 0%;
-    }
-    > header {
-      height: 55px;
-      > .title {
-        font-size: 22px;
-      }
-    }
-    > footer {
-      position: fixed;
-      bottom: 0px;
-    }
-    > section {
-      overflow-y: scroll;
-      border-top: 0.5px solid $light-grey;
-      height: calc(100% - 80px);
-      padding-left: 25px;
-      padding-right: 20px;
-      &::-webkit-scrollbar {
-        width: 10px;
-      }
-
-      &::-webkit-scrollbar-track {
-        background: color(white, base);
-      }
-
-      &::-webkit-scrollbar-thumb {
-        background: $light-grey;
-      }
-      footer {
-        position: static !important;
-        > a:last-child {
-          margin-right: 2px;
+        &::-webkit-scrollbar-thumb {
+          background: #ccc;
         }
       }
     }
   }
 
-  &.alert,
+  &.full {
+    > .content {
+      width: $full-modal-width;
+      height: $full-modal-height;
+      min-width: $full-modal-width;
+      visibility: visible !important;
+      border-radius: 0px;
+      position: fixed;
+      top: none;
+      bottom: -200%;
+      transition: bottom 0.4s;
+      > header {
+        padding-top: 0;
+        width: 100%;
+      }
+    }
+     &.active {
+       > .content{
+         bottom: 0%;
+       }
+     }
+  }
+
+  &.sheet {
+    > .content {
+      width: $sheet-modal-width;
+      height: $sheet-modal-height;
+      min-width: $full-modal-width;
+      visibility: visible !important;
+      border-radius: 8px 8px 0px 0px;
+      position: fixed;
+      top: auto;
+      bottom: -200%;
+      transition: bottom 0.3s;
+      > header {
+        height: 55px;
+        > .title {
+          font-size: 22px;
+        }
+      }
+      > footer {
+        position: fixed;
+        bottom: 0px;
+      }
+      > section {
+        overflow-y: scroll;
+        border-top: 0.5px solid #e5e5e5;
+        height: calc(100% - 80px);
+        padding-left: 25px;
+        padding-right: 20px;
+        &::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: #fff;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: #ccc;
+        }
+        footer {
+          position: static !important;
+          > a:last-child {
+            margin-right: 2px;
+          }
+        }
+      }
+    }
+          &.active {
+            > .content{
+              bottom: 0%;
+            }
+      }
+  }
+
+//  &.alert,
   &.scrollable,
   &.full {
-    footer {
-      position: absolute;
-      bottom: 0px;
+    > .content{
+      footer {
+        position: absolute;
+        bottom: 0px;
+      }
     }
   }
 
@@ -277,24 +301,19 @@ $font: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
     visibility: visible !important;
     position: relative;
     top: 50%;
-    color: color(white, base);
     transform: translateY(-50%);
-    box-shadow: none;
-    background: transparent;
     > main {
       margin: 0 auto;
     }
-    &.small, &.medium{
+    &.small,
+    &.medium {
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    &.colored{
-      background: color(white, base);
-      -webkit-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
-        0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
-      box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
-        0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+    &.basic {
+      box-shadow: none;
+      background: transparent;
     }
     &.small {
       > svg {
@@ -313,7 +332,7 @@ $font: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
       height: 80px;
       padding: 10px;
       text-align: center;
-      color: $light-grey;
+      color: color(grey, dark, 3);
       > svg {
         width: 50px;
         height: 50px;
@@ -328,7 +347,6 @@ $font: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
       }
     }
   }
-
   &.fadeIn {
     visibility: visible !important;
     transition: all 100ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -347,7 +365,7 @@ $font: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
   &.expandUp {
     visibility: visible !important;
     transition: all 100ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    @include animation(expandUp .2s);
+    @include animation(expandUp 0.2s);
   }
 }
 
@@ -393,11 +411,11 @@ $font: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
   }
 }
 
-@include keyframes(expandUp){
+@include keyframes(expandUp) {
   0% {
-        transform: translateY(20%) scale(0.6) scaleY(0.5);
-    }
-    100%{
-        transform: translateY(0%) scale(1) scaleY(1)
-    }
+    transform: translateY(20%) scale(0.6) scaleY(0.5);
+  }
+  100% {
+    transform: translateY(0%) scale(1) scaleY(1);
+  }
 }
