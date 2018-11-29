@@ -8,6 +8,8 @@ $lin-small-width: 200px;
 $base-loader-width: 250px;
 $base-loader-height: 100px;
 
+$loader-margin: 2em;
+
 .loader {
   background: #fff;
   line-height: normal;
@@ -20,39 +22,40 @@ $base-loader-height: 100px;
   border-radius: 5px;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.1);
   pointer-events: auto !important;
-  > .circular{
+  // visibility: hidden;
+  > .circular {
     width: 40px;
     height: 40px;
   }
-  > .linear{
+  > .linear {
     width: calc(100% - 10%);
     height: 4px;
   }
-  &.small{
+  &.small {
     width: $small-loader-width;
     height: $small-loader-height;
     display: flex;
     align-items: center;
     justify-content: center;
-    &.lin{
+    &.lin {
       width: $lin-small-width;
-      > .linear{
+      > .linear {
         margin-top: 4px;
       }
     }
   }
-  &.large{
+  &.large {
     width: $base-loader-width;
     height: $base-loader-height;
     font-family: $font;
-    > .title{
+    > .title {
       font-size: 16px;
       width: 100%;
       display: block;
       padding: 16px;
       box-sizing: border-box;
     }
-    > .subtext{
+    > .subtext {
       width: calc(100% - 40px);
       position: relative;
       font-size: 15px;
@@ -62,20 +65,45 @@ $base-loader-height: 100px;
       white-space: nowrap;
       text-overflow: ellipsis;
     }
-    > .circular{
+    > .circular {
       float: left;
       margin-left: 15px;
     }
-    
-    &.lin{
-      > .linear{
+
+    &.lin {
+      > .linear {
         width: 90%;
         margin-left: 5%;
       }
     }
   }
-  &.trans{
+  &.trans {
     background: transparent;
     box-shadow: none;
+  }
+
+  &.left {
+    left: $loader-margin;
+    right: auto;
+  }
+  &.right {
+    right: $loader-margin;
+    left: auto;
+  }
+  &.top {
+    top: $loader-margin;
+    bottom: auto;
+  }
+  &.bottom {
+    bottom: $loader-margin;
+    top: auto;
+  }
+  @media screen and (max-width: 400px) {
+    &.left,
+    &.right {
+      margin: 0px auto;
+      right: 0px !important;
+      left: 0px !important;
+    }
   }
 }
