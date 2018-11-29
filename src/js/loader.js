@@ -1,9 +1,29 @@
 //=include _base.js
 
-function loader(data){
-   this.id = is_string(data) ? data : data.target;
-   this.data = data;
-   this.close = ()=>{};
-   this.open = ()=>{};
-   this.build = ()=>{};
+function loader(data) {
+  this.id = is_string(data) ? data : data.target;
+  this.data = data;
+  
+  this.$timer = (time, callback) => {
+    var id = this.id;
+    var timer;
+    if (time != null) {
+      timer = setInterval( ()=> {
+        clearInterval(timer);
+        callback(id);
+      }, time);
+    }
+  };
+  this.close = ()=>{
+    var id = $get(this.id);
+    $removeClass(id, 'slideDownIn');
+  };
+  
+  this.build = ()=>{};
+  
+  this.open = (time)=>{
+    var id = $get(this.id);
+    $addClass(id, 'slideDownIn');
+    this.$timer(time, this.close);
+  };
 }
