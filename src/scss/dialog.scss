@@ -1,6 +1,7 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
+
 $modal-width: 320px;
 $modal-height: 160px;
 $modal-maxWidth: 85% !important;
@@ -293,60 +294,6 @@ body.dialog-open {
       }
     }
   }
-
-  &.loader {
-    width: 230px;
-    height: 95px;
-    text-align: center;
-    visibility: visible !important;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    > main {
-      margin: 0 auto;
-    }
-    &.small,
-    &.medium {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    &.basic {
-      box-shadow: none;
-      background: transparent;
-    }
-    &.small {
-      > svg {
-        width: 30px;
-        height: 30px;
-      }
-      > span {
-        margin-top: 2px;
-        text-indent: 5px;
-        font-family: $font;
-        color: inherit;
-      }
-    }
-    &.medium {
-      width: 100px;
-      height: 80px;
-      padding: 10px;
-      text-align: center;
-      color: color(grey, dark, 3);
-      > svg {
-        width: 50px;
-        height: 50px;
-        position: absolute;
-        top: 10px;
-      }
-      > span {
-        position: absolute;
-        bottom: 10px;
-        font-family: $font;
-        color: inherit;
-      }
-    }
-  }
   &.fadeIn {
     visibility: visible !important;
     transition: all 100ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -375,39 +322,6 @@ body.dialog-open {
   }
   to {
     opacity: 1;
-  }
-}
-.md-loader {
-  @include animation(rotate 2s linear infinite);
-  width: 35px;
-  vertical-align: middle;
-  > circle {
-    fill: none;
-    stroke: white;
-    stroke-dasharray: 5, 155;
-    stroke-dashoffset: 0;
-    @include animation(dash 1.35s cubic-bezier(0.4, 0, 0.2, 1) infinite);
-  }
-}
-
-@include keyframes(rotate) {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@include keyframes(dash) {
-  0% {
-    stroke-dasharray: 2, 155;
-    stroke-dashoffset: 0;
-  }
-  50% {
-    stroke-dasharray: 122, 20;
-    stroke-dashoffset: -20;
-  }
-  100% {
-    stroke-dasharray: 2, 155;
-    stroke-dashoffset: -155;
   }
 }
 
