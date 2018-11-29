@@ -22,7 +22,7 @@ $loader-margin: 2em;
   border-radius: 5px;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.1);
   pointer-events: auto !important;
-  // visibility: hidden;
+  visibility: hidden;
   > .circular {
     width: 40px;
     height: 40px;
@@ -106,4 +106,18 @@ $loader-margin: 2em;
       left: 0px !important;
     }
   }
+  &.slideDownIn {
+    visibility: visible !important;
+    @include animation(slideDownIn 1s ease);
+  }
 }
+
+@include keyframes(slideDownIn) {
+  0% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
