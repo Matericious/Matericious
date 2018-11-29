@@ -13,7 +13,7 @@ function dialog(data) {
       }, time);
     }
   };
-
+  
   this.build = ()=> {};
   this.close = (id)=> {
     alert(id);
@@ -22,9 +22,11 @@ function dialog(data) {
 
   function close(id) {
     var dialog_ID = $get(id),
+       _doc = $get('body'),
       _loader = $get(id + " .loader"),
       _created_overlay = $get("."+id.replace(/#/g, "")+".dialog_overlay"),
       modal_class = dialog_ID.className;
+    $removeClass(_doc, "dialog-open");
     if (_loader != null) {
       _created_overlay = $get(id+" .loader_overlay");
     } else {
@@ -56,31 +58,31 @@ function dialog(data) {
       _loader_class = ["dialog", "loader", "overlay"],
       _loader_overlay_class = ["loader_overlay"],
       _parent_size = [_parent.offsetWidth, _parent.offsetHeight],
-      _svg_loader = (this.data.spinner == null || this.data.spinner) ?
+      _svg_loader = (this.data.spinner == null || this.data.spinner) ? 
         '<svg class="md-loader" stroke-width="5" viewBox="0 0 66 66">' +
           '<circle cx="33" cy="33" r="25" />' +
         '</svg>' : '';
     if(this.data.background != null){
       _overlay_background = 'rgba('+hexToRgb(this.data.background.replace(/#/g, ""))+', '+_overlay_opacity+')';
-    }else if(this.data.theme == 'light'){
+    }else if(this.data.theme == 'light'){ 
       _loader_overlay_class.push(this.data.theme);
       _overlay_background = 'rgba(255,255,255, '+_overlay_opacity+')'
     }
-
+    
     if(this.data.size == null) _loader_class.push('small'); else _loader_class.push(this.data.size);
-
+    
     if(this.data.style == null) _loader_class.push('basic'); else _loader_class.push(this.data.style);
     if(this.data.text != null){
       _svg_loader += '<span>'+this.data.text+'</span>';
     }
     if(_parent.style.position != 'relative') _parent.style.position = 'relative';
      _parent.appendChild(_loading_overlay), _loading_overlay.appendChild(_loader_div);
-
+    
     for (var c = 0; c < _loader_overlay_class.length; c++) $addClass(_loading_overlay, _loader_overlay_class[c]);
     for (var c = 0; c < _loader_class.length; c++) $addClass(_loader_div, _loader_class[c]);
-
+    
     var _loader = $get(this.id+' .loader');
-    if(_parent_size[0] == $get('body').offsetWidth && _parent.tagName.toLowerCase() == 'body'){
+    if(_parent_size[0] == $get('body').offsetWidth && _parent.tagName.toLowerCase() == 'body'){ 
       _parent.style.position = 'normal';
       $get(this.id+' .loader_overlay').style.position = 'fixed';
     }
@@ -106,7 +108,7 @@ function dialog(data) {
       $addClass(overlay_div, "dialog_overlay");
       $addClass(overlay_div, id.replace(/#/g, ""));
     }
-    $addClass(_doc, "modal_active");
+    $addClass(_doc, "dialog-open");
     if (modal_class.includes("full") || modal_class.includes("sheet")) {
       $addClass(modal_ID, "active");
     } else {
