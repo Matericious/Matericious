@@ -1,5 +1,7 @@
 @import "_variables.scss";
 
+$font: "Roboto", san-serif;
+
 $small-loader-width: 60px;
 $small-loader-height: 60px;
 
@@ -36,6 +38,9 @@ $base-loader-height: 100px;
     justify-content: center;
     &.lin{
       width: $lin-small-width;
+      > .linear{
+        margin-top: 4px;
+      }
     }
   }
   &.large{
