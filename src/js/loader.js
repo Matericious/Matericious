@@ -26,6 +26,8 @@ function loader(data) {
   this.build = ()=>{};
   
   this.open = (time)=>{
+    this.id = ((this.id.substring(0) == '#') ? '' : '#')+this.id;
+    alert(this.id);
     var id = $get(this.id);
     $addClass(id, 'slideDownIn');
     this.$timer(time, this.close);
