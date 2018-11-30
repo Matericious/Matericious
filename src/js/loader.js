@@ -19,6 +19,10 @@ function loader(data) {
     $removeClass(id, 'slideDownIn');
   };
   
+  this.is = (che, def)=>{
+    return (!che) ? def : che;
+  };
+  
   this.build = ()=>{};
   
   this.open = (time)=>{
