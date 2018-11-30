@@ -2,6 +2,7 @@
 
 
 function dialog(data) {
+  data = (!data) ? '' : data;
   this.id = is_string(data) ? data : data.target;
   this.data = data;
   this.$timer = (time, callback) => {
