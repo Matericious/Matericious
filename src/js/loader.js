@@ -37,18 +37,17 @@ function loader(data) {
     let name = this.id = 'sys_gen_loader_id',
         size = this.is(this.data.size, 'small'),
         type = this.is(this.data.type, 'circular'),
-        pos = [this.is(this.data.vertical, 'bottom'), this.is(this.data.horizontal, 'right')],
+        pos = [this.is(this.data.vertical, ''), this.is(this.data.horizontal, '')],
         title = (size != 'small') ? this.is(this.data.title, 'Please wait') : '',
         subtext = (size == 'large' && type == 'circular') ? this.is(this.data.subtext, 'This page is loading') : '',
-        _class = pos[0]+' '+pos[1] +' ' + ((type == 'linear') ? 'lin' : '');
+        theme = this.is(this.data.theme, ''),
+        _class = pos[0]+' '+pos[1] +' ' + ((type == 'linear') ? 'lin' : '') + ' '+theme;
 
     let small_template = '<div id="'+name+'" class="loader small '+_class+'"><progress class="'+type+'"/></div>',
         large_template = '<div id="'+name+'" class="loader large '+_class+'"><label class="title">'+title+'</label><span class="subtext">'+subtext+'</span> <progress class="'+type+'"/></div>',
         base_template = '<div id="'+name+'" class="loader base '+_class+'"><label class="title">'+title+'</label><progress class="circular"/></div>',
         template = (size == 'small') ? small_template : (size == 'base') ? base_template : large_template;
-    
     $get('body').innerHTML += template;
     this.open(time);
   };
 }
-
