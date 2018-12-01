@@ -61,16 +61,18 @@ $loader-margin: 2em;
       box-sizing: border-box;
     }
     > .subtext {
-      width: calc(100% - 40px);
-      position: relative;
+      width: calc(100% - 60px);
+      position: absolute;
       font-size: 15px;
-      top: 8px;
-      left: 10px;
+      left: 60px;
+      margin-top: 8px;
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
     }
     > .circular {
+      width: 35px;
+      height: 35px;
       float: left;
       margin-left: 15px;
     }
@@ -148,5 +150,3 @@ $loader-margin: 2em;
     transform: translateY(0%);
   }
 }
-
-
