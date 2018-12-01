@@ -26,8 +26,7 @@ function loader(data) {
   };
   
   this.open = (time)=>{
-    this.id = ((this.id.substring(0) == '#') ? '' : '#')+this.id;
-    alert(this.id);
+    this.id = ((this.id.charAt( 0 ) == '#') ? '' : '#')+this.id;
     var id = $get(this.id);
     $addClass(id, 'slideDownIn');
     this.$timer(time, this.close);
@@ -46,7 +45,6 @@ function loader(data) {
         template = (size == 'small') ? small_template : large_template;
 
     $get('body').innerHTML += template;
-      alert("pass");
-      this.open(time);
+    this.open(time);
   };
 }
