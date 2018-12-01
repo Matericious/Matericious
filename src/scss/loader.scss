@@ -6,8 +6,11 @@ $small-loader-height: 60px;
 
 $lin-small-width: 200px;
 
-$base-loader-width: 250px;
-$base-loader-height: 100px;
+$large-loader-width: 250px;
+$large-loader-height: 100px;
+
+$base-loader-width: 150px;
+$base-loader-height: 60px;
 
 $loader-margin: 2em;
 
@@ -24,6 +27,7 @@ $loader-margin: 2em;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.1);
   pointer-events: auto !important;
   visibility: hidden;
+  overflow: hidden;
   > .circular {
     width: 40px;
     height: 40px;
@@ -46,8 +50,8 @@ $loader-margin: 2em;
     }
   }
   &.large {
-    width: $base-loader-width;
-    height: $base-loader-height;
+    width: $large-loader-width;
+    height: $large-loader-height;
     font-family: $font;
     > .title {
       font-size: 16px;
@@ -76,6 +80,29 @@ $loader-margin: 2em;
         width: 90%;
         margin-left: 5%;
       }
+    }
+  }
+  &.base{
+    width: $base-loader-width;
+    height: $base-loader-height;
+    font-family: $font;
+    display: flex;
+    align-items: center;
+    justify-content: center;       
+    > .title {
+      width: calc(100% - 60px);
+      position: absolute;
+      font-size: 15px;
+      left: 50px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    > .circular { 
+      width: 35px;
+      height: 35px;
+      position: absolute;
+      left: 10px;
     }
   }
   &.trans {
@@ -121,4 +148,5 @@ $loader-margin: 2em;
     transform: translateY(0%);
   }
 }
+
 
