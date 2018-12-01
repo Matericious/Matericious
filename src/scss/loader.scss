@@ -111,6 +111,11 @@ $loader-margin: 2em;
     background: transparent;
     box-shadow: none;
   }
+  
+  &.dark{
+    background: #222;
+    color: #fff
+  }
 
   &.left {
     left: $loader-margin;
