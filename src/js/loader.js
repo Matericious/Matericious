@@ -1,5 +1,6 @@
 //=include _base.js
 
+
 function loader(data) {
   data = (!data) ? '' : data;
   this.id = is_string(data) ? data : data.target;
@@ -37,15 +38,17 @@ function loader(data) {
         size = this.is(this.data.size, 'small'),
         type = this.is(this.data.type, 'circular'),
         pos = [this.is(this.data.vertical, 'bottom'), this.is(this.data.horizontal, 'right')],
-        title = (size == 'large') ? this.is(this.data.title, 'Please wait') : '',
+        title = (size != 'small') ? this.is(this.data.title, 'Please wait') : '',
         subtext = (size == 'large' && type == 'circular') ? this.is(this.data.subtext, 'This page is loading') : '',
         _class = pos[0]+' '+pos[1] +' ' + ((type == 'linear') ? 'lin' : '');
 
     let small_template = '<div id="'+name+'" class="loader small '+_class+'"><progress class="'+type+'"/></div>',
         large_template = '<div id="'+name+'" class="loader large '+_class+'"><label class="title">'+title+'</label><span class="subtext">'+subtext+'</span> <progress class="'+type+'"/></div>',
-        template = (size == 'small') ? small_template : large_template;
-
+        base_template = '<div id="'+name+'" class="loader base '+_class+'"><label class="title">'+title+'</label><progress class="circular"/></div>',
+        template = (size == 'small') ? small_template : (size == 'base') ? base_template : large_template;
+    
     $get('body').innerHTML += template;
     this.open(time);
   };
 }
+
