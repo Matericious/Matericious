@@ -1,5 +1,5 @@
 /**
- * Matericious v0.8.1 (https://matericious.com/)
+ * Matericious v0.9.0 (https://matericious.com/)
  * Copyright 2018 Matericious Authors
  * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
  */
@@ -135,12 +135,34 @@ function nesting() {
   addEvent(window, "resize", function () {
     checkNesting();
   });
-} 
+}
+
+function collapse() {
+  var $curr_scr_pos = window.pageYOffset;
+
+  if ($get('.dense')) {
+    $get('.dense').style.top = $pre_Scr_Pos > $curr_scr_pos ? "0" : "-65px";
+    $pre_Scr_Pos = $curr_scr_pos;
+  }
+
+  if ($get('.collapse')) {
+    $get('.collapse .title').style.display = $curr_scr_pos < 5 ? "inline-block" : "none";
+    $get('.collapse').style.width = $curr_scr_pos < 5 ? "100%" : "115px";
+    $get('.collapse').style.borderRadius = $curr_scr_pos < 5 ? "0" : "0px 0px 30px 0px";
+  }
+}
+
+var $pre_Scr_Pos = window.pageYOffset;
+
+window.onscroll = function () {
+  collapse();
+}; 
 
 
 function dialog(data) {
   var _this = this;
 
+  data = !data ? '' : data;
   this.id = is_string(data) ? data : data.target;
   this.data = data;
 
@@ -165,9 +187,12 @@ function dialog(data) {
 
   function close(id) {
     var dialog_ID = $get(id),
+        _doc = $get('body'),
         _loader = $get(id + " .loader"),
         _created_overlay = $get("." + id.replace(/#/g, "") + ".dialog_overlay"),
         modal_class = dialog_ID.className;
+
+    $removeClass(_doc, "dialog-open");
 
     if (_loader != null) {
       _created_overlay = $get(id + " .loader_overlay");
@@ -185,68 +210,6 @@ function dialog(data) {
     return;
   }
 
-  this.loader = function (time) {
-    if ($get(_this.id + ' .loader') != null) close(_this.id);
-
-    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
-        _parent = $get(_this.id),
-        _overlay_opacity = _this.data.opacity != null ? _this.data.opacity : 0.8,
-        _loader_color = _this.data.loaderColor != null ? _this.data.loaderColor : '',
-        _text_color = _this.data.color != null ? _this.data.color : '',
-        _overlay_background = 'rgba(0, 0, 0, ' + _overlay_opacity + ')',
-        _loader_div = document.createElement("loader"),
-        _loading_overlay = document.createElement("overlay"),
-        _loader_class = ["dialog", "loader", "overlay"],
-        _loader_overlay_class = ["loader_overlay"],
-        _parent_size = [_parent.offsetWidth, _parent.offsetHeight],
-        _svg_loader = _this.data.spinner == null || _this.data.spinner ? '<svg class="md-loader" stroke-width="5" viewBox="0 0 66 66">' + '<circle cx="33" cy="33" r="25" />' + '</svg>' : '';
-
-    if (_this.data.background != null) {
-      _overlay_background = 'rgba(' + hexToRgb(_this.data.background.replace(/#/g, "")) + ', ' + _overlay_opacity + ')';
-    } else if (_this.data.theme == 'light') {
-      _loader_overlay_class.push(_this.data.theme);
-
-      _overlay_background = 'rgba(255,255,255, ' + _overlay_opacity + ')';
-    }
-
-    if (_this.data.size == null) _loader_class.push('small');else _loader_class.push(_this.data.size);
-    if (_this.data.style == null) _loader_class.push('basic');else _loader_class.push(_this.data.style);
-
-    if (_this.data.text != null) {
-      _svg_loader += '<span>' + _this.data.text + '</span>';
-    }
-
-    if (_parent.style.position != 'relative') _parent.style.position = 'relative';
-    _parent.appendChild(_loading_overlay), _loading_overlay.appendChild(_loader_div);
-
-    for (var c = 0; c < _loader_overlay_class.length; c++) {
-      $addClass(_loading_overlay, _loader_overlay_class[c]);
-    }
-
-    for (var c = 0; c < _loader_class.length; c++) {
-      $addClass(_loader_div, _loader_class[c]);
-    }
-
-    var _loader = $get(_this.id + ' .loader');
-
-    if (_parent_size[0] == $get('body').offsetWidth && _parent.tagName.toLowerCase() == 'body') {
-      _parent.style.position = 'normal';
-      $get(_this.id + ' .loader_overlay').style.position = 'fixed';
-    }
-
-    if (_parent_size[1] < _loader.offsetHeight) {
-      _loader.style.width = _parent_size[0] + 'px';
-      _loader.style.height = _parent_size[1] / 1 + 'px';
-    }
-
-    $get(_this.id + ' .loader_overlay').style.background = _overlay_background;
-    $get(_this.id + ' .loader').style.color = _text_color;
-    _loader_div.innerHTML = _svg_loader;
-    if (_this.data.spinner == null || _this.data.spinner) $get(_this.id + ' .md-loader circle').style.stroke = _loader_color;
-
-    _this.$timer(time, close);
-  };
-
   this.open = function (time) {
     var id = _this.id;
 
@@ -263,7 +226,7 @@ function dialog(data) {
       $addClass(overlay_div, id.replace(/#/g, ""));
     }
 
-    $addClass(_doc, "modal_active");
+    $addClass(_doc, "dialog-open");
 
     if (modal_class.includes("full") || modal_class.includes("sheet")) {
       $addClass(modal_ID, "active");
@@ -691,6 +654,67 @@ function gradient() {
 
 function getColor(color, rang, shade) {
   return shade != null ? Colors[color][rang][shade] : Colors[color].base;
+} 
+
+
+$all('.indeterminate > input').forEach(function (item) {
+  return item.indeterminate = true;
+}); 
+
+function loader(data) {
+  var _this2 = this;
+
+  data = !data ? '' : data;
+  this.id = is_string(data) ? data : data.target;
+  this.data = data;
+
+  this.$timer = function (time, callback) {
+    var id = _this2.id;
+    var timer;
+
+    if (time != null) {
+      timer = setInterval(function () {
+        clearInterval(timer);
+        callback(id);
+      }, time);
+    }
+  };
+
+  this.close = function () {
+    var id = $get(_this2.id);
+    $removeClass(id, 'slideDownIn');
+  };
+
+  this.is = function (che, def) {
+    return !che ? def : che;
+  };
+
+  this.open = function (time) {
+    _this2.id = (_this2.id.charAt(0) == '#' ? '' : '#') + _this2.id;
+    var id = $get(_this2.id);
+    $addClass(id, 'slideDownIn');
+
+    _this2.$timer(time, _this2.close);
+  };
+
+  this.build = function (time) {
+    var name = _this2.id = 'sys_gen_loader_id',
+        size = _this2.is(_this2.data.size, 'small'),
+        type = _this2.is(_this2.data.type, 'circular'),
+        pos = [_this2.is(_this2.data.pos.vertical, ''), _this2.is(_this2.data.pos.horizontal, '')],
+        title = size != 'small' ? _this2.is(_this2.data.title, 'Please wait') : '',
+        subtext = size == 'large' && type == 'circular' ? _this2.is(_this2.data.subtext, 'This page is loading') : '',
+        theme = _this2.is(_this2.data.theme, ''),
+        _class = pos[0] + ' ' + pos[1] + ' ' + (type == 'linear' ? 'lin' : '') + ' ' + theme;
+
+    var small_template = '<div id="' + name + '" class="loader small ' + _class + '"><progress class="' + type + '"/></div>',
+        large_template = '<div id="' + name + '" class="loader large ' + _class + '"><label class="title">' + title + '</label><span class="subtext">' + subtext + '</span> <progress class="' + type + '"/></div>',
+        base_template = '<div id="' + name + '" class="loader base ' + _class + '"><label class="title">' + title + '</label><progress class="circular"/></div>',
+        template = size == 'small' ? small_template : size == 'base' ? base_template : large_template;
+    $get('body').innerHTML += template;
+
+    _this2.open(time);
+  };
 } 
 
 

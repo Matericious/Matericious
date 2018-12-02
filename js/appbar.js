@@ -1,5 +1,5 @@
 /**
- * Matericious v0.8.1 (https://matericious.com/)
+ * Matericious v0.9.0 (https://matericious.com/)
  * Copyright 2018 Matericious Authors
  * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
  */
@@ -135,3 +135,24 @@ function nesting() {
     checkNesting();
   });
 }
+
+function collapse() {
+  var $curr_scr_pos = window.pageYOffset;
+
+  if ($get('.dense')) {
+    $get('.dense').style.top = $pre_Scr_Pos > $curr_scr_pos ? "0" : "-65px";
+    $pre_Scr_Pos = $curr_scr_pos;
+  }
+
+  if ($get('.collapse')) {
+    $get('.collapse .title').style.display = $curr_scr_pos < 5 ? "inline-block" : "none";
+    $get('.collapse').style.width = $curr_scr_pos < 5 ? "100%" : "115px";
+    $get('.collapse').style.borderRadius = $curr_scr_pos < 5 ? "0" : "0px 0px 30px 0px";
+  }
+}
+
+var $pre_Scr_Pos = window.pageYOffset;
+
+window.onscroll = function () {
+  collapse();
+};

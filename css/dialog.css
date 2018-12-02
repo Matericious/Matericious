@@ -1,5 +1,5 @@
 /**
- * Matericious v0.8.1 (https://matericious.com/)
+ * Matericious v0.9.0 (https://matericious.com/)
  * Copyright 2018 Matericious Authors
  * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
  */
@@ -13,6 +13,11 @@
   left: 0;
   background: rgba(0, 0, 0, 0.2);
   z-index: 1;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
 }
 
 .loader_overlay {
@@ -34,74 +39,93 @@
   stroke: blue;
 }
 
+body.dialog-open {
+  overflow: hidden;
+}
+
 .dialog {
   visibility: hidden;
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100vh;
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 3;
+  pointer-events: none;
+  -webkit-transition: top 0s;
+  transition: top 0s;
+}
+
+.dialog > .content {
   width: 320px;
-  height: 160px;
+  height: auto;
   max-width: 85% !important;
   color: black;
   background: #fff;
   line-height: normal;
-  position: fixed;
   margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  pointer-events: auto;
   border-radius: 5px;
   -webkit-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
   pointer-events: auto !important;
   overflow: hidden;
-  font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
+  font-family: "Roboto", san-serif;
   z-index: 2;
 }
 
-.dialog *:focus, .dialog *:hover {
+.dialog > .content *:focus, .dialog > .content *:hover {
   outline: none;
 }
 
-.dialog > header,
-.dialog section,
-.dialog footer {
+.dialog > .content > header,
+.dialog > .content section,
+.dialog > .content footer {
   width: calc(100% - (24 * 2px));
   margin: 0px auto;
 }
 
-.dialog > header {
+.dialog > .content > header {
   height: auto;
   padding-top: 20px;
 }
 
-.dialog > header > .title {
+.dialog > .content > header > .title {
   font-size: 18px;
-  color: #424242;
+  color: #444444;
   font-family: inherit;
   font-weight: bold;
 }
 
-.dialog > header > .title:first-letter {
+.dialog > .content > header > .title:first-letter {
   text-transform: capitalize;
 }
 
-.dialog > header > .subtitle {
+.dialog > .content > header > .subtitle {
   display: block;
   font-size: 14px;
 }
 
-.dialog > section {
+.dialog > .content > section {
   height: calc(100% - 95px);
-  color: #BDBDBD;
+  color: #838383;
   font-size: 16px;
   overflow: hidden;
   scroll-behavior: smooth;
 }
 
-.dialog > .text-field {
+.dialog > .content > .text-field {
   width: 100%;
 }
 
-.dialog footer {
+.dialog > .content footer {
   width: 100%;
   height: 52px;
   display: -webkit-box;
@@ -117,10 +141,10 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background: #FFFFFF;
+  background: #fff;
 }
 
-.dialog footer > a {
+.dialog > .content footer > a {
   min-width: 30px;
   height: 35px;
   padding: 0px 8px 0px 8px;
@@ -139,12 +163,12 @@
   transition: all 0s !important;
 }
 
-.dialog footer > a.ripple {
+.dialog > .content footer > a.ripple {
   -webkit-transition: all 0s;
   transition: all 0s;
 }
 
-.dialog footer > a.left {
+.dialog > .content footer > a.left {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
@@ -153,55 +177,56 @@
   left: 0px;
 }
 
-.dialog.alert {
+.dialog.alert > .content {
   width: 280px;
-  height: 118px;
 }
 
-.dialog.alert > header {
+.dialog.alert > .content > header {
   display: none;
 }
 
-.dialog.alert > section {
+.dialog.alert > .content > section {
   height: 100%;
   padding-top: 8px;
 }
 
-.dialog.scrollable {
+.dialog.scrollable > .content {
   width: 500px;
+  max-width: 95% !important;
   height: calc(100vh - 10%);
+  position: relative;
 }
 
-.dialog.scrollable > header {
+.dialog.scrollable > .content > header {
   height: 40px;
 }
 
-.dialog.scrollable > header > .title {
+.dialog.scrollable > .content > header > .title {
   font-weight: 500;
   font-size: 20px;
 }
 
-.dialog.scrollable > section {
+.dialog.scrollable > .content > section {
   padding-left: 25px;
   padding-right: 25px;
-  border-top: 1px solid;
-  border-bottom: 1px solid #BDBDBD;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
   overflow-y: scroll;
 }
 
-.dialog.scrollable > section::-webkit-scrollbar {
+.dialog.scrollable > .content > section::-webkit-scrollbar {
   width: 10px;
 }
 
-.dialog.scrollable > section::-webkit-scrollbar-track {
-  background: #FFFFFF;
+.dialog.scrollable > .content > section::-webkit-scrollbar-track {
+  background: #fff;
 }
 
-.dialog.scrollable > section::-webkit-scrollbar-thumb {
-  background: #BDBDBD;
+.dialog.scrollable > .content > section::-webkit-scrollbar-thumb {
+  background: #ccc;
 }
 
-.dialog.full {
+.dialog.full > .content {
   width: 100%;
   height: 100vh;
   min-width: 100%;
@@ -214,16 +239,16 @@
   transition: bottom 0.4s;
 }
 
-.dialog.full > header {
+.dialog.full > .content > header {
   padding-top: 0;
   width: 100%;
 }
 
-.dialog.full.active {
+.dialog.full.active > .content {
   bottom: 0%;
 }
 
-.dialog.sheet {
+.dialog.sheet > .content {
   width: 100%;
   height: calc(100vh / 1.5);
   min-width: 100%;
@@ -232,129 +257,58 @@
   position: fixed;
   top: auto;
   bottom: -200%;
-  -webkit-transition: bottom 0.2s;
-  transition: bottom 0.2s;
+  -webkit-transition: bottom 0.3s;
+  transition: bottom 0.3s;
 }
 
-.dialog.sheet.active {
-  bottom: 0%;
-}
-
-.dialog.sheet > header {
+.dialog.sheet > .content > header {
   height: 55px;
 }
 
-.dialog.sheet > header > .title {
+.dialog.sheet > .content > header > .title {
   font-size: 22px;
 }
 
-.dialog.sheet > footer {
+.dialog.sheet > .content > footer {
   position: fixed;
   bottom: 0px;
 }
 
-.dialog.sheet > section {
+.dialog.sheet > .content > section {
   overflow-y: scroll;
-  border-top: 0.5px solid #BDBDBD;
+  border-top: 0.5px solid #e5e5e5;
   height: calc(100% - 80px);
   padding-left: 25px;
   padding-right: 20px;
 }
 
-.dialog.sheet > section::-webkit-scrollbar {
+.dialog.sheet > .content > section::-webkit-scrollbar {
   width: 10px;
 }
 
-.dialog.sheet > section::-webkit-scrollbar-track {
-  background: #FFFFFF;
+.dialog.sheet > .content > section::-webkit-scrollbar-track {
+  background: #fff;
 }
 
-.dialog.sheet > section::-webkit-scrollbar-thumb {
-  background: #BDBDBD;
+.dialog.sheet > .content > section::-webkit-scrollbar-thumb {
+  background: #ccc;
 }
 
-.dialog.sheet > section footer {
+.dialog.sheet > .content > section footer {
   position: static !important;
 }
 
-.dialog.sheet > section footer > a:last-child {
+.dialog.sheet > .content > section footer > a:last-child {
   margin-right: 2px;
 }
 
-.dialog.alert footer, .dialog.scrollable footer, .dialog.full footer {
+.dialog.sheet.active > .content {
+  bottom: 0%;
+}
+
+.dialog.scrollable > .content footer, .dialog.full > .content footer {
   position: absolute;
   bottom: 0px;
-}
-
-.dialog.loader {
-  width: 230px;
-  height: 95px;
-  text-align: center;
-  visibility: visible !important;
-  position: relative;
-  top: 50%;
-  color: #FFFFFF;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  background: transparent;
-}
-
-.dialog.loader > main {
-  margin: 0 auto;
-}
-
-.dialog.loader.small, .dialog.loader.medium {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.dialog.loader.colored {
-  background: #FFFFFF;
-  -webkit-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
-  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
-}
-
-.dialog.loader.small > svg {
-  width: 30px;
-  height: 30px;
-}
-
-.dialog.loader.small > span {
-  margin-top: 2px;
-  text-indent: 5px;
-  font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
-  color: inherit;
-}
-
-.dialog.loader.medium {
-  width: 100px;
-  height: 80px;
-  padding: 10px;
-  text-align: center;
-  color: #BDBDBD;
-}
-
-.dialog.loader.medium > svg {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  top: 10px;
-}
-
-.dialog.loader.medium > span {
-  position: absolute;
-  bottom: 10px;
-  font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
-  color: inherit;
 }
 
 .dialog.fadeIn {
@@ -404,66 +358,6 @@
   }
   to {
     opacity: 1;
-  }
-}
-
-.md-loader {
-  -webkit-animation: rotate 2s linear infinite;
-  animation: rotate 2s linear infinite;
-  width: 35px;
-  vertical-align: middle;
-}
-
-.md-loader > circle {
-  fill: none;
-  stroke: white;
-  stroke-dasharray: 5, 155;
-  stroke-dashoffset: 0;
-  -webkit-animation: dash 1.35s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  animation: dash 1.35s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-}
-
-@-webkit-keyframes rotate {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes rotate {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes dash {
-  0% {
-    stroke-dasharray: 2, 155;
-    stroke-dashoffset: 0;
-  }
-  50% {
-    stroke-dasharray: 122, 20;
-    stroke-dashoffset: -20;
-  }
-  100% {
-    stroke-dasharray: 2, 155;
-    stroke-dashoffset: -155;
-  }
-}
-
-@keyframes dash {
-  0% {
-    stroke-dasharray: 2, 155;
-    stroke-dashoffset: 0;
-  }
-  50% {
-    stroke-dasharray: 122, 20;
-    stroke-dashoffset: -20;
-  }
-  100% {
-    stroke-dasharray: 2, 155;
-    stroke-dashoffset: -155;
   }
 }
 
