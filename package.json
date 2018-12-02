@@ -1,6 +1,6 @@
 {
   "name": "matericious",
-  "version": "0.8.1",
+  "version": "0.9.0",
   "description": "Delicious Material Framework",
   "main": "dist/js/matericious.js",
   "style": "dist/css/matericious.css",
