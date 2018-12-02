@@ -1,0 +1,18 @@
+- var title = 'Search in Appbar'
+doctype
+html(lang='en')
+  head
+    include ../includes/head.pug
+    style(type="text/css").
+      body { margin: 0 }
+  body
+   header.appbar.teal
+    .wrap
+      section.left
+        a.wave.icon
+          i.material-icons menu
+        label.title San Fransisco
+      section.right
+        .search
+          i.material-icons search
+          input(placeholder='Search')

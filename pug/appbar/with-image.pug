@@ -1,0 +1,42 @@
+- var title = 'Appbar with logo'
+doctype
+html(lang='en')
+  head
+    include ../includes/head.pug
+    style(type="text/css").
+      body { margin: 0 }
+  body
+   h3= With logo left
+   header.appbar.teal-light-5
+    .wrap
+     section.left
+       img(src='https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png')
+     section.right
+       a Cloud
+       a Account
+       a Dashboard
+
+   <br/><br/><br/>
+   h3= With logo right
+   header.appbar.teal-light-5
+    .wrap
+     section.left
+       a Cloud
+       a Account
+       a Dashboard
+     section.right
+       img(src='https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png')
+
+   <br/><br/><br/>
+   h3= With logo Middle
+   header.appbar.teal-light-5
+    .wrap
+     section.left
+       a Home
+       a About
+       a History
+     section.center
+       img(src='https://matericious.com/assets/img/logo.png')
+     section.right
+       a Account
+       a Signout

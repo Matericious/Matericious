@@ -1,0 +1,27 @@
+- var title = 'Nesting Appbar'
+doctype
+html(lang='en')
+  head
+    include ../includes/head.pug
+    style(type="text/css").
+      body { margin: 0 }
+  body
+   header.appbar.teal
+     .wrap
+        section.left
+          a.wave.icon
+            i.material-icons menu
+          label.title San Fransisco
+        section.right
+          a.nest.icon(title='cloud')
+            i.material-icons cloud
+          a.nest Dashboard
+          a.nest Account
+          a.wave.icon(open-menu='nesting')
+            i.material-icons more_vert
+   ul#nesting.menu.right
+   include /includes/foot.pug
+   script.
+      new nesting();
+      new menu();
+
