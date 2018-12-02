@@ -27,6 +27,17 @@ html(lang='en')
       progress.circular
     br
     hr
+    h3 Small Linear Loader
+    button(onclick="openLoader('small_linear_loader')") Small Loader
+    #small_linear_loader.loader.small.lin
+     progress.linear  
+    h3 Large Linear Loader
+    button(onclick="openLoader('large_linear_loader')") Large Loader
+    #large_linear_loader.loader.large.lin
+     label.title Please wait
+     progress.linear
+    br
+    hr
     h2 Build Custom Loader With JavaScript
     h3 Loader size
     select#size
