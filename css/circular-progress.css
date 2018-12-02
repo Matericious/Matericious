@@ -1,0 +1,214 @@
+/**
+ * Matericious v0.9.0 (https://matericious.com/)
+ * Copyright 2018 Matericious Authors
+ * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
+ */
+
+.circular {
+  width: 3em;
+  height: 3em;
+  padding: 0.25em;
+  border: none;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  color: #2196f3;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+.circular::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+.circular:indeterminate {
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, black)), -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, black));
+  -webkit-mask-image: linear-gradient(transparent 50%, black 50%), linear-gradient(to right, transparent 50%, black 50%);
+  mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50%, black)), -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, black));
+  mask-image: linear-gradient(transparent 50%, black 50%), linear-gradient(to right, transparent 50%, black 50%);
+  -webkit-animation: circular 6s infinite cubic-bezier(0.3, 0.6, 1, 1);
+  animation: circular 6s infinite cubic-bezier(0.3, 0.6, 1, 1);
+}
+
+.circular:indeterminate:before, .circular:indeterminate::-webkit-progress-value {
+  content: "";
+  display: block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 0.25em;
+  border: solid 0.25em transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  width: 100% !important;
+  height: 100%;
+  background-color: transparent;
+  -webkit-animation: circular-pseudo 0.75s infinite linear alternate;
+  animation: circular-pseudo 0.75s infinite linear alternate;
+}
+
+.circular:indeterminate::-moz-progress-bar {
+  box-sizing: border-box;
+  border: solid 0.25em transparent;
+  border-top-color: currentColor;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  -webkit-animation: circular-pseudo 0.75s infinite linear alternate;
+  animation: circular-pseudo 0.75s infinite linear alternate;
+}
+
+.circular:indeterminate::-ms-fill {
+  animation-name: -ms-ring;
+}
+
+:-ms-lang(x),
+.circular:indeterminate {
+  animation: none;
+}
+
+@-webkit-keyframes circular {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  12.5% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+  25% {
+    -webkit-transform: rotate(630deg);
+    transform: rotate(630deg);
+  }
+  37.5% {
+    -webkit-transform: rotate(810deg);
+    transform: rotate(810deg);
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+  50% {
+    -webkit-transform: rotate(1260deg);
+    transform: rotate(1260deg);
+  }
+  62.5% {
+    -webkit-transform: rotate(1440deg);
+    transform: rotate(1440deg);
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+  75% {
+    -webkit-transform: rotate(1890deg);
+    transform: rotate(1890deg);
+  }
+  87.5% {
+    -webkit-transform: rotate(2070deg);
+    transform: rotate(2070deg);
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+  100% {
+    -webkit-transform: rotate(2520deg);
+    transform: rotate(2520deg);
+  }
+}
+
+@keyframes circular {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  12.5% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+  25% {
+    -webkit-transform: rotate(630deg);
+    transform: rotate(630deg);
+  }
+  37.5% {
+    -webkit-transform: rotate(810deg);
+    transform: rotate(810deg);
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+  50% {
+    -webkit-transform: rotate(1260deg);
+    transform: rotate(1260deg);
+  }
+  62.5% {
+    -webkit-transform: rotate(1440deg);
+    transform: rotate(1440deg);
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+  75% {
+    -webkit-transform: rotate(1890deg);
+    transform: rotate(1890deg);
+  }
+  87.5% {
+    -webkit-transform: rotate(2070deg);
+    transform: rotate(2070deg);
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+  }
+  100% {
+    -webkit-transform: rotate(2520deg);
+    transform: rotate(2520deg);
+  }
+}
+
+@-webkit-keyframes circular-pseudo {
+  0% {
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+  }
+  29.4% {
+    border-left-color: transparent;
+  }
+  29.41% {
+    border-left-color: currentColor;
+  }
+  64.7% {
+    border-bottom-color: transparent;
+  }
+  64.71% {
+    border-bottom-color: currentColor;
+  }
+  100% {
+    border-left-color: currentColor;
+    border-bottom-color: currentColor;
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+  }
+}
+
+@keyframes circular-pseudo {
+  0% {
+    -webkit-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+  }
+  29.4% {
+    border-left-color: transparent;
+  }
+  29.41% {
+    border-left-color: currentColor;
+  }
+  64.7% {
+    border-bottom-color: transparent;
+  }
+  64.71% {
+    border-bottom-color: currentColor;
+  }
+  100% {
+    border-left-color: currentColor;
+    border-bottom-color: currentColor;
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+  }
+}

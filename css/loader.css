@@ -1,0 +1,191 @@
+/**
+ * Matericious v0.9.0 (https://matericious.com/)
+ * Copyright 2018 Matericious Authors
+ * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
+ */
+
+.loader {
+  background: #fff;
+  line-height: normal;
+  position: fixed;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1), 0 5px 15px 0 rgba(0, 0, 0, 0.1);
+  pointer-events: auto !important;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.loader > .circular {
+  width: 40px;
+  height: 40px;
+}
+
+.loader > .linear {
+  width: calc(100% - 10%);
+  height: 4px;
+}
+
+.loader.small {
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.loader.small.lin {
+  width: 200px;
+}
+
+.loader.small.lin > .linear {
+  margin-top: 4px;
+}
+
+.loader.large {
+  width: 250px;
+  height: 100px;
+  font-family: "Roboto", san-serif;
+}
+
+.loader.large > .title {
+  font-size: 16px;
+  width: 100%;
+  display: block;
+  padding: 16px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.loader.large > .subtext {
+  width: calc(100% - 60px);
+  position: absolute;
+  font-size: 15px;
+  left: 60px;
+  margin-top: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.loader.large > .circular {
+  width: 35px;
+  height: 35px;
+  float: left;
+  margin-left: 15px;
+}
+
+.loader.large.lin > .linear {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.loader.base {
+  width: 150px;
+  height: 60px;
+  font-family: "Roboto", san-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.loader.base > .title {
+  width: calc(100% - 60px);
+  position: absolute;
+  font-size: 15px;
+  left: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.loader.base > .circular {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 10px;
+}
+
+.loader.trans {
+  background: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.loader.dark {
+  background: #222;
+  color: #fff;
+}
+
+.loader.left {
+  left: 2em;
+  right: auto;
+}
+
+.loader.right {
+  right: 2em;
+  left: auto;
+}
+
+.loader.top {
+  top: 2em;
+  bottom: auto;
+}
+
+.loader.bottom {
+  bottom: 2em;
+  top: auto;
+}
+
+@media screen and (max-width: 400px) {
+  .loader.left, .loader.right {
+    margin: 0px auto;
+    right: 0px !important;
+    left: 0px !important;
+  }
+}
+
+.loader.slideDownIn {
+  visibility: visible !important;
+  -webkit-animation: slideDownIn 1s ease;
+  animation: slideDownIn 1s ease;
+}
+
+@-webkit-keyframes slideDownIn {
+  0% {
+    -webkit-transform: translateY(-10%);
+    transform: translateY(-10%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slideDownIn {
+  0% {
+    -webkit-transform: translateY(-10%);
+    transform: translateY(-10%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+}

@@ -1,0 +1,85 @@
+/**
+ * Matericious v0.9.0 (https://matericious.com/)
+ * Copyright 2018 Matericious Authors
+ * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
+ */
+
+.linear {
+  height: 0.25em;
+  color: #2196f3;
+  background-color: rgba(33, 150, 243, 0.12);
+  font-size: 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+}
+
+.linear::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+.linear::-webkit-progress-value {
+  background-color: currentColor;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.linear::-moz-progress-bar {
+  background-color: currentColor;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.linear::-ms-fill {
+  border: none;
+  background-color: currentColor;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.linear:indeterminate {
+  background-size: 200% 100%;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, currentColor), color-stop(60%, currentColor), color-stop(60%, transparent), color-stop(71.5%, transparent), color-stop(71.5%, currentColor), color-stop(84%, currentColor), color-stop(84%, transparent));
+  background-image: linear-gradient(to right, transparent 50%, currentColor 50%, currentColor 60%, transparent 60%, transparent 71.5%, currentColor 71.5%, currentColor 84%, transparent 84%);
+  -webkit-animation: progress-linear 2s infinite linear;
+  animation: progress-linear 2s infinite linear;
+}
+
+.linear:indeterminate::-moz-progress-bar {
+  background-color: transparent;
+}
+
+.linear:indeterminate::-ms-fill {
+  animation-name: none;
+}
+
+@-webkit-keyframes progress-linear {
+  0% {
+    background-size: 200% 100%;
+    background-position: left -31.25% top 0%;
+  }
+  50% {
+    background-size: 800% 100%;
+    background-position: left -49% top 0%;
+  }
+  100% {
+    background-size: 400% 100%;
+    background-position: left -102% top 0%;
+  }
+}
+
+@keyframes progress-linear {
+  0% {
+    background-size: 200% 100%;
+    background-position: left -31.25% top 0%;
+  }
+  50% {
+    background-size: 800% 100%;
+    background-position: left -49% top 0%;
+  }
+  100% {
+    background-size: 400% 100%;
+    background-position: left -102% top 0%;
+  }
+}
