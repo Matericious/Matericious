@@ -1,6 +1,5 @@
 //=include _base.js
 
-
 function loader(data) {
   data = (!data) ? '' : data;
   this.id = is_string(data) ? data : data.target;
@@ -37,12 +36,11 @@ function loader(data) {
     let name = this.id = 'sys_gen_loader_id',
         size = this.is(this.data.size, 'small'),
         type = this.is(this.data.type, 'circular'),
-        pos = [this.is(this.data.vertical, ''), this.is(this.data.horizontal, '')],
+        pos = [this.is(this.data.pos.vertical, ''), this.is(this.data.pos.horizontal, '')],
         title = (size != 'small') ? this.is(this.data.title, 'Please wait') : '',
         subtext = (size == 'large' && type == 'circular') ? this.is(this.data.subtext, 'This page is loading') : '',
         theme = this.is(this.data.theme, ''),
         _class = pos[0]+' '+pos[1] +' ' + ((type == 'linear') ? 'lin' : '') + ' '+theme;
-
     let small_template = '<div id="'+name+'" class="loader small '+_class+'"><progress class="'+type+'"/></div>',
         large_template = '<div id="'+name+'" class="loader large '+_class+'"><label class="title">'+title+'</label><span class="subtext">'+subtext+'</span> <progress class="'+type+'"/></div>',
         base_template = '<div id="'+name+'" class="loader base '+_class+'"><label class="title">'+title+'</label><progress class="circular"/></div>',
