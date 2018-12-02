@@ -15,9 +15,10 @@ html(lang='en')
         'cards':'Cards',
         'drawer': 'Drawer',
         'dialog': 'Dialog',
+        'progress': 'Progress',
+        'loaders': 'Loaders',
         'grid': 'Grid',
         'tabs': 'Tabs',
-        'loaders':'Loaders',
         'table':'Table',
         'shadow':'Shadow',
         'colors':'Colors',
@@ -26,13 +27,13 @@ html(lang='en')
         'select':'Select',
         'radio':'Radio',
         'switch':'Switch',
-        'range':'Range',
-        'menu':'menu',
-        'lists':'lists',
+        'slider':'Slider',
+        'menu':'Menu',
+        'lists':'Lists',
         'snackbar':'Snackbar',
         'typography':'Typography',
       };
-    ul.list.z-2(style="width:400px")
+    ul
       each name,file in components
         li
           a(href=file+'.html')=name

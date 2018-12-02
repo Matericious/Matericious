@@ -4,7 +4,7 @@ html(lang='en')
   head
     include ../includes/head.pug
     style(type="text/css").
-      body { margin: 0 }
+      body { margin: 0; height: 1000px }
   body
    header.appbar.collapse.z-5.teal
     .wrap
@@ -12,10 +12,14 @@ html(lang='en')
        a.wave.icon
          i.material-icons menu
        label.title Matericious
-    section.right
-      a.wave.icon
-        i.material-icons share
-      a.wave.icon
-        i.material-icons cloud
-      a.wave.icon
-        i.material-icons save
+     section.right
+       a.wave.icon
+         i.material-icons share
+       a.wave.icon
+         i.material-icons cloud
+       a.wave.icon
+         i.material-icons save
+   include /includes/foot.pug
+   script.
+    menu();
+    nesting();

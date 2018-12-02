@@ -1,132 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <title>Dialog Demo</title>
-  <meta charset="utf-8">
-  <meta name="author" content="Matericious">
-  <meta name="description" content="Delicious Material framework">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/matericious@0.8.0/dist/css/matericious.min.css">
-</head>
-
-<body>
-  <h3>Dialog</h3>
-  <div id="message" class="dialog overlay">
-    <header>
-      <label class="title">Dialog header</label>
-    </header>
-    <section>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-    </section>
-    <footer>
-      <a class="blue text close">Ok</a>
-    </footer>
-  </div>
-
-  <div id="decision" class="dialog alert overlay">
-    <section>
-      <p>Discard draft?</p>
-    </section>
-    <footer>
-      <a class="purple text close">Cancel</a>
-      <a class="purple text close">Discard</a>
-    </footer>
-  </div>
-
-  <div id="full" class="dialog full overlay">
-    <header class="appbar z-3 pink">
-      <div class="wrap">
-        <section class="left">
-          <a class="wave icon close"><i class="material-icons">close</i></a>
-          <label class="title">Matericious</label>
+  <head>
+    <title>Dialog demo Demo</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Matericious">
+    <meta name="description" content="Delicious Framework with Material Components.">
+    <meta name="keywords" content="Material Design, Matericious, Framework, Web Components, CSS Grid, Material Ripple, Buttons, Carts, Drawer.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/matericious@0.9.0/dist/css/matericious.min.css">
+    <meta name="og:url" content="https://matericious.com/">
+    <meta name="og:title" content="Dialog demo Demo in Matericious Framework">
+    <meta name="og:description" content="Delicious Framework with Material Components.">
+    <meta name="og:type" content="website">
+    <meta name="og:image" content="https://matericious.com/assets/img/logo_banner.png">
+    <meta name="og:image:type" content="image/png">
+    <meta name="og:image:width" content="1200">
+    <meta name="og:image:height" content="630">
+  </head>
+  <body>
+    <h3>Dialog</h3>
+    <div class="dialog overlay" id="message">
+      <div class="content">
+        <header>
+          <label class="title">Dialog header</label>
+        </header>
+        <section>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </section>
+        <footer><a class="blue text close">Ok</a></footer>
+      </div>
+    </div>
+    <div class="dialog alert overlay" id="decision">
+      <div class="content">
+        <section>
+          <p>Discard draft?</p>
+        </section>
+        <footer><a class="purple text close">Cancel</a><a class="purple text close">Discard</a></footer>
+      </div>
+    </div>
+    <div class="dialog full overlay" id="full">
+      <div class="content">
+        <header class="appbar z-5 pink">
+          <div class="wrap">
+            <section class="left"><a class="wave icon"><i class="material-icons">menu</i></a>
+              <label class="title">Matericious</label>
+            </section>
+            <section class="right"><a class="wave icon"><i class="material-icons">share</i></a></section>
+          </div>
+        </header>
+        <section>
+          <p>Discard draft?</p>
+        </section>
+        <footer><a class="purple text close">Cancel</a><a class="purple text close">Discard</a></footer>
+      </div>
+    </div>
+    <div class="dialog scrollable overlay" id="scrollable">
+      <div class="content">
+        <header>
+          <label class="title">Dialog header</label>
+        </header>
+        <section>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+            survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+            publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown
+            printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+            of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+            has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </p>
+        </section>
+        <footer><a class="purple text close">Decline</a><a class="purple text close">Accept</a></footer>
+      </div>
+    </div>
+    <div class="dialog sheet overlay" id="sheet">
+      <div class="content">
+        <header>
+          <label class="title">Dialog header</label>
+        </header>
+        <section>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+            survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+            publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown
+            printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+            of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+            has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </p>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+            survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+            publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown
+            printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+            of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+            has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </p>
+          <footer><a class="purple text close">Cancel</a><a class="purple text close">Discard</a></footer>
         </section>
       </div>
-    </header>
-    <section>
-      <p>Discard draft?</p>
-    </section>
-    <footer>
-      <a class="purple text close">Cancel</a>
-      <a class="purple text close">Discard</a>
-    </footer>
-  </div>
-
-  <div id="scrollable" class="dialog scrollable overlay">
-    <header>
-      <label class="title">Dialog header</label>
-    </header>
-    <section>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-        survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-        publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-        printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-        has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-      </p>
-    </section>
-    <footer>
-      <a class="purple text close">Decline</a>
-      <a class="purple text close">Accept</a>
-    </footer>
-  </div>
-
-  <div id="sheet" class="dialog sheet overlay">
-    <header>
-      <label class="title">Dialog header</label>
-    </header>
-    <section>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-        survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-        publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-        printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-        has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-      </p>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-        survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-        publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-        printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-        has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-        remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-      </p>
-      <footer>
-        <a class="purple text close">Cancel</a>
-        <a class="purple text close">Discard</a>
-      </footer>
-    </section>
-  </div>
-  <button class="btn purple ripple" onclick="message()">Open Message Dialog</button>
-  <button class="btn red ripple" onclick="decision()">Open Alert Dialog</button>
-  <button class="btn pink ripple" onclick="full()">Open Full Screen Dialog</button>
-  <button class="btn orange ripple" onclick="scrollable()">Open scrollable Dialog</button>
-  <button class="btn green ripple" onclick="sheet()">Open Bottom sheet Dialog</button>
-  <script src="https://cdn.jsdelivr.net/npm/matericious@0.8.0/dist/js/matericious.min.js"></script>
-  <script>
-    function message() {
+    </div>
+    <button class="btn purple ripple" onclick="message()">Open Message Dialog</button>
+    <button class="btn red ripple" onclick="decision()">Open Alert Dialog</button>
+    <button class="btn pink ripple" onclick="full()">Open Full Screen Dialog</button>
+    <button class="btn orange ripple" onclick="scrollable()">Open scrollable Dialog</button>
+    <button class="btn green ripple" onclick="sheet()">Open Bottom sheet Dialog</button>
+    <script src="https://cdn.jsdelivr.net/npm/matericious@0.9.0/dist/js/matericious.min.js"></script>
+    <script>
+      function message() {
       new dialog("#message").open(5000);
-    }
-    function decision() {
+      }
+      function decision() {
       new dialog("#decision").open();
-    }
-    function full() {
+      }
+      function full() {
       new dialog("#full").open();
-    }
-    function scrollable() {
+      }
+      function scrollable() {
       new dialog("#scrollable").open();
-    }
-    function sheet() {
+      }
+      function sheet() {
       new dialog("#sheet").open();
-    }
-  </script>
-</body>
-
+      }
+    </script>
+  </body>
 </html>
