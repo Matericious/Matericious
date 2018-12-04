@@ -10,7 +10,7 @@ $default-break-point: 600px;
 
 @mixin build-break-points() {
   @for $i from 1 through 10 {
-    .break-#{$i} {
+    .br-#{$i} {
       @media screen and (max-width: #{$i+"00px"}) {
         flex-flow: column wrap;
         display: block;
