@@ -230,6 +230,10 @@ body {
             -ms-flex-pack: center;
             justify-content: center;
             fill: currentColor;
+            &:nth-child(2), &.trail{
+              position: absolute;
+              right: -25px
+            }
           }
         }
       }
