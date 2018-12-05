@@ -50,5 +50,19 @@ function drawer() {
           return;
         }
       });
+      call("[drop]", "click", function() {
+        var target = this.getAttribute("drop");
+        var targetID = $get("#"+target);
+        var nav = $get("#"+target+"> nav").offsetHeight;
+        var cur_h = targetID.style.height;
+
+        if(targetID.className.includes("active")){
+          targetID.style.height =  0;
+          $removeClass(targetID, 'active');
+        }else{
+          targetID.style.height = nav+'px'; 
+          $addClass(targetID, 'active');
+        } 
+      });
     }
   };
