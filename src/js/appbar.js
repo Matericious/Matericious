@@ -35,7 +35,7 @@ function nesting() {
       }else{
         icon_title = "";
       }
-      nest_menu_btn.style.display = "block";
+      nest_menu_btn.style.display = "inline-block";
       nest_btn[c].style.display = "none";
       nest_menu.innerHTML +=
         '<li><a href="#">' + nest_btn[c].innerHTML + icon_title + "</a></li>";
