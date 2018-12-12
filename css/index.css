@@ -32,7 +32,6 @@ body {
 #pageTop > .wrap {
   width: 100%;
   height: 500px;
-  background-image: url(../assets/folk-pattern.png);
 }
 
 #pageTop > .wrap:after {
@@ -43,10 +42,8 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  background-image: url(../assets/left.png), url(../assets/right.png);
-  background-position: top left, top right;
-  background-repeat: no-repeat, no-repeat;
-  background-size: auto;
+  background-image: url(../assets/folk-pattern.png);
+  opacity: .2;
 }
 
 #pageTop > .wrap > .appbar {
@@ -142,6 +139,8 @@ body {
   position: relative;
   overflow: hidden;
   transition: all 0.5s;
+  box-shadow: none;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), white, #98e9ec49);
 }
 
 #cards > .wrap .col-33 .card:hover {
@@ -180,39 +179,10 @@ body {
   bottom: 0;
   right: 0;
   opacity: 0.5;
-}
-
-#material {
-  background: linear-gradient(to bottom, transparent, #fff, #e7f7f7);
-}
-
-#material:before {
-  background-image: url(../assets/material.png), url(../assets/bottom.png);
-  background-position: top right, bottom left;
-  background-repeat: no-repeat, no-repeat;
-  background-size: 150px, 100%;
-}
-
-#custom {
-  background: linear-gradient(to bottom, transparent, #fff, #b7e7ff);
-}
-
-#custom:before {
-  background-image: url(../assets/custom.png), url(../assets/bottom.png);
-  background-position: top right, bottom left;
-  background-repeat: no-repeat, no-repeat;
-  background-size: 150px, 100%;
-}
-
-#limitless {
-  background: linear-gradient(to bottom, transparent, #fff, #ebffed);
-}
-
-#limitless:before {
-  background-image: url(../assets/rocket.png), url(../assets/bottom.png);
-  background-position: top right, bottom left;
-  background-repeat: no-repeat, no-repeat;
-  background-size: 150px, 100%;
+  background-image: url(../assets/bottom.png);
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 #about {
@@ -222,7 +192,6 @@ body {
   position: relative;
   top: 100px;
   border-top: 7px solid #fafafa;
-  background-image: url(../assets/paper.png);
   background-position: top right;
 }
 
@@ -235,31 +204,6 @@ body {
   right: 0;
   pointer-events: none;
   background: linear-gradient(to bottom, transparent, white);
-}
-
-#about > .clips {
-  width: 80%;
-  height: 60px;
-  background-size: auto 100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  top: -25px;
-}
-
-#about > .clips > div {
-  width: 15px;
-  height: 40px;
-  background-image: url(../assets/clips.png);
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-  display: inline-block;
-}
-
-#about > .clips > div:nth-child(2) {
-  float: right;
 }
 
 #about > .instructions {
@@ -308,7 +252,7 @@ body {
   height: auto;
   padding: 15px;
   box-sizing: border-box;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), #fff, #98e9ec);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), #fff, #98e9ecb4);
   display: inline-block;
   margin: 5px;
   transition: width 0.1s;
@@ -318,17 +262,6 @@ body {
   transition: all 0.3s;
   z-index: 1;
   overflow: hidden;
-}
-
-#about > .instructions > .wrap > .info:after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  opacity: 0.2;
-  background-image: url(../assets/folk-pattern.png);
 }
 
 #about > .instructions > .wrap > .info:before {
