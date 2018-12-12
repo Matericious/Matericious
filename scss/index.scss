@@ -1,0 +1,497 @@
+/*style*/
+body {
+    margin: 0;
+    width: 100%;
+    background: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #pageTop {
+    width: 100%;
+    height: auto;
+    order: 1;
+    height: auto;
+    min-height: 500px;
+    overflow: hidden;
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(to bottom, transparent, white);
+      z-index: 2;
+    }
+    > .wrap {
+      width: 100%;
+      height: 500px;
+      background-image: url(../assets/folk-pattern.png);
+      &:after {
+        width: 100%;
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-image: url(../assets/left.png), url(../assets/right.png);
+        background-position: top left, top right;
+        background-repeat: no-repeat, no-repeat;
+        background-size: auto;
+      }
+      > .appbar {
+        width: 100%;
+        z-index: 4;
+        background: transparent !important;
+        > .wrap{
+          width: 95%;
+          margin: 0px auto;
+        }
+        .title {
+          display: none;
+        }
+        .icon svg {
+          width: 25px;
+          height: 25px;
+          vertical-align: middle;
+          margin-top: 9px;
+        }
+
+        &.scroll_down {
+          width: 100% !important;
+          position: fixed;
+          background: rgba(255, 255, 255, .9) !important;
+          background-image: url(../assets/folk-pattern.png) !important;
+          -webkit-box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.1),
+            0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.1),
+            0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+        }
+      }
+      > .intro {
+        width: auto;
+        height: auto;
+        margin: 0px auto;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 3 !important;
+        .logo {
+          width: 200px;
+          height: 100px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          -webkit-filter: contrast(200%); 
+          filter: contrast(200%);
+          opacity: 0.6;
+          fill: green !important;
+        }
+        .title {
+          font-family: "Comfortaa", cursive;
+          font-weight: bold;
+        }
+        .subtext {
+          width: 400px;
+          font-family: "Gloria Hallelujah", cursive;
+          line-height: 30px;
+          position: relative;
+          top: -30px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        button {
+          position: relative;
+          top: -40px;
+        }
+      }
+    }
+  }
+  
+  #cards {
+    width: 100%;
+    height: auto;
+    order: 2;
+    > .wrap {
+      width: 85%;
+      margin: 0px auto;
+      position: relative;
+      .col-33 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .card {
+          width: 95%;
+          height: 250px;
+          max-width: 350px;
+          border-radius: 20px;
+          box-sizing: border-box;
+          padding: 25px 10px;
+          position: relative;
+          overflow: hidden;
+          transition: all 0.5s;
+          &:hover {
+            transform: scale(1.1);
+            background: #fff !important;
+          }
+          .h-6 {
+            display: block;
+            font-family: "Rubik", sans-serif;
+            position: relative;
+            top: 25px;
+            line-height: 25px;
+          }
+          a {
+            display: block;
+            position: absolute;
+            bottom: 15px;
+            padding: 10px;
+            font-weight: bold;
+            padding-left: 0px;
+            cursor: pointer;
+            i {
+              vertical-align: middle;
+              font-size: 18px;
+            }
+          }
+          &:before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+  
+  #material {
+    background: linear-gradient(to bottom, transparent, #fff, #e7f7f7);
+    &:before {
+      background-image: url(../assets/material.png), url(../assets/bottom.png);
+      background-position: top right, bottom left;
+      background-repeat: no-repeat, no-repeat;
+      background-size: 150px, 100%;
+    }
+  }
+  
+  #custom {
+    background: linear-gradient(to bottom, transparent, #fff, #b7e7ff);
+    &:before {
+      background-image: url(../assets/custom.png), url(../assets/bottom.png);
+      background-position: top right, bottom left;
+      background-repeat: no-repeat, no-repeat;
+      background-size: 150px, 100%;
+    }
+  }
+  
+  #limitless {
+    background: linear-gradient(to bottom, transparent, #fff, #ebffed);
+    &:before {
+      background-image: url(../assets/rocket.png), url(../assets/bottom.png);
+      background-position: top right, bottom left;
+      background-repeat: no-repeat, no-repeat;
+      background-size: 150px, 100%;
+    }
+  }
+  
+  #about {
+    width: 100%;
+    height: auto;
+    order: 3;
+    position: relative;
+    top: 100px;
+    border-top: 7px solid #fafafa;
+    background-image: url(../assets/paper.png);
+    background-position: top right;
+    &:before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      pointer-events: none;
+      background: linear-gradient(to bottom, transparent, white);
+    }
+    > .clips {
+      width: 80%;
+      height: 60px;
+      background-size: auto 100%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      top: -25px;
+      > div {
+        width: 15px;
+        height: 40px;
+        background-image: url(../assets/clips.png);
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        display: inline-block;
+        &:nth-child(2) {
+          float: right;
+        }
+      }
+    }
+    > .instructions {
+      width: calc(100% - 200px);
+      min-height: 200px;
+      margin: 0px auto;
+      padding-top: 25px;
+      padding-bottom: 30px;
+      box-sizing: border-box;
+      line-height: 0px;
+      text-align: center;
+      > .h-4 {
+        font-size: 40px;
+        font-family: "Comfortaa", cursive;
+        font-weight: bold;
+        position: relative;
+      }
+      > .h-3 {
+        width: 100px;
+        height: 100px;
+        margin: 0px auto;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), #04dae1);
+        border-radius: 50%;
+        i {
+          font-size: 60px;
+          position: relative;
+          top: 16px;
+          color: #fff;
+        }
+      }
+      > .wrap {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        > .info {
+          width: calc(100% / 3);
+          height: auto;
+          padding: 15px;
+          box-sizing: border-box;
+          background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.1),
+            #fff,
+            #98e9ec
+          );
+          display: inline-block;
+          margin: 5px;
+          transition: width 0.1s;
+          text-align: left;
+          position: relative;
+          border-radius: 20px;
+          transition: all 0.3s;
+          z-index: 1;
+          overflow: hidden;
+          &:after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0.2;
+            background-image: url(../assets/folk-pattern.png);
+          }
+          &:before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0.7;
+            background-image: url(../assets/bottom.png);
+            background-position: bottom left;
+            background-repeat: no-repeat;
+            background-size: 100%;
+          }
+          svg {
+            width: 50px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 50%;
+            padding: 10px;
+          }
+          .h-5 {
+            position: relative;
+          }
+          .h-6 {
+            position: relative;
+          }
+  
+          .body-1 {
+            line-height: 20px;
+            color: #222 !important;
+          }
+          .npm {
+            max-width: 100%;
+            text-transform: lowercase;
+            background: #fafafa;
+            padding: 10px 15px;
+            overflow-x: scroll;
+            margin: 5px auto;
+            border-radius: 6px;
+            &::-webkit-scrollbar {
+              height: 0px;
+            }
+            &::-webkit-scrollbar-thumb {
+              background: #222;
+              border-radius: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  footer {
+    width: 100%;
+    height: 60px;
+    order: 4;
+    position: relative;
+    top: 120px;
+    background: transparent;
+    > .wrap {
+      width: 85%;
+      height: 100%;
+      line-height: 60px;
+      margin: 0px auto;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      color: rgba(0, 0, 0, 0.7);
+      font-family: "Roboto", san-serif;
+      > div {
+        &:nth-child(1) {
+          width: 50%;
+          height: 100%;
+          display: inline-block;
+        }
+        &:nth-child(2) {
+          width: 50%;
+          height: 100%;
+          float: right;
+          text-align: right;
+        }
+        a {
+          padding: 10px;
+          cursor: pointer;
+          text-decoration: none;
+          margin-left: 5px;
+          &:nth-child(1) {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    #pageTop {
+      height: auto;
+      min-height: 300px;
+      > .wrap:after {
+        width: 100%;
+        height: 100%;
+        background-image: url(../assets/left.png);
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-size: auto;
+      }
+      > .wrap{
+        > .appbar .title{
+          display: inline-block;
+          font-weight: bold;
+        }
+      }
+    }
+  
+    #pageTop > .wrap > .intro {
+      top: 80px;
+      background: rgba(255, 255, 255, 0.8);
+      width: 170px;
+      height: 170px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border-radius: 50%;
+  
+      .logo {
+        width: 120px;
+        height: 120px;
+        margin-top: 32px;
+      }
+      button,
+      .title,
+      .subtext {
+        display: none;
+      }
+    }
+  
+    #cards > .wrap {
+      width: 90%;
+      > .row{
+        .card {
+          width: 100%;
+          max-width: 100%;
+          margin: 20px auto;
+        }
+      }
+    }
+  
+    #material {
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.6),
+        #fff,
+        #e7f7f7
+      );
+    }
+  
+    #cards > .wrap > .row .card:hover {
+      transform: scale(1);
+    }
+  
+    #about {
+      background-image: url(../assets/paper.png);
+      background-position: top right;
+      > .instructions {
+        width: 96%;
+        > .wrap {
+          display: block;
+          > .info {
+            width: 100%;
+            display: block;
+            margin: 10px 0px;
+          }
+        }
+      }
+    }
+  
+    footer > .wrap {
+      border: none;
+      > div {
+        width: 100% !important;
+        display: block;
+        background: #fff;
+        text-align: center !important;
+        &:nth-child(2) {
+          border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+  
