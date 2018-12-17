@@ -113,8 +113,8 @@ $font: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
     }
   }
   &.txt-left{
-    text-indent: 50xp;
     padding-right: 0px;
+    margin-right: 10px;
     > input{
       left: calc(100% - 30px);
       position: absolute;

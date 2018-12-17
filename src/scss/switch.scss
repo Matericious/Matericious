@@ -13,6 +13,7 @@ $font: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
   font-family: $font;
   font-size: 16px;
   line-height: 1.5;
+  margin-right: 10px;
   * {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -130,6 +131,7 @@ $font: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
   &.txt-left{
     padding-left: 6px;
     padding-right: 0px;
+    margin-right: 10px;
     > input{
       left: calc(100% - 45px);
       position: absolute;

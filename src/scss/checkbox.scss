@@ -134,12 +134,16 @@ $main-color: color(cyan, base);
   }
   &.txt-left{
     padding-right: 0px;
-    > input{
-      left: calc(100% - 30px);
+    position: relative;
+    margin-right: 10px;
+    &:first-child{
+      margin-left: 0px;
       position: absolute;
     }
+    > input{
+      left: calc(100% - 30px);
+    }
     > span{
-      backgruond: red;
       &::after{
         left: auto;
         right: 6px;
