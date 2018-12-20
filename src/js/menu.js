@@ -22,7 +22,6 @@ function openMenu() {
       menu_size = [targetMenu.offsetWidth, targetMenu.offsetHeight];
     if (!(default_class.includes("right")) && (pos[1] + menu_size[0]) > w) {
       $addClass(targetMenu, "right");
-      //  alert("adding class");
     } else if ((pos[1] - menu_size[0]) > w) {
       //menu cannot go right
     }
