@@ -2,11 +2,10 @@
 
 function BottomNavigation() {
   call(".bottomNav > [nav-id]", "click", function() {
-    var target = this.getAttribute("nav-id"),
-      btn = $get("[nav-id='"+target+"']");
-  
-    var divs = $all(".bottomNav > [nav-id]");
-    var contents = $all("[nav-content]");
+    let target = this.getAttribute("nav-id"),
+      btn = $get("[nav-id='"+target+"']"),
+      divs = $all(".bottomNav > [nav-id]"),
+      contents = $all("[nav-content]");
     
     [].forEach.call(divs, function(el) {
        $removeClass(el, 'active');

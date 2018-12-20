@@ -2,14 +2,14 @@
 
 function ExpansionPanel() {
   call(".panel > [expan]", "click", function() {
-    var target = this.getAttribute("expan"),
+    let target = this.getAttribute("expan"),
         details = $get("#"+target),
         panel = $get(".panel > [expan="+target+"]"),
         contentHeight = $get("#"+target+" > .content").offsetHeight,
         icon = $get("[expan="+target+"] > i"),
         cusIcon = (!icon.getAttribute("cus-icon")) ? 'keyboard_arrow_up' : icon.getAttribute("cus-icon");
     
-    var icons = ['keyboard_arrow_down', cusIcon];
+    let icons = ['keyboard_arrow_down', cusIcon];
     
     if(panel.className.includes("active")){
       icon.innerHTML = icons[0];
