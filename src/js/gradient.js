@@ -313,8 +313,7 @@ let Colors = {
 };
 
 function gradient() {
-	document.querySelectorAll("[gradient]").forEach(function (divs) {
-		divs.forEach(function(elem) {
+	document.querySelectorAll("[gradient]").forEach(function (elem) {
 			let gradientType = (!elem.getAttribute("gradient-type")) ? 'linear, to right' : elem.getAttribute("gradient-type"),
 				gradient_type = (gradientType.split(",")[0]) ? gradientType.split(",")[0] : '',
 				gradient_pos = (gradientType.split(",")[1]) ? gradientType.split(",")[1] + ", " : '';
@@ -326,7 +325,7 @@ function gradient() {
 				} else {
 					let color_array = data_colors[color].split("-");
 					try { 
-            /*If something go wrong*/
+            /* If something go wrong */
 						data_colors[color] = getColor(color_array[0], (color_array[1] != null) ? color_array[1] : null, (color_array[2] != null) ? color_array[2] : null).replace(/#/g, "");
 					} catch (err) {}
 				}
@@ -337,7 +336,6 @@ function gradient() {
 			gradient = gradient.slice(0, gradient.length - 2);
 			gradient += ")";
 			elem.style.background = gradient;
-		})
 	});
 }
 
