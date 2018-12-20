@@ -313,43 +313,34 @@ let Colors = {
 };
 
 function gradient() {
-  document.querySelectorAll("[gradient]").forEach(function() {
-    var divs = document.querySelectorAll("[gradient]");
-    for (var c = 0; c < divs.length; c++) {
-      var gradientType = (!divs[c].getAttribute("gradient-type"))
-                     ? 'linear, to right'
-                     : divs[c].getAttribute("gradient-type"),
-          gradient_type = (gradientType.split(",")[0]) ? gradientType.split(",")[0] : '',
-          gradient_pos = (gradientType.split(",")[1]) ? gradientType.split(",")[1] + ", " : '';
-      var gradient = gradient_type+"-gradient("+gradient_pos;
-      var data_colors = divs[c].getAttribute("gradient").split(" ");
-      for(var color in data_colors){
-        if(data_colors[color].startsWith("#", 0)){
-          data_colors[color] = data_colors[color].replace(/#/g, "");
-        }else{
-          var color_array = data_colors[color].split("-");
-          try{/*If something go wrong*/
-            data_colors[color] = getColor(
-                              color_array[0],
-                              (color_array[1] != null) ? color_array[1] : null,
-                              (color_array[2] != null) ? color_array[2] : null)
-            .replace(/#/g, "");
-          }catch(err) {}
-        }
-      }
-      for (var i = 0; i < data_colors.length; i++){
-        gradient +=
-          "rgba(" +
-          hexToRgb(data_colors[i]) +
-          ", 1), ";
-      }
-      gradient = gradient.slice(0, gradient.length - 2);
-      gradient += ")";
-      divs[c].style.background = gradient;
-    }
-  });
+	document.querySelectorAll("[gradient]").forEach(function (divs) {
+		divs.forEach(function(elem) {
+			let gradientType = (!elem.getAttribute("gradient-type")) ? 'linear, to right' : elem.getAttribute("gradient-type"),
+				gradient_type = (gradientType.split(",")[0]) ? gradientType.split(",")[0] : '',
+				gradient_pos = (gradientType.split(",")[1]) ? gradientType.split(",")[1] + ", " : '';
+			let gradient = `${gradient_type}-gradient(${gradient_pos}`;
+			let data_colors = elem.getAttribute("gradient").split(" ");
+			for (let color in data_colors) {
+				if (data_colors[color].startsWith("#", 0)) {
+					data_colors[color] = data_colors[color].replace(/#/g, "");
+				} else {
+					let color_array = data_colors[color].split("-");
+					try { 
+            /*If something go wrong*/
+						data_colors[color] = getColor(color_array[0], (color_array[1] != null) ? color_array[1] : null, (color_array[2] != null) ? color_array[2] : null).replace(/#/g, "");
+					} catch (err) {}
+				}
+			}
+			data_colors.forEach(function(color) {
+				gradient += `rgba(${hexToRgb(color)}, 1), `;
+			})
+			gradient = gradient.slice(0, gradient.length - 2);
+			gradient += ")";
+			elem.style.background = gradient;
+		})
+	});
 }
 
-function getColor(color, rang, shade){
-  return (shade != null) ? Colors[color][rang][shade] : Colors[color].base;
+function getColor(color, rang, shade) {
+	return (shade != null) ? Colors[color][rang][shade] : Colors[color].base;
 }
