@@ -5,6 +5,7 @@ $font: "Roboto", san-serif;
     overflow: auto;
     white-space: nowrap;
     position: relative;
+    user-select: none;
     &::-webkit-scrollbar {
       width: 4px;
       height: 0px;
