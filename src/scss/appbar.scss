@@ -3,7 +3,7 @@
 .appbar {
   width: 100%;
   height: 65px;
-  line-height: 65px;
+  line-height: 62px;
   overflow: hidden;
   color: #000;
   &.fixed,
@@ -110,7 +110,7 @@
           > i {
             font-size: 24px;
             position: relative;
-            top: 0.5em;
+            top: 0.53em;
           }
           > svg{
             width: 24px;
@@ -124,11 +124,13 @@
         }
       }
       > .title {
-        font-size: 16px;
         color: inherit;
         vertical-align: middle;
         font-family: $font;
-        text-indent: 10px;
+        letter-spacing: 0.15px;
+        font-weight: 500;
+        font-size: 20px;
+        text-transform: capitalize;
       }
     }
     > .left {
