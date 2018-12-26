@@ -122,7 +122,7 @@ $primary_color: #6200ee;
       }
       &.has-value{
         & ~ .floating-label {
-          top: -7px;
+          top: -10px;
           left: 10px;
           font-size: 12px;
           will-change: top, font-size, color;
