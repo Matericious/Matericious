@@ -1,0 +1,31 @@
+options:
+  merge-default-rules: false
+  formatter: stylish
+  max-warnings: 10
+files:
+  include: src/scss/**/*
+rules:
+  brace-style:
+  - 1
+  - style: 1tbs
+  - allow-single-line: true
+  mixins-before-declarations:
+  - 2
+  - exclude: ['breakpoint', 'mq']
+  hex-notation:
+  - 2
+  - style: lowercase
+  indentation:
+  - 2
+  - size: 2
+  variable-for-property:
+  - 2
+  - properties: font-family
+  extends-before-mixins: 2
+  extends-before-declarations: 2
+  placeholder-in-extend: 2
+  space-before-colon: 1
+  space-after-colon: 1
+  space-before-brace: 1
+  space-before-bang: 1
+  leading-zero: 1
