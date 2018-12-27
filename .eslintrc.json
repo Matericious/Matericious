@@ -11,11 +11,16 @@
 			"allowTemplateLiterals": true
 			}
 		],
+		"no-multiple-empty-lines": 1,
 		"comma-spacing": 2,
 		"semi-style": 2,
 		"no-multi-spaces": 1,
 		"space-infix-ops": 1,
+		"no-shadow": 2,
+		"capitalized-comments": 1,
+		"comma-dangle": 1,
 		"one-var": 1,
+		"one-var-declaration-per-line": 1,
 		"no-var": 2,
 		"no-unused-vars": 0,
 		"no-undef": 0,
@@ -36,6 +41,8 @@
 		"template-tag-spacing": 1,
 		"object-curly-spacing": 1,
 		"no-mixed-spaces-and-tabs": 1,
+		"no-tabs": 1,
+		"yoda": 2,
 		"brace-style": 2,
 		"semi": 2
 	}
