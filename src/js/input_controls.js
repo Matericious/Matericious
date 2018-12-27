@@ -1,3 +1,5 @@
 //=include _base.js
 
-$all('.indeterminate > input').forEach((item) => item.indeterminate = true);
+function input_controls(){
+  $all('.indeterminate > input').forEach((item) => item.indeterminate = true);
+}
