@@ -2,17 +2,22 @@
 
 function BottomNavigation() {
   call(".bottomNav > [nav-id]", "click", function() {
-    let target = this.getAttribute("nav-id"),
+    var target = this.getAttribute("nav-id"),
       btn = $get("[nav-id='"+target+"']"),
-      divs = $all(".bottomNav > [nav-id]"),
-      contents = $all("[nav-content]");
+      targetContent = $get("[nav-content='"+target+"']");
+  
+    var divs = $all(".bottomNav > [nav-id]");
+    var contents = $all("[nav-content]");
     
     [].forEach.call(divs, function(el) {
        $removeClass(el, 'active');
     });
     
-    [].forEach.call(contents, function(el) { $removeClass(el, 'active'); });
+    [].forEach.call(contents, function(el) { 
+      $removeClass(el, 'active'); 
+    });
     
     $addClass(btn, 'active');
+    $addClass(targetContent, 'active');
   });
 }
