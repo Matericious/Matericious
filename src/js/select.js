@@ -6,7 +6,7 @@ function select() {
 }
 
 function input_select() {
-  document.querySelectorAll(".select-field").forEach(function (elem) {
+  $all(".select-field").forEach(function (elem) {
     let select = elem.getElementsByTagName('select')[0];
     if (select.value != " ") {
       $addClass(select, "has-value");
