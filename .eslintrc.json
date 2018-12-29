@@ -11,6 +11,21 @@
 			"allowTemplateLiterals": true
 			}
 		],
+		"semi": [2, "never"],
+		"dot-location": [2, "property"],
+		"camelcase": 2,
+		"curly": 2,
+		"no-alert": 2,
+		"no-else-return": 2,
+		"no-empty-function": 2,
+		"no-iterator": 2,
+		"no-loop-func": 2,
+		"no-labels": 2,
+		"accessor-pairs": 2,
+		"array-callback-return": 2,
+		"block-scoped-var": 2,
+		"complexity": 2,
+		"no-floating-decimal": 2,
 		"no-multiple-empty-lines": 1,
 		"comma-spacing": 2,
 		"semi-style": 2,
@@ -30,8 +45,11 @@
 		"keyword-spacing": 1,
 		"arrow-spacing": 1,
 		"no-useless-rename": 2,
+		"no-useless-concat": 2,
+		"no-useless-return": 2,
 		"no-trailing-spaces": 1,
 		"no-new-symbol": 2,
+		"no-new-func": 2,
 		"no-duplicate-imports": 2,
 		"no-confusing-arrow": 1,
 		"no-inline-comments": 1,
@@ -43,7 +61,6 @@
 		"no-mixed-spaces-and-tabs": 1,
 		"no-tabs": 1,
 		"yoda": 2,
-		"brace-style": 2,
-		"semi": 2
+		"brace-style": 2
 	}
 }

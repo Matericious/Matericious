@@ -5,6 +5,8 @@ options:
 files:
   include: src/scss/**/*
 rules:
+  attribute-quotes: 1
+  clean-import-paths: 1
   brace-style:
   - 1
   - style: 1tbs
