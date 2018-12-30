@@ -1,23 +1,26 @@
 const {src, task, dest, watch, series} = require("gulp"),
-path = require("path"),
-sass = require("gulp-sass"),
-autoprefixer = require("gulp-autoprefixer"),
-sourcemaps = require("gulp-sourcemaps"),
-header = require("gulp-header-comment"),
-strip = require("gulp-strip-comments"),
-uglify = require("gulp-uglify"),
-concat = require("gulp-concat"),
-babel = require("gulp-babel"),
-include = require("gulp-include"),
-sasslint = require("gulp-sass-lint"),
-eslint = require("gulp-eslint")
+  autoprefixer = require("gulp-autoprefixer"),
+  babel = require("gulp-babel"),
+  concat = require("gulp-concat"),
+  eslint = require("gulp-eslint"),
+  header = require("gulp-header-comment"),
+  include = require("gulp-include"),
+  path = require("path"),
+  sass = require("gulp-sass"),
+  sasslint = require("gulp-sass-lint"),
+  sourcemaps = require("gulp-sourcemaps"),
+  strip = require("gulp-strip-comments"),
+  uglify = require("gulp-uglify")
 
-let autoprefixerOptions = {
-  browsers: "> 5%, last 2 versions, Firefox ESR",
-  cascade: false
-},
-dirSass = "src/scss/**/*.scss",
-dirEs = ["src/js/_base.js", "src/js/*.js"]
+const autoprefixerOptions = {
+    browsers: "> 5%, last 2 versions, Firefox ESR",
+    cascade: false
+  },
+  dirEs = ["src/js/_base.js", "src/js/*.js"],
+  dirSass = "src/scss/**/*.scss",
+  distCss = "dist/css/",
+  distJs = "dist/js/",
+  fileInfo = "src/info.txt"
 
 task("lintsass", (cb) => {
   return src(dirSass)
@@ -40,7 +43,7 @@ task("compilecss", (cb) => {
         cb(err)
       }))
     .pipe(autoprefixer(autoprefixerOptions))
-    .pipe(header({file: path.join(__dirname, "src/info.txt")}))
+    .pipe(header({file: path.join(__dirname, fileInfo)}))
     .pipe(dest("css/"))
 })
 
@@ -49,13 +52,13 @@ task("combinecss", (cb) => {
     .pipe(concat("matericious.css"))
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: "expanded"})
-      .on("error", function(err) {
+      .on("error", (err) => {
         cb(err)
       }))
     .pipe(autoprefixer(autoprefixerOptions))
-    .pipe(header({file: path.join(__dirname, "src/info.txt")}))
+    .pipe(header({file: path.join(__dirname, fileInfo)}))
     .pipe(sourcemaps.write("."))
-    .pipe(dest("dist/css/"))
+    .pipe(dest(distCss))
 })
 
 task("mincss", (cb) => {
@@ -63,13 +66,13 @@ task("mincss", (cb) => {
     .pipe(concat("matericious.min.css"))
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: "compressed"})
-      .on("error", function (err) {
+      .on("error", (err) => {
         cb(err)
       }))
     .pipe(autoprefixer(autoprefixerOptions))
-    .pipe(header({file: path.join(__dirname, "src/info.txt")}))
+    .pipe(header({file: path.join(__dirname, fileInfo)}))
     .pipe(sourcemaps.write("."))
-    .pipe(dest("dist/css/"))
+    .pipe(dest(distCss))
 })
 
 task("sass:watch", () => {
@@ -81,7 +84,7 @@ task("compilejs", () => {
     .pipe(include())
     .pipe(babel({presets: ["@babel/env"]}))
     .pipe(strip())
-    .pipe(header({file: path.join(__dirname, "src/info.txt")}))
+    .pipe(header({file: path.join(__dirname, fileInfo)}))
     .pipe(dest("js"))
 })
 
@@ -91,9 +94,9 @@ task("combinejs", () => {
     .pipe(concat("matericious.js"))
     .pipe(babel({presets: ["@babel/env"]}))
     .pipe(strip())
-    .pipe(header({file: path.join(__dirname, "src/info.txt")}))
+    .pipe(header({file: path.join(__dirname, fileInfo)}))
     .pipe(sourcemaps.write("."))
-    .pipe(dest("dist/js/"))
+    .pipe(dest(distJs))
 })
 
 task("minjs", () => {
@@ -102,11 +105,12 @@ task("minjs", () => {
     .pipe(concat("matericious.min.js"))
     .pipe(babel({presets: ["@babel/env"]}))
     .pipe(uglify())
-    .pipe(header({file: path.join(__dirname, "src/info.txt")}))
+    .pipe(header({file: path.join(__dirname, fileInfo)}))
     .pipe(sourcemaps.write("."))
-    .pipe(dest("dist/js/"))
+    .pipe(dest(distJs))
 })
 
+task("lint", series(["lintsass", "lintjs"]))
 task("js", series(["compilejs", "combinejs", "minjs"]))
 task("css", series(["compilecss", "combinecss", "mincss"]))
 task("default", series(["css", "js"]))
