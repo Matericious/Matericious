@@ -1,5 +1,5 @@
 /**
- * Matericious v0.9.0 (https://matericious.com/)
+ * Matericious v0.10.0 (https://matericious.com/)
  * Copyright 2018 Matericious Authors
  * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
  */
@@ -16,10 +16,9 @@ function ready(callback) {
 
 function call($class, $event, $func) {
   var elems = document.querySelectorAll($class);
-
-  for (var i = 0; i < elems.length; ++i) {
-    addEvent(elems[i], $event, $func);
-  }
+  elems.forEach(function (elem) {
+    addEvent(elem, $event, $func);
+  });
 }
 
 function $handle(callback) {
@@ -29,7 +28,7 @@ function $handle(callback) {
 }
 
 function $getChild(parent, child, n) {
-  return document.querySelectorAll(parent + ' ' + child)[n];
+  return document.querySelectorAll("".concat(parent, " ").concat(child))[n];
 }
 
 function $get(e) {
@@ -45,22 +44,22 @@ function hexToRgb(hex) {
   var r = bigint >> 16 & 255;
   var g = bigint >> 8 & 255;
   var b = bigint & 255;
-  return r + "," + g + "," + b;
+  return "".concat(r, ",").concat(g, ",").concat(b);
 }
 
 function hasClass(el, className) {
   $handle(function () {
-    if (el.classList) return el.classList.contains(className);else return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
+    if (el.classList) return el.classList.contains(className);else return !!el.className.match(new RegExp("(\\s|^)".concat(className, "(\\s|$)")));
   });
 }
 
 function $addClass(el, className) {
-  if (el.classList) el.classList.add(className);else if (!hasClass(el, className)) el.className += " " + className;
+  if (el.classList) el.classList.add(className);else if (!hasClass(el, className)) el.className += " ".concat(className);
 }
 
 function $removeClass(el, className) {
   if (el.classList) el.classList.remove(className);else if (hasClass(el, className)) {
-    var reg = new RegExp("(\\s|^)" + className + "(\\s|$)");
+    var reg = new RegExp("(\\s|^)".concat(className, "(\\s|$)"));
     el.className = el.className.replace(reg, " ");
   }
 }
@@ -85,6 +84,18 @@ function is_string(data) {
   }
 }
 
+Element.prototype.remove = function () {
+  this.parentElement.removeChild(this);
+};
+
+NodeList.prototype.remove = HTMLCollection.prototype.remove = function () {
+  for (var i = this.length - 1; i >= 0; i--) {
+    if (this[i] && this[i].parentElement) {
+      this[i].parentElement.removeChild(this[i]);
+    }
+  }
+};
+
 function ripple() {
   call(".ripple", "mousedown", rippleEffect);
 }
@@ -98,7 +109,7 @@ function rippleEffect(event) {
   rippleDiv.setAttribute("class", "rippleWave");
   var ripple = $get(".rippleWave");
   if (!elemPos || elemPos === "static") $self.style.position = "relative";
-  var rippleDivStyle = "width: " + diameter + "px; height: " + diameter + "px; left: " + (pos[1] - diameter / 2) + "px;top: " + (pos[0] - diameter / 2) + "px;";
+  var rippleDivStyle = "width: ".concat(diameter, "px; \n  height: ").concat(diameter, "px; \n  left: ").concat(pos[1] - diameter / 2, "px;\n  top: ").concat(pos[0] - diameter / 2, "px;");
   rippleDiv.style = rippleDivStyle;
   $self.appendChild(rippleDiv);
   window.setTimeout(function () {

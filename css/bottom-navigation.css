@@ -1,0 +1,81 @@
+/**
+ * Matericious v0.10.0 (https://matericious.com/)
+ * Copyright 2018 Matericious Authors
+ * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
+ */
+
+[nav-content] {
+  display: none;
+}
+
+[nav-content].active {
+  display: yes;
+}
+
+.bottomNav {
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  bottom: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.bottomNav.fill > [nav-id] {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 25%;
+}
+
+.bottomNav > [nav-id] {
+  min-width: 120px;
+  height: 100%;
+  margin: 0;
+  border-radius: 0;
+  line-height: 25px;
+  text-align: center;
+  text-align: center;
+  padding: 8px;
+  background: transparent;
+  border: none;
+  color: #757575;
+}
+
+.bottomNav > [nav-id] * {
+  display: block;
+}
+
+.bottomNav > [nav-id].active {
+  color: inherit;
+}
+
+.bottomNav > [nav-id] > i {
+  font-size: 25px;
+  text-align: center;
+}
+
+.bottomNav.no-label > button {
+  min-width: 80px;
+}
+
+.bottomNav.no-label > button > span {
+  height: 0px;
+  overflow: hidden;
+  -webkit-transition: height .2s;
+  transition: height .2s;
+}
+
+.bottomNav.no-label > button.active > span {
+  height: 20px;
+}

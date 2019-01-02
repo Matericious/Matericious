@@ -1,5 +1,5 @@
 /**
- * Matericious v0.9.0 (https://matericious.com/)
+ * Matericious v0.10.0 (https://matericious.com/)
  * Copyright 2018 Matericious Authors
  * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
  */
@@ -16,10 +16,9 @@ function ready(callback) {
 
 function call($class, $event, $func) {
   var elems = document.querySelectorAll($class);
-
-  for (var i = 0; i < elems.length; ++i) {
-    addEvent(elems[i], $event, $func);
-  }
+  elems.forEach(function (elem) {
+    addEvent(elem, $event, $func);
+  });
 }
 
 function $handle(callback) {
@@ -29,7 +28,7 @@ function $handle(callback) {
 }
 
 function $getChild(parent, child, n) {
-  return document.querySelectorAll(parent + ' ' + child)[n];
+  return document.querySelectorAll("".concat(parent, " ").concat(child))[n];
 }
 
 function $get(e) {
@@ -45,22 +44,22 @@ function hexToRgb(hex) {
   var r = bigint >> 16 & 255;
   var g = bigint >> 8 & 255;
   var b = bigint & 255;
-  return r + "," + g + "," + b;
+  return "".concat(r, ",").concat(g, ",").concat(b);
 }
 
 function hasClass(el, className) {
   $handle(function () {
-    if (el.classList) return el.classList.contains(className);else return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
+    if (el.classList) return el.classList.contains(className);else return !!el.className.match(new RegExp("(\\s|^)".concat(className, "(\\s|$)")));
   });
 }
 
 function $addClass(el, className) {
-  if (el.classList) el.classList.add(className);else if (!hasClass(el, className)) el.className += " " + className;
+  if (el.classList) el.classList.add(className);else if (!hasClass(el, className)) el.className += " ".concat(className);
 }
 
 function $removeClass(el, className) {
   if (el.classList) el.classList.remove(className);else if (hasClass(el, className)) {
-    var reg = new RegExp("(\\s|^)" + className + "(\\s|$)");
+    var reg = new RegExp("(\\s|^)".concat(className, "(\\s|$)"));
     el.className = el.className.replace(reg, " ");
   }
 }
@@ -85,19 +84,28 @@ function is_string(data) {
   }
 }
 
+Element.prototype.remove = function () {
+  this.parentElement.removeChild(this);
+};
+
+NodeList.prototype.remove = HTMLCollection.prototype.remove = function () {
+  for (var i = this.length - 1; i >= 0; i--) {
+    if (this[i] && this[i].parentElement) {
+      this[i].parentElement.removeChild(this[i]);
+    }
+  }
+};
+
 function tabs(event) {
   var activePos = $get(".tabs-header .active"),
       border = $get(".border"),
       tab = $get(".tab.active");
 
   function changePos() {
-    var activePos = $get(".tabs-header .active"),
-        border = $get(".border"),
-        tab = $get(".tab.active");
-    var border = $get(".border");
+    var activePos = $get(".tabs-header .active");
     var pos = [activePos.offsetTop, activePos.offsetLeft],
         size = [activePos.offsetWidth, activePos.offsetHeight];
-    border.style = "left: " + pos[1] + "px; width: " + size[0] + "px";
+    border.style = "left: ".concat(pos[1], "px; width: ").concat(size[0], "px");
     var scrollH = $get('.tabs-header');
     scrollH.scrollLeft = pos[1];
   }
@@ -107,24 +115,20 @@ function tabs(event) {
 
   function changeTab(tabID) {
     var tab = $get('.tabs-content .active');
-    var newTab = $get('.tabs-content [tab-id="' + tabID + '"]');
+    var newTab = $get(".tabs-content [tab-id=\"".concat(tabID, "\"]"));
     var tabs = $all(".tabs-content .tab");
-
-    for (var c = 0; c < tabs.length; c++) {
-      $removeClass(tabs[c], "active");
-    }
-
+    tabs.forEach(function (tab) {
+      $removeClass(tab, "active");
+    });
     $addClass(newTab, 'active');
   }
 
   function tabClick(event) {
     var tabID = this.getAttribute("tab-id");
     var tabs = $all(".tabs-header a");
-
-    for (var c = 0; c < tabs.length; c++) {
-      $removeClass(tabs[c], "active");
-    }
-
+    tabs.forEach(function (tab) {
+      $removeClass(tab, "active");
+    });
     $addClass(this, "active");
     changePos();
     changeTab(tabID);

@@ -1,5 +1,5 @@
 /**
- * Matericious v0.9.0 (https://matericious.com/)
+ * Matericious v0.10.0 (https://matericious.com/)
  * Copyright 2018 Matericious Authors
  * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
  */
@@ -519,14 +519,14 @@
 }
 
 @media screen and (max-width: 100px) {
-  .break-1 {
+  .br-1 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-flow: column wrap;
     flex-flow: column wrap;
     display: block;
   }
-  .break-1 > * {
+  .br-1 > * {
     -webkit-box-flex: 0;
     -ms-flex: 0;
     flex: 0;
@@ -534,14 +534,14 @@
 }
 
 @media screen and (max-width: 200px) {
-  .break-2 {
+  .br-2 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-flow: column wrap;
     flex-flow: column wrap;
     display: block;
   }
-  .break-2 > * {
+  .br-2 > * {
     -webkit-box-flex: 0;
     -ms-flex: 0;
     flex: 0;
@@ -549,14 +549,14 @@
 }
 
 @media screen and (max-width: 300px) {
-  .break-3 {
+  .br-3 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-flow: column wrap;
     flex-flow: column wrap;
     display: block;
   }
-  .break-3 > * {
+  .br-3 > * {
     -webkit-box-flex: 0;
     -ms-flex: 0;
     flex: 0;
@@ -564,14 +564,14 @@
 }
 
 @media screen and (max-width: 400px) {
-  .break-4 {
+  .br-4 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-flow: column wrap;
     flex-flow: column wrap;
     display: block;
   }
-  .break-4 > * {
+  .br-4 > * {
     -webkit-box-flex: 0;
     -ms-flex: 0;
     flex: 0;
@@ -579,14 +579,14 @@
 }
 
 @media screen and (max-width: 500px) {
-  .break-5 {
+  .br-5 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-flow: column wrap;
     flex-flow: column wrap;
     display: block;
   }
-  .break-5 > * {
+  .br-5 > * {
     -webkit-box-flex: 0;
     -ms-flex: 0;
     flex: 0;
@@ -594,14 +594,14 @@
 }
 
 @media screen and (max-width: 600px) {
-  .break-6 {
+  .br-6 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-flow: column wrap;
     flex-flow: column wrap;
     display: block;
   }
-  .break-6 > * {
+  .br-6 > * {
     -webkit-box-flex: 0;
     -ms-flex: 0;
     flex: 0;
@@ -609,14 +609,14 @@
 }
 
 @media screen and (max-width: 700px) {
-  .break-7 {
+  .br-7 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-flow: column wrap;
     flex-flow: column wrap;
     display: block;
   }
-  .break-7 > * {
+  .br-7 > * {
     -webkit-box-flex: 0;
     -ms-flex: 0;
     flex: 0;
@@ -624,14 +624,14 @@
 }
 
 @media screen and (max-width: 800px) {
-  .break-8 {
+  .br-8 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-flow: column wrap;
     flex-flow: column wrap;
     display: block;
   }
-  .break-8 > * {
+  .br-8 > * {
     -webkit-box-flex: 0;
     -ms-flex: 0;
     flex: 0;
@@ -639,14 +639,14 @@
 }
 
 @media screen and (max-width: 900px) {
-  .break-9 {
+  .br-9 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-flow: column wrap;
     flex-flow: column wrap;
     display: block;
   }
-  .break-9 > * {
+  .br-9 > * {
     -webkit-box-flex: 0;
     -ms-flex: 0;
     flex: 0;
@@ -654,14 +654,14 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .break-10 {
+  .br-10 {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-flow: column wrap;
     flex-flow: column wrap;
     display: block;
   }
-  .break-10 > * {
+  .br-10 > * {
     -webkit-box-flex: 0;
     -ms-flex: 0;
     flex: 0;

@@ -1,5 +1,5 @@
 /**
- * Matericious v0.9.0 (https://matericious.com/)
+ * Matericious v0.10.0 (https://matericious.com/)
  * Copyright 2018 Matericious Authors
  * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
  */
@@ -16,10 +16,9 @@ function ready(callback) {
 
 function call($class, $event, $func) {
   var elems = document.querySelectorAll($class);
-
-  for (var i = 0; i < elems.length; ++i) {
-    addEvent(elems[i], $event, $func);
-  }
+  elems.forEach(function (elem) {
+    addEvent(elem, $event, $func);
+  });
 }
 
 function $handle(callback) {
@@ -29,7 +28,7 @@ function $handle(callback) {
 }
 
 function $getChild(parent, child, n) {
-  return document.querySelectorAll(parent + ' ' + child)[n];
+  return document.querySelectorAll("".concat(parent, " ").concat(child))[n];
 }
 
 function $get(e) {
@@ -45,22 +44,22 @@ function hexToRgb(hex) {
   var r = bigint >> 16 & 255;
   var g = bigint >> 8 & 255;
   var b = bigint & 255;
-  return r + "," + g + "," + b;
+  return "".concat(r, ",").concat(g, ",").concat(b);
 }
 
 function hasClass(el, className) {
   $handle(function () {
-    if (el.classList) return el.classList.contains(className);else return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
+    if (el.classList) return el.classList.contains(className);else return !!el.className.match(new RegExp("(\\s|^)".concat(className, "(\\s|$)")));
   });
 }
 
 function $addClass(el, className) {
-  if (el.classList) el.classList.add(className);else if (!hasClass(el, className)) el.className += " " + className;
+  if (el.classList) el.classList.add(className);else if (!hasClass(el, className)) el.className += " ".concat(className);
 }
 
 function $removeClass(el, className) {
   if (el.classList) el.classList.remove(className);else if (hasClass(el, className)) {
-    var reg = new RegExp("(\\s|^)" + className + "(\\s|$)");
+    var reg = new RegExp("(\\s|^)".concat(className, "(\\s|$)"));
     el.className = el.className.replace(reg, " ");
   }
 }
@@ -83,7 +82,19 @@ function is_string(data) {
   } else {
     return false;
   }
-} 
+}
+
+Element.prototype.remove = function () {
+  this.parentElement.removeChild(this);
+};
+
+NodeList.prototype.remove = HTMLCollection.prototype.remove = function () {
+  for (var i = this.length - 1; i >= 0; i--) {
+    if (this[i] && this[i].parentElement) {
+      this[i].parentElement.removeChild(this[i]);
+    }
+  }
+}; 
 
 
 function nesting() {
@@ -96,7 +107,7 @@ function nesting() {
     var num_to_nest;
     var nest_menu = $get("#nesting");
     var nest_menu_btn = $get('[open-menu="nesting"]');
-    var nest_btn = $all(".appbar .nest");
+    var nest_btns = $all(".appbar .nest");
 
     if (w < large_screen) {
       num_to_nest = 1;
@@ -104,31 +115,29 @@ function nesting() {
       if (w <= medium_screen && w >= small_screen) {
         num_to_nest = 2;
       } else if (w <= small_screen) {
-        num_to_nest = nest_btn.length;
+        num_to_nest = nest_btns.length;
       }
     }
 
-    for (var c = 0; c < nest_btn.length; c++) {
-      nest_btn[c].style.display = "block";
-    }
-
+    nest_btns.forEach(function (nest_btn) {
+      nest_btn.style.display = "block";
+    });
     nest_menu.innerHTML = "";
     nest_menu_btn.style.display = "none";
-
-    for (var c = 0; c < num_to_nest; c++) {
-      var icon_btn_title = nest_btn[c].getAttribute("title");
+    nest_btns.forEach(function (nest_btn) {
+      var icon_btn_title = nest_btn.getAttribute("title");
       var icon_title;
 
       if (icon_btn_title != null) {
-        icon_title = " " + icon_btn_title;
+        icon_title = " ".concat(icon_btn_title);
       } else {
         icon_title = "";
       }
 
-      nest_menu_btn.style.display = "block";
-      nest_btn[c].style.display = "none";
-      nest_menu.innerHTML += '<li><a href="#">' + nest_btn[c].innerHTML + icon_title + "</a></li>";
-    }
+      nest_menu_btn.style.display = "inline-block";
+      nest_btn.style.display = "none";
+      nest_menu.innerHTML += "<li><a href=\"#\">".concat(nest_btn.innerHTML + icon_title, "</a></li>");
+    });
   }
 
   checkNesting();
@@ -157,6 +166,25 @@ var $pre_Scr_Pos = window.pageYOffset;
 window.onscroll = function () {
   collapse();
 }; 
+
+
+function BottomNavigation() {
+  call(".bottomNav > [nav-id]", "click", function () {
+    var target = this.getAttribute("nav-id"),
+        btn = $get("[nav-id='" + target + "']"),
+        targetContent = $get("[nav-content='" + target + "']");
+    var divs = $all(".bottomNav > [nav-id]");
+    var contents = $all("[nav-content]");
+    [].forEach.call(divs, function (el) {
+      $removeClass(el, 'active');
+    });
+    [].forEach.call(contents, function (el) {
+      $removeClass(el, 'active');
+    });
+    $addClass(btn, 'active');
+    $addClass(targetContent, 'active');
+  });
+} 
 
 
 function dialog(data) {
@@ -188,14 +216,14 @@ function dialog(data) {
   function close(id) {
     var dialog_ID = $get(id),
         _doc = $get('body'),
-        _loader = $get(id + " .loader"),
-        _created_overlay = $get("." + id.replace(/#/g, "") + ".dialog_overlay"),
+        _loader = $get("".concat(id, " .loader")),
+        _created_overlay = $get(".".concat(id.replace(/#/g, ""), ".dialog_overlay")),
         modal_class = dialog_ID.className;
 
     $removeClass(_doc, "dialog-open");
 
     if (_loader != null) {
-      _created_overlay = $get(id + " .loader_overlay");
+      _created_overlay = $get("".concat(id, " .loader_overlay"));
     } else {
       if (modal_class.includes("full") || modal_class.includes("sheet")) {
         $removeClass(dialog_ID, "active");
@@ -236,7 +264,7 @@ function dialog(data) {
 
     _this.$timer(time, close);
 
-    call(id + " .close", "click", function () {
+    call("".concat(id, " .close"), "click", function () {
       close(id);
     });
     call(".dialog_overlay", "click", function () {
@@ -300,10 +328,49 @@ function drawer() {
         return;
       }
     });
+    call("[drop]", "click", function () {
+      var target = this.getAttribute("drop");
+      var targetID = $get("#" + target);
+      var nav = $get("#" + target + "> nav").offsetHeight;
+      var cur_h = targetID.style.height;
+
+      if (targetID.className.includes("active")) {
+        targetID.style.height = 0;
+        $removeClass(targetID, 'active');
+      } else {
+        targetID.style.height = nav + 'px';
+        $addClass(targetID, 'active');
+      }
+    });
   }
 }
 
 ; 
+
+function ExpansionPanel() {
+  call(".panel > [expan]", "click", function () {
+    var target = this.getAttribute("expan"),
+        details = $get("#" + target),
+        panel = $get(".panel > [expan=" + target + "]"),
+        contentHeight = $get("#" + target + " > .content").offsetHeight,
+        icon = $get("[expan=" + target + "] > i"),
+        cusIcon = !icon.getAttribute("cus-icon") ? 'keyboard_arrow_up' : icon.getAttribute("cus-icon");
+    var icons = ['keyboard_arrow_down', cusIcon];
+
+    if (panel.className.includes("active")) {
+      icon.innerHTML = icons[0]; 
+
+      details.style.height = 0 + "px";
+      $removeClass(panel, 'active');
+    } else {
+      icon.innerHTML = icons[1]; 
+
+      details.style.height = contentHeight + "px";
+      $addClass(panel, 'active');
+    }
+  });
+} 
+
 
 var Colors = {
   red: {
@@ -619,36 +686,31 @@ var Colors = {
 };
 
 function gradient() {
-  document.querySelectorAll("[gradient]").forEach(function () {
-    var divs = document.querySelectorAll("[gradient]");
+  document.querySelectorAll("[gradient]").forEach(function (elem) {
+    var gradientType = !elem.getAttribute("gradient-type") ? 'linear, to right' : elem.getAttribute("gradient-type"),
+        gradient_type = gradientType.split(",")[0] ? gradientType.split(",")[0] : '',
+        gradient_pos = gradientType.split(",")[1] ? gradientType.split(",")[1] + ", " : '';
+    var gradient = "".concat(gradient_type, "-gradient(").concat(gradient_pos);
+    var data_colors = elem.getAttribute("gradient").split(" ");
 
-    for (var c = 0; c < divs.length; c++) {
-      var gradientType = !divs[c].getAttribute("gradient-type") ? 'linear, to right' : divs[c].getAttribute("gradient-type"),
-          gradient_type = gradientType.split(",")[0] ? gradientType.split(",")[0] : '',
-          gradient_pos = gradientType.split(",")[1] ? gradientType.split(",")[1] + ", " : '';
-      var gradient = gradient_type + "-gradient(" + gradient_pos;
-      var data_colors = divs[c].getAttribute("gradient").split(" ");
+    for (var color in data_colors) {
+      if (data_colors[color].startsWith("#", 0)) {
+        data_colors[color] = data_colors[color].replace(/#/g, "");
+      } else {
+        var color_array = data_colors[color].split("-");
 
-      for (var color in data_colors) {
-        if (data_colors[color].startsWith("#", 0)) {
-          data_colors[color] = data_colors[color].replace(/#/g, "");
-        } else {
-          var color_array = data_colors[color].split("-");
-
-          try {
-            data_colors[color] = getColor(color_array[0], color_array[1] != null ? color_array[1] : null, color_array[2] != null ? color_array[2] : null).replace(/#/g, "");
-          } catch (err) {}
-        }
+        try {
+          data_colors[color] = getColor(color_array[0], color_array[1] != null ? color_array[1] : null, color_array[2] != null ? color_array[2] : null).replace(/#/g, "");
+        } catch (err) {}
       }
-
-      for (var i = 0; i < data_colors.length; i++) {
-        gradient += "rgba(" + hexToRgb(data_colors[i]) + ", 1), ";
-      }
-
-      gradient = gradient.slice(0, gradient.length - 2);
-      gradient += ")";
-      divs[c].style.background = gradient;
     }
+
+    data_colors.forEach(function (color) {
+      gradient += "rgba(".concat(hexToRgb(color), ", 1), ");
+    });
+    gradient = gradient.slice(0, gradient.length - 2);
+    gradient += ")";
+    elem.style.background = gradient;
   });
 }
 
@@ -657,9 +719,12 @@ function getColor(color, rang, shade) {
 } 
 
 
-$all('.indeterminate > input').forEach(function (item) {
-  return item.indeterminate = true;
-}); 
+function input_controls() {
+  $all('.indeterminate > input').forEach(function (item) {
+    return item.indeterminate = true;
+  });
+} 
+
 
 function loader(data) {
   var _this2 = this;
@@ -707,9 +772,9 @@ function loader(data) {
         theme = _this2.is(_this2.data.theme, ''),
         _class = pos[0] + ' ' + pos[1] + ' ' + (type == 'linear' ? 'lin' : '') + ' ' + theme;
 
-    var small_template = '<div id="' + name + '" class="loader small ' + _class + '"><progress class="' + type + '"/></div>',
-        large_template = '<div id="' + name + '" class="loader large ' + _class + '"><label class="title">' + title + '</label><span class="subtext">' + subtext + '</span> <progress class="' + type + '"/></div>',
-        base_template = '<div id="' + name + '" class="loader base ' + _class + '"><label class="title">' + title + '</label><progress class="circular"/></div>',
+    var small_template = "<div id=\"".concat(name, "\" class=\"loader small ").concat(_class, "\"><progress class=\"").concat(type, "\"/></div>"),
+        large_template = "<div id=\"".concat(name, "\" class=\"loader large ").concat(_class, "\"><label class=\"title\">").concat(title, "</label><span class=\"subtext\">").concat(subtext, "</span> <progress class=\"").concat(type, "\"/></div>"),
+        base_template = "<div id=\"".concat(name, "\" class=\"loader base ").concat(_class, "\"><label class=\"title\">").concat(title, "</label><progress class=\"circular\"/></div>"),
         template = size == 'small' ? small_template : size == 'base' ? base_template : large_template;
     $get('body').innerHTML += template;
 
@@ -725,8 +790,8 @@ function menu() {
 function openMenu() {
   var id = this.getAttribute("open-menu");
   var clickTimes = 0,
-      targetBtn = $get("[open-menu=" + id + "]"),
-      targetMenu = $get("#" + id),
+      targetBtn = $get("[open-menu=".concat(id, "]")),
+      targetMenu = $get("#".concat(id)),
       default_class = targetMenu.className;
   if (default_class.includes("pullDown")) close();
   $addClass(targetMenu, "pullDown");
@@ -740,16 +805,16 @@ function openMenu() {
         menu_size = [targetMenu.offsetWidth, targetMenu.offsetHeight];
 
     if (!default_class.includes("right") && pos[1] + menu_size[0] > w) {
-      $addClass(targetMenu, "right"); 
+      $addClass(targetMenu, "right");
     } else if (pos[1] - menu_size[0] > w) {
     }
 
-    targetMenu.style.top = size[1] / 2 + pos[0] + "px";
+    targetMenu.style.top = "".concat(size[1] / 2 + pos[0], "px");
 
     if (default_class.includes("right")) {
-      targetMenu.style.right = w - pos[1] - size[0] + "px";
+      targetMenu.style.right = "".concat(w - pos[1] - size[0], "px");
     } else {
-      targetMenu.style.left = pos[1] + "px";
+      targetMenu.style.left = "".concat(pos[1], "px");
     }
   }
 
@@ -791,7 +856,7 @@ function rippleEffect(event) {
   rippleDiv.setAttribute("class", "rippleWave");
   var ripple = $get(".rippleWave");
   if (!elemPos || elemPos === "static") $self.style.position = "relative";
-  var rippleDivStyle = "width: " + diameter + "px; height: " + diameter + "px; left: " + (pos[1] - diameter / 2) + "px;top: " + (pos[0] - diameter / 2) + "px;";
+  var rippleDivStyle = "width: ".concat(diameter, "px; \n  height: ").concat(diameter, "px; \n  left: ").concat(pos[1] - diameter / 2, "px;\n  top: ").concat(pos[0] - diameter / 2, "px;");
   rippleDiv.style = rippleDivStyle;
   $self.appendChild(rippleDiv);
   window.setTimeout(function () {
@@ -806,17 +871,13 @@ function select() {
 }
 
 function input_select() {
-  document.querySelectorAll(".select-field").forEach(function () {
-    var elem = document.querySelectorAll(".select-field");
+  $all(".select-field").forEach(function (elem) {
+    var select = elem.getElementsByTagName('select')[0];
 
-    for (var c = 0; c < elem.length; c++) {
-      var select = elem[c].getElementsByTagName('select')[0];
-
-      if (select.value != " ") {
-        $addClass(select, "has-value");
-      } else {
-        $removeClass(select, "has-value");
-      }
+    if (select.value != " ") {
+      $addClass(select, "has-value");
+    } else {
+      $removeClass(select, "has-value");
     }
   });
 } 
@@ -842,11 +903,10 @@ function Snackbar(data, callback) {
   }
 
   var snackbarElem = $get("snackbar");
-  snackbarElem.innerHTML = "";
-  snackbarElem.className = "";
-  var snackbarClass = data.type + " " + data.pos.vertical + " " + data.pos.horizontal + " " + data.theme;
+  snackbarElem.innerHTML = snackbarElem.className = "";
+  var snackbarClass = "".concat(data.type, " ").concat(data.pos.vertical, " ").concat(data.pos.horizontal, " ").concat(data.theme);
   snackbarElem.className += snackbarClass;
-  var snackbarHTML = '<div class="snackbar"><text class="text">' + data.text + '</text>' + '<button class="ripple SnackClose"><i class="material-icons">close</i></button>' + '<button class="ripple SnackAction">' + data.actionButton + "</button></div>";
+  var snackbarHTML = "<div class=\"snackbar\">\n      <text class=\"text\">".concat(data.text, "</text>\n      <button class=\"ripple SnackClose\"><i class=\"material-icons\">close</i></button>\n      <button class=\"ripple SnackAction\">").concat(data.actionButton, "</button>\n    </div>");
   snackbarElem.innerHTML = snackbarHTML;
   $get(".SnackClose").addEventListener("click", function () {
     callback(false);
@@ -870,7 +930,7 @@ function Snackbar(data, callback) {
   }
 
   function close() {
-    $get(".snackbar").className += " " + closeAni;
+    $get(".snackbar").className += " ".concat(closeAni);
   }
 
   timer(data.time);
@@ -883,13 +943,10 @@ function tabs(event) {
       tab = $get(".tab.active");
 
   function changePos() {
-    var activePos = $get(".tabs-header .active"),
-        border = $get(".border"),
-        tab = $get(".tab.active");
-    var border = $get(".border");
+    var activePos = $get(".tabs-header .active");
     var pos = [activePos.offsetTop, activePos.offsetLeft],
         size = [activePos.offsetWidth, activePos.offsetHeight];
-    border.style = "left: " + pos[1] + "px; width: " + size[0] + "px";
+    border.style = "left: ".concat(pos[1], "px; width: ").concat(size[0], "px");
     var scrollH = $get('.tabs-header');
     scrollH.scrollLeft = pos[1];
   }
@@ -899,24 +956,20 @@ function tabs(event) {
 
   function changeTab(tabID) {
     var tab = $get('.tabs-content .active');
-    var newTab = $get('.tabs-content [tab-id="' + tabID + '"]');
+    var newTab = $get(".tabs-content [tab-id=\"".concat(tabID, "\"]"));
     var tabs = $all(".tabs-content .tab");
-
-    for (var c = 0; c < tabs.length; c++) {
-      $removeClass(tabs[c], "active");
-    }
-
+    tabs.forEach(function (tab) {
+      $removeClass(tab, "active");
+    });
     $addClass(newTab, 'active');
   }
 
   function tabClick(event) {
     var tabID = this.getAttribute("tab-id");
     var tabs = $all(".tabs-header a");
-
-    for (var c = 0; c < tabs.length; c++) {
-      $removeClass(tabs[c], "active");
-    }
-
+    tabs.forEach(function (tab) {
+      $removeClass(tab, "active");
+    });
     $addClass(this, "active");
     changePos();
     changeTab(tabID);

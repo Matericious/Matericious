@@ -96,61 +96,26 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function () {
   }
 };
 
-function menu() {
-  call("[open-menu]", "mousedown", openMenu);
-}
+function ExpansionPanel() {
+  call(".panel > [expan]", "click", function () {
+    var target = this.getAttribute("expan"),
+        details = $get("#" + target),
+        panel = $get(".panel > [expan=" + target + "]"),
+        contentHeight = $get("#" + target + " > .content").offsetHeight,
+        icon = $get("[expan=" + target + "] > i"),
+        cusIcon = !icon.getAttribute("cus-icon") ? 'keyboard_arrow_up' : icon.getAttribute("cus-icon");
+    var icons = ['keyboard_arrow_down', cusIcon];
 
-function openMenu() {
-  var id = this.getAttribute("open-menu");
-  var clickTimes = 0,
-      targetBtn = $get("[open-menu=".concat(id, "]")),
-      targetMenu = $get("#".concat(id)),
-      default_class = targetMenu.className;
-  if (default_class.includes("pullDown")) close();
-  $addClass(targetMenu, "pullDown");
-  setPosition();
+    if (panel.className.includes("active")) {
+      icon.innerHTML = icons[0]; 
 
-  function setPosition() {
-    var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
-        h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight,
-        pos = [targetBtn.offsetTop, targetBtn.offsetLeft],
-        size = [targetBtn.offsetWidth, targetBtn.offsetHeight],
-        menu_size = [targetMenu.offsetWidth, targetMenu.offsetHeight];
-
-    if (!default_class.includes("right") && pos[1] + menu_size[0] > w) {
-      $addClass(targetMenu, "right");
-    } else if (pos[1] - menu_size[0] > w) {
-    }
-
-    targetMenu.style.top = "".concat(size[1] / 2 + pos[0], "px");
-
-    if (default_class.includes("right")) {
-      targetMenu.style.right = "".concat(w - pos[1] - size[0], "px");
+      details.style.height = 0 + "px";
+      $removeClass(panel, 'active');
     } else {
-      targetMenu.style.left = "".concat(pos[1], "px");
+      icon.innerHTML = icons[1]; 
+
+      details.style.height = contentHeight + "px";
+      $addClass(panel, 'active');
     }
-  }
-
-  document.addEventListener("click", clickOutSide, true);
-
-  addEvent(window, "resize", function () {
-    setPosition();
   });
-
-  function clickOutSide(event) {
-    clickTimes++;
-
-    if (clickTimes > 1) {
-      clickTimes = 0;
-      close(targetMenu);
-    }
-  }
-
-  function close(targetMenu) {
-    $addClass(targetMenu, "pullUp");
-    $removeClass(targetMenu, "pullDown");
-    $removeClass(targetMenu, "pullUp");
-    document.removeEventListener("click", clickOutSide, true);
-    return;
-  }
 }

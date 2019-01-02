@@ -1,5 +1,5 @@
 /**
- * Matericious v0.9.0 (https://matericious.com/)
+ * Matericious v0.10.0 (https://matericious.com/)
  * Copyright 2018 Matericious Authors
  * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
  */
@@ -12,6 +12,7 @@
   font-family: "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system;
   font-size: 16px;
   line-height: 1.5;
+  margin-right: 10px;
 }
 
 .switch * {
@@ -151,6 +152,7 @@
 .switch.txt-left {
   padding-left: 6px;
   padding-right: 0px;
+  margin-right: 10px;
 }
 
 .switch.txt-left > input {

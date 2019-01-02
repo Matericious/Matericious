@@ -1,5 +1,5 @@
 /**
- * Matericious v0.9.0 (https://matericious.com/)
+ * Matericious v0.10.0 (https://matericious.com/)
  * Copyright 2018 Matericious Authors
  * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
  */
@@ -138,8 +138,8 @@
 }
 
 .radio.txt-left {
-  text-indent: 50xp;
   padding-right: 0px;
+  margin-right: 10px;
 }
 
 .radio.txt-left > input {

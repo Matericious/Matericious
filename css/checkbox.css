@@ -1,5 +1,5 @@
 /**
- * Matericious v0.9.0 (https://matericious.com/)
+ * Matericious v0.10.0 (https://matericious.com/)
  * Copyright 2018 Matericious Authors
  * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
  */
@@ -149,15 +149,17 @@
 
 .checkbox.txt-left {
   padding-right: 0px;
+  position: relative;
+  margin-right: 10px;
+}
+
+.checkbox.txt-left:first-child {
+  margin-left: 0px;
+  position: absolute;
 }
 
 .checkbox.txt-left > input {
   left: calc(100% - 30px);
-  position: absolute;
-}
-
-.checkbox.txt-left > span {
-  backgruond: red;
 }
 
 .checkbox.txt-left > span::after {

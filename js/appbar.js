@@ -1,5 +1,5 @@
 /**
- * Matericious v0.9.0 (https://matericious.com/)
+ * Matericious v0.10.0 (https://matericious.com/)
  * Copyright 2018 Matericious Authors
  * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
  */
@@ -16,10 +16,9 @@ function ready(callback) {
 
 function call($class, $event, $func) {
   var elems = document.querySelectorAll($class);
-
-  for (var i = 0; i < elems.length; ++i) {
-    addEvent(elems[i], $event, $func);
-  }
+  elems.forEach(function (elem) {
+    addEvent(elem, $event, $func);
+  });
 }
 
 function $handle(callback) {
@@ -29,7 +28,7 @@ function $handle(callback) {
 }
 
 function $getChild(parent, child, n) {
-  return document.querySelectorAll(parent + ' ' + child)[n];
+  return document.querySelectorAll("".concat(parent, " ").concat(child))[n];
 }
 
 function $get(e) {
@@ -45,22 +44,22 @@ function hexToRgb(hex) {
   var r = bigint >> 16 & 255;
   var g = bigint >> 8 & 255;
   var b = bigint & 255;
-  return r + "," + g + "," + b;
+  return "".concat(r, ",").concat(g, ",").concat(b);
 }
 
 function hasClass(el, className) {
   $handle(function () {
-    if (el.classList) return el.classList.contains(className);else return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
+    if (el.classList) return el.classList.contains(className);else return !!el.className.match(new RegExp("(\\s|^)".concat(className, "(\\s|$)")));
   });
 }
 
 function $addClass(el, className) {
-  if (el.classList) el.classList.add(className);else if (!hasClass(el, className)) el.className += " " + className;
+  if (el.classList) el.classList.add(className);else if (!hasClass(el, className)) el.className += " ".concat(className);
 }
 
 function $removeClass(el, className) {
   if (el.classList) el.classList.remove(className);else if (hasClass(el, className)) {
-    var reg = new RegExp("(\\s|^)" + className + "(\\s|$)");
+    var reg = new RegExp("(\\s|^)".concat(className, "(\\s|$)"));
     el.className = el.className.replace(reg, " ");
   }
 }
@@ -85,6 +84,18 @@ function is_string(data) {
   }
 }
 
+Element.prototype.remove = function () {
+  this.parentElement.removeChild(this);
+};
+
+NodeList.prototype.remove = HTMLCollection.prototype.remove = function () {
+  for (var i = this.length - 1; i >= 0; i--) {
+    if (this[i] && this[i].parentElement) {
+      this[i].parentElement.removeChild(this[i]);
+    }
+  }
+};
+
 function nesting() {
   var large_screen = 992,
       medium_screen = 768,
@@ -95,7 +106,7 @@ function nesting() {
     var num_to_nest;
     var nest_menu = $get("#nesting");
     var nest_menu_btn = $get('[open-menu="nesting"]');
-    var nest_btn = $all(".appbar .nest");
+    var nest_btns = $all(".appbar .nest");
 
     if (w < large_screen) {
       num_to_nest = 1;
@@ -103,31 +114,29 @@ function nesting() {
       if (w <= medium_screen && w >= small_screen) {
         num_to_nest = 2;
       } else if (w <= small_screen) {
-        num_to_nest = nest_btn.length;
+        num_to_nest = nest_btns.length;
       }
     }
 
-    for (var c = 0; c < nest_btn.length; c++) {
-      nest_btn[c].style.display = "block";
-    }
-
+    nest_btns.forEach(function (nest_btn) {
+      nest_btn.style.display = "block";
+    });
     nest_menu.innerHTML = "";
     nest_menu_btn.style.display = "none";
-
-    for (var c = 0; c < num_to_nest; c++) {
-      var icon_btn_title = nest_btn[c].getAttribute("title");
+    nest_btns.forEach(function (nest_btn) {
+      var icon_btn_title = nest_btn.getAttribute("title");
       var icon_title;
 
       if (icon_btn_title != null) {
-        icon_title = " " + icon_btn_title;
+        icon_title = " ".concat(icon_btn_title);
       } else {
         icon_title = "";
       }
 
-      nest_menu_btn.style.display = "block";
-      nest_btn[c].style.display = "none";
-      nest_menu.innerHTML += '<li><a href="#">' + nest_btn[c].innerHTML + icon_title + "</a></li>";
-    }
+      nest_menu_btn.style.display = "inline-block";
+      nest_btn.style.display = "none";
+      nest_menu.innerHTML += "<li><a href=\"#\">".concat(nest_btn.innerHTML + icon_title, "</a></li>");
+    });
   }
 
   checkNesting();
