@@ -313,7 +313,7 @@ let Colors = {
 };
 
 function gradient() {
-	document.querySelectorAll("[gradient]").forEach(function (elem) {
+	$all("[gradient]").forEach(function (elem) {
 			let gradientType = (!elem.getAttribute("gradient-type")) ? 'linear, to right' : elem.getAttribute("gradient-type"),
 				gradient_type = (gradientType.split(",")[0]) ? gradientType.split(",")[0] : '',
 				gradient_pos = (gradientType.split(",")[1]) ? gradientType.split(",")[1] + ", " : '';
