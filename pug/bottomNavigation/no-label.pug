@@ -1,0 +1,37 @@
+- var title = 'Bottom Navigation'
+doctype
+html(lang='en')
+  head
+    include /includes/head.pug
+      body
+         h3 No Label Bottom Navigation
+         div.active(nav-content="1")
+           h1 Content 1 - Recent
+         div(nav-content="2")
+           h1 Content 1 - Favories
+
+         div(nav-content="3")
+           h1 Content 1 - Nearby
+
+         div(nav-content="4")
+           h1 Content 1 - Settings
+
+         nav.bottomNav.no-label.z-1.text-blue
+           button.wave.active(nav-id="1")
+             i.material-icons history
+             span Recent
+           button.wave(nav-id="2")
+             i.material-icons favorite
+             span Favorite
+
+           button.wave(nav-id="3")
+             i.material-icons location_on
+             span Nearby
+
+           button.wave(nav-id="4")
+             i.material-icons build
+             span Settings
+
+         include /includes/foot.pug
+         script. 
+           new BottomNavigation();

@@ -1,0 +1,33 @@
+- var title = 'Bottom Navigation'
+doctype
+html(lang='en')
+  head
+    include /includes/head.pug
+      body
+         h3 No Label Bottom Navigation
+         div.active(nav-content="1")
+           h1 Content 1 - Recent
+         div(nav-content="2")
+           h1 Content 1 - Favories
+
+         div(nav-content="3")
+           h1 Content 1 - Nearby
+
+         div(nav-content="4")
+           h1 Content 1 - Settings
+
+         nav.bottomNav.z-1.text-blue
+           button.wave.active(nav-id="1")
+             span Recent
+           button.wave(nav-id="2")
+             span Favorite
+
+           button.wave(nav-id="3")
+             span Nearby
+
+           button.wave(nav-id="4")
+             span Settings
+
+         include /includes/foot.pug
+         script. 
+           new BottomNavigation();
