@@ -14,6 +14,21 @@ $base-loader-height: 60px;
 
 $loader-margin: 2em;
 
+body{
+  &.overlay{
+    &:before{
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
 .loader {
   background: #fff;
   line-height: normal;
