@@ -1,0 +1,45 @@
+- var title = 'Expansion Panel'
+doctype
+html(lang='en')
+  head
+    include /includes/head.pug
+    style. 
+      body{ margin: 30px }
+  body
+    br
+    h3 Expansion Panel
+    section.expansionPanel.z-4
+       .panel
+          .summary(expan="demo1")
+             span.h-6.title Title 1
+             span.h-6.subtitle Sub title 1
+             i.material-icons keyboard_arrow_down
+          .details#demo1
+             .content
+                h1 Content for content 
+       .panel
+          .summary(expan="demo2")
+             span.h-6.title Title 2
+             span.h-6.subtitle Sub title 2
+             i.material-icons keyboard_arrow_down
+          .details#demo2
+             .content
+                h1 Content for content 2
+
+    br 
+    h3 Active Expansion Panel
+    section.expansionPanel.z-4
+       .panel
+          .summary.active(expan="active")
+             span.h-6.title Default Active
+             span.h-6.subtitle Demo
+             i.material-icons keyboard_arrow_down
+          .details#active
+             .content
+                h1 Default active demo
+
+    include /includes/foot.pug
+         script. 
+           new ExpansionPanel();
+             
+     
