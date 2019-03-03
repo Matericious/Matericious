@@ -1,53 +1,54 @@
-.expansionPanel{
+
+.expansionPanel {
+  width: 100%;
+  height: auto;
+  > .panel {
     width: 100%;
     height: auto;
-    > .panel{
+    border-bottom: 1px solid #e0e0e0;
+    &:last-child {
+      border-bottom: none;
+    }
+    > .summary {
       width: 100%;
-      height: auto;
-      border-bottom: 1px solid #e0e0e0;
-      &:last-child{
-        border-bottom: none;
+      height: 50px;
+      line-height: 50px;
+      padding-left: 20px;
+      padding-right: 20px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      > .h-6 {
+        font-size: 16px !important;
       }
-      > .summary{
-        width: 100%;
-        height: 50px;
-        line-height: 50px;
-        padding-left: 20px;
-        padding-right: 20px;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: space-between;
+      > .subtitle {
+        color: #434343;
+      }
+      > i {
+        height: 25px;
+        padding: 10px;
+        border-radius: 50%;
+        position: relative;
+        top: 2px;
+        left: 4px;
         cursor: pointer;
-        > .h-6{
-          font-size: 16px !important;
-        }
-        > .subtitle{
-          color: #434343; 
-        }
-        > i{   
-          height: 25px;
-          padding: 10px;
-          border-radius: 50%;
-          position: relative;
-          top: 2px;
-          left: 4px;
-          cursor: pointer;
-        }
       }
-      > .details{
-        width: 100%;
-        height: 0px;
-        overflow: hidden;
-        transition: height .5s;
-        > .content{
-           padding: 5px 20px 20px 20px;
-           box-sizing: border-box;
-        }
-      }
-      &.active{
-        > .details{
+      &.active {
+        & ~ .details {
           height: auto;
         }
       }
     }
+    > .details {
+      width: 100%;
+      height: 0px;
+      overflow: hidden;
+      transition: height 0.5s;
+      > .content {
+        padding: 5px 20px 20px 20px;
+        box-sizing: border-box;
+      }
+    }
   }
+}
