@@ -1,0 +1,54 @@
+- var title = 'Drawer with Expandable'
+doctype
+html(lang='en')
+  head
+    include ../includes/head.pug
+    style(type="text/css").
+      body { margin: 0 }
+  body
+    -var type = ' '
+    -var shadow = ''
+    aside(class='drawer'+type+shadow)
+      div.header
+        h3.title Matericious
+        h6.subtitle info@matericious.com
+      div.content
+          nav.list
+            a.night.ripple(drop="intro") 
+             | Transportation
+             i.material-icons.trail keyboard_arrow_down
+            .dropdown#intro
+              nav.list
+               a.night.ripple
+                 i.material-icons directions_bike
+                 | Bike
+               a.night.ripple
+                 i.material-icons directions_car
+                 | Car
+               a.night.ripple
+                 i.material-icons directions_railway
+                 | Train
+            hr
+            h6.subheader Labels
+            a.night.ripple
+             i.material-icons delete
+             | Delete
+            a.night.ripple
+             i.material-icons add_box
+             | Add Category
+            a.night.ripple
+             i.material-icons settings
+             | Settings
+
+    header.appbar.red.text-white.z-1
+      div.wrap
+        section.left
+          a.wave.icon(drawer='push')
+            i.material-icons menu
+          label.title Matericious
+        section.right
+          a.wave Dashboard
+          a.wave Account
+    include /includes/foot.pug
+    script.
+      new drawer();
