@@ -1,26 +1,26 @@
 //=include _base.js
 
-function ExpansionPanel() {
+function ExpansionPanel(){
   call(".panel > [expan]", "click", function() {
-    let target = this.getAttribute("expan"),
+    var target = this.getAttribute("expan"),
         details = $get("#"+target),
-        panel = $get(".panel > [expan="+target+"]"),
+        summary = $get(".panel > [expan="+target+"]"),
         contentHeight = $get("#"+target+" > .content").offsetHeight,
         icon = $get("[expan="+target+"] > i"),
         cusIcon = (!icon.getAttribute("cus-icon")) ? 'keyboard_arrow_up' : icon.getAttribute("cus-icon");
     
-    let icons = ['keyboard_arrow_down', cusIcon];
+    var icons = ['keyboard_arrow_down', cusIcon];
     
-    if(panel.className.includes("active")){
+    if(summary.className.includes("active")){
       icon.innerHTML = icons[0];
      // icon.setAttribute("cus-icon", icons[1]);
       details.style.height = 0+"px";
-      $removeClass(panel, 'active');
+      $removeClass(summary, 'active');
     }else{
       icon.innerHTML = icons[1];
      // icon.setAttribute("cus-icon", icons[0]);
       details.style.height = contentHeight+"px";
-      $addClass(panel, 'active');
+      $addClass(summary, 'active');
     }
   });
 }
