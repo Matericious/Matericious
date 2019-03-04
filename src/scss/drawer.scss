@@ -174,10 +174,11 @@ body {
         height: 0px;
         overflow: hidden;
         transition: all 0.5s;
+        padding: 0;
         > nav {
           padding: 0;
           height: auto;
-          width: 98%;
+          width: 100%;
           float: right;
         }
       }
