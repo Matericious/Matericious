@@ -1,6 +1,6 @@
 /**
  * Matericious v0.10.0 (https://matericious.com/)
- * Copyright 2018 Matericious Authors
+ * Copyright 2019 Matericious Authors
  * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
  */
 

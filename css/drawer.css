@@ -1,17 +1,12 @@
 /**
  * Matericious v0.10.0 (https://matericious.com/)
- * Copyright 2018 Matericious Authors
+ * Copyright 2019 Matericious Authors
  * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
  */
 
 .notrans {
   -webkit-transition: none !important;
   transition: none !important;
-}
-
-body {
-  -webkit-transition: margin-left 0.5s;
-  transition: margin-left 0.5s;
 }
 
 body.overlay {
@@ -202,12 +197,13 @@ body.overlay:after {
   overflow: hidden;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  padding: 0;
 }
 
 .drawer > .content nav.list .dropdown > nav {
   padding: 0;
   height: auto;
-  width: 98%;
+  width: 100%;
   float: right;
 }
 

@@ -1,6 +1,6 @@
 /**
  * Matericious v0.10.0 (https://matericious.com/)
- * Copyright 2018 Matericious Authors
+ * Copyright 2019 Matericious Authors
  * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
  */
 
@@ -125,6 +125,7 @@ function nesting() {
     nest_menu.innerHTML = "";
     nest_menu_btn.style.display = "none";
     nest_btns.forEach(function (nest_btn) {
+      console.log("running");
       var icon_btn_title = nest_btn.getAttribute("title");
       var icon_title;
 
@@ -351,22 +352,22 @@ function ExpansionPanel() {
   call(".panel > [expan]", "click", function () {
     var target = this.getAttribute("expan"),
         details = $get("#" + target),
-        panel = $get(".panel > [expan=" + target + "]"),
+        summary = $get(".panel > [expan=" + target + "]"),
         contentHeight = $get("#" + target + " > .content").offsetHeight,
         icon = $get("[expan=" + target + "] > i"),
         cusIcon = !icon.getAttribute("cus-icon") ? 'keyboard_arrow_up' : icon.getAttribute("cus-icon");
     var icons = ['keyboard_arrow_down', cusIcon];
 
-    if (panel.className.includes("active")) {
+    if (summary.className.includes("active")) {
       icon.innerHTML = icons[0]; 
 
       details.style.height = 0 + "px";
-      $removeClass(panel, 'active');
+      $removeClass(summary, 'active');
     } else {
       icon.innerHTML = icons[1]; 
 
       details.style.height = contentHeight + "px";
-      $addClass(panel, 'active');
+      $addClass(summary, 'active');
     }
   });
 } 
@@ -686,7 +687,7 @@ var Colors = {
 };
 
 function gradient() {
-  document.querySelectorAll("[gradient]").forEach(function (elem) {
+  $all("[gradient]").forEach(function (elem) {
     var gradientType = !elem.getAttribute("gradient-type") ? 'linear, to right' : elem.getAttribute("gradient-type"),
         gradient_type = gradientType.split(",")[0] ? gradientType.split(",")[0] : '',
         gradient_pos = gradientType.split(",")[1] ? gradientType.split(",")[1] + ", " : '';
@@ -723,8 +724,7 @@ function input_controls() {
   $all('.indeterminate > input').forEach(function (item) {
     return item.indeterminate = true;
   });
-} 
-
+}
 
 function loader(data) {
   var _this2 = this;
@@ -748,6 +748,7 @@ function loader(data) {
   this.close = function () {
     var id = $get(_this2.id);
     $removeClass(id, 'slideDownIn');
+    $removeClass($get("body"), 'overlay');
   };
 
   this.is = function (che, def) {
@@ -757,6 +758,7 @@ function loader(data) {
   this.open = function (time) {
     _this2.id = (_this2.id.charAt(0) == '#' ? '' : '#') + _this2.id;
     var id = $get(_this2.id);
+    if (data.overlay) $addClass($get("body"), 'overlay');
     $addClass(id, 'slideDownIn');
 
     _this2.$timer(time, _this2.close);
@@ -772,9 +774,9 @@ function loader(data) {
         theme = _this2.is(_this2.data.theme, ''),
         _class = pos[0] + ' ' + pos[1] + ' ' + (type == 'linear' ? 'lin' : '') + ' ' + theme;
 
-    var small_template = "<div id=\"".concat(name, "\" class=\"loader small ").concat(_class, "\"><progress class=\"").concat(type, "\"/></div>"),
-        large_template = "<div id=\"".concat(name, "\" class=\"loader large ").concat(_class, "\"><label class=\"title\">").concat(title, "</label><span class=\"subtext\">").concat(subtext, "</span> <progress class=\"").concat(type, "\"/></div>"),
-        base_template = "<div id=\"".concat(name, "\" class=\"loader base ").concat(_class, "\"><label class=\"title\">").concat(title, "</label><progress class=\"circular\"/></div>"),
+    var small_template = '<div id="' + name + '" class="loader small ' + _class + '"><progress class="' + type + '"/></div>',
+        large_template = '<div id="' + name + '" class="loader large ' + _class + '"><label class="title">' + title + '</label><span class="subtext">' + subtext + '</span> <progress class="' + type + '"/></div>',
+        base_template = '<div id="' + name + '" class="loader base ' + _class + '"><label class="title">' + title + '</label><progress class="circular"/></div>',
         template = size == 'small' ? small_template : size == 'base' ? base_template : large_template;
     $get('body').innerHTML += template;
 

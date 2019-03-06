@@ -1,6 +1,6 @@
 /**
  * Matericious v0.10.0 (https://matericious.com/)
- * Copyright 2018 Matericious Authors
+ * Copyright 2019 Matericious Authors
  * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
  */
 
@@ -238,7 +238,7 @@
 }
 
 [nav-content].active {
-  display: yes;
+  display: block;
 }
 
 .bottomNav {
@@ -4752,11 +4752,6 @@ body.dialog-open {
   transition: none !important;
 }
 
-body {
-  -webkit-transition: margin-left 0.5s;
-  transition: margin-left 0.5s;
-}
-
 body.overlay {
   overflow: hidden;
 }
@@ -4945,12 +4940,13 @@ body.overlay:after {
   overflow: hidden;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  padding: 0;
 }
 
 .drawer > .content nav.list .dropdown > nav {
   padding: 0;
   height: auto;
-  width: 98%;
+  width: 100%;
   float: right;
 }
 
@@ -5131,22 +5127,22 @@ body.overlay:after {
   cursor: pointer;
 }
 
+.expansionPanel > .panel > .summary.active ~ .details {
+  height: auto;
+}
+
 .expansionPanel > .panel > .details {
   width: 100%;
   height: 0px;
   overflow: hidden;
-  -webkit-transition: height .5s;
-  transition: height .5s;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
 }
 
 .expansionPanel > .panel > .details > .content {
   padding: 5px 20px 20px 20px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-.expansionPanel > .panel.active > .details {
-  height: auto;
 }
 
 .row {
@@ -6279,6 +6275,17 @@ body.overlay:after {
   height: 1px;
   border: none;
   background: #757575;
+}
+
+body.overlay:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .loader {

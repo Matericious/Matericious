@@ -25,6 +25,7 @@ function nesting() {
     nest_menu.innerHTML = "";
     nest_menu_btn.style.display = "none";
     nest_btns.forEach(function (nest_btn) {
+      console.log("running");
       let icon_btn_title = nest_btn.getAttribute("title");
       let icon_title;
       if (icon_btn_title != null) {
@@ -37,6 +38,7 @@ function nesting() {
       nest_menu.innerHTML += `<li><a href="#">${nest_btn.innerHTML + icon_title}</a></li>`;
     })
   }
+
   checkNesting();
     addEvent(window, "resize", function () {
       checkNesting();

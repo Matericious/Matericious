@@ -1,6 +1,6 @@
 /**
  * Matericious v0.10.0 (https://matericious.com/)
- * Copyright 2018 Matericious Authors
+ * Copyright 2019 Matericious Authors
  * Licensed under MIT (https://github.com/Matericious/Matericious/blob/master/LICENSE)
  */
 
@@ -124,6 +124,7 @@ function nesting() {
     nest_menu.innerHTML = "";
     nest_menu_btn.style.display = "none";
     nest_btns.forEach(function (nest_btn) {
+      console.log("running");
       var icon_btn_title = nest_btn.getAttribute("title");
       var icon_title;
 
