@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Overlay Drawer Demo</title>
+    <title>Drawer with Expandable Demo</title>
     <meta charset="utf-8">
     <meta name="author" content="Matericious">
     <meta name="description" content="Delicious Framework with Material Components.">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/matericious@0.10.1/dist/css/matericious.min.css">
     <meta name="og:url" content="https://matericious.com/">
-    <meta name="og:title" content="Overlay Drawer Demo in Matericious Framework">
+    <meta name="og:title" content="Drawer with Expandable Demo in Matericious Framework">
     <meta name="og:description" content="Delicious Framework with Material Components.">
     <meta name="og:type" content="website">
     <meta name="og:image" content="https://matericious.com/assets/img/logo_banner.png">
@@ -21,21 +21,25 @@
     <style type="text/css">body { margin: 0 }</style>
   </head>
   <body>
-    <aside class="drawer">
+    <aside class="drawer ">
       <div class="header">
         <h3 class="title">Matericious</h3>
         <h6 class="subtitle">info@matericious.com</h6>
       </div>
       <div class="content">
-        <nav class="list"><a class="night ripple"><i class="material-icons">mail</i>Inbox</a><a class="night ripple active"><i class="material-icons">send</i>Sent</a><a class="night ripple"><i class="material-icons">favorite</i>Favorite</a><a class="night ripple"><i class="material-icons">archive</i>Archive</a>
+        <nav class="list"><a class="night ripple" drop="intro">
+             Transportation<i class="material-icons trail">keyboard_arrow_down</i></a>
+          <div class="dropdown" id="intro">
+            <nav class="list"><a class="night ripple"><i class="material-icons">directions_bike</i>Bike</a><a class="night ripple"><i class="material-icons">directions_car</i>Car</a><a class="night ripple"><i class="material-icons">directions_railway</i>Train</a></nav>
+          </div>
           <hr>
           <h6 class="subheader">Labels</h6><a class="night ripple"><i class="material-icons">delete</i>Delete</a><a class="night ripple"><i class="material-icons">add_box</i>Add Category</a><a class="night ripple"><i class="material-icons">settings</i>Settings</a>
         </nav>
       </div>
     </aside>
-    <header class="appbar green text-white z-1">
+    <header class="appbar red text-white z-1">
       <div class="wrap">
-        <section class="left"><a class="wave icon" drawer="overlay"><i class="material-icons">menu</i></a>
+        <section class="left"><a class="wave icon" drawer="push"><i class="material-icons">menu</i></a>
           <label class="title">Matericious</label>
         </section>
         <section class="right"><a class="wave">Dashboard</a><a class="wave">Account</a></section>

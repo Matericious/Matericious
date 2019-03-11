@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Standard Appbar Demo</title>
+    <title>Bottom Navigation Demo</title>
     <meta charset="utf-8">
     <meta name="author" content="Matericious">
     <meta name="description" content="Delicious Framework with Material Components.">
@@ -11,23 +11,23 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/matericious@0.10.1/dist/css/matericious.min.css">
     <meta name="og:url" content="https://matericious.com/">
-    <meta name="og:title" content="Standard Appbar Demo in Matericious Framework">
+    <meta name="og:title" content="Bottom Navigation Demo in Matericious Framework">
     <meta name="og:description" content="Delicious Framework with Material Components.">
     <meta name="og:type" content="website">
     <meta name="og:image" content="https://matericious.com/assets/img/logo_banner.png">
     <meta name="og:image:type" content="image/png">
     <meta name="og:image:width" content="1200">
     <meta name="og:image:height" content="630">
-    <style type="text/css">body { margin: 0; height: 1000px }</style>
+    <style>
+      body{ background: #222;}
+      a{ text-decoration: none; color: #fff}
+      iframe{ width: 100%; height: 200px; background: #fff; }
+    </style>
   </head>
-  <body>
-    <header class="appbar z-5 teal">
-      <div class="wrap">
-        <section class="left"><a class="wave icon"><i class="material-icons">menu</i></a>
-          <label class="title">Matericious</label>
-        </section>
-      </div>
-      <section class="right"><a class="wave icon"><i class="material-icons">share</i></a><a class="wave icon"><i class="material-icons">cloud</i></a><a class="wave icon"><i class="material-icons">save</i></a></section>
-    </header>
+  <body><a class="toplink" target="_blank" href="bottomNavigation/standard.html">Full demo</a>
+    <iframe src="bottomNavigation/standard.html"></iframe><br><a class="toplink" target="_blank" href="bottomNavigation/no-label.html">Full demo</a>
+    <iframe src="bottomNavigation/no-label.html"></iframe><br><a class="toplink" target="_blank" href="bottomNavigation/text-only.html">Full demo</a>
+    <iframe src="bottomNavigation/text-only.html"></iframe><br><a class="toplink" target="_blank" href="bottomNavigation/icon-only.html">Full demo</a>
+    <iframe src="bottomNavigation/icon-only.html"></iframe><br>
   </body>
 </html>

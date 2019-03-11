@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Nesting Appbar Demo</title>
+    <title>Bottom Navigation Demo</title>
     <meta charset="utf-8">
     <meta name="author" content="Matericious">
     <meta name="description" content="Delicious Framework with Material Components.">
@@ -11,29 +11,35 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/matericious@0.10.1/dist/css/matericious.min.css">
     <meta name="og:url" content="https://matericious.com/">
-    <meta name="og:title" content="Nesting Appbar Demo in Matericious Framework">
+    <meta name="og:title" content="Bottom Navigation Demo in Matericious Framework">
     <meta name="og:description" content="Delicious Framework with Material Components.">
     <meta name="og:type" content="website">
     <meta name="og:image" content="https://matericious.com/assets/img/logo_banner.png">
     <meta name="og:image:type" content="image/png">
     <meta name="og:image:width" content="1200">
     <meta name="og:image:height" content="630">
-    <style type="text/css">body { margin: 0; height: 1000px }</style>
-  </head>
-  <body>
-    <header class="appbar teal">
-      <div class="wrap">
-        <section class="left"><a class="wave icon"><i class="material-icons">menu</i></a>
-          <label class="title">San Fransisco</label>
-        </section>
-        <section class="right"><a class="nest icon" title="cloud"><i class="material-icons">cloud</i></a><a class="nest">Dashboard</a><a class="nest">Account</a><a class="wave icon" open-menu="nesting"><i class="material-icons">more_vert</i></a></section>
+    <body>
+      <h3>No Label Bottom Navigation</h3>
+      <div class="active" nav-content="1">
+        <h1>Content 1 - Recent</h1>
       </div>
-    </header>
-    <ul class="menu right" id="nesting"></ul>
-    <script src="https://cdn.jsdelivr.net/npm/matericious@0.10.1/dist/js/matericious.min.js"></script>
-    <script>
-      menu();
-      nesting();
-    </script>
-  </body>
+      <div nav-content="2">
+        <h1>Content 1 - Favories</h1>
+      </div>
+      <div nav-content="3">
+        <h1>Content 1 - Nearby</h1>
+      </div>
+      <div nav-content="4">
+        <h1>Content 1 - Settings</h1>
+      </div>
+      <nav class="bottomNav no-label z-1 text-blue">
+        <button class="wave active" nav-id="1"><i class="material-icons">history</i><span>Recent</span></button>
+        <button class="wave" nav-id="2"><i class="material-icons">favorite</i><span>Favorite</span></button>
+        <button class="wave" nav-id="3"><i class="material-icons">location_on</i><span>Nearby</span></button>
+        <button class="wave" nav-id="4"><i class="material-icons">build</i><span>Settings</span></button>
+      </nav>
+      <script src="https://cdn.jsdelivr.net/npm/matericious@0.10.1/dist/js/matericious.min.js"></script>
+      <script>new BottomNavigation();</script>
+    </body>
+  </head>
 </html>

@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/matericious@0.9.0/dist/css/matericious.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/matericious@0.10.1/dist/css/matericious.min.css">
     <meta name="og:url" content="https://matericious.com/">
     <meta name="og:title" content="Loader demo Demo in Matericious Framework">
     <meta name="og:description" content="Delicious Framework with Material Components.">
@@ -43,7 +43,6 @@
       <progress class="circular"></progress>
     </div><br>
     <hr>
-    
     <h3>Small Linear Loader</h3>
     <button onclick="openLoader('small_linear_loader')">Small Loader</button>
     <div class="loader small lin" id="small_linear_loader">
@@ -54,9 +53,8 @@
     <div class="loader large lin" id="large_linear_loader">
       <label class="title">Please wait</label>
       <progress class="linear"></progress>
-    </div>
-    <br/>
-    <hr/>
+    </div><br>
+    <hr>
     <h2>Build Custom Loader With JavaScript</h2>
     <h3>Loader size</h3>
     <select id="size">
@@ -93,7 +91,7 @@
     <h3>Loader Timout</h3>
     <input id="timeout"><br><br>
     <button onclick="buildLoader()">Build Loader</button>
-    <script src="https://cdn.jsdelivr.net/npm/matericious@0.9.0/dist/js/matericious.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/matericious@0.10.1/dist/js/matericious.min.js"></script>
     <script>
       function openLoader(id) {
       new loader('#'+id).open(3000);

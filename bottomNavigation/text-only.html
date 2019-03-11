@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Standard Appbar Demo</title>
+    <title>Bottom Navigation Demo</title>
     <meta charset="utf-8">
     <meta name="author" content="Matericious">
     <meta name="description" content="Delicious Framework with Material Components.">
@@ -11,23 +11,35 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/matericious@0.10.1/dist/css/matericious.min.css">
     <meta name="og:url" content="https://matericious.com/">
-    <meta name="og:title" content="Standard Appbar Demo in Matericious Framework">
+    <meta name="og:title" content="Bottom Navigation Demo in Matericious Framework">
     <meta name="og:description" content="Delicious Framework with Material Components.">
     <meta name="og:type" content="website">
     <meta name="og:image" content="https://matericious.com/assets/img/logo_banner.png">
     <meta name="og:image:type" content="image/png">
     <meta name="og:image:width" content="1200">
     <meta name="og:image:height" content="630">
-    <style type="text/css">body { margin: 0; height: 1000px }</style>
-  </head>
-  <body>
-    <header class="appbar z-5 teal">
-      <div class="wrap">
-        <section class="left"><a class="wave icon"><i class="material-icons">menu</i></a>
-          <label class="title">Matericious</label>
-        </section>
+    <body>
+      <h3>No Label Bottom Navigation</h3>
+      <div class="active" nav-content="1">
+        <h1>Content 1 - Recent</h1>
       </div>
-      <section class="right"><a class="wave icon"><i class="material-icons">share</i></a><a class="wave icon"><i class="material-icons">cloud</i></a><a class="wave icon"><i class="material-icons">save</i></a></section>
-    </header>
-  </body>
+      <div nav-content="2">
+        <h1>Content 1 - Favories</h1>
+      </div>
+      <div nav-content="3">
+        <h1>Content 1 - Nearby</h1>
+      </div>
+      <div nav-content="4">
+        <h1>Content 1 - Settings</h1>
+      </div>
+      <nav class="bottomNav z-1 text-blue">
+        <button class="wave active" nav-id="1"><span>Recent</span></button>
+        <button class="wave" nav-id="2"><span>Favorite</span></button>
+        <button class="wave" nav-id="3"><span>Nearby</span></button>
+        <button class="wave" nav-id="4"><span>Settings</span></button>
+      </nav>
+      <script src="https://cdn.jsdelivr.net/npm/matericious@0.10.1/dist/js/matericious.min.js"></script>
+      <script>new BottomNavigation();</script>
+    </body>
+  </head>
 </html>

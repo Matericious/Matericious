@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Expansion Panel Demo</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Matericious">
+    <meta name="description" content="Delicious Framework with Material Components.">
+    <meta name="keywords" content="Material Design, Matericious, Framework, Web Components, CSS Grid, Material Ripple, Buttons, Carts, Drawer.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/matericious@0.10.1/dist/css/matericious.min.css">
+    <meta name="og:url" content="https://matericious.com/">
+    <meta name="og:title" content="Expansion Panel Demo in Matericious Framework">
+    <meta name="og:description" content="Delicious Framework with Material Components.">
+    <meta name="og:type" content="website">
+    <meta name="og:image" content="https://matericious.com/assets/img/logo_banner.png">
+    <meta name="og:image:type" content="image/png">
+    <meta name="og:image:width" content="1200">
+    <meta name="og:image:height" content="630">
+    <style>body{ margin: 30px }</style>
+  </head>
+  <body><br>
+    <h3>Expansion Panel</h3>
+    <section class="expansionPanel z-4">
+      <div class="panel">
+        <div class="summary" expan="demo1"><span class="h-6 title">Title 1</span><span class="h-6 subtitle">Sub title 1</span><i class="material-icons">keyboard_arrow_down</i></div>
+        <div class="details" id="demo1">
+          <div class="content">
+            <h1>Content for content </h1>
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="summary" expan="demo2"><span class="h-6 title">Title 2</span><span class="h-6 subtitle">Sub title 2</span><i class="material-icons">keyboard_arrow_down</i></div>
+        <div class="details" id="demo2">
+          <div class="content">
+            <h1>Content for content 2</h1>
+          </div>
+        </div>
+      </div>
+    </section><br>
+    <h3>Active Expansion Panel</h3>
+    <section class="expansionPanel z-4">
+      <div class="panel">
+        <div class="summary active" expan="active"><span class="h-6 title">Default Active</span><span class="h-6 subtitle">Demo</span><i class="material-icons">keyboard_arrow_down</i></div>
+        <div class="details" id="active">
+          <div class="content">
+            <h1>Default active demo</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/matericious@0.10.1/dist/js/matericious.min.js"></script>
+    <script>
+      new ExpansionPanel();
+        
+    </script>
+  </body>
+</html>
