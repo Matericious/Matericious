@@ -1,5 +1,8 @@
 @import "_variables.scss";
 
+body {
+  margin: 8%;
+}
 
 $font: "Roboto", san-serif;
 
@@ -66,17 +69,27 @@ $font: "Roboto", san-serif;
       margin-right: auto;
     }
   }
+  &.tip-arr-left{
+    &::after{
+      right: auto;
+      left: 0px;
+    }
+    &::before{
+      right: auto;
+      left: 12px;
+    }
+  }  
   &.tip-arr-right{
     &::after{
       left: auto;
       right: 0px;
-      top: -35px;
     }
     &::before{
       left: auto;
       right: 12px;
     }
   }
+  
   &.tip-left{
     &::after{
       left: auto;
