@@ -3,7 +3,7 @@
 
 $color-option-size: 40px;
 $color-check-color: #fff;
-
+$active-inner-size: $color-option-size / 1.5;
 .picker {
   &[type="color"] {
     width: 100%;
@@ -24,6 +24,19 @@ $color-check-color: #fff;
         &.active {
           display: inline-block;
           position: relative;
+          &:before{
+            content: "";
+            width: $active-inner-size;
+            height: $active-inner-size;
+            background: rgba(0, 0, 0, .3);
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+          }
           &:after {
             content: "";
             display: block;
@@ -44,3 +57,4 @@ $color-check-color: #fff;
     }
   }
 }
+
