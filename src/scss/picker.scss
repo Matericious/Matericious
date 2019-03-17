@@ -4,7 +4,146 @@
 $color-option-size: 40px;
 $color-check-color: #fff;
 $active-inner-size: $color-option-size / 1.5;
+
 .picker {
+  &[type="date"] {
+    background: #2196f3;
+    > header {
+      width: calc(100% - (24 * 2px));
+      margin: 0px auto;
+      height: auto;
+      padding-top: 20px;
+      padding-bottom: 12px;
+      > .year,
+      .dai {
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.6);
+        &.active {
+          color: #fff;
+        }
+      }
+      > .year {
+        font-size: 18px;
+        font-family: inherit;
+        font-weight: 400;
+      }
+      > .dai {
+        font-size: 30px;
+        font-family: inherit;
+        display: block;
+      }
+    }
+    > .picker_content {
+      height: auto;
+      > .calender {
+        display: none;
+        &.active {
+          display: block;
+        }
+      }
+      > .daily {
+        height: auto;
+        min-height: 300px;
+        background: #fff;
+        > nav {
+          width: 100%;
+          height: 45px;
+          background: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex: 1 1 auto;
+          > button {
+            background: transparent;
+            box-shadow: none;
+            transition: 0s !important;
+            color: #222;
+            cursor: pointer;
+            &:nth-child(2) {
+              width: calc(100% - 100px);
+              margin-top: 0px;
+              font-family: "Roboto", sans-serif;
+              font-size: 15px;
+            }
+            &.round {
+              width: 35px;
+              height: 35px;
+              transition: 0s !important;
+            }
+          }
+        }
+        > .days {
+          width: 100%;
+          height: 30px;
+          > table {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            background: #fff;
+            border-collapse: separate;
+            border-spacing: 5px 2px;
+            th {
+              font-size: 13px;
+              color: #c2c2c2;
+              padding-bottom: 12px;
+              &:nth-child(1) {
+                color: red;
+              }
+            }
+            tr {
+              padding-top: 20px;
+            }
+            td {
+              text-align: center;
+              width: 25px;
+              height: 25px;
+              padding: 6px;
+              font-size: 13px;
+              border-radius: 50%;
+              cursor: pointer;
+              transition: color 0.5s;
+              &:hover {
+                background: #ebebeb;
+              }
+              &:nth-child(1) {
+                color: red;
+              }
+              &.active {
+                background: #2196f3;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+      > .yearly {
+        width: 100%;
+        height: 300px;
+        overflow-y: scroll;
+        text-align: center;
+        background: #fff;
+        > ul {
+          display: flex;
+          flex-direction: column;
+          list-style: none;
+          padding: 0;
+          > li {
+            font-size: 18px;
+            font-family: inherit;
+            font-weight: 400;
+            padding: 8px;
+            cursor: pointer;
+            &.set {
+              font-size: 26px;
+              color: #2196f3;
+            }
+          }
+        }
+      }
+    }
+  }
+  
   &[type="color"] {
     width: 100%;
     height: 100%;
