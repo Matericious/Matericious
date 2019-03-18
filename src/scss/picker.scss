@@ -105,12 +105,12 @@ $active-inner-size: $color-option-size / 1.5;
               color: #424242;
               &[day]{
                 cursor: pointer;
+                &:hover {
+                  background: #ebebeb;
+                }
                 &.active {
                   background: #2196f3;
                   color: #fff;
-                }
-                &:hover {
-                  background: #ebebeb;
                 }
               }
               &:nth-child(1) {
