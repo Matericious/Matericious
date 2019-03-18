@@ -101,17 +101,20 @@ $active-inner-size: $color-option-size / 1.5;
               padding: 6px;
               font-size: 13px;
               border-radius: 50%;
-              cursor: pointer;
               transition: color 0.5s;
-              &:hover {
-                background: #ebebeb;
+              color: #424242;
+              &[day]{
+                cursor: pointer;
+                &.active {
+                  background: #2196f3;
+                  color: #fff;
+                }
+                &:hover {
+                  background: #ebebeb;
+                }
               }
               &:nth-child(1) {
                 color: red;
-              }
-              &.active {
-                background: #2196f3;
-                color: #fff;
               }
             }
           }
