@@ -27,7 +27,6 @@ function picker(data) {
   /*Call main functions*/
   //example date: 2019, 10, 30 ******* if no date is parsed to loadGlobal the current date would be used
   loadGlobal(); 
-  // listenForClicks();
   loadYears(100);
   loadMonths();
 
@@ -63,7 +62,7 @@ function picker(data) {
     call(".picker .picker_content .daily .previous", "click", previousMonth);
     listenForDayClicks();
   }
-
+  /*Listen for day clicks*/
   function listenForDayClicks() {
     call(".picker .picker_content .daily td[day]", "click", changeDay);
   }
