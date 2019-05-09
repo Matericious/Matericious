@@ -101,7 +101,7 @@ function $m(selector) {
   return self;
 }
 
-class Utility {
+class Utilities {
   constructor() {}
   is_string(value) {
     if (typeof value === "string" || value instanceof String) {
@@ -110,11 +110,7 @@ class Utility {
       return false;
     }
   }
-  
-  testMe(){
-      return "test";
-  }
-  
+
   gen_ID() {
     return (
       "_" +
@@ -128,7 +124,36 @@ class Utility {
     return document.createElement(value);
   }
 
+  $handle(callback) {
+    try {
+      callback();
+    } catch (err) {}
+  }
+
+  $addClass(el, className) {
+    if (el.classList) el.classList.add(className);
+    else if (!hasClass(el, className)) el.className += ` ${className}`;
+  }
+
+  $removeClass(el, className) {
+    if (el.classList) el.classList.remove(className);
+    else if (hasClass(el, className)) {
+      let reg = new RegExp(`(\\s|^)${className}(\\s|$)`);
+      el.className = el.className.replace(reg, " ");
+    }
+  }
+
+  call($class, $event, $func) {
+    let elems = document.querySelectorAll(`${$class}`);
+    elems.forEach(function(elem) {
+      addEvent(elem, $event, $func);
+    });
+  }
+
   insert(where, target, element) {}
+  $all(e) {
+    return document.querySelectorAll(e);
+  }
 }
 
 Element.prototype.remove = function() {
@@ -141,3 +166,4 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
         }
     }
 }
+
