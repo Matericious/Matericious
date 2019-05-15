@@ -130,16 +130,19 @@ class Utilities {
     } catch (err) {}
   }
 
-  $addClass(el, className) {
-    if (el.classList) el.classList.add(className);
-    else if (!hasClass(el, className)) el.className += ` ${className}`;
-  }
-
-  $removeClass(el, className) {
-    if (el.classList) el.classList.remove(className);
-    else if (hasClass(el, className)) {
-      let reg = new RegExp(`(\\s|^)${className}(\\s|$)`);
-      el.className = el.className.replace(reg, " ");
+  $class(event, el, className){
+    if(event == "add" || event == ":+"){
+      if (el.classList) el.classList.add(className);
+      else if (!hasClass(el, className)) el.className += ` ${className}`;
+    }else if(event == "remove" || event == ":-"){
+      if (el.classList) el.classList.remove(className);
+      else if (hasClass(el, className)) {
+         let reg = new RegExp(`(\\s|^)${className}(\\s|$)`);
+         el.className = el.className.replace(reg, " ");
+      }
+    }
+    else if(event == "has" || event == ":="){
+       return (' ' + el.className + ' ').indexOf(' ' + className + ' ') > -1;
     }
   }
 
