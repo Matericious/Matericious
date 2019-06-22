@@ -102,6 +102,7 @@ function $m(selector) {
 }
 
 class Utilities {
+  /** */
   constructor() {}
   is_string(value) {
     if (typeof value === "string" || value instanceof String) {
