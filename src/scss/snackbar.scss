@@ -6,30 +6,34 @@ $action-snackbar-width: 380px;
 $snackbar-height: 60px;
 $snackbar-maxWidth: 95%;
 $snackbar-radius: 5px;
-$modal-position: .5em;
+$modal-position: 2em;
 
 *:hover,
 *:focus {
   outline: none;
 }
 
-snackbar {
-  width: 100%;
-  height: 100vh;
+.snackbar {
   pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
   > div {
     width: $snackbar-width;
     height: $snackbar-height;
     max-width: $snackbar-maxWidth;
     font-family: $font;
-    background: color(grey,dark,3);
-    color: color(grey,light,2);
+    background: color(grey, dark, 4);
+    color: color(grey, light, 2);
     border-radius: $snackbar-radius;
-    position: fixed;
-    bottom: -10px;
+    position: absolute;
     pointer-events: auto;
     overflow: hidden;
-    box-shadow: 0 4px 8px 0 rgba(color(black), 0.2), 0 6px 20px 0 rgba(color(black), 0.19);
+    box-shadow: 0 4px 8px 0 rgba(color(black), 0.2),
+      0 6px 20px 0 rgba(color(black), 0.19);
     > text {
       width: calc(100% - 90px);
       height: 60px;
@@ -49,7 +53,7 @@ snackbar {
       margin-top: 16px;
       border: none;
       background: transparent;
-      color: color(grey,light,2);
+      color: color(grey, light, 2);
       border-radius: 5px;
       text-transform: uppercase;
       display: inline-block;
@@ -57,7 +61,7 @@ snackbar {
         width: 40px;
         height: 40px;
         margin-top: 10px;
-        background: rgba(color(grey,dark,3), 0.1);
+        background: rgba(color(grey, dark, 3), 0.1);
         border-radius: 50%;
         transition: all 0.5s linear 0s;
         > i {
@@ -72,37 +76,12 @@ snackbar {
       }
     }
   }
-  &.light {
-    background: rgba(color(grey,dark,3), 0.6);
-    > div {
-      background: color(white);
-      box-shadow: 0 5px 30px 0 rgba(color(black), 0.1),
-        0 5px 30px 0 rgba(color(black), 0.1);
-      > text {
-        color: color(grey,dark,3);
-      }
-      > button {
-        color: color(grey,dark,3);
-      }
-    }
-  }
-
   &.action {
     > div {
       width: $action-snackbar-width;
       > text {
         width: calc(100% - 160px);
       }
-    }
-  }
-  &.top {
-    > div {
-      top: $modal-position;
-    }
-  }
-  &.bottom {
-    > div {
-      bottom: $modal-position;
     }
   }
   &.left {
@@ -122,67 +101,74 @@ snackbar {
       right: 0px;
     }
   }
+
+  /*##########################
+  Snackbar Animations*/
+
+  &.top {
+    &.aniOpen {
+      > div {
+        @include animation(slideInTop 0.5s 0s ease forwards);
+      }
+    }
+    &.aniClose {
+      > div {
+        @include animation(slideOutTop 0.5s 0s ease forwards);
+      }
+    }
+  }
+
+  &.bottom {
+    &.aniOpen {
+      > div {
+        @include animation(slideInBottom 0.5s 0s ease forwards);
+      }
+    }
+    &.aniClose {
+      > div {
+        @include animation(slideOutBottom 0.5s 0s ease forwards);
+      }
+    }
+  }
 }
 
-/*##########################
+/*################################################################
+Animation */
 
-Snackbar Animations*/
-
-.slideUpBottom{
-   @include animation(slideUpBottom .5s 0s ease forwards);
-}
-@include keyframes(slideUpBottom) {
+@include keyframes(slideInBottom) {
   from {
-       bottom: -100px
-    }
-    to {
-       bottom: $modal-position;
-    }
+    bottom: -100px;
+  }
+  to {
+    bottom: $modal-position / 2;
+  }
 }
 
-.slideUpTop{
-  @include animation(slideUpTop .5s 0s ease forwards);
-}
-
-
-@include keyframes(slideUpTop){
+@include keyframes(slideOutBottom) {
   from {
-      top: -100px;
-    }
-    to {
-      top: $modal-position;
-    }
+    bottom: $modal-position / 2;
+  }
+  to {
+    bottom: -100px;
+  }
 }
 
-/*
-==============================================
-slideDown Animation
-==============================================
-*/
+/*################*/
 
-.slideDownBottom{
-  @include animation(slideDownBottom .5s 0s ease forwards);
+@include keyframes(slideInTop) {
+  from {
+    top: -100px;
+  }
+  to {
+    top: $modal-position / 2;
+  }
 }
 
-@include keyframes(slideDownBottom){
-    from {
-       bottom: $modal-position;
-    }
-    to {
-       bottom: -100px
-    }
-}
-
-
-.slideDownTop{
-  @include animation(slideDownTop 1s 0s ease forwards)
-}
-
-@include keyframes(slideDownTop){
-    from {
-       top: $modal-position;
-    }
-    to {
-       top: -100px
-    }
+@include keyframes(slideOutTop) {
+  from {
+    top: $modal-position / 2;
+  }
+  to {
+    top: -100px;
+  }
 }
