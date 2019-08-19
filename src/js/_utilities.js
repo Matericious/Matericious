@@ -1,6 +1,5 @@
-
 function $m(selector) {
-  var self = {};
+  let self = {};
   self.selector = selector;
   self.element = document.querySelector(self.selector);
 
@@ -9,6 +8,10 @@ function $m(selector) {
   };
   self.html = value => {
     self.element.innerHTML = value;
+    return self;
+  };
+  self.all = () => {
+    self.element = document.querySelectorAll(self.selector);
     return self;
   };
   self.val = value => {
@@ -30,36 +33,36 @@ function $m(selector) {
     else if (!self.has(name)) self.element.className += ` ${name}`;
     return self;
   };
-  
-  self.class = (name)=>{
+
+  self.class = name => {
     if (self.has(name)) {
       self.remove(name);
-    }else{
+    } else {
       self.add(name);
     }
-  }
-  
-  self.delete = ()=>{
+  };
+
+  self.delete = () => {
     self.element.remove();
-  }
-  
-  self.remove = (name) => {
-        if (self.element.classList) {
-          self.element.classList.remove(name);
-        } else if (self.has(name)) {
-          let reg = new RegExp(`(\\s|^)${name}(\\s|$)`);
-          self.element.className = self.element.className.replace(reg, " ");
-        }
+  };
+
+  self.remove = name => {
+    if (self.element.classList) {
+      self.element.classList.remove(name);
+    } else if (self.has(name)) {
+      let reg = new RegExp(`(\\s|^)${name}(\\s|$)`);
+      self.element.className = self.element.className.replace(reg, " ");
+    }
     return self;
   };
-  
-  self.hide = ()=>{
-    self.element.style.display = 'none';
-  }
-  
-  self.show = ()=>{
-    self.element.style = '';
-  }
+
+  self.hide = () => {
+    self.element.style.display = "none";
+  };
+
+  self.show = () => {
+    self.element.style = "";
+  };
 
   self.ready = callback => {
     if (document.readyState != "loading") callback();
@@ -71,14 +74,14 @@ function $m(selector) {
       });
     return self;
   };
-  
+
   self.has = value => {
     if (self.element.classList) return self.element.classList.contains(value);
     else
       return !!self.element.value.match(new RegExp(`(\\s|^)${value}(\\s|$)`));
     return self;
   };
-  
+
   self.insert = (where, newElement) => {
     if (where == ":first") {
       self.element.insertBefore(newElement, self.element.firstElementChild);
@@ -102,7 +105,6 @@ function $m(selector) {
 }
 
 class Utilities {
-  /** */
   constructor() {}
   is_string(value) {
     if (typeof value === "string" || value instanceof String) {
@@ -131,19 +133,18 @@ class Utilities {
     } catch (err) {}
   }
 
-  $class(event, el, className){
-    if(event == "add" || event == ":+"){
+  $class(event, el, className) {
+    if (event == "add" || event == ":+") {
       if (el.classList) el.classList.add(className);
       else if (!hasClass(el, className)) el.className += ` ${className}`;
-    }else if(event == "remove" || event == ":-"){
+    } else if (event == "remove" || event == ":-") {
       if (el.classList) el.classList.remove(className);
       else if (hasClass(el, className)) {
-         let reg = new RegExp(`(\\s|^)${className}(\\s|$)`);
-         el.className = el.className.replace(reg, " ");
+        let reg = new RegExp(`(\\s|^)${className}(\\s|$)`);
+        el.className = el.className.replace(reg, " ");
       }
-    }
-    else if(event == "has" || event == ":="){
-       return (' ' + el.className + ' ').indexOf(' ' + className + ' ') > -1;
+    } else if (event == "has" || event == ":=") {
+      return (" " + el.className + " ").indexOf(" " + className + " ") > -1;
     }
   }
 
@@ -160,14 +161,13 @@ class Utilities {
   }
 }
 
-Element.prototype.remove = function() {
-    this.parentElement.removeChild(this);
+function addEvent(object, type, callback) {
+  if (object == null || typeof object == "undefined") return;
+  if (object.addEventListener) {
+    object.addEventListener(type, callback, false);
+  } else if (object.attachEvent) {
+    object.attachEvent("on" + type, callback);
+  } else {
+    object["on" + type] = callback;
+  }
 }
-NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
-    for(var i = this.length - 1; i >= 0; i--) {
-        if(this[i] && this[i].parentElement) {
-            this[i].parentElement.removeChild(this[i]);
-        }
-    }
-}
-

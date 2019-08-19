@@ -1,4 +1,4 @@
-function ready(callback) {
+/*function ready(callback) {
   // in case the document is already rendered
   if (document.readyState != "loading") callback();
   else if (document.addEventListener)
@@ -93,3 +93,4 @@ NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
         }
     }
 }
+*/
