@@ -1,23 +1,44 @@
-//=include _base.js
+//=include _utilities.js
 
-function BottomNavigation() {
-  call(".bottomNav > [nav-id]", "click", function() {
-    var target = this.getAttribute("nav-id"),
-      btn = $get("[nav-id='"+target+"']"),
-      targetContent = $get("[nav-content='"+target+"']");
-  
-    var divs = $all(".bottomNav > [nav-id]");
-    var contents = $all("[nav-content]");
-    
-    [].forEach.call(divs, function(el) {
-       $removeClass(el, 'active');
+class Navigation extends Utilities {
+  constructor() {
+    super();
+    this.theming();
+    super.call(".bottomNav > [nav-id]", "click", this.BottomNavigation);
+  }
+
+  theming() {
+    let divs = super.$all(".bottomNav > [nav-id]");
+    [].forEach.call(divs, el => {
+      if (!super.$class(":=", el, "active"))
+        super.$class(":+", el, "no-active");
     });
-    
-    [].forEach.call(contents, function(el) { 
-      $removeClass(el, 'active'); 
+  }
+
+  BottomNavigation() {
+    let target = this.getAttribute("nav-id"),
+      btn = $m("[nav-id='" + target + "']").element,
+      activebtn = $m(".bottomNav .active").element,
+      targetContent = $m("[nav-content='" + target + "']").element;
+
+    let divs = super.$all(".bottomNav > [nav-id]"),
+      contents = super.$all("[nav-content]");
+
+    [].forEach.call(divs, el => {
+      super.$class(":-", el, "active");
+      super.$class(":-", el, "no-active");
     });
-    
-    $addClass(btn, 'active');
-    $addClass(targetContent, 'active');
-  });
+
+    [].forEach.call(contents, el => {
+      super.$class(":-", el, "active");
+    });
+
+    super.$class(":+", btn, "active");
+    super.$class(":+", targetContent, "active");
+
+    [].forEach.call(divs, el => {
+      if (!super.$class(":=", el, "active"))
+        super.$class(":+", el, "no-active");
+    });
+  }
 }
