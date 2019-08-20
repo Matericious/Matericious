@@ -102,6 +102,16 @@ $modal-position: 2em;
     }
   }
 
+  @media screen and (max-width: 400px){
+     &.right, &.left{
+      > div {
+        margin: 0px auto;
+        left: 0px;
+        right: 0px;
+      }
+     }
+  }
+
   /*##########################
   Snackbar Animations*/
 
