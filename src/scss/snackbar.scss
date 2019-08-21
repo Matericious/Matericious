@@ -3,6 +3,7 @@
 
 $snackbar-width: 350px;
 $action-snackbar-width: 380px;
+$snackbar-mobile-breakpoint: $action-snackbar-width + 20;
 $snackbar-height: 60px;
 $snackbar-maxWidth: 95%;
 $snackbar-radius: 5px;
@@ -102,14 +103,15 @@ $modal-position: 2em;
     }
   }
 
-  @media screen and (max-width: 400px){
-     &.right, &.left{
+  @media screen and (max-width: $snackbar-mobile-breakpoint) {
+    &.right,
+    &.left {
       > div {
         margin: 0px auto;
         left: 0px;
         right: 0px;
       }
-     }
+    }
   }
 
   /*##########################
