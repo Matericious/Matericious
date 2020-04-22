@@ -6,7 +6,7 @@
   <p align="center">
     Delicious Framework with Material Components.
     <br>
-    <a href="https://matericious.com"><strong>Components Demo</strong></a>
+    <a href="https://matericious.com"><strong>Components Demo - Coming soon</strong></a>
     <br>
     <br>
     <a href="https://www.npmjs.com/package/matericious">
